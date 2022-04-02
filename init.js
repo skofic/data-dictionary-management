@@ -10,6 +10,7 @@ const kGlob = require('./globals')			// Generic globals.
 const kPriv = require('./user.globals')		// User-provided globals.
 
 const dbutils = require('./database')		// Database utilities.
+const process = require('./processing')		// Processing utilities.
 
 //
 // Connect to database.
@@ -32,10 +33,15 @@ async function main()
 {
 	try
 	{
-		console.log("======================")
+		console.log("\============================")
 		console.log("Initialising database.")
-		console.log("======================")
-		dbutils.InitDatabase(db)
+		console.log("============================")
+		await dbutils.InitDatabase(db)
+
+		console.log("\n============================")
+		console.log("Processing dictionary files.")
+		console.log("============================")
+		process.ProcessDictionaryFiles()
 
 	} // TRY BLOCK
 
