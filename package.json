@@ -1,0 +1,29 @@
+{
+  "name": "data-dictionary-management",
+  "version": "1.0.0",
+  "description": "Data dictionary installation and maintenance utilities.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skofic/data-dictionary-management.git"
+  },
+  "keywords": [
+    "dictionary",
+    "metadata",
+    "ArangoDB",
+    "automation"
+  ],
+  "author": "Milko Škofič",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skofic/data-dictionary-management/issues"
+  },
+  "homepage": "https://github.com/skofic/data-dictionary-management#readme",
+  "dependencies": {
+    "arangojs": "^7.7.0",
+    "md5": "^2.3.0"
+  }
+}
