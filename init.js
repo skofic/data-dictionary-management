@@ -41,7 +41,12 @@ async function main()
 		console.log("\n============================")
 		console.log("Processing dictionary files.")
 		console.log("============================")
-		process.ProcessDictionaryFiles()
+		await process.ProcessDictionaryFiles(db)
+
+		console.log("\n============================")
+		console.log("Loading ISO standards.")
+		console.log("============================")
+		await process.ProcessIsoStandards(db)
 
 	} // TRY BLOCK
 
@@ -50,7 +55,8 @@ async function main()
 		//
 		// Display error.
 		//
-		console.error(err.message)
+		// console.error(error.message)
+		console.log(error)
 
 	} // CATCH BLOCK
 

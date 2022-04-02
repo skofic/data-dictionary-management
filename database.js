@@ -30,21 +30,17 @@ async function InitDatabase(db)
 	var collection = null
 	for(item of collections) {
 		switch(item.name) {
+
 			// Terms.
 			case kPriv.user.db.terms_col:
 				collection = db.collection(kPriv.user.db.terms_col)
 				await collection.drop()
 				console.log(`Dropped ${item.name}`)
 				break
+
 			// Schema.
 			case kPriv.user.db.edges_col:
 				collection = db.collection(kPriv.user.db.edges_col)
-				await collection.drop()
-				console.log(`Dropped ${item.name}`)
-				break
-			// Topo.
-			case kPriv.user.db.topos_col:
-				collection = db.collection(kPriv.user.db.topos_col)
 				await collection.drop()
 				console.log(`Dropped ${item.name}`)
 				break
@@ -56,7 +52,6 @@ async function InitDatabase(db)
 	//
 	InitTermCollection(db, kPriv.user.db.terms_col)
 	InitEdgeCollection(db, kPriv.user.db.edges_col)
-	InitEdgeCollection(db, kPriv.user.db.topos_col)
 
 } // InitDatabase()
 
@@ -95,7 +90,8 @@ async function InitTermCollection(db, name)
 		type: 'persistent',
 		fields: [`${kGlob.globals.ddict.aid}[*]`],
 		name: "idx-alias-identifiers",
-		unique: false
+		unique: false,
+		sparse: true
 	})
 
 	console.log(`Created term collection ${name}`)

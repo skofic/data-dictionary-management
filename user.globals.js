@@ -5,17 +5,17 @@
 const user = {
 
 	"db": {
-		"host": "192.168.188.2:8529",
+		"host": "192.168.178.2:8529",
 		"name": "ddict",
 		"user": "eufgis_developer",
 		"pass": "letmein",
 		"terms_col": "terms",
-		"edges_col": "schemas",
-		"topos_col": "topos"
+		"edges_col": "schemas"
 	},
 
 	"flag": {
-		"key_encode": "COL"
+		"key_encode": "COL",
+		"write_file": true
 	}
 }
 

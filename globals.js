@@ -9,6 +9,7 @@ const globals = {
 	"path": {
 		"base": "./data/base/",
 		"processed": "./data/processed/",
+
 		"iso_json": "./external/iso-codes/data/",
 		"iso_po": "./external/iso-codes/",
 		"country": "./external/countries/dist/countries.json",
@@ -29,17 +30,26 @@ const globals = {
 
 	"res": {
 		"terms": {},
-		"edges": [],
-		"topos": []
+		"edges": []
 	},
 
 	"ddict": {
 		"nid": "/codes/nid",
 		"lid": "/codes/lid",
 		"gid": "/codes/gid",
+		"fid": "/codes/fid",
 		"aid": "/codes/aid",
+
+		"label": "/docs/label",
+		"definition": "/docs/definition",
+		"description": "/docs/description",
+
 		"pred": "/rels/predicate",
-		"path": "/rels/path"
+		"path": "/rels/path",
+
+		"enum_of": "/enum/pred/enum-of",
+		"bridge_of": "/enum/pred/bridge-of",
+		"section_of": "/enum/pred/section-of"
 	}
 }
 

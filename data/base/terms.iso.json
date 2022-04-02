@@ -2,15 +2,16 @@
     {
         "/codes/lid": "iso",
         "/codes/gid": "iso",
+        "/codes/aid": "iso",
         "/docs/label": {"iso/639/3/eng": "International Organization for Standardization"},
         "/docs/definition": {"iso/639/3/eng": "This namespace collects all international standards used in the data dictionary."},
         "/docs/description": {"iso/639/3/eng": "This *root* [namespace](/code/nid) collects all data dictionary [international standards](https://www.iso.org/home.html) implemented as *controlled vocabulary terms*."}
     },
-    
     {
         "/codes/nid": "iso",
         "/codes/lid": "639",
         "/codes/gid": "iso/639",
+        "/codes/aid": "639",
         "/docs/label": {"iso/639/3/eng": "Languages"},
         "/docs/definition": {"iso/639/3/eng": "Standard by the International Organization for Standardization (ISO) that is concerned with representation of names for languages and language groups."},
         "/docs/description": {"iso/639/3/eng": "This [namespace](/code/nid) collects the controlled vocabulary of [2-character](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) [language codes](https://www.iso.org/iso-639-language-codes.html) which represent the *major languages* in the world.\n\nThe language codes defined in the several sections of [ISO 639](https://en.wikipedia.org/wiki/ISO_639) are used for bibliographic purposes and, in computing and internet environments, as a key element of [locale](https://en.wikipedia.org/wiki/Locale_(computer_software) &quot;Locale (computer software)&quot;) data."}
@@ -19,6 +20,7 @@
         "/codes/nid": "iso",
         "/codes/lid": "3166",
         "/codes/gid": "iso/3166",
+        "/codes/aid": "3166",
         "/docs/label": {"iso/639/3/eng": "Countries"},
         "/docs/definition": {"iso/639/3/eng": "Codes for the representation of names of countries and their subdivisions."},
         "/docs/description": {"iso/639/3/eng": "[ISO 3166](https://en.wikipedia.org/wiki/ISO_3166) is a [standard](https://en.wikipedia.org/wiki/Standardization &quot;Standardization&quot;) published by the [International Organization for Standardization](https://en.wikipedia.org/wiki/International_Organization_for_Standardization &quot;International Organization for Standardization&quot;) (ISO) that defines [codes](https://en.wikipedia.org/wiki/Code &quot;Code&quot;) for the names of [countries](https://en.wikipedia.org/wiki/Country &quot;Country&quot;), [dependent territories](https://en.wikipedia.org/wiki/Dependent_territory &quot;Dependent territory&quot;), special areas of geographical interest, and their principal [subdivisions](https://en.wikipedia.org/wiki/Administrative_divisions &quot;Administrative divisions&quot;) (e.g., [provinces](https://en.wikipedia.org/wiki/Province &quot;Province&quot;) or [states](https://en.wikipedia.org/wiki/State_(administrative_division) &quot;State (administrative division)&quot;))."}
@@ -27,6 +29,7 @@
         "/codes/nid": "iso",
         "/codes/lid": "4217",
         "/codes/gid": "iso/4217",
+        "/codes/aid": "4217",
         "/docs/label": {"iso/639/3/eng": "Currencies"},
         "/docs/definition": {"iso/639/3/eng": "Codes for the representation of currencies."},
         "/docs/description": {"iso/639/3/eng": "[ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) is a [standard](https://en.wikipedia.org/wiki/Standardization &quot;Standardization&quot;) published by [International Organization for Standardization](https://en.wikipedia.org/wiki/International_Organization_for_Standardization &quot;International Organization for Standardization&quot;) (ISO) that defines alpha codes and numeric codes for the representation of [currencies](https://en.wikipedia.org/wiki/Currency &quot;Currency&quot;) and provides information about the relationships between individual currencies and their minor units."}
@@ -35,156 +38,170 @@
         "/codes/nid": "iso",
         "/codes/lid": "15924",
         "/codes/gid": "iso/15924",
+        "/codes/aid": "15924",
         "/docs/label": {"iso/639/3/eng": "Scripts"},
         "/docs/definition": {"iso/639/3/eng": "Codes for the representation of names of scripts"},
         "/docs/description": {"iso/639/3/eng": "[ISO 15924]([ISO 15924 - Wikipedia](https://en.wikipedia.org/wiki/ISO_15924)) is an [international standard](https://en.wikipedia.org/wiki/ISO_standard &quot;ISO standard&quot;) defining codes for [writing systems](https://en.wikipedia.org/wiki/Writing_systems &quot;Writing systems&quot;) or *scripts* (a *set of graphic characters used for the written form of one or more languages*)."}
     },
-    
     {
         "/codes/nid": "iso/639",
         "/codes/lid": "scopes",
         "/codes/gid": "iso/639/scopes",
+        "/codes/aid": "scopes",
         "/data/regexp": "^[IMS]$",
         "/docs/label": {"iso/639/3/eng": "Language scopes"}
-    },    
+    },
     {
         "/codes/nid": "iso/639/scopes",
         "/codes/lid": "I",
         "/codes/gid": "iso/639/scopes/I",
+        "/codes/aid": "I",
         "/docs/label": {"iso/639/3/eng": "Individual language"}
-    },    
+    },
     {
         "/codes/nid": "iso/639/scopes",
         "/codes/lid": "M",
         "/codes/gid": "iso/639/scopes/M",
+        "/codes/aid": "M",
         "/docs/label": {"iso/639/3/eng": "Macrolanguage"},
         "/docs/definition": {"iso/639/3/eng": "A macrolanguage is a book-keeping mechanism for the ISO 639 international standard for language codes."},
         "/docs/description": {"iso/639/3/eng": "[Macrolanguages](https://en.wikipedia.org/wiki/ISO_639_macrolanguage) are established to assist mapping between different sets of ISO language codes. Specifically, there may be a many-to-one correspondence between [ISO 639-3](https://en.wikipedia.org/wiki/ISO_639-3 &quot;ISO 639-3&quot;), intended to identify all the thousands of languages of the world, and either of two other sets, [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1 &quot;ISO 639-1&quot;), established to identify languages in computer systems, and [ISO 639-2](https://en.wikipedia.org/wiki/ISO_639-2 &quot;ISO 639-2&quot;), which encodes a few hundred languages for library cataloguing and bibliographic purposes. When such many-to-one ISO 639-2 codes are included in an ISO 639-3 context, they are called &quot;macrolanguages&quot; to distinguish them from the corresponding individual languages of ISO 639-3."}
-    },    
+    },
     {
         "/codes/nid": "iso/639/scopes",
         "/codes/lid": "S",
         "/codes/gid": "iso/639/scopes/S",
+        "/codes/aid": "S",
         "/docs/label": {"iso/639/3/eng": "Special situation"}
     },
-    
     {
         "/codes/nid": "iso/639",
         "/codes/lid": "types",
         "/codes/gid": "iso/639/types",
+        "/codes/aid": "types",
         "/data/regexp": "^[ACEHLS]$",
         "/docs/label": {"iso/639/3/eng": "Language types"}
-    },    
+    },
     {
         "/codes/nid": "iso/639/types",
         "/codes/lid": "A",
         "/codes/gid": "iso/639/types/A",
+        "/codes/aid": "A",
         "/docs/label": {"iso/639/3/eng": "Ancient language"},
         "/docs/definition": {"iso/639/3/eng": "An ancient language is any language originating in times that may be referred to as ancient. There are no formal criteria for deeming a language ancient, but a traditional convention is to demarcate as &quot;ancient&quot; those languages that existed prior to the 5th century."}
-    },    
+    },
     {
         "/codes/nid": "iso/639/types",
         "/codes/lid": "C",
         "/codes/gid": "iso/639/types/C",
+        "/codes/aid": "C",
         "/docs/label": {"iso/639/3/eng": "Constructed language"},
         "/docs/definition": {"iso/639/3/eng": "A constructed language is a language whose phonology, grammar, and vocabulary, instead of having developed naturally, are consciously devised for some purpose, which may include being devised for a work of fiction."}
-    },    
+    },
     {
         "/codes/nid": "iso/639/types",
         "/codes/lid": "E",
         "/codes/gid": "iso/639/types/E",
+        "/codes/aid": "E",
         "/docs/label": {"iso/639/3/eng": "Extinct language"},
         "/docs/definition": {"iso/639/3/eng": "An extinct language is a language that no longer has any speakers, especially if the language has no living descendants."}
-    },    
+    },
     {
         "/codes/nid": "iso/639/types",
         "/codes/lid": "H",
         "/codes/gid": "iso/639/types/H",
+        "/codes/aid": "H",
         "/docs/label": {"iso/639/3/eng": "Historical language"},
         "/docs/definition": {"iso/639/3/eng": "Historical languages (also known as historic languages) are languages that were spoken in a historical period, but that are distinct from their modern form; that is, they are forms of languages historically attested to from the past which have evolved into more modern forms."}
-    },    
+    },
     {
         "/codes/nid": "iso/639/types",
         "/codes/lid": "L",
         "/codes/gid": "iso/639/types/L",
+        "/codes/aid": "L",
         "/docs/label": {"iso/639/3/eng": "Living language"},
         "/docs/definition": {"iso/639/3/eng": "A living language, or modern language, is any human language that is currently in use."}
-    },    
+    },
     {
         "/codes/nid": "iso/639/types",
         "/codes/lid": "S",
         "/codes/gid": "iso/639/types/S",
+        "/codes/aid": "S",
         "/docs/label": {"iso/639/3/eng": "Special language"}
     },
-    
     {
         "/codes/nid": "iso/639",
         "/codes/lid": "1",
         "/codes/gid": "iso/639/1",
+        "/codes/aid": "1",
         "/data/regexp": "^[a-z]{2}$",
         "/docs/label": {"iso/639/3/eng": "Major languages"},
         "/docs/definition": {"iso/639/3/eng": "2-letter code that has been designed to represent most of the major languages of the world."},
-        "/docs/description": {"iso/639/3/eng": "[ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1), *Codes for the representation of names of languages—Part 1: Alpha-2 code*, is the first part of the [ISO 639](https://en.wikipedia.org/wiki/ISO_639 &quot;ISO 639&quot;) series of [international standards](https://en.wikipedia.org/wiki/International_Organization_for_Standardization &quot;International Organization for Standardization&quot;) for [language codes](https://en.wikipedia.org/wiki/Language_code &quot;Language code&quot;). Part 1 covers the registration of two-letter codes which cover the world&apos;s major languages."}
+        "/docs/description": {"iso/639/3/eng": "[ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1), *Codes for the representation of names of languages\u2014Part 1: Alpha-2 code*, is the first part of the [ISO 639](https://en.wikipedia.org/wiki/ISO_639 &quot;ISO 639&quot;) series of [international standards](https://en.wikipedia.org/wiki/International_Organization_for_Standardization &quot;International Organization for Standardization&quot;) for [language codes](https://en.wikipedia.org/wiki/Language_code &quot;Language code&quot;). Part 1 covers the registration of two-letter codes which cover the world&apos;s major languages."}
     },
     {
         "/codes/nid": "iso/639",
         "/codes/lid": "2",
         "/codes/gid": "iso/639/2",
+        "/codes/aid": "2",
         "/data/regexp": "^[a-z]{3}(-[a-z]{3})?$",
         "/docs/label": {"iso/639/3/eng": "Language Alpha-3 codes"},
-        "/docs/definition": {"iso/639/3/eng": "Codes for the representation of names of languages — Part 2: Alpha-3 code."},
+        "/docs/definition": {"iso/639/3/eng": "Codes for the representation of names of languages \u2014 Part 2: Alpha-3 code."},
         "/docs/description": {"iso/639/3/eng": "[ISO 639-2](https://en.wikipedia.org/wiki/ISO_639-2) is the second part of the [ISO 639](https://en.wikipedia.org/wiki/ISO_639 &quot;ISO 639&quot;) [standard](https://en.wikipedia.org/wiki/International_standard &quot;International standard&quot;), which lists [codes](https://en.wikipedia.org/wiki/Language_code &quot;Language code&quot;) for the representation of the names of languages. The three-letter codes given for each language in this part of the standard are referred to as *Alpha-3* codes."}
     },
     {
         "/codes/nid": "iso/639",
         "/codes/lid": "3",
         "/codes/gid": "iso/639/3",
+        "/codes/aid": "3",
         "/data/regexp": "^[a-z]{3}$",
         "/docs/label": {"iso/639/3/eng": "Comprehensive natural languages"},
-        "/docs/definition": {"iso/639/3/eng": "Codes for the representation of names of languages – Part 3: Alpha-3 code for comprehensive coverage of languages."},
-        "/docs/description": {"iso/639/3/eng": "[ISO 639-3](https://en.wikipedia.org/wiki/ISO_639-3) extends the [ISO 639-2](https://en.wikipedia.org/wiki/ISO_639-2 &quot;ISO 639-2&quot;) alpha-3 codes with an aim to cover all known [natural languages](https://en.wikipedia.org/wiki/Natural_language &quot;Natural language&quot;). The extended language coverage was based primarily on the language codes used in the *[Ethnologue](https://en.wikipedia.org/wiki/Ethnologue &quot;Ethnologue&quot;)* (volumes 10–14) published by [SIL International](https://en.wikipedia.org/wiki/SIL_International &quot;SIL International&quot;), which is now the [registration authority](https://en.wikipedia.org/wiki/Registration_authority &quot;Registration authority&quot;) for ISO 639-3.[[2]](https://en.wikipedia.org/wiki/ISO_639-3#cite_note-2) It provides an enumeration of languages as complete as possible, including living and extinct, ancient and constructed, major and minor, written and unwritten."}
+        "/docs/definition": {"iso/639/3/eng": "Codes for the representation of names of languages \u2013 Part 3: Alpha-3 code for comprehensive coverage of languages."},
+        "/docs/description": {"iso/639/3/eng": "[ISO 639-3](https://en.wikipedia.org/wiki/ISO_639-3) extends the [ISO 639-2](https://en.wikipedia.org/wiki/ISO_639-2 &quot;ISO 639-2&quot;) alpha-3 codes with an aim to cover all known [natural languages](https://en.wikipedia.org/wiki/Natural_language &quot;Natural language&quot;). The extended language coverage was based primarily on the language codes used in the *[Ethnologue](https://en.wikipedia.org/wiki/Ethnologue &quot;Ethnologue&quot;)* (volumes 10\u201314) published by [SIL International](https://en.wikipedia.org/wiki/SIL_International &quot;SIL International&quot;), which is now the [registration authority](https://en.wikipedia.org/wiki/Registration_authority &quot;Registration authority&quot;) for ISO 639-3.[[2]](https://en.wikipedia.org/wiki/ISO_639-3#cite_note-2) It provides an enumeration of languages as complete as possible, including living and extinct, ancient and constructed, major and minor, written and unwritten."}
     },
     {
         "/codes/nid": "iso/639",
         "/codes/lid": "5",
         "/codes/gid": "iso/639/5",
+        "/codes/aid": "5",
         "/data/regexp": "^[a-z]{3}$",
         "/docs/label": {"iso/639/3/eng": "Language families and groups"},
-        "/docs/definition": {"iso/639/3/eng": "Codes for the representation of names of languages—Part 5: Alpha-3 code for language families and groups."},
+        "/docs/definition": {"iso/639/3/eng": "Codes for the representation of names of languages\u2014Part 5: Alpha-3 code for language families and groups."},
         "/docs/description": {"iso/639/3/eng": "[ISO 639-5]([ISO 639-5 - Wikipedia](https://en.wikipedia.org/wiki/ISO_639-5)) defines *alpha-3* (3-letter) codes, called *collective codes*, that identify language families and groups. The standard does not cover all language families used by linguists. The languages covered by a group code need not be linguistically related, but may have a geographic relation, or category relation (such as [Creoles](https://en.wikipedia.org/wiki/Creole_people &quot;Creole people&quot;))."}
     },
-        
     {
         "/codes/nid": "iso/3166",
         "/codes/lid": "1",
         "/codes/gid": "iso/3166/1",
+        "/codes/aid": "1",
         "/docs/label": {"iso/639/3/eng": "Country codes"},
-        "/docs/definition": {"iso/639/3/eng": "Codes for the representation of names of countries and their subdivisions – Part 1: Country codes."},
+        "/docs/definition": {"iso/639/3/eng": "Codes for the representation of names of countries and their subdivisions \u2013 Part 1: Country codes."},
         "/docs/description": {"iso/639/3/eng": "[ISO 3166-1]([ISO 3166-1 - Wikipedia](https://en.wikipedia.org/wiki/ISO_3166-1)) is a standard defining codes for the names of countries, dependent territories, and special areas of geographical interest. It is the first part of the [ISO 3166](https://en.wikipedia.org/wiki/ISO_3166 &quot;ISO 3166&quot;) standard published by the [International Organization for Standardization](https://en.wikipedia.org/wiki/International_Organization_for_Standardization &quot;International Organization for Standardization&quot;)."}
-    },    
+    },
     {
         "/codes/nid": "iso/3166",
         "/codes/lid": "2",
         "/codes/gid": "iso/3166/2",
+        "/codes/aid": "2",
         "/docs/label": {"iso/639/3/eng": "Country subdivision codes"},
-        "/docs/definition": {"iso/639/3/eng": "Codes for the representation of names of countries and their subdivisions – Part 2: Country subdivision code."},
+        "/docs/definition": {"iso/639/3/eng": "Codes for the representation of names of countries and their subdivisions \u2013 Part 2: Country subdivision code."},
         "/docs/description": {"iso/639/3/eng": "[ISO 3166-2]([ISO 3166-2 - Wikipedia](https://en.wikipedia.org/wiki/ISO_3166-2)) is part of the [ISO 3166](https://en.wikipedia.org/wiki/ISO_3166 &quot;ISO 3166&quot;) [standard](https://en.wikipedia.org/wiki/Standardization &quot;Standardization&quot;) published by the [International Organization for Standardization](https://en.wikipedia.org/wiki/International_Organization_for_Standardization &quot;International Organization for Standardization&quot;) (ISO), and defines [codes](https://en.wikipedia.org/wiki/Code &quot;Code&quot;) for identifying the principal [subdivisions](https://en.wikipedia.org/wiki/Administrative_division &quot;Administrative division&quot;) (e.g., [provinces](https://en.wikipedia.org/wiki/Province &quot;Province&quot;) or [states](https://en.wikipedia.org/wiki/State_(administrative_division) &quot;State (administrative division)&quot;)) of all [countries](https://en.wikipedia.org/wiki/Country &quot;Country&quot;) coded in [ISO 3166-1](https://en.wikipedia.org/wiki/ISO_3166-1 &quot;ISO 3166-1&quot;)."}
-    },    
+    },
     {
         "/codes/nid": "iso/3166",
         "/codes/lid": "3",
         "/codes/gid": "iso/3166/3",
+        "/codes/aid": "3",
         "/docs/label": {"iso/639/3/eng": "Codes for formerly used names of countries"},
-        "/docs/definition": {"iso/639/3/eng": "Codes for the representation of names of countries and their subdivisions – Part 3: Code for formerly used names of countries."},
+        "/docs/definition": {"iso/639/3/eng": "Codes for the representation of names of countries and their subdivisions \u2013 Part 3: Code for formerly used names of countries."},
         "/docs/description": {"iso/639/3/eng": "[ISO 3166-3]([ISO 3166-3 - Wikipedia](https://en.wikipedia.org/wiki/ISO_3166-3)) is part of the [ISO 3166](https://en.wikipedia.org/wiki/ISO_3166 &quot;ISO 3166&quot;) [standard](https://en.wikipedia.org/wiki/Standardization &quot;Standardization&quot;) published by the [International Organization for Standardization](https://en.wikipedia.org/wiki/International_Organization_for_Standardization &quot;International Organization for Standardization&quot;) (ISO), and defines [codes](https://en.wikipedia.org/wiki/Code &quot;Code&quot;) for [country](https://en.wikipedia.org/wiki/Country &quot;Country&quot;) names which have been deleted from [ISO 3166-1](https://en.wikipedia.org/wiki/ISO_3166-1 &quot;ISO 3166-1&quot;) since its first publication in 1974."}
     },
-    
     {
         "/codes/nid": "iso/3166/2",
         "/codes/lid": "types",
         "/codes/gid": "iso/3166/2/types",
+        "/codes/aid": "types",
         "/docs/label": {"iso/639/3/eng": "Subset types"},
         "/docs/definition": {"iso/639/3/eng": "Country subdivision types."}
     }
-
 ]
