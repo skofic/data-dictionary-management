@@ -15,7 +15,7 @@ const user = {
 		"pass": "<database user password>",
 		"terms_col": "<terms collection name>",
 		"edges_col": "<schema edges collection name>",
-		"topoe_col": "<topographic edges collection name>"
+		"topos_col": "<topographic edges collection name>"
 	},
 
 	"flag": {

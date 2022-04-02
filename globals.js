@@ -31,6 +31,15 @@ const globals = {
 		"terms": {},
 		"edges": [],
 		"topos": []
+	},
+
+	"ddict": {
+		"nid": "/codes/nid",
+		"lid": "/codes/lid",
+		"gid": "/codes/gid",
+		"aid": "/codes/aid",
+		"pred": "/rels/predicate",
+		"path": "/rels/path"
 	}
 }
 

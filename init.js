@@ -4,9 +4,12 @@
  * Initialise database and load ancillary data.
  */
 
+const { Database } = require("arangojs")	// ArangoDB driver.
+
 const kGlob = require('./globals')			// Generic globals.
 const kPriv = require('./user.globals')		// User-provided globals.
-const { Database } = require("arangojs")	// ArangoDB driver.
+
+const dbutils = require('./database')		// Database utilities.
 
 //
 // Connect to database.
@@ -29,7 +32,10 @@ async function main()
 {
 	try
 	{
-		console.log(db)
+		console.log("======================")
+		console.log("Initialising database.")
+		console.log("======================")
+		dbutils.InitDatabase(db)
 
 	} // TRY BLOCK
 
