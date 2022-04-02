@@ -1,0 +1,330 @@
+[
+    {
+        "_from": "/enum/data/classes/code",
+        "_to": "/enum/data/classes",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/data/classes"]
+    },
+    {
+        "_from": "/enum/data/classes/category",
+        "_to": "/enum/data/classes",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/data/classes"]
+    },
+    {
+        "_from": "/enum/data/classes/quantity",
+        "_to": "/enum/data/classes",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/data/classes"]
+    },
+    
+    {
+        "_from": "/enum/data/containers/scalar",
+        "_to": "/enum/data/containers",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/data/containers"]
+    },
+    {
+        "_from": "/enum/data/containers/list",
+        "_to": "/enum/data/containers",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/data/containers"]
+    },
+    {
+        "_from": "/enum/data/containers/set",
+        "_to": "/enum/data/containers",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/data/containers"]
+    },
+    {
+        "_from": "/enum/data/containers/dict",
+        "_to": "/enum/data/containers",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/data/containers"]
+    },
+    {
+        "_from": "/enum/data/containers/range",
+        "_to": "/enum/data/containers",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/data/containers"]
+    },
+    
+    {
+        "_from": "/enum/data/types/any",
+        "_to": "/enum/data/types",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/data/types"]
+    },
+    {
+        "_from": "/enum/data/types/bool",
+        "_to": "/enum/data/types",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/data/types"]
+    },
+    {
+        "_from": "/enum/data/types/int",
+        "_to": "/enum/data/types",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/data/types"]
+    },
+    {
+        "_from": "/enum/data/types/float",
+        "_to": "/enum/data/types",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/data/types"]
+    },
+    {
+        "_from": "/enum/data/types/string",
+        "_to": "/enum/data/types",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/data/types"]
+    },
+    {
+        "_from": "/enum/data/types/term",
+        "_to": "/enum/data/types",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/data/types"]
+    },
+    {
+        "_from": "/enum/data/types/record",
+        "_to": "/enum/data/types",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/data/types"]
+    },
+    {
+        "_from": "/enum/data/types/stamp",
+        "_to": "/enum/data/types",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/data/types"]
+    },
+    {
+        "_from": "/enum/data/types/enum",
+        "_to": "/enum/data/types",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/data/types"]
+    },
+    {
+        "_from": "/enum/data/types/struct",
+        "_to": "/enum/data/types",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/data/types"]
+    },
+    
+    {
+        "_from": "/enum/data/formats/markdown",
+        "_to": "/enum/data/formats",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/data/formats"]
+    },
+    {
+        "_from": "/enum/data/formats/html",
+        "_to": "/enum/data/formats",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/data/formats"]
+    },
+    {
+        "_from": "/enum/data/formats/uri",
+        "_to": "/enum/data/formats",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/data/formats"]
+    },
+    {
+        "_from": "/enum/data/formats/hex",
+        "_to": "/enum/data/formats",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/data/formats"]
+    },
+    {
+        "_from": "/enum/data/formats/svg",
+        "_to": "/enum/data/formats",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/data/formats"]
+    },
+        
+    {
+        "_from": "/enum/data/rules/required",
+        "_to": "/enum/data/rules",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/data/rules"]
+    },
+    {
+        "_from": "/enum/data/rules/immutable",
+        "_to": "/enum/data/rules",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/data/rules"]
+    },
+    
+    {
+        "_from": "/enum/pred/enum-of",
+        "_to": "/enum/predicates",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/predicates"]
+    },
+    {
+        "_from": "/enum/pred/property-of",
+        "_to": "/enum/predicates",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/predicates"]
+    },
+    {
+        "_from": "/enum/pred/section-of",
+        "_to": "/enum/predicates",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/predicates"]
+    },
+    {
+        "_from": "/enum/pred/bridge-of",
+        "_to": "/enum/predicates",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/predicates"]
+    },
+    
+    {
+        "_from": "/enum/data/units/length",
+        "_to": "/enum/data/units",
+        "/rels/predicate": "/enum/pred/section-of",
+        "/rels/path": ["/enum/data/units"]
+    },
+    {
+        "_from": "/enum/data/units/length/km",
+        "_to": "/enum/data/units/length",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/data/units"]
+    },
+    {
+        "_from": "/enum/data/units/length/m",
+        "_to": "/enum/data/units/length",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/data/units"]
+    },
+    {
+        "_from": "/enum/data/units/length/cm",
+        "_to": "/enum/data/units/length",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/data/units"]
+    },
+    {
+        "_from": "/enum/data/units/length/mm",
+        "_to": "/enum/data/units/length",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/data/units"]
+    },
+    
+    {
+        "_from": "/enum/data/units/area",
+        "_to": "/enum/data/units",
+        "/rels/predicate": "/enum/pred/section-of",
+        "/rels/path": ["/enum/data/units"]
+    },
+    {
+        "_from": "/enum/data/units/area/km",
+        "_to": "/enum/data/units/area",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/data/units"]
+    },
+    {
+        "_from": "/enum/data/units/area/m",
+        "_to": "/enum/data/units/area",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/data/units"]
+    },
+    {
+        "_from": "/enum/data/units/area/cm",
+        "_to": "/enum/data/units/area",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/data/units"]
+    },
+    {
+        "_from": "/enum/data/units/area/mm",
+        "_to": "/enum/data/units/area",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/data/units"]
+    },
+    
+    {
+        "_from": "/enum/data/units/weight",
+        "_to": "/enum/data/units",
+        "/rels/predicate": "/enum/pred/section-of",
+        "/rels/path": ["/enum/data/units"]
+    },
+    {
+        "_from": "/enum/data/units/weight/kg",
+        "_to": "/enum/data/units/weight",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/data/units"]
+    },
+    {
+        "_from": "/enum/data/units/weight/g",
+        "_to": "/enum/data/units/weight",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/data/units"]
+    },
+    {
+        "_from": "/enum/data/units/weight/cg",
+        "_to": "/enum/data/units/weight",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/data/units"]
+    },
+    {
+        "_from": "/enum/data/units/weight/mg",
+        "_to": "/enum/data/units/weight",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/data/units"]
+    },
+    
+    {
+        "_from": "/enum/data/units/time",
+        "_to": "/enum/data/units",
+        "/rels/predicate": "/enum/pred/section-of",
+        "/rels/path": ["/enum/data/units"]
+    },
+    {
+        "_from": "/enum/data/units/time/h",
+        "_to": "/enum/data/units/time",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/data/units"]
+    },
+    {
+        "_from": "/enum/data/units/time/m",
+        "_to": "/enum/data/units/time",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/data/units"]
+    },
+    {
+        "_from": "/enum/data/units/time/s",
+        "_to": "/enum/data/units/time",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/data/units"]
+    },
+    
+    {
+        "_from": "/enum/data/units/age",
+        "_to": "/enum/data/units",
+        "/rels/predicate": "/enum/pred/section-of",
+        "/rels/path": ["/enum/data/units"]
+    },
+    {
+        "_from": "/enum/data/units/age/y",
+        "_to": "/enum/data/units/age",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/data/units"]
+    },
+    {
+        "_from": "/enum/data/units/age/m",
+        "_to": "/enum/data/units/age",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/data/units"]
+    },
+    {
+        "_from": "/enum/data/units/age/w",
+        "_to": "/enum/data/units/age",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/data/units"]
+    },
+    {
+        "_from": "/enum/data/units/age/d",
+        "_to": "/enum/data/units/age",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["/enum/data/units"]
+    }
+]

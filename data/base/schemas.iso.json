@@ -1,0 +1,190 @@
+[
+    {
+        "_from": "iso/639",
+        "_to": "iso",
+        "/rels/predicate": "/enum/pred/section-of",
+        "/rels/path": ["iso"]
+    },
+    {
+        "_from": "iso/3166",
+        "_to": "iso",
+        "/rels/predicate": "/enum/pred/section-of",
+        "/rels/path": ["iso"]
+    },
+    {
+        "_from": "iso/4217",
+        "_to": "iso",
+        "/rels/predicate": "/enum/pred/section-of",
+        "/rels/path": ["iso"]
+    },
+    {
+        "_from": "iso/15924",
+        "_to": "iso",
+        "/rels/predicate": "/enum/pred/section-of",
+        "/rels/path": ["iso"]
+    },
+    
+    {
+        "_from": "iso/639/1",
+        "_to": "iso/639",
+        "/rels/predicate": "/enum/pred/section-of",
+        "/rels/path": ["iso"]
+    },
+    {
+        "_from": "iso/639/2",
+        "_to": "iso/639",
+        "/rels/predicate": "/enum/pred/section-of",
+        "/rels/path": ["iso"]
+    },
+    {
+        "_from": "iso/639/3",
+        "_to": "iso/639",
+        "/rels/predicate": "/enum/pred/section-of",
+        "/rels/path": ["iso"]
+    },
+    {
+        "_from": "iso/639/5",
+        "_to": "iso/639",
+        "/rels/predicate": "/enum/pred/section-of",
+        "/rels/path": ["iso"]
+    },    
+    {
+        "_from": "iso/639/scopes",
+        "_to": "iso/639",
+        "/rels/predicate": "/enum/pred/section-of",
+        "/rels/path": ["iso"]
+    },
+    {
+        "_from": "iso/639/types",
+        "_to": "iso/639",
+        "/rels/predicate": "/enum/pred/section-of",
+        "/rels/path": ["iso"]
+    },
+
+    {
+        "_from": "iso/639/scopes/I",
+        "_to": "iso/639/3",
+        "/rels/predicate": "/enum/pred/section-of",
+        "/rels/path": ["iso/639/3"]
+    },
+    {
+        "_from": "iso/639/scopes/M",
+        "_to": "iso/639/3",
+        "/rels/predicate": "/enum/pred/section-of",
+        "/rels/path": ["iso/639/3"]
+    },
+    {
+        "_from": "iso/639/scopes/S",
+        "_to": "iso/639/3",
+        "/rels/predicate": "/enum/pred/section-of",
+        "/rels/path": ["iso/639/3"]
+    },
+
+    {
+        "_from": "iso/639/types/A",
+        "_to": "iso/639/scopes/I",
+        "/rels/predicate": "/enum/pred/section-of",
+        "/rels/path": ["iso/639/3"]
+    },
+    {
+        "_from": "iso/639/types/C",
+        "_to": "iso/639/scopes/I",
+        "/rels/predicate": "/enum/pred/section-of",
+        "/rels/path": ["iso/639/3"]
+    },
+    {
+        "_from": "iso/639/types/E",
+        "_to": "iso/639/scopes/I",
+        "/rels/predicate": "/enum/pred/section-of",
+        "/rels/path": ["iso/639/3"]
+    },
+    {
+        "_from": "iso/639/types/H",
+        "_to": "iso/639/scopes/I",
+        "/rels/predicate": "/enum/pred/section-of",
+        "/rels/path": ["iso/639/3"]
+    },
+    {
+        "_from": "iso/639/types/L",
+        "_to": "iso/639/scopes/I",
+        "/rels/predicate": "/enum/pred/section-of",
+        "/rels/path": ["iso/639/3"]
+    },
+    
+    {
+        "_from": "iso/3166/1",
+        "_to": "iso/3166",
+        "/rels/predicate": "/enum/pred/section-of",
+        "/rels/path": ["iso"]
+    },
+    {
+        "_from": "iso/3166/2",
+        "_to": "iso/3166",
+        "/rels/predicate": "/enum/pred/section-of",
+        "/rels/path": ["iso"]
+    },
+    {
+        "_from": "iso/3166/3",
+        "_to": "iso/3166",
+        "/rels/predicate": "/enum/pred/section-of",
+        "/rels/path": ["iso"]
+    },
+    
+    {
+        "_from": "iso/639/scopes/I",
+        "_to": "iso/639/scopes",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["iso"]
+    },
+    {
+        "_from": "iso/639/scopes/M",
+        "_to": "iso/639/scopes",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["iso"]
+    },
+    {
+        "_from": "iso/639/scopes/S",
+        "_to": "iso/639/scopes",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["iso"]
+    },
+    
+    {
+        "_from": "iso/639/types/A",
+        "_to": "iso/639/types",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["iso"]
+    },
+    {
+        "_from": "iso/639/types/C",
+        "_to": "iso/639/types",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["iso"]
+    },
+    {
+        "_from": "iso/639/types/E",
+        "_to": "iso/639/types",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["iso"]
+    },
+    {
+        "_from": "iso/639/types/H",
+        "_to": "iso/639/types",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["iso"]
+    },
+    {
+        "_from": "iso/639/types/L",
+        "_to": "iso/639/types",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["iso"]
+    },
+    {
+        "_from": "iso/639/types/S",
+        "_to": "iso/639/types",
+        "/rels/predicate": "/enum/pred/enum-of",
+        "/rels/path": ["iso"]
+    }
+
+
+]
