@@ -109,7 +109,5 @@ dist
 ### Mac stuff
 **/.DS_Store
 
-### External repository files.
-#/external/countries/
-#/external/country-flags/
-#/external/iso-codes/
+### User files.
+/user.globals.json
