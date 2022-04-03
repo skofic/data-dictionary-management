@@ -4,7 +4,7 @@
  * Database utilities.
  */
 
-const { Database } = require("arangojs")	// ArangoDB driver.
+const { Database, CollectionType } = require("arangojs")	// ArangoDB driver.
 
 const kGlob = require('./globals')			// Generic globals.
 const kPriv = require('./user.globals')		// User-provided globals.
