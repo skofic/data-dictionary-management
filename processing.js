@@ -219,9 +219,11 @@ function CreateIso639_3(item) {
 		_from: gid,
 		_to: nid
 	}
+
 	edge[ddict.pred] = ddict.enum_of
 	edge[ddict.path] = ['iso']
-	kGlob.globals.res.edges.push(ProcessEdge(edge))
+
+	kGlob.globals.res.edges.push(edge)
 
 	//
 	// Create, process and add scope edge to buffer.
@@ -230,12 +232,14 @@ function CreateIso639_3(item) {
 		_from: gid,
 		_to: term['iso/639/scope']
 	}
+
 	edge[ddict.pred] = ddict.enum_of
 	edge[ddict.path] = ['iso']
 	if((item['scope'] === 'M') || (item['scope'] === 'S')) {
 		edge[ddict.path].push(nid)
 	}
-	kGlob.globals.res.edges.push(ProcessEdge(edge))
+
+	kGlob.globals.res.edges.push(edge)
 
 	//
 	// Create, process and add type edge to buffer.
@@ -244,12 +248,14 @@ function CreateIso639_3(item) {
 		_from: gid,
 		_to: term['iso/639/type']
 	}
+
 	edge[ddict.pred] = ddict.enum_of
 	edge[ddict.path] = ['iso']
 	if(item['scope'] === 'I') {
 		edge[ddict.path].push(nid)
 	}
-	kGlob.globals.res.edges.push(ProcessEdge(edge))
+
+	kGlob.globals.res.edges.push(edge)
 
 } // CreateIso639_3()
 
