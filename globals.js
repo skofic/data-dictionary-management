@@ -17,8 +17,8 @@ const globals = {
 	},
 
 	"token": {
-		"ns": "/",
-		"tok": ":"
+		"ns": "_",
+		"tok": "/"
 	},
 
 	"dec": {
@@ -31,25 +31,6 @@ const globals = {
 	"res": {
 		"terms": {},
 		"edges": []
-	},
-
-	"ddict": {
-		"nid": "/codes/nid",
-		"lid": "/codes/lid",
-		"gid": "/codes/gid",
-		"fid": "/codes/fid",
-		"aid": "/codes/aid",
-
-		"label": "/docs/label",
-		"definition": "/docs/definition",
-		"description": "/docs/description",
-
-		"pred": "/rels/predicate",
-		"path": "/rels/path",
-
-		"enum_of": "/enum/pred/enum-of",
-		"bridge_of": "/enum/pred/bridge-of",
-		"section_of": "/enum/pred/section-of"
 	}
 }
 

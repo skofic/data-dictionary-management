@@ -19,7 +19,8 @@ const user = {
 	},
 
 	"flag": {
-		"key_encode": "<Encode global identifiers: MD5|COL>"
+		"key_encode": "<Encode global identifiers: MD5|GID>",
+		"write_file": <true/false>
 	}
 }
 

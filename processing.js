@@ -139,15 +139,13 @@ function CreateIso639_3(item) {
 	//
 	// Init local storage.
 	//
-	const nid = "iso/639/3"
+	const nid = "iso_639_3"
 	const lid = item['alpha_3']
 	const gid = nid + kGlob.globals.token.ns + lid
-	const ddict = kGlob.globals.ddict
 
 	//
 	// Init variables.
 	//
-	var term = {}
 	var edge = {}
 	var codes = []
 
@@ -163,82 +161,80 @@ function CreateIso639_3(item) {
 	//
 	// Init new term.
 	//
-	term[ddict.nid] = nid
-	term[ddict.lid] = lid
-	term[ddict.gid] = gid
-	term[ddict.fid] = gid
-	term[ddict.aid] = codes
-	term[ddict.label] = {"iso/639/3/eng": item['name']}
+	var term = {
+		_codes_nid: nid,
+		_codes_lid: lid,
+		_codes_gid: gid,
+		_codes_fid: gid,
+		_codes_aid: codes,
+		_docs_label: {iso_639_3_eng: item['name']}
+	}
 	if(item.hasOwnProperty('inverted_name')) {
-		term[ddict.definition] = {"iso/639/3/eng": item['inverted_name']}
+		term._docs_definition = {iso_639_3_eng: item['inverted_name']}
 	}
 	if(item.hasOwnProperty('common_name')) {
-		term[ddict.description] = {"iso/639/3/eng": item['common_name']}
+		term._docs_description = {iso_639_3_eng: item['common_name']}
 	}
 
 	//
 	// Handle language scope and type.
 	//
-	term['iso/639/scope'] = 'iso/639/scopes' + kGlob.globals.token.ns + item['scope']
-	term['iso/639/type'] = 'iso/639/types' + kGlob.globals.token.ns + item['type']
+	term.iso_639_scope = 'iso_639_scopes' + kGlob.globals.token.ns + item['scope']
+	term.iso_639_type = 'iso_639_types' + kGlob.globals.token.ns + item['type']
 
 	//
 	// Handle ISO codes.
 	//
-	term['iso/639/alpha3'] = item['alpha_3']
+	term.iso_639_alpha3 = item['alpha_3']
 	kGlob.globals.dec.iso_639_3_codes.add(item['alpha_3'])
 
 	if(item.hasOwnProperty('alpha_2')) {
-		term['iso/639/alpha2'] = item['alpha_2']
+		term.iso_639_alpha2 = item['alpha_2']
 		kGlob.globals.dec.iso_639_1_to_3[item['alpha_2']] = item['alpha_3']
 	}
 
 	if(item.hasOwnProperty('bibliographic')) {
-		term['iso/639/bibliographic'] = item['bibliographic']
+		term.iso_639_bibliographic = item['bibliographic']
 	}
 
 	//
 	// Handle ISO names.
 	//
 	if(item.hasOwnProperty('common_name')) {
-		term['iso/639/common'] = {"iso/639/3/eng": item['common_name']}
+		term.iso_639_common = {iso_639_3_eng: item['common_name']}
 	}
 	if(item.hasOwnProperty('inverted_name')) {
-		term['iso/639/inverted'] = {"iso/639/3/eng": item['inverted_name']}
+		term.iso_639_inverted = {iso_639_3_eng: item['inverted_name']}
 	}
 
 	//
-	// Process and add term to buffer.
+	// Add term to buffer.
 	//
 	kGlob.globals.res.terms[lid] = term
 
 	//
-	// Create, process and add ISO edge to buffer.
+	// Create and add ISO edge to buffer.
 	//
 	edge = {
 		_from: gid,
-		_to: nid
+		_to: nid,
+		_rels_predicate: '_enum_pred_enum-of',
+		_rels_path: ['iso']
 	}
-
-	edge[ddict.pred] = ddict.enum_of
-	edge[ddict.path] = ['iso']
-
 	kGlob.globals.res.edges.push(edge)
 
 	//
-	// Create, process and add scope edge to buffer.
+	// Create and add scope edge to buffer.
 	//
 	edge = {
 		_from: gid,
-		_to: term['iso/639/scope']
+		_to: term.iso_639_scope,
+		_rels_predicate: '_enum_pred_enum-of',
+		_rels_path: ['iso']
 	}
-
-	edge[ddict.pred] = ddict.enum_of
-	edge[ddict.path] = ['iso']
 	if((item['scope'] === 'M') || (item['scope'] === 'S')) {
-		edge[ddict.path].push(nid)
+		edge._rels_path.push(nid)
 	}
-
 	kGlob.globals.res.edges.push(edge)
 
 	//
@@ -246,15 +242,13 @@ function CreateIso639_3(item) {
 	//
 	edge = {
 		_from: gid,
-		_to: term['iso/639/type']
+		_to: term['iso_639_type'],
+		_rels_predicate: '_enum_pred_enum-of',
+		_rels_path: ['iso']
 	}
-
-	edge[ddict.pred] = ddict.enum_of
-	edge[ddict.path] = ['iso']
 	if(item['scope'] === 'I') {
-		edge[ddict.path].push(nid)
+		edge._rels_path.push(nid)
 	}
-
 	kGlob.globals.res.edges.push(edge)
 
 } // CreateIso639_3()
@@ -270,7 +264,6 @@ function TranslateIso639_3() {
 	const token = kGlob.globals.token.ns
 	const decoders = kGlob.globals.dec
 	const results = kGlob.globals.res
-	const ddict = kGlob.globals.ddict
 
 	//
 	// Get files list.
@@ -298,7 +291,7 @@ function TranslateIso639_3() {
 		//
 		// Get translation code.
 		//
-		const translation = 'iso/639/3'
+		const translation = 'iso_639_3'
 						  + token
 						  + decoders.iso_639_1_to_3[language]
 
@@ -311,23 +304,23 @@ function TranslateIso639_3() {
 			// Handle name.
 			//
 			if(names.hasOwnProperty('Name')) {
-				results.terms[key][ddict.label][translation] = names['Name']
+				results.terms[key]['_docs_label'][translation] = names['Name']
 			}
 
 			//
 			// Handle common name.
 			//
 			if(names.hasOwnProperty('Common name')) {
-				results.terms[key][ddict.description][translation] = names['Common name']
-				results.terms[key]['iso/639/common'][translation] = names['Common name']
+				results.terms[key]['_docs_description'][translation] = names['Common name']
+				results.terms[key]['iso_639_common'][translation] = names['Common name']
 			}
 
 			//
 			// Handle inverted name.
 			//
 			if(names.hasOwnProperty('Inverted name')) {
-				results.terms[key][ddict.definition][translation] = names['Inverted name']
-				results.terms[key]['iso/639/inverted'][translation] = names['Inverted name']
+				results.terms[key]['_docs_definition'][translation] = names['Inverted name']
+				results.terms[key]['iso_639_inverted'][translation] = names['Inverted name']
 			}
 
 		} // Iterating translations.
@@ -448,18 +441,18 @@ function ProcessTerm(term) {
 	//
 	// Check global identifier.
 	//
-	if(kGlob.globals.ddict.gid in term) {
+	if('_codes_gid' in term) {
 
 		//
 		// Check local identifier.
 		//
-		if(kGlob.globals.ddict.lid in term) {
+		if('_codes_lid' in term) {
 
 			//
 			// Init new term with _key.
 			//
 			var newTerm = {
-				"_key": ProcessGlobalIdentifier(term[kGlob.globals.ddict.gid])
+				"_key": ProcessGlobalIdentifier(term._codes_gid)
 			}
 
 			//
@@ -480,11 +473,11 @@ function ProcessTerm(term) {
 			return newTerm															// ==>
 
 		} else {
-			throw(Error(`Missing local identifier in term [${term[kGlob.globals.ddict.gid]}]`))
+			throw(Error(`Missing local identifier in term [${term._codes_gid}]`))
 		}
 
 	} else {
-		throw(Error(`Missing global identifier in term [${term[kGlob.globals.ddict.lid]}]`))
+		throw(Error(`Missing global identifier in term [${term._codes_lid}]`))
 	}
 
 } // ProcessTerm()
@@ -510,19 +503,19 @@ function ProcessEdge(edge) {
 		//
 		// Check predicate.
 		//
-		if(kGlob.globals.ddict.pred in edge) {
+		if('_rels_predicate' in edge) {
 
 			//
 			// Check path.
 			//
-			if(kGlob.globals.ddict.path in edge) {
+			if('_rels_path' in edge) {
 
 				//
 				// Create key string.
 				//
 				const index = edge._from
 							+ kGlob.globals.token.tok
-							+ edge[kGlob.globals.ddict.pred]
+							+ edge._rels_predicate
 							+ kGlob.globals.token.tok
 							+ edge._to
 
@@ -588,7 +581,7 @@ function ProcessEdge(edge) {
  * This function will either return the MD5 of the global identifier,
  * or the global identifier with slashes converted to colons depending on the value of the settings flag:
  * - MD5: Hash to md5.
- * - COL: Replace slashes with colons.
+ * - GID: Use global identifier.
  * @param {string} identifier - Global identifier.
  * @returns {string} - _key value
   */
@@ -602,8 +595,8 @@ function ProcessGlobalIdentifier(identifier) {
 		case 'MD5':
 			return md5(identifier)													// ==>
 
-		case 'COL':
-			return (identifier.length > 0) ? identifier.replace(/\//g, ":")
+		case 'GID':
+			return (identifier.length > 0) ? identifier
 										   : ':'									// ==>
 
 		default:

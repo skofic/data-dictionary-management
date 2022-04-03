@@ -44,6 +44,7 @@
         "_data_class": "_enum_data_classes_code",
         "_data_container": "_enum_data_containers_scalar",
         "_data_type": "_enum_data_types_string",
+        "_data_regexp": "^[a-zA-Z0-9-:.@+,=;$!*'%]{1,254}$",
         "_data_rules": [
             "_enum_data_rules_immutable"
         ]
@@ -108,7 +109,7 @@
         "_data_class": "_enum_data_classes_code",
         "_data_container": "_enum_data_containers_scalar",
         "_data_type": "_enum_data_types_string",
-        "_data_regexp": "^[a-zA-Z0-9-:.@+,=;$!*&apos;%]{1,254}$",
+        "_data_regexp": "^[a-zA-Z0-9-:.@+,=;$!*'%]{1,254}$",
         "_data_rules": [
             "_enum_data_rules_required",
             "_enum_data_rules_immutable"

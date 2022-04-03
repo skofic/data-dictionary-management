@@ -74,21 +74,21 @@ async function InitTermCollection(db, name)
 	//
 	await collection.ensureIndex({
 		type: 'persistent',
-		fields: [kGlob.globals.ddict.gid],
+		fields: ['_codes_gid'],
 		name: "idx-global-identifier",
 		unique: true
 	})
 
 	await collection.ensureIndex({
 		type: 'persistent',
-		fields: [kGlob.globals.ddict.lid],
+		fields: ['_codes_lid'],
 		name: "idx-local-identifier",
 		unique: false
 	})
 
 	await collection.ensureIndex({
 		type: 'persistent',
-		fields: [`${kGlob.globals.ddict.aid}[*]`],
+		fields: ['_codes_aid[*]'],
 		name: "idx-alias-identifiers",
 		unique: false,
 		sparse: true
@@ -117,15 +117,15 @@ async function InitEdgeCollection(db, name)
 	//
 	await collection.ensureIndex({
 		type: 'persistent',
-		fields: [kGlob.globals.ddict.pred],
+		fields: ['_rels_predicate'],
 		name: "idx-predicate",
 		unique: false
 	})
 
 	await collection.ensureIndex({
 		type: 'persistent',
-		fields: [`${kGlob.globals.ddict.path}[*]`],
-		name: "idx-edghe-paths",
+		fields: ['_rels_path[*]'],
+		name: "idx-edge-paths",
 		unique: false
 	})
 
