@@ -64,11 +64,79 @@ async function ProcessIsoStandards(db) {
 	// Handle ISO 639 languages.
 	//
 	await LoadIso639_3(db)
+	await LoadIso639_1(db)
 
 } // ProcessIsoStandards()
 
 /**
+ * Load ISO 639-1 standard.
+ * We do not have a specific repository for ISO 639-1, but we know that the standard uses the
+ * 2 character codes, so I use the ISO 639-3 records that have a 2 character code.
+ * Note that all ISO 639-1 enumerations are bridged to their ISO 639-3 counterparts, the ISO 639-1
+ * terms will only have the codes, the names are not duplicated.
+ * @param {Database} db - Database connection.
+ * @returns {Promise<void>}
+ */
+async function LoadIso639_1(db) {
+	console.log(`==> Handling ISO 639-1`)
+
+	//
+	// Read objects.
+	// We store locally all ISO 639-3 terms that have alpha-2 code,
+	// we reset all buffers,
+	// and fill buffers with ISO 639-1 data.
+	//
+	console.log(`  • Loading buffers`)
+	var terms = []
+	for(const [alpha2, alpha3] of Object.entries(kGlob.globals.dec.iso_639_1_to_3)) {
+		terms.push(kGlob.globals.res.terms[alpha3])
+	}
+
+	//
+	// Reset buffers.
+	//
+	kGlob.globals.res.terms = {}
+	kGlob.globals.res.edges = []
+
+	//
+	// Create terms, edges and fill buffers by iterating ISO 639-3 terms
+	// that have alpha-2 code.
+	//
+	console.log(`  • Loading buffers`)
+	terms.forEach(CreateIso639_1)
+
+	//
+	// Write terms.
+	//
+	await ProcessItems(
+		db,
+		kPriv.user.db.terms_col,
+		Object.values(kGlob.globals.res.terms),
+		ProcessTerm,
+		'terms.iso.639.1'
+	)
+
+	//
+	// Write edges.
+	//
+	await ProcessItems(
+		db,
+		kPriv.user.db.edges_col,
+		kGlob.globals.res.edges,
+		ProcessEdge,
+		'schemas.iso.639.1'
+	)
+
+} // LoadIso639_1()
+
+/**
  * Load ISO 639-3 standard.
+ * The standard is loded as follows:
+ * - Read the JSON file containing codes, english name, scope and type.
+ * - Iterate (iso-codes) JSON source and create term and edge objects adding them to global buffer.
+ * - Scan (iso-codes) related PO files directory and load translations.
+ * - Write terms to file, if preferences say so, and insert terms into database.
+ * - Write edges to file, if preferences say so, and insert edges into database.
  * @param {Database} db - Database connection.
  * @returns {Promise<void>}
  */
@@ -129,6 +197,53 @@ async function LoadIso639_3(db) {
 	)
 
 } // LoadIso639_3()
+
+/**
+ * Fill term and edge buffers with ISO 639-3 objects.
+ * @param {object} item - ISO 639-3 object.
+ */
+function CreateIso639_1(item) {
+
+	//
+	// Init local storage.
+	//
+	const nid = "iso_639_1"
+	const lid = item.iso_639_alpha2
+	const gid = nid + kGlob.globals.token.ns + lid
+	const codes = item._codes_aid
+
+	//
+	// Create and load term in buffer.
+	//
+	kGlob.globals.res.terms[lid] = {
+		_codes_nid: nid,
+		_codes_lid: lid,
+		_codes_gid: gid,
+		_codes_fid: gid,
+		_codes_aid: codes
+	}
+
+	//
+	// Create bridge edge.
+	//
+	kGlob.globals.res.edges.push({
+		_from: gid,
+		_to: nid,
+		_rels_predicate: '_enum_pred_bridge-of',
+		_rels_path: ['iso', nid]
+	})
+
+	//
+	// Create enumeration edge.
+	//
+	kGlob.globals.res.edges.push({
+		_from: item._codes_gid,
+		_to: gid,
+		_rels_predicate: '_enum_pred_enum-of',
+		_rels_path: ['iso', nid]
+	})
+
+} // CreateIso639_1()
 
 /**
  * Fill term and edge buffers with ISO 639-3 objects.
