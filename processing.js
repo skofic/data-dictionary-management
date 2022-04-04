@@ -66,6 +66,7 @@ async function ProcessIsoStandards(db) {
 	await LoadIso639_3(db)	// ISO 639-3.
 	await LoadIso639_1(db)	// ISO 639-1.
 	await LoadIso639_2(db)	// ISO 639-2.
+	await LoadIso639_5(db)	// ISO 639-5.
 
 } // ProcessIsoStandards()
 
@@ -135,7 +136,7 @@ async function LoadIso639_1(db) {
  * The standard is loaded as follows:
  * - Read the JSON file containing codes, english name, scope and type.
  * - Iterate (iso-codes) JSON source and create term and edge objects adding them to global buffer.
- * - Scan (iso-codes) related PO files directory and load translations.
+ * - Scan (iso-codes) related PO files related to specific ISO 639-2 entries and load translations.
  * - Write terms to file, if preferences say so, and insert terms into database.
  * - Write edges to file, if preferences say so, and insert edges into database.
  * Note that some terms may be bridged to their related ISO 639-3 counterparts,
@@ -271,6 +272,77 @@ async function LoadIso639_3(db) {
 } // LoadIso639_3()
 
 /**
+ * Load ISO 639-5 standard.
+ * The standard is loaded as follows:
+ * - Read the (iso-codes) JSON file containing codes and english name.
+ * - Iterate and create term and edges: bridge to ISO 639-3 or ISO 639-2 if needed.
+ * - Scan (iso-codes) PO files related to specific ISO 639-5 elements and load translations.
+ * - Write terms to file, if preferences say so, and insert terms into database.
+ * - Write edges to file, if preferences say so, and insert edges into database.
+ * Note that some terms may be bridged to their related ISO 639-3 counterparts,
+ * in that case the terms will only feature codes.
+ * @param {Database} db - Database connection.
+ * @returns {Promise<void>}
+ */
+async function LoadIso639_5(db) {
+	console.log(`==> Handling ISO 639-5`)
+
+	//
+	// Reset buffers.
+	//
+	kGlob.globals.res.terms = {}
+	kGlob.globals.res.edges = []
+
+	//
+	// Read objects.
+	//
+	console.log(`  • Reading objects`)
+	const terms =
+		JSON.parse(
+			fs.readFileSync(
+				pt.resolve(
+					pt.join(kGlob.globals.path.iso_json, 'iso_639-5' + '.json')
+				)
+			)
+		)['639-5']
+
+	//
+	// Fill buffers.
+	//
+	console.log(`  • Loading buffers`)
+	terms.forEach(CreateIso639_5)
+
+	//
+	// Load translations.
+	//
+	console.log(`  • Loading translations`)
+	TranslateIso639_5()
+
+	//
+	// Write terms.
+	//
+	await ProcessItems(
+		db,
+		kPriv.user.db.terms_col,
+		Object.values(kGlob.globals.res.terms),
+		ProcessTerm,
+		'terms.iso.639.5'
+	)
+
+	//
+	// Write edges.
+	//
+	await ProcessItems(
+		db,
+		kPriv.user.db.edges_col,
+		kGlob.globals.res.edges,
+		ProcessEdge,
+		'schemas.iso.639.5'
+	)
+
+} // LoadIso639_5()
+
+/**
  * Fill term and edge buffers with ISO 639-3 objects.
  * @param {object} item - ISO 639-3 object.
  */
@@ -342,7 +414,6 @@ function CreateIso639_2(item) {
 	//
 	// Init variables.
 	//
-	var edge = {}
 	var codes = []
 
 	//
@@ -538,13 +609,12 @@ function CreateIso639_3(item) {
 	//
 	// Create and add ISO edge to buffer.
 	//
-	edge = {
+	kGlob.globals.res.edges.push({
 		_from: gid,
 		_to: nid,
 		_rels_predicate: '_enum_pred_enum-of',
 		_rels_path: ['iso']
-	}
-	kGlob.globals.res.edges.push(edge)
+	})
 
 	//
 	// Create and add scope edge to buffer.
@@ -575,6 +645,131 @@ function CreateIso639_3(item) {
 	kGlob.globals.res.edges.push(edge)
 
 } // CreateIso639_3()
+
+/**
+ * Fill term and edge buffers with ISO 639-5 objects.
+ * Some elements will be bridged to their ISO 639-3 or ISO 639-2 counterpart.
+  * @param {object} item - ISO 639-5 object.
+ */
+function CreateIso639_5(item) {
+
+	//
+	// Init local storage.
+	//
+	const nid = "iso_639_5"
+	const lid = item['alpha_3']
+	const gid = nid + kGlob.globals.token.ns + lid
+
+	//
+	// Init variables.
+	//
+	var edge = {}
+
+	//
+	// Init new term.
+	//
+	var term = {
+		_codes_nid: nid,
+		_codes_lid: lid,
+		_codes_gid: gid,
+		_codes_fid: gid,
+		_codes_aid: [lid]
+	}
+
+	//
+	// Handle reference to ISO 639-2 term.
+	//
+	if(kGlob.globals.dec.iso_639_2_codes.has(lid)) {
+
+		//
+		// Create bridge edge.
+		//
+		kGlob.globals.res.edges.push({
+			_from: gid,
+			_to: nid,
+			_rels_predicate: '_enum_pred_bridge-of',
+			_rels_path: ['iso', nid]
+		})
+
+		//
+		// Create enumeration edge.
+		//
+		kGlob.globals.res.edges.push({
+			_from: 'iso_639_2' + kGlob.globals.token.ns + lid,
+			_to: gid,
+			_rels_predicate: '_enum_pred_enum-of',
+			_rels_path: ['iso', nid]
+		})
+
+	} // Bridged to ISO 639-2 term.
+
+	//
+	// Handle reference to ISO 639-3 term.
+	//
+	else if(kGlob.globals.dec.iso_639_3_codes.has(lid)) {
+
+		//
+		// Create bridge edge.
+		//
+		kGlob.globals.res.edges.push({
+			_from: gid,
+			_to: nid,
+			_rels_predicate: '_enum_pred_bridge-of',
+			_rels_path: ['iso', nid]
+		})
+
+		//
+		// Create enumeration edge.
+		//
+		kGlob.globals.res.edges.push({
+			_from: 'iso_639_3' + kGlob.globals.token.ns + lid,
+			_to: gid,
+			_rels_predicate: '_enum_pred_enum-of',
+			_rels_path: ['iso', nid]
+		})
+
+	} // Bridged to ISO 639-3 term.
+
+	//
+	// Update term and create edge.
+	//
+	else {
+
+		//
+		// Save ISP 639-5 native code for later.
+		//
+		kGlob.globals.dec.iso_639_5_codes.add(lid)
+
+		//
+		// Set term name.
+		//
+		term._docs_label = {
+			iso_639_3_eng: item['name']
+		}
+
+		//
+		// Handle ISO data.
+		//
+		term.iso_639_alpha3 = item['alpha_3']
+
+		//
+		// Create enumeration edge.
+		//
+		kGlob.globals.res.edges.push({
+			_from: gid,
+			_to: nid,
+			_rels_predicate: '_enum_pred_enum-of',
+			_rels_path: ['iso', nid]
+		})
+
+	} // No ISO 639-3 counterpart.
+
+	//
+	// Add term to buffer.
+	//
+	kGlob.globals.res.terms[lid] = term
+
+} // CreateIso639_5()
 
 /**
  * Load translations for ISO 639-2 languages from iso-codes PO files.
@@ -621,7 +816,7 @@ function TranslateIso639_2() {
 		//
 		// Add localised names.
 		//
-		for(const [key, names] of Object.entries(ParseIso639_3PoFile(file))) {
+		for(const [key, names] of Object.entries(ParseIso639PoFile(file))) {
 
 			//
 			// Handle only non bridged terms.
@@ -696,7 +891,7 @@ function TranslateIso639_3() {
 		//
 		// Add localised names.
 		//
-		for(const [key, names] of Object.entries(ParseIso639_3PoFile(file))) {
+		for(const [key, names] of Object.entries(ParseIso639PoFile(file))) {
 
 			//
 			// Handle name.
@@ -726,6 +921,73 @@ function TranslateIso639_3() {
 	} // Iterating files.
 
 } // TranslateIso639_3()
+
+/**
+ * Load translations for ISO 639-5 languages from iso-codes PO files.
+ */
+function TranslateIso639_5() {
+
+	//
+	// Constant helpers.
+	//
+	const token = kGlob.globals.token.ns
+	const decoders = kGlob.globals.dec
+	const results = kGlob.globals.res
+
+	//
+	// Get files list.
+	//
+	const files = GetFilesList(
+		pt.resolve(pt.join(kGlob.globals.path.iso_po, "iso_639-5")),
+		'.po',
+		[],
+		2
+	)
+
+	//
+	// Iterate found files.
+	//
+	for(const [language, file] of Object.entries(files)) {
+
+		//
+		// Check translation code.
+		//
+		if(! decoders.iso_639_1_to_3.hasOwnProperty(language)) {
+			console.log(`    !!! Unmatched language code [${language}]`)
+			continue
+		}
+
+		//
+		// Get translation code.
+		//
+		const translation = 'iso_639_3'
+			+ token
+			+ decoders.iso_639_1_to_3[language]
+
+		//
+		// Add localised names.
+		//
+		for(const [key, names] of Object.entries(ParseIso639PoFile(file))) {
+
+			//
+			// Handle only ISO 639-5 specific entries.
+			//
+			if(kGlob.globals.dec.iso_639_5_codes.has(key)) {
+
+				//
+				// Handle name.
+				//
+				if(names.hasOwnProperty('Name')) {
+					results.terms[key]['_docs_label'][translation] = names['Name']
+				}
+
+			} // Not a bridged term.
+
+		} // Iterating translations.
+
+	} // Iterating files.
+
+} // TranslateIso639_5()
 
 /**
  * Process term files.
@@ -1070,11 +1332,11 @@ function GetFilesList(directory, extension = '', prefix = [], length = 0) {
 } // GetFilesList()
 
 /**
- * Parse ISO 639-2 PO file.
- * @param {string} filename - File path.
+ * Parse ISO 639 PO file.
+ * @param {string} fileName - File path.
  * @returns {object} - { language code: { name type: name translation } }
  */
-function ParseIso639_2PoFile(filename) {
+function ParseIso639PoFile(fileName) {
 
 	//
 	// Regular expressions.
@@ -1085,7 +1347,7 @@ function ParseIso639_2PoFile(filename) {
 	//
 	// Init local storage.
 	//
-	var result = {}		// { <code>: { Name|Common name|Inverted name: <name> } }
+	var result = {}		// { <code>: { <name type>: <name> } }
 	var code = null		// Language code.
 	var type = null		// Name type.
 	var match = null	// Reguler expression match
@@ -1093,7 +1355,7 @@ function ParseIso639_2PoFile(filename) {
 	//
 	// Read PO file.
 	//
-	const contents = fs.readFileSync(filename, 'utf-8');
+	const contents = fs.readFileSync(fileName, 'utf-8');
 
 	//
 	// Scan file.
@@ -1102,7 +1364,7 @@ function ParseIso639_2PoFile(filename) {
 
 		//
 		// Match block start.
-		// [1]: 'Name', 'Common name'
+		// [1]: Name type
 		// [2]: Alpha-3 language code.
 		//
 		match = line.match(blockRegex)
@@ -1138,81 +1400,8 @@ function ParseIso639_2PoFile(filename) {
 
 	});
 
-	return result
+	return result																	// ==>
 
-} // ParseIso639_2PoFile()
-
-/**
- * Parse ISO 639-3 PO file.
- * @param {string} filename - File path.
- * @returns {object} - { language code: { name type: name translation } }
- */
-function ParseIso639_3PoFile(filename) {
-
-	//
-	// Regular expressions.
-	//
-	const blockRegex = /^#\. (.+) for ([a-z]{3})$/	// Language block regular expression.
-	const nameRegex  = /^msgstr "(.+)"$/			// Translated name.
-
-	//
-	// Init local storage.
-	//
-	var result = {}		// { <code>: { Name|Common name|Inverted name: <name> } }
-	var code = null		// Language code.
-	var type = null		// Name type.
-	var match = null	// Reguler expression match
-
-	//
-	// Read PO file.
-	//
-	const contents = fs.readFileSync(filename, 'utf-8');
-
-	//
-	// Scan file.
-	//
-	contents.split(/\r?\n/).forEach(line =>  {
-
-		//
-		// Match block start.
-		// [1]: 'Name', 'Inverted name', 'Common name'
-		// [2]: Alpha-3 language code.
-		//
-		match = line.match(blockRegex)
-		if(match !== null) {
-
-			//
-			// Set elements.
-			//
-			type = match[1]
-			code = match[2]
-
-			//
-			// Init language record.
-			//
-			if(! result.hasOwnProperty(code)) {
-				result[code] = {}
-			}
-
-		} // Matched block.
-
-		//
-		// Match name.
-		//
-		match = line.match(nameRegex)
-		if((match !== null) && (code !== null)) {
-
-			//
-			// Set corresponding name.
-			//
-			result[code][type] = match[1]
-
-		} // Matched name.
-
-	});
-
-	return result
-
-} // ParseIso639_3PoFile()
+} // ParseIso639PoFile()
 
 module.exports = { ProcessDictionaryFiles, ProcessIsoStandards }
