@@ -80,7 +80,7 @@ async function ProcessIsoStandards(db) {
  * @returns {Promise<void>}
  */
 async function LoadIso639_1(db) {
-	console.log(`==> Handling ISO 639-1`)
+	console.log(`\n==> Handling ISO 639-1`)
 
 	//
 	// Read objects.
@@ -145,7 +145,7 @@ async function LoadIso639_1(db) {
  * @returns {Promise<void>}
  */
 async function LoadIso639_2(db) {
-	console.log(`==> Handling ISO 639-2`)
+	console.log(`\n==> Handling ISO 639-2`)
 
 	//
 	// Reset buffers.
@@ -176,7 +176,7 @@ async function LoadIso639_2(db) {
 	// Load translations.
 	//
 	console.log(`  • Loading translations`)
-	TranslateIso639_2()
+	TranslateIso639('iso_639-2', TranslateIso639_2)
 
 	//
 	// Write terms.
@@ -214,7 +214,7 @@ async function LoadIso639_2(db) {
  * @returns {Promise<void>}
  */
 async function LoadIso639_3(db) {
-	console.log(`==> Handling ISO 639-3`)
+	console.log(`\n==> Handling ISO 639-3`)
 
 	//
 	// Reset buffers.
@@ -245,7 +245,7 @@ async function LoadIso639_3(db) {
 	// Load translations.
 	//
 	console.log(`  • Loading translations`)
-	TranslateIso639_3()
+	TranslateIso639('iso_639-3', TranslateIso639_3)
 
 	//
 	// Write terms.
@@ -285,7 +285,7 @@ async function LoadIso639_3(db) {
  * @returns {Promise<void>}
  */
 async function LoadIso639_5(db) {
-	console.log(`==> Handling ISO 639-5`)
+	console.log(`\n==> Handling ISO 639-5`)
 
 	//
 	// Reset buffers.
@@ -316,7 +316,7 @@ async function LoadIso639_5(db) {
 	// Load translations.
 	//
 	console.log(`  • Loading translations`)
-	TranslateIso639_5()
+	TranslateIso639('iso_639-5', TranslateIso639_5)
 
 	//
 	// Write terms.
@@ -772,22 +772,23 @@ function CreateIso639_5(item) {
 } // CreateIso639_5()
 
 /**
- * Load translations for ISO 639-2 languages from iso-codes PO files.
+ * Load translations from corresponding (iso-codes) PO files directory.
+ * @param {string} directory - PO files directory name (not path).
+ * @param {callback} callback - Callback for loading translations.
  */
-function TranslateIso639_2() {
+function TranslateIso639(directory, callback) {
 
 	//
 	// Constant helpers.
 	//
 	const token = kGlob.globals.token.ns
 	const decoders = kGlob.globals.dec
-	const results = kGlob.globals.res
 
 	//
 	// Get files list.
 	//
 	const files = GetFilesList(
-		pt.resolve(pt.join(kGlob.globals.path.iso_po, "iso_639-2")),
+		pt.resolve(pt.join(kGlob.globals.path.iso_po, directory)),
 		'.po',
 		[],
 		2
@@ -817,175 +818,99 @@ function TranslateIso639_2() {
 		// Add localised names.
 		//
 		for(const [key, names] of Object.entries(ParseIso639PoFile(file))) {
-
-			//
-			// Handle only non bridged terms.
-			//
-			if(kGlob.globals.dec.iso_639_2_codes.has(key)) {
-
-				//
-				// Handle name.
-				//
-				if(names.hasOwnProperty('Name')) {
-					results.terms[key]['_docs_label'][translation] = names['Name']
-				}
-
-				//
-				// Handle common name.
-				//
-				if(names.hasOwnProperty('Common name')) {
-					results.terms[key]['_docs_description'][translation] = names['Common name']
-					results.terms[key]['iso_639_common'][translation] = names['Common name']
-				}
-
-			} // Non bridged term.
-
-		} // Iterating translations.
+			callback(key, names, translation)
+		}
 
 	} // Iterating files.
+
+} // TranslateIso639()
+
+/**
+ * Load translations for ISO 639-2 languages from iso-codes PO files.
+ * @param {string} key - ISO 639-5 term key.
+ * @param {object} names - { <name type> : <translated name> }
+ * @param {string} translation - ISO 639-3 code for translation language.
+ */
+function TranslateIso639_2(key, names, translation) {
+
+	//
+	// Handle only non bridged terms.
+	//
+	if(kGlob.globals.dec.iso_639_2_codes.has(key)) {
+
+		//
+		// Handle name.
+		//
+		if(names.hasOwnProperty('Name')) {
+			kGlob.globals.res.terms[key]['_docs_label'][translation] = names['Name']
+		}
+
+		//
+		// Handle common name.
+		//
+		if(names.hasOwnProperty('Common name')) {
+			kGlob.globals.res.terms[key]['_docs_description'][translation] = names['Common name']
+			kGlob.globals.res.terms[key]['iso_639_common'][translation] = names['Common name']
+		}
+
+	} // Non bridged term.
 
 } // TranslateIso639_2()
 
 /**
  * Load translations for ISO 639-3 languages from iso-codes PO files.
+ * @param {string} key - ISO 639-5 term key.
+ * @param {object} names - { <name type> : <translated name> }
+ * @param {string} translation - ISO 639-3 code for translation language.
  */
-function TranslateIso639_3() {
+function TranslateIso639_3(key, names, translation) {
 
 	//
-	// Constant helpers.
+	// Handle name.
 	//
-	const token = kGlob.globals.token.ns
-	const decoders = kGlob.globals.dec
-	const results = kGlob.globals.res
-
-	//
-	// Get files list.
-	//
-	const files = GetFilesList(
-		pt.resolve(pt.join(kGlob.globals.path.iso_po, "iso_639-3")),
-		'.po',
-		[],
-		2
-	)
+	if(names.hasOwnProperty('Name')) {
+		kGlob.globals.res.terms[key]['_docs_label'][translation] = names['Name']
+	}
 
 	//
-	// Iterate found files.
+	// Handle common name.
 	//
-	for(const [language, file] of Object.entries(files)) {
+	if(names.hasOwnProperty('Common name')) {
+		kGlob.globals.res.terms[key]['_docs_description'][translation] = names['Common name']
+		kGlob.globals.res.terms[key]['iso_639_common'][translation] = names['Common name']
+	}
 
-		//
-		// Check translation code.
-		//
-		if(! decoders.iso_639_1_to_3.hasOwnProperty(language)) {
-			console.log(`    !!! Unmatched language code [${language}]`)
-			continue
-		}
-
-		//
-		// Get translation code.
-		//
-		const translation = 'iso_639_3'
-			+ token
-			+ decoders.iso_639_1_to_3[language]
-
-		//
-		// Add localised names.
-		//
-		for(const [key, names] of Object.entries(ParseIso639PoFile(file))) {
-
-			//
-			// Handle name.
-			//
-			if(names.hasOwnProperty('Name')) {
-				results.terms[key]['_docs_label'][translation] = names['Name']
-			}
-
-			//
-			// Handle common name.
-			//
-			if(names.hasOwnProperty('Common name')) {
-				results.terms[key]['_docs_description'][translation] = names['Common name']
-				results.terms[key]['iso_639_common'][translation] = names['Common name']
-			}
-
-			//
-			// Handle inverted name.
-			//
-			if(names.hasOwnProperty('Inverted name')) {
-				results.terms[key]['_docs_definition'][translation] = names['Inverted name']
-				results.terms[key]['iso_639_inverted'][translation] = names['Inverted name']
-			}
-
-		} // Iterating translations.
-
-	} // Iterating files.
+	//
+	// Handle inverted name.
+	//
+	if(names.hasOwnProperty('Inverted name')) {
+		kGlob.globals.res.terms[key]['_docs_definition'][translation] = names['Inverted name']
+		kGlob.globals.res.terms[key]['iso_639_inverted'][translation] = names['Inverted name']
+	}
 
 } // TranslateIso639_3()
 
 /**
  * Load translations for ISO 639-5 languages from iso-codes PO files.
+ * @param {string} key - ISO 639-5 term key.
+ * @param {object} names - { <name type> : <translated name> }
+ * @param {string} translation - ISO 639-3 code for translation language.
  */
-function TranslateIso639_5() {
+function TranslateIso639_5(key, names, translation) {
 
 	//
-	// Constant helpers.
+	// Handle only ISO 639-5 specific entries.
 	//
-	const token = kGlob.globals.token.ns
-	const decoders = kGlob.globals.dec
-	const results = kGlob.globals.res
-
-	//
-	// Get files list.
-	//
-	const files = GetFilesList(
-		pt.resolve(pt.join(kGlob.globals.path.iso_po, "iso_639-5")),
-		'.po',
-		[],
-		2
-	)
-
-	//
-	// Iterate found files.
-	//
-	for(const [language, file] of Object.entries(files)) {
+	if(kGlob.globals.dec.iso_639_5_codes.has(key)) {
 
 		//
-		// Check translation code.
+		// Handle name.
 		//
-		if(! decoders.iso_639_1_to_3.hasOwnProperty(language)) {
-			console.log(`    !!! Unmatched language code [${language}]`)
-			continue
+		if(names.hasOwnProperty('Name')) {
+			kGlob.globals.res.terms[key]['_docs_label'][translation] = names['Name']
 		}
 
-		//
-		// Get translation code.
-		//
-		const translation = 'iso_639_3'
-			+ token
-			+ decoders.iso_639_1_to_3[language]
-
-		//
-		// Add localised names.
-		//
-		for(const [key, names] of Object.entries(ParseIso639PoFile(file))) {
-
-			//
-			// Handle only ISO 639-5 specific entries.
-			//
-			if(kGlob.globals.dec.iso_639_5_codes.has(key)) {
-
-				//
-				// Handle name.
-				//
-				if(names.hasOwnProperty('Name')) {
-					results.terms[key]['_docs_label'][translation] = names['Name']
-				}
-
-			} // Not a bridged term.
-
-		} // Iterating translations.
-
-	} // Iterating files.
+	} // Not a bridged term.
 
 } // TranslateIso639_5()
 
