@@ -209,7 +209,8 @@
         "_docs_definition": {"iso_639_3_eng": "Land area in km²."},
         "_data_class": "_enum_data_classes_quantity",
         "_data_container": "_enum_data_containers_scalar",
-        "_data_type": "_enum_data_types_float"
+        "_data_type": "_enum_data_types_float",
+        "data_unit": "enum_data_units_area_km"
     },
     {
         "_codes_nid": "iso_3166",

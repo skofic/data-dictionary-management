@@ -78,6 +78,11 @@ async function ProcessIsoStandards(db) {
 	//
 	await LoadIso15924(db)	// ISO 15924.
 
+	//
+	// Handle ISO 3166 countries.
+	//
+	await LoadIso3166_1(db)	// ISO 3166-1.
+
 } // ProcessIsoStandards()
 
 /**
@@ -516,6 +521,126 @@ async function LoadIso15924(db) {
 } // LoadIso15924()
 
 /**
+ * Load ISO 3166-1 standard.
+ * The standard is loaded as follows:
+ * - Read the JSON file containing codes, english name, scope and type.
+ * - Iterate (iso-codes) JSON source and create term and edge objects adding them to global buffer.
+ * - Scan (iso-codes) related PO files directory and load translations.
+ * - Write terms to file, if preferences say so, and insert terms into database.
+ * - Write edges to file, if preferences say so, and insert edges into database.
+ * @param {Database} db - Database connection.
+ * @returns {Promise<void>}
+ */
+async function LoadIso3166_1(db) {
+	console.log(`\n==> Handling ISO 3166-1`)
+
+	//
+	// Reset buffers.
+	//
+	kGlob.globals.res.terms = {}
+	kGlob.globals.res.edges = []
+	kGlob.globals.res.topos = []
+
+	//
+	// Read objects.
+	//
+	console.log(`  • Reading objects`)
+	const terms =
+		JSON.parse(
+			fs.readFileSync(
+				pt.resolve(
+					pt.join(kGlob.globals.path.iso_json, 'iso_3166-1' + '.json')
+				)
+			)
+		)['3166-1']
+
+	//
+	// Fill buffers.
+	//
+	console.log(`  • Loading buffers`)
+	terms.forEach(CreateIso3166_1)
+
+	//
+	// Load translations.
+	//
+	console.log(`  • Loading translations`)
+	TranslateIso(
+		'iso_3166-1',
+		/^#\. (.+) for ([A-Z]{3})$/,
+		/^msgstr "(.+)"$/,
+		TranslateIso3166_1
+	)
+
+	//
+	// Load ancillary data.
+	//
+	console.log(`  • Reading country references`)
+	JSON.parse(
+		fs.readFileSync(
+			pt.resolve(
+				pt.join(kGlob.globals.path.country, 'countries' + '.json')
+			)
+		)
+
+	).forEach(ProcessCountryReferences)
+
+	//
+	// Load country flags.
+	//
+	for(const [code, file] of Object.entries(
+		GetFilesList(
+			kGlob.globals.path.flags,
+			'.svg',
+			prefix = [],
+			length = 2
+		)
+	)) {
+		//
+		// Set flag.
+		//
+		const key = code.toUpperCase()
+		if(kGlob.globals.dec.iso_3166_A2_toA3.hasOwnProperty(key)) {
+			kGlob.globals.res.terms[kGlob.globals.dec.iso_3166_A2_toA3[key]]['iso_3166_flag'] =
+				fs.readFileSync(file, 'utf8')
+		}
+	}
+
+	//
+	// Write terms.
+	//
+	await ProcessItems(
+		db,
+		kPriv.user.db.terms_col,
+		Object.values(kGlob.globals.res.terms),
+		ProcessTerm,
+		'terms.iso.3166.1'
+	)
+
+	//
+	// Write edges.
+	//
+	await ProcessItems(
+		db,
+		kPriv.user.db.edges_col,
+		kGlob.globals.res.edges,
+		ProcessEdge,
+		'schemas.iso.3166.1'
+	)
+
+	//
+	// Write topos.
+	//
+	await ProcessItems(
+		db,
+		kPriv.user.db.topos_col,
+		kGlob.globals.res.topos,
+		ProcessEdge,
+		'topos.iso.3166.1'
+	)
+
+} // LoadIso3166_1()
+
+/**
  * Fill term and edge buffers with ISO 639-3 objects.
  * @param {object} item - ISO 639-3 object.
  */
@@ -736,9 +861,17 @@ function CreateIso639_3(item) {
 		_codes_aid: codes,
 		_docs_label: {iso_639_3_eng: item['name']}
 	}
+
+	//
+	// Add inverted name.
+	//
 	if(item.hasOwnProperty('inverted_name')) {
 		term._docs_definition = {iso_639_3_eng: item['inverted_name']}
 	}
+
+	//
+	// Add common name.
+	//
 	if(item.hasOwnProperty('common_name')) {
 		term._docs_description = {iso_639_3_eng: item['common_name']}
 	}
@@ -1000,6 +1133,11 @@ function CreateIso4217(item) {
 	kGlob.globals.res.terms[lid] = term
 
 	//
+	// Add code to decoding tables.
+	//
+	kGlob.globals.dec.iso_4217_codes.add(lid)
+
+	//
 	// Create and add ISO edge to buffer.
 	//
 	kGlob.globals.res.edges.push({
@@ -1073,6 +1211,110 @@ function CreateIso15924(item) {
 	})
 
 } // CreateIso15924()
+
+/**
+ * Fill term and edge buffers with ISO 3166-1 objects.
+ * @param {object} item - ISO 3166-1 object.
+ */
+function CreateIso3166_1(item) {
+
+	//
+	// Init local storage.
+	//
+	const nid = "iso_3166_1"
+	const lid = item['alpha_3']
+	const gid = nid + kGlob.globals.token.ns + lid
+
+	//
+	// Init variables.
+	//
+	var edge = {}
+	var codes = []
+
+	//
+	// Load term codes list and decoding tables.
+	//
+	Array("alpha_2", "alpha_3", "numeric").forEach( (key) => {
+		if(item.hasOwnProperty(key)) {
+			codes.push(item[key])
+		}
+	})
+
+	//
+	// Init new term.
+	//
+	var term = {
+		_codes_nid: nid,
+		_codes_lid: lid,
+		_codes_gid: gid,
+		_codes_fid: gid,
+		_codes_aid: codes,
+		_docs_label: {iso_639_3_eng: item['name']}
+	}
+
+	//
+	// Add official name.
+	//
+	if(item.hasOwnProperty('official_name')) {
+		term._docs_definition = {iso_639_3_eng: item['official_name']}
+	}
+
+	//
+	// Add common name.
+	//
+	if(item.hasOwnProperty('common_name')) {
+		term._docs_description = {iso_639_3_eng: item['common_name']}
+	}
+
+	//
+	// Handle ISO codes.
+	//
+	term.iso_3166_alpha3 = item['alpha_3']
+
+	if(item.hasOwnProperty('alpha_2')) {
+		term.iso_3166_alpha2 = item['alpha_2']
+
+		//
+		// Add codes to decoding table.
+		//
+		kGlob.globals.dec.iso_3166_A2_toA3[item['alpha_2']] = lid
+	}
+
+	if(item.hasOwnProperty('numeric')) {
+		term.iso_3166_numeric = item['numeric']
+	}
+
+	if(item.hasOwnProperty('flag')) {
+		term.iso_3166_emoji = item['flag']
+	}
+
+	//
+	// Handle ISO names.
+	//
+	if(item.hasOwnProperty('official_name')) {
+		term['iso_3166_official-name'] = {iso_639_3_eng: item['official_name']}
+	}
+
+	if(item.hasOwnProperty('common_name')) {
+		term['iso_3166_common-name'] = {iso_639_3_eng: item['common_name']}
+	}
+
+	//
+	// Add term to buffer.
+	//
+	kGlob.globals.res.terms[lid] = term
+
+	//
+	// Create and add ISO edge to buffer.
+	//
+	kGlob.globals.res.edges.push({
+		_from: gid,
+		_to: nid,
+		_rels_predicate: '_enum_pred_enum-of',
+		_rels_path: ['iso', nid]
+	})
+
+} // CreateIso3166_1()
 
 /**
  * Load translations for ISO 639-2 languages from iso-codes PO files.
@@ -1198,6 +1440,39 @@ function TranslateIso15924(key, names, translation) {
 } // TranslateIso15924()
 
 /**
+ * Load translations for ISO 3166-1 languages from iso-codes PO files.
+ * @param {string} key - ISO 3166-1 term key.
+ * @param {object} names - { <name type> : <translated name> }
+ * @param {string} translation - ISO 3166-1 code for translation language.
+ */
+function TranslateIso3166_1(key, names, translation) {
+
+	//
+	// Handle name.
+	//
+	if(names.hasOwnProperty('Name')) {
+		kGlob.globals.res.terms[key]['_docs_label'][translation] = names['Name']
+	}
+
+	//
+	// Handle official name.
+	//
+	if(names.hasOwnProperty('Official name')) {
+		kGlob.globals.res.terms[key]['_docs_definition'][translation] = names['Official name']
+		kGlob.globals.res.terms[key]['iso_3166_official-name'][translation] = names['Official name']
+	}
+
+	//
+	// Handle common name.
+	//
+	if(names.hasOwnProperty('Common name')) {
+		kGlob.globals.res.terms[key]['_docs_description'][translation] = names['Common name']
+		kGlob.globals.res.terms[key]['iso_3166_common-name'][translation] = names['Common name']
+	}
+
+} // TranslateIso3166_1()
+
+/**
  * Process term files.
  * @param {Database} db - Database connection.
  * @param {string} colname - Database collection name.
@@ -1295,6 +1570,168 @@ async function ProcessItems(db, colname, items, callback, filename) {
 	await collection.import(records)
 
 } // ProcessObjects()
+
+/**
+ * Load ISO-3166-1 ancillary data.
+ * @param {object} item - The (countries) external repository country object.
+ */
+function ProcessCountryReferences(item) {
+
+	//
+	// Set country key.
+	//
+	const key = item['cca3']
+	if(kGlob.globals.res.terms.hasOwnProperty(key)) {
+
+		//
+		// Set IOC code.
+		//
+		if(item.hasOwnProperty('cioc')) {
+			kGlob.globals.res.terms[key].iso_3166_ioc = item['cioc']
+		}
+
+		//
+		// Set top level domains.
+		//
+		if(item.hasOwnProperty('tld') && (item['tld'].length > 0)) {
+			kGlob.globals.res.terms[key].iso_3166_tld = item['tld']
+		}
+
+		//
+		// Set calling codes.
+		//
+		if(item.hasOwnProperty('callingCodes') && (item['callingCodes'].length > 0)) {
+			kGlob.globals.res.terms[key].iso_3166_tel = item['callingCodes']
+		}
+
+		//
+		// Set area.
+		//
+		if(item.hasOwnProperty('area')) {
+			kGlob.globals.res.terms[key]['iso_3166_area'] = item['area']
+		}
+
+		//
+		// Set languages.
+		//
+		ProcessCountryLists(
+			item,
+			key,
+			'languages',
+			Object.keys(item['languages']),
+			kGlob.globals.dec.iso_639_3_codes,
+			'iso_639_3',
+			'iso_3166_languages',
+			'iso_3166'
+		)
+
+		//
+		// Set currencies.
+		//
+		ProcessCountryLists(
+			item,
+			key,
+			'currencies',
+			Object.keys(item['currencies']),
+			kGlob.globals.dec.iso_4217_codes,
+			'iso_4217',
+			'iso_3166_currencies',
+			'iso_3166'
+		)
+
+		//
+		// Set borders.
+		//
+		ProcessCountryLists(
+			item,
+			key,
+			'borders',
+			item['borders'],
+			new Set(Object.keys(kGlob.globals.res.terms)),
+			'iso_3166_1',
+			'iso_3166_borders',
+			'iso_3166'
+		)
+
+		//
+		// Set region.
+		//
+		if(item.hasOwnProperty('region') && (item['region'].length > 0)) {
+			kGlob.globals.res.terms[key].iso_3166_region = {'iso_639_3_eng': item['region']}
+		}
+
+		//
+		// Set subregion.
+		//
+		if(item.hasOwnProperty('subregion') && (item['subregion'].length > 0)) {
+			kGlob.globals.res.terms[key]['iso_3166_sub-region'] = {'iso_639_3_eng': item['subregion']}
+		}
+
+	} else {
+		console.log(`    !!! Unknown country [${key}]`)
+	}
+
+} // ProcessCountryReferences()
+
+/**
+ * Process country property lists, such as languages, currencies and borders
+ * @param item
+ * @param key
+ * @param property
+ * @param {Array} codes
+ * @param {Set} references
+ * @param namespace
+ * @param descriptor
+ * @param path
+ */
+function ProcessCountryLists(item, key, property, codes, references, namespace, descriptor, path) {
+
+	//
+	// Check property.
+	//
+	if(item.hasOwnProperty(property)) {
+
+		//
+		// Select existing properties.
+		//
+		const list = codes.filter( (code) => {
+			return references.has(code)
+		})
+
+		//
+		// Handle remaining properties.
+		//
+		if(list.length > 0) {
+
+			//
+			// Process properties.
+			//
+			kGlob.globals.res.terms[key][descriptor] = []
+			list.forEach( (code) => {
+
+				//
+				// Add to list.
+				//
+				const gid = namespace + kGlob.globals.token.ns + code
+				kGlob.globals.res.terms[key][descriptor].push(gid)
+
+				//
+				// Add topo.
+				//
+				kGlob.globals.res.topos.push({
+					_from: gid,
+					_to: kGlob.globals.res.terms[key]._codes_gid,
+					_rels_predicate: descriptor,
+					_rels_path: [path]
+				})
+
+			}) // Iterating properties
+
+		} // Has at least one property.
+
+	} // Has properties.
+
+} // ProcessCountryLists()
 
 /**
  * Process provided term.

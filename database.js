@@ -44,6 +44,13 @@ async function InitDatabase(db)
 				await collection.drop()
 				console.log(`Dropped ${item.name}`)
 				break
+
+			// Topo.
+			case kPriv.user.db.topos_col:
+				collection = db.collection(kPriv.user.db.topos_col)
+				await collection.drop()
+				console.log(`Dropped ${item.name}`)
+				break
 		}
 	}
 
@@ -52,6 +59,7 @@ async function InitDatabase(db)
 	//
 	InitTermCollection(db, kPriv.user.db.terms_col)
 	InitEdgeCollection(db, kPriv.user.db.edges_col)
+	InitTopoCollection(db, kPriv.user.db.topos_col)
 
 } // InitDatabase()
 
@@ -132,5 +140,40 @@ async function InitEdgeCollection(db, name)
 	console.log(`Created edge collection ${name}`)
 
 } // InitEdgeCollection()
+
+/**
+ * Initialise topos collection.
+ * It expects the collection to have been previously dropped.
+ * @param {Database} db - Database connection.
+ * @param {string} name - Collection name.
+ * @returns {Promise<void>}
+ */
+async function InitTopoCollection(db, name)
+{
+	//
+	// Create collection.
+	//
+	const collection = await db.createEdgeCollection(name)
+
+	//
+	// Add indexes.
+	//
+	await collection.ensureIndex({
+		type: 'persistent',
+		fields: ['_rels_predicate'],
+		name: "idx-predicate",
+		unique: false
+	})
+
+	await collection.ensureIndex({
+		type: 'persistent',
+		fields: ['_rels_path[*]'],
+		name: "idx-edge-paths",
+		unique: false
+	})
+
+	console.log(`Created topo collection ${name}`)
+
+} // InitTopoCollection()
 
 module.exports = { InitDatabase }
