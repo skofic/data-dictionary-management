@@ -1,4 +1,4 @@
-Data Dictionary
+# Data Dictionary
 
 This repository contains code to initialise and maintain the data dictionary.
 
