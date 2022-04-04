@@ -68,6 +68,11 @@ async function ProcessIsoStandards(db) {
 	await LoadIso639_2(db)	// ISO 639-2.
 	await LoadIso639_5(db)	// ISO 639-5.
 
+	//
+	// Handle ISO 4217 currencies.
+	//
+	await LoadIso4217(db)	// ISO 4217.
+
 } // ProcessIsoStandards()
 
 /**
@@ -176,7 +181,12 @@ async function LoadIso639_2(db) {
 	// Load translations.
 	//
 	console.log(`  • Loading translations`)
-	TranslateIso639('iso_639-2', TranslateIso639_2)
+	TranslateIso(
+		'iso_639-2',
+		/^#\. (.+) for ([a-z]{3})$/,
+		/^msgstr "(.+)"$/,
+		TranslateIso639_2
+	)
 
 	//
 	// Write terms.
@@ -245,7 +255,12 @@ async function LoadIso639_3(db) {
 	// Load translations.
 	//
 	console.log(`  • Loading translations`)
-	TranslateIso639('iso_639-3', TranslateIso639_3)
+	TranslateIso(
+		'iso_639-3',
+		/^#\. (.+) for ([a-z]{3})$/,
+		/^msgstr "(.+)"$/,
+		TranslateIso639_3
+	)
 
 	//
 	// Write terms.
@@ -316,7 +331,12 @@ async function LoadIso639_5(db) {
 	// Load translations.
 	//
 	console.log(`  • Loading translations`)
-	TranslateIso639('iso_639-5', TranslateIso639_5)
+	TranslateIso(
+		'iso_639-5',
+		/^#\. (.+) for ([a-z]{3})$/,
+		/^msgstr "(.+)"$/,
+		TranslateIso639_5
+	)
 
 	//
 	// Write terms.
@@ -341,6 +361,80 @@ async function LoadIso639_5(db) {
 	)
 
 } // LoadIso639_5()
+
+/**
+ * Load ISO 4217 standard.
+ * The standard is loaded as follows:
+ * - Read the JSON file containing codes, english name, scope and type.
+ * - Iterate (iso-codes) JSON source and create term and edge objects adding them to global buffer.
+ * - Scan (iso-codes) related PO files directory and load translations.
+ * - Write terms to file, if preferences say so, and insert terms into database.
+ * - Write edges to file, if preferences say so, and insert edges into database.
+ * @param {Database} db - Database connection.
+ * @returns {Promise<void>}
+ */
+async function LoadIso4217(db) {
+	console.log(`\n==> Handling ISO 4217`)
+
+	//
+	// Reset buffers.
+	//
+	kGlob.globals.res.terms = {}
+	kGlob.globals.res.edges = []
+
+	//
+	// Read objects.
+	//
+	console.log(`  • Reading objects`)
+	const terms =
+		JSON.parse(
+			fs.readFileSync(
+				pt.resolve(
+					pt.join(kGlob.globals.path.iso_json, 'iso_4217' + '.json')
+				)
+			)
+		)['4217']
+
+	//
+	// Fill buffers.
+	//
+	console.log(`  • Loading buffers`)
+	terms.forEach(CreateIso4217)
+
+	//
+	// Load translations.
+	//
+	console.log(`  • Loading translations`)
+	TranslateIso(
+		'iso_4217',
+		/^#\. (.+) for ([A-Z]{3})$/,
+		/^msgstr "(.+)"$/,
+		TranslateIso4217
+	)
+
+	//
+	// Write terms.
+	//
+	await ProcessItems(
+		db,
+		kPriv.user.db.terms_col,
+		Object.values(kGlob.globals.res.terms),
+		ProcessTerm,
+		'terms.iso.4217'
+	)
+
+	//
+	// Write edges.
+	//
+	await ProcessItems(
+		db,
+		kPriv.user.db.edges_col,
+		kGlob.globals.res.edges,
+		ProcessEdge,
+		'schemas.iso.4217'
+	)
+
+} // LoadIso4217()
 
 /**
  * Fill term and edge buffers with ISO 639-3 objects.
@@ -580,10 +674,12 @@ function CreateIso639_3(item) {
 	// Handle ISO codes.
 	//
 	term.iso_639_alpha3 = item['alpha_3']
+	// Add code to ISO 639-3 codes list.
 	kGlob.globals.dec.iso_639_3_codes.add(item['alpha_3'])
 
 	if(item.hasOwnProperty('alpha_2')) {
 		term.iso_639_alpha2 = item['alpha_2']
+		// Add code to 2 to 3 decoding table.
 		kGlob.globals.dec.iso_639_1_to_3[item['alpha_2']] = item['alpha_3']
 	}
 
@@ -772,58 +868,69 @@ function CreateIso639_5(item) {
 } // CreateIso639_5()
 
 /**
- * Load translations from corresponding (iso-codes) PO files directory.
- * @param {string} directory - PO files directory name (not path).
- * @param {callback} callback - Callback for loading translations.
+ * Fill term and edge buffers with ISO 4217 objects.
+ * @param {object} item - ISO 4217 object.
  */
-function TranslateIso639(directory, callback) {
+function CreateIso4217(item) {
 
 	//
-	// Constant helpers.
+	// Init local storage.
 	//
-	const token = kGlob.globals.token.ns
-	const decoders = kGlob.globals.dec
+	const nid = "iso_4217"
+	const lid = item['alpha_3']
+	const gid = nid + kGlob.globals.token.ns + lid
 
 	//
-	// Get files list.
+	// Init variables.
 	//
-	const files = GetFilesList(
-		pt.resolve(pt.join(kGlob.globals.path.iso_po, directory)),
-		'.po',
-		[],
-		2
-	)
+	var edge = {}
+	var codes = []
 
 	//
-	// Iterate found files.
+	// Load term codes list and decoding tables.
 	//
-	for(const [language, file] of Object.entries(files)) {
-
-		//
-		// Check translation code.
-		//
-		if(! decoders.iso_639_1_to_3.hasOwnProperty(language)) {
-			console.log(`    !!! Unmatched language code [${language}]`)
-			continue
+	Array("alpha_3", "numeric").forEach( (key) => {
+		if(item.hasOwnProperty(key)) {
+			codes.push(item[key])
 		}
+	})
 
-		//
-		// Get translation code.
-		//
-		const translation = 'iso_639_3'
-			+ token
-			+ decoders.iso_639_1_to_3[language]
+	//
+	// Init new term.
+	//
+	var term = {
+		_codes_nid: nid,
+		_codes_lid: lid,
+		_codes_gid: gid,
+		_codes_fid: gid,
+		_codes_aid: codes,
+		_docs_label: {iso_639_3_eng: item['name']}
+	}
 
-		//
-		// Add localised names.
-		//
-		for(const [key, names] of Object.entries(ParseIso639PoFile(file))) {
-			callback(key, names, translation)
-		}
+	//
+	// Handle ISO codes.
+	//
+	term.iso_4217_alpha3 = item['alpha_3']
+	if(item.hasOwnProperty('numeric')) {
+		term.iso_4217_numeric = item['numeric']
+	}
 
-	} // Iterating files.
+	//
+	// Add term to buffer.
+	//
+	kGlob.globals.res.terms[lid] = term
 
-} // TranslateIso639()
+	//
+	// Create and add ISO edge to buffer.
+	//
+	kGlob.globals.res.edges.push({
+		_from: gid,
+		_to: nid,
+		_rels_predicate: '_enum_pred_enum-of',
+		_rels_path: ['iso', nid]
+	})
+
+} // CreateIso4217()
 
 /**
  * Load translations for ISO 639-2 languages from iso-codes PO files.
@@ -913,6 +1020,23 @@ function TranslateIso639_5(key, names, translation) {
 	} // Not a bridged term.
 
 } // TranslateIso639_5()
+
+/**
+ * Load translations for ISO 4217 currencies from iso-codes PO files.
+ * @param {string} key - ISO 4217 term key.
+ * @param {object} names - { <name type> : <translated name> }
+ * @param {string} translation - ISO 639-3 code for translation language.
+ */
+function TranslateIso4217(key, names, translation) {
+
+	//
+	// Handle name.
+	//
+	if(names.hasOwnProperty('Name')) {
+		kGlob.globals.res.terms[key]['_docs_label'][translation] = names['Name']
+	}
+
+} // TranslateIso4217()
 
 /**
  * Process term files.
@@ -1257,17 +1381,69 @@ function GetFilesList(directory, extension = '', prefix = [], length = 0) {
 } // GetFilesList()
 
 /**
- * Parse ISO 639 PO file.
- * @param {string} fileName - File path.
- * @returns {object} - { language code: { name type: name translation } }
+ * Load translations from corresponding (iso-codes) PO files directory.
+ * @param {string} directory - PO files directory name (not path).
+ * @param {string} blockRegex - Regular expression to parse codes.
+ * @param {string} nameRegex - Regular expression to parse names.
+ * @param {callback} callback - Callback for loading translations.
  */
-function ParseIso639PoFile(fileName) {
+function TranslateIso(directory, blockRegex, nameRegex, callback) {
 
 	//
-	// Regular expressions.
+	// Constant helpers.
 	//
-	const blockRegex = /^#\. (.+) for ([a-z]{3})$/	// Language block regular expression.
-	const nameRegex  = /^msgstr "(.+)"$/			// Translated name.
+	const token = kGlob.globals.token.ns
+	const decoders = kGlob.globals.dec
+
+	//
+	// Get files list.
+	//
+	const files = GetFilesList(
+		pt.resolve(pt.join(kGlob.globals.path.iso_po, directory)),
+		'.po',
+		[],
+		2
+	)
+
+	//
+	// Iterate found files.
+	//
+	for(const [language, file] of Object.entries(files)) {
+
+		//
+		// Check translation code.
+		//
+		if(! decoders.iso_639_1_to_3.hasOwnProperty(language)) {
+			console.log(`    !!! Unmatched language code [${language}]`)
+			continue
+		}
+
+		//
+		// Get translation code.
+		//
+		const translation = 'iso_639_3'
+			+ token
+			+ decoders.iso_639_1_to_3[language]
+
+		//
+		// Add localised names.
+		//
+		for(const [key, names] of Object.entries(ParseIsoPoFile(file, blockRegex, nameRegex))) {
+			callback(key, names, translation)
+		}
+
+	} // Iterating files.
+
+} // TranslateIso()
+
+/**
+ * Parse ISO PO file.
+ * @param {string} fileName - File path.
+ * @param {string} blockRegex - Regular expression to parse codes.
+ * @param {string} nameRegex - Regular expression to parse names.
+ * @returns {object} - { language code: { name type: name translation } }
+ */
+function ParseIsoPoFile(fileName,blockRegex, nameRegex) {
 
 	//
 	// Init local storage.
@@ -1327,6 +1503,6 @@ function ParseIso639PoFile(fileName) {
 
 	return result																	// ==>
 
-} // ParseIso639PoFile()
+} // ParseIsoPoFile()
 
 module.exports = { ProcessDictionaryFiles, ProcessIsoStandards }
