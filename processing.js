@@ -73,6 +73,11 @@ async function ProcessIsoStandards(db) {
 	//
 	await LoadIso4217(db)	// ISO 4217.
 
+	//
+	// Handle ISO 15924 currencies.
+	//
+	await LoadIso15924(db)	// ISO 15924.
+
 } // ProcessIsoStandards()
 
 /**
@@ -435,6 +440,80 @@ async function LoadIso4217(db) {
 	)
 
 } // LoadIso4217()
+
+/**
+ * Load ISO 15924 standard.
+ * The standard is loaded as follows:
+ * - Read the JSON file containing codes, english name, scope and type.
+ * - Iterate (iso-codes) JSON source and create term and edge objects adding them to global buffer.
+ * - Scan (iso-codes) related PO files directory and load translations.
+ * - Write terms to file, if preferences say so, and insert terms into database.
+ * - Write edges to file, if preferences say so, and insert edges into database.
+ * @param {Database} db - Database connection.
+ * @returns {Promise<void>}
+ */
+async function LoadIso15924(db) {
+	console.log(`\n==> Handling ISO 15924`)
+
+	//
+	// Reset buffers.
+	//
+	kGlob.globals.res.terms = {}
+	kGlob.globals.res.edges = []
+
+	//
+	// Read objects.
+	//
+	console.log(`  • Reading objects`)
+	const terms =
+		JSON.parse(
+			fs.readFileSync(
+				pt.resolve(
+					pt.join(kGlob.globals.path.iso_json, 'iso_15924' + '.json')
+				)
+			)
+		)['15924']
+
+	//
+	// Fill buffers.
+	//
+	console.log(`  • Loading buffers`)
+	terms.forEach(CreateIso15924)
+
+	//
+	// Load translations.
+	//
+	console.log(`  • Loading translations`)
+	TranslateIso(
+		'iso_15924',
+		/^#\. (.+) for ([A-Za-z]{4})$/,
+		/^msgstr "(.+)"$/,
+		TranslateIso15924
+	)
+
+	//
+	// Write terms.
+	//
+	await ProcessItems(
+		db,
+		kPriv.user.db.terms_col,
+		Object.values(kGlob.globals.res.terms),
+		ProcessTerm,
+		'terms.iso.15924'
+	)
+
+	//
+	// Write edges.
+	//
+	await ProcessItems(
+		db,
+		kPriv.user.db.edges_col,
+		kGlob.globals.res.edges,
+		ProcessEdge,
+		'schemas.iso.15924'
+	)
+
+} // LoadIso15924()
 
 /**
  * Fill term and edge buffers with ISO 639-3 objects.
@@ -933,6 +1012,69 @@ function CreateIso4217(item) {
 } // CreateIso4217()
 
 /**
+ * Fill term and edge buffers with ISO 15924 objects.
+ * @param {object} item - ISO 15924 object.
+ */
+function CreateIso15924(item) {
+
+	//
+	// Init local storage.
+	//
+	const nid = "iso_15924"
+	const lid = item['alpha_4']
+	const gid = nid + kGlob.globals.token.ns + lid
+
+	//
+	// Init variables.
+	//
+	var edge = {}
+	var codes = []
+
+	//
+	// Load term codes list and decoding tables.
+	//
+	Array("alpha_4", "numeric").forEach( (key) => {
+		if(item.hasOwnProperty(key)) {
+			codes.push(item[key])
+		}
+	})
+
+	//
+	// Init new term.
+	//
+	var term = {
+		_codes_nid: nid,
+		_codes_lid: lid,
+		_codes_gid: gid,
+		_codes_fid: gid,
+		_codes_aid: [item['alpha_4'], item['numeric']],
+		_docs_label: {iso_639_3_eng: item['name']}
+	}
+
+	//
+	// Handle ISO codes.
+	//
+	term.iso_15924_alpha4 = item['alpha_4']
+	term.iso_15924_numeric = item['numeric']
+
+	//
+	// Add term to buffer.
+	//
+	kGlob.globals.res.terms[lid] = term
+
+	//
+	// Create and add ISO edge to buffer.
+	//
+	kGlob.globals.res.edges.push({
+		_from: gid,
+		_to: nid,
+		_rels_predicate: '_enum_pred_enum-of',
+		_rels_path: ['iso', nid]
+	})
+
+} // CreateIso15924()
+
+/**
  * Load translations for ISO 639-2 languages from iso-codes PO files.
  * @param {string} key - ISO 639-5 term key.
  * @param {object} names - { <name type> : <translated name> }
@@ -1037,6 +1179,23 @@ function TranslateIso4217(key, names, translation) {
 	}
 
 } // TranslateIso4217()
+
+/**
+ * Load translations for ISO 15924 currencies from iso-codes PO files.
+ * @param {string} key - ISO 15924 term key.
+ * @param {object} names - { <name type> : <translated name> }
+ * @param {string} translation - ISO 639-3 code for translation language.
+ */
+function TranslateIso15924(key, names, translation) {
+
+	//
+	// Handle name.
+	//
+	if(names.hasOwnProperty('Name')) {
+		kGlob.globals.res.terms[key]['_docs_label'][translation] = names['Name']
+	}
+
+} // TranslateIso15924()
 
 /**
  * Process term files.

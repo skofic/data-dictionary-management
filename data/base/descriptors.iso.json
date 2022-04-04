@@ -385,8 +385,8 @@
     {
         "_codes_nid": "iso_15924",
         "_codes_lid": "numeric",
-        "_codes_gid": "iso_3166_3_numeric",
-        "_codes_fid": "iso_3166_3_numeric",
+        "_codes_gid": "iso_15924_numeric",
+        "_codes_fid": "iso_15924_numeric",
         "_codes_aid": ["numeric"],
         "_docs_label": {"iso_639_3_eng": "Numeric code"},
         "_docs_definition": {"iso_639_3_eng": "Codes for the representation of names of scripts, numeric code."},
