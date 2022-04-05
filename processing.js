@@ -83,6 +83,7 @@ async function ProcessIsoStandards(db) {
 	//
 	await LoadIso3166_1(db)	// ISO 3166-1.
 	await LoadIso3166_2(db)	// ISO 3166-2.
+	await LoadIso3166_3(db)	// ISO 3166-3.
 
 } // ProcessIsoStandards()
 
@@ -644,11 +645,14 @@ async function LoadIso3166_1(db) {
 /**
  * Load ISO 3166-2 standard.
  * The standard is loaded as follows:
- * - Iterate the (iso-codes) JSON file and create the country subdivision type terms and edges.
- * - Iterate the (iso-codes) JSON file and create the country subdivision terms and edges.
+ * - Iterate the (iso-codes) JSON file and load it.
+ * - Create the subdivision and subdivision type terms.
+ * - Create the edges.
  * - Scan (iso-codes) related PO files directory and load translations.
- * - Write terms to file, if preferences say so, and insert terms into database.
+ * - Write type terms to file, if preferences say so, and insert terms into database.
+ * - Write subdivision terms to file, if preferences say so, and insert terms into database.
  * - Write edges to file, if preferences say so, and insert edges into database.
+ * - Write topos to file, if preferences say so, and insert edges into database.
  * @param {Database} db - Database connection.
  * @returns {Promise<void>}
  */
@@ -744,6 +748,80 @@ async function LoadIso3166_2(db) {
 	)
 
 } // LoadIso3166_2()
+
+/**
+ * Load ISO 3166-3 standard.
+ * The standard is loaded as follows:
+ * - Read the JSON file containing codes, english name, scope and type.
+ * - Iterate (iso-codes) JSON source and create term and edge objects adding them to global buffer.
+ * - Scan (iso-codes) related PO files directory and load translations.
+ * - Write terms to file, if preferences say so, and insert terms into database.
+ * - Write edges to file, if preferences say so, and insert edges into database.
+ * @param {Database} db - Database connection.
+ * @returns {Promise<void>}
+ */
+async function LoadIso3166_3(db) {
+	console.log(`\n==> Handling ISO 3166-3`)
+
+	//
+	// Reset buffers.
+	//
+	kGlob.globals.res.terms = {}
+	kGlob.globals.res.edges = []
+
+	//
+	// Read objects.
+	//
+	console.log(`  • Reading objects`)
+	const terms =
+		JSON.parse(
+			fs.readFileSync(
+				pt.resolve(
+					pt.join(kGlob.globals.path.iso_json, 'iso_3166-3' + '.json')
+				)
+			)
+		)['3166-3']
+
+	//
+	// Fill buffers.
+	//
+	console.log(`  • Loading buffers`)
+	terms.forEach(CreateIso3166_3)
+
+	//
+	// Load translations.
+	//
+	console.log(`  • Loading translations`)
+	TranslateIso(
+		'iso_3166-3',
+		/^#\. (.+) for ([A-Z]{4})$/,
+		/^msgstr "(.+)"$/,
+		TranslateIso3166_3
+	)
+
+	//
+	// Write terms.
+	//
+	await ProcessItems(
+		db,
+		kPriv.user.db.terms_col,
+		Object.values(kGlob.globals.res.terms),
+		ProcessTerm,
+		'terms.iso.3166.3'
+	)
+
+	//
+	// Write edges.
+	//
+	await ProcessItems(
+		db,
+		kPriv.user.db.edges_col,
+		kGlob.globals.res.edges,
+		ProcessEdge,
+		'schemas.iso.3166.3'
+	)
+
+} // LoadIso3166_3()
 
 /**
  * Fill term and edge buffers with ISO 639-3 objects.
@@ -1679,6 +1757,87 @@ function CreateIso3166_2_edges(items) {
 } // CreateIso3166_2_edges()
 
 /**
+ * Fill term and edge buffers with ISO 3166-3 objects.
+ * @param {object} item - ISO 3166-3 object.
+ */
+function CreateIso3166_3(item) {
+
+	//
+	// Init local storage.
+	//
+	const nid = "iso_3166_3"
+	const lid = item['alpha_4']
+	const gid = nid + kGlob.globals.token.ns + lid
+
+	//
+	// Init variables.
+	//
+	var edge = {}
+	var codes = []
+
+	//
+	// Load term codes list and decoding tables.
+	//
+	Array("alpha_2", "alpha_3", "alpha_4", "numeric").forEach( (key) => {
+		if(item.hasOwnProperty(key)) {
+			codes.push(item[key])
+		}
+	})
+
+	//
+	// Init new term.
+	//
+	var term = {
+		_codes_nid: nid,
+		_codes_lid: lid,
+		_codes_gid: gid,
+		_codes_fid: gid,
+		_codes_aid: codes,
+		_docs_label: {iso_639_3_eng: item['name']}
+	}
+
+	//
+	// Handle comment.
+	//
+	if(item.hasOwnProperty('comment')) {
+		term['_docs_notes'] = {iso_639_3_eng: item['comment']}
+	}
+
+	//
+	// Add codes.
+	//
+	term.iso_3166_alpha2 = item['alpha_2']
+	term.iso_3166_alpha3 = item['alpha_3']
+	term.iso_3166_3_alpha4 = item['alpha_4']
+	if(item.hasOwnProperty('numeric')) {
+		term.iso_3166_numeric = item['numeric']
+	}
+
+	//
+	// Handle withdrawal date.
+	//
+	if(item.hasOwnProperty('withdrawal_date')) {
+		term.iso_3166_3_withdrawal = item['withdrawal_date']
+	}
+
+	//
+	// Add term to buffer.
+	//
+	kGlob.globals.res.terms[lid] = term
+
+	//
+	// Create ISO-3166-3 edge.
+	//
+	kGlob.globals.res.edges.push({
+		_from: gid,
+		_to: nid,
+		_rels_predicate: '_enum_pred_enum-of',
+		_rels_path: ['iso', nid]
+	})
+
+} // CreateIso3166_3()
+
+/**
  * Load translations for ISO 639-2 languages from iso-codes PO files.
  * @param {string} key - ISO 639-5 term key.
  * @param {object} names - { <name type> : <translated name> }
@@ -1866,6 +2025,23 @@ function TranslateIso3166_2(key, names, translation) {
 	}
 
 } // TranslateIso3166_2()
+
+/**
+ * Load translations for ISO 3166-3 countries from iso-codes PO files.
+ * @param {string} key - ISO 3166-3 term key.
+ * @param {object} names - { <name type> : <translated name> }
+ * @param {string} translation - ISO 3166-3 code for translation language.
+ */
+function TranslateIso3166_3(key, names, translation) {
+
+	//
+	// Handle name.
+	//
+	if(names.hasOwnProperty('Name')) {
+		kGlob.globals.res.terms[key]['_docs_label'][translation] = names['Name']
+	}
+
+} // TranslateIso3166_3()
 
 /**
  * Process term files.
