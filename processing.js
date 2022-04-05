@@ -82,6 +82,7 @@ async function ProcessIsoStandards(db) {
 	// Handle ISO 3166 countries.
 	//
 	await LoadIso3166_1(db)	// ISO 3166-1.
+	await LoadIso3166_2(db)	// ISO 3166-2.
 
 } // ProcessIsoStandards()
 
@@ -599,8 +600,8 @@ async function LoadIso3166_1(db) {
 		// Set flag.
 		//
 		const key = code.toUpperCase()
-		if(kGlob.globals.dec.iso_3166_A2_toA3.hasOwnProperty(key)) {
-			kGlob.globals.res.terms[kGlob.globals.dec.iso_3166_A2_toA3[key]]['iso_3166_flag'] =
+		if(kGlob.globals.dec.iso_3166_A2_to_A3.hasOwnProperty(key)) {
+			kGlob.globals.res.terms[kGlob.globals.dec.iso_3166_A2_to_A3[key]]['iso_3166_flag'] =
 				fs.readFileSync(file, 'utf8')
 		}
 	}
@@ -639,6 +640,110 @@ async function LoadIso3166_1(db) {
 	)
 
 } // LoadIso3166_1()
+
+/**
+ * Load ISO 3166-2 standard.
+ * The standard is loaded as follows:
+ * - Iterate the (iso-codes) JSON file and create the country subdivision type terms and edges.
+ * - Iterate the (iso-codes) JSON file and create the country subdivision terms and edges.
+ * - Scan (iso-codes) related PO files directory and load translations.
+ * - Write terms to file, if preferences say so, and insert terms into database.
+ * - Write edges to file, if preferences say so, and insert edges into database.
+ * @param {Database} db - Database connection.
+ * @returns {Promise<void>}
+ */
+async function LoadIso3166_2(db) {
+	console.log(`\n==> Handling ISO 3166-1`)
+
+	//
+	// Reset buffers.
+	//
+	kGlob.globals.res.types = {}
+	kGlob.globals.res.terms = {}
+	kGlob.globals.res.edges = []
+	kGlob.globals.res.topos = []
+
+	//
+	// Read objects.
+	//
+	console.log(`  • Reading objects`)
+	const terms =
+		JSON.parse(
+			fs.readFileSync(
+				pt.resolve(
+					pt.join(kGlob.globals.path.iso_json, 'iso_3166-2' + '.json')
+				)
+			)
+		)['3166-2']
+
+	//
+	// Fill buffers with subdivisions and subdivision type terms.
+	//
+	console.log(`  • Loading subdivision terms`)
+	terms.forEach(CreateIso3166_2_terms)
+
+	//
+	// Fill buffers with subdivisions and subdivision type edges.
+	//
+	console.log(`  • Loading subdivision edges`)
+	CreateIso3166_2_edges(terms)
+
+	//
+	// Load translations.
+	//
+	console.log(`  • Loading translations`)
+	TranslateIso(
+		'iso_3166-2',
+		/^#\. (.+)$/,
+		/^msgstr "(.+)"$/,
+		TranslateIso3166_2
+	)
+
+	//
+	// Write types.
+	//
+	await ProcessItems(
+		db,
+		kPriv.user.db.terms_col,
+		Object.values(kGlob.globals.res.types),
+		ProcessTerm,
+		'terms.iso.3166.2.types'
+	)
+
+	//
+	// Write terms.
+	//
+	await ProcessItems(
+		db,
+		kPriv.user.db.terms_col,
+		Object.values(kGlob.globals.res.terms),
+		ProcessTerm,
+		'terms.iso.3166.2'
+	)
+
+	//
+	// Write edges.
+	//
+	await ProcessItems(
+		db,
+		kPriv.user.db.edges_col,
+		kGlob.globals.res.edges,
+		ProcessEdge,
+		'schemas.iso.3166.2'
+	)
+
+	//
+	// Write topos.
+	//
+	await ProcessItems(
+		db,
+		kPriv.user.db.topos_col,
+		kGlob.globals.res.topos,
+		ProcessEdge,
+		'topos.iso.3166.2'
+	)
+
+} // LoadIso3166_2()
 
 /**
  * Fill term and edge buffers with ISO 639-3 objects.
@@ -1228,7 +1333,6 @@ function CreateIso3166_1(item) {
 	//
 	// Init variables.
 	//
-	var edge = {}
 	var codes = []
 
 	//
@@ -1277,7 +1381,7 @@ function CreateIso3166_1(item) {
 		//
 		// Add codes to decoding table.
 		//
-		kGlob.globals.dec.iso_3166_A2_toA3[item['alpha_2']] = lid
+		kGlob.globals.dec.iso_3166_A2_to_A3[item['alpha_2']] = lid
 	}
 
 	if(item.hasOwnProperty('numeric')) {
@@ -1315,6 +1419,264 @@ function CreateIso3166_1(item) {
 	})
 
 } // CreateIso3166_1()
+
+/**
+ * Fill term buffers with ISO 3166-2 objects.
+ * The function will create the subdivision terms and subdiivision type terms.
+ * Only subdivisions that link to a valid country will be considered.
+ * @param {object} item - ISO 3166-2 object.
+ */
+function CreateIso3166_2_terms(item) {
+
+	//
+	// Init local storage.
+	//
+	const nid = "iso_3166_2"
+	const lid = item['code']
+	const gid = nid + kGlob.globals.token.ns + lid
+	const country2 = item['code'].slice(0, 2)
+
+	//
+	// Check if country code is valid.
+	//
+	if(! kGlob.globals.dec.iso_3166_A2_to_A3.hasOwnProperty(country2)) {
+		throw Error(`ISO-3166-2 code references unknown country [${country2}]`)
+	}
+	const country3 = kGlob.globals.dec.iso_3166_A2_to_A3[country2]
+
+	//
+	// Init new term.
+	//
+	var term = {
+		_codes_nid: nid,
+		_codes_lid: lid,
+		_codes_gid: gid,
+		_codes_fid: gid,
+		_codes_aid: [lid],
+		_docs_label: {iso_639_3_eng: item['name']}
+	}
+
+	//
+	// Add type.
+	//
+	if(item.hasOwnProperty('type') && (item['type'].length > 0)) {
+
+		//
+		// Set type info.
+		//
+		const tnid = "iso_3166_2_types"
+		const tlid = ProcessCountrySubdivisionType(item['type'])
+		const tgid = tnid + kGlob.globals.token.ns + tlid
+
+		//
+		// Update subdivision term.
+		//
+		term.iso_3166_2_type = tgid
+
+		//
+		// Create subdivision term type.
+		//
+		if(! kGlob.globals.res.types.hasOwnProperty(tgid)) {
+
+			//
+			// Add new term.
+			//
+			kGlob.globals.res.types[tgid] = {
+				_codes_nid: tnid,
+				_codes_lid: tlid,
+				_codes_gid: tgid,
+				_codes_fid: tgid,
+				_codes_aid: [tlid],
+				_docs_label: {iso_639_3_eng: item['type']}
+			}
+
+		} // New subdivision type.
+
+	} // Has subdivision type.
+
+	//
+	// Add terms to buffer.
+	//
+	kGlob.globals.res.terms[lid] = term
+
+} // CreateIso3166_2_terms()
+
+/**
+ * Fill edge buffers with ISO 3166-2 objects.
+ * The function will iterate all buffered subdivision terms and create the necessary edges.
+ * @param {[object]} items - List of original subdivisions.
+ */
+function CreateIso3166_2_edges(items) {
+
+	//
+	// Init local storage.
+	//
+	var dict = new Set()
+	var countries = new Set()
+
+	//
+	// Iterate original objects.
+	//
+	items.forEach( (item) => {
+
+		//
+		// Check if buffered.
+		//
+		if(kGlob.globals.res.terms.hasOwnProperty(item['code'])) {
+
+			//
+			// Init local storage.
+			//
+			const code = item['code'].slice(0, 2)
+			const term = kGlob.globals.res.terms[item['code']]
+
+			//
+			// Connect subdivision to its type
+			// for path 'iso' and 'enum' predicate.
+			//
+			kGlob.globals.res.edges.push({
+				_from: term._codes_gid,
+				_to: term.iso_3166_2_type,
+				_rels_predicate: '_enum_pred_enum-of',
+				_rels_path: ['iso']
+			})
+
+			//
+			// Handle connection to other subdivision.
+			//
+			if(item.hasOwnProperty('parent') && (item['parent'].length > 0)) {
+
+				//
+				// Check parent.
+				//
+				const plid = code + '-' + item['parent']
+				if(kGlob.globals.res.terms.hasOwnProperty(plid)) {
+
+					//
+					// Get parent.
+					//
+					const parent = kGlob.globals.res.terms[plid]
+
+					//
+					// Connect subdivision to its parent
+					// for path 'iso'/'iso_3166_2' and 'enum' predicate.
+					//
+					kGlob.globals.res.edges.push({
+						_from: term._codes_gid,
+						_to: parent._codes_gid,
+						_rels_predicate: '_enum_pred_enum-of',
+						_rels_path: ['iso', term._codes_nid]
+					})
+
+					//
+					// Connect subdivision to its parent in topos
+					// for path 'iso_3166' and subdivision type predicate.
+					//
+					kGlob.globals.res.topos.push({
+						_from: term._codes_gid,
+						_to: parent._codes_gid,
+						_rels_predicate: term.iso_3166_2_type,
+						_rels_path: ['iso_3166']
+					})
+
+					//
+					// Connect subdivision types
+					// for path 'iso'/'iso_3166_2_types' and 'enum' predicate.
+					//
+					const hash = term.iso_3166_2_type + ',' + parent.iso_3166_2_type
+					if(! dict.has(hash)) {
+
+						dict.add(hash)
+
+						kGlob.globals.res.edges.push({
+							_from: term.iso_3166_2_type,
+							_to: parent.iso_3166_2_type,
+							_rels_predicate: '_enum_pred_enum-of',
+							_rels_path: ['iso', 'iso_3166_2_types']
+						})
+
+					} // Was not already added
+
+				} // Parent was buffered.
+
+			} // Has parent.
+
+			//
+			// Handle connection to country.
+			//
+			else {
+
+				//
+				// Get country.
+				// We check this when we add terms.
+				//
+				const country = 'iso:3166_1'
+					+ kGlob.globals.token.ns
+					+ kGlob.globals.dec.iso_3166_A2_to_A3[code]
+
+				//
+				// Connect subdivision to its parent
+				// for path 'iso'/'iso_3166_2' and 'enum' predicate.
+				//
+				kGlob.globals.res.edges.push({
+					_from: term._codes_gid,
+					_to: country,
+					_rels_predicate: 'enum_pred_enum-of',
+					_rels_path: ['iso', term._codes_nid]
+				})
+
+				//
+				// Connect subdivision to its parent in topos
+				// for path 'iso_3166' and subdivision type predicate.
+				//
+				kGlob.globals.res.topos.push({
+					_from: term._codes_gid,
+					_to: country,
+					_rels_predicate: term.iso_3166_2_type,
+					_rels_path: ['iso_3166']
+				})
+
+				//
+				// Connect subdivision types
+				// for path 'iso'/'iso_3166_2_types' and 'enum' predicate.
+				//
+				const hash = term.iso_3166_2_type + ',' + 'iso_3166_2_types'
+				if(! dict.has(hash)) {
+
+					dict.add(hash)
+
+					kGlob.globals.res.edges.push({
+						_from: term.iso_3166_2_type,
+						_to: 'iso_3166_2_types',
+						_rels_predicate: '_enum_pred_enum-of',
+						_rels_path: ['iso', 'iso_3166_2_types']
+					})
+
+				} // Was not already added
+
+				//
+				// Connect country to enumeration root.
+				//
+				if(! countries.has(country)) {
+
+					countries.add(country)
+
+					kGlob.globals.res.edges.push({
+						_from: country,
+						_to: term._codes_nid,
+						_rels_predicate: '_enum_pred_section-of',
+						_rels_path: ['iso', term._codes_nid]
+					})
+
+				} // Country not yet connected.
+
+			} // Has not a parent.
+
+		} // Was buffered.
+
+	})	// Iterating subdivisions.
+
+} // CreateIso3166_2_edges()
 
 /**
  * Load translations for ISO 639-2 languages from iso-codes PO files.
@@ -1440,7 +1802,7 @@ function TranslateIso15924(key, names, translation) {
 } // TranslateIso15924()
 
 /**
- * Load translations for ISO 3166-1 languages from iso-codes PO files.
+ * Load translations for ISO 3166-1 countries from iso-codes PO files.
  * @param {string} key - ISO 3166-1 term key.
  * @param {object} names - { <name type> : <translated name> }
  * @param {string} translation - ISO 3166-1 code for translation language.
@@ -1471,6 +1833,39 @@ function TranslateIso3166_1(key, names, translation) {
 	}
 
 } // TranslateIso3166_1()
+
+/**
+ * Load translations for ISO 3166-2 subdivisions from iso-codes PO files.
+ * @param {string} key - ISO 3166-2 term keys.
+ * @param {object} names - { <name type> : <translated name> }
+ * @param {string} translation - ISO 3166-1 code for translation language.
+ */
+function TranslateIso3166_2(key, names, translation) {
+
+	//
+	// Handle name.
+	//
+	if(names.hasOwnProperty('Name')) {
+		kGlob.globals.res.terms[key]['_docs_label'][translation] = names['Name']
+	}
+
+	//
+	// Handle official name.
+	//
+	if(names.hasOwnProperty('Official name')) {
+		kGlob.globals.res.terms[key]['_docs_definition'][translation] = names['Official name']
+		kGlob.globals.res.terms[key]['iso_3166_official-name'][translation] = names['Official name']
+	}
+
+	//
+	// Handle common name.
+	//
+	if(names.hasOwnProperty('Common name')) {
+		kGlob.globals.res.terms[key]['_docs_description'][translation] = names['Common name']
+		kGlob.globals.res.terms[key]['iso_3166_common-name'][translation] = names['Common name']
+	}
+
+} // TranslateIso3166_2()
 
 /**
  * Process term files.
@@ -1540,34 +1935,41 @@ async function ProcessFiles(db, colname, files, callback) {
 async function ProcessItems(db, colname, items, callback, filename) {
 
 	//
-	// Set local storage.
+	// Continue if there are items.
 	//
-	const records = items.map(callback)
-	const collection = db.collection(colname)
-
-	//
-	// Write to file.
-	//
-	if(kPriv.user.flag.write_file) {
+	if(items.length > 0) {
 
 		//
-		// Set destination file path.
+		// Set local storage.
 		//
-		const destination = pt.join(kGlob.globals.path.processed, filename + '.json')
+		const records = items.map(callback)
+		const collection = db.collection(colname)
 
 		//
 		// Write to file.
 		//
-		console.log(`  • Processing ${filename}`)
-		fs.writeFileSync(destination, JSON.stringify(records), 'utf8')
+		if(kPriv.user.flag.write_file) {
 
-	} // Write to file.
+			//
+			// Set destination file path.
+			//
+			const destination = pt.join(kGlob.globals.path.processed, filename + '.json')
 
-	//
-	// Write to database.
-	//
-	console.log(`  • Inserting ${filename}`)
-	await collection.import(records)
+			//
+			// Write to file.
+			//
+			console.log(`  • Processing ${filename}`)
+			fs.writeFileSync(destination, JSON.stringify(records), 'utf8')
+
+		} // Write to file.
+
+		//
+		// Write to database.
+		//
+		console.log(`  • Inserting ${filename}`)
+		await collection.import(records)
+
+	} // Have items to process.
 
 } // ProcessObjects()
 
@@ -1889,7 +2291,7 @@ function ProcessEdge(edge) {
  * - GID: Use global identifier.
  * @param {string} identifier - Global identifier.
  * @returns {string} - _key value
-  */
+ */
 function ProcessGlobalIdentifier(identifier) {
 
 	//
@@ -1902,13 +2304,53 @@ function ProcessGlobalIdentifier(identifier) {
 
 		case 'GID':
 			return (identifier.length > 0) ? identifier
-										   : ':'									// ==>
+				: ':'									// ==>
 
 		default:
 			throw(Error(`Invalid user globals key_encode flag value, found [${kPriv.user.flag}]`))
 	}
 
 } // ProcessGlobalIdentifier()
+
+/**
+ * Process country subdivision type.
+ * This function will take an ISO 3166-2 country subdivision type name
+ * and return a normalised value fit to be used as an identifier.
+ * @param {string} name - Country subdivision name.
+ * @returns {string} - _key value
+ */
+function ProcessCountrySubdivisionType(name) {
+
+	//
+	// Check if not empty.
+	//
+	if(name.length > 0) {
+
+		//
+		// Init local storage.
+		//
+		var processed = name.toLowerCase()
+
+		//
+		// Split on comma.
+		//
+		const parts = processed.split(',')
+		if(parts.length > 1) {
+			processed = parts[0]
+		}
+
+		//
+		// Replace spaces with dashes.
+		//
+		processed = processed.replace(/ /g, "-")
+
+		return processed															// ==>
+
+	} // Npt empty.
+
+	return name																		// ==>
+
+} // ProcessCountrySubdivisionType()
 
 /**
  * Return a dictionary of file name and file paths.
@@ -2047,7 +2489,9 @@ function ParseIsoPoFile(fileName,blockRegex, nameRegex) {
 	var result = {}		// { <code>: { <name type>: <name> } }
 	var code = null		// Language code.
 	var type = null		// Name type.
-	var match = null	// Reguler expression match
+	var match = null	// Reguler expression match.
+	var matches = []	// List of matching codes.
+	var matched = 0		// Number of selection blocks in regex.
 
 	//
 	// Read PO file.
@@ -2068,17 +2512,54 @@ function ParseIsoPoFile(fileName,blockRegex, nameRegex) {
 		if(match !== null) {
 
 			//
-			// Set elements.
+			// Handle number of selection blocks in regex.
+			// 1 means #. (<pattern1>) for <pattern2>
+			// 2 means pattern as #. Name for <code>, Name for <code>
 			//
-			type = match[1]
-			code = match[2]
+			matched = match.length
 
 			//
-			// Init language record.
+			// Single name type and code.
 			//
-			if(! result.hasOwnProperty(code)) {
-				result[code] = {}
-			}
+			if(matched === 3) {
+
+				//
+				// Set elements.
+				//
+				type = match[1]
+				code = match[2]
+
+				//
+				// Init language record.
+				//
+				if(! result.hasOwnProperty(code)) {
+					result[code] = {}
+				}
+
+			} // One name type and one code.
+
+			//
+			// Single name type and multiple codes.
+			//
+			else {
+
+				//
+				// Parse codes.
+				//
+				matches = match[1].split(', ').map( (pat) => {
+					return pat.slice(9)
+				})
+
+				//
+				// Init result record.
+				//
+				matches.forEach( (code) => {
+					if(! result.hasOwnProperty(code)) {
+						result[code] = {}
+					}
+				})
+
+			} // One name and many codes.
 
 		} // Matched block.
 
@@ -2086,12 +2567,33 @@ function ParseIsoPoFile(fileName,blockRegex, nameRegex) {
 		// Match name.
 		//
 		match = line.match(nameRegex)
-		if((match !== null) && (code !== null)) {
+		if(match !== null) {
 
 			//
-			// Set corresponding name.
+			// Handle single name type and one code.
 			//
-			result[code][type] = match[1]
+			if((matched === 3) && (code !== null)) {
+
+				//
+				// Set corresponding name.
+				//
+				result[code][type] = match[1]
+
+			} // Single code.
+
+			//
+			// Handle single name type and many codes.
+			//
+			else if(matches.length > 0) {
+
+				//
+				// Set corresponding names.
+				//
+				for(const code of matches) {
+					result[code]['Name'] = match[1]
+				}
+
+			} // Multiple codes.
 
 		} // Matched name.
 

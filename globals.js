@@ -29,11 +29,12 @@ const globals = {
 		"iso_639_3_codes" : new Set(),
 		"iso_639_5_codes" : new Set(),
 		"iso_4217_codes"  : new Set(),
-		"iso_3166_A2_toA3": new Set()
+		"iso_3166_A2_to_A3": new Set()
 	},
 
 	"res": {
 		"terms": {},
+		"types": {},
 		"edges": [],
 		"topos": []
 	}
