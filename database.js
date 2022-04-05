@@ -27,7 +27,7 @@ async function InitDatabase(db)
 	//
 	// Drop collections.
 	//
-	var collection = null
+	let collection = null
 	for(item of collections) {
 		switch(item.name) {
 

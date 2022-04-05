@@ -106,7 +106,7 @@ async function LoadIso639_1(db) {
 	// and fill buffers with ISO 639-1 data.
 	//
 	console.log(`  • Loading buffers`)
-	var terms = []
+	let terms = []
 	for(const [alpha2, alpha3] of Object.entries(kGlob.globals.dec.iso_639_1_to_3)) {
 		terms.push(kGlob.globals.res.terms[alpha3])
 	}
@@ -895,7 +895,7 @@ function CreateIso639_2(item) {
 	//
 	// Init variables.
 	//
-	var codes = []
+	let codes = []
 
 	//
 	// Load term codes list and decoding tables.
@@ -909,7 +909,7 @@ function CreateIso639_2(item) {
 	//
 	// Init new term.
 	//
-	var term = {
+	let term = {
 		_codes_nid: nid,
 		_codes_lid: lid,
 		_codes_gid: gid,
@@ -1021,8 +1021,8 @@ function CreateIso639_3(item) {
 	//
 	// Init variables.
 	//
-	var edge = {}
-	var codes = []
+	let edge = {}
+	let codes = []
 
 	//
 	// Load term codes list and decoding tables.
@@ -1036,7 +1036,7 @@ function CreateIso639_3(item) {
 	//
 	// Init new term.
 	//
-	var term = {
+	let term = {
 		_codes_nid: nid,
 		_codes_lid: lid,
 		_codes_gid: gid,
@@ -1154,12 +1154,12 @@ function CreateIso639_5(item) {
 	//
 	// Init variables.
 	//
-	var edge = {}
+	let edge = {}
 
 	//
 	// Init new term.
 	//
-	var term = {
+	let term = {
 		_codes_nid: nid,
 		_codes_lid: lid,
 		_codes_gid: gid,
@@ -1278,8 +1278,8 @@ function CreateIso4217(item) {
 	//
 	// Init variables.
 	//
-	var edge = {}
-	var codes = []
+	let edge = {}
+	let codes = []
 
 	//
 	// Load term codes list and decoding tables.
@@ -1293,7 +1293,7 @@ function CreateIso4217(item) {
 	//
 	// Init new term.
 	//
-	var term = {
+	let term = {
 		_codes_nid: nid,
 		_codes_lid: lid,
 		_codes_gid: gid,
@@ -1348,8 +1348,8 @@ function CreateIso15924(item) {
 	//
 	// Init variables.
 	//
-	var edge = {}
-	var codes = []
+	let edge = {}
+	let codes = []
 
 	//
 	// Load term codes list and decoding tables.
@@ -1363,7 +1363,7 @@ function CreateIso15924(item) {
 	//
 	// Init new term.
 	//
-	var term = {
+	let term = {
 		_codes_nid: nid,
 		_codes_lid: lid,
 		_codes_gid: gid,
@@ -1411,7 +1411,7 @@ function CreateIso3166_1(item) {
 	//
 	// Init variables.
 	//
-	var codes = []
+	let codes = []
 
 	//
 	// Load term codes list and decoding tables.
@@ -1425,7 +1425,7 @@ function CreateIso3166_1(item) {
 	//
 	// Init new term.
 	//
-	var term = {
+	let term = {
 		_codes_nid: nid,
 		_codes_lid: lid,
 		_codes_gid: gid,
@@ -1525,7 +1525,7 @@ function CreateIso3166_2_terms(item) {
 	//
 	// Init new term.
 	//
-	var term = {
+	let term = {
 		_codes_nid: nid,
 		_codes_lid: lid,
 		_codes_gid: gid,
@@ -1589,8 +1589,8 @@ function CreateIso3166_2_edges(items) {
 	//
 	// Init local storage.
 	//
-	var dict = new Set()
-	var countries = new Set()
+	let dict = new Set()
+	let countries = new Set()
 
 	//
 	// Iterate original objects.
@@ -1772,8 +1772,8 @@ function CreateIso3166_3(item) {
 	//
 	// Init variables.
 	//
-	var edge = {}
-	var codes = []
+	let edge = {}
+	let codes = []
 
 	//
 	// Load term codes list and decoding tables.
@@ -1787,7 +1787,7 @@ function CreateIso3166_3(item) {
 	//
 	// Init new term.
 	//
-	var term = {
+	let term = {
 		_codes_nid: nid,
 		_codes_lid: lid,
 		_codes_gid: gid,
@@ -2334,7 +2334,7 @@ function ProcessTerm(term) {
 			//
 			// Init new term with _key.
 			//
-			var newTerm = {
+			let newTerm = {
 				"_key": ProcessGlobalIdentifier(term._codes_gid)
 			}
 
@@ -2411,7 +2411,7 @@ function ProcessEdge(edge) {
 				//
 				// Init new term with _key.
 				//
-				var newEdge = {
+				let newEdge = {
 					"_key": md5(index)
 				}
 
@@ -2505,7 +2505,7 @@ function ProcessCountrySubdivisionType(name) {
 		//
 		// Init local storage.
 		//
-		var processed = name.toLowerCase()
+		let processed = name.toLowerCase()
 
 		//
 		// Split on comma.
@@ -2662,12 +2662,12 @@ function ParseIsoPoFile(fileName,blockRegex, nameRegex) {
 	//
 	// Init local storage.
 	//
-	var result = {}		// { <code>: { <name type>: <name> } }
-	var code = null		// Language code.
-	var type = null		// Name type.
-	var match = null	// Reguler expression match.
-	var matches = []	// List of matching codes.
-	var matched = 0		// Number of selection blocks in regex.
+	let result = {}		// { <code>: { <name type>: <name> } }
+	let code = null		// Language code.
+	let type = null		// Name type.
+	let match = null	// Reguler expression match.
+	let matches = []	// List of matching codes.
+	let matched = 0		// Number of selection blocks in regex.
 
 	//
 	// Read PO file.
