@@ -20,36 +20,45 @@ const kPriv = require('./user.globals')		// User-provided globals.
 async function InitDatabase(db)
 {
 	//
-	// Iterate list of collections.
+	// Set local storage.
 	//
+	const graphs = await db.listGraphs()
 	const collections = await db.listCollections(true)
+
+	//
+	// Drop graphs.
+	//
+	let graph = null
+	for(item of graphs) {
+		console.log(`Dropping graph ${item.name}`)
+		const graph = db.graph(item.name)
+		await graph.drop()
+	}
 
 	//
 	// Drop collections.
 	//
 	let collection = null
 	for(item of collections) {
+		console.log(`Dropping collection ${item.name}`)
 		switch(item.name) {
 
 			// Terms.
 			case kPriv.user.db.terms_col:
 				collection = db.collection(kPriv.user.db.terms_col)
 				await collection.drop()
-				console.log(`Dropped ${item.name}`)
 				break
 
 			// Schema.
 			case kPriv.user.db.edges_col:
 				collection = db.collection(kPriv.user.db.edges_col)
 				await collection.drop()
-				console.log(`Dropped ${item.name}`)
 				break
 
 			// Topo.
 			case kPriv.user.db.topos_col:
 				collection = db.collection(kPriv.user.db.topos_col)
 				await collection.drop()
-				console.log(`Dropped ${item.name}`)
 				break
 		}
 	}
@@ -57,9 +66,15 @@ async function InitDatabase(db)
 	//
 	// Create collections.
 	//
-	InitTermCollection(db, kPriv.user.db.terms_col)
-	InitEdgeCollection(db, kPriv.user.db.edges_col)
-	InitTopoCollection(db, kPriv.user.db.topos_col)
+	await InitTermCollection(db, kPriv.user.db.terms_col)
+	await InitEdgeCollection(db, kPriv.user.db.edges_col)
+	await InitTopoCollection(db, kPriv.user.db.topos_col)
+
+	//
+	// Create graphs.
+	//
+	await InitSchemaGraph(db)
+	await InitTopoGraph(db)
 
 } // InitDatabase()
 
@@ -125,15 +140,29 @@ async function InitEdgeCollection(db, name)
 	//
 	await collection.ensureIndex({
 		type: 'persistent',
-		fields: ['_rels_predicate'],
-		name: "idx-predicate",
+		fields: ['_from', '_rels_predicate'],
+		name: "idx-from-predicate",
 		unique: false
 	})
 
 	await collection.ensureIndex({
 		type: 'persistent',
-		fields: ['_rels_path[*]'],
-		name: "idx-edge-paths",
+		fields: ['_from', '_rels_path[*]'],
+		name: "idx-from-edge-paths",
+		unique: false
+	})
+
+	await collection.ensureIndex({
+		type: 'persistent',
+		fields: ['_to', '_rels_predicate'],
+		name: "idx-to-predicate",
+		unique: false
+	})
+
+	await collection.ensureIndex({
+		type: 'persistent',
+		fields: ['_to', '_rels_path[*]'],
+		name: "idx-to-edge-paths",
 		unique: false
 	})
 
@@ -175,5 +204,60 @@ async function InitTopoCollection(db, name)
 	console.log(`Created topo collection ${name}`)
 
 } // InitTopoCollection()
+
+/**
+ * Initislise schema graph.
+ * @param {Database} db - Database connection.
+ * @returns {Promise<void>}
+ */
+async function InitSchemaGraph(db)
+{
+	//
+	// Instantiate graph.
+	//
+	const graph = db.graph('schema')
+
+	//
+	// Create graph.
+	//
+	const info = await graph.create([
+		{
+			collection: kPriv.user.db.edges_col,
+			from: [kPriv.user.db.terms_col],
+			to: [kPriv.user.db.terms_col],
+		}
+	]);
+
+	console.log(`Created graph ${'schema'}`)
+
+} // InitSchemaGraph()
+
+/**
+ * Initislise topo graph.
+ * @param {Database} db - Database connection.
+ * @returns {Promise<void>}
+ */
+async function InitTopoGraph(db)
+{
+	//
+	// Instantiate graph.
+	//
+	const graph = db.graph('topo')
+
+	//
+	// Create graph.
+	//
+	const info = await graph.create([
+		{
+			collection: kPriv.user.db.topos_col,
+			from: [kPriv.user.db.terms_col],
+			to: [kPriv.user.db.terms_col],
+		}
+	]);
+
+	console.log(`Created graph ${'topo'}`)
+
+} // InitTopoaGraph()
+
 
 module.exports = { InitDatabase }

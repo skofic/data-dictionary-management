@@ -1688,7 +1688,7 @@ function CreateIso3166_2_edges(items) {
 				// Get country.
 				// We check this when we add terms.
 				//
-				const country = 'iso:3166_1'
+				const country = 'iso_3166_1'
 					+ kGlob.globals.token.ns
 					+ kGlob.globals.dec.iso_3166_A2_to_A3[code]
 

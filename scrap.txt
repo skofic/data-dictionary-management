@@ -1,0 +1,16 @@
+Warnings:
+
+[1202], 'vertex 'terms/iso:3166_1_AND' not found'
+[1202], 'vertex 'terms/iso:3166_1_AND' not found'
+[1202], 'vertex 'terms/iso:3166_1_ARE' not found'
+[1202], 'vertex 'terms/iso:3166_1_ARE' not found'
+[1202], 'vertex 'terms/iso:3166_1_AFG' not found'
+[1202], 'vertex 'terms/iso:3166_1_AFG' not found'
+[1202], 'vertex 'terms/iso:3166_1_ATG' not found'
+[1202], 'vertex 'terms/iso:3166_1_ATG' not found'
+[1202], 'vertex 'terms/iso:3166_1_ALB' not found'
+[1202], 'vertex 'terms/iso:3166_1_ALB' not found'
+
+Result:
+
+[]

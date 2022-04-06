@@ -1,0 +1,13 @@
+//
+// Data Dictionary - Route from root to leaf through multiple paths.
+//
+WITH terms
+FOR vertex, edge, path IN 1..10
+    INBOUND @root
+    GRAPH "dict-schema"
+    PRUNE @pathId NOT IN edge.`_rels_path` AND
+          edge._from == @target
+//    OPTIONS {"order": "dfs", "uniqueVertices": "path"}
+    FILTER @pathId IN edge.`_rels_path` AND
+           edge._from == @target
+    RETURN path
