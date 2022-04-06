@@ -141,28 +141,21 @@ async function InitEdgeCollection(db, name)
 	await collection.ensureIndex({
 		type: 'persistent',
 		fields: ['_from', '_rels_predicate'],
-		name: "idx-from-predicate",
+		name: "idx-schema-from-predicate",
 		unique: false
 	})
 
 	await collection.ensureIndex({
 		type: 'persistent',
 		fields: ['_from', '_rels_path[*]'],
-		name: "idx-from-edge-paths",
+		name: "idx-schema-from-edge-paths",
 		unique: false
 	})
 
 	await collection.ensureIndex({
 		type: 'persistent',
-		fields: ['_to', '_rels_predicate'],
-		name: "idx-to-predicate",
-		unique: false
-	})
-
-	await collection.ensureIndex({
-		type: 'persistent',
-		fields: ['_to', '_rels_path[*]'],
-		name: "idx-to-edge-paths",
+		fields: ['_from', '_rels_predicate', '_rels_path[*]'],
+		name: "idx-schema-from-edge-predicate-paths",
 		unique: false
 	})
 
@@ -189,15 +182,22 @@ async function InitTopoCollection(db, name)
 	//
 	await collection.ensureIndex({
 		type: 'persistent',
-		fields: ['_rels_predicate'],
-		name: "idx-predicate",
+		fields: ['_from', '_rels_predicate'],
+		name: "idx-topo-from-predicate",
 		unique: false
 	})
 
 	await collection.ensureIndex({
 		type: 'persistent',
-		fields: ['_rels_path[*]'],
-		name: "idx-edge-paths",
+		fields: ['_from', '_rels_path[*]'],
+		name: "idx-topo-from-edge-paths",
+		unique: false
+	})
+
+	await collection.ensureIndex({
+		type: 'persistent',
+		fields: ['_from', '_rels_predicate', '_rels_path[*]'],
+		name: "idx-topo-from-edge-predicate-paths",
 		unique: false
 	})
 
