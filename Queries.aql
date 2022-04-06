@@ -1,13 +1,16 @@
 //
-// Data Dictionary - Route from root to leaf through multiple paths.
+// Data Dictionary - Return preferred element path.
 //
 WITH terms
 FOR vertex, edge, path IN 1..10
     INBOUND @root
-    GRAPH "dict-schema"
-    PRUNE @pathId NOT IN edge.`_rels_path` AND
-          edge._from == @target
+    GRAPH "schema"
+    PRUNE @pathId NOT IN edge.`/rels/path` AND
+          ( (edge._to == @target AND
+             edge.`_rels_predicate` == "_enum_pred_enum-of") OR
+            (edge._from == @target AND
+             edge.`_rels_predicate` == "_enum_pred_enum-of") )
 //    OPTIONS {"order": "dfs", "uniqueVertices": "path"}
-    FILTER @pathId IN edge.`_rels_path` AND
+    FILTER edge._to == @target OR
            edge._from == @target
     RETURN path

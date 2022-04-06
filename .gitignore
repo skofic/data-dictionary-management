@@ -111,6 +111,3 @@ dist
 
 ### User files.
 /user.globals.js
-
-### processed files
-processed/**
