@@ -86,26 +86,25 @@
     
     {
         "_codes_nid": "_codes",
-        "_codes_lid": "uid",
-        "_codes_gid": "_codes_uid",
-        "_codes_fid": "_codes_uid",
-        "_codes_aid": ["uid"],
+        "_codes_lid": "unit",
+        "_codes_gid": "_codes_unit",
+        "_codes_fid": "_codes_unit",
+        "_codes_aid": ["unit"],
         "_docs_label": {"iso_639_3_eng": "Data provider unit"},
-        "_docs_definition": {"iso_639_3_eng": "Name of the unit that provides or curates the data."},
+        "_docs_definition": {"iso_639_3_eng": "Name of the unit that provided the metadata or curates the data."},
         "_docs_description": {"iso_639_3_eng": "This field should provide the name or *reference* of the *institute* or *unit* that provided the *metadata* or that is in charge of the data *curation*. This value will be used as a categorical value to group data provider units. This value will be used as a categorical value to group data providers.\n\nYou should tread this data as a category: use the same value for the same provider unit."},
         "_data_class": "_enum_data_classes_category",
         "_data_container": "_enum_data_containers_scalar",
-        "_data_type": "_enum_data_types_string",
-        "_data_rules": ["_enum_data_rules_required"]
+        "_data_type": "_enum_data_types_string"
     },
     {
         "_codes_nid": "_codes",
-        "_codes_lid": "pid",
-        "_codes_gid": "_codes_pid",
-        "_codes_fid": "_codes_pid",
-        "_codes_aid": ["pid"],
+        "_codes_lid": "provider",
+        "_codes_gid": "_codes_provider",
+        "_codes_fid": "_codes_provider",
+        "_codes_aid": ["provider"],
         "_docs_label": {"iso_639_3_eng": "Data provider"},
-        "_docs_definition": {"iso_639_3_eng": "Name or reference of the contact that provided the data."},
+        "_docs_definition": {"iso_639_3_eng": "Name or reference of the contact that provided the metadata or curates the data."},
         "_docs_description": {"iso_639_3_eng": "This field should provide the name or *reference* of the *person* that provided the *metadata* or that is in charge of the data *curation*. This value will be used as a categorical value to group data providers.\n\nYou should tread this data as a category: use the same value for the same provider."},
         "_data_class": "_enum_data_classes_category",
         "_data_container": "_enum_data_containers_scalar",
@@ -192,6 +191,19 @@
     },
     {
         "_codes_nid": "_codes",
+        "_codes_lid": "pid",
+        "_codes_gid": "_codes_pid",
+        "_codes_fid": "_codes_pid",
+        "_codes_aid": ["pid"],
+        "_docs_label": {"iso_639_3_eng": "Provider identifier"},
+        "_docs_definition": {"iso_639_3_eng": "The descriptor's identifier given by the provider."},
+        "_docs_description": {"iso_639_3_eng": "This corresponds to the *identifier* that the *metadata provider* or *curator* has *assigned* to the *descriptor*."},
+        "_data_class": "_enum_data_classes_code",
+        "_data_container": "_enum_data_containers_scalar",
+        "_data_type": "_enum_data_types_string"
+    },
+    {
+        "_codes_nid": "_codes",
         "_codes_lid": "sid",
         "_codes_gid": "_codes_sid",
         "_codes_fid": "_codes_sid",
@@ -210,17 +222,13 @@
         "_codes_gid": "_codes_pid",
         "_codes_fid": "_codes_pid",
         "_codes_aid": ["pid"],
-        "_docs_label": {"iso_639_3_eng": "Provider"},
-        "_docs_definition": {"iso_639_3_eng": "The unique identifier of the term within the data dictionary."},
-        "_docs_description": {"iso_639_3_eng": "Terms are *uniquely identified* by their *global identifier*, this field, which is the concatenation of the *namespace identifier* and the *local identifier*, separated by a *token*.\n\nThis field is *required* and, once set, cannot be modified."},
-        "_docs_examples": {"iso_639_3_eng": "`iso.org/639-1/it`: This would be the global identifier for the ISO 639-1 Italian language code, constituted by the `iso.org/639-1` namespace and the `it` local identifier.\n\n`iso.org/3166-1/alpha-2/it`: This would be the global identifier for the ISO 3166-1 2-character code for Italy, constituted by the `iso.org/3166-1/alpha-2` namespace and the `it` local identifier."},
+        "_docs_label": {"iso_639_3_eng": "Provided identifier"},
+        "_docs_definition": {"iso_639_3_eng": "The identifier that was provided with the metadata or data."},
+        "_docs_description": {"iso_639_3_eng": "This is the *identifier* or *field name* that was assigned to the *term* or *descriptor* by the *curator* or *provider* of the *data* or *metadata*. This identifier can be used by the *same provider* when *sending data* to the information system."},
         "_data_class": "_enum_data_classes_code",
         "_data_container": "_enum_data_containers_scalar",
         "_data_type": "_enum_data_types_string",
-        "_data_rules": [
-            "_enum_data_rules_required",
-            "_enum_data_rules_immutable"
-        ]
+        "_data_rules": ["_enum_data_rules_required"]
     },
     {
         "_codes_nid": "_codes",
