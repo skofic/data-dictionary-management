@@ -37,6 +37,17 @@ const globals = {
 		"types": {},
 		"edges": [],
 		"topos": []
+	},
+
+	"eufgis": {
+		"countries": new Set([
+			"AUT", "BLR", "BEL", "BIH", "BGR", "HRV",
+			"CZE", "DNK", "EST", "FIN", "FRA", "DEU",
+			"GRC", "HUN", "ISL", "IRL", "ITA", "LVA",
+			"LTU", "LUX", "MLT", "MDA", "NLD", "MKD",
+			"NOR", "POL", "ROU", "SRB", "SVK", "SVN",
+			"ESP", "SWE", "CHE", "TUR", "UKR", "GBR"
+		])
 	}
 }
 

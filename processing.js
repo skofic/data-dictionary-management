@@ -1487,14 +1487,26 @@ function CreateIso3166_1(item) {
 	kGlob.globals.res.terms[lid] = term
 
 	//
-	// Create and add ISO edge to buffer.
+	// instantiate edge.
 	//
-	kGlob.globals.res.edges.push({
+	var edge = {
 		_from: gid,
 		_to: nid,
 		_rels_predicate: '_enum_pred_enum-of',
 		_rels_path: ['iso', nid]
-	})
+	}
+
+	//
+	// Handle EUFGIS country.
+	//
+	if(kGlob.globals.eufgis.countries.has(lid)) {
+		edge._rels_path.push("eufgis_countries")
+	}
+
+	//
+	// Add to buffer.
+	//
+	kGlob.globals.res.edges.push(edge)
 
 } // CreateIso3166_1()
 
