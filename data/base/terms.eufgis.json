@@ -1,0 +1,42 @@
+[
+    {
+        "_codes_lid": "eufgis",
+        "_codes_gid": "eufgis",
+        "_codes_aid": ["eufgis"],
+        "_docs_label": {"iso_639_3_eng": "EUFGIS"},
+        "_docs_definition": {"iso_639_3_eng": "Information system on forest genetic resources."},
+        "_docs_description": {"iso_639_3_eng": "The [EUFGIS](http://www.eufgis.org) project (April 2007-March 2011) created an online information system for forest genetic resources (FGR) inventories in Europe to support the countries in their efforts to implement FGR conservation as part of sustainable forest management."}
+    },
+    {
+        "_codes_nid": "eufgis",
+        "_codes_lid": "countries",
+        "_codes_gid": "eufgis_countries",
+        "_codes_aid": ["countries"],
+        "_docs_label": {"iso_639_3_eng": "EUFGIS countries"},
+        "_docs_definition": {"iso_639_3_eng": "Countries participating in the EUFGIS project."}
+    },
+    
+    {
+        "_codes_lid": "gcu",
+        "_codes_gid": "gcu",
+        "_codes_aid": ["gcu"],
+        "_docs_label": {"iso_639_3_eng": "Gene conservation unit"},
+        "_docs_definition": {"iso_639_3_eng": "A clearly mapped area of forest or woodland where dynamic gene conservation is one of the main management priorities for one or more tree species."}
+    },
+    {
+        "_codes_nid": "gcu",
+        "_codes_lid": "topography",
+        "_codes_gid": "gcu_topography",
+        "_codes_aid": ["topography"],
+        "_docs_label": {"iso_639_3_eng": "Topography"},
+        "_docs_definition": {"iso_639_3_eng": "Gene conservation unit topography."}
+    },
+    {
+        "_codes_nid": "gcu",
+        "_codes_lid": "population",
+        "_codes_gid": "gcu_population",
+        "_codes_aid": ["population"],
+        "_docs_label": {"iso_639_3_eng": "GCU target tree population"},
+        "_docs_definition": {"iso_639_3_eng": "*Tree species population* living in a *gene conservation unit* designated to be *monitored* and *documented*."}
+     }
+]
