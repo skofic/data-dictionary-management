@@ -25,18 +25,18 @@
     },
     {
         "_codes_nid": "gcu",
-        "_codes_lid": "topography",
-        "_codes_gid": "gcu_topography",
-        "_codes_aid": ["topography"],
-        "_docs_label": {"iso_639_3_eng": "Topography"},
-        "_docs_definition": {"iso_639_3_eng": "Gene conservation unit topography."}
-    },
-    {
-        "_codes_nid": "gcu",
         "_codes_lid": "population",
         "_codes_gid": "gcu_population",
         "_codes_aid": ["population"],
         "_docs_label": {"iso_639_3_eng": "GCU target tree population"},
         "_docs_definition": {"iso_639_3_eng": "*Tree species population* living in a *gene conservation unit* designated to be *monitored* and *documented*."}
-     }
+    },
+    {
+        "_codes_nid": "gcu",
+        "_codes_lid": "restriction",
+        "_codes_gid": "gcu_restriction",
+        "_codes_aid": ["restriction"],
+        "_docs_label": {"iso_639_3_eng": "GCU restrinction"},
+        "_docs_definition": {"iso_639_3_eng": "Restrinctions applying to the GCU."}
+    }
 ]

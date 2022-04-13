@@ -94,9 +94,9 @@
         "_data_type": "_enum_data_types_string"
     },
     {
-        "_codes_nid": "gcu_topography",
+        "_codes_nid": "gcu",
         "_codes_lid": "latitude",
-        "_codes_gid": "gcu_topography_latitude",
+        "_codes_gid": "gcu_latitude",
         "_codes_fid": "UnitLatitude",
         "_codes_aid": ["latitude"],
         "_docs_label": {"iso_639_3_eng": "Latitude"},
@@ -110,9 +110,9 @@
         "_data_rules": ["_enum_data_rules_required"]
     },
     {
-        "_codes_nid": "gcu_topography",
+        "_codes_nid": "gcu",
         "_codes_lid": "longitude",
-        "_codes_gid": "gcu_topography_longitude",
+        "_codes_gid": "gcu_longitude",
         "_codes_fid": "UnitLongitude",
         "_codes_aid": ["longitude"],
         "_docs_label": {"iso_639_3_eng": "Longitude"},
@@ -126,11 +126,11 @@
         "_data_rules": ["_enum_data_rules_required"]
     },
     {
-        "_codes_nid": "gcu_topography",
-        "_codes_lid": "restriction",
-        "_codes_gid": "gcu_topography_restriction",
+        "_codes_nid": "gcu_restriction",
+        "_codes_lid": "coordinates",
+        "_codes_gid": "gcu_restriction_coordinates",
         "_codes_fid": "UnitCoordinatesRestriction",
-        "_codes_aid": ["restriction"],
+        "_codes_aid": ["coordinates"],
         "_docs_label": {"iso_639_3_eng": "Coordinates privacy"},
         "_docs_definition": {"iso_639_3_eng": "Restriction in making the geographical coordinates publically available."},
         "_docs_description": {"iso_639_3_eng": "If `Yes` the accuracy of the geographic\ndata will be modified when making the\ninformation available."},
@@ -140,9 +140,9 @@
         "_data_rules": ["_enum_data_rules_required"]
     },
     {
-        "_codes_nid": "gcu_topography",
+        "_codes_nid": "gcu",
         "_codes_lid": "datum",
-        "_codes_gid": "gcu_topography_datum",
+        "_codes_gid": "gcu_datum",
         "_codes_fid": "UnitGeodeticDatum",
         "_codes_aid": ["datum"],
         "_docs_label": {"iso_639_3_eng": "Unit geodetic datum"},
@@ -150,6 +150,8 @@
         "_docs_description": {"iso_639_3_eng": "A horizontal geodetic datum based on an ellipsoid that has its origin at the earth&apos;s center of mass. Examples are the *World Geodetic System of 1984*, the *North American Datum of 1983*, and the *Geodetic Datum of Australia of 1994*. The first uses the WGS84 ellipsoid; the latter two use the GRS80 ellipsoid.\n\nIf not provided `WGS 1984` will be used."},
         "_data_class": "_enum_data_classes_code",
         "_data_container": "_enum_data_containers_scalar",
-        "_data_type": "_enum_data_types_string"
+        "_data_type": "_enum_data_types_enum",
+        "_data_kind": ["geo_datums"],
+        "_data_rules": ["_enum_data_rules_required"]
     }
 ]
