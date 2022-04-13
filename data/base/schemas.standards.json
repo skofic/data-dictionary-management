@@ -835,7 +835,7 @@
         "_rels_path": ["geo_datums"]
     },
     {
-        "_codes_gid": "geo_datums_122",
+        "_from": "geo_datums_122",
         "_to": "geo_datums",
         "_rels_predicate": "_enum_pred_enum-of",
         "_rels_path": ["geo_datums"]
