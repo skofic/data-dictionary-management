@@ -473,6 +473,13 @@
     },
     {
         "_codes_nid": "_enum_data_units_area",
+        "_codes_lid": "ha",
+        "_codes_gid": "_enum_data_units_area_ha",
+        "_codes_aid": "[ha]",
+        "_docs_label": {"iso_639_3_eng": "Hectare"}
+    },
+    {
+        "_codes_nid": "_enum_data_units_area",
         "_codes_lid": "m",
         "_codes_gid": "_enum_data_units_area_m",
         "_codes_aid": "[m]",

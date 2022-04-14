@@ -4,5 +4,61 @@
         "_to": "eufgis_countries",
         "_rels_predicate": "_enum_pred_bridge-of",
         "_rels_path": ["eufgis_countries"]
+    },
+    
+    {
+        "_from": "gcu_ownerships_public",
+        "_to": "gcu_ownerships",
+        "_rels_predicate": "_enum_pred_enum-of",
+        "_rels_path": ["gcu_ownerships"]
+    },
+    {
+        "_from": "gcu_ownerships_private",
+        "_to": "gcu_ownerships",
+        "_rels_predicate": "_enum_pred_enum-of",
+        "_rels_path": ["gcu_ownerships"]
+    },
+    {
+        "_from": "gcu_ownerships_joint",
+        "_to": "gcu_ownerships",
+        "_rels_predicate": "_enum_pred_enum-of",
+        "_rels_path": ["gcu_ownerships"]
+    },
+    {
+        "_from": "gcu_ownerships_other",
+        "_to": "gcu_ownerships",
+        "_rels_predicate": "_enum_pred_enum-of",
+        "_rels_path": ["gcu_ownerships"]
+    },
+    
+    {
+        "_from": "gcu_types_1",
+        "_to": "gcu_types",
+        "_rels_predicate": "_enum_pred_enum-of",
+        "_rels_path": ["gcu_types"]
+    },
+    {
+        "_from": "gcu_types_2",
+        "_to": "gcu_types",
+        "_rels_predicate": "_enum_pred_enum-of",
+        "_rels_path": ["gcu_types"]
+    },
+    {
+        "_from": "gcu_types_3",
+        "_to": "gcu_types",
+        "_rels_predicate": "_enum_pred_enum-of",
+        "_rels_path": ["gcu_types"]
+    },
+    {
+        "_from": "gcu_types_4",
+        "_to": "gcu_types",
+        "_rels_predicate": "_enum_pred_enum-of",
+        "_rels_path": ["gcu_types"]
+    },
+    {
+        "_from": "gcu_types_5",
+        "_to": "gcu_types",
+        "_rels_predicate": "_enum_pred_enum-of",
+        "_rels_path": ["gcu_types"]
     }
 ]

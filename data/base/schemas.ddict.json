@@ -229,6 +229,12 @@
         "_rels_path": ["_enum_data_units"]
     },
     {
+        "_from": "_enum_data_units_area_ha",
+        "_to": "_enum_data_units_area",
+        "_rels_predicate": "_enum_pred_enum-of",
+        "_rels_path": ["_enum_data_units"]
+    },
+    {
         "_from": "_enum_data_units_area_m",
         "_to": "_enum_data_units_area",
         "_rels_predicate": "_enum_pred_enum-of",
