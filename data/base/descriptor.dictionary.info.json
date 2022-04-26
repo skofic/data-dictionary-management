@@ -1,0 +1,70 @@
+[
+    {
+        "_code_nid": "_info",
+        "_code_lid": "title",
+        "_code_gid": "_info_title",
+        "_code_aid": ["title"],
+        "_info_title": {"iso_639_3_eng": "Title"},
+        "_info_definition": {"iso_639_3_eng": "Title, name or label."},
+        "_info_description": {"iso_639_3_eng": "It should represent the *shortest* way of indicating *what* the item represents. This will be used as a *label* in screens where the user will be prompted to enter the descriptor&apos;s data, or as table *headers* in which the descriptor&apos;s data will be displayed.\n\nThe contents are a *key/value dictionary* in which the *key* represents the *language* in which the title is expressed, and the *value* is the *title* in *plain text*."},
+        "_data_class": "_data_class_other",
+        "_data_container": "_data_container_dict",
+        "_data_type": "_data_type_string",
+        "_data_kind": "iso_639_3"
+    },
+    {
+        "_code_nid": "_info",
+        "_code_lid": "definition",
+        "_code_gid": "_info_definition",
+        "_code_aid": ["definition"],
+        "_info_title": {"iso_639_3_eng": "Definition"},
+        "_info_definition": {"iso_639_3_eng": "A one paragraph text that provides a definition or summary explanation."},
+        "_info_description": {"iso_639_3_eng": "The definition should explain the *what*. By reading this text one should understand what the descriptor&apos;s data *represents*. Details concerning measurement methods, usage of such data and the environment should be covered in the *description*.\n\nThe contents are a *key/value dictionary* in which the *key* represents the *language* in which the definition is expressed, and the *value* is the definition in *plain text*."},
+        "_data_class": "_data_class_other",
+        "_data_container": "_data_container_dict",
+        "_data_type": "_data_type_string",
+        "_data_kind": "iso_639_3"
+    },
+    {
+        "_code_nid": "_info",
+        "_code_lid": "description",
+        "_code_gid": "_info_description",
+        "_code_aid": ["description"],
+        "_info_title": {"iso_639_3_eng": "Description"},
+        "_info_definition": {"iso_639_3_eng": "A long text or document explaining how the descriptor value is obtained, and how its data can be used."},
+        "_info_description": {"iso_639_3_eng": "The description is the area in which everything that could not be included in the *definition* should be presented. This should be an occasion to explain *why* the descriptor value is *used*, which measurement *methods* were used to obtain the values and all the other details that would allow a *non specialist* user *understand* how to *use* and *provide* such data.\n\nThe contents are a *key/value dictionary* in which the *key* represents the *language* in which the description is expressed, and the *value* is the description text formatted in *markup*."},
+        "_data_class": "_data_class_other",
+        "_data_container": "_data_container_dict",
+        "_data_type": "_data_type_string",
+        "_data_format": "_data_format_markdown",
+        "_data_kind": "iso_639_3"
+    },
+    {
+        "_code_nid": "_info",
+        "_code_lid": "examples",
+        "_code_gid": "_info_examples",
+        "_code_aid": ["examples"],
+        "_info_title": {"iso_639_3_eng": "Examples"},
+        "_info_definition": {"iso_639_3_eng": "Usage examples."},
+        "_info_description": {"iso_639_3_eng": "This field should be used to provide *samples* of the descriptor&apos;s *data* to enable a user to understand *how* to *fill* the *information correctly*.\n\nThe contents are a *key/value dictionary* in which the *key* represents the *language* in which the examples were expressed, and the *value* is the examples text formatted in *markdown*."},
+        "_data_class": "_data_class_other",
+        "_data_container": "_data_container_dict",
+        "_data_type": "_data_type_string",
+        "_data_format": "_data_format_markdown",
+        "_data_kind": "iso_639_3"
+    },
+    {
+        "_code_nid": "_info",
+        "_code_lid": "notes",
+        "_code_gid": "_info_notes",
+        "_code_aid": ["notes"],
+        "_info_title": {"iso_639_3_eng": "Notes"},
+        "_info_definition": {"iso_639_3_eng": "Notes and comments."},
+        "_info_description": {"iso_639_3_eng": "This field could be used to add user provided *comments* and *notes*.\n\nThe contents are a *key/value dictionary* in which the *key* represents the *language* in which the cpmments were expressed, and the *value* is the comments text formatted in *markdown*."},
+        "_data_class": "_data_class_other",
+        "_data_container": "_data_container_dict",
+        "_data_type": "_data_type_string",
+        "_data_format": "_data_format_markdown",
+        "_data_kind": "iso_639_3"
+    }
+]
