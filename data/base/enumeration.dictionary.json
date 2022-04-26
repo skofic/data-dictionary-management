@@ -1,4 +1,293 @@
 [
     {
+        "_code_nid": "_data_class",
+        "_code_lid": "category",
+        "_code_gid": "_data_class_category",
+        "_code_aid": "[category]",
+        "_info_title": {"iso_639_3_eng": "Categorical value"},
+        "_info_definition": {"iso_639_3_eng": "Categorical, non quantitative value."},
+        "_info_description": {"iso_639_3_eng": "This term represents a *category*, does *not represent* a *quantity* and takes a *finite number of values*, can be *nominal* or *ordinal*."},
+        "_info_examples": {"iso_639_3_eng": "Categorical example data could be *months*, *sex*, *countries*. By definition, any value that must be taken from a *controlled vocabulary* is a *categorical value*."}
+    },
+    {
+        "_code_nid": "_data_class",
+        "_code_lid": "quantity",
+        "_code_gid": "__data_class_quantity",
+        "_code_aid": "[quantity]",
+        "_info_title": {"iso_639_3_eng": "Quantitative value"},
+        "_info_definition": {"iso_639_3_eng": "Discrete or continuous quantitative value."},
+        "_info_description": {"iso_639_3_eng": "This term represents a *quantity*, a *discrete* or *continuous* value, it does *not represent a category* and can take an *infinite number of values*, it is by definition *numeric*."},
+        "_info_examples": {"iso_639_3_eng": "Quantitative example data could be *height*, *weight*, *number of inhabitants*. In general, any value that represents *amounts* or *actual measurements*, would be considered a *quantitative value*."}
+    },
+    {
+        "_code_nid": "_data_class",
+        "_code_lid": "other",
+        "_code_gid": "__data_class_other",
+        "_code_aid": "[other]",
+        "_info_title": {"iso_639_3_eng": "Not categorical or quantitative"},
+        "_info_definition": {"iso_639_3_eng": "Descriptive non quantitative or categorical value."},
+        "_info_description": {"iso_639_3_eng": "This term represents a *name* or *hash*, does *not* represent a *quantity* and does not represent a *category*, can take an *infinite number of values*."},
+        "_info_examples": {"iso_639_3_eng": "Data that is *neither quantitative nor categorical* could be a person's *name*, a *social security number* or a *description* text. In general such data can take an infinite amount of values and does not represent an amount."}
+    },
+    
+    {
+        "_code_nid": "_data_container",
+        "_code_lid": "scalar",
+        "_code_gid": "_data_container_scalar",
+        "_code_aid": "[scalar]",
+        "_info_title": {"iso_639_3_eng": "Scalar"},
+        "_info_definition": {"iso_639_3_eng": "The value is scalar, it is not a collection of elements or a container."},
+        "_info_description": {"iso_639_3_eng": "A *number* or a *text* are examples of a scalar value; an *array* of *elements* or a key/value *dictionary* would *not* be considered a scalar value."}
+    },
+    {
+        "_code_nid": "_data_container",
+        "_code_lid": "array",
+        "_code_gid": "_data_container_array",
+        "_code_aid": "[array]",
+        "_info_title": {"iso_639_3_eng": "Array"},
+        "_info_definition": {"iso_639_3_eng": "The value is a list of elements."},
+        "_info_description": {"iso_639_3_eng": "A descriptor whose *data container* is an *array* will contain a *list* of *items* of the *descriptor*'s *data type*."}
+    },
+    {
+        "_code_nid": "_data_container",
+        "_code_lid": "set",
+        "_code_gid": "_data_container_set",
+        "_code_aid": "[set]",
+        "_info_title": {"iso_639_3_eng": "Set"},
+        "_info_definition": {"iso_639_3_eng": "The value is a list of unique elements."},
+        "_info_description": {"iso_639_3_eng": "A descriptor whose *data container* is a *set* will contain a *list* of *unique items* of the *descriptor*'s *data type*."}
+    },
+    {
+        "_code_nid": "_data_container",
+        "_code_lid": "dict",
+        "_code_gid": "_data_container_dict",
+        "_code_aid": "[dict]",
+        "_info_title": {"iso_639_3_eng": "Dictionary"},
+        "_info_definition": {"iso_639_3_eng": "The value is a key/value dictionary."},
+        "_info_description": {"iso_639_3_eng": "A *dictionary* is a set of *key* and *value* pairs, where the *key* represents the *identifier* or *access code* for the value. The key is by definition a string, the value can be of any type."}
+    },
+    
+    {
+        "_code_nid": "_data_type",
+        "_code_lid": "boolean",
+        "_code_gid": "_data_type_boolean",
+        "_code_aid": "[boolean]",
+        "_info_title": {"iso_639_3_eng": "Boolean"},
+        "_info_definition": {"iso_639_3_eng": "True or false value"}
+    },
+    {
+        "_code_nid": "_data_type",
+        "_code_lid": "integer",
+        "_code_gid": "_data_type_integer",
+        "_code_aid": "[integer]",
+        "_info_title": {"iso_639_3_eng": "Integer"},
+        "_info_definition": {"iso_639_3_eng": "Discrete value."},
+        "_info_description": {"iso_639_3_eng": "Integer numeric value."}
+    },
+    {
+        "_code_nid": "_data_type",
+        "_code_lid": "number",
+        "_code_gid": "_data_type_number",
+        "_code_aid": "[number]",
+        "_info_title": {"iso_639_3_eng": "Number"},
+        "_info_definition": {"iso_639_3_eng": "Numeric value that can be continuous or discrete."},
+        "_info_description": {"iso_639_3_eng": "Floating point or integer numeric value. *Note that by definition the value will be treated as floating point*."}
+    },
+    {
+        "_code_nid": "_data_type",
+        "_code_lid": "string",
+        "_code_gid": "_data_type_string",
+        "_code_aid": "[string]",
+        "_info_title": {"iso_639_3_eng": "String"},
+        "_info_definition": {"iso_639_3_eng": "Character or text value."},
+        "_info_description": {"iso_639_3_eng": "Text encoded in UTF-8 characters."}
+    },
+    {
+        "_code_nid": "_data_type",
+        "_code_lid": "enum",
+        "_code_gid": "_data_type_enum",
+        "_code_aid": "[enum]",
+        "_info_title": {"iso_639_3_eng": "Enumeration"},
+        "_info_definition": {"iso_639_3_eng": "The value must belong to a controlled vocabulary"},
+        "_info_description": {"iso_639_3_eng": "The value must be *chosen* from a *set* of *values belonging* to a *controlled vocabulary*, the value will be the *global identifier* of the enumeration *element*. Controlled vocabularies are organised as a directed graph in which terms are the nodes."}
+    },
+    {
+        "_code_nid": "_data_type",
+        "_code_lid": "term",
+        "_code_gid": "_data_type_term",
+        "_code_aid": "[term]",
+        "_info_title": {"iso_639_3_eng": "Term reference"},
+        "_info_definition": {"iso_639_3_eng": "Reference to a data dictionary term."},
+        "_info_description": {"iso_639_3_eng": "The value is by definition a *string* and must be the *global identifier* of a data dictionary *term* or *descriptor*."}
+    },
+    {
+        "_code_nid": "_data_type",
+        "_code_lid": "record",
+        "_code_gid": "_data_type_record",
+        "_code_aid": "[record]",
+        "_info_title": {"iso_639_3_eng": "Record reference"},
+        "_info_definition": {"iso_639_3_eng": "Reference to a specific database record."},
+        "_info_description": {"iso_639_3_eng": "This value represents the *unique identifier* of a *record* at the *database level*. It is the `_id `of a database record. This value references a single record among all collections in the database."}
+    },
+    {
+        "_code_nid": "_data_type",
+        "_code_lid": "timestamp",
+        "_code_gid": "_data_type_timestamp",
+        "_code_aid": "[timestamp]",
+        "_info_title": {"iso_639_3_eng": "Time stamp"},
+        "_info_definition": {"iso_639_3_eng": "timestamp expressed in the native database format."},
+        "_info_description": {"iso_639_3_eng": "This value represents a *time stamp* expressed in the *native format* of the *database*. It should be able to *express* a *precise moment* in time."}
+    },
+    {
+        "_code_nid": "_data_type",
+        "_code_lid": "object",
+        "_code_gid": "_data_type_object",
+        "_code_aid": "[object]",
+        "_info_title": {"iso_639_3_eng": "Object"},
+        "_info_definition": {"iso_639_3_eng": "Data structure or object."},
+        "_info_description": {"iso_639_3_eng": "An *object* type represents a *data structure*. It is implemented as a *directed graph* in which *nodes* are the *structure property descriptors*."}
+    },
+
+    {
+        "_code_nid": "_data_format",
+        "_code_lid": "markdown",
+        "_code_gid": "_data_format_markdown",
+        "_code_aid": "[markdown]",
+        "_info_title": {"iso_639_3_eng": "Markdown"},
+        "_info_definition": {"iso_639_3_eng": "[Markdown](https://en.wikipedia.org/wiki/Markdown) formatted text"}
+    },
+    {
+        "_code_nid": "_data_format",
+        "_code_lid": "html",
+        "_code_gid": "_data_format_html",
+        "_code_aid": "[html]",
+        "_info_title": {"iso_639_3_eng": "HTML"},
+        "_info_definition": {"iso_639_3_eng": "[HyperText](https://en.wikipedia.org/wiki/HTML) markdown formatted text."}
+    },
+    {
+        "_code_nid": "_data_format",
+        "_code_lid": "uri",
+        "_code_gid": "_data_format_uri",
+        "_code_aid": "[uri]",
+        "_info_title": {"iso_639_3_eng": "Uniform Resource Identifier"},
+        "_info_definition": {"iso_639_3_eng": "A string representing a [Uniform Resource Identifier](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier), equivalent to the `uri` format in JSON Schema."}
+    },
+    {
+        "_code_nid": "_data_format",
+        "_code_lid": "hex",
+        "_code_gid": "_data_format_hex",
+        "_code_aid": "[hex]",
+        "_info_title": {"iso_639_3_eng": "Hexadecimal"},
+        "_info_definition": {"iso_639_3_eng": "A string representing a [hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal) value."}
+    },
+    {
+        "_code_nid": "_data_format",
+        "_code_lid": "svg",
+        "_code_gid": "_data_format_svg",
+        "_code_aid": "[svg]",
+        "_info_title": {"iso_639_3_eng": "Scalable Vector Graphics"},
+        "_info_definition": {"iso_639_3_eng": "Scalable Vector Graphics (SVG) is an XML-based vector image format for two-dimensional graphics with support for interactivity and animation. The SVG specification is an open standard developed by the World Wide Web Consortium (W3C) since 1999."}
+    },
+    {
+        "_code_nid": "_data_format",
+        "_code_lid": "email",
+        "_code_gid": "_data_format_email",
+        "_code_aid": "[email]",
+        "_info_title": {"iso_639_3_eng": "Electronic mail address"},
+        "_info_definition": {"iso_639_3_eng": "*String* containing an *e-mail* address."}
+    },
+    {
+        "_code_nid": "_data_format",
+        "_code_lid": "ymd",
+        "_code_gid": "_data_format_ymd",
+        "_code_aid": "[ymd]",
+        "_info_title": {"iso_639_3_eng": "Year, month and day"},
+        "_info_definition": {"iso_639_3_eng": "A string representing a date expressed in the `YYYYMMDD` format, in which `Y` stands for year, `M` stands for month and `D` stands for day. The date may omit the day, or omit the day and month."}
+    },
+    {
+        "_code_nid": "_data_format",
+        "_code_lid": "date",
+        "_code_gid": "_data_format_date",
+        "_code_aid": "[date]",
+        "_info_title": {"iso_639_3_eng": "Date"},
+        "_info_definition": {"iso_639_3_eng": "A *string* representing a *date*. Equivalent to the `date` format in JSON Schema."}
+    },
+    {
+        "_code_nid": "_data_format",
+        "_code_lid": "time",
+        "_code_gid": "_data_format_time",
+        "_code_aid": "[time]",
+        "_info_title": {"iso_639_3_eng": "Time"},
+        "_info_definition": {"iso_639_3_eng": "A *string* representing a *time*. Equivalent to the `time` format in JSON Schema."}
+    },
+    {
+        "_code_nid": "_data_format",
+        "_code_lid": "date-time",
+        "_code_gid": "_data_format_date-time",
+        "_code_aid": "[date-time]",
+        "_info_title": {"iso_639_3_eng": "Date and time"},
+        "_info_definition": {"iso_639_3_eng": "A *string* representing a *date* and *time*. Equivalent to the `date-time` format in JSON Schema."}
+    },
+    {
+        "_code_nid": "_data_format",
+        "_code_lid": "hostname",
+        "_code_gid": "_data_format_hostname",
+        "_code_aid": "[hostname]",
+        "_info_title": {"iso_639_3_eng": "Hostname"},
+        "_info_definition": {"iso_639_3_eng": "A *string* representing an internet *host name*.\n\nEquivalent to the `hostname` format in JSON Schema."}
+    },
+    {
+        "_code_nid": "_data_format",
+        "_code_lid": "ipv4",
+        "_code_gid": "_data_format_ipv4",
+        "_code_aid": "[ipv4]",
+        "_info_title": {"iso_639_3_eng": "IPv4 address"},
+        "_info_definition": {"iso_639_3_eng": "A *string* representing an *IPv4* internet *address*, according to dotted-quad ABNF syntax as defined in RFC 2673, section 3.2.\n\nEquivalent to the `ipv4` format in JSON Schema."}
+    },
+    {
+        "_code_nid": "_data_format",
+        "_code_lid": "ipv6",
+        "_code_gid": "_data_format_ipv6",
+        "_code_aid": "[ipv6]",
+        "_info_title": {"iso_639_3_eng": "IPv6 address"},
+        "_info_definition": {"iso_639_3_eng": "A *string* representing an *IPv6* internet *address*, as defined in RFC 2373, section 2.2.\n\nEquivalent to the `ipv6` format in JSON Schema."}
+    },
+
+    {
+        "_code_nid": "_edge_predicate",
+        "_code_lid": "enum-of",
+        "_code_gid": "_edge_predicate_enum-of",
+        "_code_aid": "[enum-of]",
+        "_info_title": {"iso_639_3_eng": "Enumeration of"},
+        "_info_definition": {"iso_639_3_eng": "The source node is a controlled vocabulary element of the destination node."},
+        "_info_description": {"iso_639_3_eng": "This predicate is used in enumeration or *controlled vocabulary* graphs. When two nodes are related with this predicate, it means that the *source* node is a controlled vocabulary *element* of the *destination* node. This means that the source node can be used as a *valid choice* when presenting users with an options list."}
+    },
+    {
+        "_code_nid": "_edge_predicate",
+        "_code_lid": "property-of",
+        "_code_gid": "_edge_predicate_property-of",
+        "_code_aid": "[property-of]",
+        "_info_title": {"iso_639_3_eng": "Property of"},
+        "_info_definition": {"iso_639_3_eng": "The source node is a property of the destination node."},
+        "_info_description": {"iso_639_3_eng": "This predicate is used in *object* or *schema* graphs.When two nodes are related with this predicate, it means that the *source* node is a *property* of the *destination* node. This means that the source node should be considered a property of a data structure. This also implies that the source node represents a *descriptor*."}
+    },
+    {
+        "_code_nid": "_edge_predicate",
+        "_code_lid": "section-of",
+        "_code_gid": "_edge_predicate_section-of",
+        "_code_aid": "[section-of]",
+        "_info_title": {"iso_639_3_eng": "Section of"},
+        "_info_definition": {"iso_639_3_eng": "The source node is a section of the destination node."},
+        "_info_description": {"iso_639_3_eng": "This predicate involves the concept of *section*, a section is a *category* or *heading* that *groups* a *set* of *choices*. For instance, while the *enumeration* or *property* predicates indicate that the source node is either a valid *controlled vocabulary choice*, or a *descriptor* belonging to the *destination* node, this predicate would indicate that the source node is to be used as a *container* or *disclosure list*. This predicate is used to *group* controlled vocabulary elements or sets of schema descriptors into sections that will be presented as disclosute lists in the user interface when showing forms or lists."}
+    },
+    {
+        "_code_nid": "_edge_predicate",
+        "_code_lid": "bridge-of",
+        "_code_gid": "_edge_predicate_bridge-of",
+        "_code_aid": "[bridge-of]",
+        "_info_title": {"iso_639_3_eng": "Bridge of"},
+        "_info_definition": {"iso_639_3_eng": "The source node is a bridge to the destination node."},
+        "_info_description": {"iso_639_3_eng": "This predicate indicates that the *source* node acts as a *bridge* to the *destination* node. This means that the *source* of such relationship should be *hidden* or *skipped* when *traversing* the *path*. Edges with this predicate are found in two scenarios. To allow a *new enumeration root* to *take advantage* of the network belonging to an *existing controlled vocabulary root*, or to *enforce* the *selection* of a *preferred* or *default* element different than the search target."},
+        "_info_examples": {"iso_639_3_eng": "Suppose you have a controlled vocabulary that is exhaustive and has a large number of elements, you want to create a new controlled vocabulary that shares most, but not all the elements of the first enumeration. You normally would need to duplicate the graph nodes and edges and connect them to the new root. By making the old root a bridge to the new root and by adding the new root to the *path* to all relevant edges, it will appear that all the relevant elements belong directly to the new root.\n\nSuppose you have two controlled vocabularies that classify the same information, but enumeration A is partial, while enumeration B is exhaustive. If you want to enforce the use of enumeration B, even passing through enumeration A, you can connect controlled vocabulary A elements with the bridge predicate and connect the related enumeration B elements wuth the *enumeration* predicate. This way when you search for an element in enumeration A, you will get back the corresponding element of enumeration B."}
     }
 ]

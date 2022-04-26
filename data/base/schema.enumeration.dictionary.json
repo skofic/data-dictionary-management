@@ -1,0 +1,204 @@
+[
+    {
+        "_from": "_data_class_category",
+        "_to": "_data_class",
+        "_edge_predicate": "_edge_predicate_enum-of",
+        "_edge_path": ["_data_class"]
+    },
+    {
+        "_from": "_data_class_quantity",
+        "_to": "_data_class",
+        "_edge_predicate": "_edge_predicate_enum-of",
+        "_edge_path": ["_data_class"]
+    },
+    {
+        "_from": "_data_class_other",
+        "_to": "_data_class",
+        "_edge_predicate": "_edge_predicate_enum-of",
+        "_edge_path": ["_data_class"]
+    },
+    
+    {
+        "_from": "_data_container_scalar",
+        "_to": "_data_container",
+        "_edge_predicate": "_edge_predicate_enum-of",
+        "_edge_path": ["_data_container"]
+    },
+    {
+        "_from": "_data_container_array",
+        "_to": "_data_container",
+        "_edge_predicate": "_edge_predicate_enum-of",
+        "_edge_path": ["_data_container"]
+    },
+    {
+        "_from": "_data_container_set",
+        "_to": "_data_container",
+        "_edge_predicate": "_edge_predicate_enum-of",
+        "_edge_path": ["_data_container"]
+    },
+    {
+        "_from": "_data_container_dict",
+        "_to": "_data_container",
+        "_edge_predicate": "_edge_predicate_enum-of",
+        "_edge_path": ["_data_container"]
+    },
+    
+    {
+        "_from": "_data_type_boolean",
+        "_to": "_data_type",
+        "_edge_predicate": "_edge_predicate_enum-of",
+        "_edge_path": ["_data_type"]
+    },
+    {
+        "_from": "_data_type_integer",
+        "_to": "_data_type",
+        "_edge_predicate": "_edge_predicate_enum-of",
+        "_edge_path": ["_data_type"]
+    },
+    {
+        "_from": "_data_type_number",
+        "_to": "_data_type",
+        "_edge_predicate": "_edge_predicate_enum-of",
+        "_edge_path": ["_data_type"]
+    },
+    {
+        "_from": "_data_type_string",
+        "_to": "_data_type",
+        "_edge_predicate": "_edge_predicate_enum-of",
+        "_edge_path": ["_data_type"]
+    },
+    {
+        "_from": "_data_type_enum",
+        "_to": "_data_type",
+        "_edge_predicate": "_edge_predicate_enum-of",
+        "_edge_path": ["_data_type"]
+    },
+    {
+        "_from": "_data_type_term",
+        "_to": "_data_type",
+        "_edge_predicate": "_edge_predicate_enum-of",
+        "_edge_path": ["_data_type"]
+    },
+    {
+        "_from": "_data_type_record",
+        "_to": "_data_type",
+        "_edge_predicate": "_edge_predicate_enum-of",
+        "_edge_path": ["_data_type"]
+    },
+    {
+        "_from": "_data_type_timestamp",
+        "_to": "_data_type",
+        "_edge_predicate": "_edge_predicate_enum-of",
+        "_edge_path": ["_data_type"]
+    },
+    {
+        "_from": "_data_type_object",
+        "_to": "_data_type",
+        "_edge_predicate": "_edge_predicate_enum-of",
+        "_edge_path": ["_data_type"]
+    },
+    
+    {
+        "_from": "_data_format_markdown",
+        "_to": "_data_format",
+        "_edge_predicate": "_edge_predicate_enum-of",
+        "_edge_path": ["_data_format"]
+    },
+    {
+        "_from": "_data_format_html",
+        "_to": "_data_format",
+        "_edge_predicate": "_edge_predicate_enum-of",
+        "_edge_path": ["_data_format"]
+    },
+    {
+        "_from": "_data_format_uri",
+        "_to": "_data_format",
+        "_edge_predicate": "_edge_predicate_enum-of",
+        "_edge_path": ["_data_format"]
+    },
+    {
+        "_from": "_data_format_hex",
+        "_to": "_data_format",
+        "_edge_predicate": "_edge_predicate_enum-of",
+        "_edge_path": ["_data_format"]
+    },
+    {
+        "_from": "_data_format_svg",
+        "_to": "_data_format",
+        "_edge_predicate": "_edge_predicate_enum-of",
+        "_edge_path": ["_data_format"]
+    },
+    {
+        "_from": "_data_format_email",
+        "_to": "_data_format",
+        "_edge_predicate": "_edge_predicate_enum-of",
+        "_edge_path": ["_data_format"]
+    },
+    {
+        "_from": "_data_format_ymd",
+        "_to": "_data_format",
+        "_edge_predicate": "_edge_predicate_enum-of",
+        "_edge_path": ["_data_format"]
+    },
+    {
+        "_from": "_data_format_date",
+        "_to": "_data_format",
+        "_edge_predicate": "_edge_predicate_enum-of",
+        "_edge_path": ["_data_format"]
+    },
+    {
+        "_from": "_data_format_time",
+        "_to": "_data_format",
+        "_edge_predicate": "_edge_predicate_enum-of",
+        "_edge_path": ["_data_format"]
+    },
+    {
+        "_from": "_data_format_date-time",
+        "_to": "_data_format",
+        "_edge_predicate": "_edge_predicate_enum-of",
+        "_edge_path": ["_data_format"]
+    },
+    {
+        "_from": "_data_format_hostname",
+        "_to": "_data_format",
+        "_edge_predicate": "_edge_predicate_enum-of",
+        "_edge_path": ["_data_format"]
+    },
+    {
+        "_from": "_data_format_ipv4",
+        "_to": "_data_format",
+        "_edge_predicate": "_edge_predicate_enum-of",
+        "_edge_path": ["_data_format"]
+    },
+    {
+        "_from": "_data_format_ipv6",
+        "_to": "_data_format",
+        "_edge_predicate": "_edge_predicate_enum-of",
+        "_edge_path": ["_data_format"]
+    },
+    
+    {
+        "_from": "_edge_predicate_enum-of",
+        "_to": "_edge_predicate",
+        "_edge_predicate": "_edge_predicate_enum-of",
+        "_edge_path": ["_edge_predicate"]
+    },
+    {
+        "_from": "_edge_predicate_property-of",
+        "_to": "_edge_predicate",
+        "_edge_predicate": "_edge_predicate_enum-of",
+        "_edge_path": ["_edge_predicate"]
+    },
+    {
+        "_from": "_edge_predicate_section-of",
+        "_to": "_edge_predicate",
+        "_edge_predicate": "_edge_predicate_enum-of",
+        "_edge_path": ["_edge_predicate"]
+    },
+    {
+        "_from": "_edge_predicate_bridge-of",
+        "_to": "_edge_predicate",
+        "_edge_predicate": "_edge_predicate_enum-of",
+        "_edge_path": ["_edge_predicate"]
+    }
+]
