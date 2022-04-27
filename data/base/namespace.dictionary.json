@@ -9,11 +9,30 @@
     
     {
         "_code_nid": "",
+        "_code_lid": "any-term",
+        "_code_gid": "_any-term",
+        "_code_aid": ["any-term"],
+        "_info_title": {"iso_639_3_eng": "Any term"},
+        "_info_definition": {"iso_639_3_eng": "This wildcard term represents any term."},
+        "_info_description": {"iso_639_3_eng": "This *namespace* is used as a *wildcard* to indicate *any term*."}
+    },
+    {
+        "_code_nid": "",
+        "_code_lid": "any-descriptor",
+        "_code_gid": "_any-descriptor",
+        "_code_aid": ["any-descriptor"],
+        "_info_title": {"iso_639_3_eng": "Any descriptor"},
+        "_info_definition": {"iso_639_3_eng": "This wildcard term represents any descriptor."},
+        "_info_description": {"iso_639_3_eng": "This *namespace* is used as a *wildcard* to indicate *any descriptor*. *Descriptors* are *terms* that *include* the `_data_class` and `_data_coontainer` *properties*."}
+    },
+    
+    {
+        "_code_nid": "",
         "_code_lid": "code",
         "_code_gid": "_code",
         "_code_aid": ["code"],
-        "_info_title": {"iso_639_3_eng": "Dictionary identifier namespace"},
-        "_info_definition": {"iso_639_3_eng": "Default namespace for all items related to the identification of terms and descriptors."},
+        "_info_title": {"iso_639_3_eng": "Identification"},
+        "_info_definition": {"iso_639_3_eng": "Names, identifiers and codes."},
         "_info_description": {"iso_639_3_eng": "This *namespace* is used by all *terms* and *descriptors*, constituting the *core* of the *data dictionary*, which are related to the *identification* and *naming* of *data dictionary items*.\n\nThis namespace is *reserved* for dictionary curation."}
     },
     {
@@ -21,8 +40,8 @@
         "_code_lid": "data",
         "_code_gid": "_data",
         "_code_aid": ["data"],
-        "_info_title": {"iso_639_3_eng": "Dictionary data namespace"},
-        "_info_definition": {"iso_639_3_eng": "Default namespace for all terms and descriptors involved in the definition of descriptor data."},
+        "_info_title": {"iso_639_3_eng": "Data"},
+        "_info_definition": {"iso_639_3_eng": "Types and data related information."},
         "_info_description": {"iso_639_3_eng": "This *namespace* is used by all *terms* and *descriptors*, constituting the *core* of the *data dictionary*, which are involved in the *definition* of *descriptor data*. All terms and descriptors that indicate the *type*, *format* and *constraints* of data belong to this namespace.\n\nThis namespace is *reserved* for dictionary curation."}
     },
     {
@@ -30,8 +49,8 @@
         "_code_lid": "info",
         "_code_gid": "_info",
         "_code_aid": "[info]",
-        "_info_title": {"iso_639_3_eng": "Dictionary documentation namespace"},
-        "_info_definition": {"iso_639_3_eng": "Default namespace for all items involved in the documentation of terms and descriptors."},
+        "_info_title": {"iso_639_3_eng": "Documentation"},
+        "_info_definition": {"iso_639_3_eng": "Definitions, descriptions and documentation."},
         "_info_description": {"iso_639_3_eng": "This *namespace* is used by all *terms* and *descriptors*, constituting the *core* of the *data dictionary*, which are involved in *documentation*. By documentation it is intended *descriptions* and *definitions* aimed at users of the data dictionary.\n\nThis namespace is *reserved* for dictionary curation."}
     },
     {
@@ -39,8 +58,17 @@
         "_code_lid": "edge",
         "_code_gid": "_edge",
         "_code_aid": "[edge]",
-        "_info_title": {"iso_639_3_eng": "Dictionary relationships namespace"},
-        "_info_definition": {"iso_639_3_eng": "Default namespace for all items that represent attributes of relationships between two nodes."},
+        "_info_title": {"iso_639_3_eng": "Graph"},
+        "_info_definition": {"iso_639_3_eng": "Relationship and graph management."},
         "_info_description": {"iso_639_3_eng": "This *namespace* is used by all *terms* and *descriptors*, constituting the *core* of the *data dictionary*, which are involved in *graph edges*. These items serve the purpose of *qualifying* the *relationship* between *nodes* in a *graph*.\n\nThis namespace is *reserved* for dictionary curation."}
+    },
+    {
+        "_code_nid": "",
+        "_code_lid": "rule",
+        "_code_gid": "_rule",
+        "_code_aid": "[rule]",
+        "_info_title": {"iso_639_3_eng": "Rules"},
+        "_info_definition": {"iso_639_3_eng": "Class and structure management"},
+        "_info_description": {"iso_639_3_eng": "This *namespace* is used by all *terms* and *descriptors*, constituting the *core* of the *data dictionary*, which are involved in *defining rules* that determine if a *data structure* or *object* is *valid* and how it is *constructed*.\n\nThis namespace is *reserved* for dictionary curation."}
     }
 ]

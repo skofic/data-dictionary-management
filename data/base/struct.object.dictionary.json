@@ -1,0 +1,125 @@
+[
+    {
+        "_from": "_rule_selection-terms_one",
+        "_to": "_rule_selection-terms",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_rule_selection-terms"]
+    },
+    {
+        "_from": "_rule_selection-terms_any",
+        "_to": "_rule_selection-terms",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_rule_selection-terms"]
+    },
+    {
+        "_from": "_rule_selection-terms_all",
+        "_to": "_rule_selection-terms",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_rule_selection-terms"]
+    },
+    
+    {
+        "_from": "_rule_selection-descriptors_one",
+        "_to": "_rule_selection-descriptors",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_rule_selection-descriptors"]
+    },
+    {
+        "_from": "_rule_selection-descriptors_any",
+        "_to": "_rule_selection-descriptors",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_rule_selection-descriptors"]
+    },
+    {
+        "_from": "_rule_selection-descriptors_all",
+        "_to": "_rule_selection-descriptors",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_rule_selection-descriptors"]
+    },
+    
+    {
+        "_from": "_rule_selection-values_one",
+        "_to": "_rule_selection-values",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_rule_selection-values"]
+    },
+    {
+        "_from": "_rule_selection-values_any",
+        "_to": "_rule_selection-values",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_rule_selection-values"]
+    },
+    {
+        "_from": "_rule_selection-values_all",
+        "_to": "_rule_selection-values",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_rule_selection-values"]
+    },
+    
+    {
+        "_from": "_code_nid",
+        "_to": "_term",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_term"]
+    },
+    {
+        "_from": "_code_lid",
+        "_to": "_term",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_term"]
+    },
+    {
+        "_from": "_code_gid",
+        "_to": "_term",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_term"]
+    },
+    {
+        "_from": "_code_aid",
+        "_to": "_term",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_term"]
+    },
+    {
+        "_from": "_code_pid",
+        "_to": "_term",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_term"]
+    },
+    {
+        "_from": "_code_name",
+        "_to": "_term",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_term"]
+    },
+    {
+        "_from": "_info_title",
+        "_to": "_term",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_term"]
+    },
+    {
+        "_from": "_info_definition",
+        "_to": "_term",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_term"]
+    },
+    {
+        "_from": "_info_description",
+        "_to": "_term",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_term"]
+    },
+    {
+        "_from": "_info_examples",
+        "_to": "_term",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_term"]
+    },
+    {
+        "_from": "_info_notes",
+        "_to": "_term",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_term"]
+    }
+]
