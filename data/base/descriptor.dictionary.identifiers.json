@@ -8,9 +8,12 @@
         "_info_definition": {"iso_639_3_eng": "The local identifier's namespace."},
         "_info_description": {"iso_639_3_eng": "Terms are *uniquely identified* by their *global identifier*, which is the concatenation of the *namespace identifier*, this field, and the *local identifier*, separated by an underscore (`_`) *token*.\n\nThis field is *optional*, but any term which *does not* have a namespace will be considered a *root level namespace*. Once set, or omitted, no change can be made to this field."},
         "_info_examples": {"iso_639_3_eng": "`iso`: Root level namespace for the ISO standards.\n\n`iso/3166-1/alpha-2`: Namespace for the ISO 3166-1 2-character country codes. It is the concatenation of the root level `iso` namespace, with the `3166-1 `country codes and the `alpha-2 `standard."},
-        "_data_class": "_data_class_other",
-        "_data_container": "_data_container_scalar",
-        "_data_type": "_data_type_term"
+        "_data_container": {
+			"_data_container_scalar": {
+				"_data_class": "_data_class_other",
+				"_data_type": "_data_type_term"
+			}
+        }
     },
     {
         "_code_nid": "_code",
@@ -21,10 +24,13 @@
         "_info_definition": {"iso_639_3_eng": "The unique identifier of the term, within its namespace."},
         "_info_description": {"iso_639_3_eng": "Terms are *uniquely identified* by their *global identifier*, which is the concatenation of the *namespace identifier* and the *local identifier*, this field, separated by an underscore (`_`) *token*.\n\nThis field is *required* and must be *unique* within its namespace. The code should *not include* characters that are *not allowed* in *variables* or *database fields*. Once set, the value cannot be changed."},
         "_info_examples": {"iso_639_3_eng": "`it`: This local identifier could be the code for the Italian language with the `iso/639-1` namespace, or the code for Italy with the `iso/3166-1/alpha-2` namespace. The global identifiers would be respectively `iso/639-1/it` and `iso/3166-1/alpha-2/it`."},
-        "_data_class": "_data_class_other",
-        "_data_container": "_data_container_scalar",
-        "_data_type": "_data_type_string",
-        "_data_regexp": "^[a-zA-Z0-9-:.@+,=;$!*'%]{1,254}$"
+        "_data_container": {
+			"_data_container_scalar": {
+				"_data_class": "_data_class_other",
+				"_data_type": "_data_type_string",
+				"_data_regexp": "^[a-zA-Z0-9-:.@+,=;$!*'%]{1,254}$"
+			}
+        }
     },
     {
         "_code_nid": "_code",
@@ -35,9 +41,12 @@
         "_info_definition": {"iso_639_3_eng": "The unique identifier of the term within the data dictionary."},
         "_info_description": {"iso_639_3_eng": "Terms are *uniquely identified* by their *global identifier*, this field, which is the concatenation of the *namespace identifier* and the *local identifier*, separated by an underscore (`_`) *token*.\n\nThis field is *required* and, once set, cannot be modified."},
         "_info_examples": {"iso_639_3_eng": "`iso/639-1/it`: This would be the global identifier for the ISO 639-1 Italian language code, constituted by the `iso/639-1` namespace and the `it` local identifier.\n\n`iso/3166-1/alpha-2/it`: This would be the global identifier for the ISO 3166-1 2-character code for Italy, constituted by the `iso/3166-1/alpha-2` namespace and the `it` local identifier."},
-        "_data_class": "_data_class_other",
-        "_data_container": "_data_container_scalar",
-        "_data_type": "_data_type_string"
+        "_data_container": {
+			"_data_container_scalar": {
+				"_data_class": "_data_class_other",
+				"_data_type": "_data_type_string"
+			}
+        }
     },
     {
         "_code_nid": "_code",
@@ -48,9 +57,12 @@
         "_info_definition": {"iso_639_3_eng": "List of local identifiers matching the item."},
         "_info_description": {"iso_639_3_eng": "This list should collect all *identifiers* that could be used to *reference the term*.\n\nIn the case of *variables*, these identifiers may be useful to *match the descriptor* when receiving external datasets.\n\nIn the case of *enumerations*, the list should include all *alternative codes* that correspond to the *current local identifier*:. In all cases, the *local identifier* must be *included* in the list.\n\nNote that these identifiers should be official or globally recognised, such as alternative ISO codes, these identifiers should not be confused with the identifiers provided by the data or metadata providers."},
         "_info_examples": {"iso_639_3_eng": "`[\"stemp\", \"soilTemp\", \"soil_temperature\"]`: Three possible identifiers for the *soil temperature* descriptor.\n\n`[\"IT\", \"ITA\"]`: All codes that identify the country *Italy*: `ITA` is the preferred code, but `IT` could also be used to refer to Italy."},
-        "_data_class": "_data_class_other",
-        "_data_container": "_data_container_set",
-        "_data_type": "_data_type_string"
+        "_data_container": {
+			"_data_container_set": {
+				"_data_class": "_data_class_other",
+				"_data_type": "_data_type_string"
+			}
+        }
     },
     {
         "_code_nid": "_code",
@@ -60,9 +72,12 @@
         "_info_title": {"iso_639_3_eng": "Provider identifiers"},
         "_info_definition": {"iso_639_3_eng": "The descriptor&apos;s identifiers given by the metadata provider."},
         "_info_description": {"iso_639_3_eng": "This corresponds to the *identifiers* that the *metadata providers* or *curators* have *assigned* to the *descriptor*. It is a list, since different providers may submit data and use different identifiers.\n\nNote that this list should not include official or globally recognised identifiers, such as alternative ISO codes, only those used by the data providers."},
-        "_data_class": "_data_class_other",
-        "_data_container": "_data_container_set",
-        "_data_type": "_data_type_string"
+        "_data_container": {
+			"_data_container_set": {
+				"_data_class": "_data_class_other",
+				"_data_type": "_data_type_string"
+			}
+        }
     },
     {
         "_code_nid": "_code",
@@ -73,8 +88,11 @@
         "_info_definition": {"iso_639_3_eng": "Native or original name."},
         "_info_description": {"iso_639_3_eng": "This field should be used to *record* the *identifier* or *name* originally used to *refer* to the *instance* of the *descriptor*. This is generally used to record the *name* in the *native language* without needing to reference the actual language."},
         "_info_examples": {"iso_639_3_eng": "`粵語 / 粤语`: The *original* name for the *cantonese language* in the *cantonese* language."},
-        "_data_class": "_data_class_other",
-        "_data_container": "_data_container_scalar",
-        "_data_type": "_data_type_string"
+        "_data_container": {
+			"_data_container_scalar": {
+				"_data_class": "_data_class_other",
+				"_data_type": "_data_type_string"
+			}
+        }
     }
 ]

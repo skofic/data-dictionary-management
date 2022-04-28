@@ -8,9 +8,12 @@
         "_info_definition": {"iso_639_3_eng": "Selection should contain one element from the list."},
         "_info_description": {"iso_639_3_eng": "The rule determines that *one* of the elements of the *set* should be part of the *selection*.\n\nThe *elements* of the *set* must be *term global identifiers*."},
         "_info_examples": {"iso_639_3_eng": "`{ _rule_selection-terms_one: [red, green, blue] }`: The selection must contain `red`, `green`, or `blue`."},
-        "_data_class": "_data_class_other",
-        "_data_container": "_data_container_set",
-        "_data_type": "_data_type_term"
+        "_data_container": {
+			"_data_container_set": {
+				"_data_class": "_data_class_other",
+				"_data_type": "_data_type_term"
+			}
+        }
     },
     {
         "_code_nid": "_rule_selection-terms",
@@ -21,9 +24,12 @@
         "_info_definition": {"iso_639_3_eng": "Selection should contain one or more elements from the list."},
         "_info_description": {"iso_639_3_eng": "The rule determines that *one* or *more* of the elements of the *set* should be part of the *selection*.\n\nThe *elements* of the *set* must be *term global identifiers*."},
         "_info_examples": {"iso_639_3_eng": "`{ _rule_selection-terms_any: [red, green, blue] }`: The selection must contain `red`, `red` and `green`, or `red`, `green` and `blue`."},
-        "_data_class": "_data_class_other",
-        "_data_container": "_data_container_set",
-        "_data_type": "_data_type_term"
+        "_data_container": {
+			"_data_container_set": {
+				"_data_class": "_data_class_other",
+				"_data_type": "_data_type_term"
+			}
+        }
     },
     {
         "_code_nid": "_rule_selection-terms",
@@ -34,9 +40,12 @@
         "_info_definition": {"iso_639_3_eng": "Selection should contain all elements from the list."},
         "_info_description": {"iso_639_3_eng": "The rule determines that *all* of the elements of the *set* should be part of the *selection*.\n\nThe *elements* of the *set* must be *term global identifiers*."},
         "_info_examples": {"iso_639_3_eng": "`{ _rule_selection-terms_all: [red, green, blue] }`: The selection must contain `red`, `green`, and `blue`."},
-        "_data_class": "_data_class_other",
-        "_data_container": "_data_container_set",
-        "_data_type": "_data_type_term"
+        "_data_container": {
+			"_data_container_set": {
+				"_data_class": "_data_class_other",
+				"_data_type": "_data_type_term"
+			}
+        }
     },
     
     {
@@ -48,10 +57,13 @@
         "_info_definition": {"iso_639_3_eng": "Selection should contain one element from the list."},
         "_info_description": {"iso_639_3_eng": "The rule determines that *one* of the elements of the *set* should be part of the *selection*.\n\nThe *elements* of the *set* must be *descriptor global identifiers*."},
         "_info_examples": {"iso_639_3_eng": "`{ _rule_selection-terms_one: [red, green, blue] }`: The selection must contain `red`, `green`, or `blue`."},
-        "_data_class": "_data_class_other",
-        "_data_container": "_data_container_set",
-        "_data_type": "_data_type_enum",
-        "_data_kind": "_any-descriptor"
+        "_data_container": {
+			"_data_container_set": {
+				"_data_class": "_data_class_other",
+				"_data_type": "_data_type_enum",
+        		"_data_kind": "_any-descriptor"
+			}
+        }
     },
     {
         "_code_nid": "_rule_selection-descriptors",
@@ -62,10 +74,13 @@
         "_info_definition": {"iso_639_3_eng": "Selection should contain one or more elements from the list."},
         "_info_description": {"iso_639_3_eng": "The rule determines that *one* or *more* of the elements of the *set* should be part of the *selection*.\n\nThe *elements* of the *set* must be *descriptor global identifiers*."},
         "_info_examples": {"iso_639_3_eng": "`{ _rule_selection-terms_any: [red, green, blue] }`: The selection must contain `red`, `red` and `green`, or `red`, `green` and `blue`."},
-        "_data_class": "_data_class_other",
-        "_data_container": "_data_container_set",
-        "_data_type": "_data_type_enum",
-        "_data_kind": "_any-descriptor"
+        "_data_container": {
+			"_data_container_set": {
+				"_data_class": "_data_class_other",
+				"_data_type": "_data_type_enum",
+        		"_data_kind": "_any-descriptor"
+			}
+        }
     },
     {
         "_code_nid": "_rule_selection-descriptors",
@@ -76,10 +91,13 @@
         "_info_definition": {"iso_639_3_eng": "Selection should contain all elements from the list."},
         "_info_description": {"iso_639_3_eng": "The rule determines that *all* of the elements of the *set* should be part of the *selection*.\n\nThe *elements* of the *set* must be *descriptor global identifiers*."},
         "_info_examples": {"iso_639_3_eng": "`{ _rule_selection-terms_all: [red, green, blue] }`: The selection must contain `red`, `green`, and `blue`."},
-        "_data_class": "_data_class_other",
-        "_data_container": "_data_container_set",
-        "_data_type": "_data_type_enum",
-        "_data_kind": "_any-descriptor"
+        "_data_container": {
+			"_data_container_set": {
+				"_data_class": "_data_class_other",
+				"_data_type": "_data_type_enum",
+        		"_data_kind": "_any-descriptor"
+			}
+        }
     },
     
     {
@@ -91,8 +109,11 @@
         "_info_definition": {"iso_639_3_eng": "Selection should contain one element from the list."},
         "_info_description": {"iso_639_3_eng": "The rule determines that *one* of the element of the *set* should be part of the *selection*.\n\nThe *elements* of the *set* can be of any data type: when used in the *default property value* of an *object data structure definition*, the *value type* should be the *same* as the *descriptor data type*."},
         "_info_examples": {"iso_639_3_eng": "`{ _rule_selection-values_one: [1, 2, 3] }`: The selection must contain `1`, `2`, or `3`."},
-        "_data_class": "_data_class_other",
-        "_data_container": "_data_container_set"
+        "_data_container": {
+			"_data_container_set": {
+				"_data_class": "_data_class_other"
+			}
+        }
     },
     {
         "_code_nid": "_rule_selection-values",
@@ -103,8 +124,11 @@
         "_info_definition": {"iso_639_3_eng": "Selection should contain one or more elements from the list."},
         "_info_description": {"iso_639_3_eng": "The rule determines that *one* or *more* of the elements of the *set* should be part of the *selection*.\n\nThe *elements* of the *set* can be of any data type: when used in the *default property value* of an *object*&apos;s *data structure definition*, the *value type* should be the *same* as the *descriptor data type*."},
         "_info_examples": {"iso_639_3_eng": "`{ _rule_selection-values_one: [1, 2, 3] }`: The selection must contain `1`, `1` and `2`, or `1`, `2`, and `3`."},
-        "_data_class": "_data_class_other",
-        "_data_container": "_data_container_set"
+        "_data_container": {
+			"_data_container_set": {
+				"_data_class": "_data_class_other"
+			}
+        }
     },
     {
         "_code_nid": "_rule_selection-values",
@@ -115,8 +139,11 @@
         "_info_definition": {"iso_639_3_eng": "Selection should contain all elements from the list."},
         "_info_description": {"iso_639_3_eng": "The rule determines that *all* of the elements of the *set* should be part of the *selection*.\n\nThe *elements* of the *set* can be of any data type: when used in the *default property value* of an *object*&apos;s *data structure definition*, the *value type* should be the *same* as the *descriptor data type*."},
         "_info_examples": {"iso_639_3_eng": "`{ _rule_selection-values_one: [1, 2, 3] }`: The selection must contain `1`, `2`, and `3`."},
-        "_data_class": "_data_class_other",
-        "_data_container": "_data_container_set"
+        "_data_container": {
+			"_data_container_set": {
+				"_data_class": "_data_class_other"
+			}
+        }
     },
     
     {
@@ -127,10 +154,13 @@
         "_info_title": {"iso_639_3_eng": "Required"},
         "_info_definition": {"iso_639_3_eng": "List of required properties."},
         "_info_description": {"iso_639_3_eng": "This field contains a *terms selection rule* that determines which *set* of *descriptors* must be *included* in the *data structure definition* of the *object* for it to be considered *valid*.\n\nThe *data type* of the selection *values* must be the *global identifier* of the *descriptors* that must be *included* in the *object data structure*.\n\nIn order for the *object data structure* to be *valid*, its *properties* must *include* the *elements* of this *selection*."},
-        "_data_class": "_data_class_other",
-        "_data_container": "_data_container_scalar",
-        "_data_type": "_data_type_object",
-        "_data_kind": "_rule_selection-descriptors"
+        "_data_container": {
+			"_data_container_scalar": {
+				"_data_class": "_data_class_other",
+				"_data_type": "_data_type_object",
+        		"_data_kind": "_rule_selection-descriptors"
+			}
+        }
     },
     {
         "_code_nid": "_rule",
@@ -140,10 +170,13 @@
         "_info_title": {"iso_639_3_eng": "Recommended"},
         "_info_definition": {"iso_639_3_eng": "List of recommended properties."},
         "_info_description": {"iso_639_3_eng": "This field contains a *terms selection rule* that determines which *set* of *descriptors* are *recommended* to be *included* in the *data structure definition* of the *object*.\n\nThe *data type* of the selection *values* must be the *global identifier* of the *descriptors* that are *recommended* to be *included* in the *object data structure*.\n\nThe selection of properties is *not required*, it is *optional*, but it is *preferrable* to *include it*."},
-        "_data_class": "_data_class_other",
-        "_data_container": "_data_container_scalar",
-        "_data_type": "_data_type_object",
-        "_data_kind": "_rule_selection-descriptors"
+        "_data_container": {
+			"_data_container_scalar": {
+				"_data_class": "_data_class_other",
+				"_data_type": "_data_type_object",
+        		"_data_kind": "_rule_selection-descriptors"
+			}
+        }
     },
     {
         "_code_nid": "_rule",
@@ -153,10 +186,13 @@
         "_info_title": {"iso_639_3_eng": "Banned"},
         "_info_definition": {"iso_639_3_eng": "List of forbidden properties."},
         "_info_description": {"iso_639_3_eng": "This field contains a *terms selection rule* that determines which *set* of *descriptors* should *not* be *included* in the *data structure definition* of the *object* for it to be considered *valid*.\n\nThe *data type* of the selection *values* must be the *global identifier* of the *descriptors* that must be *included* in the *object data structure*.\n\nIn order for the *object data structure* to be *valid*, its *properties* *must not include* the *elements* of this *selection*.\n\nThis rule should be evaluated at the *end* of the *validation workflow* and should *not trigger* an *error*: all banned properties should simply be *removed*."},
-        "_data_class": "_data_class_other",
-        "_data_container": "_data_container_scalar",
-        "_data_type": "_data_type_object",
-        "_data_kind": "_rule_selection-descriptors"
+        "_data_container": {
+			"_data_container_scalar": {
+				"_data_class": "_data_class_other",
+				"_data_type": "_data_type_object",
+        		"_data_kind": "_rule_selection-descriptors"
+			}
+        }
     },
     
     {
@@ -167,10 +203,13 @@
         "_info_title": {"iso_639_3_eng": "Computed"},
         "_info_definition": {"iso_639_3_eng": "List of computed properties."},
         "_info_description": {"iso_639_3_eng": "This field contains the list of *properties* that are automatically *computed*, their value is *calculated* before *storing* the *record*."},
-        "_data_class": "_data_class_other",
-        "_data_container": "_data_container_set",
-        "_data_type": "_data_type_enum",
-        "_data_kind": "_any-descriptor"
+        "_data_container": {
+			"_data_container_set": {
+				"_data_class": "_data_class_other",
+				"_data_type": "_data_type_enum",
+        		"_data_kind": "_any-descriptor"
+			}
+        }
     },
         
     {
@@ -182,10 +221,19 @@
         "_info_definition": {"iso_639_3_eng": "List of properties with default values."},
         "_info_description": {"iso_639_3_eng": "This field is a *key/value dictionary* in which the *key* is the *property name*, which is the *global identifier* of the *descriptor*, and the *value* represents the *default value* for that *property*.\n\nThe data container and type of the default value should coincide with the descriptor&apos;s definition, or the object validation should always fail, since the default value is not valid."},
         "_info_examples": {"iso_639_3_eng": "```json\n{\n    \"my_number\": {\n        \"_rule_selection-values_one\": [1, 2, 3],\n        \"_rule_selection-values_any\": [4, 5],\n        \"_rule_selection-values_all\": [10, 20]\n    },\n    \"my_label\": {\n        \"_rule_selection-values_one\": [\"default label\"]\n    }\n}\n```\n\nThis will set:\n\n- `my_number` to one of `1`, `2` or `3`; any of `4` or/and `5`, and both `10` and `20`.\n- `my_label` to `\"default label\"`."},
-        "_data_class": "_data_class_other",
-        "_data_container": "_data_container_dict",
-        "_data_type": "_data_type_object",
-        "_data_kind": "_any-descriptor",
-        "_data_structure": "_rule_selection-values"
+		"_data_container": {
+			"_data_container_dict": {
+				"_data_container_dict_key": {
+					"_data_class": "_data_class_category",
+					"_data_type": "_data_type_enum",
+					"_data_kind": "_any-descriptor"
+				}
+			},
+			"_data_container_dict_value": {
+				"_data_class": "_data_class_other",
+				"_data_type": "_data_type_object",
+				"_data_kind": "_rule_selection-values"
+			}
+		}
     }
 ]
