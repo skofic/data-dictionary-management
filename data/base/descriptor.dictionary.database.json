@@ -7,9 +7,12 @@
         "_info_title": {"iso_639_3_eng": "Document handle"},
         "_info_definition": {"iso_639_3_eng": "Record unique identifier across all collections in a database"},
         "_info_description": {"iso_639_3_eng": "The *document handle* is the record unique identifier in [ArangoDB](https://www.arangodb.com), the default database for this data dictionary. This value is automatically created when a record is inserted, it cannot be modified or set by users and it has the following format: `<collection name>/<_key value>`."},
-        "_data_class": "_data_class_other",
-        "_data_container": "_data_container_scalar",
-        "_data_type": "_data_type_record"
+        "_data_container": {
+			"_data_container_scalar": {
+				"_data_class": "_data_class_other",
+				"_data_type": "_data_type_record"
+			}
+        }
     },
     {
         "_code_nid": "",
@@ -19,9 +22,12 @@
         "_info_title": {"iso_639_3_eng": "Document revision"},
         "_info_definition": {"iso_639_3_eng": "Record revision number."},
         "_info_description": {"iso_639_3_eng": "The *document revision* is the record revision number in [ArangoDB](https://www.arangodb.com), the default database for this data dictionary. This value is *fully managed* by the *database* and the user can only *read* its value."},
-        "_data_class": "_data_class_other",
-        "_data_container": "_data_container_scalar",
-        "_data_type": "_data_type_string"
+        "_data_container": {
+			"_data_container_scalar": {
+				"_data_class": "_data_class_other",
+				"_data_type": "_data_type_string"
+			}
+        }
     },
     {
         "_code_nid": "",

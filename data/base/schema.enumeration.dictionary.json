@@ -43,6 +43,15 @@
         "_edge_path": ["_data_container"]
     },
     
+    
+    {
+        "_from": "_data_type",
+        "_to": "_data_type_key",
+        "_edge_predicate": "_edge_predicate_bridge-of",
+        "_edge_path": ["_data_type_key"]
+    },
+
+
     {
         "_from": "_data_type_boolean",
         "_to": "_data_type",
@@ -65,13 +74,13 @@
         "_from": "_data_type_string",
         "_to": "_data_type",
         "_edge_predicate": "_edge_predicate_enum-of",
-        "_edge_path": ["_data_type"]
+        "_edge_path": ["_data_type", "_data_type_key"]
     },
     {
         "_from": "_data_type_enum",
         "_to": "_data_type",
         "_edge_predicate": "_edge_predicate_enum-of",
-        "_edge_path": ["_data_type"]
+        "_edge_path": ["_data_type", "_data_type_key"]
     },
     {
         "_from": "_data_type_term",
