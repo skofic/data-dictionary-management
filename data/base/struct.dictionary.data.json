@@ -250,6 +250,49 @@
     },
     
     {
+        "_from": "_data_class",
+        "_to": "_data_definition_key",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_data_definition_key"]
+    },
+    {
+        "_from": "_data_type_key",
+        "_to": "_data_definition_key",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_data_definition_key"]
+    },
+    {
+        "_from": "_data_kind",
+        "_to": "_data_definition_key",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_data_definition_key"]
+    },
+    {
+        "_from": "_data_format",
+        "_to": "_data_definition_key",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_data_definition_key"]
+    },
+    {
+        "_from": "_data_unit",
+        "_to": "_data_definition_key",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_data_definition_key"]
+    },
+    {
+        "_from": "_data_unit-name",
+        "_to": "_data_definition_key",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_data_definition_key"]
+    },
+    {
+        "_from": "_data_regexp",
+        "_to": "_data_definition_key",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_data_definition_key"]
+    },
+    
+    {
         "_from": "_data_container_dict_key",
         "_to": "_data_definition_dict",
         "_edge_predicate": "_edge_predicate_property-of",

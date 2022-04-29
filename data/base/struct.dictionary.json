@@ -1,0 +1,255 @@
+[
+    {
+        "_from": "_code_nid",
+        "_to": "_struct_term",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_term"]
+    },
+    {
+        "_from": "_code_lid",
+        "_to": "_struct_term",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_term"]
+    },
+    {
+        "_from": "_code_gid",
+        "_to": "_struct_term",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_term"]
+    },
+    {
+        "_from": "_code_aid",
+        "_to": "_struct_term",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_term"]
+    },
+    {
+        "_from": "_code_pid",
+        "_to": "_struct_term",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_term"]
+    },
+    {
+        "_from": "_code_name",
+        "_to": "_struct_term",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_term"]
+    },
+    
+    {
+        "_from": "_info_title",
+        "_to": "_struct_term",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_term"]
+    },
+    {
+        "_from": "_info_definition",
+        "_to": "_struct_term",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_term"]
+    },
+    {
+        "_from": "_info_description",
+        "_to": "_struct_term",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_term"]
+    },
+    {
+        "_from": "_info_examples",
+        "_to": "_struct_term",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_term"]
+    },
+    {
+        "_from": "_info_notes",
+        "_to": "_struct_term",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_term"]
+    },
+    
+    {
+        "_from": "_code_nid",
+        "_to": "_struct_object",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_object"]
+    },
+    {
+        "_from": "_code_lid",
+        "_to": "_struct_object",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_object"]
+    },
+    {
+        "_from": "_code_gid",
+        "_to": "_struct_object",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_object"]
+    },
+    {
+        "_from": "_code_aid",
+        "_to": "_struct_object",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_object"]
+    },
+    {
+        "_from": "_code_pid",
+        "_to": "_struct_object",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_object"]
+    },
+    {
+        "_from": "_code_name",
+        "_to": "_struct_object",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_object"]
+    },
+    
+    {
+        "_from": "_info_title",
+        "_to": "_struct_object",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_object"]
+    },
+    {
+        "_from": "_info_definition",
+        "_to": "_struct_object",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_object"]
+    },
+    {
+        "_from": "_info_description",
+        "_to": "_struct_object",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_object"]
+    },
+    {
+        "_from": "_info_examples",
+        "_to": "_struct_object",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_object"]
+    },
+    {
+        "_from": "_info_notes",
+        "_to": "_struct_object",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_object"]
+    },
+
+    {
+        "_from": "_rule_required",
+        "_to": "_struct_object",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_object"]
+    },
+    {
+        "_from": "_rule_recommended",
+        "_to": "_struct_object",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_object"]
+    },
+    {
+        "_from": "_rule_banned",
+        "_to": "_struct_object",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_object"]
+    },
+    {
+        "_from": "_rule_computed",
+        "_to": "_struct_object",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_object"]
+    },
+    {
+        "_from": "_rule_locked",
+        "_to": "_struct_object",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_object"]
+    },
+    {
+        "_from": "_rule_immutable",
+        "_to": "_struct_object",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_object"]
+    },
+    {
+        "_from": "_rule_default-value",
+        "_to": "_struct_object",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_object"]
+    },
+    
+    {
+        "_from": "_code_nid",
+        "_to": "_struct_descriptor",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_descriptor"]
+    },
+    {
+        "_from": "_code_lid",
+        "_to": "_struct_descriptor",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_descriptor"]
+    },
+    {
+        "_from": "_code_gid",
+        "_to": "_struct_descriptor",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_descriptor"]
+    },
+    {
+        "_from": "_code_aid",
+        "_to": "_struct_descriptor",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_descriptor"]
+    },
+    {
+        "_from": "_code_pid",
+        "_to": "_struct_descriptor",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_descriptor"]
+    },
+    {
+        "_from": "_code_name",
+        "_to": "_struct_descriptor",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_descriptor"]
+    },
+    
+    {
+        "_from": "_info_title",
+        "_to": "_struct_descriptor",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_descriptor"]
+    },
+    {
+        "_from": "_info_definition",
+        "_to": "_struct_descriptor",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_descriptor"]
+    },
+    {
+        "_from": "_info_description",
+        "_to": "_struct_descriptor",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_descriptor"]
+    },
+    {
+        "_from": "_info_examples",
+        "_to": "_struct_descriptor",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_descriptor"]
+    },
+    {
+        "_from": "_info_notes",
+        "_to": "_struct_descriptor",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_descriptor"]
+    },
+    
+    {
+        "_from": "_data_container",
+        "_to": "_struct_descriptor",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_descriptor"]
+    }
+]

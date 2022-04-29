@@ -70,5 +70,14 @@
         "_info_title": {"iso_639_3_eng": "Rules"},
         "_info_definition": {"iso_639_3_eng": "Class and structure management"},
         "_info_description": {"iso_639_3_eng": "This *namespace* is used by all *terms* and *descriptors*, constituting the *core* of the *data dictionary*, which are involved in *defining rules* that determine if a *data structure* or *object* is *valid* and how it is *constructed*.\n\nThis namespace is *reserved* for dictionary curation."}
+    },
+    {
+        "_code_nid": "",
+        "_code_lid": "struct",
+        "_code_gid": "_struct",
+        "_code_aid": "[struct]",
+        "_info_title": {"iso_639_3_eng": "Structures"},
+        "_info_definition": {"iso_639_3_eng": "Class and structure definitions"},
+        "_info_description": {"iso_639_3_eng": "This *namespace* is used by all *terms* and *descriptors*, constituting the *core* of the *data dictionary*, which are involved in *defining object data structures*. Terms of this type are considered *object structure types*.\n\nThis namespace is *reserved* for dictionary curation."}
     }
 ]

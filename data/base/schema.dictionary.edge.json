@@ -1,0 +1,26 @@
+[
+    {
+        "_from": "_edge_predicate_enum-of",
+        "_to": "_edge_predicate",
+        "_edge_predicate": "_edge_predicate_enum-of",
+        "_edge_path": ["_edge_predicate"]
+    },
+    {
+        "_from": "_edge_predicate_property-of",
+        "_to": "_edge_predicate",
+        "_edge_predicate": "_edge_predicate_enum-of",
+        "_edge_path": ["_edge_predicate"]
+    },
+    {
+        "_from": "_edge_predicate_section-of",
+        "_to": "_edge_predicate",
+        "_edge_predicate": "_edge_predicate_enum-of",
+        "_edge_path": ["_edge_predicate"]
+    },
+    {
+        "_from": "_edge_predicate_bridge-of",
+        "_to": "_edge_predicate",
+        "_edge_predicate": "_edge_predicate_enum-of",
+        "_edge_path": ["_edge_predicate"]
+    }
+]

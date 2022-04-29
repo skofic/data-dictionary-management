@@ -1,0 +1,39 @@
+[
+    {
+        "_code_nid": "_edge_predicate",
+        "_code_lid": "enum-of",
+        "_code_gid": "_edge_predicate_enum-of",
+        "_code_aid": "[enum-of]",
+        "_info_title": {"iso_639_3_eng": "Enumeration of"},
+        "_info_definition": {"iso_639_3_eng": "The source node is a controlled vocabulary element of the destination node."},
+        "_info_description": {"iso_639_3_eng": "This predicate is used in enumeration or *controlled vocabulary* graphs. When two nodes are related with this predicate, it means that the *source* node is a controlled vocabulary *element* of the *destination* node. This means that the source node can be used as a *valid choice* when presenting users with an options list."}
+    },
+    {
+        "_code_nid": "_edge_predicate",
+        "_code_lid": "property-of",
+        "_code_gid": "_edge_predicate_property-of",
+        "_code_aid": "[property-of]",
+        "_info_title": {"iso_639_3_eng": "Property of"},
+        "_info_definition": {"iso_639_3_eng": "The source node is a property of the destination node."},
+        "_info_description": {"iso_639_3_eng": "This predicate is used in *object* or *schema* graphs.When two nodes are related with this predicate, it means that the *source* node is a *property* of the *destination* node. This means that the source node should be considered a property of a data structure. This also implies that the source node represents a *descriptor*."}
+    },
+    {
+        "_code_nid": "_edge_predicate",
+        "_code_lid": "section-of",
+        "_code_gid": "_edge_predicate_section-of",
+        "_code_aid": "[section-of]",
+        "_info_title": {"iso_639_3_eng": "Section of"},
+        "_info_definition": {"iso_639_3_eng": "The source node is a section of the destination node."},
+        "_info_description": {"iso_639_3_eng": "This predicate involves the concept of *section*, a section is a *category* or *heading* that *groups* a *set* of *choices*. For instance, while the *enumeration* or *property* predicates indicate that the source node is either a valid *controlled vocabulary choice*, or a *descriptor* belonging to the *destination* node, this predicate would indicate that the source node is to be used as a *container* or *disclosure list*. This predicate is used to *group* controlled vocabulary elements or sets of schema descriptors into sections that will be presented as disclosute lists in the user interface when showing forms or lists."}
+    },
+    {
+        "_code_nid": "_edge_predicate",
+        "_code_lid": "bridge-of",
+        "_code_gid": "_edge_predicate_bridge-of",
+        "_code_aid": "[bridge-of]",
+        "_info_title": {"iso_639_3_eng": "Bridge of"},
+        "_info_definition": {"iso_639_3_eng": "The source node is a bridge to the destination node."},
+        "_info_description": {"iso_639_3_eng": "This predicate indicates that the *source* node acts as a *bridge* to the *destination* node. This means that the *source* of such relationship should be *hidden* or *skipped* when *traversing* the *path*. Edges with this predicate are found in two scenarios. To allow a *new enumeration root* to *take advantage* of the network belonging to an *existing controlled vocabulary root*, or to *enforce* the *selection* of a *preferred* or *default* element different than the search target."},
+        "_info_examples": {"iso_639_3_eng": "Suppose you have a controlled vocabulary that is exhaustive and has a large number of elements, you want to create a new controlled vocabulary that shares most, but not all the elements of the first enumeration. You normally would need to duplicate the graph nodes and edges and connect them to the new root. By making the old root a bridge to the new root and by adding the new root to the *path* to all relevant edges, it will appear that all the relevant elements belong directly to the new root.\n\nSuppose you have two controlled vocabularies that classify the same information, but enumeration A is partial, while enumeration B is exhaustive. If you want to enforce the use of enumeration B, even passing through enumeration A, you can connect controlled vocabulary A elements with the bridge predicate and connect the related enumeration B elements wuth the *enumeration* predicate. This way when you search for an element in enumeration A, you will get back the corresponding element of enumeration B."}
+    }
+]
