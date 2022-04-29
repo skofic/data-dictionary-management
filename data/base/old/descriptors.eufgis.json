@@ -102,11 +102,11 @@
         "_docs_label": {"iso_639_3_eng": "Latitude"},
         "_docs_definition": {"iso_639_3_eng": "Latitude of the centre of the unit."},
         "_docs_description": {"iso_639_3_eng": "3 separate numerical fields + 1 field for `N` or `S`.\n\nIf data will be provided in centesimal degrees, the DB will automatically convert to Sexagesimal."},
-        "_docs_examples": {"iso_639_3_eng": "`66°31&apos;32.34&quot;N`, `89°0&apos;59.12&quot;S`"},
+        "_docs_examples": {"iso_639_3_eng": "`66°31'32.34"N`, `89°0'59.12"S`"},
         "_data_class": "_enum_data_classes_code",
         "_data_container": "_enum_data_containers_scalar",
         "_data_type": "_enum_data_types_string",
-        "_data_regexp": "^([0-9]|[1-8][0-9]|90)°([0-9]|[1-5][0-9]|60)&apos;([0-9]|[1-5][0-9]|60)(.[0-9]+)?&quot;(N|S)$",
+        "_data_regexp": "^([0-9]|[1-8][0-9]|90)°([0-9]|[1-5][0-9]|60)'([0-9]|[1-5][0-9]|60)(.[0-9]+)?"(N|S)$",
         "_data_rules": ["_enum_data_rules_required"]
     },
     {
@@ -133,11 +133,11 @@
         "_docs_label": {"iso_639_3_eng": "Longitude"},
         "_docs_definition": {"iso_639_3_eng": "Longitude of the centre of the unit."},
         "_docs_description": {"iso_639_3_eng": "3 separate numerical fields + 1 field for `E` or `W`.\n\nIf data will be provided in centesimal degrees, the DB will automatically convert to Sexagesimal."},
-        "_docs_examples": {"iso_639_3_eng": "`125°31&apos;32.34&quot;E`, `12°0&apos;59.12&quot;W`"},
+        "_docs_examples": {"iso_639_3_eng": "`125°31'32.34"E`, `12°0'59.12"W`"},
         "_data_class": "_enum_data_classes_code",
         "_data_container": "_enum_data_containers_scalar",
         "_data_type": "_enum_data_types_string",
-        "_data_regexp": "^([0-9]|[1-9][0-9]|1[0-7][0-9]|180)°([0-9]|[1-5][0-9]|60)&apos;([0-9]|[0-5][0-9])(.[0-9]+)?&quot;(E|W)$",
+        "_data_regexp": "^([0-9]|[1-9][0-9]|1[0-7][0-9]|180)°([0-9]|[1-5][0-9]|60)'([0-9]|[0-5][0-9])(.[0-9]+)?"(E|W)$",
         "_data_rules": ["_enum_data_rules_required"]
     },
     {
@@ -177,7 +177,7 @@
         "_codes_aid": ["datum"],
         "_docs_label": {"iso_639_3_eng": "Unit geodetic datum"},
         "_docs_definition": {"iso_639_3_eng": "Datum of the projection used to obtain the coordinates."},
-        "_docs_description": {"iso_639_3_eng": "A horizontal geodetic datum based on an ellipsoid that has its origin at the earth&apos;s center of mass. Examples are the *World Geodetic System of 1984*, the *North American Datum of 1983*, and the *Geodetic Datum of Australia of 1994*. The first uses the WGS84 ellipsoid; the latter two use the GRS80 ellipsoid.\n\nIf not provided `WGS 1984` will be used."},
+        "_docs_description": {"iso_639_3_eng": "A horizontal geodetic datum based on an ellipsoid that has its origin at the earth's center of mass. Examples are the *World Geodetic System of 1984*, the *North American Datum of 1983*, and the *Geodetic Datum of Australia of 1994*. The first uses the WGS84 ellipsoid; the latter two use the GRS80 ellipsoid.\n\nIf not provided `WGS 1984` will be used."},
         "_data_class": "_enum_data_classes_category",
         "_data_container": "_enum_data_containers_scalar",
         "_data_type": "_enum_data_types_enum",

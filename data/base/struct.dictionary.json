@@ -252,4 +252,35 @@
         "_edge_predicate": "_edge_predicate_property-of",
         "_edge_path": ["_struct_descriptor"]
     }
+    
+    {
+        "_from": "_key",
+        "_to": "_struct_edge",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_edge"]
+    },
+    {
+        "_from": "_from",
+        "_to": "_struct_edge",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_edge"]
+    },
+    {
+        "_from": "_to",
+        "_to": "_struct_edge",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_edge"]
+    },
+    {
+        "_from": "_edge_predicate",
+        "_to": "_struct_edge",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_edge"]
+    },
+    {
+        "_from": "_edge_path",
+        "_to": "_struct_edge",
+        "_edge_predicate": "_edge_predicate_property-of",
+        "_edge_path": ["_struct_edge"]
+    }
 ]

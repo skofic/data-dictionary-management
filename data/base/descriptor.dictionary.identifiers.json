@@ -70,7 +70,7 @@
         "_code_gid": "_code_pid",
         "_code_aid": ["pid"],
         "_info_title": {"iso_639_3_eng": "Provider identifiers"},
-        "_info_definition": {"iso_639_3_eng": "The descriptor&apos;s identifiers given by the metadata provider."},
+        "_info_definition": {"iso_639_3_eng": "The descriptor's identifiers given by the metadata provider."},
         "_info_description": {"iso_639_3_eng": "This corresponds to the *identifiers* that the *metadata providers* or *curators* have *assigned* to the *descriptor*. It is a list, since different providers may submit data and use different identifiers.\n\nNote that this list should not include official or globally recognised identifiers, such as alternative ISO codes, only those used by the data providers."},
         "_data_container": {
 			"_data_container_set": {
