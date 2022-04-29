@@ -106,7 +106,7 @@
         "_code_aid": ["default-value"],
         "_info_title": {"iso_639_3_eng": "Default value"},
         "_info_definition": {"iso_639_3_eng": "List of properties with default values."},
-        "_info_description": {"iso_639_3_eng": "This field is a *key/value dictionary* in which the *key* is the *property name*, which is the *global identifier* of the *descriptor*, and the *value* represents the *default value* for that *property*.\n\nThe data container and type of the default value should coincide with the descriptor&apos;s definition, or the object validation should always fail, since the default value is not valid."},
+        "_info_description": {"iso_639_3_eng": "This field is a *key/value dictionary* in which the *key* is the *property name*, which is the *global identifier* of the *descriptor*, and the *value* represents the *default value* for that *property*.\n\nThe data container and type of the default value should coincide with the descriptor's definition, or the object validation should always fail, since the default value is not valid."},
         "_info_examples": {"iso_639_3_eng": "```json\n{\n    \"my_number\": {\n        \"_rule_selection-values_one\": [1, 2, 3],\n        \"_rule_selection-values_any\": [4, 5],\n        \"_rule_selection-values_all\": [10, 20]\n    },\n    \"my_label\": {\n        \"_rule_selection-values_one\": [\"default label\"]\n    }\n}\n```\n\nThis will set:\n\n- `my_number` to one of `1`, `2` or `3`; any of `4` or/and `5`, and both `10` and `20`.\n- `my_label` to `\"default label\"`."},
 		"_data_container": {
 			"_data_container_dict": {
@@ -247,7 +247,7 @@
         "_code_aid": ["any"],
         "_info_title": {"iso_639_3_eng": "Any of"},
         "_info_definition": {"iso_639_3_eng": "Selection should contain one or more values from the set."},
-        "_info_description": {"iso_639_3_eng": "The rule determines that *one* or *more* of the values in the *set* should be part of the *selection*.\n\nThe *values* of the *set* can be of any data type: when used in the *default property value* of an *object*&apos;s *data structure definition*, the *value type* should be the *same* as the *descriptor data type*."},
+        "_info_description": {"iso_639_3_eng": "The rule determines that *one* or *more* of the values in the *set* should be part of the *selection*.\n\nThe *values* of the *set* can be of any data type: when used in the *default property value* of an *object*'s *data structure definition*, the *value type* should be the *same* as the *descriptor data type*."},
         "_info_examples": {"iso_639_3_eng": "`{ _rule_selection-values_one: [1, 2, 3] }`: The selection must contain `1`, `1` and `2`, or `1`, `2`, and `3`."},
         "_data_container": {
 			"_data_container_set": {
@@ -262,7 +262,7 @@
         "_code_aid": ["all"],
         "_info_title": {"iso_639_3_eng": "All of"},
         "_info_definition": {"iso_639_3_eng": "Selection should contain all values from the set."},
-        "_info_description": {"iso_639_3_eng": "The rule determines that *all* of the values in the *set* should be part of the *selection*.\n\nThe *values* of the *set* can be of any data type: when used in the *default property value* of an *object*&apos;s *data structure definition*, the *value type* should be the *same* as the *descriptor data type*."},
+        "_info_description": {"iso_639_3_eng": "The rule determines that *all* of the values in the *set* should be part of the *selection*.\n\nThe *values* of the *set* can be of any data type: when used in the *default property value* of an *object*'s *data structure definition*, the *value type* should be the *same* as the *descriptor data type*."},
         "_info_examples": {"iso_639_3_eng": "`{ _rule_selection-values_one: [1, 2, 3] }`: The selection must contain `1`, `2`, and `3`."},
         "_data_container": {
 			"_data_container_set": {

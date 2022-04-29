@@ -13,10 +13,10 @@
 			"iso_639_3_eng": "Term data structure."
 		},
 		"_info_description": {
-			"iso_639_3_eng": "*Terms* are the *base class* upon which all elements of the data dictionary are created. This data definition includes the *minimum viable data structure* for instantiating *namespaces*, *types* and *enumerations*.\n\n*Terms* require the *identification* and *documentation* sections, while the *data* section is only required by *descriptors*."
+			"iso_639_3_eng": "*Terms* are the *base class* upon which all elements of the data dictionary are created. This data definition includes the *minimum viable data structure* for instantiating *namespaces*, *types* and *enumerations*.\n\n*Terms* require the *identification* and *documentation* sections, while the *data* section should only be included by *descriptors*. Any additional property is allowed."
 		},
 		"_info_examples": {
-			"iso_639_3_eng": "Term example:\n\n```json\n{\n    \"_code_nid\": \"namespace\",\n    \"_code_lid\": \"term\",\n    \"_code_gid\": \"namespace_term\",\n    \"_code_aid\": [\n        \"term\"\n    ],\n    \"_info_title\": {\n        \"iso_639_3_eng\": \"Term\"\n    },\n    \"_info_definition\": {\n        \"iso_639_3_eng\": \"Term definition.\"\n    },\n    \"_info_description\": {\n        \"iso_639_3_eng\": \"Term description.\"\n    }\n}\n```\n\nObject example:\n\n```json\n{\n    \"_code_nid\": \"namespace\",\n    \"_code_lid\": \"object\",\n    \"_code_gid\": \"namespace_object\",\n    \"_code_aid\": [\n        \"object\"\n    ],\n    \"_info_title\": {\n        \"iso_639_3_eng\": \"Object\"\n    },\n    \"_info_definition\": {\n        \"iso_639_3_eng\": \"Term definition.\"\n    },\n    \"_info_description\": {\n        \"iso_639_3_eng\": \"Term description.\"\n    },\n    \"_rule_required\": {\n        \"_rule_selection-terms_all\": [\n            \"property_required_1\",\n            \"property_required_2\",\n            \"property_required_3\"\n        ]\n    },\n    \"_rule_recommended\": {\n        \"_rule_selection-terms_all\": [\n            \"property_recommended\"\n        ]\n    },\n    \"_rule_computed\": [\n        \"computed_property\"\n    ],\n    \"_rule_locked\": [\n        \"read-only_property\"\n    ],\n    \"_rule_immutable\": [\n        \"immutable_property_1\",\n        \"immutable_property_2\",\n        \"immutable_property_3\"\n    ]\n}\n```\n\nDescriptor example:\n\n```json\n{\n    \"_code_nid\": \"namespace\",\n    \"_code_lid\": \"identifier\",\n    \"_code_gid\": \"namespace_identifier\",\n    \"_code_aid\": [\n        \"identifier\",\n        \"id\"\n    ],\n    \"_info_title\": {\n        \"iso_639_3_eng\": \"Title\"\n    },\n    \"_info_definition\": {\n        \"iso_639_3_eng\": \"Definition.\"\n    },\n    \"_info_description\": {\n        \"iso_639_3_eng\": \"Description.\"\n    },\n    \"_data_container\": {\n        \"_data_container_scalar\": {\n            \"_data_class\": \"_data_class_category\",\n            \"_data_type\": \"_data_type_enum\",\n            \"_data_kind\": \"iso_639_3\"\n        }\n    }\n}\n```\n\nData example:\n\n```json\n{\n     \"_key\": \"record_key\",\n    \"namespace_identifier\": \"Value\"\n}\n```"
+			"iso_639_3_eng": "Term example:\n\n```json\n{\n	   \"_code_nid\": \"namespace\",\n	  \"_code_lid\": \"term\",\n	\"_code_gid\": \"namespace_term\",\n	\"_code_aid\": [\n		  \"term\"\n	],\n	\"_info_title\": {\n		\"iso_639_3_eng\": \"Term\"\n	 },\n	 \"_info_definition\": {\n		  \"iso_639_3_eng\": \"Term definition.\"\n	   },\n	   \"_info_description\": {\n		 \"iso_639_3_eng\": \"Term description.\"\n	   }\n}\n```\n\nObject example:\n\n```json\n{\n	   \"_code_nid\": \"namespace\",\n	  \"_code_lid\": \"object\",\n	  \"_code_gid\": \"namespace_object\",\n	\"_code_aid\": [\n		  \"object\"\n	  ],\n	  \"_info_title\": {\n		  \"iso_639_3_eng\": \"Object\"\n	 },\n	 \"_info_definition\": {\n		  \"iso_639_3_eng\": \"Term definition.\"\n	   },\n	   \"_info_description\": {\n		 \"iso_639_3_eng\": \"Term description.\"\n	   },\n	   \"_rule_required\": {\n		  \"_rule_selection-terms_all\": [\n			\"property_required_1\",\n			  \"property_required_2\",\n			\"property_required_3\"\n		 ]\n	},\n	\"_rule_recommended\": {\n		  \"_rule_selection-terms_all\": [\n			\"property_recommended\"\n		  ]\n	 },\n	 \"_rule_computed\": [\n		\"computed_property\"\n	   ],\n	   \"_rule_locked\": [\n		\"read-only_property\"\n	],\n	\"_rule_immutable\": [\n		\"immutable_property_1\",\n		   \"immutable_property_2\",\n		  \"immutable_property_3\"\n	]\n}\n```\n\nDescriptor example:\n\n```json\n{\n	\"_code_nid\": \"namespace\",\n	   \"_code_lid\": \"identifier\",\n	   \"_code_gid\": \"namespace_identifier\",\n	 \"_code_aid\": [\n		   \"identifier\",\n		\"id\"\n	],\n	\"_info_title\": {\n		\"iso_639_3_eng\": \"Title\"\n	  },\n	  \"_info_definition\": {\n		   \"iso_639_3_eng\": \"Definition.\"\n	   },\n	   \"_info_description\": {\n		 \"iso_639_3_eng\": \"Description.\"\n	  },\n	  \"_data_container\": {\n		  \"_data_container_scalar\": {\n			 \"_data_class\": \"_data_class_category\",\n			 \"_data_type\": \"_data_type_enum\",\n			   \"_data_kind\": \"iso_639_3\"\n		  }\n	 }\n}\n```\n\nData example:\n\n```json\n{\n		\"_key\": \"record_key\",\n	   \"namespace_identifier\": \"Value\"\n}\n```"
 		},
 		"_rule_required": {
 			"_rule_selection-terms_all": [
@@ -60,7 +60,7 @@
 			"iso_639_3_eng": "*Terms* are the *base class* upon which all elements of the data dictionary are created. This data definition includes the *minimum viable data structure* for instantiating *object type definitions*.\n\n*Objects* require the *identification*, *documentation* and *rules*sections, while the *data* section is only required by *descriptors*."
 		},
 		"_info_examples": {
-			"iso_639_3_eng": "Object example:\n\n```json\n{\n    \"_code_nid\": \"namespace\",\n    \"_code_lid\": \"object\",\n    \"_code_gid\": \"namespace_object\",\n    \"_code_aid\": [\n        \"object\"\n    ],\n    \"_info_title\": {\n        \"iso_639_3_eng\": \"Object\"\n    },\n    \"_info_definition\": {\n        \"iso_639_3_eng\": \"Term definition.\"\n    },\n    \"_info_description\": {\n        \"iso_639_3_eng\": \"Term description.\"\n    },\n    \"_rule_required\": {\n        \"_rule_selection-terms_all\": [\n            \"property_required_1\",\n            \"property_required_2\",\n            \"property_required_3\"\n        ]\n    },\n    \"_rule_recommended\": {\n        \"_rule_selection-terms_all\": [\n            \"property_recommended\"\n        ]\n    },\n    \"_rule_computed\": [\n        \"computed_property\"\n    ],\n    \"_rule_locked\": [\n        \"read-only_property\"\n    ],\n    \"_rule_immutable\": [\n        \"immutable_property_1\",\n        \"immutable_property_2\",\n        \"immutable_property_3\"\n    ]\n}\n```"
+			"iso_639_3_eng": "Object example:\n\n```json\n{\n	 \"_code_nid\": \"namespace\",\n	\"_code_lid\": \"object\",\n	\"_code_gid\": \"namespace_object\",\n	  \"_code_aid\": [\n		\"object\"\n	],\n	\"_info_title\": {\n		\"iso_639_3_eng\": \"Object\"\n	   },\n	   \"_info_definition\": {\n		\"iso_639_3_eng\": \"Term definition.\"\n	 },\n	 \"_info_description\": {\n		   \"iso_639_3_eng\": \"Term description.\"\n	 },\n	 \"_rule_required\": {\n		\"_rule_selection-terms_all\": [\n			  \"property_required_1\",\n			\"property_required_2\",\n			  \"property_required_3\"\n		   ]\n	  },\n	  \"_rule_recommended\": {\n		\"_rule_selection-terms_all\": [\n			  \"property_recommended\"\n		]\n	   },\n	   \"_rule_computed\": [\n		  \"computed_property\"\n	 ],\n	 \"_rule_locked\": [\n		  \"read-only_property\"\n	  ],\n	  \"_rule_immutable\": [\n		  \"immutable_property_1\",\n		 \"immutable_property_2\",\n		\"immutable_property_3\"\n	  ]\n}\n```"
 		},
 		"_rule_required": {
 			"_rule_selection-terms_all": [
@@ -104,7 +104,7 @@
 			"iso_639_3_eng": "*Descriptors* are terms that define properties that carry values. They *inherit* all *properties* from *terms*, but add a section of attributes that *describes* the *type* of *data* they define."
 		},
 		"_info_examples": {
-			"iso_639_3_eng": "Descriptor example:\n\n```json\n{\n    \"_code_nid\": \"namespace\",\n    \"_code_lid\": \"identifier\",\n    \"_code_gid\": \"namespace_identifier\",\n    \"_code_aid\": [\n        \"identifier\",\n        \"id\"\n    ],\n    \"_info_title\": {\n        \"iso_639_3_eng\": \"Title\"\n    },\n    \"_info_definition\": {\n        \"iso_639_3_eng\": \"Definition.\"\n    },\n    \"_info_description\": {\n        \"iso_639_3_eng\": \"Description.\"\n    },\n    \"_data_container\": {\n        \"_data_container_scalar\": {\n            \"_data_class\": \"_data_class_category\",\n            \"_data_type\": \"_data_type_enum\",\n            \"_data_kind\": \"iso_639_3\"\n        }\n    }\n}\n```"
+			"iso_639_3_eng": "Descriptor example:\n\n```json\n{\n	 \"_code_nid\": \"namespace\",\n	\"_code_lid\": \"identifier\",\n	\"_code_gid\": \"namespace_identifier\",\n	  \"_code_aid\": [\n		\"identifier\",\n		 \"id\"\n	 ],\n	 \"_info_title\": {\n		 \"iso_639_3_eng\": \"Title\"\n	   },\n	   \"_info_definition\": {\n		\"iso_639_3_eng\": \"Definition.\"\n	},\n	\"_info_description\": {\n		  \"iso_639_3_eng\": \"Description.\"\n	   },\n	   \"_data_container\": {\n		   \"_data_container_scalar\": {\n			  \"_data_class\": \"_data_class_category\",\n			  \"_data_type\": \"_data_type_enum\",\n			\"_data_kind\": \"iso_639_3\"\n		   }\n	  }\n}\n```"
 		},
 		"_rule_required": {
 			"_rule_selection-terms_all": [
@@ -129,6 +129,44 @@
 			"_code_lid",
 			"_code_gid",
 			"_data_container"
+		]
+	},
+	{
+		"_code_nid": "_struct",
+		"_code_lid": "edge",
+		"_code_gid": "_struct_edge",
+		"_code_aid": [
+			"edge"
+		],
+		"_info_title": {
+			"iso_639_3_eng": "Edge"
+		},
+		"_info_definition": {
+			"iso_639_3_eng": "Edge data structure."
+		},
+		"_info_description": {
+			"iso_639_3_eng": "*Edges* are *objects* that define the *relationships* between nodes in a *directed graph*."
+		},
+		"_info_examples": {
+			"iso_639_3_eng": "Edge example:\n\n```json\n{\n	   \"_key\": \"20103dc79d7f368e2624a0f781c31e05\",\n	\"_from\": \"terms/source_node\",\n	   \"_to\": \"terms/destination_node\",\n	 \"_edge_predicate\": \"_edge_predicate_enum-of\",\n	\"_edge_path\": [\n		   \"destination_node\",\n		  \"other_node\"\n	  ]\n}\n```\n\nThis example represents an *edge* that connects `source_node` to `destination_node` making `source_node` an *enumeration element* of the `destination_node` *controlled vocabulary*. Two controlled vocabularies share this relationship: `destination_node` and `other_node`."
+		},
+		"_rule_required": {
+			"_rule_selection-terms_all": [
+				"_key",
+				"_from",
+				"_to",
+				"_edge_predicate",
+				"_edge_path"
+			]
+		},
+		"_rule_computed": [
+			"_key"
+		],
+		"_rule_immutable": [
+			"_key",
+			"_from",
+			"_to",
+			"_edge_predicate"
 		]
 	}
 ]
