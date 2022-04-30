@@ -1,0 +1,527 @@
+[
+    {
+        "_code_nid": "iso_639",
+        "_code_lid": "scope",
+        "_code_gid": "iso_639_scope",
+        "_code_fid": "iso_639_scope",
+        "_code_aid": ["scope"],
+        "_info_label": {"iso_639_3_eng": "Language scope"},
+        "_info_definition": {"iso_639_3_eng": "Language scope."},
+        "_data_container": {
+			"_data_container_scalar": {
+				"_data_class": "_data_class_other",
+				"_data_type": "_data_type_enum",
+				"_data_kind": "iso_639_scopes"
+			}
+        }
+    },
+    {
+        "_code_nid": "iso_639",
+        "_code_lid": "type",
+        "_code_gid": "iso_639_type",
+        "_code_fid": "iso_639_type",
+        "_code_aid": ["type"],
+        "_info_label": {"iso_639_3_eng": "Language type"},
+        "_info_definition": {"iso_639_3_eng": "Individual language type."},
+        "_data_container": {
+			"_data_container_scalar": {
+				"_data_class": "_data_class_other",
+				"_data_type": "_data_type_enum",
+				"_data_kind": "iso_639_types"
+			}
+        }
+    },
+    {
+        "_code_nid": "iso_639",
+        "_code_lid": "alpha2",
+        "_code_gid": "iso_639_alpha2",
+        "_code_fid": "iso_639_alpha2",
+        "_code_aid": ["alpha2"],
+        "_info_label": {"iso_639_3_eng": "Alpha-2 code"},
+        "_info_definition": {"iso_639_3_eng": "Two letter alphabetic code of the language from part 1."},
+        "_info_description": "*Alpha-2* codes (for codes composed of 2 letters of the [ISO basic Latin alphabet](https://en.wikipedia.org/wiki/ISO_basic_Latin_alphabet &quot;ISO basic Latin alphabet&quot;)) are used in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1 &quot;ISO 639-1&quot;). When codes for a wider range of languages were desired, more than 2 letter combinations could cover (a maximum of 262 = 676), [ISO 639-2](https://en.wikipedia.org/wiki/ISO_639-2 &quot;ISO 639-2&quot;) was developed using Alpha-3 codes.",
+        "_data_container": {
+			"_data_container_scalar": {
+				"_data_class": "_data_class_other",
+				"_data_type": "_data_type_string",
+				"_data_regexp": "^[a-z]{2}$"
+			}
+        }
+    },
+    {
+        "_code_nid": "iso_639",
+        "_code_lid": "alpha3",
+        "_code_gid": "iso_639_alpha3",
+        "_code_fid": "iso_639_alpha3",
+        "_code_aid": ["alpha3"],
+        "_info_label": {"iso_639_3_eng": "Alpha-3 code"},
+        "_info_definition": {"iso_639_3_eng": "Three letter terminology code of the language."},
+        "_info_description": "*Alpha-3* codes (for codes composed of 3 letters of the [ISO basic Latin alphabet](https://en.wikipedia.org/wiki/ISO_basic_Latin_alphabet &quot;ISO basic Latin alphabet&quot;)) are used in [ISO 639-2](https://en.wikipedia.org/wiki/ISO_639-2 &quot;ISO 639-2&quot;), [ISO 639-3](https://en.wikipedia.org/wiki/ISO_639-3 &quot;ISO 639-3&quot;), and [ISO 639-5](https://en.wikipedia.org/wiki/ISO_639-5 &quot;ISO 639-5&quot;). The number of languages and language groups that can be so represented is 263 = 17,576.",
+        "_data_container": {
+			"_data_container_scalar": {
+				"_data_class": "_data_class_other",
+				"_data_type": "_data_type_string",
+				"_data_regexp": "^[a-z]{3}$"
+			}
+        }
+    },
+    {
+        "_code_nid": "iso_639",
+        "_code_lid": "bibliographic",
+        "_code_gid": "iso_639_bibliographic",
+        "_code_fid": "iso_639_bibliographic",
+        "_code_aid": ["bibliographic"],
+        "_info_label": {"iso_639_3_eng": "Bibliographic code"},
+        "_info_definition": {"iso_639_3_eng": "Three letter bibliographic code of the language from part 2."},
+        "_info_description": "Bibliographic codes are *legacy* codes based on language *names in English*, as opposed to *Terminologic* codes which are the *preferred codes* based on *native language names*, romanized if needed.",
+        "_data_container": {
+			"_data_container_scalar": {
+				"_data_class": "_data_class_other",
+				"_data_type": "_data_type_string",
+				"_data_regexp": "^[a-z]{3}$"
+			}
+        }
+    },
+    {
+        "_code_nid": "iso_639",
+        "_code_lid": "common",
+        "_code_gid": "iso_639_common",
+        "_code_fid": "iso_639_common",
+        "_code_aid": ["common"],
+        "_info_label": {"iso_639_3_eng": "Common name"},
+        "_info_definition": {"iso_639_3_eng": "Common name of the language."},
+        "_data_container": {
+			"_data_container_dict": {
+				"_data_container_dict_key": {
+					"_data_class": "_data_class_category",
+					"_data_type": "_data_type_enum",
+					"_data_kind": "iso_639_3"
+				},
+				"_data_container_dict_value": {
+        			"_data_class": "_data_class_other",
+        			"_data_type": "_data_type_string"
+				}
+			}
+        }
+    },
+    {
+        "_code_nid": "iso_639",
+        "_code_lid": "inverted",
+        "_code_gid": "iso_639_inverted",
+        "_code_fid": "iso_639_inverted",
+        "_code_aid": ["inverted"],
+        "_info_label": {"iso_639_3_eng": "Inverted name"},
+        "_info_definition": {"iso_639_3_eng": "Inverted name of the language."},
+        "_data_container": {
+			"_data_container_dict": {
+				"_data_container_dict_key": {
+					"_data_class": "_data_class_category",
+					"_data_type": "_data_type_enum",
+					"_data_kind": "iso_639_3"
+				},
+				"_data_container_dict_value": {
+        			"_data_class": "_data_class_other",
+        			"_data_type": "_data_type_string"
+				}
+			}
+        }
+    },
+    {
+        "_code_nid": "iso_3166",
+        "_code_lid": "alpha2",
+        "_code_gid": "iso_3166_alpha2",
+        "_code_fid": "iso_3166_alpha2",
+        "_code_aid": ["alpha2"],
+        "_info_label": {"iso_639_3_eng": "Alpha-2 code"},
+        "_info_definition": {"iso_639_3_eng": "Two letter alphabetic code of the country."},
+        "_info_description": "Two-letter country codes which are the most widely used of the three, and used most prominently for the Internet&apos;s country code top-level domains (with a few exceptions).",
+        "_data_container": {
+			"_data_container_scalar": {
+				"_data_class": "_data_class_other",
+				"_data_type": "_data_type_string",
+				"_data_regexp": "^[A-Z]{2}$"
+			}
+        }
+    },
+    {
+        "_code_nid": "iso_3166",
+        "_code_lid": "alpha3",
+        "_code_gid": "iso_3166_alpha3",
+        "_code_fid": "iso_3166_alpha3",
+        "_code_aid": ["alpha3"],
+        "_info_label": {"iso_639_3_eng": "Alpha-3 code"},
+        "_info_definition": {"iso_639_3_eng": "Three letter alphabetic code of the country."},
+        "_info_description": "Three-letter country codes which allow a better visual association between the codes and the country names than the alpha-2 codes.",
+        "_data_container": {
+			"_data_container_scalar": {
+				"_data_class": "_data_class_other",
+				"_data_type": "_data_type_string",
+				"_data_regexp": "^[A-Z]{3}$"
+			}
+        }
+    },
+    {
+        "_code_nid": "iso_3166",
+        "_code_lid": "numeric",
+        "_code_gid": "iso_3166_numeric",
+        "_code_fid": "iso_3166_numeric",
+        "_code_aid": ["numeric"],
+        "_info_label": {"iso_639_3_eng": "Numeric code"},
+        "_info_definition": {"iso_639_3_eng": "Three letter alphabetic code of the country."},
+        "_info_description": "Three-digit country codes which are identical to those developed and maintained by the United Nations Statistics Division, with the advantage of script (writing system) independence, and hence useful for people or systems using non-Latin scripts.",
+        "_data_container": {
+			"_data_container_scalar": {
+				"_data_class": "_data_class_other",
+				"_data_type": "_data_type_string",
+				"_data_regexp": "^[0-9]{3}$"
+			}
+        }
+    },
+    {
+        "_code_nid": "iso_3166",
+        "_code_lid": "ioc",
+        "_code_gid": "iso_3166_ioc",
+        "_code_fid": "iso_3166_ioc",
+        "_code_aid": ["ioc"],
+        "_info_label": {"iso_639_3_eng": "IOC code"},
+        "_info_definition": {"iso_639_3_eng": "International Olympic Committee code."},
+        "_info_description": "The [International Olympic Committee](https://en.wikipedia.org/wiki/International_Olympic_Committee &quot;International Olympic Committee&quot;) (IOC) uses [three-letter abbreviation](https://en.wikipedia.org/wiki/Three-letter_abbreviation &quot;Three-letter abbreviation&quot;) [country codes](https://en.wikipedia.org/wiki/Country_codes &quot;Country codes&quot;) to refer to each group of athletes that participate in the [Olympic Games](https://en.wikipedia.org/wiki/Olympic_Games &quot;Olympic Games&quot;). Each [geocode](https://en.wikipedia.org/wiki/Geocode &quot;Geocode&quot;) usually identifies a [National Olympic Committee](https://en.wikipedia.org/wiki/National_Olympic_Committee &quot;National Olympic Committee&quot;) (NOC), but there are several codes that have been used for other instances in past Games, such as teams composed of athletes from multiple nations, or groups of athletes not formally representing any nation.",
+        "_data_container": {
+			"_data_container_scalar": {
+				"_data_class": "_data_class_other",
+				"_data_type": "_data_type_string",
+				"_data_regexp": "^[0-9]{3}$"
+			}
+        }
+    },
+    {
+        "_code_nid": "iso_3166",
+        "_code_lid": "flag",
+        "_code_gid": "iso_3166_flag",
+        "_code_fid": "iso_3166_flag",
+        "_code_aid": ["flag"],
+        "_info_label": {"iso_639_3_eng": "Flag"},
+        "_info_definition": {"iso_639_3_eng": "Flag of country."},
+        "_data_container": {
+			"_data_container_scalar": {
+				"_data_class": "_data_class_other",
+				"_data_type": "_data_type_string",
+				"_data_format": "_enum_data_formats_svg"
+			}
+        }
+    },
+    {
+        "_code_nid": "iso_3166",
+        "_code_lid": "emoji",
+        "_code_gid": "iso_3166_emoji",
+        "_code_fid": "iso_3166_emoji",
+        "_code_aid": ["emoji"],
+        "_info_label": {"iso_639_3_eng": "Emoji flag"},
+        "_info_definition": {"iso_639_3_eng": "Flag of country, using Unicode regional indicator symbol letters."},
+        "_data_container": {
+			"_data_container_scalar": {
+				"_data_class": "_data_class_other",
+				"_data_type": "_data_type_string",
+				"_data_regexp": "^[🇦-🇿]{2}$"
+			}
+        }
+    },
+    {
+        "_code_nid": "iso_3166",
+        "_code_lid": "tld",
+        "_code_gid": "iso_3166_tld",
+        "_code_fid": "iso_3166_tld",
+        "_code_aid": ["tld"],
+        "_info_label": {"iso_639_3_eng": "Top-level domains"},
+        "_info_definition": {"iso_639_3_eng": "A top-level domain (TLD) is one of the domains at the highest level in the hierarchical Domain Name System of the Internet after the root domain."},
+        "_data_container": {
+			"_data_container_set": {
+				"_data_class": "_data_class_other",
+				"_data_type": "_data_type_string"
+			}
+        }
+    },
+    {
+        "_code_nid": "iso_3166",
+        "_code_lid": "tel",
+        "_code_gid": "iso_3166_tel",
+        "_code_fid": "iso_3166_tel",
+        "_code_aid": ["tel"],
+        "_info_label": {"iso_639_3_eng": "Calling codes"},
+        "_info_definition": {"iso_639_3_eng": "Country calling codes or country dial-in codes are telephone number prefixes for reaching telephone subscribers in the networks of the member countries or regions of the International Telecommunication Union (ITU)."},
+        "_data_container": {
+			"_data_container_set": {
+				"_data_class": "_data_class_other",
+				"_data_type": "_data_type_string",
+				"_data_regexp": "^\+[0-9]+$"
+			}
+        }
+    },
+    {
+        "_code_nid": "iso_3166",
+        "_code_lid": "area",
+        "_code_gid": "iso_3166_area",
+        "_code_fid": "iso_3166_area",
+        "_code_aid": ["area"],
+        "_info_label": {"iso_639_3_eng": "Land area"},
+        "_info_definition": {"iso_639_3_eng": "Land area in km²."},
+        "_data_container": {
+			"_data_container_scalar": {
+				"_data_class": "_data_class_quantity",
+				"_data_type": "_data_type_number",
+				"data_unit": "data_unit_area_km"
+			}
+        }
+    },
+    {
+        "_code_nid": "iso_3166",
+        "_code_lid": "languages",
+        "_code_gid": "iso_3166_languages",
+        "_code_fid": "iso_3166_languages",
+        "_code_aid": ["languages"],
+        "_info_label": {"iso_639_3_eng": "Official languages"},
+        "_info_definition": {"iso_639_3_eng": "List of official languages."},
+        "_info_description": {"iso_639_3_eng": "This descriptor is also used as a *predicate*, in that case, the *source* node is the *language* and the *destination* node is the *country*; the predicate would mean *is official language in*."},
+        "_data_container": {
+			"_data_container_set": {
+				"_data_class": "_data_class_other",
+				"_data_type": "_data_type_enum",
+				"_data_kind": "iso_639_3"
+			}
+        }
+    },
+    {
+        "_code_nid": "iso_3166",
+        "_code_lid": "currencies",
+        "_code_gid": "iso_3166_currencies",
+        "_code_fid": "iso_3166_currencies",
+        "_code_aid": ["currencies"],
+        "_info_label": {"iso_639_3_eng": "Currencies"},
+        "_info_definition": {"iso_639_3_eng": "List of currencies."},
+        "_info_description": {"iso_639_3_eng": "This descriptor is also used as a *predicate*, in that case, the *source* node is the *currency* and the *destination* node is the *country*; the predicate would mean *is official currency in in*."},
+        "_data_container": {
+			"_data_container_set": {
+				"_data_class": "_data_class_other",
+				"_data_type": "_data_type_enum",
+				"_data_kind": "iso_4217"
+			}
+        }
+    },
+    {
+        "_code_nid": "iso_3166",
+        "_code_lid": "borders",
+        "_code_gid": "iso_3166_borders",
+        "_code_fid": "iso_3166_borders",
+        "_code_aid": ["borders"],
+        "_info_label": {"iso_639_3_eng": "Borders"},
+        "_info_definition": {"iso_639_3_eng": "List of land borders."},
+        "_info_description": {"iso_639_3_eng": "This descriptor is also used as a *predicate*, in that case, the *source* node is the *country of interest* and the *destination* node is the *bordering country*; the predicate would mean *shares border with*."},
+        "_data_container": {
+			"_data_container_set": {
+				"_data_class": "_data_class_other",
+				"_data_type": "_data_type_enum",
+				"_data_kind": "iso_3166_1"
+			}
+        }
+    },
+    {
+        "_code_nid": "iso_3166",
+        "_code_lid": "region",
+        "_code_gid": "iso_3166_region",
+        "_code_fid": "iso_3166_region",
+        "_code_aid": ["region"],
+        "_info_label": {"iso_639_3_eng": "Region"},
+        "_data_container": {
+			"_data_container_dict": {
+				"_data_container_dict_key": {
+					"_data_class": "_data_class_category",
+					"_data_type": "_data_type_enum",
+					"_data_kind": "iso_639_3"
+				},
+				"_data_container_dict_value": {
+        			"_data_class": "_data_class_other",
+        			"_data_type": "_data_type_string"
+				}
+			}
+        }
+    },
+    {
+        "_code_nid": "iso_3166",
+        "_code_lid": "sub-region",
+        "_code_gid": "iso_3166_sub-region",
+        "_code_fid": "iso_3166_sub-region",
+        "_code_aid": ["sub-region"],
+        "_info_label": {"iso_639_3_eng": "Subregion"},
+        "_data_container": {
+			"_data_container_dict": {
+				"_data_container_dict_key": {
+					"_data_class": "_data_class_category",
+					"_data_type": "_data_type_enum",
+					"_data_kind": "iso_639_3"
+				},
+				"_data_container_dict_value": {
+        			"_data_class": "_data_class_other",
+        			"_data_type": "_data_type_string"
+				}
+			}
+        }
+    },
+    {
+        "_code_nid": "iso_3166",
+        "_code_lid": "official-name",
+        "_code_gid": "iso_3166_official-name",
+        "_code_fid": "iso_3166_official-name",
+        "_code_aid": ["official-name"],
+        "_info_label": {"iso_639_3_eng": "Official name"},
+        "_data_container": {
+			"_data_container_dict": {
+				"_data_container_dict_key": {
+					"_data_class": "_data_class_category",
+					"_data_type": "_data_type_enum",
+					"_data_kind": "iso_639_3"
+				},
+				"_data_container_dict_value": {
+        			"_data_class": "_data_class_other",
+        			"_data_type": "_data_type_string"
+				}
+			}
+        }
+    },
+    {
+        "_code_nid": "iso_3166",
+        "_code_lid": "common-name",
+        "_code_gid": "iso_3166_common-name",
+        "_code_fid": "iso_3166_common-name",
+        "_code_aid": ["common-name"],
+        "_info_label": {"iso_639_3_eng": "Common name"},
+        "_data_container": {
+			"_data_container_dict": {
+				"_data_container_dict_key": {
+					"_data_class": "_data_class_category",
+					"_data_type": "_data_type_enum",
+					"_data_kind": "iso_639_3"
+				},
+				"_data_container_dict_value": {
+        			"_data_class": "_data_class_other",
+        			"_data_type": "_data_type_string"
+				}
+			}
+        }
+    },
+    {
+        "_code_nid": "iso_3166_2",
+        "_code_lid": "type",
+        "_code_gid": "iso_3166_2_type",
+        "_code_fid": "iso_3166_2_type",
+        "_code_aid": ["type"],
+        "_info_label": {"iso_639_3_eng": "Subset type"},
+        "_info_definition": {"iso_639_3_eng": "Type of subset of the country."},
+        "_data_container": {
+			"_data_container_set": {
+				"_data_class": "_data_class_category",
+				"_data_type": "_data_type_enum",
+				"_data_kind": "iso_3166_2_types"
+			}
+        }
+    },
+    {
+        "_code_nid": "iso_3166_3",
+        "_code_lid": "alpha4",
+        "_code_gid": "iso_3166_3_alpha4",
+        "_code_fid": "iso_3166_3_alpha4",
+        "_code_aid": ["alpha4"],
+        "_info_label": {"iso_639_3_eng": "Alpha-4 code"},
+        "_info_definition": {"iso_639_3_eng": "Four letter alphabetic code of the former country."},
+        "_info_description": "Each former country name in ISO 3166-3 is assigned a four-letter alphabetic code. The first two letters are the [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 &quot;ISO 3166-1 alpha-2&quot;) code of the former country, while the last two letters are allocated according to the following rules:[[2]](https://en.wikipedia.org/wiki/ISO_3166-3#cite_note-2)\n\n- If the country changed its name, the new ISO 3166-1 alpha-2 code is used, or the special code AA is used if its alpha-2 code was not changed.\n- If the country merged into an existing country, the ISO 3166-1 alpha-2 code of this country is used.\n- If the country was divided into several parts, the special code HH is used to indicate that there is no single successor country, with the exception of [Serbia and Montenegro](https://en.wikipedia.org/wiki/Serbia_and_Montenegro &quot;Serbia and Montenegro&quot;), for which XX is used to avoid duplicate use of the same ISO 3166-3 code, as the alpha-2 code CS had twice been deleted from ISO 3166-1, the first time due to the split of Czechoslovakia and the second time due to the split of Serbia and Montenegro.",
+        "_data_container": {
+			"_data_container_scalar": {
+				"_data_class": "_data_class_other",
+				"_data_type": "_data_type_string",
+				"_data_regexp": "^[A-Z]{2,4}$"
+			}
+        }
+    },
+    {
+        "_code_nid": "iso_3166_3",
+        "_code_lid": "withdrawal",
+        "_code_gid": "iso_3166_3_withdrawal",
+        "_code_fid": "iso_3166_3_withdrawal",
+        "_code_aid": ["withdrawal"],
+        "_info_label": {"iso_639_3_eng": "Withdrawal date"},
+        "_info_definition": {"iso_639_3_eng": "Date of withdrawal from ISO 3166-1."},
+        "_data_container": {
+			"_data_container_scalar": {
+				"_data_class": "_data_class_other",
+				"_data_type": "_data_type_string",
+				"_data_regexp": "^[0-9]{4}(|-[0-9]{2}){2}$"
+			}
+        }
+    },
+    {
+        "_code_nid": "iso_4217",
+        "_code_lid": "alpha3",
+        "_code_gid": "iso_4217_alpha3",
+        "_code_fid": "iso_4217_alpha3",
+        "_code_aid": ["alpha3"],
+        "_info_label": {"iso_639_3_eng": "Currency code"},
+        "_info_definition": {"iso_639_3_eng": "Three letter code of the currency."},
+        "_data_container": {
+			"_data_container_scalar": {
+				"_data_class": "_data_class_other",
+				"_data_type": "_data_type_string",
+				"_data_regexp": "^[A-Z]{3}$"
+			}
+        }
+    },
+    {
+        "_code_nid": "iso_4217",
+        "_code_lid": "numeric",
+        "_code_gid": "iso_4217_numeric",
+        "_code_fid": "iso_4217_numeric",
+        "_code_aid": ["numeric"],
+        "_info_label": {"iso_639_3_eng": "Numeric code"},
+        "_info_definition": {"iso_639_3_eng": "Three digit numeric code of the curreency, including leading zeros."},
+        "_info_description": "[ISO 4217]([ISO 4217 - Wikipedia](https://en.wikipedia.org/wiki/ISO_4217)) also assigns a three-digit numeric code to each currency, much like the three-digit numeric code assigned to each country by [ISO 3166](https://en.wikipedia.org/wiki/ISO_3166 &quot;ISO 3166&quot;). The numeric code assigned to a currency by ISO 4217 is usually the same as the numeric code assigned to the corresponding country by [ISO 3166-1](https://en.wikipedia.org/wiki/ISO_3166-1 &quot;ISO 3166-1&quot;). For example, USD ([United States dollar](https://en.wikipedia.org/wiki/United_States_dollar &quot;United States dollar&quot;)) has numeric code 840 which is also the numeric code for the US (United States).",
+        "_data_container": {
+			"_data_container_scalar": {
+				"_data_class": "_data_class_other",
+				"_data_type": "_data_type_string",
+				"_data_regexp": "^[0-9]{3}$"
+			}
+        }
+    },
+    {
+        "_code_nid": "iso_15924",
+        "_code_lid": "alpha4",
+        "_code_gid": "iso_15924_alpha4",
+        "_code_fid": "iso_15924_alpha4",
+        "_code_aid": ["alpha4"],
+        "_info_label": {"iso_639_3_eng": "Alpha-4 code"},
+        "_info_definition": {"iso_639_3_eng": "Codes for the representation of names of scripts, four character code."},
+        "_info_description": "[ISO 15924]([ISO 15924 - Wikipedia](https://en.wikipedia.org/wiki/ISO_15924)), is an [international standard](https://en.wikipedia.org/wiki/ISO_standard &quot;ISO standard&quot;) defining codes for [writing systems](https://en.wikipedia.org/wiki/Writing_systems &quot;Writing systems&quot;) or *scripts* (a *set of graphic characters used for the written form of one or more languages*). Each script is given both a four-letter code and a numeric code.",
+        "_data_container": {
+			"_data_container_scalar": {
+				"_data_class": "_data_class_other",
+				"_data_type": "_data_type_string",
+				"_data_regexp": "^[A-Z]{2,4}$"
+			}
+        }
+    },
+    {
+        "_code_nid": "iso_15924",
+        "_code_lid": "numeric",
+        "_code_gid": "iso_15924_numeric",
+        "_code_fid": "iso_15924_numeric",
+        "_code_aid": ["numeric"],
+        "_info_label": {"iso_639_3_eng": "Numeric code"},
+        "_info_definition": {"iso_639_3_eng": "Codes for the representation of names of scripts, numeric code."},
+        "_info_description": "[ISO 15924]([ISO 15924 - Wikipedia](https://en.wikipedia.org/wiki/ISO_15924)), is an [international standard](https://en.wikipedia.org/wiki/ISO_standard &quot;ISO standard&quot;) defining codes for [writing systems](https://en.wikipedia.org/wiki/Writing_systems &quot;Writing systems&quot;) or *scripts* (a *set of graphic characters used for the written form of one or more languages*). Each script is given both a four-letter code and a three character numeric code.",
+        "_data_container": {
+			"_data_container_scalar": {
+				"_data_class": "_data_class_other",
+				"_data_type": "_data_type_string",
+				"_data_regexp": "^[0-9]{3}$"
+			}
+        }
+    }
+]
