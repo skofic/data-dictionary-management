@@ -84,5 +84,22 @@
     	"_rule": {
 			"_required": {"_terms-selection_all": ["_dict_key", "_dict_value"]}
     	}
+    },
+    {
+    	"_code": {
+			"_nid": "_container_dict",
+			"_lid": "key",
+			"_gid": "_container_dict_key",
+			"_aid": ["key"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Dictionary key data definition"},
+			"_definition": {"iso_639_3_eng": "Data container and type definitions for dictionary keys."},
+			"_description": {"iso_639_3_eng": "This [object data structure](_term_object) defines the *type* and *organisation* of *dictionary keys*. Dictionary keys are *strings* by *default*. The data structure features the following properties:\n\n- [Data class](_class): This *required* property indicates whether the *dictionary key* is [categorical](_class_category), [quantitative](_class_quantity) or [neither](_class_other).\n- [Key type](_dict_key): This *required* property indicates the [data type](_type) of the key, it is by *default* a [string](_type_string), but may also be an [enumeration](_type_enum).\n- [Type reference](_kind): This property is *required* if the [key type](_dict_key) is an [enumeration](_type_enum): it should reference the *controlled vocabulary type term*. If the [key type](_dict_key) is [object](_type_object), the property is *also required* and should contain the [global identifier](_gid) of the term that represents the [object data structure](_term_object_) definition.\n- [Data format](_format): If the *dictionary key* is *encoded* in a specific *format*, this enumerated field can be used to indicate the format.\n- [Data unit](_unit): If the *dictionary key* represents a *measurement*, this property can be used to indicate the *default unit* of the *key*.\n- [Data unit name](_unit-name): If the data unit is *not* in the *units controlled vocabulary*, it can be indicated by name in this field.\n- [Regular expression pattern](_regexp): This field can contain a *regular expression pattern* to validate the format of the *dictionary key*."},
+			"_examples": {"iso_639_3_eng": "```json\n\"_dict_key\": {\n    \"_class\": \"_class_category\",\n    \"_type_key\": \"_type_enum\",\n    \"_kind\": \"iso_639_3\"\n}\n```\n\nThis example describes a *dictionary* whose *keys* are the [global identifiers](_gid) of the ISO 639 languages *controlled vocabulary elements.\n\n```json\n\"_dict_key\": {\n    \"_class\": \"_class_other\",\n    \"_type_key\": \"_type_string\"\n}\n```\n\nThis example describes a *dictionary* whose *keys* are *plain strings*.\n\n```json\n\"_dict_key\": {\n    \"_class\": \"_class_category\",\n    \"_type_key\": \"_type_enum\",\n    \"_kind\": \"iso_3166_1\"\n}\n```\n\nThis example describes a *dictionary* whose *keys* are the [global identifiers](_gid) of the ISO 3166 country *controlled vocabulary elements*."}
+    	},
+    	"_rule": {
+			"_required": {"_terms-selection_all": ["_dict_key", "_dict_value"]}
+    	}
     }
 ]
