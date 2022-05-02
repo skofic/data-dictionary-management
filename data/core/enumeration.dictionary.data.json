@@ -109,19 +109,6 @@
     {
     	"_code": {
 			"_nid": "_type",
-			"_lid": "term",
-			"_gid": "_type_term",
-			"_aid": "[term]"
-    	},
-    	"_info": {
-			"_title": {"iso_639_3_eng": "Term reference"},
-			"_definition": {"iso_639_3_eng": "Reference to a data dictionary term."},
-			"_description": {"iso_639_3_eng": "The value is by definition a *string* and must be the *global identifier* of a data dictionary *term* or *descriptor*."}
-    	}
-    },
-    {
-    	"_code": {
-			"_nid": "_type",
 			"_lid": "record",
 			"_gid": "_type_record",
 			"_aid": "[record]"

@@ -9,12 +9,205 @@
     	"_info": {
 			"_title": {"iso_639_3_eng": "Data section"},
 			"_definition": {"iso_639_3_eng": "This object groups all properties whose function is to define the shape and type of data, terms that represent descriptors must contain this property."},
-			"_description": {"iso_639_3_eng": "All terms that feature this property are [descriptors](_term_descriptor), all *other* term types *should not* have it. This [object](_container) requires *one* of the following properties:\n\n- [Scalar data container](_scalar): This property contains the *data type* definitions and *constraints* for [scalar data values](_container_scalar).\n- [Array data container](_array): This property contains the *data type* definitions and *constraints* for [array data values](_container_array), which represent a *list* of *data values* of the *same type*.\n- [Set data container](_set): This property contains the *data type* definitions and *constraints* for [set data values](_container_set), which represent a *list* of *data values* of the *same type* whose values are *unique*.\n- [Key/value dictionary data container](_dict): This property contains the *key* and *value* definitions and *constraints* for [key/value dictionary values](_container_dict)."}
+			"_description": {"iso_639_3_eng": "All terms that feature this property are [descriptors](_term_descriptor), all *other* term types *should not* have it. This [object](_container) requires *one* of the following properties:\n\n- [Scalar data container](_scalar): This property contains the *data type* definitions and *constraints* for [scalar data values](_container_scalar).\n- [Array data container](_array): This property contains the *data type* definitions and *constraints* for [array data values](_container_array), which represent a *list* of *data values* of the *same type*.\n- [Set data container](_set): This property contains the *data type* definitions and *constraints* for [set data values](_container_set), which represent a *list* of *data values* of the *same type* whose values are *unique*.\n- [Key/value dictionary data container](_dict): This property contains the *key* and *value* definitions and *constraints* for [key/value dictionary values](_container_dict)."},
+			"_examples": {"iso_639_3_eng": "```json\n{\n	\"_data\": {\n		\"_scalar\": {\n			\"_class\": \"_class_quantity\",\n			\"_type\": \"_type_integer\",\n			\"_min-range-inclusive\": 5,\n			\"_max-range-inclusive\": 10\n		}\n	}\n}\n```\n\nThis example describes a *scalar discrete integer* quantitative value in the range from `5` to `10` inclusive.\n\n```json\n{\n	\"_data\": {\n		\"_array\": {\n			\"_class\": \"_class_quantity\",\n			\"_type\": \"_type_number\",\n			\"_min-range-inclusive\": 0.0,\n			\"_max-range-exclusive\": 100.0,\n			\"_unit\": \"_data_unit_length_cm\"\n		}\n	}\n}\n```\n\nThis example describes a *list* of *continuous quantitative* values *greater or equal* to `0.0` and *less than* `100.0` representing a *length* in *centimetres*.\n\n```json\n{\n	\"_data\": {\n		\"_set\": {\n			\"_class\": \"_class_category\",\n			\"_type\": \"_type_enum\",\n			\"_kind\": \"iso_639_3\"\n		}\n	}\n}\n```\n\nThis example describes a *text* value *encoded* in *Markdown* format.\n\n```json\n{\n	\"_data\": {\n		\"_dict\": {\n			\"_dict_key\": {\n				\"_class\": \"_class_category\",\n				\"_type\": \"_type_enum\",\n				\"_kind\": \"iso_3166_1\"\n			},\n			\"_dict_value\": {\n				\"_dict\": {\n					\"_dict_key\": {\n						\"_class\": \"_class_category\",\n						\"_type\": \"_type_enum\",\n						\"_kind\": \"iso_639_3\"\n					},\n					\"_dict_value\": {\n						\"_array\": {\n							\"_class\": \"_class_other\",\n							\"_type\": \"_type_object\",\n							\"_kind\": \"some_object_definition\",\n							\"_min-items\": 5,\n							\"_max-items\": 10\n						}\n					}\n				}\n			}\n		}\n	}\n}\n```\n\nThis example describes a *dictionary* whose *keys* are the [global identifiers](_gid) of the ISO 3166 country *controlled vocabulary elements*, and the values are *another dictionary* whose keys are ISO 639 languages and whose *values* are *arrays* that correspond to the `some_object_definition` *data structure type*; these *array* values must have a *minimum* of `5` elements and a *maximum* of `10` elements. This is an example of a recursive dictionary definition."}
     	},
-		"_scalar": {
-			"_class": "_class_other",
-			"_type": "_type_object",
-			"_kind": "_container"
-		}
+    	"_data": {
+			"_scalar": {
+				"_class": "_class_other",
+				"_type": "_type_object",
+				"_kind": "_container"
+			}
+    	}
+    },
+
+    {
+    	"_code": {
+			"_nid": "",
+			"_lid": "scalar",
+			"_gid": "_scalar",
+			"_aid": ["scalar"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Scalar data container"},
+			"_definition": {"iso_639_3_eng": "This property describes a scalar data value, scalar values are single values that do not represent lists or other containers."},
+			"_description": {"iso_639_3_eng": "This [object](_container_scalar) defines the *shape* and *type* of *scalar data values*. A *number* or a *text* are examples of a scalar values; an *array* of *elements* or a key/value *dictionary* would *not* be considered a scalar value."},
+			"_examples": {"iso_639_3_eng": "```json\n{\n    \"_scalar\": {\n        \"_class\": \"_data_class_quantity\",\n        \"_type\": \"_data_type_integer\",\n        \"_min-range-inclusive\": 5,\n        \"_max-range-inclusive\": 10\n    }\n}\n```\n\nThis example describes a *scalar discrete integer* value in the range from `5` to `10` inclusive.\n\n```json\n{\n    \"_scalar\": {\n        \"_class\": \"_data_class_quantity\",\n        \"_type\": \"_data_type_number\",\n        \"_min-range-inclusive\": 0.0,\n        \"_max-range-exclusive\": 100.0,\n        \"_unit\": \"_data_unit_length_cm\"\n    }\n}\n```\n\nThis example describes a *continuous quantitative* value *greater or equal* to `0.0` and *less than* `100.0` representing a *length* in *centimetres*.\n\n```json\n{\n    \"_scalar\": {\n        \"_class\": \"_data_class_category\",\n        \"_type\": \"_data_type_enum\",\n        \"_kind\": \"iso_639_3\"\n    }\n}\n```\n\nThis example describes a *categorical string* that must be chosen from the *controlled vocabulary* of ISO 639 *language codes*.\n\n```json\n{\n    \"_scalar\": {\n        \"_class\": \"_data_class_other\",\n        \"_type\": \"_data_type_string\",\n        \"_format\": \"_data_format_markdown\"\n    }\n}\n```\n\nThis example describes a *text* value *encoded* in *Markdown* format."}
+    	},
+    	"_data": {
+			"_scalar": {
+				"_class": "_class_other",
+				"_type": "_type_object",
+				"_kind": "_container_scalar"
+			}
+    	}
+    },
+    {
+    	"_code": {
+			"_nid": "",
+			"_lid": "array",
+			"_gid": "_array",
+			"_aid": ["array"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Array data container"},
+			"_definition": {"iso_639_3_eng": "This property describes an array data values, an array is a list of values of the same type."},
+			"_description": {"iso_639_3_eng": "This [object](_container_array) defines the *shape* and *type* of an *array* of *values*. An array is a *list* of *values* of the *same type*, values can be *repeated* and the *type definitions* refer to the *list elements*."},
+			"_examples": {"iso_639_3_eng": "```json\n{\n    \"_array\": {\n        \"_class\": \"_class_quantity\",\n        \"_type\": \"_type_integer\",\n        \"_min-range-inclusive\": 5,\n        \"_max-range-inclusive\": 10\n    }\n}\n```\n\nThis example describes an *array* of *integer values* in the *range* from `5` to `10` inclusive, the *list element* values are *quantitatve*.\n\n```json\n{\n    \"_array\": {\n        \"_class\": \"_class_quantity\",\n        \"_type\": \"_type_number\",\n        \"_min-range-inclusive\": 0.0,\n        \"_max-range-exclusive\": 100.0,\n        \"_unit\": \"_unit_length_cm\"\n    }\n}\n```\n\nThis example describes an *array* of *numbers* whose value is *greater or equal* to `0.0` and *less than* `100.0` representing a *lengths* in *centimetres*, the *list element* values are *quantitatve*.\n\n```json\n{\n    \"_array\": {\n        \"_class\": \"_class_category\",\n        \"_type\": \"_type_enum\",\n        \"_kind\": \"iso_639_3\"\n    }\n}\n```\n\nThis example describes an *array* of *elements* from the *controlled vocabulary* of ISO 639 *language codes*, the *list element* values are *categorical*.\n\n```json\n{\n    \"_array\": {\n        \"_class\": \"_class_other\",\n        \"_type\": \"_type_string\",\n        \"_format\": \"_format_markdown\"\n    }\n}\n```\n\nThis example describes an *array* of *text* *values* *encoded* in *Markdown* format."}
+    	},
+    	"_data": {
+			"_scalar": {
+				"_class": "_class_other",
+				"_type": "_type_object",
+				"_kind": "_container_array"
+			}
+    	}
+    },
+    {
+    	"_code": {
+			"_nid": "",
+			"_lid": "set",
+			"_gid": "_set",
+			"_aid": ["set"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Set data container"},
+			"_definition": {"iso_639_3_eng": "This property describes a set of data value, a set is a list of values of the same type that are unique."},
+			"_description": {"iso_639_3_eng": "This [object](_container_set) defines the *shape* and *type* of a *set* of *values*. The values in the set must be *unique*, they *cannot* be *repeated*, and the *type definitions* refer to the *set elements*."},
+			"_examples": {"iso_639_3_eng": "```json\n{\n	\"_set\": {\n		\"_class\": \"_class_quantity\",\n		\"_type\": \"_type_integer\",\n		\"_min-range-inclusive\": 5,\n		\"_max-range-inclusive\": 10\n	}\n}\n```\n\nThis example describes a *set* of *integer values* in the *range* from `5` to `10` inclusive, no two numbers may be repeated.\n\n```json\n{\n	\"_set\": {\n		\"_class\": \"_class_quantity\",\n		\"_type\": \"_type_number\",\n		\"_min-range-inclusive\": 0.0,\n		\"_max-range-exclusive\": 100.0,\n		\"_unit\": \"_data_unit_length_cm\"\n	}\n}\n```\n\nThis example describes a *set* of *numbers* whose value is *greater or equal* to `0.0` and *less than* `100.0` representing a *lengths* in *centimetres*, no two numbers may be repeated.\n\n```json\n{\n	\"_set\": {\n		\"_class\": \"_class_category\",\n		\"_type\": \"_type_enum\",\n		\"_kind\": \"iso_639_3\"\n	}\n}\n```\n\nThis example describes a *set* of *elements* from the *controlled vocabulary* of ISO 639 *language codes*, no two languages in the list may be the same.\n\n```json\n{\n	\"_set\": {\n		\"_class\": \"_class_other\",\n		\"_type\": \"_type_string\",\n		\"_format\": \"_format_markdown\"\n	}\n}\n```\n\nThis example describes a *set* of *text* *values* *encoded* in *Markdown* format, no two texts can be the same."}
+    	},
+    	"_data": {
+			"_scalar": {
+				"_class": "_class_other",
+				"_type": "_type_object",
+				"_kind": "_container_set"
+			}
+    	}
+    },
+    {
+    	"_code": {
+			"_nid": "",
+			"_lid": "dict",
+			"_gid": "_dict",
+			"_aid": ["dict"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Dictionary data container"},
+			"_definition": {"iso_639_3_eng": "This property describes a key/value data dictionary, in which a string key is used to access a value."},
+			"_description": {"iso_639_3_eng": "This [object](_container_dict) defines the *shape* and *type* of a *key/value dictionary*. *Keys* are *strings* that *may* be *bound* to a *controlled vocabulary*, while *values* may be of *any type*. Once defined the *value type*, this must apply to *all values* in the *dictionary*."},
+			"_examples": {"iso_639_3_eng": "```json\n{\n	\"_set\": {\n		\"_class\": \"_class_quantity\",\n		\"_type\": \"_type_integer\",\n		\"_min-range-inclusive\": 5,\n		\"_max-range-inclusive\": 10\n	}\n}\n```\n\nThis example describes a *set* of *integer values* in the *range* from `5` to `10` inclusive, no two numbers may be repeated.\n\n```json\n{\n	\"_set\": {\n		\"_class\": \"_class_quantity\",\n		\"_type\": \"_type_number\",\n		\"_min-range-inclusive\": 0.0,\n		\"_max-range-exclusive\": 100.0,\n		\"_unit\": \"_data_unit_length_cm\"\n	}\n}\n```\n\nThis example describes a *set* of *numbers* whose value is *greater or equal* to `0.0` and *less than* `100.0` representing a *lengths* in *centimetres*, no two numbers may be repeated.\n\n```json\n{\n	\"_set\": {\n		\"_class\": \"_class_category\",\n		\"_type\": \"_type_enum\",\n		\"_kind\": \"iso_639_3\"\n	}\n}\n```\n\nThis example describes a *set* of *elements* from the *controlled vocabulary* of ISO 639 *language codes*, no two languages in the list may be the same.\n\n```json\n{\n	\"_set\": {\n		\"_class\": \"_class_other\",\n		\"_type\": \"_type_string\",\n		\"_format\": \"_format_markdown\"\n	}\n}\n```\n\nThis example describes a *set* of *text* *values* *encoded* in *Markdown* format, no two texts can be the same."}
+    	},
+    	"_data": {
+			"_scalar": {
+				"_class": "_class_other",
+				"_type": "_type_object",
+				"_kind": "_container_set"
+			}
+    	}
+    },
+
+    {
+    	"_code": {
+			"_nid": "_dict",
+			"_lid": "key",
+			"_gid": "_dict_key",
+			"_aid": ["key"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Dictionary key data container"},
+			"_definition": {"iso_639_3_eng": "This property describes the data type of dictionary keys, keys are strings that may belong to controlled vocabularies."},
+			"_description": {"iso_639_3_eng": "This [object](_container_scalar) defines the *shape* and *type* of *scalar data values*. A *number* or a *text* are examples of a scalar values; an *array* of *elements* or a key/value *dictionary* would *not* be considered a scalar value."},
+			"_examples": {"iso_639_3_eng": "```json\n{\n    \"_scalar\": {\n        \"_class\": \"_data_class_quantity\",\n        \"_type\": \"_data_type_integer\",\n        \"_min-range-inclusive\": 5,\n        \"_max-range-inclusive\": 10\n    }\n}\n```\n\nThis example describes a *scalar discrete integer* value in the range from `5` to `10` inclusive.\n\n```json\n{\n    \"_scalar\": {\n        \"_class\": \"_data_class_quantity\",\n        \"_type\": \"_data_type_number\",\n        \"_min-range-inclusive\": 0.0,\n        \"_max-range-exclusive\": 100.0,\n        \"_unit\": \"_data_unit_length_cm\"\n    }\n}\n```\n\nThis example describes a *continuous quantitative* value *greater or equal* to `0.0` and *less than* `100.0` representing a *length* in *centimetres*.\n\n```json\n{\n    \"_scalar\": {\n        \"_class\": \"_data_class_category\",\n        \"_type\": \"_data_type_enum\",\n        \"_kind\": \"iso_639_3\"\n    }\n}\n```\n\nThis example describes a *categorical string* that must be chosen from the *controlled vocabulary* of ISO 639 *language codes*.\n\n```json\n{\n    \"_scalar\": {\n        \"_class\": \"_data_class_other\",\n        \"_type\": \"_data_type_string\",\n        \"_format\": \"_data_format_markdown\"\n    }\n}\n```\n\nThis example describes a *text* value *encoded* in *Markdown* format."}
+    	},
+    	"_data": {
+			"_scalar": {
+				"_class": "_class_other",
+				"_type": "_type_object",
+				"_kind": "_container_scalar"
+			}
+    	}
+    },
+    {
+    	"_code": {
+			"_nid": "_dict",
+			"_lid": "value",
+			"_gid": "_dict_value",
+			"_aid": ["value"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Dictionary value data definition"},
+			"_definition": {"iso_639_3_eng": "Data container and type definitions for dictionary values."},
+			"_description": {"iso_639_3_eng": "This [object](_container) defines the *type* of the *value* in a [dictionary](_container_dict), dictionary values can be of *any type*."}
+    	},
+    	"_data": {
+			"_scalar": {
+				"_class": "_class_other",
+				"_type": "_type_object",
+				"_kind": "_container"
+			}
+    	}
+    },
+
+    {
+    	"_code": {
+			"_nid": "",
+			"_lid": "class",
+			"_gid": "_class",
+			"_aid": ["class"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Data classification"},
+			"_definition": {"iso_639_3_eng": "The class of the descriptor's values, it indicates whether the value is categorical, quantitative or neither."},
+			"_description": {"iso_639_3_eng": "This class should indicate whether the [descriptor](_term_descriptor) *data* represents a [quantitative](_class_quantity) value, a [categorical](_class_category) value, or a value that is *neither*. The classification applies to *scalar data values* or to the *elements* of *lists* and *sets*. This classification is useful for determining what statistical testing can be applied to the data."},
+			"_examples": {"iso_639_3_eng": "This is the set of data classes:\n\n- [Categorical](_class_category): Examples of categorical values could be month, sex or country; essentially all items that could belong to a controlled vocabulary.\n- [Quantitative](_class_quantity): Examples of quantitative data could be height, weight, age or area; essentially all items that represent an amount.\n- [Other](_class_other): Examples of data that is neither categorical nor quantitative could be a name, a description or a telephone number; essentially all items that can take an infinite number of values and that do not represent an amount."}
+    	},
+    	"_data": {
+			"_scalar": {
+				"_class": "_class_category",
+				"_type": "_type_enum",
+				"_kind": "_class"
+			}
+    	}
+    },
+    {
+    	"_code": {
+			"_nid": "",
+			"_lid": "type",
+			"_gid": "_type",
+			"_aid": ["type"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Data type"},
+			"_definition": {"iso_639_3_eng": "Primitive data type of the descriptor values, the type of scalar data or the type of array or set elements."},
+			"_description": {"iso_639_3_eng": "The type should indicate whether the [descriptor](_term_descriptor) *data* represents a number, a string or another type. The type applies to *scalar data values* or to the *elements* of *lists* and *sets*."},
+			"_examples": {"iso_639_3_eng": "These are the allowed values:\n\n- [Boolean](_type_boolean): *True* or *false* value.\n  \n- [Integer](_type_integer): *Numeric discrete* value.\n  \n- [Numeric](_type_number): *Numeric discrete* or *continuous* value; will be considered a *floating point number*.\n  \n- [String](_type_string): A *character* or *text*; assumed to be encoded in UTF-8.\n  \n- [Record](_type_record): String, it is a record reference, expressed as the `_id` of a *database record*.\n  \n- [Time-stamp](_type_timestamp): A *time stamp* expressed in the *native database format*, used to indicate a precise moment in time.\n  \n- [Enumeration](_type_enum): String, it is a *controlled vocabulary* element. Use the [type reference](_kind) property to indicate which enumeration to use. If you provide in the [type reference](_kind) the wildcard term [any term](_any-term), the value can be the [global identifier](_gid) of *any term*.\n  \n- [Object](_type_object): An *object data structure*. Use the [type reference](_kind) property to indicate which [object data structure type](_term_object) to use. If you *omit* the [type reference](_kind) field, the value can be *any object*."}
+    	},
+    	"_data": {
+			"_scalar": {
+				"_class": "_class_category",
+				"_type": "_type_enum",
+				"_kind": "_type"
+			}
+    	}
+    },
+    {
+    	"_code": {
+			"_nid": "",
+			"_lid": "kind",
+			"_gid": "_kind",
+			"_aid": ["kind"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Type reference"},
+			"_definition": {"iso_639_3_eng": "This field is a reference to a controlled vocabulary type term, or to an object data structure definition type term. In both cases it is the global identifier of the term that defines either of these two types."},
+			"_description": {"iso_639_3_eng": "This field is relevant only in the following cases:\n\n- The [data type](_type_) is [enumeration](_type_enum): in that case you *must* reference the *controlled vocabulary type* by providing its term [global identifier](_gid). If you provide the wildcard term [any-term](_any-term), the value can be the [global identifier](_gid) of *any term*, if you provide the wildcard term [any-descriptor](_any-descriptor), the value can be the [global identifier](_gid) of *any descriptor*.\n- The [data type](_type_) is [object](_type_object): in that case you *must* reference the *object data structure type* by providing its term [global identifier](_gid). If you provide the wildcard term [any-object](_any-object), the value can be the [global identifier](_gid) of any [object data structure definition](_type_object)."}
+    	},
+    	"_data": {
+			"_scalar": {
+				"_class": "_class_category",
+				"_type": "_type_enum",
+				"_kind": "_any-term"
+			}
+    	}
     }
 ]
