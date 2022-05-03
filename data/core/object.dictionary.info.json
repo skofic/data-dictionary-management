@@ -1,0 +1,19 @@
+[
+    {
+    	"_code": {
+			"_nid": "",
+			"_lid": "documentation",
+			"_gid": "_documentation",
+			"_aid": ["documentation"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Term documentation"},
+			"_definition": {"iso_639_3_eng": "This object contains all core dictionary properties that have the function of documenting [terms](_term), [structures](_term_object) and [descriptors](_term_descriptor)."},
+			"_description": {"iso_639_3_eng": "This [data structure](_type_object) features the *properties* that are used to document terms in the data dictionary. This object features the following [descriptors](_term_descriptor):\n\n- [Title](_title): Term *title*, *name* or *label*.\n- [Definition](_definition): A one paragraph *text* that provides a *definition* or summary *explanation*.\n- [Description](_description): A long *styled text* that provides a *thorough explanation* for the term.\n- [Examples](_examples): Term *usage* real world *examples*\n- [Notes](_notes): *Notes*, *comments* and *feedback*."}
+    	},
+    	"_rule": {
+			"_required": {"_terms-selection_all": ["_title"]},
+			"_recommended": ["_definition", "_description"]
+    	}
+    }
+]
