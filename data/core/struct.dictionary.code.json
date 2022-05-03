@@ -2,37 +2,37 @@
     {
         "_from": "_nid",
         "_to": "_identification",
-        "_edge_predicate": "_edge_predicate_property-of",
-        "_edge_path": ["_identification"]
+        "_predicate": "_predicate_property-of",
+        "_path": ["_identification"]
     },
     {
         "_from": "_lid",
         "_to": "_identification",
-        "_edge_predicate": "_edge_predicate_property-of",
-        "_edge_path": ["_identification"]
+        "_predicate": "_predicate_property-of",
+        "_path": ["_identification"]
     },
     {
         "_from": "_gid",
         "_to": "_identification",
-        "_edge_predicate": "_edge_predicate_property-of",
-        "_edge_path": ["_identification"]
+        "_predicate": "_predicate_property-of",
+        "_path": ["_identification"]
     },
     {
         "_from": "_aid",
         "_to": "_identification",
-        "_edge_predicate": "_edge_predicate_property-of",
-        "_edge_path": ["_identification"]
+        "_predicate": "_predicate_property-of",
+        "_path": ["_identification"]
     },
     {
         "_from": "_pid",
         "_to": "_identification",
-        "_edge_predicate": "_edge_predicate_property-of",
-        "_edge_path": ["_identification"]
+        "_predicate": "_predicate_property-of",
+        "_path": ["_identification"]
     },
     {
         "_from": "_name",
         "_to": "_identification",
-        "_edge_predicate": "_edge_predicate_property-of",
-        "_edge_path": ["_identification"]
+        "_predicate": "_predicate_property-of",
+        "_path": ["_identification"]
     }
 ]
