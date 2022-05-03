@@ -191,6 +191,44 @@
     	}
     },
     {
+        "_code_nid": "_data_type",
+        "_code_lid": "key",
+        "_code_gid": "_data_type_key",
+        "_code_aid": ["key"],
+        "_info_title": {"iso_639_3_eng": "Key data type"},
+        "_info_definition": {"iso_639_3_eng": "Data type of the key or attribute."},
+        "_info_description": {"iso_639_3_eng": "This field defines the *data type* of a *key* or *attribute*. Data is expected to have a string base value, this field is a *controlled vocabulary*."},
+        "_info_examples": {"iso_639_3_eng": "- `_data_type_string`: A *string*, this is the *default* value.\n- `_data_type_enum`: A *controlled vocabulary element* corresponding to the *term global identifier*. In this case, the `_data_kind` property is *required* to indicate the *enumeration type*."},
+        "_data_container": {
+			"_data_class": "_data_class_category",
+			"_data_container_scalar": {
+				"_data_type": "_data_type_enum",
+				"_data_kind": "_data_type_key"
+			}
+        }
+    },
+    {
+    	"_code": {
+			"_nid": "_type",
+			"_lid": "key",
+			"_gid": "_type_key",
+			"_aid": ["key"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Key data type"},
+			"_definition": {"iso_639_3_eng": "Data type for dictionary keys."},
+			"_description": {"iso_639_3_eng": "This field defines the [data type](_container_dict_key) of a *dictionary key*. Data is expected to have a [string](_type_string) base value, or it can be a [controlled vocabulary](_type_enum)."},
+			"_examples": {"iso_639_3_eng": "These are the allowed values:\n\n- [String](_type_string): A *character* or *text*; assumed to be encoded in UTF-8.\n- [Enumeration](_type_enum): String, it is a *controlled vocabulary* element. Use the [type reference](_kind) property to indicate which enumeration to use. If you provide in the [type reference](_kind) the wildcard term [any term](_any-term), the value can be the [global identifier](_gid) of *any term*."}
+    	},
+    	"_data": {
+			"_scalar": {
+				"_class": "_class_category",
+				"_type": "_type_enum",
+				"_kind": "_type_key"
+			}
+    	}
+    },
+    {
     	"_code": {
 			"_nid": "",
 			"_lid": "kind",

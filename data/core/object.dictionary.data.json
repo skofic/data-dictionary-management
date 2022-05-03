@@ -101,7 +101,7 @@
 			"_examples": {"iso_639_3_eng": "```json\n{\n	\"_dict_key\": {\n		\"_class\": \"_class_category\",\n		\"_type\": \"_type_enum\",\n		\"_kind\": \"iso_639_3\"\n	}\n}\n```\n\nThis example describes a *dictionary* whose *keys* are the [global identifiers](_gid) of the ISO 639 languages *controlled vocabulary elements*.\n\n```json\n{\n	\"_dict_key\": {\n		\"_class\": \"_class_other\",\n		\"_type\": \"_type_string\"\n	}\n}\n```\n\nThis example describes a *dictionary* whose *keys* are *plain strings*."}
     	},
     	"_rule": {
-			"_required": {"_terms-selection_all": ["_dict_key", "_dict_value"]}
+			"_required": {"_terms-selection_all": ["_class", "_type_key"]}
     	}
     }
 ]
