@@ -101,7 +101,7 @@
 			"_scalar": {
 				"_class": "_class_other",
 				"_type": "_type_object",
-				"_kind": "_container_set"
+				"_kind": "_container_dict"
 			}
     	}
     },
@@ -123,7 +123,7 @@
 			"_scalar": {
 				"_class": "_class_other",
 				"_type": "_type_object",
-				"_kind": "_container_scalar"
+				"_kind": "_container_dict_key"
 			}
     	}
     },
