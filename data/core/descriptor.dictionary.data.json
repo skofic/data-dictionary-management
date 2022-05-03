@@ -209,5 +209,199 @@
 				"_kind": "_any-term"
 			}
     	}
+    },
+    {
+    	"_code": {
+			"_nid": "",
+			"_lid": "format",
+			"_gid": "_format",
+			"_aid": ["format"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Data format"},
+			"_definition": {"iso_639_3_eng": "Format or encoding of the data."},
+			"_description": {"iso_639_3_eng": "This field can be used to indicate that the *value* is *formatted* or *encoded*. The idea is to implement backend functions for validating or processing data provided in the format and handle appropriately the format when returning the data to the user, such as displaying styled text when handling *markdown* or *html*.\n\nIn general, the *data type* will be *string*."},
+			"_examples": {"iso_639_3_eng": "The field is a controlled vocabulary, these are the allowed values:\n\n- [`markdown`](/enum/data/formats/markdown): [Markdown](https://en.wikipedia.org/wiki/Markdown) formatted string.\n- [`html`](/enum/data/formats/html): [HyperText](https://en.wikipedia.org/wiki/HTML) markdown formatted string.\n- [`uri`](/enum/data/formats/uri): [Uniform Resource Identifier](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier).\n- [`hex`](/enum/data/formats/hex): This option indicates that the string should be treated as a [hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal) value.\n- `svg`: [Scalable Vector Graphics (SVG)]([Scalable Vector Graphics - Wikipedia](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics)) image as string.\n- `email`: An [electronic mail]([Email - Wikipedia](https://en.wikipedia.org/wiki/Email)) address.\n- `ymd`: A string representing a date in `YYYYMMDD` format, where day, or day and month may be omitted.\n- `date`: A date expressed in [RFC 3339, section 5.6](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6).\n- `time`: A time expressed in [RFC 3339, section 5.6](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6).\n- `date-time`: A date and time expressed in [RFC 3339, section 5.6](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6).\n- `hostname`: An Internet host name, see [RFC5890, section 2.3.2.3](https://datatracker.ietf.org/doc/html/rfc1123#section-2.1).\n- `ipv4`: An IPv4 Internet address as defined in [RFC 2673, section 3.2](https://tools.ietf.org/html/rfc2673#section-3.2).\n- `ipv6`: An IPv6 Internet address as defined in [RFC 2373, section 2.2](http://tools.ietf.org/html/rfc2373#section-2.2)."}
+    	},
+    	"_data": {
+			"_scalar": {
+				"_class": "_class_category",
+				"_type": "_type_enum",
+				"_kind": "_format"
+			}
+    	}
+    },
+    {
+    	"_code": {
+			"_nid": "",
+			"_lid": "unit",
+			"_gid": "_unit",
+			"_aid": ["unit"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Data unit"},
+			"_definition": {"iso_639_3_eng": "Preferred measurement unit for the values of the descriptor, chosen from the standard units."},
+			"_description": {"iso_639_3_eng": "The field represents the *default unit* for the *values* of the descriptor. This means that when storing values, these should be *converted* to this *default unit*. The field is a controlled vocabulary."}
+    	},
+    	"_data": {
+			"_scalar": {
+				"_class": "_class_category",
+				"_type": "_type_enum",
+				"_kind": "_unit"
+			}
+    	}
+    },
+    {
+    	"_code": {
+			"_nid": "",
+			"_lid": "unit-name",
+			"_gid": "_unit-name",
+			"_aid": ["unit-name"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Data unit name"},
+			"_definition": {"iso_639_3_eng": "Preferred measurement unit for the values of the descriptor, expressed as a name or symbol."},
+			"_description": {"iso_639_3_eng": "The field represents the *default unit* for the *values* of the descriptor. This means that when storing values, these should be *converted* to this *default unit*. This field should *only* be used if the desired *unit* is *not available* in the [data unit](_unit) *controlled vocabulary*."}
+    	},
+    	"_data": {
+			"_scalar": {
+				"_class": "_class_category",
+				"_type": "_type_string"
+			}
+    	}
+    },
+    {
+    	"_code": {
+			"_nid": "",
+			"_lid": "regexp",
+			"_gid": "_regexp",
+			"_aid": ["regexp"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Validation pattern"},
+			"_definition": {"iso_639_3_eng": "Regular expression for validating the value."},
+			"_description": {"iso_639_3_eng": "This field can be used to *validate* data by ensuring it follows a predefined *pattern*. This pattern is a *regular expression*, *regex*, according to the [ECMA 262](http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf) dialect. Note that, while validation patterns *apply* explicitly to *strings*, this field may also be used to match patterns in numeric data: numbers will be converted to string for pattern matching."},
+			"_examples": {"iso_639_3_eng": "- `the.\\*fox`: Will match \"*the quick brown fox*\".\n- `^[A-Z]{3}[0-9]{4}$`: Will match \"*ITA1234*\".\n- `^[A-Z]{3}[0-9]{4}$`: Will not match \"*ITA123*\".\n- `^[A-Z]{3}[0-9]{4}$`: Will not match \"*ITA123456*\"."}
+    	},
+    	"_data": {
+			"_scalar": {
+				"_class": "_class_other",
+				"_type": "_type_string"
+			}
+    	}
+    },
+    {
+    	"_code": {
+			"_nid": "",
+			"_lid": "min-items",
+			"_gid": "_min-items",
+			"_aid": ["min-items"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Minimum number of items"},
+			"_definition": {"iso_639_3_eng": "This field indicates the minimum number of items a list or set should have."},
+			"_description": {"iso_639_3_eng": "This field is relevant only when the *data container* is [array](_array_) or [set](_set_): it indicates the *minimum number of elements* the [array](_array_) or [set](_set_) should have.\n\nThe value is an integer and the *bound* is *inclusive*."}
+    	},
+    	"_data": {
+			"_scalar": {
+				"_class": "_class_quantity",
+				"_type": "_type_integer"
+			}
+    	}
+    },
+    {
+    	"_code": {
+			"_nid": "",
+			"_lid": "max-items",
+			"_gid": "_max-items",
+			"_aid": ["max-items"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Maximum number of items"},
+			"_definition": {"iso_639_3_eng": "This field indicates the maximum number of items a list or set should have."},
+			"_description": {"iso_639_3_eng": "This field is relevant only when the *data container* is [array](_array_) or [set](_set_): it indicates the *maximum number of elements* the [array](_array_) or [set](_set_) should have.\n\nThe value is an integer and the *bound* is *inclusive*."}
+    	},
+    	"_data": {
+			"_scalar": {
+				"_class": "_class_quantity",
+				"_type": "_type_integer"
+			}
+    	}
+    },
+    {
+    	"_code": {
+			"_nid": "",
+			"_lid": "min-range-inclusive",
+			"_gid": "_min-range-inclusive",
+			"_aid": ["min-range-inclusive"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Range minimum inclusive"},
+			"_definition": {"iso_639_3_eng": "This field indicates the minimum value in a range, including the bound itself."},
+			"_description": {"iso_639_3_eng": "This field is relevant only for *numeric* [discrete](_type_integer) or [continuous](_type_number) data, it indicates the *minimum bound* of a *range*, *including* the *bound* value. Only numbers *greater or equal* to this field's value are considered *valid*."}
+    	},
+    	"_data": {
+			"_scalar": {
+				"_class": "_class_quantity",
+				"_type": "_type_number"
+			}
+    	}
+    },
+    {
+    	"_code": {
+			"_nid": "",
+			"_lid": "max-range-inclusive",
+			"_gid": "_max-range-inclusive",
+			"_aid": ["max-range-inclusive"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Range maximum inclusive"},
+			"_definition": {"iso_639_3_eng": "This field indicates the maximum value in a range, including the bound itself."},
+			"_description": {"iso_639_3_eng": "This field is relevant only for *numeric* [discrete](_type_integer) or [continuous](_type_number) data, it indicates the *maximum bound* of a *range*, *including* the *bound* value. Only numbers *smaller or equal* to this field's value are considered *valid*."}
+    	},
+    	"_data": {
+			"_scalar": {
+				"_class": "_class_quantity",
+				"_type": "_type_number"
+			}
+    	}
+    },
+    {
+    	"_code": {
+			"_nid": "",
+			"_lid": "min-range-exclusive",
+			"_gid": "_min-range-exclusive",
+			"_aid": ["min-range-exclusive"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Range minimum exclusive"},
+			"_definition": {"iso_639_3_eng": "This field indicates the minimum value in a range, excluding the bound itself."},
+			"_description": {"iso_639_3_eng": "This field is relevant only for *numeric* [discrete](_type_integer) or [continuous](_type_number) data, it indicates the *minimum bound* of a *range*, *excluding* the *bound* value. Only numbers *greater* than this field's value are considered *valid*."}
+    	},
+    	"_data": {
+			"_scalar": {
+				"_class": "_class_quantity",
+				"_type": "_type_number"
+			}
+    	}
+    },
+    {
+    	"_code": {
+			"_nid": "",
+			"_lid": "max-range-exclusive",
+			"_gid": "_max-range-exclusive",
+			"_aid": ["max-range-exclusive"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Range maximum exclusive"},
+			"_definition": {"iso_639_3_eng": "This field indicates the maximum value in a range, excluding the bound itself."},
+			"_description": {"iso_639_3_eng": "This field is relevant only for *numeric* [discrete](_type_integer) or [continuous](_type_number) data, it indicates the *maximum bound* of a *range*, *excluding* the *bound* value. Only numbers *smaller* than this field's value are considered *valid*."}
+    	},
+    	"_data": {
+			"_scalar": {
+				"_class": "_class_quantity",
+				"_type": "_type_number"
+			}
+    	}
     }
 ]
