@@ -33,16 +33,18 @@
 			"_definition": {"iso_639_3_eng": "Title, name or label."},
 			"_description": {"iso_639_3_eng": "Namespaces are used to *group terms* under a common *category*, and to *disambiguate* [local identifiers](_lid). The namespace is *concatenated* to the [local identifier](_lid) to form the [global identifier](_gid) that is the *unique identifier* of the *term* in the *data dictionary*.\n\nBesides the above behaviour, if the namespace of an [object definition term](_term_object) is also an [object definition term](_term_object), the *rules* and *constraints* of the *namespace* are passed on to the *current term*, this implements a sort of *class inheritance*.\n\nThe *value* of this field can be the [global identifier](_gid) of *any term*."}
 		},
-		"_dict": {
-			"_dict_key": {
-				"_class": "_class_category",
-				"_type": "_type_enum",
-				"_kind": "iso_639_3"
-			},
-			"_dict_value": {
-				"_scalar": {
-					"_class": "_class_other",
-					"_type": "_type_string"
+		"_data": {
+			"_dict": {
+				"_dict_key": {
+					"_class": "_class_category",
+					"_type": "_type_enum",
+					"_kind": "iso_639_3"
+				},
+				"_dict_value": {
+					"_scalar": {
+						"_class": "_class_other",
+						"_type": "_type_string"
+					}
 				}
 			}
 		}
@@ -59,16 +61,18 @@
 			"_definition": {"iso_639_3_eng": "A one paragraph text that provides a definition or summary explanation."},
 			"_description": {"iso_639_3_eng": "The definition should explain the *what*. By reading this text one should understand what the descriptor's data *represents*. Details concerning measurement methods, usage of such data and the environment should be covered in the [description](_description).\n\nThe contents are a *key/value dictionary* in which the *key* represents the *language* in which the definition is expressed, and the *value* is the definition in *plain text*."}
 		},
-		"_dict": {
-			"_dict_key": {
-				"_class": "_class_category",
-				"_type": "_type_enum",
-				"_kind": "iso_639_3"
-			},
-			"_dict_value": {
-				"_scalar": {
-					"_class": "_class_other",
-					"_type": "_type_string"
+		"_data": {
+			"_dict": {
+				"_dict_key": {
+					"_class": "_class_category",
+					"_type": "_type_enum",
+					"_kind": "iso_639_3"
+				},
+				"_dict_value": {
+					"_scalar": {
+						"_class": "_class_other",
+						"_type": "_type_string"
+					}
 				}
 			}
 		}
@@ -85,17 +89,19 @@
 			"_definition": {"iso_639_3_eng": "A long text or document explaining how the descriptor value is obtained, and how its data can be used."},
 			"_description": {"iso_639_3_eng": "The description is the area in which everything that could not be included in the [definition](_definition) should be presented. This should be an occasion to explain *why* the descriptor value is *used*, which measurement *methods* were used to obtain the values and all the other details that would allow a *non specialist* user *understand* how to *use* and *provide* such data.\n\nThe contents are a *key/value dictionary* in which the *key* represents the *language* in which the description is expressed, and the *value* is the description text formatted in *markup*."}
 		},
-		"_dict": {
-			"_dict_key": {
-				"_class": "_class_category",
-				"_type": "_type_enum",
-				"_kind": "iso_639_3"
-			},
-			"_dict_value": {
-				"_scalar": {
-					"_class": "_class_other",
-					"_type": "_type_string",
-					"_format": "_format_markdown"
+		"_data": {
+			"_dict": {
+				"_dict_key": {
+					"_class": "_class_category",
+					"_type": "_type_enum",
+					"_kind": "iso_639_3"
+				},
+				"_dict_value": {
+					"_scalar": {
+						"_class": "_class_other",
+						"_type": "_type_string",
+						"_format": "_format_markdown"
+					}
 				}
 			}
 		}
@@ -112,17 +118,19 @@
 			"_definition": {"iso_639_3_eng": "Usage examples."},
 			"_description": {"iso_639_3_eng": "This field should be used to provide *samples* of descriptor *data* or term *usage* to enable a user to understand *how* to *fill* the *information correctly*.\n\nThe contents are a *key/value dictionary* in which the *key* represents the *language* in which the examples were expressed, and the *value* is the examples text formatted in *markdown*."}
 		},
-		"_dict": {
-			"_dict_key": {
-				"_class": "_class_category",
-				"_type": "_type_enum",
-				"_kind": "iso_639_3"
-			},
-			"_dict_value": {
-				"_scalar": {
-					"_class": "_class_other",
-					"_type": "_type_string",
-					"_format": "_format_markdown"
+		"_data": {
+			"_dict": {
+				"_dict_key": {
+					"_class": "_class_category",
+					"_type": "_type_enum",
+					"_kind": "iso_639_3"
+				},
+				"_dict_value": {
+					"_scalar": {
+						"_class": "_class_other",
+						"_type": "_type_string",
+						"_format": "_format_markdown"
+					}
 				}
 			}
 		}
@@ -139,17 +147,19 @@
 			"_definition": {"iso_639_3_eng": "Notes, comments and feedback."},
 			"_description": {"iso_639_3_eng": "This field could be used to add user provided *comments* and *notes*.\n\nThe contents are a *key/value dictionary* in which the *key* represents the *language* in which the cpmments were expressed, and the *value* is the comments text formatted in *markdown*."}
 		},
-		"_dict": {
-			"_dict_key": {
-				"_class": "_class_category",
-				"_type": "_type_enum",
-				"_kind": "iso_639_3"
-			},
-			"_dict_value": {
-				"_scalar": {
-					"_class": "_class_other",
-					"_type": "_type_string",
-					"_format": "_format_markdown"
+		"_data": {
+			"_dict": {
+				"_dict_key": {
+					"_class": "_class_category",
+					"_type": "_type_enum",
+					"_kind": "iso_639_3"
+				},
+				"_dict_value": {
+					"_scalar": {
+						"_class": "_class_other",
+						"_type": "_type_string",
+						"_format": "_format_markdown"
+					}
 				}
 			}
 		}

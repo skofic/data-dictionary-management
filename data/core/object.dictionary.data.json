@@ -13,7 +13,7 @@
 			"_examples": {"iso_639_3_eng": "```json\n{\n	\"_scalar\": {\n		\"_class\": \"_class_quantity\",\n		\"_type\": \"_type_integer\",\n		\"_min-range-inclusive\": 5,\n		\"_max-range-inclusive\": 10\n	}\n}\n```\n\nThis example describes a *scalar discrete integer* quantitative value in the range from `5` to `10` inclusive.\n\n```json\n{\n	\"_array\": {\n		\"_class\": \"_class_quantity\",\n		\"_type\": \"_type_number\",\n		\"_min-range-inclusive\": 0.0,\n		\"_max-range-exclusive\": 100.0,\n		\"_unit\": \"_data_unit_length_cm\"\n	}\n}\n```\n\nThis example describes a *list* of *continuous quantitative* values *greater or equal* to `0.0` and *less than* `100.0` representing a *length* in *centimetres*.\n\n```json\n{\n	\"_set\": {\n		\"_class\": \"_class_category\",\n		\"_type\": \"_type_enum\",\n		\"_kind\": \"iso_639_3\"\n	}\n}\n```\n\nThis example describes a *text* value *encoded* in *Markdown* format.\n\n```json\n{\n	\"_dict\": {\n		\"_dict_key\": {\n			\"_class\": \"_class_category\",\n			\"_type\": \"_type_enum\",\n			\"_kind\": \"iso_3166_1\"\n		},\n		\"_dict_value\": {\n			\"_dict\": {\n				\"_dict_key\": {\n					\"_class\": \"_class_category\",\n					\"_type\": \"_type_enum\",\n					\"_kind\": \"iso_639_3\"\n				},\n				\"_dict_value\": {\n					\"_array\": {\n						\"_class\": \"_class_other\",\n						\"_type\": \"_type_object\",\n						\"_kind\": \"some_object_definition\",\n						\"_min-items\": 5,\n						\"_max-items\": 10\n					}\n				}\n			}\n		}\n	}\n}\n```\n\nThis example describes a *dictionary* whose *keys* are the [global identifiers](_gid) of the ISO 3166 country *controlled vocabulary elements*, and the values are *another dictionary* whose keys are ISO 639 languages and whose *values* are *arrays* that correspond to the `some_object_definition` *data structure type*; these *array* values must have a *minimum* of `5` elements and a *maximum* of `10` elements. This is an example of a recursive dictionary definition."}
     	},
     	"_rule": {
-			"_required": {"_terms-selection_one": ["_scalar", "_array", "_set", "_dict"]},
+			"_required": {"_selection-descriptors_one": ["_scalar", "_array", "_set", "_dict"]},
 			"_immutable": ["_scalar", "_array", "_set", "_dict"]
     	}
     },
@@ -32,7 +32,7 @@
 			"_examples": {"iso_639_3_eng": "```json\n{\n    \"_class\": \"_class_quantity\",\n    \"_type\": \"_type_integer\",\n    \"_min-range-inclusive\": 5,\n    \"_max-range-inclusive\": 10\n}\n```\n\nThis example describes a *scalar discrete integer* value in the range from `5` to `10` inclusive.\n\n```json\n{\n    \"_class\": \"_class_quantity\",\n    \"_type\": \"_type_number\",\n    \"_min-range-inclusive\": 0.0,\n    \"_max-range-exclusive\": 100.0,\n    \"_unit\": \"_data_unit_length_cm\"\n}\n```\n\nThis example describes a *continuous quantitative* value *greater or equal* to `0.0` and *less than* `100.0` representing a *length* in *centimetres*.\n\n```json\n{  \n    \"_class\": \"_class_category\",\n    \"_type\": \"_type_enum\",\n    \"_kind\": \"iso_639_3\"\n}\n```\n\nThis example describes a *categorical string* that must be chosen from the *controlled vocabulary* of ISO 639 *language codes*.\n\n```json\n{  \n    \"_class\": \"_class_other\",\n    \"_type\": \"_type_string\",\n    \"_format\": \"_format_markdown\"\n}\n```\n\nThis example describes a *text* value *encoded* in *Markdown* format."}
     	},
     	"_rule": {
-			"_required": {"_terms-selection_all": ["_class", "_type"]}
+			"_required": {"_selection-descriptors_all": ["_class", "_type"]}
     	}
     },
     {
@@ -49,7 +49,7 @@
 			"_examples": {"iso_639_3_eng": "```json\n{\n    \"_class\": \"_class_quantity\",\n    \"_type\": \"_type_integer\",\n    \"_min-range-inclusive\": 5,\n    \"_max-range-inclusive\": 10\n}\n```\n\nThis example describes an *array* of *integer values* in the *range* from `5` to `10` inclusive.\n\n```json\n{\n    \"_class\": \"_class_quantity\",\n    \"_type\": \"_type_number\",\n    \"_min-range-inclusive\": 0.0,\n    \"_max-range-exclusive\": 100.0,\n    \"_unit\": \"_data_unit_length_cm\"\n}\n```\n\nThis example describes an *array* of *numbers* whose value is *greater or equal* to `0.0` and *less than* `100.0` representing a *lengths* in *centimetres*.\n\n```json\n{  \n    \"_class\": \"_class_category\",\n    \"_type\": \"_type_enum\",\n    \"_kind\": \"iso_639_3\"\n}\n```\n\nThis example describes an *array* of *elements* from the *controlled vocabulary* of ISO 639 *language codes*.\n\n```json\n{  \n    \"_class\": \"_class_other\",\n    \"_type\": \"_type_string\",\n    \"_format\": \"_format_markdown\"\n}\n```\n\nThis example describes an *array* of *text* *values* *encoded* in *Markdown* format."}
     	},
     	"_rule": {
-			"_required": {"_terms-selection_all": ["_class", "_type"]}
+			"_required": {"_selection-descriptors_all": ["_class", "_type"]}
     	}
     },
     {
@@ -66,7 +66,7 @@
 			"_examples": {"iso_639_3_eng": "```json\n{\n    \"_class\": \"_class_quantity\",\n    \"_type\": \"_type_integer\",\n    \"_min-range-inclusive\": 5,\n    \"_max-range-inclusive\": 10\n}\n```\n\nThis example describes a *set* of *integer values* in the *range* from `5` to `10` inclusive.\n\n```json\n{\n    \"_class\": \"_class_quantity\",\n    \"_type\": \"_type_number\",\n    \"_min-range-inclusive\": 0.0,\n    \"_max-range-exclusive\": 100.0,\n    \"_unit\": \"_data_unit_length_cm\"\n}\n```\n\nThis example describes a *set* of *numbers* whose value is *greater or equal* to `0.0` and *less than* `100.0` representing a *lengths* in *centimetres*.\n\n```json\n{  \n    \"_class\": \"_class_category\",\n    \"_type\": \"_type_enum\",\n    \"_kind\": \"iso_639_3\"\n}\n```\n\nThis example describes a *set* of *elements* from the *controlled vocabulary* of ISO 639 *language codes*.\n\n```json\n{  \n    \"_class\": \"_class_other\",\n    \"_type\": \"_type_string\",\n    \"_format\": \"_format_markdown\"\n}\n```\n\nThis example describes a *set* of *text* *values* *encoded* in *Markdown* format."}
     	},
     	"_rule": {
-			"_required": {"_terms-selection_all": ["_class", "_type"]}
+			"_required": {"_selection-descriptors_all": ["_class", "_type"]}
     	}
     },
     {
@@ -83,7 +83,7 @@
 			"_examples": {"iso_639_3_eng": "```json\n{\n	\"_dict\": {\n		\"_dict_key\": {\n			\"_class\": \"_class_category\",\n			\"_type\": \"_type_enum\",\n			\"_kind\": \"iso_639_3\"\n		},\n		\"_dict_value\": {\n			\"_array\": {\n				\"_class\": \"_class_other\",\n				\"_type\": \"_type_object\",\n				\"_kind\": \"some_object_definition\",\n				\"_min-items\": 5,\n				\"_max-items\": 10\n			}\n		}\n	}\n}\n```\n\nThis example describes a *dictionary* whose *keys* are the [global identifiers](_gid) of the ISO 639 languages *controlled vocabulary elements*, and the values are *arrays* of *objects* that correspond to the `some_object_definition` *data structure type*; these *array* values must have a *minimum* of `5` elements and a *maximum* of `10` elements.\n\n```json\n{\n	\"_dict\": {\n		\"_dict_key\": {\n			\"_class\": \"_class_other\",\n			\"_type\": \"_type_string\"\n		},\n		\"_dict_value\": {\n			\"_scalar\": {\n				\"_class\": \"_class_other\",\n				\"_type\": \"_type_string\",\n				\"_format\": \"_format_markdown\"\n			}\n		}\n	}\n}\n```\n\nThis example describes a *dictionary* whose *keys* are *plain strings* and *values* are *text* in *Markdown* format. It implements a *multilingual styled text*.\n\n```json\n{\n	\"_dict\": {\n		\"_dict_key\": {\n			\"_class\": \"_class_category\",\n			\"_type\": \"_type_enum\",\n			\"_kind\": \"iso_3166_1\"\n		},\n		\"_dict_value\": {\n			\"_dict\": {\n				\"_dict_key\": {\n					\"_class\": \"_class_category\",\n					\"_type\": \"_type_enum\",\n					\"_kind\": \"iso_639_3\"\n				},\n				\"_dict_value\": {\n					\"_array\": {\n						\"_class\": \"_class_other\",\n						\"_type\": \"_type_object\",\n						\"_kind\": \"some_object_definition\",\n						\"_min-items\": 5,\n						\"_max-items\": 10\n					}\n				}\n			}\n		}\n	}\n}\n```\n\nThis example describes a *dictionary* whose *keys* are the [global identifiers](_gid) of the ISO 3166 country *controlled vocabulary elements*, and the values are *another dictionary* whose keys are ISO 639 languages and whose *values* are *arrays* that correspond to the `some_object_definition` *data structure type*; these *array* values must have a *minimum* of `5` elements and a *maximum* of `10` elements. This is an example of a recursive dictionary definition."}
     	},
     	"_rule": {
-			"_required": {"_terms-selection_all": ["_dict_key", "_dict_value"]}
+			"_required": {"_selection-descriptors_all": ["_dict_key", "_dict_value"]}
     	}
     },
     
@@ -101,7 +101,7 @@
 			"_examples": {"iso_639_3_eng": "```json\n{\n	\"_dict_key\": {\n		\"_class\": \"_class_category\",\n		\"_type\": \"_type_enum\",\n		\"_kind\": \"iso_639_3\"\n	}\n}\n```\n\nThis example describes a *dictionary* whose *keys* are the [global identifiers](_gid) of the ISO 639 languages *controlled vocabulary elements*.\n\n```json\n{\n	\"_dict_key\": {\n		\"_class\": \"_class_other\",\n		\"_type\": \"_type_string\"\n	}\n}\n```\n\nThis example describes a *dictionary* whose *keys* are *plain strings*."}
     	},
     	"_rule": {
-			"_required": {"_terms-selection_all": ["_class", "_type_key"]}
+			"_required": {"_selection-descriptors_all": ["_class", "_type_key"]}
     	}
     }
 ]

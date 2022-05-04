@@ -13,7 +13,7 @@
 			"_examples": {"iso_639_3_eng": "Italy country controlled vocabulary identification:\n\n```json\n{\n    \"_nid\": \"iso_3166_1\",\n    \"_lid\": \"ITA\",\n    \"_gid\": \"iso_3166_1_ITA\",\n    \"_aid\": [\"IT\", \"ITA\"]\n}\n```\n\n- The [namespace](_nid) is composed by the following terms:\n  - `iso`: The International Standards Organisation (ISO) root namespace.\n  - `3166`: Codes for the representation of names of countries and their subdivisions.\n  - `1`: Part 1: Country codes.\n- The [local identifier](_lid) is the 3-character code.\n- The [global identifier](_gid) is created by *concatenating* all these codes, separated by the underscore (`_`) token.\n- The [all identifiers](_aid) list includes the 3-character code constituting the [local identifier](_lid), and also the 2-character code by which the country is identified."}
     	},
     	"_rule": {
-			"_required": {"_terms-selection_all": ["_lid", "_gid", "_aid"]},
+			"_required": {"_selection-descriptors_all": ["_lid", "_gid", "_aid"]},
 			"_computed": ["_gid"],
 			"_immutable": ["_nid", "_lid", "_gid"],
 			"_locked": ["_gid"]

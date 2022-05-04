@@ -105,6 +105,26 @@
 			}
     	}
     },
+    
+    {
+    	"_code": {
+			"_nid": "",
+			"_lid": "any",
+			"_gid": "_any",
+			"_aid": ["any"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Any data"},
+			"_definition": {"iso_639_3_eng": "This property signals any value."},
+			"_description": {"iso_639_3_eng": "This property can be used to signal that the contents of the property can take any value. It is an empty object."}
+    	},
+    	"_data": {
+			"_scalar": {
+				"_class": "_class_other",
+				"_type": "_type_object"
+			}
+    	}
+    },
 
     {
     	"_code": {
