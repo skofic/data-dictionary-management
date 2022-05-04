@@ -106,7 +106,7 @@
         "_data_class": "_enum_data_classes_code",
         "_data_container": "_enum_data_containers_scalar",
         "_data_type": "_enum_data_types_string",
-        "_data_regexp": "^([0-9]|[1-8][0-9]|90)°([0-9]|[1-5][0-9]|60)&apos;([0-9]|[1-5][0-9]|60)(.[0-9]+)?&quot;(N|S)$",
+        "_data_regexp": "^([0-9]|[1-8][0-9]|90)°([0-9]|[1-5][0-9]|60)'([0-9]|[1-5][0-9]|60)(.[0-9]+)?\"(N|S)$",
         "_data_rules": ["_enum_data_rules_required"]
     },
     {
