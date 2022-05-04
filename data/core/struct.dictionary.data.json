@@ -23,12 +23,6 @@
         "_predicate": "_predicate_property-of",
         "_path": ["_container"]
     },
-    {
-        "_from": "_any",
-        "_to": "_container",
-        "_predicate": "_predicate_property-of",
-        "_path": ["_container"]
-    },
     
     {
         "_from": "_class",

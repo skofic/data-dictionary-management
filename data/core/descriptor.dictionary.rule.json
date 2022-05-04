@@ -162,9 +162,7 @@
 					"_type": "_type_enum",
 					"_kind": "_any-descriptor"
 				},
-				"_dict_value": {
-					"_any": {}
-				}
+				"_dict_value": {}
 			}
 		}
     },
