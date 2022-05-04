@@ -1,0 +1,22 @@
+[
+    {
+    	"_code": {
+			"_nid": "",
+			"_lid": "edge",
+			"_gid": "_edge",
+			"_aid": ["edge"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Edge"},
+			"_definition": {"iso_639_3_eng": "Edge data structure"},
+			"_description": {"iso_639_3_eng": "*Edges* are *objects* that define the *relationships* between nodes in a *directed graph*. This data structure is implemented using the [ArangoDB](https://www.arangodb.com) edge record, in particular:\n\n- The [key](_key) property is required and should be the MD5 hash of the *concatenation* of the [source term reference](_from) , [predicate](_predicate) and [destination term reference](_to) properties separated by a slash (`/`) token. This means that there can be only one edge connecting the source and destination nodes with a specific predicate.\n- The [predicate](_predicate) property is required, it indicates the nature or function of the relationship.\n- The [path](_path) property is also required in order to allow more than one path to share the same source, predicate and destination combination."},
+			"_examples": {"iso_639_3_eng": "Edge example:\n\n```json\n{\n    \"_key\": \"c5367d25ec5743a8f1206bd77c42a38f\",\n    \"_from\": \"terms/iso_316_1_ITA\",\n    \"_to\": \"terms/iso_3166_1\",\n    \"_predicate\": \"_predicate_enum-of\",\n    \"_path\": [\"iso_3166_1\", \"eufgis_countries\"]\n}\n```\n\nThis edge record represents a relationship between term `terms/iso_316_1_ITA`, which represents the code for the country Italy , and the term `terms/iso_3166_1`, which represents the ISO country codes controlled vocabulary.\n\nThe `_predicate_enum-of` predicate indicates that the source node is a valid choice of the enumeration represented by the destination node.\n\nThe relationship is used by two paths:\n\n- `iso_3166_1` is the [global identifier](_gid) of the term representing the ISO country codes.\n  \n- `eufgis_countries` is the [global identifier](_gid) of the term representing the EUFGIS country codes: it shares the same relationship of the ISO enumeration, making it unnecessary to have two edges.\n  \n\nFinally, the value of the `_key` property is the MD5 hash of the concatenation of source node, predicate and destination node separated by slashes, which is the following string: `terms/iso_316_1_ITA/_predicate_enum-of/terms/iso_3166_1`."}
+    	},
+    	"_rule": {
+			"_required": {"_terms-selection_all": ["_key", "_from", "_to", "_predicate", "_path"]},
+			"_computed": ["_key"],
+			"_immutable": ["_key", "_from", "_to", "_predicate"],
+			"_locked": ["_key"]
+    	}
+    }
+]
