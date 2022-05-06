@@ -190,6 +190,26 @@
     {
 		"_code": {
 			"_nid": "_selection-terms",
+			"_lid": "one-none",
+			"_gid": "_selection-terms_one-none",
+			"_aid": ["one-none"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "One of or none"},
+			"_definition": {"iso_639_3_eng": "Selection should contain one term from the set or none."},
+			"_description": {"iso_639_3_eng": "The rule determines that either *one* of the terms in the *set* should be part of the *selection*, or the selection should be empty.\n\nThe *terms* of the *set* are represented by their *global identifiers*."}
+		},
+		"_data": {
+			"_set": {
+				"_class": "_class_other",
+				"_type": "_type_enum",
+				"_kind": "_any-term"
+			}
+		}
+    },
+    {
+		"_code": {
+			"_nid": "_selection-terms",
 			"_lid": "any",
 			"_gid": "_selection-terms_any",
 			"_aid": ["any"]
@@ -251,6 +271,26 @@
     {
 		"_code": {
 			"_nid": "_selection-descriptors",
+			"_lid": "one-none",
+			"_gid": "_selection-descriptors_one-none",
+			"_aid": ["one-none"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "One of or none"},
+			"_definition": {"iso_639_3_eng": "Selection should contain one descriptor from the set or none."},
+			"_description": {"iso_639_3_eng": "The rule determines that either *one* of the descriptors in the *set* should be part of the *selection*, or the selection should be empty.\n\nThe *descriptors* of the *set* are represented by their *global identifiers*."}
+		},
+		"_data": {
+			"_set": {
+				"_class": "_class_other",
+				"_type": "_type_enum",
+				"_kind": "_any-descriptor"
+			}
+		}
+    },
+    {
+		"_code": {
+			"_nid": "_selection-descriptors",
 			"_lid": "any",
 			"_gid": "_selection-descriptors_any",
 			"_aid": ["any"]
@@ -300,6 +340,22 @@
 			"_title": {"iso_639_3_eng": "One of"},
 			"_definition": {"iso_639_3_eng": "Selection should contain one value from the set."},
 			"_description": {"iso_639_3_eng": "The rule determines that *one* of the values in the *set* should be part of the *selection*."}
+		},
+		"_data": {
+			"_set": {}
+		}
+    },
+    {
+		"_code": {
+			"_nid": "_selection-values",
+			"_lid": "one-none",
+			"_gid": "_selection-values_one-none",
+			"_aid": ["one-none"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "One of or none"},
+			"_definition": {"iso_639_3_eng": "Selection should contain one value from the set or none."},
+			"_description": {"iso_639_3_eng": "The rule determines that either *one* of the values in the *set* should be part of the *selection*, or the selection should be empty."}
 		},
 		"_data": {
 			"_set": {}

@@ -67,25 +67,13 @@
         "_path": ["_container_scalar"]
     },
     {
-        "_from": "_min-range-inclusive",
+        "_from": "_valid-range",
         "_to": "_container_scalar",
         "_predicate": "_predicate_property-of",
         "_path": ["_container_scalar"]
     },
     {
-        "_from": "_max-range-inclusive",
-        "_to": "_container_scalar",
-        "_predicate": "_predicate_property-of",
-        "_path": ["_container_scalar"]
-    },
-    {
-        "_from": "_min-range-exclusive",
-        "_to": "_container_scalar",
-        "_predicate": "_predicate_property-of",
-        "_path": ["_container_scalar"]
-    },
-    {
-        "_from": "_max-range-exclusive",
+        "_from": "_normal-range",
         "_to": "_container_scalar",
         "_predicate": "_predicate_property-of",
         "_path": ["_container_scalar"]
@@ -134,37 +122,19 @@
         "_path": ["_container_array"]
     },
     {
-        "_from": "_min-items",
+        "_from": "_valid-range",
         "_to": "_container_array",
         "_predicate": "_predicate_property-of",
         "_path": ["_container_array"]
     },
     {
-        "_from": "_max-items",
+        "_from": "_normal-range",
         "_to": "_container_array",
         "_predicate": "_predicate_property-of",
         "_path": ["_container_array"]
     },
     {
-        "_from": "_min-range-inclusive",
-        "_to": "_container_array",
-        "_predicate": "_predicate_property-of",
-        "_path": ["_container_array"]
-    },
-    {
-        "_from": "_max-range-inclusive",
-        "_to": "_container_array",
-        "_predicate": "_predicate_property-of",
-        "_path": ["_container_array"]
-    },
-    {
-        "_from": "_min-range-exclusive",
-        "_to": "_container_array",
-        "_predicate": "_predicate_property-of",
-        "_path": ["_container_array"]
-    },
-    {
-        "_from": "_max-range-exclusive",
+        "_from": "_elements",
         "_to": "_container_array",
         "_predicate": "_predicate_property-of",
         "_path": ["_container_array"]
@@ -213,37 +183,19 @@
         "_path": ["_container_set"]
     },
     {
-        "_from": "_min-items",
+        "_from": "_valid-range",
         "_to": "_container_set",
         "_predicate": "_predicate_property-of",
         "_path": ["_container_set"]
     },
     {
-        "_from": "_max-items",
+        "_from": "_normal-range",
         "_to": "_container_set",
         "_predicate": "_predicate_property-of",
         "_path": ["_container_set"]
     },
     {
-        "_from": "_min-range-inclusive",
-        "_to": "_container_set",
-        "_predicate": "_predicate_property-of",
-        "_path": ["_container_set"]
-    },
-    {
-        "_from": "_max-range-inclusive",
-        "_to": "_container_set",
-        "_predicate": "_predicate_property-of",
-        "_path": ["_container_set"]
-    },
-    {
-        "_from": "_min-range-exclusive",
-        "_to": "_container_set",
-        "_predicate": "_predicate_property-of",
-        "_path": ["_container_set"]
-    },
-    {
-        "_from": "_max-range-exclusive",
+        "_from": "_elements",
         "_to": "_container_set",
         "_predicate": "_predicate_property-of",
         "_path": ["_container_set"]
@@ -303,5 +255,43 @@
         "_to": "_container_dict",
         "_predicate": "_predicate_property-of",
         "_path": ["_container_dict"]
+    },
+    
+    {
+        "_from": "_min-range-inclusive",
+        "_to": "_range_value",
+        "_predicate": "_predicate_property-of",
+        "_path": ["_range_value"]
+    },
+    {
+        "_from": "_max-range-inclusive",
+        "_to": "_range_value",
+        "_predicate": "_predicate_property-of",
+        "_path": ["_range_value"]
+    },
+    {
+        "_from": "_min-range-exclusive",
+        "_to": "_range_value",
+        "_predicate": "_predicate_property-of",
+        "_path": ["_range_value"]
+    },
+    {
+        "_from": "_max-range-exclusive",
+        "_to": "_range_value",
+        "_predicate": "_predicate_property-of",
+        "_path": ["_range_value"]
+    },
+    
+    {
+        "_from": "_min-items",
+        "_to": "_range_elements",
+        "_predicate": "_predicate_property-of",
+        "_path": ["_range_elements"]
+    },
+    {
+        "_from": "_max-items",
+        "_to": "_range_elements",
+        "_predicate": "_predicate_property-of",
+        "_path": ["_range_elements"]
     }
 ]

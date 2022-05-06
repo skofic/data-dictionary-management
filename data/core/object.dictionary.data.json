@@ -103,5 +103,40 @@
     	"_rule": {
 			"_required": {"_selection-descriptors_all": ["_class", "_type_key"]}
     	}
+    },
+    
+    {
+    	"_code": {
+			"_nid": "_range",
+			"_lid": "value",
+			"_gid": "_range_value",
+			"_aid": ["value"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Value range"},
+			"_definition": {"iso_639_3_eng": "Object definition for a property defining a range."},
+			"_description": {"iso_639_3_eng": "This *property* represents a *numeric range*, it is an *object* that expects *one* or *two* properties that *define* the *lower* and/or *upper* range bounds:\n\n- *Lower bound*, use *one* or *none* of the following:\n    - [Minimum inclusive range](_min-range-inclusive): data must be *greater* than or *equal* to the value.\n    - [Minimum exclusive range](_min-range-exclusive): data must be *greater* than the value.\n- *Upper bound*, use *one* or *none* of the following:\n    - [Maximum inclusive range](_max-range-inclusive): data must be *smaller* than or *equal* to the value.\n    - [Maximum exclusive range](_max-range-exclusive): data must be *smaller* than the value.\n\nEither the lower or upper bound can be *omitted* to create an *open range*.\n\nThe *numeric* value can be *discrete* or *continuous*, by default the value will be assumed to be a floating point number."},
+			"_examples": {"iso_639_3_eng": "```json\n{\n  	\"_min-range-inclusive\": -2,\n  	\"_max-range-inclusive\": 8\n}\n```\n\nThe number must be between `-2` and `8`.\n\n```json\n{\n  	\"_min-range-exclusive\": 2,\n  	\"_max-range-exclusive\": 8\n}\n```\n\nThe number must be between `3` and `7`.\n\n```json\n{\n  	\"_min-range-exclusive\": 2.7,\n  	\"_max-range-inclusive\": 3.7\n}\n```\n\nThe number must be larger than `2.7` and smaller or equal to `3.7`.\n\n```json\n{\n  	\"_max_range_exclusive\": 10.0\n}\n```\n\nThe number must be smaller than `10.0`."}
+    	},
+    	"_rule": {
+			"_required": {"_selection-descriptors_one": ["_min-range-inclusive", "_min-range-exclusive", "_max-range-inclusive", "_max-range-exclusive"]}
+    	}
+    },
+    {
+    	"_code": {
+			"_nid": "_range",
+			"_lid": "elements",
+			"_gid": "_range_elements",
+			"_aid": ["elements"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Elements range"},
+			"_definition": {"iso_639_3_eng": "Object definition for a property defining a *discrete range* used to assess items r elements count."},
+			"_description": {"iso_639_3_eng": "This *property* represents a *discrete numeric range*, it is an *object* that expects *one* or *two* properties that *define* the *lower* and/or *upper* range bounds:\n\n- [Lower bound](_min-items): Minimum number of items.\n- [Upper bound](_max-items): Maximum number of items.\n\nEither the lower or upper bound can be *omitted* to create an *open range*.\n\nThe *numeric* value is *continuous*, by default the value will be assumed to be an [integer](_type_integer) and the value cannot be less than `0`."},
+			"_examples": {"iso_639_3_eng": "```json\n{\n  	\"_min-items\": 1,\n  	\"_max-items\": 8\n}\n```\n\nThe element count must be between `1` and `8`.\n\n```json\n{\n  	\"_min-items\": 0\n}\n```\n\nThere must be at least *one* element.\n\n```json\n{\n  	\"_max-items\": 10\n}\n```\n\nThere must be less than 10 items."}
+    	},
+    	"_rule": {
+			"_required": {"_selection-descriptors_any": ["_min-items", "_max-items"]}
+    	}
     }
 ]
