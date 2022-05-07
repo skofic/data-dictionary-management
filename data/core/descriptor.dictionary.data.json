@@ -225,7 +225,7 @@
 			"_description": {"iso_639_3_eng": "This field is relevant only in the following cases:\n\n- The [data type](_type_) is [enumeration](_type_enum): in that case you *must* reference the *controlled vocabulary type* by providing its term [global identifier](_gid). If you provide the wildcard term [any-term](_any-term), the value can be the [global identifier](_gid) of *any term*, if you provide the wildcard term [any-descriptor](_any-descriptor), the value can be the [global identifier](_gid) of *any descriptor*.\n- The [data type](_type_) is [object](_type_object): in that case you *must* reference the *object data structure type* by providing its term [global identifier](_gid). If you provide the wildcard term [any-object](_any-object), the value can be the [global identifier](_gid) of any [object data structure definition](_type_object)."}
     	},
     	"_data": {
-			"_scalar": {
+			"_set": {
 				"_class": "_class_category",
 				"_type": "_type_enum",
 				"_kind": "_any-term"

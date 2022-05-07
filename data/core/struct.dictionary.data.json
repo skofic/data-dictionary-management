@@ -202,6 +202,19 @@
     },
     
     {
+        "_from": "_dict_key",
+        "_to": "_container_dict",
+        "_predicate": "_predicate_property-of",
+        "_path": ["_container_dict"]
+    },
+    {
+        "_from": "_dict_value",
+        "_to": "_container_dict",
+        "_predicate": "_predicate_property-of",
+        "_path": ["_container_dict"]
+    },
+    
+    {
         "_from": "_class",
         "_to": "_container_dict_key",
         "_predicate": "_predicate_property-of",
@@ -242,19 +255,6 @@
         "_to": "_container_dict_key",
         "_predicate": "_predicate_property-of",
         "_path": ["_container_dict_key"]
-    },
-    
-    {
-        "_from": "_dict_key",
-        "_to": "_container_dict",
-        "_predicate": "_predicate_property-of",
-        "_path": ["_container_dict"]
-    },
-    {
-        "_from": "_dict_value",
-        "_to": "_container_dict",
-        "_predicate": "_predicate_property-of",
-        "_path": ["_container_dict"]
     },
     
     {

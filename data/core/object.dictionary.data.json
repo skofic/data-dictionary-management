@@ -13,7 +13,7 @@
 			"_examples": {"iso_639_3_eng": "```json\n{\n	\"_scalar\": {\n		\"_class\": \"_class_quantity\",\n		\"_type\": \"_type_integer\",\n		\"_min-range-inclusive\": 5,\n		\"_max-range-inclusive\": 10\n	}\n}\n```\n\nThis example describes a *scalar discrete integer* quantitative value in the range from `5` to `10` inclusive.\n\n```json\n{\n	\"_array\": {\n		\"_class\": \"_class_quantity\",\n		\"_type\": \"_type_number\",\n		\"_min-range-inclusive\": 0.0,\n		\"_max-range-exclusive\": 100.0,\n		\"_unit\": \"_data_unit_length_cm\"\n	}\n}\n```\n\nThis example describes a *list* of *continuous quantitative* values *greater or equal* to `0.0` and *less than* `100.0` representing a *length* in *centimetres*.\n\n```json\n{\n	\"_set\": {\n		\"_class\": \"_class_category\",\n		\"_type\": \"_type_enum\",\n		\"_kind\": \"iso_639_3\"\n	}\n}\n```\n\nThis example describes a *text* value *encoded* in *Markdown* format.\n\n```json\n{\n	\"_dict\": {\n		\"_dict_key\": {\n			\"_class\": \"_class_category\",\n			\"_type\": \"_type_enum\",\n			\"_kind\": \"iso_3166_1\"\n		},\n		\"_dict_value\": {\n			\"_dict\": {\n				\"_dict_key\": {\n					\"_class\": \"_class_category\",\n					\"_type\": \"_type_enum\",\n					\"_kind\": \"iso_639_3\"\n				},\n				\"_dict_value\": {\n					\"_array\": {\n						\"_class\": \"_class_other\",\n						\"_type\": \"_type_object\",\n						\"_kind\": \"some_object_definition\",\n						\"_min-items\": 5,\n						\"_max-items\": 10\n					}\n				}\n			}\n		}\n	}\n}\n```\n\nThis example describes a *dictionary* whose *keys* are the [global identifiers](_gid) of the ISO 3166 country *controlled vocabulary elements*, and the values are *another dictionary* whose keys are ISO 639 languages and whose *values* are *arrays* that correspond to the `some_object_definition` *data structure type*; these *array* values must have a *minimum* of `5` elements and a *maximum* of `10` elements. This is an example of a recursive dictionary definition."}
     	},
     	"_rule": {
-			"_required": {"_selection-descriptors_one": ["_scalar", "_array", "_set", "_dict"]},
+			"_required": {"_selection-descriptors_one-none": ["_scalar", "_array", "_set", "_dict"]},
 			"_immutable": ["_scalar", "_array", "_set", "_dict"]
     	}
     },
@@ -119,7 +119,13 @@
 			"_examples": {"iso_639_3_eng": "```json\n{\n  	\"_min-range-inclusive\": -2,\n  	\"_max-range-inclusive\": 8\n}\n```\n\nThe number must be between `-2` and `8`.\n\n```json\n{\n  	\"_min-range-exclusive\": 2,\n  	\"_max-range-exclusive\": 8\n}\n```\n\nThe number must be between `3` and `7`.\n\n```json\n{\n  	\"_min-range-exclusive\": 2.7,\n  	\"_max-range-inclusive\": 3.7\n}\n```\n\nThe number must be larger than `2.7` and smaller or equal to `3.7`.\n\n```json\n{\n  	\"_max_range_exclusive\": 10.0\n}\n```\n\nThe number must be smaller than `10.0`."}
     	},
     	"_rule": {
-			"_required": {"_selection-descriptors_one": ["_min-range-inclusive", "_min-range-exclusive", "_max-range-inclusive", "_max-range-exclusive"]}
+			"_required": {
+				"_selection_descriptor_any": {
+					"_selection-descriptors_one": [
+						["_min-range-inclusive", "_min-range-exclusive"],
+						["_max-range-inclusive", "_max-range-exclusive"]
+					]}
+				}
     	}
     },
     {
