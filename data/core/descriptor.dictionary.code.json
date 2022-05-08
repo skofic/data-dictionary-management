@@ -15,7 +15,7 @@
 			"_scalar": {
 				"_class": "_class_other",
 				"_type": "_type_object",
-				"_kind": "_identification"
+				"_kind": ["_identification"]
 			}
     	}
     },
@@ -37,7 +37,7 @@
 			"_scalar": {
 				"_class": "_class_other",
 				"_type": "_type_enum",
-				"_kind": "_any-term"
+				"_kind": ["_any-term"]
 			}
 		}
     },

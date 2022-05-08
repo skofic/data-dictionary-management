@@ -61,6 +61,12 @@
         "_path": ["_selection-terms"]
     },
     {
+        "_from": "_selection-terms_any-one",
+        "_to": "_selection-terms",
+        "_predicate": "_predicate_property-of",
+        "_path": ["_selection-terms"]
+    },
+    {
         "_from": "_selection-terms_all",
         "_to": "_selection-terms",
         "_predicate": "_predicate_property-of",
@@ -86,6 +92,12 @@
         "_path": ["_selection-descriptors"]
     },
     {
+        "_from": "_selection-descriptors_any-one",
+        "_to": "_selection-descriptors",
+        "_predicate": "_predicate_property-of",
+        "_path": ["_selection-descriptors"]
+    },
+    {
         "_from": "_selection-descriptors_all",
         "_to": "_selection-descriptors",
         "_predicate": "_predicate_property-of",
@@ -106,6 +118,12 @@
     },
     {
         "_from": "_selection-values_any",
+        "_to": "_selection-values",
+        "_predicate": "_predicate_property-of",
+        "_path": ["_selection-values"]
+    },
+    {
+        "_from": "_selection-values_any-one",
         "_to": "_selection-values",
         "_predicate": "_predicate_property-of",
         "_path": ["_selection-values"]

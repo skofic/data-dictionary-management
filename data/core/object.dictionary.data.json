@@ -10,11 +10,29 @@
 			"_title": {"iso_639_3_eng": "Data container"},
 			"_definition": {"iso_639_3_eng": "This object contains the properties that define the shape and type of data."},
 			"_description": {"iso_639_3_eng": "This object data structure defines the *shape* of [descriptor](_term_descriptor) *data values*. The data structure allows *one* among the following *properties*:\n\n- [Scalar](_scalar): if *data* is a *scalar* value.\n- [Array](_array): if *data* is a *list* of values.\n- [Set](_set): if *data* is a *list* of *unique* values.\n- [Dictionary](_dict): if *data* is a *key/value dictionary*.\n\nAny *term* that *features* this property is considered a [descriptor](_term_descriptor)."},
-			"_examples": {"iso_639_3_eng": "```json\n{\n	\"_scalar\": {\n		\"_class\": \"_class_quantity\",\n		\"_type\": \"_type_integer\",\n		\"_min-range-inclusive\": 5,\n		\"_max-range-inclusive\": 10\n	}\n}\n```\n\nThis example describes a *scalar discrete integer* quantitative value in the range from `5` to `10` inclusive.\n\n```json\n{\n	\"_array\": {\n		\"_class\": \"_class_quantity\",\n		\"_type\": \"_type_number\",\n		\"_min-range-inclusive\": 0.0,\n		\"_max-range-exclusive\": 100.0,\n		\"_unit\": \"_data_unit_length_cm\"\n	}\n}\n```\n\nThis example describes a *list* of *continuous quantitative* values *greater or equal* to `0.0` and *less than* `100.0` representing a *length* in *centimetres*.\n\n```json\n{\n	\"_set\": {\n		\"_class\": \"_class_category\",\n		\"_type\": \"_type_enum\",\n		\"_kind\": \"iso_639_3\"\n	}\n}\n```\n\nThis example describes a *text* value *encoded* in *Markdown* format.\n\n```json\n{\n	\"_dict\": {\n		\"_dict_key\": {\n			\"_class\": \"_class_category\",\n			\"_type\": \"_type_enum\",\n			\"_kind\": \"iso_3166_1\"\n		},\n		\"_dict_value\": {\n			\"_dict\": {\n				\"_dict_key\": {\n					\"_class\": \"_class_category\",\n					\"_type\": \"_type_enum\",\n					\"_kind\": \"iso_639_3\"\n				},\n				\"_dict_value\": {\n					\"_array\": {\n						\"_class\": \"_class_other\",\n						\"_type\": \"_type_object\",\n						\"_kind\": \"some_object_definition\",\n						\"_min-items\": 5,\n						\"_max-items\": 10\n					}\n				}\n			}\n		}\n	}\n}\n```\n\nThis example describes a *dictionary* whose *keys* are the [global identifiers](_gid) of the ISO 3166 country *controlled vocabulary elements*, and the values are *another dictionary* whose keys are ISO 639 languages and whose *values* are *arrays* that correspond to the `some_object_definition` *data structure type*; these *array* values must have a *minimum* of `5` elements and a *maximum* of `10` elements. This is an example of a recursive dictionary definition."}
+			"_examples": {"iso_639_3_eng": "```json\n{\n    \"_scalar\": {\n        \"_class\": \"_class_quantity\",\n        \"_type\": \"_type_integer\",\n        \"_valid-range\": {\n            \"_min-range-inclusive\": 5,\n            \"_max-range-inclusive\": 10\n        }\n    }\n}\n```\n\nThis example describes a *scalar discrete integer* quantitative value in a valid range from `5` to `10` inclusive.\n\n```json\n{\n    \"_array\": {\n        \"_class\": \"_class_quantity\",\n        \"_type\": \"_type_number\",\n        \"_elements\": {\n            \"_min-items\": 5,\n            \"_max-items\": 10\n        },\n        \"_valid-range\": {\n            \"_min-range-inclusive\": 0.0,\n            \"_max-range-exclusive\": 100.0,\n        }\n        \"_unit\": \"_data_unit_length_cm\"\n    }\n}\n```\n\nThis example describes a *list* of *continuous quantitative* values with at least `5` elements and at most `10` with a normal range *greater or equal* to `0.0` and *less than* `100.0` representing a *length* in *centimetres*.\n\n```json\n{\n    \"_set\": {\n        \"_class\": \"_class_category\",\n        \"_type\": \"_type_enum\",\n        \"_kind\": [\"iso_639_3\"]\n    }\n}\n```\n\nThis example describes a *text* value *encoded* in *Markdown* format.\n\n```json\n{\n    \"_dict\": {\n        \"_dict_key\": {\n            \"_class\": \"_class_category\",\n            \"_type\": \"_type_enum\",\n            \"_kind\": [\"iso_3166_1\"]\n        },\n        \"_dict_value\": {\n            \"_dict\": {\n                \"_dict_key\": {\n                    \"_class\": \"_class_category\",\n                    \"_type\": \"_type_enum\",\n                    \"_kind\": [\"iso_639_3\"]\n                },\n                \"_dict_value\": {\n                    \"_array\": {\n                        \"_class\": \"_class_other\",\n                        \"_type\": \"_type_object\",\n                        \"_kind\": \"some_object_definition\",\n                        \"_elements\": {\n                            \"_min-items\": 5,\n                            \"_max-items\": 10\n                        }\n                    }\n                }\n            }\n        }\n    }\n}\n```\n\nThis example describes a *dictionary* whose *keys* are the [global identifiers](_gid) of the ISO 3166 country *controlled vocabulary elements*, and the values are *another dictionary* whose keys are ISO 639 languages and whose *values* are *arrays* that correspond to the `some_object_definition` *data structure type*; these *array* values must have a *minimum* of `5` elements and a *maximum* of `10` elements. This is an example of a recursive dictionary definition."}
     	},
     	"_rule": {
 			"_required": {"_selection-descriptors_one-none": ["_scalar", "_array", "_set", "_dict"]},
 			"_immutable": ["_scalar", "_array", "_set", "_dict"]
+    	}
+    },
+    {
+    	"_code": {
+			"_nid": "_container",
+			"_lid": "list",
+			"_gid": "_container_list",
+			"_aid": ["list"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "List data container"},
+			"_definition": {"iso_639_3_eng": "This object contains the properties that define the shape and type of list data containers."},
+			"_description": {"iso_639_3_eng": "This object data structure defines the *shape* of [descriptor](_term_descriptor) lists of *data values*. The data structure allows *one* among the following *properties*:\n\n- [Array](_array): if *data* is a *list* of values.\n- [Set](_set): if *data* is a *list* of *unique* values."},
+			"_examples": {"iso_639_3_eng": "```json\n{\n    \"_array\": {\n        \"_class\": \"_class_quantity\",\n        \"_type\": \"_type_number\",\n        \"_valid-range\": {\n            \"_min-range-inclusive\": 0.0,\n            \"_max-range-exclusive\": 100.0,\n        }\n        \"_unit\": \"_unit_length_cm\"\n    }\n}\n```\n\nThis example describes a *list* of *continuous quantitative* values *greater or equal* to `0.0` and *less than* `100.0` representing a *length* in *centimetres*.\n\n```json\n{\n    \"_array\": {\n        \"_set\": {\n            \"_class\": \"_class_quantity\",\n            \"_type\": \"_type_integer\"\n        }\n    }\n}\n```\n\nThis example describes a *list* of *discrete quantitative unique values*."}
+    	},
+    	"_rule": {
+			"_required": {"_selection-descriptors_one-none": ["_array", "_set"]},
+			"_immutable": ["_array", "_set"]
     	}
     },
     
@@ -120,12 +138,11 @@
     	},
     	"_rule": {
 			"_required": {
-				"_selection_descriptor_any": {
-					"_selection-descriptors_one": [
-						["_min-range-inclusive", "_min-range-exclusive"],
-						["_max-range-inclusive", "_max-range-exclusive"]
-					]}
-				}
+				"_selection-descriptors_any-one": [
+					["_min-range-inclusive", "_min-range-exclusive"],
+					["_max-range-inclusive", "_max-range-exclusive"]
+				]
+			}
     	}
     },
     {

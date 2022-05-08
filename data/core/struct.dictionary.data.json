@@ -25,6 +25,19 @@
     },
     
     {
+        "_from": "_array",
+        "_to": "_container_list",
+        "_predicate": "_predicate_property-of",
+        "_path": ["_container_list"]
+    },
+    {
+        "_from": "_set",
+        "_to": "_container_list",
+        "_predicate": "_predicate_property-of",
+        "_path": ["_container_list"]
+    },
+    
+    {
         "_from": "_class",
         "_to": "_container_scalar",
         "_predicate": "_predicate_property-of",

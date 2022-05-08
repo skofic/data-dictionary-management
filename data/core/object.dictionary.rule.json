@@ -28,7 +28,7 @@
 			"_examples": {"iso_639_3_eng": "```json\n{\n    \"_selection-terms_one\": [one, two, three],\n    \"_selection-terms_any\": [red, green, blue],\n    \"_selection-terms_all\": [mon. tue, wed]\n}\n```\n\nThis selection rule implies the following conditions:\n\n- At least *one* of `[red, green, blue]` is required.\n- *One* or *more* of `[odd, even] `are required.\n- *All* of `[mon, tue, wed]` are required.\n\nThe following are valid:\n\n- `[red, even, mon, tue, wed]`\n- `[green, odd, mon, tue, wed]`\n- `[blue, odd, even, mon, tue, wed]`\n\nThe following are invalid:\n\n- `[even, mon, tue, wed]`\n- `[green, mon, tue, wed]`\n- `[blue, odd, even, tue, wed]`"}
     	},
     	"_rule": {
-			"_required": {"_selection-descriptors_any": ["_selection-terms_one", "_selection-terms_one-none", "_selection-terms_any", "_selection-terms_all"]}
+			"_required": {"_selection-descriptors_any": ["_selection-terms_one", "_selection-terms_one-none", "_selection-terms_any", "_selection-terms_any-one", "_selection-terms_all"]}
     	}
     },
     {
@@ -45,7 +45,7 @@
 			"_examples": {"iso_639_3_eng": "```json\n{\n    \"_selection-descriptors_one\": [one, two, three],\n    \"_selection-descriptors_any\": [red, green, blue],\n    \"_selection-descriptors_all\": [mon. tue, wed]\n}\n```\n\nThis selection rule implies the following conditions:\n\n- At least *one* of `[red, green, blue]` is required.\n- *One* or *more* of `[odd, even] `are required.\n- *All* of `[mon, tue, wed]` are required.\n\nThe following are valid:\n\n- `[red, even, mon, tue, wed]`\n- `[green, odd, mon, tue, wed]`\n- `[blue, odd, even, mon, tue, wed]`\n\nThe following are invalid:\n\n- `[even, mon, tue, wed]`\n- `[green, mon, tue, wed]`\n- `[blue, odd, even, tue, wed]`"}
     	},
     	"_rule": {
-			"_required": {"_selection-descriptors_any": ["_selection-descriptors_one", "_selection-descriptors_one-none", "_selection-descriptors_any", "_selection-descriptors_all"]}
+			"_required": {"_selection-descriptors_any": ["_selection-descriptors_one", "_selection-descriptors_one-none", "_selection-descriptors_any", "_selection-descriptors_any-one", "_selection-descriptors_all"]}
     	}
     },
     {
@@ -62,7 +62,7 @@
 			"_examples": {"iso_639_3_eng": "```json\n{\n    \"_selection-values_one\": [one, two, three],\n    \"_selection-values_any\": [true, false],\n    \"_selection-values_all\": [1. 2, 3]\n}\n```\n\nThis selection rule implies the following conditions:\n\n- At least *one* of `[one, two, three]` is required.\n- *One* or *more* of `[true, false] `are required.\n- *All* of `[1. 2, 3]` are required.\n\nThe following are valid:\n\n- `[one, true, 1, 2, 3]`\n- `[two, false, 1, 2, 3]`\n- `[three, true, false, 1, 2, 3]`\n\nThe following are invalid:\n\n- `[false, 1, 2, 3]`\n- `[two, 1, 2, 3]`\n- `[three, true, false, 2, 3]`"}
     	},
     	"_rule": {
-			"_required": {"_selection-descriptors_any": ["_selection-values_one", "_selection-values_one-none", "_selection-values_any", "_selection-values_all"]}
+			"_required": {"_selection-descriptors_any": ["_selection-values_one", "_selection-values_one-none", "_selection-values_any", "_selection-values_any-one", "_selection-values_all"]}
     	}
     }
 ]
