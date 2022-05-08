@@ -1,0 +1,127 @@
+[
+    {
+    	"_code": {
+			"_lid": "iso",
+			"_gid": "iso",
+        	"_aid": ["iso"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "International Organization for Standardization"},
+			"_definition": {"iso_639_3_eng": "This namespace collects international standards used in the data dictionary."},
+			"_description": {"iso_639_3_eng": "This *root* [namespace](/_nid) collects all data dictionary [international standards](https://www.iso.org/home.html) implemented as *controlled vocabulary terms*."}
+    	}
+    },
+    
+    {
+    	"_code": {
+			"_nid": "iso",
+			"_lid": "639",
+			"_gid": "iso_639",
+        	"_aid": ["639"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Languages"},
+			"_definition": {"iso_639_3_eng": "Standard by the International Organization for Standardization (ISO) that is concerned with representation of names for languages and language groups."},
+			"_description": {"iso_639_3_eng": "This [namespace](/code/nid) collects the controlled vocabulary of [2-character](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) [language codes](https://www.iso.org/iso-639-language-codes.html) which represent the *major languages* in the world.\n\nThe language codes defined in the several sections of [ISO 639](https://en.wikipedia.org/wiki/ISO_639) are used for bibliographic purposes and, in computing and internet environments, as a key element of [locale](https://en.wikipedia.org/wiki/Locale_(computer_software) &quot;Locale (computer software)&quot;) data."}
+    	}
+    },
+    {
+    	"_code": {
+			"_nid": "iso",
+			"_lid": "3166",
+			"_gid": "iso_3166",
+        	"_aid": ["3166"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Countries"},
+			"_definition": {"iso_639_3_eng": "Codes for the representation of names of countries and their subdivisions."},
+			"_description": {"iso_639_3_eng": "[ISO 3166](https://en.wikipedia.org/wiki/ISO_3166) is a [standard](https://en.wikipedia.org/wiki/Standardization &quot;Standardization&quot;) published by the [International Organization for Standardization](https://en.wikipedia.org/wiki/International_Organization_for_Standardization &quot;International Organization for Standardization&quot;) (ISO) that defines [codes](https://en.wikipedia.org/wiki/Code &quot;Code&quot;) for the names of [countries](https://en.wikipedia.org/wiki/Country &quot;Country&quot;), [dependent territories](https://en.wikipedia.org/wiki/Dependent_territory &quot;Dependent territory&quot;), special areas of geographical interest, and their principal [subdivisions](https://en.wikipedia.org/wiki/Administrative_divisions &quot;Administrative divisions&quot;) (e.g., [provinces](https://en.wikipedia.org/wiki/Province &quot;Province&quot;) or [states](https://en.wikipedia.org/wiki/State_(administrative_division) &quot;State (administrative division)&quot;))."}
+    	}
+    },
+    {
+    	"_code": {
+			"_nid": "iso",
+			"_lid": "4217",
+			"_gid": "iso_4217",
+        	"_aid": ["4217"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Currencies"},
+			"_definition": {"iso_639_3_eng": "Codes for the representation of currencies."},
+			"_description": {"iso_639_3_eng": "[ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) is a [standard](https://en.wikipedia.org/wiki/Standardization &quot;Standardization&quot;) published by [International Organization for Standardization](https://en.wikipedia.org/wiki/International_Organization_for_Standardization &quot;International Organization for Standardization&quot;) (ISO) that defines alpha codes and numeric codes for the representation of [currencies](https://en.wikipedia.org/wiki/Currency &quot;Currency&quot;) and provides information about the relationships between individual currencies and their minor units."}
+    	}
+    },
+    {
+    	"_code": {
+			"_nid": "iso",
+			"_lid": "15924",
+			"_gid": "iso_15924",
+        	"_aid": ["15924"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Scripts"},
+			"_definition": {"iso_639_3_eng": "Codes for the representation of names of scripts"},
+			"_description": {"iso_639_3_eng": "[ISO 15924]([ISO 15924 - Wikipedia](https://en.wikipedia.org/wiki/ISO_15924)) is an [international standard](https://en.wikipedia.org/wiki/ISO_standard &quot;ISO standard&quot;) defining codes for [writing systems](https://en.wikipedia.org/wiki/Writing_systems &quot;Writing systems&quot;) or *scripts* (a *set of graphic characters used for the written form of one or more languages*)."}
+    	}
+    },
+    
+    {
+    	"_code": {
+			"_nid": "iso_639",
+			"_lid": "scopes",
+			"_gid": "iso_639_scopes",
+        	"_aid": ["scopes"],
+        	"_regexp": "^[IMS]$"
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Language scopes"}
+    },    
+    {
+    	"_code": {
+			"_nid": "iso_639_scopes",
+			"_lid": "I",
+			"_gid": "iso_639_scopes_I",
+        	"_aid": ["I"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Individual language"}
+		}
+    },    
+    {
+    	"_code": {
+			"_nid": "iso_639_scopes",
+			"_lid": "M",
+			"_gid": "iso_639_scopes_M",
+        	"_aid": ["M"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Macrolanguage"},
+			"_definition": {"iso_639_3_eng": "A macrolanguage is a book-keeping mechanism for the ISO 639 international standard for language codes."},
+			"_description": {"iso_639_3_eng": "[Macrolanguages](https://en.wikipedia.org/wiki/ISO_639_macrolanguage) are established to assist mapping between different sets of ISO language codes. Specifically, there may be a many-to-one correspondence between [ISO 639-3](https://en.wikipedia.org/wiki/ISO_639-3 &quot;ISO 639-3&quot;), intended to identify all the thousands of languages of the world, and either of two other sets, [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1 &quot;ISO 639-1&quot;), established to identify languages in computer systems, and [ISO 639-2](https://en.wikipedia.org/wiki/ISO_639-2 &quot;ISO 639-2&quot;), which encodes a few hundred languages for library cataloguing and bibliographic purposes. When such many-to-one ISO 639-2 codes are included in an ISO 639-3 context, they are called &quot;macrolanguages&quot; to distinguish them from the corresponding individual languages of ISO 639-3."}
+		}
+    },    
+    {
+    	"_code": {
+			"_nid": "iso_639_scopes",
+			"_lid": "S",
+			"_gid": "iso_639_scopes_S",
+        	"_aid": ["S"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Special situation"}
+		}
+    },  
+      
+    {
+    	"_code": {
+			"_nid": "iso_639",
+			"_lid": "types",
+			"_gid": "iso_639_types",
+        	"_aid": ["types"],
+        	"_regexp": "^[ACEHLS]$"
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Language types"}
+		}
+    }
+]

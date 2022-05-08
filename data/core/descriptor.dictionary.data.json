@@ -302,7 +302,7 @@
     	"_info": {
 			"_title": {"iso_639_3_eng": "Validation pattern"},
 			"_definition": {"iso_639_3_eng": "Regular expression for validating the value."},
-			"_description": {"iso_639_3_eng": "This field can be used to *validate* data by ensuring it follows a predefined *pattern*. This pattern is a *regular expression*, *regex*, according to the [ECMA 262](http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf) dialect. Note that, while validation patterns *apply* explicitly to *strings*, this field may also be used to match patterns in numeric data: numbers will be converted to string for pattern matching."},
+			"_description": {"iso_639_3_eng": "This field can be used to *validate* data by ensuring it follows a predefined *pattern*. This pattern is a *regular expression*, *regex*, according to the [ECMA 262](http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf) dialect. Note that, while validation patterns *apply* explicitly to *strings*, this field may also be used to match patterns in numeric data: numbers will be converted to string for pattern matching.\n\nThis property normally belongs to the [data section](_data), however, besides being used in [descriptors](_term_descriptor) it can also be used in controlled vocabulary types to indicate the pattern of the enumeration codes. In that case it can be added to the [identification section](_code)."},
 			"_examples": {"iso_639_3_eng": "- `the.\\*fox`: Will match \"*the quick brown fox*\".\n- `^[A-Z]{3}[0-9]{4}$`: Will match \"*ITA1234*\".\n- `^[A-Z]{3}[0-9]{4}$`: Will not match \"*ITA123*\".\n- `^[A-Z]{3}[0-9]{4}$`: Will not match \"*ITA123456*\"."}
     	},
     	"_data": {
