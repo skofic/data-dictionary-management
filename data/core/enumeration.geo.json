@@ -1,149 +1,247 @@
 [
     {
-        "_code_nid": "geo",
-        "_code_lid": "ellipsoids",
-        "_code_gid": "geo_ellipsoids",
-        "_code_aid": ["ellipsoids"],
-        "_info_title": {"iso_639_3_eng": "Reference ellipsoids"},
-        "_info_definition": {"iso_639_3_eng": "List of geodetic datum reference ellipsoids."},
-        "_info_description": {"iso_639_3_eng": "In geodesy, a [reference ellipsoid](https://en.wikipedia.org/wiki/Reference_ellipsoid) is a mathematically defined surface that approximates the geoid, which is the truer, imperfect figure of the Earth, or other planetary body, as opposed to a perfect, smooth, and unaltered sphere, which factors in the undulations of the bodies' gravity due to variations in the composition and density of the interior, as well as the subsequent flattening caused by the centrifugal force from the rotation of these massive objects (for planetary bodies that do rotate)."},
-        "_info_notes": {"iso_639_3_eng": "Data source: Defense Mapping Agency Technical Report, Department of Defense World Geodetic System 1984, DMA TR 8350.2 Second Edition, 1 September 1991. Link: http://ncgia.ucsb.edu/units/u015/tables/table03.html"}
+    	"_code": {
+			"_nid": "geo",
+			"_lid": "ellipsoids",
+			"_gid": "geo_ellipsoids",
+			"_aid": ["ellipsoids"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Reference ellipsoids"},
+			"_definition": {"iso_639_3_eng": "List of geodetic datum reference ellipsoids."},
+			"_description": {"iso_639_3_eng": "In geodesy, a [reference ellipsoid](https://en.wikipedia.org/wiki/Reference_ellipsoid) is a mathematically defined surface that approximates the geoid, which is the truer, imperfect figure of the Earth, or other planetary body, as opposed to a perfect, smooth, and unaltered sphere, which factors in the undulations of the bodies' gravity due to variations in the composition and density of the interior, as well as the subsequent flattening caused by the centrifugal force from the rotation of these massive objects (for planetary bodies that do rotate)."},
+			"_notes": {"iso_639_3_eng": "Data source: Defense Mapping Agency Technical Report, Department of Defense World Geodetic System 1984, DMA TR 8350.2 Second Edition, 1 September 1991. Link: http://ncgia.ucsb.edu/units/u015/tables/table03.html"}
+    	}
     },
     {
-        "_code_nid": "geo_ellipsoids",
-        "_code_lid": "1",
-        "_code_gid": "geo_ellipsoids_1",
-        "_code_aid": ["1"],
-        "_info_title": {"iso_639_3_eng": "Airy"}
+    	"_code": {
+			"_nid": "geo_ellipsoids",
+			"_lid": "1",
+			"_gid": "geo_ellipsoids_1",
+			"_aid": ["1"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Airy"}
+    	}
+
     },
     {
-        "_code_nid": "geo_ellipsoids",
-        "_code_lid": "2",
-        "_code_gid": "geo_ellipsoids_2",
-        "_code_aid": ["2"],
-        "_info_title": {"iso_639_3_eng": "Australian National"}
+    	"_code": {
+			"_nid": "geo_ellipsoids",
+			"_lid": "2",
+			"_gid": "geo_ellipsoids_2",
+			"_aid": ["2"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Australian National"}
+    	}
+
     },
     {
-        "_code_nid": "geo_ellipsoids",
-        "_code_lid": "3",
-        "_code_gid": "geo_ellipsoids_3",
-        "_code_aid": ["3"],
-        "_info_title": {"iso_639_3_eng": "Bessel 1841"}
+    	"_code": {
+			"_nid": "geo_ellipsoids",
+			"_lid": "3",
+			"_gid": "geo_ellipsoids_3",
+			"_aid": ["3"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Bessel 1841"}
+    	}
+
     },
     {
-        "_code_nid": "geo_ellipsoids",
-        "_code_lid": "4",
-        "_code_gid": "geo_ellipsoids_4",
-        "_code_aid": ["4"],
-        "_info_title": {"iso_639_3_eng": "Bessel 1841 (Namibia)"}
+    	"_code": {
+			"_nid": "geo_ellipsoids",
+			"_lid": "4",
+			"_gid": "geo_ellipsoids_4",
+			"_aid": ["4"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Bessel 1841 (Namibia)"}
+    	}
+
     },
     {
-        "_code_nid": "geo_ellipsoids",
-        "_code_lid": "5",
-        "_code_gid": "geo_ellipsoids_5",
-        "_code_aid": ["5"],
-        "_info_title": {"iso_639_3_eng": "Clarke 1866"}
+    	"_code": {
+			"_nid": "geo_ellipsoids",
+			"_lid": "5",
+			"_gid": "geo_ellipsoids_5",
+			"_aid": ["5"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Clarke 1866"}
+    	}
+
     },
     {
-        "_code_nid": "geo_ellipsoids",
-        "_code_lid": "6",
-        "_code_gid": "geo_ellipsoids_6",
-        "_code_aid": ["6"],
-        "_info_title": {"iso_639_3_eng": "Clarke 1880"}
+    	"_code": {
+			"_nid": "geo_ellipsoids",
+			"_lid": "6",
+			"_gid": "geo_ellipsoids_6",
+			"_aid": ["6"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Clarke 1880"}
+    	}
+
     },
     {
-        "_code_nid": "geo_ellipsoids",
-        "_code_lid": "7",
-        "_code_gid": "geo_ellipsoids_7",
-        "_code_aid": ["7"],
-        "_info_title": {"iso_639_3_eng": "Everest"}
+    	"_code": {
+			"_nid": "geo_ellipsoids",
+			"_lid": "7",
+			"_gid": "geo_ellipsoids_7",
+			"_aid": ["7"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Everest"}
+    	}
+
     },
     {
-        "_code_nid": "geo_ellipsoids",
-        "_code_lid": "8",
-        "_code_gid": "geo_ellipsoids_8",
-        "_code_aid": ["8"],
-        "_info_title": {"iso_639_3_eng": "GRS 80"}
+    	"_code": {
+			"_nid": "geo_ellipsoids",
+			"_lid": "8",
+			"_gid": "geo_ellipsoids_8",
+			"_aid": ["8"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "GRS 80"}
+    	}
+
     },
     {
-        "_code_nid": "geo_ellipsoids",
-        "_code_lid": "9",
-        "_code_gid": "geo_ellipsoids_9",
-        "_code_aid": ["9"],
-        "_info_title": {"iso_639_3_eng": "Helmert 1906"}
+    	"_code": {
+			"_nid": "geo_ellipsoids",
+			"_lid": "9",
+			"_gid": "geo_ellipsoids_9",
+			"_aid": ["9"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Helmert 1906"}
+    	}
+
     },
     {
-        "_code_nid": "geo_ellipsoids",
-        "_code_lid": "10",
-        "_code_gid": "geo_ellipsoids_10",
-        "_code_aid": ["10"],
-        "_info_title": {"iso_639_3_eng": "Hough"}
+    	"_code": {
+			"_nid": "geo_ellipsoids",
+			"_lid": "10",
+			"_gid": "geo_ellipsoids_10",
+			"_aid": ["10"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Hough"}
+    	}
+
     },
     {
-        "_code_nid": "geo_ellipsoids",
-        "_code_lid": "11",
-        "_code_gid": "geo_ellipsoids_11",
-        "_code_aid": ["11"],
-        "_info_title": {"iso_639_3_eng": "International"}
+    	"_code": {
+			"_nid": "geo_ellipsoids",
+			"_lid": "11",
+			"_gid": "geo_ellipsoids_11",
+			"_aid": ["11"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "International"}
+    	}
+
     },
     {
-        "_code_nid": "geo_ellipsoids",
-        "_code_lid": "12",
-        "_code_gid": "geo_ellipsoids_12",
-        "_code_aid": ["12"],
-        "_info_title": {"iso_639_3_eng": "Krassovsky"}
+    	"_code": {
+			"_nid": "geo_ellipsoids",
+			"_lid": "12",
+			"_gid": "geo_ellipsoids_12",
+			"_aid": ["12"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Krassovsky"}
+    	}
+
     },
     {
-        "_code_nid": "geo_ellipsoids",
-        "_code_lid": "13",
-        "_code_gid": "geo_ellipsoids_13",
-        "_code_aid": ["13"],
-        "_info_title": {"iso_639_3_eng": "Modified Airy"}
+    	"_code": {
+			"_nid": "geo_ellipsoids",
+			"_lid": "13",
+			"_gid": "geo_ellipsoids_13",
+			"_aid": ["13"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Modified Airy"}
+    	}
+
     },
     {
-        "_code_nid": "geo_ellipsoids",
-        "_code_lid": "14",
-        "_code_gid": "geo_ellipsoids_14",
-        "_code_aid": ["14"],
-        "_info_title": {"iso_639_3_eng": "Modified Everest"}
+    	"_code": {
+			"_nid": "geo_ellipsoids",
+			"_lid": "14",
+			"_gid": "geo_ellipsoids_14",
+			"_aid": ["14"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Modified Everest"}
+    	}
+
     },
     {
-        "_code_nid": "geo_ellipsoids",
-        "_code_lid": "15",
-        "_code_gid": "geo_ellipsoids_15",
-        "_code_aid": ["15"],
-        "_info_title": {"iso_639_3_eng": "Modified Fischer 1960"}
+    	"_code": {
+			"_nid": "geo_ellipsoids",
+			"_lid": "15",
+			"_gid": "geo_ellipsoids_15",
+			"_aid": ["15"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Modified Fischer 1960"}
+    	}
+
     },
     {
-        "_code_nid": "geo_ellipsoids",
-        "_code_lid": "16",
-        "_code_gid": "geo_ellipsoids_16",
-        "_code_aid": ["16"],
-        "_info_title": {"iso_639_3_eng": "South American 1969"}
+    	"_code": {
+			"_nid": "geo_ellipsoids",
+			"_lid": "16",
+			"_gid": "geo_ellipsoids_16",
+			"_aid": ["16"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "South American 1969"}
+    	}
+
     },
     {
-        "_code_nid": "geo_ellipsoids",
-        "_code_lid": "17",
-        "_code_gid": "geo_ellipsoids_17",
-        "_code_aid": ["17"],
-        "_info_title": {"iso_639_3_eng": "WGS-72"}
+    	"_code": {
+			"_nid": "geo_ellipsoids",
+			"_lid": "17",
+			"_gid": "geo_ellipsoids_17",
+			"_aid": ["17"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "WGS-72"}
+    	}
+
     },
     {
-        "_code_nid": "geo_ellipsoids",
-        "_code_lid": "18",
-        "_code_gid": "geo_ellipsoids_18",
-        "_code_aid": ["18"],
-        "_info_title": {"iso_639_3_eng": "WGS-84"}
+    	"_code": {
+			"_nid": "geo_ellipsoids",
+			"_lid": "18",
+			"_gid": "geo_ellipsoids_18",
+			"_aid": ["18"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "WGS-84"}
+    	}
+
     },
     
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "1",
-        "_code_gid": "geo_datum_1",
-        "_code_aid": ["1"],
-        "_info_title": {"iso_639_3_eng": "WGS-84"},
-        "_info_definition": {"iso_639_3_eng": "The latest revision is **WGS 84** (also known as  **WGS 1984**, **[EPSG](https://en.wikipedia.org/wiki/EPSG "EPSG"):4326**), established and maintained by the United States [National Geospatial-Intelligence Agency](https://en.wikipedia.org/wiki/National_Geospatial-Intelligence_Agency "National Geospatial-Intelligence Agency") since 1984, and last revised in 2014."},
-        "_info_description": {"iso_639_3_eng": "The *World Geodetic System* ([WGS](https://en.wikipedia.org/wiki/World_Geodetic_System#WGS84)) is a standard for use in [cartography](https://en.wikipedia.org/wiki/Cartography "Cartography"), [geodesy](https://en.wikipedia.org/wiki/Geodesy "Geodesy"), and [satellite navigation](https://en.wikipedia.org/wiki/Satellite_navigation "Satellite navigation") including [GPS](https://en.wikipedia.org/wiki/GPS "GPS"). This standard includes the definition of the [coordinate system](https://en.wikipedia.org/wiki/Coordinate_system "Coordinate system")'s fundamental and derived constants, the [normal gravity](https://en.wikipedia.org/wiki/Normal_gravity "Normal gravity") [Earth Gravitational Model](https://en.wikipedia.org/wiki/Earth_Gravitational_Model "Earth Gravitational Model") (EGM), a description of the associated [World Magnetic Model (WMM)](https://en.wikipedia.org/wiki/World_Magnetic_Model "World Magnetic Model"), and a current list of local datum transformations."},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "1",
+			"_gid": "geo_datum_1",
+			"_aid": ["1"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "WGS-84"},
+			"_definition": {"iso_639_3_eng": "The latest revision is **WGS 84** (also known as  **WGS 1984**, **[EPSG](https://en.wikipedia.org/wiki/EPSG "EPSG"):4326**), established and maintained by the United States [National Geospatial-Intelligence Agency](https://en.wikipedia.org/wiki/National_Geospatial-Intelligence_Agency "National Geospatial-Intelligence Agency") since 1984, and last revised in 2014."},
+			"_description": {"iso_639_3_eng": "The *World Geodetic System* ([WGS](https://en.wikipedia.org/wiki/World_Geodetic_System#WGS84)) is a standard for use in [cartography](https://en.wikipedia.org/wiki/Cartography "Cartography"), [geodesy](https://en.wikipedia.org/wiki/Geodesy "Geodesy"), and [satellite navigation](https://en.wikipedia.org/wiki/Satellite_navigation "Satellite navigation") including [GPS](https://en.wikipedia.org/wiki/GPS "GPS"). This standard includes the definition of the [coordinate system](https://en.wikipedia.org/wiki/Coordinate_system "Coordinate system")'s fundamental and derived constants, the [normal gravity](https://en.wikipedia.org/wiki/Normal_gravity "Normal gravity") [Earth Gravitational Model](https://en.wikipedia.org/wiki/Earth_Gravitational_Model "Earth Gravitational Model") (EGM), a description of the associated [World Magnetic Model (WMM)](https://en.wikipedia.org/wiki/World_Magnetic_Model "World Magnetic Model"), and a current list of local datum transformations."}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_18",
         "geo_datum_delta-a": 0,
         "geo_datum_delta-f": 0,
@@ -152,12 +250,16 @@
         "geo_datum_delta-z": 0
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "2",
-        "_code_gid": "geo_datum_2",
-        "_code_aid": ["2"],
-        "_info_title": {"iso_639_3_eng": "WGS-72"},
-        "_info_definition": {"iso_639_3_eng": "Earlier schemes of WGS-84 included WGS 72, WGS 66, and WGS 60."},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "2",
+			"_gid": "geo_datum_2",
+			"_aid": ["2"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "WGS-72"},
+			"_definition": {"iso_639_3_eng": "Earlier schemes of WGS-84 included WGS 72, WGS 66, and WGS 60."}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_17",
         "geo_datum_delta-a": 2,
         "geo_datum_delta-f": 0.000312106,
@@ -166,11 +268,15 @@
         "geo_datum_delta-z": 5
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "3",
-        "_code_gid": "geo_datum_3",
-        "_code_aid": ["3"],
-        "_info_title": {"iso_639_3_eng": "Ain El Abd 1970"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "3",
+			"_gid": "geo_datum_3",
+			"_aid": ["3"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Ain El Abd 1970"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -179,11 +285,15 @@
         "geo_datum_delta-z": -2
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "4",
-        "_code_gid": "geo_datum_4",
-        "_code_aid": ["4"],
-        "_info_title": {"iso_639_3_eng": "Alaska (NAD-27)"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "4",
+			"_gid": "geo_datum_4",
+			"_aid": ["4"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Alaska (NAD-27)"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_5",
         "geo_datum_delta-a": -69.4,
         "geo_datum_delta-f": -0.37264639,
@@ -192,11 +302,15 @@
         "geo_datum_delta-z": 172
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "5",
-        "_code_gid": "geo_datum_5",
-        "_code_aid": ["5"],
-        "_info_title": {"iso_639_3_eng": "Alaska/Canada NAD-27"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "5",
+			"_gid": "geo_datum_5",
+			"_aid": ["5"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Alaska/Canada NAD-27"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_5",
         "geo_datum_delta-a": -69.4,
         "geo_datum_delta-f": -0.37264639,
@@ -205,11 +319,15 @@
         "geo_datum_delta-z": 185
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "6",
-        "_code_gid": "geo_datum_6",
-        "_code_aid": ["6"],
-        "_info_title": {"iso_639_3_eng": "Anna 1 Astro 1965"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "6",
+			"_gid": "geo_datum_6",
+			"_aid": ["6"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Anna 1 Astro 1965"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_2",
         "geo_datum_delta-a": -23,
         "geo_datum_delta-f": -0.00081204,
@@ -218,11 +336,15 @@
         "geo_datum_delta-z": 435
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "7",
-        "_code_gid": "geo_datum_7",
-        "_code_aid": ["7"],
-        "_info_title": {"iso_639_3_eng": "ARC-1950 mean"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "7",
+			"_gid": "geo_datum_7",
+			"_aid": ["7"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "ARC-1950 mean"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_6",
         "geo_datum_delta-a": -112.145,
         "geo_datum_delta-f": -0.54750714,
@@ -231,11 +353,15 @@
         "geo_datum_delta-z": -294
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "8",
-        "_code_gid": "geo_datum_8",
-        "_code_aid": ["8"],
-        "_info_title": {"iso_639_3_eng": "ARC-1960 mean"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "8",
+			"_gid": "geo_datum_8",
+			"_aid": ["8"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "ARC-1960 mean"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_6",
         "geo_datum_delta-a": -112.145,
         "geo_datum_delta-f": -0.54750714,
@@ -244,11 +370,15 @@
         "geo_datum_delta-z": -300
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "9",
-        "_code_gid": "geo_datum_9",
-        "_code_aid": ["9"],
-        "_info_title": {"iso_639_3_eng": "Ascension Island '58"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "9",
+			"_gid": "geo_datum_9",
+			"_aid": ["9"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Ascension Island '58"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -257,11 +387,15 @@
         "geo_datum_delta-z": 52
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "10",
-        "_code_gid": "geo_datum_10",
-        "_code_aid": ["10"],
-        "_info_title": {"iso_639_3_eng": "Astro B4 Sor.Atoll"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "10",
+			"_gid": "geo_datum_10",
+			"_aid": ["10"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Astro B4 Sor.Atoll"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -270,11 +404,15 @@
         "geo_datum_delta-z": -333
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "11",
-        "_code_gid": "geo_datum_11",
-        "_code_aid": ["11"],
-        "_info_title": {"iso_639_3_eng": "Astro Beacon \"E\""},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "11",
+			"_gid": "geo_datum_11",
+			"_aid": ["11"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Astro Beacon \"E\""}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -283,11 +421,15 @@
         "geo_datum_delta-z": -272
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "12",
-        "_code_gid": "geo_datum_12",
-        "_code_aid": ["12"],
-        "_info_title": {"iso_639_3_eng": "Astro Pos 71/4"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "12",
+			"_gid": "geo_datum_12",
+			"_aid": ["12"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Astro Pos 71/4"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -296,11 +438,15 @@
         "geo_datum_delta-z": -494
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "13",
-        "_code_gid": "geo_datum_13",
-        "_code_aid": ["13"],
-        "_info_title": {"iso_639_3_eng": "Astronomic Stn. '52"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "13",
+			"_gid": "geo_datum_13",
+			"_aid": ["13"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Astronomic Stn. '52"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -309,11 +455,15 @@
         "geo_datum_delta-z": -25
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "14",
-        "_code_gid": "geo_datum_14",
-        "_code_aid": ["14"],
-        "_info_title": {"iso_639_3_eng": "Australian Geodetic 1984"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "14",
+			"_gid": "geo_datum_14",
+			"_aid": ["14"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Australian Geodetic 1984"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_2",
         "geo_datum_delta-a": -23,
         "geo_datum_delta-f": -0.00081204,
@@ -322,11 +472,15 @@
         "geo_datum_delta-z": 149
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "15",
-        "_code_gid": "geo_datum_15",
-        "_code_aid": ["15"],
-        "_info_title": {"iso_639_3_eng": "Bahamas (NAD-27)"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "15",
+			"_gid": "geo_datum_15",
+			"_aid": ["15"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Bahamas (NAD-27)"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_5",
         "geo_datum_delta-a": -69.4,
         "geo_datum_delta-f": -0.37264639,
@@ -335,11 +489,15 @@
         "geo_datum_delta-z": 178
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "16",
-        "_code_gid": "geo_datum_16",
-        "_code_aid": ["16"],
-        "_info_title": {"iso_639_3_eng": "Bellevue (IGN)"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "16",
+			"_gid": "geo_datum_16",
+			"_aid": ["16"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Bellevue (IGN)"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -348,11 +506,15 @@
         "geo_datum_delta-z": 472
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "17",
-        "_code_gid": "geo_datum_17",
-        "_code_aid": ["17"],
-        "_info_title": {"iso_639_3_eng": "Bermuda 1957"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "17",
+			"_gid": "geo_datum_17",
+			"_aid": ["17"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Bermuda 1957"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_5",
         "geo_datum_delta-a": -69.4,
         "geo_datum_delta-f": -0.37264639,
@@ -361,11 +523,15 @@
         "geo_datum_delta-z": 296
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "18",
-        "_code_gid": "geo_datum_18",
-        "_code_aid": ["18"],
-        "_info_title": {"iso_639_3_eng": "Bogota Observatory"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "18",
+			"_gid": "geo_datum_18",
+			"_aid": ["18"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Bogota Observatory"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -374,11 +540,15 @@
         "geo_datum_delta-z": -318
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "19",
-        "_code_gid": "geo_datum_19",
-        "_code_aid": ["19"],
-        "_info_title": {"iso_639_3_eng": "Bukit Rimpah"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "19",
+			"_gid": "geo_datum_19",
+			"_aid": ["19"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Bukit Rimpah"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_3",
         "geo_datum_delta-a": 739.845,
         "geo_datum_delta-f": 0.10037483,
@@ -387,11 +557,15 @@
         "geo_datum_delta-z": -48
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "20",
-        "_code_gid": "geo_datum_20",
-        "_code_aid": ["20"],
-        "_info_title": {"iso_639_3_eng": "Camp Area Astro"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "20",
+			"_gid": "geo_datum_20",
+			"_aid": ["20"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Camp Area Astro"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -400,11 +574,15 @@
         "geo_datum_delta-z": 239
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "21",
-        "_code_gid": "geo_datum_21",
-        "_code_aid": ["21"],
-        "_info_title": {"iso_639_3_eng": "Campo Inchauspe"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "21",
+			"_gid": "geo_datum_21",
+			"_aid": ["21"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Campo Inchauspe"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -413,11 +591,15 @@
         "geo_datum_delta-z": 90
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "22",
-        "_code_gid": "geo_datum_22",
-        "_code_aid": ["22"],
-        "_info_title": {"iso_639_3_eng": "Canada Mean (NAD27)"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "22",
+			"_gid": "geo_datum_22",
+			"_aid": ["22"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Canada Mean (NAD27)"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_5",
         "geo_datum_delta-a": -69.4,
         "geo_datum_delta-f": -0.37264639,
@@ -426,11 +608,15 @@
         "geo_datum_delta-z": 187
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "23",
-        "_code_gid": "geo_datum_23",
-        "_code_aid": ["23"],
-        "_info_title": {"iso_639_3_eng": "Canal Zone (NAD27)"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "23",
+			"_gid": "geo_datum_23",
+			"_aid": ["23"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Canal Zone (NAD27)"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_5",
         "geo_datum_delta-a": -69.4,
         "geo_datum_delta-f": -0.37264639,
@@ -439,11 +625,15 @@
         "geo_datum_delta-z": 201
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "24",
-        "_code_gid": "geo_datum_24",
-        "_code_aid": ["24"],
-        "_info_title": {"iso_639_3_eng": "Canton Island 1966"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "24",
+			"_gid": "geo_datum_24",
+			"_aid": ["24"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Canton Island 1966"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -452,11 +642,15 @@
         "geo_datum_delta-z": -375
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "25",
-        "_code_gid": "geo_datum_25",
-        "_code_aid": ["25"],
-        "_info_title": {"iso_639_3_eng": "Cape"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "25",
+			"_gid": "geo_datum_25",
+			"_aid": ["25"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Cape"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_6",
         "geo_datum_delta-a": -112.145,
         "geo_datum_delta-f": -0.54750714,
@@ -465,11 +659,15 @@
         "geo_datum_delta-z": -292
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "26",
-        "_code_gid": "geo_datum_26",
-        "_code_aid": ["26"],
-        "_info_title": {"iso_639_3_eng": "Cape Canaveral mean"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "26",
+			"_gid": "geo_datum_26",
+			"_aid": ["26"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Cape Canaveral mean"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_5",
         "geo_datum_delta-a": -69.4,
         "geo_datum_delta-f": -0.37264639,
@@ -478,11 +676,15 @@
         "geo_datum_delta-z": 181
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "27",
-        "_code_gid": "geo_datum_27",
-        "_code_aid": ["27"],
-        "_info_title": {"iso_639_3_eng": "Carribean (NAD27)"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "27",
+			"_gid": "geo_datum_27",
+			"_aid": ["27"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Carribean (NAD27)"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_5",
         "geo_datum_delta-a": -69.4,
         "geo_datum_delta-f": -0.37264639,
@@ -491,11 +693,15 @@
         "geo_datum_delta-z": 178
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "28",
-        "_code_gid": "geo_datum_28",
-        "_code_aid": ["28"],
-        "_info_title": {"iso_639_3_eng": "Carthage"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "28",
+			"_gid": "geo_datum_28",
+			"_aid": ["28"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Carthage"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_6",
         "geo_datum_delta-a": -112.145,
         "geo_datum_delta-f": -0.54750714,
@@ -504,11 +710,15 @@
         "geo_datum_delta-z": 431
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "29",
-        "_code_gid": "geo_datum_29",
-        "_code_aid": ["29"],
-        "_info_title": {"iso_639_3_eng": "Central America (NAD27)"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "29",
+			"_gid": "geo_datum_29",
+			"_aid": ["29"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Central America (NAD27)"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_5",
         "geo_datum_delta-a": -69.4,
         "geo_datum_delta-f": -0.37264639,
@@ -517,11 +727,15 @@
         "geo_datum_delta-z": 194
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "30",
-        "_code_gid": "geo_datum_30",
-        "_code_aid": ["30"],
-        "_info_title": {"iso_639_3_eng": "Chatham 1971"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "30",
+			"_gid": "geo_datum_30",
+			"_aid": ["30"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Chatham 1971"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -530,11 +744,15 @@
         "geo_datum_delta-z": 113
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "31",
-        "_code_gid": "geo_datum_31",
-        "_code_aid": ["31"],
-        "_info_title": {"iso_639_3_eng": "Chua Astro"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "31",
+			"_gid": "geo_datum_31",
+			"_aid": ["31"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Chua Astro"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -543,11 +761,15 @@
         "geo_datum_delta-z": -29
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "32",
-        "_code_gid": "geo_datum_32",
-        "_code_aid": ["32"],
-        "_info_title": {"iso_639_3_eng": "Corrego Alegre"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "32",
+			"_gid": "geo_datum_32",
+			"_aid": ["32"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Corrego Alegre"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -556,11 +778,15 @@
         "geo_datum_delta-z": -6
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "33",
-        "_code_gid": "geo_datum_33",
-        "_code_aid": ["33"],
-        "_info_title": {"iso_639_3_eng": "Corrego Alegre (Provisional)"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "33",
+			"_gid": "geo_datum_33",
+			"_aid": ["33"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Corrego Alegre (Provisional)"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -569,11 +795,15 @@
         "geo_datum_delta-z": -6
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "34",
-        "_code_gid": "geo_datum_34",
-        "_code_aid": ["34"],
-        "_info_title": {"iso_639_3_eng": "Cuba (NAD27)"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "34",
+			"_gid": "geo_datum_34",
+			"_aid": ["34"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Cuba (NAD27)"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_5",
         "geo_datum_delta-a": -69.4,
         "geo_datum_delta-f": -0.37264639,
@@ -582,11 +812,15 @@
         "geo_datum_delta-z": 178
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "35",
-        "_code_gid": "geo_datum_35",
-        "_code_aid": ["35"],
-        "_info_title": {"iso_639_3_eng": "Cyprus"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "35",
+			"_gid": "geo_datum_35",
+			"_aid": ["35"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Cyprus"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -595,11 +829,15 @@
         "geo_datum_delta-z": -140
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "36",
-        "_code_gid": "geo_datum_36",
-        "_code_aid": ["36"],
-        "_info_title": {"iso_639_3_eng": "Djakarta(Batavia)"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "36",
+			"_gid": "geo_datum_36",
+			"_aid": ["36"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Djakarta(Batavia)"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_3",
         "geo_datum_delta-a": 739.845,
         "geo_datum_delta-f": 0.10037483,
@@ -608,11 +846,15 @@
         "geo_datum_delta-z": -50
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "37",
-        "_code_gid": "geo_datum_37",
-        "_code_aid": ["37"],
-        "_info_title": {"iso_639_3_eng": "DOS 1968"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "37",
+			"_gid": "geo_datum_37",
+			"_aid": ["37"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "DOS 1968"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -621,11 +863,15 @@
         "geo_datum_delta-z": -752
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "38",
-        "_code_gid": "geo_datum_38",
-        "_code_aid": ["38"],
-        "_info_title": {"iso_639_3_eng": "Easter lsland 1967"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "38",
+			"_gid": "geo_datum_38",
+			"_aid": ["38"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Easter lsland 1967"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -634,11 +880,15 @@
         "geo_datum_delta-z": 111
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "39",
-        "_code_gid": "geo_datum_39",
-        "_code_aid": ["39"],
-        "_info_title": {"iso_639_3_eng": "Egypt"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "39",
+			"_gid": "geo_datum_39",
+			"_aid": ["39"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Egypt"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -647,11 +897,15 @@
         "geo_datum_delta-z": -151
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "40",
-        "_code_gid": "geo_datum_40",
-        "_code_aid": ["40"],
-        "_info_title": {"iso_639_3_eng": "European 1950"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "40",
+			"_gid": "geo_datum_40",
+			"_aid": ["40"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "European 1950"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -660,11 +914,15 @@
         "geo_datum_delta-z": -120
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "41",
-        "_code_gid": "geo_datum_41",
-        "_code_aid": ["41"],
-        "_info_title": {"iso_639_3_eng": "European 1950 mean"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "41",
+			"_gid": "geo_datum_41",
+			"_aid": ["41"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "European 1950 mean"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -673,11 +931,15 @@
         "geo_datum_delta-z": -121
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "42",
-        "_code_gid": "geo_datum_42",
-        "_code_aid": ["42"],
-        "_info_title": {"iso_639_3_eng": "European 1979 mean"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "42",
+			"_gid": "geo_datum_42",
+			"_aid": ["42"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "European 1979 mean"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -686,11 +948,15 @@
         "geo_datum_delta-z": -119
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "43",
-        "_code_gid": "geo_datum_43",
-        "_code_aid": ["43"],
-        "_info_title": {"iso_639_3_eng": "Finnish Nautical Chart"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "43",
+			"_gid": "geo_datum_43",
+			"_aid": ["43"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Finnish Nautical Chart"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -699,11 +965,15 @@
         "geo_datum_delta-z": -97
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "44",
-        "_code_gid": "geo_datum_44",
-        "_code_aid": ["44"],
-        "_info_title": {"iso_639_3_eng": "Gandajika Base"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "44",
+			"_gid": "geo_datum_44",
+			"_aid": ["44"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Gandajika Base"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -712,11 +982,15 @@
         "geo_datum_delta-z": 50
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "45",
-        "_code_gid": "geo_datum_45",
-        "_code_aid": ["45"],
-        "_info_title": {"iso_639_3_eng": "Geodetic Datum '49"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "45",
+			"_gid": "geo_datum_45",
+			"_aid": ["45"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Geodetic Datum '49"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -725,11 +999,15 @@
         "geo_datum_delta-z": 209
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "46",
-        "_code_gid": "geo_datum_46",
-        "_code_aid": ["46"],
-        "_info_title": {"iso_639_3_eng": "Ghana"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "46",
+			"_gid": "geo_datum_46",
+			"_aid": ["46"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Ghana"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_18",
         "geo_datum_delta-a": 0,
         "geo_datum_delta-f": 0,
@@ -738,11 +1016,15 @@
         "geo_datum_delta-z": 0
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "47",
-        "_code_gid": "geo_datum_47",
-        "_code_aid": ["47"],
-        "_info_title": {"iso_639_3_eng": "Greenland (NAD27)"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "47",
+			"_gid": "geo_datum_47",
+			"_aid": ["47"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Greenland (NAD27)"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_5",
         "geo_datum_delta-a": -69.4,
         "geo_datum_delta-f": -0.37264639,
@@ -751,11 +1033,15 @@
         "geo_datum_delta-z": 195
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "48",
-        "_code_gid": "geo_datum_48",
-        "_code_aid": ["48"],
-        "_info_title": {"iso_639_3_eng": "Guam 1963"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "48",
+			"_gid": "geo_datum_48",
+			"_aid": ["48"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Guam 1963"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_5",
         "geo_datum_delta-a": -69.4,
         "geo_datum_delta-f": -0.37264639,
@@ -764,11 +1050,15 @@
         "geo_datum_delta-z": 259
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "49",
-        "_code_gid": "geo_datum_49",
-        "_code_aid": ["49"],
-        "_info_title": {"iso_639_3_eng": "Gunung Segara"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "49",
+			"_gid": "geo_datum_49",
+			"_aid": ["49"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Gunung Segara"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_3",
         "geo_datum_delta-a": 739.845,
         "geo_datum_delta-f": 0.10037483,
@@ -777,11 +1067,15 @@
         "geo_datum_delta-z": 41
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "50",
-        "_code_gid": "geo_datum_50",
-        "_code_aid": ["50"],
-        "_info_title": {"iso_639_3_eng": "Gunung Serindung 1962"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "50",
+			"_gid": "geo_datum_50",
+			"_aid": ["50"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Gunung Serindung 1962"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_18",
         "geo_datum_delta-a": 0,
         "geo_datum_delta-f": 0,
@@ -790,11 +1084,15 @@
         "geo_datum_delta-z": 0
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "51",
-        "_code_gid": "geo_datum_51",
-        "_code_aid": ["51"],
-        "_info_title": {"iso_639_3_eng": "GUX 1 Astro"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "51",
+			"_gid": "geo_datum_51",
+			"_aid": ["51"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "GUX 1 Astro"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -803,11 +1101,15 @@
         "geo_datum_delta-z": -751
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "52",
-        "_code_gid": "geo_datum_52",
-        "_code_aid": ["52"],
-        "_info_title": {"iso_639_3_eng": "Herat North"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "52",
+			"_gid": "geo_datum_52",
+			"_aid": ["52"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Herat North"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -816,11 +1118,15 @@
         "geo_datum_delta-z": 114
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "53",
-        "_code_gid": "geo_datum_53",
-        "_code_aid": ["53"],
-        "_info_title": {"iso_639_3_eng": "Hjorsey 1955"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "53",
+			"_gid": "geo_datum_53",
+			"_aid": ["53"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Hjorsey 1955"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -829,11 +1135,15 @@
         "geo_datum_delta-z": -86
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "54",
-        "_code_gid": "geo_datum_54",
-        "_code_aid": ["54"],
-        "_info_title": {"iso_639_3_eng": "Hong Kong 1963"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "54",
+			"_gid": "geo_datum_54",
+			"_aid": ["54"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Hong Kong 1963"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -842,11 +1152,15 @@
         "geo_datum_delta-z": -189
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "55",
-        "_code_gid": "geo_datum_55",
-        "_code_aid": ["55"],
-        "_info_title": {"iso_639_3_eng": "Hu-Tzu-Shan"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "55",
+			"_gid": "geo_datum_55",
+			"_aid": ["55"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Hu-Tzu-Shan"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -855,11 +1169,15 @@
         "geo_datum_delta-z": -201
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "56",
-        "_code_gid": "geo_datum_56",
-        "_code_aid": ["56"],
-        "_info_title": {"iso_639_3_eng": "Indian"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "56",
+			"_gid": "geo_datum_56",
+			"_aid": ["56"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Indian"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_7",
         "geo_datum_delta-a": 860.655,
         "geo_datum_delta-f": 0.28361368,
@@ -868,11 +1186,15 @@
         "geo_datum_delta-z": 257
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "57",
-        "_code_gid": "geo_datum_57",
-        "_code_aid": ["57"],
-        "_info_title": {"iso_639_3_eng": "Iran"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "57",
+			"_gid": "geo_datum_57",
+			"_aid": ["57"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Iran"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -881,11 +1203,15 @@
         "geo_datum_delta-z": -164
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "58",
-        "_code_gid": "geo_datum_58",
-        "_code_aid": ["58"],
-        "_info_title": {"iso_639_3_eng": "Ireland 1965"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "58",
+			"_gid": "geo_datum_58",
+			"_aid": ["58"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Ireland 1965"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_13",
         "geo_datum_delta-a": 796.811,
         "geo_datum_delta-f": 0.11960023,
@@ -894,11 +1220,15 @@
         "geo_datum_delta-z": 611
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "59",
-        "_code_gid": "geo_datum_59",
-        "_code_aid": ["59"],
-        "_info_title": {"iso_639_3_eng": "ISTS 073 Astro '69"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "59",
+			"_gid": "geo_datum_59",
+			"_aid": ["59"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "ISTS 073 Astro '69"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -907,11 +1237,15 @@
         "geo_datum_delta-z": -229
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "60",
-        "_code_gid": "geo_datum_60",
-        "_code_aid": ["60"],
-        "_info_title": {"iso_639_3_eng": "Johnston Island '61"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "60",
+			"_gid": "geo_datum_60",
+			"_aid": ["60"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Johnston Island '61"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -920,11 +1254,15 @@
         "geo_datum_delta-z": -204
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "61",
-        "_code_gid": "geo_datum_61",
-        "_code_aid": ["61"],
-        "_info_title": {"iso_639_3_eng": "Kandawala"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "61",
+			"_gid": "geo_datum_61",
+			"_aid": ["61"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Kandawala"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_7",
         "geo_datum_delta-a": 860.655,
         "geo_datum_delta-f": 0.28361368,
@@ -933,11 +1271,15 @@
         "geo_datum_delta-z": 86
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "62",
-        "_code_gid": "geo_datum_62",
-        "_code_aid": ["62"],
-        "_info_title": {"iso_639_3_eng": "Kerguelen Island"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "62",
+			"_gid": "geo_datum_62",
+			"_aid": ["62"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Kerguelen Island"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -946,11 +1288,15 @@
         "geo_datum_delta-z": 103
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "63",
-        "_code_gid": "geo_datum_63",
-        "_code_aid": ["63"],
-        "_info_title": {"iso_639_3_eng": "Kertau '48"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "63",
+			"_gid": "geo_datum_63",
+			"_aid": ["63"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Kertau '48"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_14",
         "geo_datum_delta-a": 832.937,
         "geo_datum_delta-f": 0.28361368,
@@ -959,11 +1305,15 @@
         "geo_datum_delta-z": 5
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "64",
-        "_code_gid": "geo_datum_64",
-        "_code_aid": ["64"],
-        "_info_title": {"iso_639_3_eng": "L.C. 5 Astro"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "64",
+			"_gid": "geo_datum_64",
+			"_aid": ["64"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "L.C. 5 Astro"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_5",
         "geo_datum_delta-a": -69.4,
         "geo_datum_delta-f": -0.37264639,
@@ -972,11 +1322,15 @@
         "geo_datum_delta-z": 147
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "65",
-        "_code_gid": "geo_datum_65",
-        "_code_aid": ["65"],
-        "_info_title": {"iso_639_3_eng": "La Reunion"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "65",
+			"_gid": "geo_datum_65",
+			"_aid": ["65"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "La Reunion"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -985,11 +1339,15 @@
         "geo_datum_delta-z": -1262
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "66",
-        "_code_gid": "geo_datum_66",
-        "_code_aid": ["66"],
-        "_info_title": {"iso_639_3_eng": "Liberia 1964"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "66",
+			"_gid": "geo_datum_66",
+			"_aid": ["66"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Liberia 1964"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_6",
         "geo_datum_delta-a": -112.145,
         "geo_datum_delta-f": -0.54750714,
@@ -998,11 +1356,15 @@
         "geo_datum_delta-z": 88
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "67",
-        "_code_gid": "geo_datum_67",
-        "_code_aid": ["67"],
-        "_info_title": {"iso_639_3_eng": "Luzon"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "67",
+			"_gid": "geo_datum_67",
+			"_aid": ["67"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Luzon"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_5",
         "geo_datum_delta-a": -69.4,
         "geo_datum_delta-f": -0.37264639,
@@ -1011,11 +1373,15 @@
         "geo_datum_delta-z": -51
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "68",
-        "_code_gid": "geo_datum_68",
-        "_code_aid": ["68"],
-        "_info_title": {"iso_639_3_eng": "Mahe 1971"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "68",
+			"_gid": "geo_datum_68",
+			"_aid": ["68"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Mahe 1971"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_6",
         "geo_datum_delta-a": -112.145,
         "geo_datum_delta-f": -0.54750714,
@@ -1024,11 +1390,15 @@
         "geo_datum_delta-z": -134
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "69",
-        "_code_gid": "geo_datum_69",
-        "_code_aid": ["69"],
-        "_info_title": {"iso_639_3_eng": "Marco Astro"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "69",
+			"_gid": "geo_datum_69",
+			"_aid": ["69"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Marco Astro"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -1037,11 +1407,15 @@
         "geo_datum_delta-z": 60
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "70",
-        "_code_gid": "geo_datum_70",
-        "_code_aid": ["70"],
-        "_info_title": {"iso_639_3_eng": "Masirah Is. (Nahrwan)"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "70",
+			"_gid": "geo_datum_70",
+			"_aid": ["70"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Masirah Is. (Nahrwan)"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_6",
         "geo_datum_delta-a": -112.145,
         "geo_datum_delta-f": -0.54750714,
@@ -1050,11 +1424,15 @@
         "geo_datum_delta-z": 369
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "71",
-        "_code_gid": "geo_datum_71",
-        "_code_aid": ["71"],
-        "_info_title": {"iso_639_3_eng": "Massawa"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "71",
+			"_gid": "geo_datum_71",
+			"_aid": ["71"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Massawa"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_3",
         "geo_datum_delta-a": 739.845,
         "geo_datum_delta-f": 0.10037483,
@@ -1063,11 +1441,15 @@
         "geo_datum_delta-z": 60
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "72",
-        "_code_gid": "geo_datum_72",
-        "_code_aid": ["72"],
-        "_info_title": {"iso_639_3_eng": "Merchich"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "72",
+			"_gid": "geo_datum_72",
+			"_aid": ["72"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Merchich"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_6",
         "geo_datum_delta-a": -112.145,
         "geo_datum_delta-f": -0.54750714,
@@ -1076,11 +1458,15 @@
         "geo_datum_delta-z": 47
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "73",
-        "_code_gid": "geo_datum_73",
-        "_code_aid": ["73"],
-        "_info_title": {"iso_639_3_eng": "Mexico (NAD27)"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "73",
+			"_gid": "geo_datum_73",
+			"_aid": ["73"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Mexico (NAD27)"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_5",
         "geo_datum_delta-a": -69.4,
         "geo_datum_delta-f": -0.37264639,
@@ -1089,11 +1475,15 @@
         "geo_datum_delta-z": 190
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "74",
-        "_code_gid": "geo_datum_74",
-        "_code_aid": ["74"],
-        "_info_title": {"iso_639_3_eng": "Midway Astro '61"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "74",
+			"_gid": "geo_datum_74",
+			"_aid": ["74"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Midway Astro '61"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -1102,11 +1492,15 @@
         "geo_datum_delta-z": 1227
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "75",
-        "_code_gid": "geo_datum_75",
-        "_code_aid": ["75"],
-        "_info_title": {"iso_639_3_eng": "Mindanao"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "75",
+			"_gid": "geo_datum_75",
+			"_aid": ["75"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Mindanao"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_5",
         "geo_datum_delta-a": -69.4,
         "geo_datum_delta-f": -0.37264639,
@@ -1115,11 +1509,15 @@
         "geo_datum_delta-z": -72
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "76",
-        "_code_gid": "geo_datum_76",
-        "_code_aid": ["76"],
-        "_info_title": {"iso_639_3_eng": "Minna"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "76",
+			"_gid": "geo_datum_76",
+			"_aid": ["76"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Minna"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_6",
         "geo_datum_delta-a": -112.145,
         "geo_datum_delta-f": -0.54750714,
@@ -1128,11 +1526,15 @@
         "geo_datum_delta-z": 122
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "77",
-        "_code_gid": "geo_datum_77",
-        "_code_aid": ["77"],
-        "_info_title": {"iso_639_3_eng": "Montjong Lowe"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "77",
+			"_gid": "geo_datum_77",
+			"_aid": ["77"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Montjong Lowe"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_18",
         "geo_datum_delta-a": 0,
         "geo_datum_delta-f": 0,
@@ -1141,11 +1543,15 @@
         "geo_datum_delta-z": 0
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "78",
-        "_code_gid": "geo_datum_78",
-        "_code_aid": ["78"],
-        "_info_title": {"iso_639_3_eng": "Nahrwan"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "78",
+			"_gid": "geo_datum_78",
+			"_aid": ["78"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Nahrwan"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_6",
         "geo_datum_delta-a": -112.145,
         "geo_datum_delta-f": -0.54750714,
@@ -1154,11 +1560,15 @@
         "geo_datum_delta-z": 482
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "79",
-        "_code_gid": "geo_datum_79",
-        "_code_aid": ["79"],
-        "_info_title": {"iso_639_3_eng": "Naparima BWI"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "79",
+			"_gid": "geo_datum_79",
+			"_aid": ["79"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Naparima BWI"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -1167,11 +1577,15 @@
         "geo_datum_delta-z": 172
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "80",
-        "_code_gid": "geo_datum_80",
-        "_code_aid": ["80"],
-        "_info_title": {"iso_639_3_eng": "North America '83"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "80",
+			"_gid": "geo_datum_80",
+			"_aid": ["80"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "North America '83"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_8",
         "geo_datum_delta-a": 0,
         "geo_datum_delta-f": -0.00000016,
@@ -1180,11 +1594,15 @@
         "geo_datum_delta-z": 0
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "81",
-        "_code_gid": "geo_datum_81",
-        "_code_aid": ["81"],
-        "_info_title": {"iso_639_3_eng": "North America 1927 mean"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "81",
+			"_gid": "geo_datum_81",
+			"_aid": ["81"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "North America 1927 mean"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_5",
         "geo_datum_delta-a": -69.4,
         "geo_datum_delta-f": -0.37264639,
@@ -1193,11 +1611,15 @@
         "geo_datum_delta-z": 176
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "82",
-        "_code_gid": "geo_datum_82",
-        "_code_aid": ["82"],
-        "_info_title": {"iso_639_3_eng": "Observatorio 1966"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "82",
+			"_gid": "geo_datum_82",
+			"_aid": ["82"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Observatorio 1966"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -1206,11 +1628,15 @@
         "geo_datum_delta-z": 81
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "83",
-        "_code_gid": "geo_datum_83",
-        "_code_aid": ["83"],
-        "_info_title": {"iso_639_3_eng": "Old Egyptian"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "83",
+			"_gid": "geo_datum_83",
+			"_aid": ["83"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Old Egyptian"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_9",
         "geo_datum_delta-a": -63,
         "geo_datum_delta-f": 0.00480795,
@@ -1219,11 +1645,15 @@
         "geo_datum_delta-z": -13
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "84",
-        "_code_gid": "geo_datum_84",
-        "_code_aid": ["84"],
-        "_info_title": {"iso_639_3_eng": "Old Hawaiian mean"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "84",
+			"_gid": "geo_datum_84",
+			"_aid": ["84"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Old Hawaiian mean"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_5",
         "geo_datum_delta-a": -69.4,
         "geo_datum_delta-f": -0.37264639,
@@ -1232,11 +1662,15 @@
         "geo_datum_delta-z": -183
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "85",
-        "_code_gid": "geo_datum_85",
-        "_code_aid": ["85"],
-        "_info_title": {"iso_639_3_eng": "Old Hawaiian Kauai"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "85",
+			"_gid": "geo_datum_85",
+			"_aid": ["85"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Old Hawaiian Kauai"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_5",
         "geo_datum_delta-a": -69.4,
         "geo_datum_delta-f": -0.37264639,
@@ -1245,11 +1679,15 @@
         "geo_datum_delta-z": -172
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "86",
-        "_code_gid": "geo_datum_86",
-        "_code_aid": ["86"],
-        "_info_title": {"iso_639_3_eng": "Old Hawaiian Maui"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "86",
+			"_gid": "geo_datum_86",
+			"_aid": ["86"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Old Hawaiian Maui"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_5",
         "geo_datum_delta-a": -69.4,
         "geo_datum_delta-f": -0.37264639,
@@ -1258,11 +1696,15 @@
         "geo_datum_delta-z": -190
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "87",
-        "_code_gid": "geo_datum_87",
-        "_code_aid": ["87"],
-        "_info_title": {"iso_639_3_eng": "Old Hawaiian Oahu"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "87",
+			"_gid": "geo_datum_87",
+			"_aid": ["87"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Old Hawaiian Oahu"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_5",
         "geo_datum_delta-a": -69.4,
         "geo_datum_delta-f": -0.37264639,
@@ -1271,11 +1713,15 @@
         "geo_datum_delta-z": -181
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "88",
-        "_code_gid": "geo_datum_88",
-        "_code_aid": ["88"],
-        "_info_title": {"iso_639_3_eng": "Oman"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "88",
+			"_gid": "geo_datum_88",
+			"_aid": ["88"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Oman"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_6",
         "geo_datum_delta-a": -112.145,
         "geo_datum_delta-f": -0.54750714,
@@ -1284,11 +1730,15 @@
         "geo_datum_delta-z": 224
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "89",
-        "_code_gid": "geo_datum_89",
-        "_code_aid": ["89"],
-        "_info_title": {"iso_639_3_eng": "Ordnance Survey of Great Britain '36"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "89",
+			"_gid": "geo_datum_89",
+			"_aid": ["89"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Ordnance Survey of Great Britain '36"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_1",
         "geo_datum_delta-a": 573.604,
         "geo_datum_delta-f": 0.11960023,
@@ -1297,11 +1747,15 @@
         "geo_datum_delta-z": 431
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "90",
-        "_code_gid": "geo_datum_90",
-        "_code_aid": ["90"],
-        "_info_title": {"iso_639_3_eng": "Pico De Las Nieves"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "90",
+			"_gid": "geo_datum_90",
+			"_aid": ["90"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Pico De Las Nieves"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -1310,11 +1764,15 @@
         "geo_datum_delta-z": 127
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "91",
-        "_code_gid": "geo_datum_91",
-        "_code_aid": ["91"],
-        "_info_title": {"iso_639_3_eng": "Pitcairn Astro '67"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "91",
+			"_gid": "geo_datum_91",
+			"_aid": ["91"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Pitcairn Astro '67"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -1323,11 +1781,15 @@
         "geo_datum_delta-z": 42
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "92",
-        "_code_gid": "geo_datum_92",
-        "_code_aid": ["92"],
-        "_info_title": {"iso_639_3_eng": "Potsdam Rauenberg DHDN"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "92",
+			"_gid": "geo_datum_92",
+			"_aid": ["92"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Potsdam Rauenberg DHDN"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_3",
         "geo_datum_delta-a": 739.845,
         "geo_datum_delta-f": 0.10037483,
@@ -1336,11 +1798,15 @@
         "geo_datum_delta-z": 413
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "93",
-        "_code_gid": "geo_datum_93",
-        "_code_aid": ["93"],
-        "_info_title": {"iso_639_3_eng": "Provisional South American 1956 mean"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "93",
+			"_gid": "geo_datum_93",
+			"_aid": ["93"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Provisional South American 1956 mean"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -1349,11 +1815,15 @@
         "geo_datum_delta-z": -376
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "94",
-        "_code_gid": "geo_datum_94",
-        "_code_aid": ["94"],
-        "_info_title": {"iso_639_3_eng": "Provisional South Chilean 1963"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "94",
+			"_gid": "geo_datum_94",
+			"_aid": ["94"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Provisional South Chilean 1963"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -1362,11 +1832,15 @@
         "geo_datum_delta-z": 93
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "95",
-        "_code_gid": "geo_datum_95",
-        "_code_aid": ["95"],
-        "_info_title": {"iso_639_3_eng": "Puerto Rico"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "95",
+			"_gid": "geo_datum_95",
+			"_aid": ["95"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Puerto Rico"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_5",
         "geo_datum_delta-a": -69.4,
         "geo_datum_delta-f": -0.37264639,
@@ -1375,11 +1849,15 @@
         "geo_datum_delta-z": -101
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "96",
-        "_code_gid": "geo_datum_96",
-        "_code_aid": ["96"],
-        "_info_title": {"iso_639_3_eng": "Pulkovo 1942"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "96",
+			"_gid": "geo_datum_96",
+			"_aid": ["96"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Pulkovo 1942"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_12",
         "geo_datum_delta-a": -108,
         "geo_datum_delta-f": 28,
@@ -1388,11 +1866,15 @@
         "geo_datum_delta-z": 0
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "97",
-        "_code_gid": "geo_datum_97",
-        "_code_aid": ["97"],
-        "_info_title": {"iso_639_3_eng": "Qornoq"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "97",
+			"_gid": "geo_datum_97",
+			"_aid": ["97"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Qornoq"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -1401,11 +1883,15 @@
         "geo_datum_delta-z": -189
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "98",
-        "_code_gid": "geo_datum_98",
-        "_code_aid": ["98"],
-        "_info_title": {"iso_639_3_eng": "Quatar National"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "98",
+			"_gid": "geo_datum_98",
+			"_aid": ["98"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Quatar National"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -1414,11 +1900,15 @@
         "geo_datum_delta-z": 22
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "99",
-        "_code_gid": "geo_datum_99",
-        "_code_aid": ["99"],
-        "_info_title": {"iso_639_3_eng": "Rome 1940"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "99",
+			"_gid": "geo_datum_99",
+			"_aid": ["99"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Rome 1940"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -1427,11 +1917,15 @@
         "geo_datum_delta-z": 9
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "100",
-        "_code_gid": "geo_datum_100",
-        "_code_aid": ["100"],
-        "_info_title": {"iso_639_3_eng": "S 42"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "100",
+			"_gid": "geo_datum_100",
+			"_aid": ["100"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "S 42"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_12",
         "geo_datum_delta-a": -108,
         "geo_datum_delta-f": 28,
@@ -1440,11 +1934,15 @@
         "geo_datum_delta-z": 0
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "101",
-        "_code_gid": "geo_datum_101",
-        "_code_aid": ["101"],
-        "_info_title": {"iso_639_3_eng": "S.E.Asia (Indian)"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "101",
+			"_gid": "geo_datum_101",
+			"_aid": ["101"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "S.E.Asia (Indian)"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_7",
         "geo_datum_delta-a": 860.655,
         "geo_datum_delta-f": 0.28361368,
@@ -1453,11 +1951,15 @@
         "geo_datum_delta-z": 264
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "102",
-        "_code_gid": "geo_datum_102",
-        "_code_aid": ["102"],
-        "_info_title": {"iso_639_3_eng": "SAD-69/Brazil"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "102",
+			"_gid": "geo_datum_102",
+			"_aid": ["102"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "SAD-69/Brazil"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_16",
         "geo_datum_delta-a": -23,
         "geo_datum_delta-f": -0.00081204,
@@ -1466,11 +1968,15 @@
         "geo_datum_delta-z": -41
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "103",
-        "_code_gid": "geo_datum_103",
-        "_code_aid": ["103"],
-        "_info_title": {"iso_639_3_eng": "Santa Braz"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "103",
+			"_gid": "geo_datum_103",
+			"_aid": ["103"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Santa Braz"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -1479,11 +1985,15 @@
         "geo_datum_delta-z": 53
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "104",
-        "_code_gid": "geo_datum_104",
-        "_code_aid": ["104"],
-        "_info_title": {"iso_639_3_eng": "Santo (DOS)"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "104",
+			"_gid": "geo_datum_104",
+			"_aid": ["104"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Santo (DOS)"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -1492,11 +2002,15 @@
         "geo_datum_delta-z": 84
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "105",
-        "_code_gid": "geo_datum_105",
-        "_code_aid": ["105"],
-        "_info_title": {"iso_639_3_eng": "Sapper Hill '43"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "105",
+			"_gid": "geo_datum_105",
+			"_aid": ["105"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Sapper Hill '43"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -1505,11 +2019,15 @@
         "geo_datum_delta-z": 74
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "106",
-        "_code_gid": "geo_datum_106",
-        "_code_aid": ["106"],
-        "_info_title": {"iso_639_3_eng": "Schwarzeck"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "106",
+			"_gid": "geo_datum_106",
+			"_aid": ["106"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Schwarzeck"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_4",
         "geo_datum_delta-a": 653.135,
         "geo_datum_delta-f": 0.10037483,
@@ -1518,11 +2036,15 @@
         "geo_datum_delta-z": -251
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "107",
-        "_code_gid": "geo_datum_107",
-        "_code_aid": ["107"],
-        "_info_title": {"iso_639_3_eng": "Sicily"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "107",
+			"_gid": "geo_datum_107",
+			"_aid": ["107"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Sicily"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -1531,11 +2053,15 @@
         "geo_datum_delta-z": -135
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "108",
-        "_code_gid": "geo_datum_108",
-        "_code_aid": ["108"],
-        "_info_title": {"iso_639_3_eng": "Sierra Leone 1960"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "108",
+			"_gid": "geo_datum_108",
+			"_aid": ["108"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Sierra Leone 1960"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_18",
         "geo_datum_delta-a": 0,
         "geo_datum_delta-f": 0,
@@ -1544,11 +2070,15 @@
         "geo_datum_delta-z": 0
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "109",
-        "_code_gid": "geo_datum_109",
-        "_code_aid": ["109"],
-        "_info_title": {"iso_639_3_eng": "South American 1969 mean"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "109",
+			"_gid": "geo_datum_109",
+			"_aid": ["109"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "South American 1969 mean"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_16",
         "geo_datum_delta-a": -23,
         "geo_datum_delta-f": -0.00081204,
@@ -1557,11 +2087,15 @@
         "geo_datum_delta-z": -41
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "110",
-        "_code_gid": "geo_datum_110",
-        "_code_aid": ["110"],
-        "_info_title": {"iso_639_3_eng": "South Asia"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "110",
+			"_gid": "geo_datum_110",
+			"_aid": ["110"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "South Asia"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_15",
         "geo_datum_delta-a": -18,
         "geo_datum_delta-f": 0.00480795,
@@ -1570,11 +2104,15 @@
         "geo_datum_delta-z": -26
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "111",
-        "_code_gid": "geo_datum_111",
-        "_code_aid": ["111"],
-        "_info_title": {"iso_639_3_eng": "Southeast Base"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "111",
+			"_gid": "geo_datum_111",
+			"_aid": ["111"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Southeast Base"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -1583,11 +2121,15 @@
         "geo_datum_delta-z": 314
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "112",
-        "_code_gid": "geo_datum_112",
-        "_code_aid": ["112"],
-        "_info_title": {"iso_639_3_eng": "Southwest Base"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "112",
+			"_gid": "geo_datum_112",
+			"_aid": ["112"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Southwest Base"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -1596,11 +2138,15 @@
         "geo_datum_delta-z": -38
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "113",
-        "_code_gid": "geo_datum_113",
-        "_code_aid": ["113"],
-        "_info_title": {"iso_639_3_eng": "Tananarive Observatory '25"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "113",
+			"_gid": "geo_datum_113",
+			"_aid": ["113"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Tananarive Observatory '25"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -1609,11 +2155,15 @@
         "geo_datum_delta-z": -91
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "114",
-        "_code_gid": "geo_datum_114",
-        "_code_aid": ["114"],
-        "_info_title": {"iso_639_3_eng": "Thai/Viet (Indian)"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "114",
+			"_gid": "geo_datum_114",
+			"_aid": ["114"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Thai/Viet (Indian)"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_7",
         "geo_datum_delta-a": 860.655,
         "geo_datum_delta-f": 0.28361368,
@@ -1622,11 +2172,15 @@
         "geo_datum_delta-z": 303
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "115",
-        "_code_gid": "geo_datum_115",
-        "_code_aid": ["115"],
-        "_info_title": {"iso_639_3_eng": "Timbalai 1948"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "115",
+			"_gid": "geo_datum_115",
+			"_aid": ["115"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Timbalai 1948"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_7",
         "geo_datum_delta-a": 860.655,
         "geo_datum_delta-f": 0.28361368,
@@ -1635,11 +2189,15 @@
         "geo_datum_delta-z": -45
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "116",
-        "_code_gid": "geo_datum_116",
-        "_code_aid": ["116"],
-        "_info_title": {"iso_639_3_eng": "Tokyo mean"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "116",
+			"_gid": "geo_datum_116",
+			"_aid": ["116"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Tokyo mean"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_3",
         "geo_datum_delta-a": 739.845,
         "geo_datum_delta-f": 0.10037483,
@@ -1648,11 +2206,15 @@
         "geo_datum_delta-z": 664
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "117",
-        "_code_gid": "geo_datum_117",
-        "_code_aid": ["117"],
-        "_info_title": {"iso_639_3_eng": "Tristan Astro 1968"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "117",
+			"_gid": "geo_datum_117",
+			"_aid": ["117"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Tristan Astro 1968"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -1661,11 +2223,15 @@
         "geo_datum_delta-z": -609
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "118",
-        "_code_gid": "geo_datum_118",
-        "_code_aid": ["118"],
-        "_info_title": {"iso_639_3_eng": "Unites Arab Emirates (Nahrwan)"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "118",
+			"_gid": "geo_datum_118",
+			"_aid": ["118"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Unites Arab Emirates (Nahrwan)"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_6",
         "geo_datum_delta-a": -112.145,
         "geo_datum_delta-f": -0.54750714,
@@ -1674,11 +2240,15 @@
         "geo_datum_delta-z": 381
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "119",
-        "_code_gid": "geo_datum_119",
-        "_code_aid": ["119"],
-        "_info_title": {"iso_639_3_eng": "Viti Levu 1916"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "119",
+			"_gid": "geo_datum_119",
+			"_aid": ["119"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Viti Levu 1916"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_6",
         "geo_datum_delta-a": -112.145,
         "geo_datum_delta-f": -0.54750714,
@@ -1687,11 +2257,15 @@
         "geo_datum_delta-z": -36
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "120",
-        "_code_gid": "geo_datum_120",
-        "_code_aid": ["120"],
-        "_info_title": {"iso_639_3_eng": "Wake-Eniwetok '60"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "120",
+			"_gid": "geo_datum_120",
+			"_aid": ["120"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Wake-Eniwetok '60"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_10",
         "geo_datum_delta-a": -133,
         "geo_datum_delta-f": -0.14192702,
@@ -1700,11 +2274,15 @@
         "geo_datum_delta-z": -39
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "121",
-        "_code_gid": "geo_datum_121",
-        "_code_aid": ["121"],
-        "_info_title": {"iso_639_3_eng": "Yacare"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "121",
+			"_gid": "geo_datum_121",
+			"_aid": ["121"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Yacare"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,
@@ -1713,11 +2291,15 @@
         "geo_datum_delta-z": 37
     },
     {
-        "_code_nid": "geo_datum",
-        "_code_lid": "122",
-        "_code_gid": "geo_datum_122",
-        "_code_aid": ["122"],
-        "_info_title": {"iso_639_3_eng": "Zanderij"},
+    	"_code": {
+			"_nid": "geo_datum",
+			"_lid": "122",
+			"_gid": "geo_datum_122",
+			"_aid": ["122"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Zanderij"}
+    	},
         "geo_datum_ellipsoid": "geo_ellipsoids_11",
         "geo_datum_delta-a": -251,
         "geo_datum_delta-f": -0.14192702,

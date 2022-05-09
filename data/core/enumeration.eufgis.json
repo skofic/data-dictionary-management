@@ -1,0 +1,263 @@
+[
+    {
+    	"_code": {
+			"_gid": "eufgis",
+			"_lid": "countries",
+			"_gid": "eufgis_countries",
+        	"_aid": ["countries"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "EUFGIS countries"},
+			"_definition": {"iso_639_3_eng": "Countries participating in the EUFGIS project."},
+			"_description": {"iso_639_3_eng": "Enumeration listing EUFGIS countries using the ISO 3166-3 standard."}
+    	}
+    },
+    
+    {
+    	"_code": {
+			"_gid": "gcu",
+			"_lid": "ownerships",
+			"_gid": "gcu_ownerships",
+        	"_aid": ["ownerships"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "GCU ownership"},
+			"_definition": {"iso_639_3_eng": "Gene conservation unit ownerships."},
+			"_description": {"iso_639_3_eng": "Enumeration listing all ownership types applying to gene conservation units."}
+    	}
+    },
+    {
+    	"_code": {
+			"_gid": "gcu_ownerships",
+			"_lid": "public",
+			"_gid": "gcu_ownerships_public",
+        	"_aid": ["public"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Public ownership"},
+			"_definition": {"iso_639_3_eng": "The gene conservation unit is publicly owned."}
+    	}
+    },
+    {
+    	"_code": {
+			"_gid": "gcu_ownerships",
+			"_lid": "private",
+			"_gid": "gcu_ownerships_private",
+        	"_aid": ["private"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Private ownership"},
+			"_definition": {"iso_639_3_eng": "The gene conservation unit is pricately owned."}
+    	}
+    },
+    {
+    	"_code": {
+			"_gid": "gcu_ownerships",
+			"_lid": "joint",
+			"_gid": "gcu_ownerships_joint",
+        	"_aid": ["joint"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Public and private ownership"},
+			"_definition": {"iso_639_3_eng": "The gene conservation unit is both publicly and privately owned."}
+    	}
+    },
+    {
+    	"_code": {
+			"_gid": "gcu_ownerships",
+			"_lid": "other",
+			"_gid": "gcu_ownerships_other",
+        	"_aid": ["other"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Other type of ownership"},
+			"_definition": {"iso_639_3_eng": "The gene conservation unit ownership is neither public nor private."}
+    	}
+    },
+    
+    {
+    	"_code": {
+			"_gid": "gcu",
+			"_lid": "types",
+			"_gid": "gcu_types",
+        	"_aid": ["types"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "GCU types"},
+			"_definition": {"iso_639_3_eng": "Gene conservation unit types."},
+			"_description": {"iso_639_3_eng": "Enumeration listing all types of gene conservation units."}
+    	}
+    },
+    {
+    	"_code": {
+			"_gid": "gcu_types",
+			"_lid": "1",
+			"_gid": "gcu_types_1",
+        	"_aid": ["1"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Gene reserve forest"}
+    	}
+    },
+    {
+    	"_code": {
+			"_gid": "gcu_types",
+			"_lid": "2",
+			"_gid": "gcu_types_2",
+        	"_aid": ["2"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Biodiversity conservation"},
+			"_definition": {"iso_639_3_eng": "Biodiversity conservation of habitats and/or species."}
+    	}
+    },
+    {
+    	"_code": {
+			"_gid": "gcu_types",
+			"_lid": "3",
+			"_gid": "gcu_types_3",
+        	"_aid": ["3"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Seed stand"}
+    	}
+    },
+    {
+    	"_code": {
+			"_gid": "gcu_types",
+			"_lid": "4",
+			"_gid": "gcu_types_4",
+        	"_aid": ["4"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Protective forest area"},
+			"_definition": {"iso_639_3_eng": "Soil, water, timber line, etc."}
+    	}
+    },
+    {
+    	"_code": {
+			"_gid": "gcu_types",
+			"_lid": "5",
+			"_gid": "gcu_types_5",
+        	"_aid": ["5"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Managed forest area"},
+			"_definition": {"iso_639_3_eng": "Forest area managed for wood production and /or multiple uses and services."}
+    	}
+    },
+    
+    {
+    	"_code": {
+			"_gid": "gcu_population",
+			"_lid": "statuses",
+			"_gid": "gcu_population_statuses",
+        	"_aid": ["statuses"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "GCU population statuses"},
+			"_definition": {"iso_639_3_eng": "Status of the target tree population regarding the EUFORGEN common action plans."}
+    	}
+    },
+    {
+    	"_code": {
+			"_gid": "gcu_population",
+			"_lid": "situs",
+			"_gid": "gcu_population_situs",
+        	"_aid": ["situs"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "GCU population categories"},
+			"_definition": {"iso_639_3_eng": "Locality of the population."}
+    	}
+    },
+    {
+    	"_code": {
+			"_gid": "gcu_population",
+			"_lid": "origins",
+			"_gid": "gcu_population_origins",
+        	"_aid": ["origins"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "GCU population origins"},
+			"_definition": {"iso_639_3_eng": "Origin of the population."}
+    	}
+    },
+    {
+    	"_code": {
+			"_gid": "gcu_population",
+			"_lid": "systems",
+			"_gid": "gcu_population_systems",
+        	"_aid": ["systems"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Predominant silvicultural systems"}
+    	}
+    },
+    {
+    	"_code": {
+			"_gid": "gcu_population",
+			"_lid": "managements",
+			"_gid": "gcu_population_managements",
+        	"_aid": ["managements"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Levels of management allowed to favour the target species"}
+    	}
+    },
+    {
+    	"_code": {
+			"_gid": "gcu_population",
+			"_lid": "justifications",
+			"_gid": "gcu_population_justifications",
+        	"_aid": ["justifications"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Main reasons for carrying out gene conservation"}
+    	}
+    },
+    {
+    	"_code": {
+			"_gid": "gcu_population",
+			"_lid": "reproducings",
+			"_gid": "gcu_population_reproducings",
+        	"_aid": ["reproducings"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Total number of reproducing trees per unit"}
+    	}
+    },
+    {
+    	"_code": {
+			"_gid": "gcu_population",
+			"_lid": "sex-ratios",
+			"_gid": "gcu_population_sex-ratios",
+        	"_aid": ["sex-ratios"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Population sex ratios"}
+    	}
+    },
+    {
+    	"_code": {
+			"_gid": "gcu_population",
+			"_lid": "regenerations",
+			"_gid": "gcu_population_regenerations",
+        	"_aid": ["regenerations"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Status of long-term viable regeneration"}
+    	}
+    },
+    {
+    	"_code": {
+			"_gid": "gcu_population",
+			"_lid": "distributions",
+			"_gid": "gcu_population_distributions",
+        	"_aid": ["distributions"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Distribution of the reproducing trees in the unit"}
+    	}
+    }
+]
