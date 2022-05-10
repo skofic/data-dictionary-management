@@ -48,6 +48,19 @@ const globals = {
 			"NOR", "POL", "ROU", "SRB", "SVK", "SVN",
 			"ESP", "SWE", "CHE", "TUR", "UKR", "GBR"
 		])
+	},
+
+	"file_prefixes": {
+		"term": [
+			"namespace",
+			"enumeration",
+			"descriptor",
+			"object"
+		],
+		"edge": [
+			"schema",
+			"struct"
+		]
 	}
 }
 

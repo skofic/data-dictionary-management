@@ -31,7 +31,7 @@ async function ProcessDictionaryFiles(db) {
 		GetFilesList(
 			kGlob.globals.path.base,			// Source data files directory.
 			'.json', 					// File extension.
-			['terms', 'descriptors']		// Selection name prefixes.
+			kGlob.globals.file_prefixes.term	// Selection name prefixes.
 		),
 		ProcessTerm 							// Object processing callback.
 	)
@@ -45,7 +45,7 @@ async function ProcessDictionaryFiles(db) {
 		GetFilesList(
 			kGlob.globals.path.base,			// Source data files directory.
 			'.json', 					// File extension.
-			['schemas']					// Selection name prefixes.
+			kGlob.globals.file_prefixes.edge	// Selection name prefixes.
 		),
 		ProcessEdge								// Object processing callback.
 	)
