@@ -46,7 +46,7 @@ async function main()
 		console.log("\n============================")
 		console.log("Loading ISO standards.")
 		console.log("============================")
-		await process.ProcessIsoStandards(db)
+//		await process.ProcessIsoStandards(db)
 
 	} // TRY BLOCK
 

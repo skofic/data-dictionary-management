@@ -7,7 +7,7 @@
 const globals = {
 
 	"path": {
-		"base": "./data/base/",
+		"base": "./data/core/",
 		"processed": "./data/processed/",
 
 		"iso_json": "./external/iso-codes/data/",

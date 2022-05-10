@@ -2159,7 +2159,59 @@ async function ProcessItems(db, colname, items, callback, filename) {
 
 	} // Have items to process.
 
-} // ProcessObjects()
+} // ProcessItems()
+
+/**
+ * Process term identifier.
+ * The function expects a term, it will compute its global identifier according to its namespace and local identrifier, set its global identifier and return the value.
+ * @param {object} term - Term to process.
+ * @returns {string|*} - Global identifier ot error.
+ */
+function ProcessIdentifier(term) {
+
+	//
+	// Check local identifier.
+	//
+	if(term._code._lid === undefined) {
+		throw(Error(`Missing local identifier in term [${term._code._gid}]`))		// ==>
+	}
+
+	//
+	// Init identifier.
+	//
+	let identifier = ""
+
+	//
+	// Handle namespace.
+	//
+	if(term?._code?._nid !== undefined) {
+
+		//
+		// Handle user namespace.
+		//
+		if(term._code._nid.length > 0) {
+			identifier = term._code._nid
+		}
+
+	} // Has namespace.
+
+	//
+	// Is namespace.
+	//
+	else {
+
+		term._code._gid = term._code._lid
+		return term._code._lid 														// ==>
+
+	} // Is namespace.
+
+	//
+	// Handle local identifier.
+	//
+	term._code._gid = identifier + kGlob.globals.token.ns + term._code._lid
+	return term._code._gid 													// ==>
+
+} // ProcessIdentifier()
 
 /**
  * Load ISO-3166-1 ancillary data.
@@ -2336,39 +2388,33 @@ function ProcessTerm(term) {
 	//
 	// Check global identifier.
 	//
-	if('_codes_gid' in term) {
+	if(term?._code?._gid !== undefined) {
 
 		//
-		// Check local identifier.
+		// Compose global identifier.
 		//
-		if('_codes_lid' in term) {
+		const gid = ProcessIdentifier(term)
+
+		//
+		// Init new term with _key.
+		//
+		let newTerm = {
+			"_key": ProcessGlobalIdentifier(term._code._gid)
+		}
+
+		//
+		// Load existing properties.
+		//
+		for(const key in term) {
 
 			//
-			// Init new term with _key.
+			// Skip _key.
 			//
-			let newTerm = {
-				"_key": ProcessGlobalIdentifier(term._codes_gid)
+			if(key === '_key') {
+				continue
 			}
 
-			//
-			// Load existing properties.
-			//
-			for(const key in term) {
-
-				//
-				// Skip _key.
-				//
-				if(key === '_key') {
-					continue
-				}
-
-				newTerm[key] = term[key]
-			}
-
-			return newTerm															// ==>
-
-		} else {
-			throw(Error(`Missing local identifier in term [${term._codes_gid}]`))
+			newTerm[key] = term[key]
 		}
 
 	} else {
