@@ -337,6 +337,27 @@
     {
     	"_code": {
 			"_nid": "",
+			"_lid": "range",
+			"_gid": "_range",
+			"_aid": ["range"]
+    	},
+    	"_info": {
+			"_title": {"iso_639_3_eng": "Range of values"},
+			"_definition": {"iso_639_3_eng": "This field indicates a range of values."},
+			"_description": {"iso_639_3_eng": "This field defines a *continuous numeric range*."},
+			"_examples": {"iso_639_3_eng": "```json\n{\n      \"_min-range-inclusive\": 0.0,\n      \"_max-range-inclusive\": 100.0\n}\n```\n\nThis represents a *percentage range*, values are *greater* or *equal* to `0` and smaller or equal to `100`. Fractional values are allowed.\n\n```json\n{\n      \"_min-range-inclusive\": 0,\n      \"_max-range-inclusive\": 100\n}\n```\n\nSame as above, except that we use integers. Fractional values are allowed.\n\n```json\n{\n      \"_min-range-exclusive\": 0\n}\n```\n\nValues are greater than `0`. Fractional values are allowed."}
+    	},
+    	"_data": {
+			"_scalar": {
+				"_class": "_class_quantity",
+				"_type": "_type_object",
+				"_kind": ["_range_value"]
+			}
+    	}
+    },
+    {
+    	"_code": {
+			"_nid": "",
 			"_lid": "valid-range",
 			"_gid": "_valid-range",
 			"_aid": ["valid-range"]

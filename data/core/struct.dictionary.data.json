@@ -80,6 +80,12 @@
         "_path": ["_container_scalar"]
     },
     {
+        "_from": "_range",
+        "_to": "_container_scalar",
+        "_predicate": "_predicate_property-of",
+        "_path": ["_container_scalar"]
+    },
+    {
         "_from": "_valid-range",
         "_to": "_container_scalar",
         "_predicate": "_predicate_property-of",
