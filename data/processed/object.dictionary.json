@@ -1,0 +1,56 @@
+[
+	{
+		"_key": "_term",
+		"_code": {
+			"_nid": "",
+			"_lid": "term",
+			"_gid": "_term",
+			"_aid": ["term"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Term"},
+			"_definition": {"iso_639_3_eng": "Term data structure."},
+			"_description": {"iso_639_3_eng": "*Terms* are the *base class* upon which all elements of the data dictionary are created. This data definition includes the *minimum viable data structure* for instantiating *namespaces*, *types* and *enumerations*.\n\n*Terms* require the [identification](_code) and [documentation](_info) sections, while the [data](_data) section should only be included by *descriptors*. Any additional property is allowed."},
+			"_examples": {"iso_639_3_eng": "Generic term example:\n\n```json\n	{\n		\"_code\": {\n			\"_nid\": \"namespace\",\n			\"_lid\": \"local-identifier\",\n			\"_gid\": \"namespace_local-identifier\",\n			\"_aid\": [\"local-identifier\"]\n		},\n		\"_info\": {\n			\"_title\": {\n				\"iso_639_3_eng\": \"Title, name or label\",\n				\"iso_639_3_ita\": \"Titolo, nome o etichetta\"\n			},\n			\"_definition\": {\n				\"iso_639_3_eng\": \"Definition\",\n				\"iso_639_3_ita\": \"Definizione\"\n			},\n			\"_description\": {\n				\"iso_639_3_eng\": \"Full description.\",\n				\"iso_639_3_ita\": \"Descrizione completa.\"\n			},\n			\"_examples\": {\n				\"iso_639_3_eng\": \"Usage examples.\",\n				\"iso_639_3_ita\": \"Esempi di uso.\"\n			}\n		}\n	}\n```"}
+		},
+		"_rule": {
+			"_required": {"_selection-descriptors_all": ["_code", "_info"]}
+		}
+	},
+	{
+		"_key": "_term_descriptor",
+		"_code": {
+			"_nid": "_term",
+			"_lid": "descriptor",
+			"_gid": "_term_descriptor",
+			"_aid": ["descriptor"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Descriptor"},
+			"_definition": {"iso_639_3_eng": "Descriptor data structure."},
+			"_description": {"iso_639_3_eng": "*Descriptors* are terms that define properties that carry values. They *inherit* all *properties* from *terms*, but add a section of [attributes](_data) that *describes* the *type* of *data* they define."},
+			"_examples": {"iso_639_3_eng": "Descriptor example:\n\n```json\n	{\n		\"_code\": {\n			\"_nid\": \"namespace\",\n			\"_lid\": \"local-identifier\",\n			\"_gid\": \"namespace_local-identifier\",\n			\"_aid\": [\"local-identifier\"]\n		},\n		\"_info\": {\n			\"_title\": {\n				\"iso_639_3_eng\": \"Title, name or label\",\n				\"iso_639_3_ita\": \"Titolo, nome o etichetta\"\n			},\n			\"_definition\": {\n				\"iso_639_3_eng\": \"Definition\",\n				\"iso_639_3_ita\": \"Definizione\"\n			},\n			\"_description\": {\n				\"iso_639_3_eng\": \"Full description.\",\n				\"iso_639_3_ita\": \"Descrizione completa.\"\n			},\n			\"_examples\": {\n				\"iso_639_3_eng\": \"Usage examples.\",\n				\"iso_639_3_ita\": \"Esempi di uso.\"\n			}\n		},\n		\"_data\": {\n 			\"_dict\": {\n				\"_dict_key\": {\n					\"_class\": \"_class_category\",\n					\"_type\": \"_type_enum\",\n					\"_kind\": [\"iso_639_3\"]\n				},\n				\"_dict_value\": {\n					\"_scalar\": {\n						\"_class\": \"_class_other\",\n						\"_type\": \"_type_string\",\n						\"_format\": \"_format_markdown\"\n					}\n				}\n			}\n		}\n	}\n```"}
+		},
+		"_rule": {
+			"_required": {"_selection-descriptors_all": ["_code", "_info", "_data"]}
+		}
+	},
+	{
+		"_key": "_term_object",
+		"_code": {
+			"_nid": "_term",
+			"_lid": "object",
+			"_gid": "_term_object",
+			"_aid": ["object"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Object"},
+			"_definition": {"iso_639_3_eng": "Object data structure definition."},
+			"_description": {"iso_639_3_eng": "This data definition includes the *minimum viable data structure* for instantiating *object type definitions*.\n\n*Objects* require the *identification*, *documentation* and *rules* sections, while the *data* section is only required by *descriptors*."},
+			"_examples": {"iso_639_3_eng": "Object structure refinition example:\n\n```json\n	{\n		\"_code\": {\n			\"_nid\": \"namespace\",\n			\"_lid\": \"local-identifier\",\n			\"_gid\": \"namespace_local-identifier\",\n			\"_aid\": [\"local-identifier\"]\n		},\n		\"_info\": {\n			\"_title\": {\n				\"iso_639_3_eng\": \"Title, name or label\",\n				\"iso_639_3_ita\": \"Titolo, nome o etichetta\"\n			},\n			\"_definition\": {\n				\"iso_639_3_eng\": \"Definition\",\n				\"iso_639_3_ita\": \"Definizione\"\n			},\n			\"_description\": {\n				\"iso_639_3_eng\": \"Full description.\",\n				\"iso_639_3_ita\": \"Descrizione completa.\"\n			},\n			\"_examples\": {\n				\"iso_639_3_eng\": \"Usage examples.\",\n				\"iso_639_3_ita\": \"Esempi di uso.\"\n			}\n		},\n		\"_rule\": {\n			 \"_required\": {\n				\"_selection-descriptors_all\": [\"d1\", \"d2\"]\n			},\n			\"_recommended\": {\n				\"_selection-descriptors_one\": [\"d3\", \"d4\"],\n				\"_selection-descriptors_any\": [\"d4\", \"d5\"]\n			},\n			\"_banned\": [\"b1\", \"b2\", \"b3\"]\n			\"_computed\": [\"d1\"],\n			\"_locked\": [\"d6\"],\n			\"_immutable\": [\"d2\", \"d3\"],\n			\"_default-value\": {\n				\"my_number\": 12,\n				\"my_label\": \"default label\",\n				\"my_list\": [1, 2, 3]\n			}\n		}\n	}\n```"}
+		},
+		"_rule": {
+			"_required": {"_selection-descriptors_all": ["_code", "_info", "_rule"]}
+		}
+	}
+]

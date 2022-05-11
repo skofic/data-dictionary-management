@@ -1,32 +1,32 @@
 [
-    {
-        "_from": "_key",
-        "_to": "_edge",
-        "_predicate": "_predicate_property-of",
-        "_path": ["_edge"]
-    },
-    {
-        "_from": "_from",
-        "_to": "_edge",
-        "_predicate": "_predicate_property-of",
-        "_path": ["_edge"]
-    },
-    {
-        "_from": "_to",
-        "_to": "_edge",
-        "_predicate": "_predicate_property-of",
-        "_path": ["_edge"]
-    },
-    {
-        "_from": "_predicate",
-        "_to": "_edge",
-        "_predicate": "_predicate_property-of",
-        "_path": ["_edge"]
-    },
-    {
-        "_from": "_path",
-        "_to": "_edge",
-        "_predicate": "_predicate_property-of",
-        "_path": ["_edge"]
-    }
+	{
+		"_from": "_key",
+		"_to": "_edge",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_edge"]
+	},
+	{
+		"_from": "_from",
+		"_to": "_edge",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_edge"]
+	},
+	{
+		"_from": "_to",
+		"_to": "_edge",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_edge"]
+	},
+	{
+		"_from": "_predicate",
+		"_to": "_edge",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_edge"]
+	},
+	{
+		"_from": "_path",
+		"_to": "_edge",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_edge"]
+	}
 ]

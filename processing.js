@@ -841,11 +841,12 @@ function CreateIso639_1(item) {
 	// Create and load term in buffer.
 	//
 	kGlob.globals.res.terms[lid] = {
-		_codes_nid: nid,
-		_codes_lid: lid,
-		_codes_gid: gid,
-		_codes_fid: gid,
-		_codes_aid: codes
+		_code: {
+			_nid: nid,
+			_lid: lid,
+			_gid: gid,
+			_aid: codes
+		}
 	}
 
 	//
@@ -854,18 +855,18 @@ function CreateIso639_1(item) {
 	kGlob.globals.res.edges.push({
 		_from: gid,
 		_to: nid,
-		_rels_predicate: '_enum_pred_bridge-of',
-		_rels_path: ['iso', nid]
+		_predicate: '_predicate_bridge-of',
+		_path: ['iso', nid]
 	})
 
 	//
 	// Create enumeration edge.
 	//
 	kGlob.globals.res.edges.push({
-		_from: item._codes_gid,
+		_from: item._code._gid,
 		_to: gid,
-		_rels_predicate: '_enum_pred_enum-of',
-		_rels_path: ['iso', nid]
+		_predicate: '_predicate_enum-of',
+		_path: ['iso', nid]
 	})
 
 } // CreateIso639_1()
@@ -910,11 +911,12 @@ function CreateIso639_2(item) {
 	// Init new term.
 	//
 	let term = {
-		_codes_nid: nid,
-		_codes_lid: lid,
-		_codes_gid: gid,
-		_codes_fid: gid,
-		_codes_aid: codes
+		_code: {
+			_nid: nid,
+			_lid: lid,
+			_gid: gid,
+			_aid: codes
+		}
 	}
 
 	//
@@ -928,8 +930,8 @@ function CreateIso639_2(item) {
 		kGlob.globals.res.edges.push({
 			_from: gid,
 			_to: nid,
-			_rels_predicate: '_enum_pred_bridge-of',
-			_rels_path: ['iso', nid]
+			_predicate: '_predicate_bridge-of',
+			_path: ['iso', nid]
 		})
 
 		//
@@ -938,8 +940,8 @@ function CreateIso639_2(item) {
 		kGlob.globals.res.edges.push({
 			_from: 'iso_639_3' + kGlob.globals.token.ns + lid,
 			_to: gid,
-			_rels_predicate: '_enum_pred_enum-of',
-			_rels_path: ['iso', nid]
+			_predicate: '_predicate_enum-of',
+			_path: ['iso', nid]
 		})
 
 	} // Has ISO 639-3 counterpart.
@@ -992,8 +994,8 @@ function CreateIso639_2(item) {
 		kGlob.globals.res.edges.push({
 			_from: gid,
 			_to: nid,
-			_rels_predicate: '_enum_pred_enum-of',
-			_rels_path: ['iso', nid]
+			_rels_predicate: '_predicate_enum-of',
+			_path: ['iso', nid]
 		})
 
 	} // No ISO 639-3 counterpart.
@@ -1103,8 +1105,8 @@ function CreateIso639_3(item) {
 	kGlob.globals.res.edges.push({
 		_from: gid,
 		_to: nid,
-		_rels_predicate: '_enum_pred_enum-of',
-		_rels_path: ['iso']
+		_predicate: '_predicate_enum-of',
+		_path: ['iso']
 	})
 
 	//
@@ -1113,11 +1115,11 @@ function CreateIso639_3(item) {
 	edge = {
 		_from: gid,
 		_to: term.iso_639_scope,
-		_rels_predicate: '_enum_pred_enum-of',
-		_rels_path: ['iso']
+		_predicate: '_predicate_enum-of',
+		_path: ['iso']
 	}
 	if((item['scope'] === 'M') || (item['scope'] === 'S')) {
-		edge._rels_path.push(nid)
+		edge._path.push(nid)
 	}
 	kGlob.globals.res.edges.push(edge)
 
@@ -1127,11 +1129,11 @@ function CreateIso639_3(item) {
 	edge = {
 		_from: gid,
 		_to: term['iso_639_type'],
-		_rels_predicate: '_enum_pred_enum-of',
-		_rels_path: ['iso']
+		_predicate: '_predicate_enum-of',
+		_path: ['iso']
 	}
 	if(item['scope'] === 'I') {
-		edge._rels_path.push(nid)
+		edge._path.push(nid)
 	}
 	kGlob.globals.res.edges.push(edge)
 
@@ -1178,8 +1180,8 @@ function CreateIso639_5(item) {
 		kGlob.globals.res.edges.push({
 			_from: gid,
 			_to: nid,
-			_rels_predicate: '_enum_pred_bridge-of',
-			_rels_path: ['iso', nid]
+			_predicate: '_predicate_bridge-of',
+			_path: ['iso', nid]
 		})
 
 		//
@@ -1188,8 +1190,8 @@ function CreateIso639_5(item) {
 		kGlob.globals.res.edges.push({
 			_from: 'iso_639_2' + kGlob.globals.token.ns + lid,
 			_to: gid,
-			_rels_predicate: '_enum_pred_enum-of',
-			_rels_path: ['iso', nid]
+			_predicate: '_predicate_enum-of',
+			_path: ['iso', nid]
 		})
 
 	} // Bridged to ISO 639-2 term.
@@ -1205,8 +1207,8 @@ function CreateIso639_5(item) {
 		kGlob.globals.res.edges.push({
 			_from: gid,
 			_to: nid,
-			_rels_predicate: '_enum_pred_bridge-of',
-			_rels_path: ['iso', nid]
+			_predicate: '_predicate_bridge-of',
+			_path: ['iso', nid]
 		})
 
 		//
@@ -1215,8 +1217,8 @@ function CreateIso639_5(item) {
 		kGlob.globals.res.edges.push({
 			_from: 'iso_639_3' + kGlob.globals.token.ns + lid,
 			_to: gid,
-			_rels_predicate: '_enum_pred_enum-of',
-			_rels_path: ['iso', nid]
+			_predicate: '_predicate_enum-of',
+			_path: ['iso', nid]
 		})
 
 	} // Bridged to ISO 639-3 term.
@@ -1249,8 +1251,8 @@ function CreateIso639_5(item) {
 		kGlob.globals.res.edges.push({
 			_from: gid,
 			_to: nid,
-			_rels_predicate: '_enum_pred_enum-of',
-			_rels_path: ['iso', nid]
+			_predicate: '_predicate_enum-of',
+			_path: ['iso', nid]
 		})
 
 	} // No ISO 639-3 counterpart.
@@ -1326,8 +1328,8 @@ function CreateIso4217(item) {
 	kGlob.globals.res.edges.push({
 		_from: gid,
 		_to: nid,
-		_rels_predicate: '_enum_pred_enum-of',
-		_rels_path: ['iso', nid]
+		_predicate: '_predicate_enum-of',
+		_path: ['iso', nid]
 	})
 
 } // CreateIso4217()
@@ -1389,8 +1391,8 @@ function CreateIso15924(item) {
 	kGlob.globals.res.edges.push({
 		_from: gid,
 		_to: nid,
-		_rels_predicate: '_enum_pred_enum-of',
-		_rels_path: ['iso', nid]
+		_predicate: '_predicate_enum-of',
+		_path: ['iso', nid]
 	})
 
 } // CreateIso15924()
@@ -1492,15 +1494,15 @@ function CreateIso3166_1(item) {
 	var edge = {
 		_from: gid,
 		_to: nid,
-		_rels_predicate: '_enum_pred_enum-of',
-		_rels_path: ['iso', nid]
+		_predicate: '_predicate_enum-of',
+		_path: ['iso', nid]
 	}
 
 	//
 	// Handle EUFGIS country.
 	//
 	if(kGlob.globals.eufgis.countries.has(lid)) {
-		edge._rels_path.push("eufgis_countries")
+		edge._path.push("eufgis_countries")
 	}
 
 	//
@@ -1627,8 +1629,8 @@ function CreateIso3166_2_edges(items) {
 			kGlob.globals.res.edges.push({
 				_from: term._codes_gid,
 				_to: term.iso_3166_2_type,
-				_rels_predicate: '_enum_pred_enum-of',
-				_rels_path: ['iso']
+				_predicate: '_predicate_enum-of',
+				_path: ['iso']
 			})
 
 			//
@@ -1654,8 +1656,8 @@ function CreateIso3166_2_edges(items) {
 					kGlob.globals.res.edges.push({
 						_from: term._codes_gid,
 						_to: parent._codes_gid,
-						_rels_predicate: '_enum_pred_enum-of',
-						_rels_path: ['iso', term._codes_nid]
+						_predicate: '_predicate_enum-of',
+						_path: ['iso', term._codes_nid]
 					})
 
 					//
@@ -1665,8 +1667,8 @@ function CreateIso3166_2_edges(items) {
 					kGlob.globals.res.topos.push({
 						_from: term._codes_gid,
 						_to: parent._codes_gid,
-						_rels_predicate: term.iso_3166_2_type,
-						_rels_path: ['iso_3166']
+						_predicate: term.iso_3166_2_type,
+						_path: ['iso_3166']
 					})
 
 					//
@@ -1681,8 +1683,8 @@ function CreateIso3166_2_edges(items) {
 						kGlob.globals.res.edges.push({
 							_from: term.iso_3166_2_type,
 							_to: parent.iso_3166_2_type,
-							_rels_predicate: '_enum_pred_enum-of',
-							_rels_path: ['iso', 'iso_3166_2_types']
+							_predicate: '_predicate_enum-of',
+							_path: ['iso', 'iso_3166_2_types']
 						})
 
 					} // Was not already added
@@ -1711,8 +1713,8 @@ function CreateIso3166_2_edges(items) {
 				kGlob.globals.res.edges.push({
 					_from: term._codes_gid,
 					_to: country,
-					_rels_predicate: 'enum_pred_enum-of',
-					_rels_path: ['iso', term._codes_nid]
+					_predicate: 'enum_pred_enum-of',
+					_path: ['iso', term._codes_nid]
 				})
 
 				//
@@ -1722,8 +1724,8 @@ function CreateIso3166_2_edges(items) {
 				kGlob.globals.res.topos.push({
 					_from: term._codes_gid,
 					_to: country,
-					_rels_predicate: term.iso_3166_2_type,
-					_rels_path: ['iso_3166']
+					_predicate: term.iso_3166_2_type,
+					_path: ['iso_3166']
 				})
 
 				//
@@ -1738,8 +1740,8 @@ function CreateIso3166_2_edges(items) {
 					kGlob.globals.res.edges.push({
 						_from: term.iso_3166_2_type,
 						_to: 'iso_3166_2_types',
-						_rels_predicate: '_enum_pred_enum-of',
-						_rels_path: ['iso', 'iso_3166_2_types']
+						_predicate: '_predicate_enum-of',
+						_path: ['iso', 'iso_3166_2_types']
 					})
 
 				} // Was not already added
@@ -1754,8 +1756,8 @@ function CreateIso3166_2_edges(items) {
 					kGlob.globals.res.edges.push({
 						_from: country,
 						_to: term._codes_nid,
-						_rels_predicate: '_enum_pred_section-of',
-						_rels_path: ['iso', term._codes_nid]
+						_predicate: '_predicate_section-of',
+						_path: ['iso', term._codes_nid]
 					})
 
 				} // Country not yet connected.
@@ -1843,8 +1845,8 @@ function CreateIso3166_3(item) {
 	kGlob.globals.res.edges.push({
 		_from: gid,
 		_to: nid,
-		_rels_predicate: '_enum_pred_enum-of',
-		_rels_path: ['iso', nid]
+		_predicate: '_predicate_enum-of',
+		_path: ['iso', nid]
 	})
 
 } // CreateIso3166_3()
@@ -2076,36 +2078,45 @@ async function ProcessFiles(db, colname, files, callback) {
 	for(const [name, path] of Object.entries(files)) {
 
 		//
-		// Process original records.
+		// Try block.
 		//
-		const records =
-			JSON.parse(
+		try {
+
+			//
+			// Process original records.
+			//
+			console.log(`==> Processing ${path}`)
+			const records = JSON.parse(
 				fs.readFileSync(path, 'utf8')
 			).map(callback)
-
-		//
-		// Write to file.
-		//
-		if(kPriv.user.flag.write_file) {
-
-			//
-			// Set destination file path.
-			//
-			const destination = pt.join(kGlob.globals.path.processed, name + '.json')
 
 			//
 			// Write to file.
 			//
-			console.log(`==> Processing ${destination}`)
-			fs.writeFileSync(destination, JSON.stringify(records), 'utf8')
+			if(kPriv.user.flag.write_file) {
 
-		} // Write to file.
+				//
+				// Set destination file path.
+				//
+				const destination = pt.join(kGlob.globals.path.processed, name + '.json')
 
-		//
-		// Write to database.
-		//
-		console.log(`==> Inserting ${name}`)
-		await collection.import(records)
+				//
+				// Write to file.
+				//
+				console.log(`==> Writing to file ${destination}`)
+				fs.writeFileSync(destination, JSON.stringify(records), 'utf8')
+
+			} // Write to file.
+
+			//
+			// Write to database.
+			//
+			console.log(`==> Inserting ${name}`)
+			await collection.import(records)
+
+		} catch (err) {
+			console.error(err)
+		}
 
 	} // Iterating items.
 
@@ -2163,16 +2174,26 @@ async function ProcessItems(db, colname, items, callback, filename) {
 
 /**
  * Process term identifier.
- * The function expects a term, it will compute its global identifier according to its namespace and local identrifier, set its global identifier and return the value.
+ * The function expects a term, it will compute its global identifier
+ * according to its namespace and local identrifier,
+ * set its global identifier and return the value.
+ * The function also throws an exception if either the global or local identifiers are missing.
  * @param {object} term - Term to process.
  * @returns {string|*} - Global identifier ot error.
  */
 function ProcessIdentifier(term) {
 
 	//
+	// Check global and local identifiers.
+	//
+	if(term?._code?._gid === undefined) {
+		throw( Error( `Missing global identifier in term [${term._codes_lid}]` ) )	// ==>
+	}
+
+	//
 	// Check local identifier.
 	//
-	if(term._code._lid === undefined) {
+	if(term?._code?._lid === undefined) {
 		throw(Error(`Missing local identifier in term [${term._code._gid}]`))		// ==>
 	}
 
@@ -2363,8 +2384,8 @@ function ProcessCountryLists(item, key, property, codes, references, namespace, 
 				kGlob.globals.res.topos.push({
 					_from: gid,
 					_to: kGlob.globals.res.terms[key]._codes_gid,
-					_rels_predicate: descriptor,
-					_rels_path: [path]
+					_predicate: descriptor,
+					_path: [path]
 				})
 
 			}) // Iterating properties
@@ -2386,40 +2407,33 @@ function ProcessCountryLists(item, key, property, codes, references, namespace, 
 function ProcessTerm(term) {
 
 	//
-	// Check global identifier.
+	// Compose global identifier.
 	//
-	if(term?._code?._gid !== undefined) {
+	const gid = ProcessIdentifier(term)
 
-		//
-		// Compose global identifier.
-		//
-		const gid = ProcessIdentifier(term)
-
-		//
-		// Init new term with _key.
-		//
-		let newTerm = {
-			"_key": ProcessGlobalIdentifier(term._code._gid)
-		}
-
-		//
-		// Load existing properties.
-		//
-		for(const key in term) {
-
-			//
-			// Skip _key.
-			//
-			if(key === '_key') {
-				continue
-			}
-
-			newTerm[key] = term[key]
-		}
-
-	} else {
-		throw(Error(`Missing global identifier in term [${term._codes_lid}]`))
+	//
+	// Init new term with _key.
+	//
+	let newTerm = {
+		"_key": ProcessGlobalIdentifier(term._code._gid)
 	}
+
+	//
+	// Load existing properties.
+	//
+	for(const key in term) {
+
+		//
+		// Skip _key.
+		//
+		if(key === '_key') {
+			continue
+		}
+
+		newTerm[key] = term[key]
+	}
+
+	return newTerm																	// ==>
 
 } // ProcessTerm()
 
@@ -2444,19 +2458,19 @@ function ProcessEdge(edge) {
 		//
 		// Check predicate.
 		//
-		if('_rels_predicate' in edge) {
+		if('_predicate' in edge) {
 
 			//
 			// Check path.
 			//
-			if('_rels_path' in edge) {
+			if('_path' in edge) {
 
 				//
 				// Create key string.
 				//
 				const index = edge._from
 							+ kGlob.globals.token.tok
-							+ edge._rels_predicate
+							+ edge._predicate
 							+ kGlob.globals.token.tok
 							+ edge._to
 
@@ -2538,7 +2552,7 @@ function ProcessGlobalIdentifier(identifier) {
 
 		case 'GID':
 			return (identifier.length > 0) ? identifier
-				: ':'									// ==>
+				: ':'																// ==>
 
 		default:
 			throw(Error(`Invalid user globals key_encode flag value, found [${kPriv.user.flag}]`))

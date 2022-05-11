@@ -1,26 +1,26 @@
 [
-    {
-        "_from": "_predicate_enum-of",
-        "_to": "_predicate",
-        "_predicate": "_predicate_enum-of",
-        "_path": ["_predicate"]
-    },
-    {
-        "_from": "_predicate_property-of",
-        "_to": "_predicate",
-        "_predicate": "_predicate_enum-of",
-        "_path": ["_predicate"]
-    },
-    {
-        "_from": "_predicate_section-of",
-        "_to": "_predicate",
-        "_predicate": "_predicate_enum-of",
-        "_path": ["_predicate"]
-    },
-    {
-        "_from": "_predicate_bridge-of",
-        "_to": "_predicate",
-        "_predicate": "_predicate_enum-of",
-        "_path": ["_predicate"]
-    }
+	{
+		"_from": "_predicate_enum-of",
+		"_to": "_predicate",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate"]
+	},
+	{
+		"_from": "_predicate_property-of",
+		"_to": "_predicate",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate"]
+	},
+	{
+		"_from": "_predicate_section-of",
+		"_to": "_predicate",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate"]
+	},
+	{
+		"_from": "_predicate_bridge-of",
+		"_to": "_predicate",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate"]
+	}
 ]
