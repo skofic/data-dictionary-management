@@ -4,7 +4,7 @@
 			"_nid": "_class",
 			"_lid": "category",
 			"_gid": "_class_category",
-			"_aid": "[category]"
+			"_aid": ["category"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Categorical value"},
@@ -18,7 +18,7 @@
 			"_nid": "_class",
 			"_lid": "quantity",
 			"_gid": "_class_quantity",
-			"_aid": "[quantity]"
+			"_aid": ["quantity"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Quantitative value"},
@@ -32,7 +32,7 @@
 			"_nid": "_class",
 			"_lid": "time",
 			"_gid": "_class_time",
-			"_aid": "[time]"
+			"_aid": ["time"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Temporal value"},
@@ -46,7 +46,7 @@
 			"_nid": "_class",
 			"_lid": "other",
 			"_gid": "_class_other",
-			"_aid": "[other]"
+			"_aid": ["other"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Not categorical or quantitative"},
@@ -61,7 +61,7 @@
 			"_nid": "_type",
 			"_lid": "boolean",
 			"_gid": "_type_boolean",
-			"_aid": "[boolean]"
+			"_aid": ["boolean"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Boolean"},
@@ -73,7 +73,7 @@
 			"_nid": "_type",
 			"_lid": "integer",
 			"_gid": "_type_integer",
-			"_aid": "[integer]"
+			"_aid": ["integer"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Integer"},
@@ -86,7 +86,7 @@
 			"_nid": "_type",
 			"_lid": "number",
 			"_gid": "_type_number",
-			"_aid": "[number]"
+			"_aid": ["number"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Number"},
@@ -99,7 +99,7 @@
 			"_nid": "_type",
 			"_lid": "string",
 			"_gid": "_type_string",
-			"_aid": "[string]"
+			"_aid": ["string"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "String"},
@@ -112,7 +112,7 @@
 			"_nid": "_type",
 			"_lid": "enum",
 			"_gid": "_type_enum",
-			"_aid": "[enum]"
+			"_aid": ["enum"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Enumeration"},
@@ -125,7 +125,7 @@
 			"_nid": "_type",
 			"_lid": "record",
 			"_gid": "_type_record",
-			"_aid": "[record]"
+			"_aid": ["record"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Record reference"},
@@ -138,7 +138,7 @@
 			"_nid": "_type",
 			"_lid": "timestamp",
 			"_gid": "_type_timestamp",
-			"_aid": "[timestamp]"
+			"_aid": ["timestamp"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Time stamp"},
@@ -151,7 +151,7 @@
 			"_nid": "_type",
 			"_lid": "object",
 			"_gid": "_type_object",
-			"_aid": "[object]"
+			"_aid": ["object"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Object"},
@@ -165,7 +165,7 @@
 			"_nid": "_format",
 			"_lid": "markdown",
 			"_gid": "_format_markdown",
-			"_aid": "[markdown]"
+			"_aid": ["markdown"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Markdown"},
@@ -177,7 +177,7 @@
 			"_nid": "_format",
 			"_lid": "html",
 			"_gid": "_format_html",
-			"_aid": "[html]"
+			"_aid": ["html"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "HTML"},
@@ -189,7 +189,7 @@
 			"_nid": "_format",
 			"_lid": "uri",
 			"_gid": "_format_uri",
-			"_aid": "[uri]"
+			"_aid": ["uri"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Uniform Resource Identifier"},
@@ -201,7 +201,7 @@
 			"_nid": "_format",
 			"_lid": "hex",
 			"_gid": "_format_hex",
-			"_aid": "[hex]"
+			"_aid": ["hex"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Hexadecimal"},
@@ -213,7 +213,7 @@
 			"_nid": "_format",
 			"_lid": "svg",
 			"_gid": "_format_svg",
-			"_aid": "[svg]"
+			"_aid": ["svg"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Scalable Vector Graphics"},
@@ -225,7 +225,7 @@
 			"_nid": "_format",
 			"_lid": "email",
 			"_gid": "_format_email",
-			"_aid": "[email]"
+			"_aid": ["email"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Electronic mail address"},
@@ -237,7 +237,7 @@
 			"_nid": "_format",
 			"_lid": "ymd",
 			"_gid": "_format_ymd",
-			"_aid": "[ymd]"
+			"_aid": ["ymd"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Year, month and day"},
@@ -250,7 +250,7 @@
 			"_nid": "_format",
 			"_lid": "date",
 			"_gid": "_format_date",
-			"_aid": "[date]"
+			"_aid": ["date"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Date"},
@@ -262,7 +262,7 @@
 			"_nid": "_format",
 			"_lid": "time",
 			"_gid": "_format_time",
-			"_aid": "[time]"
+			"_aid": ["time"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Time"},
@@ -274,7 +274,7 @@
 			"_nid": "_format",
 			"_lid": "date-time",
 			"_gid": "_format_date-time",
-			"_aid": "[date-time]"
+			"_aid": ["date-time"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Date and time"},
@@ -286,7 +286,7 @@
 			"_nid": "_format",
 			"_lid": "hostname",
 			"_gid": "_format_hostname",
-			"_aid": "[hostname]"
+			"_aid": ["hostname"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Hostname"},
@@ -298,7 +298,7 @@
 			"_nid": "_format",
 			"_lid": "ipv4",
 			"_gid": "_format_ipv4",
-			"_aid": "[ipv4]"
+			"_aid": ["ipv4"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "IPv4 address"},
@@ -310,7 +310,7 @@
 		   "_nid": "_format",
 			"_lid": "ipv6",
 			"_gid": "_format_ipv6",
-			"_aid": "[ipv6]"
+			"_aid": ["ipv6"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "IPv6 address"},

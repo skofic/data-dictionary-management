@@ -4,7 +4,7 @@
 			"_nid": "_predicate",
 			"_lid": "enum-of",
 			"_gid": "_predicate_enum-of",
-			"_aid": "[enum-of]"
+			"_aid": ["enum-of"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Enumeration of"},
@@ -17,7 +17,7 @@
 			"_nid": "_predicate",
 			"_lid": "property-of",
 			"_gid": "_predicate_property-of",
-			"_aid": "[property-of]"
+			"_aid": ["property-of"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Property of"},
@@ -31,7 +31,7 @@
 			"_nid": "_predicate",
 			"_lid": "section-of",
 			"_gid": "_predicate_section-of",
-			"_aid": "[section-of]"
+			"_aid": ["section-of"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Section of"},
@@ -44,7 +44,7 @@
 			"_nid": "_predicate",
 			"_lid": "bridge-of",
 			"_gid": "_predicate_bridge-of",
-			"_aid": "[bridge-of]"
+			"_aid": ["bridge-of"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Bridge of"},

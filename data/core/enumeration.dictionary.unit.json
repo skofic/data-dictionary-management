@@ -4,7 +4,7 @@
 			"_nid": "_unit",
 			"_lid": "length",
 			"_gid": "_unit_length",
-			"_aid": "[length]"
+			"_aid": ["length"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Length"},
@@ -16,7 +16,7 @@
 			"_nid": "_unit_length",
 			"_lid": "km",
 			"_gid": "_unit_length_km",
-			"_aid": "[km]"
+			"_aid": ["km"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Kilometer"}
@@ -27,7 +27,7 @@
 			"_nid": "_unit_length",
 			"_lid": "m",
 			"_gid": "_unit_length_m",
-			"_aid": "[m]"
+			"_aid": ["m"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Metre"}
@@ -38,7 +38,7 @@
 			"_nid": "_unit_length",
 			"_lid": "cm",
 			"_gid": "_unit_length_cm",
-			"_aid": "[cm]"
+			"_aid": ["cm"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Centimeter"}
@@ -49,7 +49,7 @@
 			"_nid": "_unit_length",
 			"_lid": "mm",
 			"_gid": "_unit_length_mm",
-			"_aid": "[mm]"
+			"_aid": ["mm"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Millimeter"}
@@ -61,7 +61,7 @@
 			"_nid": "_unit",
 			"_lid": "area",
 			"_gid": "_unit_area",
-			"_aid": "[area]"
+			"_aid": ["area"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Area"},
@@ -73,7 +73,7 @@
 			"_nid": "_unit_area",
 			"_lid": "km",
 			"_gid": "_unit_area_km",
-			"_aid": "[km]"
+			"_aid": ["km"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Square kilometer"}
@@ -84,7 +84,7 @@
 			"_nid": "_unit_area",
 			"_lid": "ha",
 			"_gid": "_unit_area_ha",
-			"_aid": "[ha]"
+			"_aid": ["ha"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Hectare"}
@@ -95,7 +95,7 @@
 			"_nid": "_unit_area",
 			"_lid": "m",
 			"_gid": "_unit_area_m",
-			"_aid": "[m]"
+			"_aid": ["m"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Square metre"}
@@ -106,7 +106,7 @@
 			"_nid": "_unit_area",
 			"_lid": "cm",
 			"_gid": "_unit_area_cm",
-			"_aid": "[cm]"
+			"_aid": ["cm"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Square centimeter"}
@@ -117,7 +117,7 @@
 			"_nid": "_unit_area",
 			"_lid": "mm",
 			"_gid": "_unit_area_mm",
-			"_aid": "[mm]"
+			"_aid": ["mm"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Square millimeter"}
@@ -129,7 +129,7 @@
 			"_nid": "_unit",
 			"_lid": "weight",
 			"_gid": "_unit_weight",
-			"_aid": "[weight]"
+			"_aid": ["weight"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Weight"},
@@ -141,7 +141,7 @@
 			"_nid": "_unit_weight",
 			"_lid": "kg",
 			"_gid": "_unit_weight_kg",
-			"_aid": "[kg]"
+			"_aid": ["kg"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Kilogram"}
@@ -152,7 +152,7 @@
 			"_nid": "_unit_weight",
 			"_lid": "g",
 			"_gid": "_unit_weight_g",
-			"_aid": "[g]"
+			"_aid": ["g"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Gram"}
@@ -163,7 +163,7 @@
 			"_nid": "_unit_weight",
 			"_lid": "cg",
 			"_gid": "_unit_weight_cg",
-			"_aid": "[cg]"
+			"_aid": ["cg"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Centigram"}
@@ -174,7 +174,7 @@
 			"_nid": "_unit_weight",
 			"_lid": "mg",
 			"_gid": "_unit_weight_mg",
-			"_aid": "[mg]"
+			"_aid": ["mg"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Milligram"}
@@ -186,7 +186,7 @@
 			"_nid": "_unit",
 			"_lid": "time",
 			"_gid": "_unit_time",
-			"_aid": "[time]"
+			"_aid": ["time"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Time"},
@@ -198,7 +198,7 @@
 			"_nid": "_unit_time",
 			"_lid": "h",
 			"_gid": "_unit_time_h",
-			"_aid": "[h]"
+			"_aid": ["h"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Hour"}
@@ -209,7 +209,7 @@
 			"_nid": "_unit_time",
 			"_lid": "m",
 			"_gid": "_unit_time_m",
-			"_aid": "[m]"
+			"_aid": ["m"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Minute"}
@@ -220,7 +220,7 @@
 			"_nid": "_unit_time",
 			"_lid": "s",
 			"_gid": "_unit_time_s",
-			"_aid": "[s]"
+			"_aid": ["s"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Second"}
@@ -232,7 +232,7 @@
 			"_nid": "_unit",
 			"_lid": "age",
 			"_gid": "_unit_age",
-			"_aid": "[age]"
+			"_aid": ["age"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Age"},
@@ -244,7 +244,7 @@
 			"_nid": "_unit_age",
 			"_lid": "y",
 			"_gid": "_unit_age_y",
-			"_aid": "[y]"
+			"_aid": ["y"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Years"},
@@ -256,7 +256,7 @@
 			"_nid": "_unit_age",
 			"_lid": "m",
 			"_gid": "_unit_age_m",
-			"_aid": "[m]"
+			"_aid": ["m"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Months"},
@@ -268,7 +268,7 @@
 			"_nid": "_unit_age",
 			"_lid": "w",
 			"_gid": "_unit_age_w",
-			"_aid": "[w]"
+			"_aid": ["w"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Weeks"},
@@ -280,7 +280,7 @@
 			"_nid": "_unit_age",
 			"_lid": "d",
 			"_gid": "_unit_age_d",
-			"_aid": "[d]"
+			"_aid": ["d"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Days"},
