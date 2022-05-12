@@ -10,7 +10,7 @@
 			"_title": {"iso_639_3_eng": "Documentation section"},
 			"_definition": {"iso_639_3_eng": "This object groups all properties whose function is to document, explain and comment on terms."},
 			"_description": {"iso_639_3_eng": "This property should represent the *name*, *title* or *label* that represents the term. This *text* will be used as a *label* in *input forms*, or as table *headers* in which data will be displayed.\n\nThe contents are a *key/value dictionary* in which the *key* represents the *language* in which the title is expressed, and the *value* is the *title* in *plain text*."},
-			"_examples": {"iso_639_3_eng": "```json\n{\n	\"_info\": {\n		\"_title\": \"Elevation\",\n		\"_definition\": \"Elevation records a location altitude starting from sea level.\"\n		\"_description\": \"This *measuremenr* is important to correctly assess climatic variables.\",\n		\"_examples\": \"`0`: Sea level.\n`1500`: Elevation at 1500m.\n`-20`: Negative elevations are allowed.\"\n		\"_notes\": \"The value *must* be expressed in meters.\"\n	}\n}\n```"}
+			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_info\": {\n\t\t\"_title\": \"Elevation\",\n\t\t\"_definition\": \"Elevation records a location altitude starting from sea level.\"\n\t\t\"_description\": \"This *measuremenr* is important to correctly assess climatic variables.\",\n\t\t\"_examples\": \"`0`: Sea level.\n`1500`: Elevation at 1500m.\n`-20`: Negative elevations are allowed.\"\n\t\t\"_notes\": \"The value *must* be expressed in meters.\"\n\t}\n}\n```"}
 		},
 		"_data": {
 			"_scalar": {
