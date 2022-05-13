@@ -64,6 +64,7 @@ async function ProcessIsoStandards(db) {
 	// Handle ISO 639 languages.
 	//
 	await LoadIso639_3(db)	// ISO 639-3.
+	return
 	await LoadIso639_1(db)	// ISO 639-1.
 	await LoadIso639_2(db)	// ISO 639-2.
 	await LoadIso639_5(db)	// ISO 639-5.
@@ -959,7 +960,7 @@ function CreateIso639_2(item) {
 		//
 		// Set term name.
 		//
-		term._docs_label = {
+		term._title = {
 			iso_639_3_eng: item['name']
 		}
 
@@ -967,7 +968,7 @@ function CreateIso639_2(item) {
 		// Set term common name.
 		//
 		if(item.hasOwnProperty('common_name')) {
-			term._docs_description = {
+			term._description = {
 				iso_639_3_eng: item['common_name']
 			}
 		}
@@ -1039,26 +1040,29 @@ function CreateIso639_3(item) {
 	// Init new term.
 	//
 	let term = {
-		_codes_nid: nid,
-		_codes_lid: lid,
-		_codes_gid: gid,
-		_codes_fid: gid,
-		_codes_aid: codes,
-		_docs_label: {iso_639_3_eng: item['name']}
+		_code: {
+			_nid: nid,
+			_lid: lid,
+			_gid: gid,
+			_aid: codes,
+		},
+		_info: {
+			_title: {iso_639_3_eng: item['name']}
+		}
 	}
 
 	//
 	// Add inverted name.
 	//
 	if(item.hasOwnProperty('inverted_name')) {
-		term._docs_definition = {iso_639_3_eng: item['inverted_name']}
+		term._info._definition = {iso_639_3_eng: item['inverted_name']}
 	}
 
 	//
 	// Add common name.
 	//
 	if(item.hasOwnProperty('common_name')) {
-		term._docs_description = {iso_639_3_eng: item['common_name']}
+		term._info._description = {iso_639_3_eng: item['common_name']}
 	}
 
 	//
@@ -1236,7 +1240,7 @@ function CreateIso639_5(item) {
 		//
 		// Set term name.
 		//
-		term._docs_label = {
+		term._title = {
 			iso_639_3_eng: item['name']
 		}
 
@@ -1301,7 +1305,7 @@ function CreateIso4217(item) {
 		_codes_gid: gid,
 		_codes_fid: gid,
 		_codes_aid: codes,
-		_docs_label: {iso_639_3_eng: item['name']}
+		_title: {iso_639_3_eng: item['name']}
 	}
 
 	//
@@ -1371,7 +1375,7 @@ function CreateIso15924(item) {
 		_codes_gid: gid,
 		_codes_fid: gid,
 		_codes_aid: [item['alpha_4'], item['numeric']],
-		_docs_label: {iso_639_3_eng: item['name']}
+		_title: {iso_639_3_eng: item['name']}
 	}
 
 	//
@@ -1433,21 +1437,21 @@ function CreateIso3166_1(item) {
 		_codes_gid: gid,
 		_codes_fid: gid,
 		_codes_aid: codes,
-		_docs_label: {iso_639_3_eng: item['name']}
+		_title: {iso_639_3_eng: item['name']}
 	}
 
 	//
 	// Add official name.
 	//
 	if(item.hasOwnProperty('official_name')) {
-		term._docs_definition = {iso_639_3_eng: item['official_name']}
+		term._definition = {iso_639_3_eng: item['official_name']}
 	}
 
 	//
 	// Add common name.
 	//
 	if(item.hasOwnProperty('common_name')) {
-		term._docs_description = {iso_639_3_eng: item['common_name']}
+		term._description = {iso_639_3_eng: item['common_name']}
 	}
 
 	//
@@ -1545,7 +1549,7 @@ function CreateIso3166_2_terms(item) {
 		_codes_gid: gid,
 		_codes_fid: gid,
 		_codes_aid: [lid],
-		_docs_label: {iso_639_3_eng: item['name']}
+		_title: {iso_639_3_eng: item['name']}
 	}
 
 	//
@@ -1579,7 +1583,7 @@ function CreateIso3166_2_terms(item) {
 				_codes_gid: tgid,
 				_codes_fid: tgid,
 				_codes_aid: [tlid],
-				_docs_label: {iso_639_3_eng: item['type']}
+				_title: {iso_639_3_eng: item['type']}
 			}
 
 		} // New subdivision type.
@@ -1807,14 +1811,14 @@ function CreateIso3166_3(item) {
 		_codes_gid: gid,
 		_codes_fid: gid,
 		_codes_aid: codes,
-		_docs_label: {iso_639_3_eng: item['name']}
+		_title: {iso_639_3_eng: item['name']}
 	}
 
 	//
 	// Handle comment.
 	//
 	if(item.hasOwnProperty('comment')) {
-		term['_docs_notes'] = {iso_639_3_eng: item['comment']}
+		term['_notes'] = {iso_639_3_eng: item['comment']}
 	}
 
 	//
@@ -1868,14 +1872,14 @@ function TranslateIso639_2(key, names, translation) {
 		// Handle name.
 		//
 		if(names.hasOwnProperty('Name')) {
-			kGlob.globals.res.terms[key]['_docs_label'][translation] = names['Name']
+			kGlob.globals.res.terms[key]['_title'][translation] = names['Name']
 		}
 
 		//
 		// Handle common name.
 		//
 		if(names.hasOwnProperty('Common name')) {
-			kGlob.globals.res.terms[key]['_docs_description'][translation] = names['Common name']
+			kGlob.globals.res.terms[key]['_description'][translation] = names['Common name']
 			kGlob.globals.res.terms[key]['iso_639_common'][translation] = names['Common name']
 		}
 
@@ -1885,7 +1889,7 @@ function TranslateIso639_2(key, names, translation) {
 
 /**
  * Load translations for ISO 639-3 languages from iso-codes PO files.
- * @param {string} key - ISO 639-5 term key.
+ * @param {string} key - ISO 639-3 term key.
  * @param {object} names - { <name type> : <translated name> }
  * @param {string} translation - ISO 639-3 code for translation language.
  */
@@ -1895,14 +1899,14 @@ function TranslateIso639_3(key, names, translation) {
 	// Handle name.
 	//
 	if(names.hasOwnProperty('Name')) {
-		kGlob.globals.res.terms[key]['_docs_label'][translation] = names['Name']
+		kGlob.globals.res.terms[key]['_info']['_title'][translation] = names['Name']
 	}
 
 	//
 	// Handle common name.
 	//
 	if(names.hasOwnProperty('Common name')) {
-		kGlob.globals.res.terms[key]['_docs_description'][translation] = names['Common name']
+		kGlob.globals.res.terms[key]['_info']['_description'][translation] = names['Common name']
 		kGlob.globals.res.terms[key]['iso_639_common'][translation] = names['Common name']
 	}
 
@@ -1910,7 +1914,7 @@ function TranslateIso639_3(key, names, translation) {
 	// Handle inverted name.
 	//
 	if(names.hasOwnProperty('Inverted name')) {
-		kGlob.globals.res.terms[key]['_docs_definition'][translation] = names['Inverted name']
+		kGlob.globals.res.terms[key]['_info']['_definition'][translation] = names['Inverted name']
 		kGlob.globals.res.terms[key]['iso_639_inverted'][translation] = names['Inverted name']
 	}
 
@@ -1933,7 +1937,7 @@ function TranslateIso639_5(key, names, translation) {
 		// Handle name.
 		//
 		if(names.hasOwnProperty('Name')) {
-			kGlob.globals.res.terms[key]['_docs_label'][translation] = names['Name']
+			kGlob.globals.res.terms[key]['_info']['_title'][translation] = names['Name']
 		}
 
 	} // Not a bridged term.
@@ -1952,7 +1956,7 @@ function TranslateIso4217(key, names, translation) {
 	// Handle name.
 	//
 	if(names.hasOwnProperty('Name')) {
-		kGlob.globals.res.terms[key]['_docs_label'][translation] = names['Name']
+		kGlob.globals.res.terms[key]['_info']['_title'][translation] = names['Name']
 	}
 
 } // TranslateIso4217()
@@ -1969,7 +1973,7 @@ function TranslateIso15924(key, names, translation) {
 	// Handle name.
 	//
 	if(names.hasOwnProperty('Name')) {
-		kGlob.globals.res.terms[key]['_docs_label'][translation] = names['Name']
+		kGlob.globals.res.terms[key]['_info']['_title'][translation] = names['Name']
 	}
 
 } // TranslateIso15924()
@@ -1986,14 +1990,14 @@ function TranslateIso3166_1(key, names, translation) {
 	// Handle name.
 	//
 	if(names.hasOwnProperty('Name')) {
-		kGlob.globals.res.terms[key]['_docs_label'][translation] = names['Name']
+		kGlob.globals.res.terms[key]['_info']['_title'][translation] = names['Name']
 	}
 
 	//
 	// Handle official name.
 	//
 	if(names.hasOwnProperty('Official name')) {
-		kGlob.globals.res.terms[key]['_docs_definition'][translation] = names['Official name']
+		kGlob.globals.res.terms[key]['_info']['_definition'][translation] = names['Official name']
 		kGlob.globals.res.terms[key]['iso_3166_official-name'][translation] = names['Official name']
 	}
 
@@ -2001,7 +2005,7 @@ function TranslateIso3166_1(key, names, translation) {
 	// Handle common name.
 	//
 	if(names.hasOwnProperty('Common name')) {
-		kGlob.globals.res.terms[key]['_docs_description'][translation] = names['Common name']
+		kGlob.globals.res.terms[key]['_info']['_description'][translation] = names['Common name']
 		kGlob.globals.res.terms[key]['iso_3166_common-name'][translation] = names['Common name']
 	}
 
@@ -2019,14 +2023,14 @@ function TranslateIso3166_2(key, names, translation) {
 	// Handle name.
 	//
 	if(names.hasOwnProperty('Name')) {
-		kGlob.globals.res.terms[key]['_docs_label'][translation] = names['Name']
+		kGlob.globals.res.terms[key]['_info']['_title'][translation] = names['Name']
 	}
 
 	//
 	// Handle official name.
 	//
 	if(names.hasOwnProperty('Official name')) {
-		kGlob.globals.res.terms[key]['_docs_definition'][translation] = names['Official name']
+		kGlob.globals.res.terms[key]['_info']['_definition'][translation] = names['Official name']
 		kGlob.globals.res.terms[key]['iso_3166_official-name'][translation] = names['Official name']
 	}
 
@@ -2034,7 +2038,7 @@ function TranslateIso3166_2(key, names, translation) {
 	// Handle common name.
 	//
 	if(names.hasOwnProperty('Common name')) {
-		kGlob.globals.res.terms[key]['_docs_description'][translation] = names['Common name']
+		kGlob.globals.res.terms[key]['_info']['_description'][translation] = names['Common name']
 		kGlob.globals.res.terms[key]['iso_3166_common-name'][translation] = names['Common name']
 	}
 
@@ -2052,7 +2056,7 @@ function TranslateIso3166_3(key, names, translation) {
 	// Handle name.
 	//
 	if(names.hasOwnProperty('Name')) {
-		kGlob.globals.res.terms[key]['_docs_label'][translation] = names['Name']
+		kGlob.globals.res.terms[key]['_title'][translation] = names['Name']
 	}
 
 } // TranslateIso3166_3()
@@ -2551,8 +2555,7 @@ function ProcessGlobalIdentifier(identifier) {
 			return md5(identifier)													// ==>
 
 		case 'GID':
-			return (identifier.length > 0) ? identifier
-				: ':'																// ==>
+			return (identifier.length > 0) ? identifier : ':'						// ==>
 
 		default:
 			throw(Error(`Invalid user globals key_encode flag value, found [${kPriv.user.flag}]`))
