@@ -64,7 +64,6 @@ async function ProcessIsoStandards(db) {
 	// Handle ISO 639 languages.
 	//
 	await LoadIso639_3(db)	// ISO 639-3.
-	return
 	await LoadIso639_1(db)	// ISO 639-1.
 	await LoadIso639_2(db)	// ISO 639-2.
 	await LoadIso639_5(db)	// ISO 639-5.
@@ -133,7 +132,7 @@ async function LoadIso639_1(db) {
 		kPriv.user.db.terms_col,
 		Object.values(kGlob.globals.res.terms),
 		ProcessTerm,
-		'terms.iso.639.1'
+		'enumeration.iso.639.1'
 	)
 
 	//
@@ -144,7 +143,7 @@ async function LoadIso639_1(db) {
 		kPriv.user.db.edges_col,
 		kGlob.globals.res.edges,
 		ProcessEdge,
-		'schemas.iso.639.1'
+		'schema.iso.639.1'
 	)
 
 } // LoadIso639_1()
@@ -209,7 +208,7 @@ async function LoadIso639_2(db) {
 		kPriv.user.db.terms_col,
 		Object.values(kGlob.globals.res.terms),
 		ProcessTerm,
-		'terms.iso.639.2'
+		'enumeration.iso.639.2'
 	)
 
 	//
@@ -220,7 +219,7 @@ async function LoadIso639_2(db) {
 		kPriv.user.db.edges_col,
 		kGlob.globals.res.edges,
 		ProcessEdge,
-		'schemas.iso.639.2'
+		'schema.iso.639.2'
 	)
 
 } // LoadIso639_2()
@@ -283,7 +282,7 @@ async function LoadIso639_3(db) {
 		kPriv.user.db.terms_col,
 		Object.values(kGlob.globals.res.terms),
 		ProcessTerm,
-		'terms.iso.639.3'
+		'enumeration.iso.639.3'
 	)
 
 	//
@@ -294,7 +293,7 @@ async function LoadIso639_3(db) {
 		kPriv.user.db.edges_col,
 		kGlob.globals.res.edges,
 		ProcessEdge,
-		'schemas.iso.639.3'
+		'schema.iso.639.3'
 	)
 
 } // LoadIso639_3()
@@ -359,7 +358,7 @@ async function LoadIso639_5(db) {
 		kPriv.user.db.terms_col,
 		Object.values(kGlob.globals.res.terms),
 		ProcessTerm,
-		'terms.iso.639.5'
+		'enumeration.iso.639.5'
 	)
 
 	//
@@ -370,7 +369,7 @@ async function LoadIso639_5(db) {
 		kPriv.user.db.edges_col,
 		kGlob.globals.res.edges,
 		ProcessEdge,
-		'schemas.iso.639.5'
+		'schema.iso.639.5'
 	)
 
 } // LoadIso639_5()
@@ -433,7 +432,7 @@ async function LoadIso4217(db) {
 		kPriv.user.db.terms_col,
 		Object.values(kGlob.globals.res.terms),
 		ProcessTerm,
-		'terms.iso.4217'
+		'enumeration.iso.4217'
 	)
 
 	//
@@ -444,7 +443,7 @@ async function LoadIso4217(db) {
 		kPriv.user.db.edges_col,
 		kGlob.globals.res.edges,
 		ProcessEdge,
-		'schemas.iso.4217'
+		'schema.iso.4217'
 	)
 
 } // LoadIso4217()
@@ -507,7 +506,7 @@ async function LoadIso15924(db) {
 		kPriv.user.db.terms_col,
 		Object.values(kGlob.globals.res.terms),
 		ProcessTerm,
-		'terms.iso.15924'
+		'enumeration.iso.15924'
 	)
 
 	//
@@ -518,7 +517,7 @@ async function LoadIso15924(db) {
 		kPriv.user.db.edges_col,
 		kGlob.globals.res.edges,
 		ProcessEdge,
-		'schemas.iso.15924'
+		'schema.iso.15924'
 	)
 
 } // LoadIso15924()
@@ -616,7 +615,7 @@ async function LoadIso3166_1(db) {
 		kPriv.user.db.terms_col,
 		Object.values(kGlob.globals.res.terms),
 		ProcessTerm,
-		'terms.iso.3166.1'
+		'enumeration.iso.3166.1'
 	)
 
 	//
@@ -627,7 +626,7 @@ async function LoadIso3166_1(db) {
 		kPriv.user.db.edges_col,
 		kGlob.globals.res.edges,
 		ProcessEdge,
-		'schemas.iso.3166.1'
+		'schema.iso.3166.1'
 	)
 
 	//
@@ -638,7 +637,7 @@ async function LoadIso3166_1(db) {
 		kPriv.user.db.topos_col,
 		kGlob.globals.res.topos,
 		ProcessEdge,
-		'topos.iso.3166.1'
+		'topo.iso.3166.1'
 	)
 
 } // LoadIso3166_1()
@@ -712,7 +711,7 @@ async function LoadIso3166_2(db) {
 		kPriv.user.db.terms_col,
 		Object.values(kGlob.globals.res.types),
 		ProcessTerm,
-		'terms.iso.3166.2.types'
+		'enumeration.iso.3166.2.types'
 	)
 
 	//
@@ -723,7 +722,7 @@ async function LoadIso3166_2(db) {
 		kPriv.user.db.terms_col,
 		Object.values(kGlob.globals.res.terms),
 		ProcessTerm,
-		'terms.iso.3166.2'
+		'enumeration.iso.3166.2'
 	)
 
 	//
@@ -734,7 +733,7 @@ async function LoadIso3166_2(db) {
 		kPriv.user.db.edges_col,
 		kGlob.globals.res.edges,
 		ProcessEdge,
-		'schemas.iso.3166.2'
+		'schema.iso.3166.2'
 	)
 
 	//
@@ -745,7 +744,7 @@ async function LoadIso3166_2(db) {
 		kPriv.user.db.topos_col,
 		kGlob.globals.res.topos,
 		ProcessEdge,
-		'topos.iso.3166.2'
+		'topo.iso.3166.2'
 	)
 
 } // LoadIso3166_2()
@@ -808,7 +807,7 @@ async function LoadIso3166_3(db) {
 		kPriv.user.db.terms_col,
 		Object.values(kGlob.globals.res.terms),
 		ProcessTerm,
-		'terms.iso.3166.3'
+		'enumeration.iso.3166.3'
 	)
 
 	//
@@ -819,7 +818,7 @@ async function LoadIso3166_3(db) {
 		kPriv.user.db.edges_col,
 		kGlob.globals.res.edges,
 		ProcessEdge,
-		'schemas.iso.3166.3'
+		'schema.iso.3166.3'
 	)
 
 } // LoadIso3166_3()
@@ -836,7 +835,7 @@ function CreateIso639_1(item) {
 	const nid = "iso_639_1"
 	const lid = item.iso_639_alpha2
 	const gid = nid + kGlob.globals.token.ns + lid
-	const codes = item._codes_aid
+	const codes = item._code._aid
 
 	//
 	// Create and load term in buffer.
@@ -960,7 +959,10 @@ function CreateIso639_2(item) {
 		//
 		// Set term name.
 		//
-		term._title = {
+		if(!term.hasOwnProperty('_info')) {
+			term._info = {}
+		}
+		term['_info']['_title'] = {
 			iso_639_3_eng: item['name']
 		}
 
@@ -968,7 +970,7 @@ function CreateIso639_2(item) {
 		// Set term common name.
 		//
 		if(item.hasOwnProperty('common_name')) {
-			term._description = {
+			term._info._description = {
 				iso_639_3_eng: item['common_name']
 			}
 		}
@@ -995,7 +997,7 @@ function CreateIso639_2(item) {
 		kGlob.globals.res.edges.push({
 			_from: gid,
 			_to: nid,
-			_rels_predicate: '_predicate_enum-of',
+			_predicate: '_predicate_enum-of',
 			_path: ['iso', nid]
 		})
 
@@ -1166,11 +1168,12 @@ function CreateIso639_5(item) {
 	// Init new term.
 	//
 	let term = {
-		_codes_nid: nid,
-		_codes_lid: lid,
-		_codes_gid: gid,
-		_codes_fid: gid,
-		_codes_aid: [lid]
+		_code: {
+			_nid: nid,
+			_lid: lid,
+			_gid: gid,
+			_aid: [lid]
+		}
 	}
 
 	//
@@ -1240,7 +1243,10 @@ function CreateIso639_5(item) {
 		//
 		// Set term name.
 		//
-		term._title = {
+		if(!term.hasOwnProperty('_info')) {
+			term._info = {}
+		}
+		term._info._title = {
 			iso_639_3_eng: item['name']
 		}
 
@@ -1300,12 +1306,15 @@ function CreateIso4217(item) {
 	// Init new term.
 	//
 	let term = {
-		_codes_nid: nid,
-		_codes_lid: lid,
-		_codes_gid: gid,
-		_codes_fid: gid,
-		_codes_aid: codes,
-		_title: {iso_639_3_eng: item['name']}
+		_code: {
+			_nid: nid,
+			_lid: lid,
+			_gid: gid,
+			_aid: codes
+		},
+		_info: {
+			_title: {iso_639_3_eng: item['name']}
+		}
 	}
 
 	//
@@ -1370,12 +1379,15 @@ function CreateIso15924(item) {
 	// Init new term.
 	//
 	let term = {
-		_codes_nid: nid,
-		_codes_lid: lid,
-		_codes_gid: gid,
-		_codes_fid: gid,
-		_codes_aid: [item['alpha_4'], item['numeric']],
-		_title: {iso_639_3_eng: item['name']}
+		_code: {
+			_nid: nid,
+			_lid: lid,
+			_gid: gid,
+			_aid: [item['alpha_4'], item['numeric']],
+		},
+		_info: {
+			_title: {iso_639_3_eng: item['name']}
+		}
 	}
 
 	//
@@ -1432,19 +1444,22 @@ function CreateIso3166_1(item) {
 	// Init new term.
 	//
 	let term = {
-		_codes_nid: nid,
-		_codes_lid: lid,
-		_codes_gid: gid,
-		_codes_fid: gid,
-		_codes_aid: codes,
-		_title: {iso_639_3_eng: item['name']}
+		_code: {
+			_nid: nid,
+			_lid: lid,
+			_gid: gid,
+			_aid: codes,
+		},
+		_info: {
+			_title: {iso_639_3_eng: item['name']}
+		}
 	}
 
 	//
 	// Add official name.
 	//
 	if(item.hasOwnProperty('official_name')) {
-		term._definition = {iso_639_3_eng: item['official_name']}
+		term._info._definition = {iso_639_3_eng: item['official_name']}
 	}
 
 	//
@@ -1544,12 +1559,15 @@ function CreateIso3166_2_terms(item) {
 	// Init new term.
 	//
 	let term = {
-		_codes_nid: nid,
-		_codes_lid: lid,
-		_codes_gid: gid,
-		_codes_fid: gid,
-		_codes_aid: [lid],
-		_title: {iso_639_3_eng: item['name']}
+		_code: {
+			_nid: nid,
+			_lid: lid,
+			_gid: gid,
+			_aid: [lid],
+		},
+		_info: {
+			_title: {iso_639_3_eng: item['name']}
+		}
 	}
 
 	//
@@ -1578,12 +1596,15 @@ function CreateIso3166_2_terms(item) {
 			// Add new term.
 			//
 			kGlob.globals.res.types[tgid] = {
-				_codes_nid: tnid,
-				_codes_lid: tlid,
-				_codes_gid: tgid,
-				_codes_fid: tgid,
-				_codes_aid: [tlid],
-				_title: {iso_639_3_eng: item['type']}
+				_code: {
+					_nid: tnid,
+					_lid: tlid,
+					_gid: tgid,
+					_aid: [tlid],
+				},
+				_info: {
+					_title: {iso_639_3_eng: item['type']}
+				}
 			}
 
 		} // New subdivision type.
@@ -1631,7 +1652,7 @@ function CreateIso3166_2_edges(items) {
 			// for path 'iso' and 'enum' predicate.
 			//
 			kGlob.globals.res.edges.push({
-				_from: term._codes_gid,
+				_from: term._code._gid,
 				_to: term.iso_3166_2_type,
 				_predicate: '_predicate_enum-of',
 				_path: ['iso']
@@ -1658,10 +1679,10 @@ function CreateIso3166_2_edges(items) {
 					// for path 'iso'/'iso_3166_2' and 'enum' predicate.
 					//
 					kGlob.globals.res.edges.push({
-						_from: term._codes_gid,
-						_to: parent._codes_gid,
+						_from: term._code._gid,
+						_to: parent._code._gid,
 						_predicate: '_predicate_enum-of',
-						_path: ['iso', term._codes_nid]
+						_path: ['iso', term._code._nid]
 					})
 
 					//
@@ -1669,8 +1690,8 @@ function CreateIso3166_2_edges(items) {
 					// for path 'iso_3166' and subdivision type predicate.
 					//
 					kGlob.globals.res.topos.push({
-						_from: term._codes_gid,
-						_to: parent._codes_gid,
+						_from: term._code._gid,
+						_to: parent._code._gid,
 						_predicate: term.iso_3166_2_type,
 						_path: ['iso_3166']
 					})
@@ -1715,10 +1736,10 @@ function CreateIso3166_2_edges(items) {
 				// for path 'iso'/'iso_3166_2' and 'enum' predicate.
 				//
 				kGlob.globals.res.edges.push({
-					_from: term._codes_gid,
+					_from: term._code._gid,
 					_to: country,
 					_predicate: 'enum_pred_enum-of',
-					_path: ['iso', term._codes_nid]
+					_path: ['iso', term._code._nid]
 				})
 
 				//
@@ -1726,7 +1747,7 @@ function CreateIso3166_2_edges(items) {
 				// for path 'iso_3166' and subdivision type predicate.
 				//
 				kGlob.globals.res.topos.push({
-					_from: term._codes_gid,
+					_from: term._code._gid,
 					_to: country,
 					_predicate: term.iso_3166_2_type,
 					_path: ['iso_3166']
@@ -1759,9 +1780,9 @@ function CreateIso3166_2_edges(items) {
 
 					kGlob.globals.res.edges.push({
 						_from: country,
-						_to: term._codes_nid,
+						_to: term._code._nid,
 						_predicate: '_predicate_section-of',
-						_path: ['iso', term._codes_nid]
+						_path: ['iso', term._code._nid]
 					})
 
 				} // Country not yet connected.
@@ -1806,19 +1827,22 @@ function CreateIso3166_3(item) {
 	// Init new term.
 	//
 	let term = {
-		_codes_nid: nid,
-		_codes_lid: lid,
-		_codes_gid: gid,
-		_codes_fid: gid,
-		_codes_aid: codes,
-		_title: {iso_639_3_eng: item['name']}
+		_code: {
+			_nid: nid,
+			_lid: lid,
+			_gid: gid,
+			_aid: codes,
+		},
+		_info: {
+			_title: {iso_639_3_eng: item['name']}
+		}
 	}
 
 	//
 	// Handle comment.
 	//
 	if(item.hasOwnProperty('comment')) {
-		term['_notes'] = {iso_639_3_eng: item['comment']}
+		term._info._notes = {iso_639_3_eng: item['comment']}
 	}
 
 	//
@@ -1872,14 +1896,14 @@ function TranslateIso639_2(key, names, translation) {
 		// Handle name.
 		//
 		if(names.hasOwnProperty('Name')) {
-			kGlob.globals.res.terms[key]['_title'][translation] = names['Name']
+			kGlob.globals.res.terms[key]['_info']['_title'][translation] = names['Name']
 		}
 
 		//
 		// Handle common name.
 		//
 		if(names.hasOwnProperty('Common name')) {
-			kGlob.globals.res.terms[key]['_description'][translation] = names['Common name']
+			kGlob.globals.res.terms[key]['_info']['_description'][translation] = names['Common name']
 			kGlob.globals.res.terms[key]['iso_639_common'][translation] = names['Common name']
 		}
 
@@ -1997,6 +2021,9 @@ function TranslateIso3166_1(key, names, translation) {
 	// Handle official name.
 	//
 	if(names.hasOwnProperty('Official name')) {
+		if(!kGlob.globals.res.terms[key]['_info'].hasOwnProperty('_definition')) {
+			kGlob.globals.res.terms[key]['_info']['_definition'] = {}
+		}
 		kGlob.globals.res.terms[key]['_info']['_definition'][translation] = names['Official name']
 		kGlob.globals.res.terms[key]['iso_3166_official-name'][translation] = names['Official name']
 	}
@@ -2005,6 +2032,9 @@ function TranslateIso3166_1(key, names, translation) {
 	// Handle common name.
 	//
 	if(names.hasOwnProperty('Common name')) {
+		if(!kGlob.globals.res.terms[key]['_info'].hasOwnProperty('_description')) {
+			kGlob.globals.res.terms[key]['_info']['_description'] = {}
+		}
 		kGlob.globals.res.terms[key]['_info']['_description'][translation] = names['Common name']
 		kGlob.globals.res.terms[key]['iso_3166_common-name'][translation] = names['Common name']
 	}
@@ -2056,7 +2086,7 @@ function TranslateIso3166_3(key, names, translation) {
 	// Handle name.
 	//
 	if(names.hasOwnProperty('Name')) {
-		kGlob.globals.res.terms[key]['_title'][translation] = names['Name']
+		kGlob.globals.res.terms[key]['_info']['_title'][translation] = names['Name']
 	}
 
 } // TranslateIso3166_3()
@@ -2191,7 +2221,7 @@ function ProcessIdentifier(term) {
 	// Check global and local identifiers.
 	//
 	if(term?._code?._gid === undefined) {
-		throw( Error( `Missing global identifier in term [${term._codes_lid}]` ) )	// ==>
+		throw( Error( `Missing global identifier in term [${term._code._lid}]` ) )	// ==>
 	}
 
 	//
@@ -2387,7 +2417,7 @@ function ProcessCountryLists(item, key, property, codes, references, namespace, 
 				//
 				kGlob.globals.res.topos.push({
 					_from: gid,
-					_to: kGlob.globals.res.terms[key]._codes_gid,
+					_to: kGlob.globals.res.terms[key]._code._gid,
 					_predicate: descriptor,
 					_path: [path]
 				})
