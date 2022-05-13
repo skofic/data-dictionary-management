@@ -44,6 +44,12 @@ async function main()
 		await process.ProcessDictionaryFiles(db)
 
 		console.log("\n============================")
+		console.log("Validating dictionary files.")
+		console.log("============================")
+		await process.ValidateTerms(db)
+		await process.ValidateEdges(db)
+
+		console.log("\n============================")
 		console.log("Loading ISO standards.")
 		console.log("============================")
 		await process.ProcessIsoStandards(db)

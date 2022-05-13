@@ -88,6 +88,57 @@ async function ProcessIsoStandards(db) {
 } // ProcessIsoStandards()
 
 /**
+ * Validate database term records.
+ * Scan all terms and ensure that all references are valid.
+ * The checks will validate the following:
+ * - Code section: ensure record has code section.
+ * - Code properties: ensure record has _lid, _gid and _aid.
+ * - Namespace: Ensure _code._nid is valid.
+ * - Global identifier: Should match key.
+ * - Class: Check class.
+ * - Type: Check type and type-key.
+ * - Kind: check type reference.
+ * - Format: check format.
+ * - Unit: check unit.
+ * - Required: ensure all descriptor references are valid.
+ * - Recommended: ensure all descriptor references are valid.
+ * - Banned, computed, locked, immutable: check references.
+ * - Default value: check that properties refer to descriptors.
+ * If there are errors, the record will be displayed and the error will be printed,
+ * then an exception will be thrown.
+ * @param db - Database connection.
+ * @returns {Promise<void>}
+ */
+function ValidateTerms(db) {
+
+	//
+	// Init local storage.
+	//
+	let terms = Set()		// Cache all term keys.
+
+} // ValidateTerms()
+
+/**
+ * Validate
+ * Validate database edge records.
+ * Scan all edges and ensure that all references are valid.
+ * The checks will validate the following:
+ * - Predicate: ensure predicate exists.
+ * - Path: ensure all elements exist.
+ * If there are errors, the record will be displayed and the error will be printed,
+ * then an exception will be thrown.
+ * @param db - Database connection.
+ * @returns {Promise<void>} */
+function ValidateEdges(db) {
+
+	//
+	// Init local storage.
+	//
+	let terms = Set()		// Cache all term keys.
+
+} // ValidateEdges()
+
+/**
  * Load ISO 639-1 standard.
  * We do not have a specific repository for ISO 639-1, but we know that the standard uses the
  * 2 character codes, so I use the ISO 639-3 records that have a 2 character code.
