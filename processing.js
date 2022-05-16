@@ -3234,6 +3234,13 @@ function TranslateIso(directory, blockRegex, nameRegex, callback) {
 		}
 
 		//
+		// Skip dubious language translations.
+		//
+		if(kGlob.globals.skip_languages.includes(decoders.iso_639_1_to_3[language])) {
+			continue
+		}
+
+		//
 		// Get translation code.
 		//
 		const translation = 'iso_639_3'

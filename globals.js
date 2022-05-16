@@ -2,6 +2,8 @@
  * Module globals.
  *
  * This file exports an object that holds the module globals.
+ *
+ * Note skip_languages: the list of languages in which translations do not appear reliable.
  */
 
 const globals = {
@@ -61,7 +63,11 @@ const globals = {
 			"schema",
 			"struct"
 		]
-	}
+	},
+
+	"skip_languages": [
+		"xho", "zul", "ven", "mlt"
+	]
 }
 
 module.exports = { globals }
