@@ -36,57 +36,5 @@
 			"_definition": {"iso_639_3_eng": "Tree species population living in a gene conservation unit designated to be monitored and documented."},
 			"_description": {"iso_639_3_eng": "Namespace grouping all terms and descriptors specific to gene conservation unit populations."}
 		}
-	},
-	{
-		"_code": {
-			"_nid": "gcu",
-			"_lid": "location",
-			"_gid": "gcu_location",
-			"_aid": ["location"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "GCU location"},
-			"_definition": {"iso_639_3_eng": "Location related information."},
-			"_description": {"iso_639_3_eng": "Namespace collecting descriptors regarding gene conservation unit location."}
-		}
-	},
-	{
-		"_code": {
-			"_nid": "gcu",
-			"_lid": "topography",
-			"_gid": "gcu_topography",
-			"_aid": ["location"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "GCU topography"},
-			"_definition": {"iso_639_3_eng": "Topography related information."},
-			"_description": {"iso_639_3_eng": "Namespace collecting descriptors regarding gene conservation unit coordinates and topography."}
-		}
-	},
-	{
-		"_code": {
-			"_nid": "gcu",
-			"_lid": "remarks",
-			"_gid": "gcu_remarks",
-			"_aid": ["remarks"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "GCU remarks"},
-			"_definition": {"iso_639_3_eng": "Remarks and comments."},
-			"_description": {"iso_639_3_eng": "Namespace collecting descriptors regarding gene conservation unit remarks and comments."}
-		}
-	},
-	{
-		"_code": {
-			"_nid": "gcu",
-			"_lid": "restriction",
-			"_gid": "gcu_restriction",
-			"_aid": ["restriction"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "GCU restrinction"},
-			"_definition": {"iso_639_3_eng": "Restrinctions applying to the GCU."},
-			"_description": {"iso_639_3_eng": "Namespace collecting descriptors regarding gene conservation unit restrictions."}
-		}
 	}
 ]

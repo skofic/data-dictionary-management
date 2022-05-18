@@ -1573,8 +1573,8 @@ function CreateIso639_3(item) {
 	//
 	// Handle language scope and type.
 	//
-	term.iso_639_scope = 'iso_639_scopes' + kGlob.globals.token.ns + item['scope']
-	term.iso_639_type = 'iso_639_types' + kGlob.globals.token.ns + item['type']
+	term.iso_639_scope = 'iso_639_scope' + kGlob.globals.token.ns + item['scope']
+	term.iso_639_type = 'iso_639_type' + kGlob.globals.token.ns + item['type']
 
 	//
 	// Handle ISO codes.
@@ -2075,7 +2075,7 @@ function CreateIso3166_2_terms(item) {
 		//
 		// Set type info.
 		//
-		const tnid = "iso_3166_2_types"
+		const tnid = "iso_3166_2_type"
 		const tlid = ProcessCountrySubdivisionType(item['type'])
 		const tgid = tnid + kGlob.globals.token.ns + tlid
 
@@ -2195,7 +2195,7 @@ function CreateIso3166_2_edges(items) {
 
 					//
 					// Connect subdivision types
-					// for path 'iso'/'iso_3166_2_types' and 'enum' predicate.
+					// for path 'iso'/'iso_3166_2_type' and 'enum' predicate.
 					//
 					const hash = term.iso_3166_2_type + ',' + parent.iso_3166_2_type
 					if(! dict.has(hash)) {
@@ -2206,7 +2206,7 @@ function CreateIso3166_2_edges(items) {
 							_from: term.iso_3166_2_type,
 							_to: parent.iso_3166_2_type,
 							_predicate: '_predicate_enum-of',
-							_path: ['iso', 'iso_3166_2_types']
+							_path: ['iso', 'iso_3166_2_type']
 						})
 
 					} // Was not already added
@@ -2252,18 +2252,18 @@ function CreateIso3166_2_edges(items) {
 
 				//
 				// Connect subdivision types
-				// for path 'iso'/'iso_3166_2_types' and 'enum' predicate.
+				// for path 'iso'/'iso_3166_2_type' and 'enum' predicate.
 				//
-				const hash = term.iso_3166_2_type + ',' + 'iso_3166_2_types'
+				const hash = term.iso_3166_2_type + ',' + 'iso_3166_2_type'
 				if(! dict.has(hash)) {
 
 					dict.add(hash)
 
 					kGlob.globals.res.edges.push({
 						_from: term.iso_3166_2_type,
-						_to: 'iso_3166_2_types',
+						_to: 'iso_3166_2_type',
 						_predicate: '_predicate_enum-of',
-						_path: ['iso', 'iso_3166_2_types']
+						_path: ['iso', 'iso_3166_2_type']
 					})
 
 				} // Was not already added

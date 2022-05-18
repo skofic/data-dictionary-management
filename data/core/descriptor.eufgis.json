@@ -1,9 +1,9 @@
 [
 	{
 		"_code": {
-			"_nid": "gcu_location",
+			"_nid": "gcu",
 			"_lid": "country",
-			"_gid": "gcu_location_country",
+			"_gid": "gcu_country",
 			"_pid": "UnitCountry",
 			"_aid": ["country"]
 		},
@@ -63,9 +63,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu_location",
+			"_nid": "gcu",
 			"_lid": "province",
-			"_gid": "gcu_location_province",
+			"_gid": "gcu_province",
 			"_pid": "UnitProvince",
 			"_aid": ["province"]
 		},
@@ -82,9 +82,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu_location",
+			"_nid": "gcu",
 			"_lid": "department",
-			"_gid": "gcu_location_department",
+			"_gid": "gcu_department",
 			"_pid": "UnitDepartment",
 			"_aid": ["department"]
 		},
@@ -101,9 +101,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu_location",
+			"_nid": "gcu",
 			"_lid": "municioality",
-			"_gid": "gcu_location_municioality",
+			"_gid": "gcu_municioality",
 			"_pid": "UnitMunicipality",
 			"_aid": ["municioality"]
 		},
@@ -141,11 +141,11 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu_topography",
-			"_lid": "lat-dms",
-			"_gid": "gcu_topography_lat-dms",
+			"_nid": "gcu",
+			"_lid": "latitude",
+			"_gid": "gcu_latitude",
 			"_pid": "UnitLatitude",
-			"_aid": ["lat-dms"]
+			"_aid": ["latitude"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Latitude"},
@@ -163,35 +163,11 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu_topography",
-			"_lid": "lat-dec",
-			"_gid": "gcu_topography_lat-dec",
-			"_pid": "UnitLatitude",
-			"_aid": ["lat-dec"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Latitude"},
-			"_definition": {"iso_639_3_eng": "Latitude of the centre of the unit."},
-			"_description": {"iso_639_3_eng": "Provide the latitude in decima degrees."}
-		},
-		"_data": {
-			"_scalar": {
-				"_class": "_class_other",
-				"_type": "_type_number",
-				"_valid-range": {
-					"_min-range-inclusive": -90.0,
-					"_max-range-inclusive": 90.0
-				}
-			}
-		}
-	},
-	{
-		"_code": {
-			"_nid": "gcu_topography",
-			"_lid": "lon-dms",
-			"_gid": "gcu_topography_lon-dms",
+			"_nid": "gcu",
+			"_lid": "longitude",
+			"_gid": "gcu_longitude",
 			"_pid": "UnitLongitude",
-			"_aid": ["lon-dms"]
+			"_aid": ["longitude"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Longitude"},
@@ -209,55 +185,51 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu_topography",
-			"_lid": "lon-dec",
-			"_gid": "gcu_topography_lon-dec",
-			"_pid": "UnitLongitude",
-			"_aid": ["lon-dec"]
+			"_nid": "gcu",
+			"_lid": "center",
+			"_gid": "gcu_center",
+			"_aid": ["center"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Longitude"},
-			"_definition": {"iso_639_3_eng": "Latitude of the centre of the unit."},
-			"_description": {"iso_639_3_eng": "Provide the latitude in decima degrees."}
+			"_title": {"iso_639_3_eng": "GCU center coordinates"},
+			"_definition": {"iso_639_3_eng": "Latitude and longitude of the center of the gene conservation unit."},
+			"_description": {"iso_639_3_eng": "The field is a GeoJSON structure that records the center of the gene conservation unit. The shape should be a point."},
+			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"type\": \"Point\",\n\t\"coordinates\": [11.2179807, 42.415644]\n}\n```\n\nThe location of a monument dedicated to Caravaggio in a pine forest in Italy."}
 		},
 		"_data": {
 			"_scalar": {
 				"_class": "_class_other",
-				"_type": "_type_number",
-				"_valid-range": {
-					"_min-range-inclusive": -180.0,
-					"_max-range-inclusive": 180.0
-				}
+				"_type": "_type_geo-json"
 			}
 		}
 	},
 	{
 		"_code": {
-			"_nid": "gcu_restriction",
-			"_lid": "coordinates",
-			"_gid": "gcu_restriction_coordinates",
-			"_pid": "UnitCoordinatesRestriction",
-			"_aid": ["coordinates"]
+			"_nid": "gcu",
+			"_lid": "polygon",
+			"_gid": "gcu_polygon",
+			"_aid": ["polygon"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Coordinates privacy"},
-			"_definition": {"iso_639_3_eng": "Restriction in making the geographical coordinates publically available."},
-			"_description": {"iso_639_3_eng": "If `Yes` the accuracy of the geographic\ndata will be modified when making the\ninformation available."}
+			"_title": {"iso_639_3_eng": "GCU polygon"},
+			"_definition": {"iso_639_3_eng": "Shape of the gene conservation unit."},
+			"_description": {"iso_639_3_eng": "The field is a GeoJSON structure that records the shape of the gene conservation unit. The shape can be a polygon or multipolygon."},
+			"_examples": {"iso_639_3_eng": "Here is an example with no holes:\n\n```json\n{\n\t\"type\": \"Polygon\",\n\t\t\"coordinates\": [\n\t\t[\n\t\t\t[100.0, 0.0],\n\t\t\t[101.0, 0.0],\n\t\t\t[101.0, 1.0],\n\t\t\t[100.0, 1.0],\n\t\t\t[100.0, 0.0]\n\t\t]\n\t]\n}\n```\n\nHere is an example with a hole:\n\n```json\n{\n\t\"type\": \"Polygon\",\n\t\"coordinates\": [\n\t\t[\n\t\t\t[100.0, 0.0],\n\t\t\t[101.0, 0.0],\n\t\t\t[101.0, 1.0],\n\t\t\t[100.0, 1.0],\n\t\t\t[100.0, 0.0]\n\t\t],\n\t\t[\n\t\t\t[100.8, 0.8],\n\t\t\t[100.8, 0.2],\n\t\t\t[100.2, 0.2],\n\t\t\t[100.2, 0.8],\n\t\t\t[100.8, 0.8]\n\t\t]\n\t]\n}\n```"}
 		},
 		"_data": {
 			"_scalar": {
-				"_class": "_class_category",
-				"_type": "_type_boolean"
+				"_class": "_class_other",
+				"_type": "_type_geo-json"
 			}
 		}
 	},
 	{
 		"_code": {
-			"_nid": "gcu_topography",
-			"_lid": "datum",
-			"_gid": "gcu_topography_datum",
+			"_nid": "gcu",
+			"_lid": "geodetic-datum",
+			"_gid": "gcu_geodetic-datum",
 			"_pid": "UnitGeodeticDatum",
-			"_aid": ["datum"]
+			"_aid": ["geodetic-datum"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Unit geodetic datum"},
@@ -274,9 +246,29 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu_topography",
+			"_nid": "gcu",
+			"_lid": "coordinates-restriction",
+			"_gid": "gcu_coordinates-restriction",
+			"_pid": "UnitCoordinatesRestriction",
+			"_aid": ["coordinates-restriction"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Coordinates privacy"},
+			"_definition": {"iso_639_3_eng": "Restriction in making the geographical coordinates publically available."},
+			"_description": {"iso_639_3_eng": "If `Yes` the accuracy of the geographic\ndata will be modified when making the\ninformation available."}
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_category",
+				"_type": "_type_boolean"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "gcu",
 			"_lid": "elevation-min",
-			"_gid": "gcu_topography_elevation-min",
+			"_gid": "gcu_elevation-min",
 			"_pid": "UnitMinimumElevation",
 			"_aid": ["elevation-min"]
 		},
@@ -298,9 +290,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu_topography",
+			"_nid": "gcu",
 			"_lid": "elevation-max",
-			"_gid": "gcu_topography_elevation-max",
+			"_gid": "gcu_elevation-max",
 			"_pid": "UnitMaximumElevation",
 			"_aid": ["elevation-max"]
 		},
@@ -421,11 +413,11 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu_remarks",
-			"_lid": "soil",
-			"_gid": "gcu_remarks_soil",
+			"_nid": "gcu",
+			"_lid": "soil-remarks",
+			"_gid": "gcu_soil-remarks",
 			"_pid": "UnitSoilRemarks",
-			"_aid": ["soil"]
+			"_aid": ["soil-remarks"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Soil remarks"},
@@ -440,11 +432,11 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu_remarks",
-			"_lid": "unit",
-			"_gid": "gcu_remarks_unit",
+			"_nid": "gcu",
+			"_lid": "unit-remarks",
+			"_gid": "gcu_unit-remarks",
 			"_pid": "UnitRemarks",
-			"_aid": ["unit"]
+			"_aid": ["unit-remarks"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Unit remarks"},
@@ -521,7 +513,7 @@
 			"_nid": "gcu_population",
 			"_lid": "established",
 			"_gid": "gcu_population_established",
-			"_pid": "PopulationEstablishmentY",
+			"_pid": "PopulationEstablishmentYear",
 			"_aid": ["established"]
 		},
 		"_info": {
