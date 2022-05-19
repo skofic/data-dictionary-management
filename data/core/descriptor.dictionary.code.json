@@ -115,9 +115,11 @@
 			"_definition": {"iso_639_3_eng": "The descriptor's identifiers given by the metadata provider."},
 			"_description": {"iso_639_3_eng": "This corresponds to the list of *identifiers* that the *metadata providers* or *curators* have *assigned* to the *descriptor*.\n\nNote that this list should not include official or globally recognised identifiers, such as alternative ISO codes, only those *used* by the *data providers*."}
 		},
-		"_set": {
-			"_class": "_class_other",
-			"_type": "_type_string"
+		"_data": {
+			"_set": {
+				"_class": "_class_other",
+				"_type": "_type_string"
+			}
 		}
 	},
 	{
