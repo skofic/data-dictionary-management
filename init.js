@@ -55,11 +55,21 @@ async function main()
 		console.log("============================")
 		errors = await process.ValidateTerms(db)
 		if(errors > 0) {
-			console.log(`!!! ${errors} errors !!!`)
+			console.log(`!!! ${errors} errors!`)
+		} else {
+			console.log(`    no errors.`)
 		}
 		errors = await process.ValidateEdges(db)
 		if(errors > 0) {
-			console.log(`!!! ${errors} errors !!!`)
+			console.log(`!!! ${errors} errors!`)
+		} else {
+			console.log(`    no errors.`)
+		}
+		errors = await process.ValidateTopos(db)
+		if(errors > 0) {
+			console.log(`!!! ${errors} errors!`)
+		} else {
+			console.log(`    no errors.`)
 		}
 
 	} // TRY BLOCK

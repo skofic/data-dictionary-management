@@ -6,7 +6,7 @@ const user = {
 
 	"db": {
 		"host": "192.168.188.2:8529",
-		"name": "ddict",
+		"name": "metadata",
 
 		"user": "eufgis_developer",
 		"pass": "letmein",

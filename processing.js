@@ -241,6 +241,63 @@ async function ValidateEdges(db) {
 } // ValidateEdges()
 
 /**
+ * Validate database topo records.
+ * Scan all edges and ensure that all references are valid.
+ * The checks will validate the following:
+ * - Predicate: ensure predicate exists.
+ * - Path: ensure all elements exist.
+ * If there are errors, the record will be displayed and the error will be printed,
+ * then an exception will be thrown.
+ * @param db - Database connection.
+ * @returns {Promise<void>} */
+async function ValidateTopos(db) {
+
+	//
+	// Init local storage.
+	//
+	let error_count = 0
+	let cache = new Set()
+	const collection = db.collection(kPriv.user.db.topos_col)
+	const terms_collection = db.collection(kPriv.user.db.terms_col)
+	const error_collection = db.collection(kPriv.user.db.error_col)
+
+	//
+	// Query all terms.
+	//
+	console.log(`==> Querying all topos`)
+	const edges = await db.query(aql`
+      FOR edge IN ${collection}
+      RETURN edge
+    `);
+
+	//
+	// Iterate all edges.
+	//
+	console.log(`==> Iterating all topos`)
+	for await (const edge of edges) {
+
+		//
+		// Init loop storage.
+		//
+		let errors = []
+		let key = edge._key
+
+		//
+		// Validate sections.
+		//
+		errors = await ValidateEdgeSection(edge, key, cache, collection, terms_collection)
+		if(errors.length > 0) {
+			error_count += errors.length
+			await error_collection.import(errors)
+			errors = []
+		}
+	}
+
+	return error_count																// ==>
+
+} // ValidateTopos()
+
+/**
  * Validate code section.
  * This function will validate the term code section and log to console all properties that
  * have at least one error, by displaying the term key and the invalid terms or descriptors.
@@ -3538,4 +3595,7 @@ function ParseIsoPoFile(fileName,blockRegex, nameRegex) {
 
 } // ParseIsoPoFile()
 
-module.exports = { ProcessDictionaryFiles, ProcessIsoStandards, ValidateTerms, ValidateEdges }
+module.exports = {
+	ProcessDictionaryFiles, ProcessIsoStandards,
+	ValidateTerms, ValidateEdges, ValidateTopos
+}
