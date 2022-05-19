@@ -60,6 +60,12 @@ async function InitDatabase(db)
 				collection = db.collection(kPriv.user.db.topos_col)
 				await collection.drop()
 				break
+
+			// Errors.
+			case kPriv.user.db.error_col:
+				collection = db.collection(kPriv.user.db.error_col)
+				await collection.drop()
+				break
 		}
 	}
 
@@ -69,6 +75,7 @@ async function InitDatabase(db)
 	await InitTermCollection(db, kPriv.user.db.terms_col)
 	await InitEdgeCollection(db, kPriv.user.db.edges_col)
 	await InitTopoCollection(db, kPriv.user.db.topos_col)
+	await InitErrorCollection(db, kPriv.user.db.error_col)
 
 	//
 	// Create graphs.
@@ -204,6 +211,24 @@ async function InitTopoCollection(db, name)
 	console.log(`Created topo collection ${name}`)
 
 } // InitTopoCollection()
+
+/**
+ * Initialise error collection.
+ * It expects the collection to have been previously dropped.
+ * @param {Database} db - Database connection.
+ * @param {string} name - Collection name.
+ * @returns {Promise<void>}
+ */
+async function InitErrorCollection(db, name)
+{
+	//
+	// Create collection.
+	//
+	const collection = await db.createCollection(name)
+
+	console.log(`Created term collection ${name}`)
+
+} // InitErrorCollection()
 
 /**
  * Initislise schema graph.

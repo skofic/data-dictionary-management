@@ -13,7 +13,8 @@ const user = {
 
 		"terms_col": "terms",
 		"edges_col": "schemas",
-		"topos_col": "topos"
+		"topos_col": "topos",
+		"error_col": "errors"
 	},
 
 	"flag": {

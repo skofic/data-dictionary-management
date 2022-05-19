@@ -33,6 +33,8 @@ async function main()
 {
 	try
 	{
+		let errors = 0
+
 		console.log("\============================")
 		console.log("Initialising database.")
 		console.log("============================")
@@ -51,8 +53,14 @@ async function main()
 		console.log("\n============================")
 		console.log("Validating dictionary.")
 		console.log("============================")
-		await process.ValidateTerms(db)
-		await process.ValidateEdges(db)
+		errors = await process.ValidateTerms(db)
+		if(errors > 0) {
+			console.log(`!!! ${errors} errors !!!`)
+		}
+		errors = await process.ValidateEdges(db)
+		if(errors > 0) {
+			console.log(`!!! ${errors} errors !!!`)
+		}
 
 	} // TRY BLOCK
 
