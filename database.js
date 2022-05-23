@@ -226,12 +226,31 @@ async function InitErrorCollection(db, name)
 	//
 	const collection = await db.createCollection(name)
 
-	console.log(`Created term collection ${name}`)
+	console.log(`Created error collection ${name}`)
 
 } // InitErrorCollection()
 
 /**
- * Initislise schema graph.
+ * Delete error collection.
+ * It expects the collection to have been previously created.
+ * @param {Database} db - Database connection.
+ * @param {string} name - Collection name.
+ * @returns {Promise<void>}
+ */
+async function DropErrorCollection(db, name)
+{
+	//
+	// Drop collection.
+	//
+	const collection = await db.collection(name)
+	await collection.drop()
+
+	console.log(`Dropped collection ${name}`)
+
+} // DropErrorCollection()
+
+/**
+ * Initialise schema graph.
  * @param {Database} db - Database connection.
  * @returns {Promise<void>}
  */
@@ -285,4 +304,4 @@ async function InitTopoGraph(db)
 } // InitTopoaGraph()
 
 
-module.exports = { InitDatabase }
+module.exports = { InitDatabase, DropErrorCollection }
