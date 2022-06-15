@@ -1313,7 +1313,7 @@ async function LoadIso3166_1(db) {
 		//
 		const key = code.toUpperCase()
 		if(kGlob.globals.dec.iso_3166_A2_to_A3.hasOwnProperty(key)) {
-			kGlob.globals.res.terms[kGlob.globals.dec.iso_3166_A2_to_A3[key]]['iso_3166_flag'] =
+			kGlob.globals.res.terms[kGlob.globals.dec.iso_3166_A2_to_A3[key]]['std_country_flag'] =
 				fs.readFileSync(file, 'utf8')
 		}
 	}
@@ -2194,7 +2194,7 @@ function CreateIso3166_1(item) {
 	}
 
 	if(item.hasOwnProperty('flag')) {
-		term.iso_3166_emoji = item['flag']
+		term.std_country_emoji = item['flag']
 	}
 
 	//
@@ -2988,28 +2988,28 @@ function ProcessCountryReferences(item) {
 		// Set IOC code.
 		//
 		if(item.hasOwnProperty('cioc')) {
-			kGlob.globals.res.terms[key].iso_3166_ioc = item['cioc']
+			kGlob.globals.res.terms[key].std_country_ioc = item['cioc']
 		}
 
 		//
 		// Set top level domains.
 		//
 		if(item.hasOwnProperty('tld') && (item['tld'].length > 0)) {
-			kGlob.globals.res.terms[key].iso_3166_tld = item['tld']
+			kGlob.globals.res.terms[key].std_country_tld = item['tld']
 		}
 
 		//
 		// Set calling codes.
 		//
 		if(item.hasOwnProperty('callingCodes') && (item['callingCodes'].length > 0)) {
-			kGlob.globals.res.terms[key].iso_3166_tel = item['callingCodes']
+			kGlob.globals.res.terms[key].std_country_tel = item['callingCodes']
 		}
 
 		//
 		// Set area.
 		//
 		if(item.hasOwnProperty('area')) {
-			kGlob.globals.res.terms[key]['iso_3166_area'] = item['area']
+			kGlob.globals.res.terms[key]['std_country_area'] = item['area']
 		}
 
 		//
@@ -3022,7 +3022,7 @@ function ProcessCountryReferences(item) {
 			Object.keys(item['languages']),
 			kGlob.globals.dec.iso_639_3_codes,
 			'iso_639_3',
-			'iso_3166_languages',
+			'std_country_languages',
 			'iso_3166'
 		)
 
@@ -3036,7 +3036,7 @@ function ProcessCountryReferences(item) {
 			Object.keys(item['currencies']),
 			kGlob.globals.dec.iso_4217_codes,
 			'iso_4217',
-			'iso_3166_currencies',
+			'std_country_currencies',
 			'iso_3166'
 		)
 
@@ -3050,7 +3050,7 @@ function ProcessCountryReferences(item) {
 			item['borders'],
 			new Set(Object.keys(kGlob.globals.res.terms)),
 			'iso_3166_1',
-			'iso_3166_borders',
+			'std_country_borders',
 			'iso_3166'
 		)
 
@@ -3058,14 +3058,14 @@ function ProcessCountryReferences(item) {
 		// Set region.
 		//
 		if(item.hasOwnProperty('region') && (item['region'].length > 0)) {
-			kGlob.globals.res.terms[key].iso_3166_region = {'iso_639_3_eng': item['region']}
+			kGlob.globals.res.terms[key].std_country_region = {'iso_639_3_eng': item['region']}
 		}
 
 		//
 		// Set subregion.
 		//
 		if(item.hasOwnProperty('subregion') && (item['subregion'].length > 0)) {
-			kGlob.globals.res.terms[key]['iso_3166_sub-region'] = {'iso_639_3_eng': item['subregion']}
+			kGlob.globals.res.terms[key]['std_country_sub-region'] = {'iso_639_3_eng': item['subregion']}
 		}
 
 	} else {
