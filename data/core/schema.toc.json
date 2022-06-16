@@ -1,0 +1,272 @@
+[
+	{
+		"_from": "toc_enum",
+		"_to": "toc",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc"]
+	},
+	{
+		"_from": "toc_object",
+		"_to": "toc",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc"]
+	},
+	{
+		"_from": "toc_descriptor",
+		"_to": "toc",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc"]
+	},
+	
+	{
+		"_from": "_data",
+		"_to": "toc_enum",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_enum"]
+	},
+	{
+		"_from": "_class",
+		"_to": "_data",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_enum"]
+	},
+	{
+		"_from": "_container",
+		"_to": "_data",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_enum"]
+	},
+	{
+		"_from": "_type",
+		"_to": "_data",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_enum"]
+	},
+	{
+		"_from": "_format",
+		"_to": "_data",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_enum"]
+	},
+	{
+		"_from": "_format",
+		"_to": "_data",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_enum"]
+	},
+	
+	{
+		"_from": "_predicate",
+		"_to": "toc_enum",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_enum"]
+	},
+	
+	{
+		"_from": "_unit",
+		"_to": "toc_enum",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_enum"]
+	},
+	
+	{
+		"_from": "eufgis",
+		"_to": "toc_enum",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_enum"]
+	},
+	{
+		"_from": "gcu",
+		"_to": "eufgis",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_enum"]
+	},
+	{
+		"_from": "gcu_ownerships",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_enum"]
+	},
+	{
+		"_from": "gcu_types",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_enum"]
+	},
+	{
+		"_from": "gcu_population",
+		"_to": "eufgis",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_enum"]
+	},
+	{
+		"_from": "gcu_population_statuses",
+		"_to": "gcu_population",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_enum"]
+	},
+	{
+		"_from": "gcu_population_situs",
+		"_to": "gcu_population",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_enum"]
+	},
+	{
+		"_from": "gcu_population_origins",
+		"_to": "gcu_population",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_enum"]
+	},
+	{
+		"_from": "gcu_population_systems",
+		"_to": "gcu_population",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_enum"]
+	},
+	{
+		"_from": "gcu_population_managements",
+		"_to": "gcu_population",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_enum"]
+	},
+	{
+		"_from": "gcu_population_justifications",
+		"_to": "gcu_population",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_enum"]
+	},
+	{
+		"_from": "gcu_population_reproducings",
+		"_to": "gcu_population",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_enum"]
+	},
+	{
+		"_from": "gcu_population_sex-ratios",
+		"_to": "gcu_population",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_enum"]
+	},
+	{
+		"_from": "gcu_population_regenerations",
+		"_to": "gcu_population",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_enum"]
+	},
+	{
+		"_from": "gcu_population_distributions",
+		"_to": "gcu_population",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_enum"]
+	},
+	
+	{
+		"_from": "geo",
+		"_to": "toc_enum",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_enum"]
+	},
+	{
+		"_from": "geo_ellipsoids",
+		"_to": "geo",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_enum"]
+	},
+	{
+		"_from": "geo_datum",
+		"_to": "geo",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_enum"]
+	},
+	
+	{
+		"_from": "iso",
+		"_to": "toc_enum",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_enum"]
+	},
+    {
+		"_from": "iso_639",
+		"_to": "iso",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_enum"]
+	},
+	{
+		"_from": "iso_639_1",
+		"_to": "iso_639",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_enum"]
+	},
+	{
+		"_from": "iso_639_2",
+		"_to": "iso_639",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_enum"]
+	},
+	{
+		"_from": "iso_639_3",
+		"_to": "iso_639",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_enum"]
+	},
+	{
+		"_from": "iso_639_5",
+		"_to": "iso_639",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_enum"]
+	},	
+	{
+		"_from": "iso_639_scope",
+		"_to": "iso_639",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_enum"]
+	},
+	{
+		"_from": "iso_639_type",
+		"_to": "iso_639",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_enum"]
+	},
+    {
+		"_from": "iso_3166",
+		"_to": "iso",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_enum"]
+	},
+	{
+		"_from": "iso_3166_1",
+		"_to": "iso_3166",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_enum"]
+	},
+	{
+		"_from": "iso_3166_2",
+		"_to": "iso_3166",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_enum"]
+	},
+	{
+		"_from": "iso_3166_2_type",
+		"_to": "iso_3166_2",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_enum"]
+	},
+	{
+		"_from": "iso_3166_3",
+		"_to": "iso_3166",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_enum"]
+	},
+	{
+		"_from": "iso_4217",
+		"_to": "iso",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_enum"]
+	},
+	{
+		"_from": "iso_15924",
+		"_to": "iso",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_enum"]
+	}	
+]

@@ -1567,7 +1567,7 @@ function CreateIso639_1(item) {
 		_from: gid,
 		_to: nid,
 		_predicate: '_predicate_bridge-of',
-		_path: ['iso', nid]
+		_path: [nid]
 	})
 
 	//
@@ -1577,7 +1577,7 @@ function CreateIso639_1(item) {
 		_from: item._code._gid,
 		_to: gid,
 		_predicate: '_predicate_enum-of',
-		_path: ['iso', nid]
+		_path: [nid]
 	})
 
 } // CreateIso639_1()
@@ -1642,7 +1642,7 @@ function CreateIso639_2(item) {
 			_from: gid,
 			_to: nid,
 			_predicate: '_predicate_bridge-of',
-			_path: ['iso', nid]
+			_path: [nid]
 		})
 
 		//
@@ -1652,7 +1652,7 @@ function CreateIso639_2(item) {
 			_from: 'iso_639_3' + kGlob.globals.token.ns + lid,
 			_to: gid,
 			_predicate: '_predicate_enum-of',
-			_path: ['iso', nid]
+			_path: [nid]
 		})
 
 	} // Has ISO 639-3 counterpart.
@@ -1709,7 +1709,7 @@ function CreateIso639_2(item) {
 			_from: gid,
 			_to: nid,
 			_predicate: '_predicate_enum-of',
-			_path: ['iso', nid]
+			_path: [nid]
 		})
 
 	} // No ISO 639-3 counterpart.
@@ -1819,40 +1819,46 @@ function CreateIso639_3(item) {
 	//
 	// Create and add ISO edge to buffer.
 	//
-	kGlob.globals.res.edges.push({
-		_from: gid,
-		_to: nid,
-		_predicate: '_predicate_enum-of',
-		_path: ['iso']
-	})
+	// kGlob.globals.res.edges.push({
+	// 	_from: gid,
+	// 	_to: nid,
+	// 	_predicate: '_predicate_enum-of',
+	// 	_path: ['iso']
+	// })
+	//
+	// MILKO - Disabled to remove ISO path.
 
 	//
 	// Create and add scope edge to buffer.
 	//
-	edge = {
-		_from: gid,
-		_to: term.iso_639_scope,
-		_predicate: '_predicate_enum-of',
-		_path: ['iso']
-	}
-	if((item['scope'] === 'M') || (item['scope'] === 'S')) {
-		edge._path.push(nid)
-	}
-	kGlob.globals.res.edges.push(edge)
+	// edge = {
+	// 	_from: gid,
+	// 	_to: term.iso_639_scope,
+	// 	_predicate: '_predicate_enum-of',
+	// 	_path: ['iso']
+	// }
+	// if((item['scope'] === 'M') || (item['scope'] === 'S')) {
+	// 	edge._path.push(nid)
+	// }
+	// kGlob.globals.res.edges.push(edge)
+	//
+	// MILKO - Disabled to remove ISO path.
 
 	//
 	// Create, process and add type edge to buffer.
 	//
-	edge = {
-		_from: gid,
-		_to: term['iso_639_type'],
-		_predicate: '_predicate_enum-of',
-		_path: ['iso']
-	}
-	if(item['scope'] === 'I') {
-		edge._path.push(nid)
-	}
-	kGlob.globals.res.edges.push(edge)
+	// edge = {
+	// 	_from: gid,
+	// 	_to: term['iso_639_type'],
+	// 	_predicate: '_predicate_enum-of',
+	// 	_path: ['iso']
+	// }
+	// if(item['scope'] === 'I') {
+	// 	edge._path.push(nid)
+	// }
+	// kGlob.globals.res.edges.push(edge)
+	//
+	// MILKO - Disabled to remove ISO path.
 
 } // CreateIso639_3()
 
@@ -1894,7 +1900,7 @@ function CreateIso639_5(item) {
 			_from: gid,
 			_to: nid,
 			_predicate: '_predicate_bridge-of',
-			_path: ['iso', nid]
+			_path: [nid]
 		})
 
 		//
@@ -1904,7 +1910,7 @@ function CreateIso639_5(item) {
 			_from: 'iso_639_2' + kGlob.globals.token.ns + lid,
 			_to: gid,
 			_predicate: '_predicate_enum-of',
-			_path: ['iso', nid]
+			_path: [nid]
 		})
 
 	} // Bridged to ISO 639-2 term.
@@ -1921,7 +1927,7 @@ function CreateIso639_5(item) {
 			_from: gid,
 			_to: nid,
 			_predicate: '_predicate_bridge-of',
-			_path: ['iso', nid]
+			_path: [nid]
 		})
 
 		//
@@ -1931,7 +1937,7 @@ function CreateIso639_5(item) {
 			_from: 'iso_639_3' + kGlob.globals.token.ns + lid,
 			_to: gid,
 			_predicate: '_predicate_enum-of',
-			_path: ['iso', nid]
+			_path: [nid]
 		})
 
 	} // Bridged to ISO 639-3 term.
@@ -1968,7 +1974,7 @@ function CreateIso639_5(item) {
 			_from: gid,
 			_to: nid,
 			_predicate: '_predicate_enum-of',
-			_path: ['iso', nid]
+			_path: [nid]
 		})
 
 	} // No ISO 639-3 counterpart.
@@ -2047,7 +2053,7 @@ function CreateIso4217(item) {
 		_from: gid,
 		_to: nid,
 		_predicate: '_predicate_enum-of',
-		_path: ['iso', nid]
+		_path: [nid]
 	})
 
 } // CreateIso4217()
@@ -2114,7 +2120,7 @@ function CreateIso15924(item) {
 		_from: gid,
 		_to: nid,
 		_predicate: '_predicate_enum-of',
-		_path: ['iso', nid]
+		_path: [nid]
 	})
 
 } // CreateIso15924()
@@ -2220,7 +2226,7 @@ function CreateIso3166_1(item) {
 		_from: gid,
 		_to: nid,
 		_predicate: '_predicate_enum-of',
-		_path: ['iso', nid]
+		_path: [nid]
 	}
 
 	//
@@ -2356,12 +2362,14 @@ function CreateIso3166_2_edges(items) {
 			// Connect subdivision to its type
 			// for path 'iso' and 'enum' predicate.
 			//
-			kGlob.globals.res.edges.push({
-				_from: term._code._gid,
-				_to: term.iso_3166_2_type,
-				_predicate: '_predicate_enum-of',
-				_path: ['iso']
-			})
+			// kGlob.globals.res.edges.push({
+			// 	_from: term._code._gid,
+			// 	_to: term.iso_3166_2_type,
+			// 	_predicate: '_predicate_enum-of',
+			// 	_path: ['iso']
+			// })
+			//
+			// MILKO - Removed, because not clear what it achieves.
 
 			//
 			// Handle connection to other subdivision.
@@ -2381,13 +2389,13 @@ function CreateIso3166_2_edges(items) {
 
 					//
 					// Connect subdivision to its parent
-					// for path 'iso'/'iso_3166_2' and 'enum' predicate.
+					// for path 'iso_3166_2' and 'enum' predicate.
 					//
 					kGlob.globals.res.edges.push({
 						_from: term._code._gid,
 						_to: parent._code._gid,
 						_predicate: '_predicate_enum-of',
-						_path: ['iso', term._code._nid]
+						_path: [term._code._nid]
 					})
 
 					//
@@ -2403,7 +2411,7 @@ function CreateIso3166_2_edges(items) {
 
 					//
 					// Connect subdivision types
-					// for path 'iso'/'iso_3166_2_type' and 'enum' predicate.
+					// for path 'iso_3166_2_type' and 'enum' predicate.
 					//
 					const hash = term.iso_3166_2_type + ',' + parent.iso_3166_2_type
 					if(! dict.has(hash)) {
@@ -2414,7 +2422,7 @@ function CreateIso3166_2_edges(items) {
 							_from: term.iso_3166_2_type,
 							_to: parent.iso_3166_2_type,
 							_predicate: '_predicate_enum-of',
-							_path: ['iso', 'iso_3166_2_type']
+							_path: ['iso_3166_2_type']
 						})
 
 					} // Was not already added
@@ -2438,13 +2446,13 @@ function CreateIso3166_2_edges(items) {
 
 				//
 				// Connect subdivision to its parent
-				// for path 'iso'/'iso_3166_2' and 'enum' predicate.
+				// for path 'iso_3166_2' and 'enum' predicate.
 				//
 				kGlob.globals.res.edges.push({
 					_from: term._code._gid,
 					_to: country,
 					_predicate: '_predicate_enum-of',
-					_path: ['iso', term._code._nid]
+					_path: [term._code._nid]
 				})
 
 				//
@@ -2460,7 +2468,7 @@ function CreateIso3166_2_edges(items) {
 
 				//
 				// Connect subdivision types
-				// for path 'iso'/'iso_3166_2_type' and 'enum' predicate.
+				// for path 'iso_3166_2_type' and 'enum' predicate.
 				//
 				const hash = term.iso_3166_2_type + ',' + 'iso_3166_2_type'
 				if(! dict.has(hash)) {
@@ -2471,7 +2479,7 @@ function CreateIso3166_2_edges(items) {
 						_from: term.iso_3166_2_type,
 						_to: 'iso_3166_2_type',
 						_predicate: '_predicate_enum-of',
-						_path: ['iso', 'iso_3166_2_type']
+						_path: ['iso_3166_2_type']
 					})
 
 				} // Was not already added
@@ -2487,7 +2495,7 @@ function CreateIso3166_2_edges(items) {
 						_from: country,
 						_to: term._code._nid,
 						_predicate: '_predicate_section-of',
-						_path: ['iso', term._code._nid]
+						_path: [term._code._nid]
 					})
 
 				} // Country not yet connected.
@@ -2578,7 +2586,7 @@ function CreateIso3166_3(item) {
 		_from: gid,
 		_to: nid,
 		_predicate: '_predicate_enum-of',
-		_path: ['iso', nid]
+		_path: [nid]
 	})
 
 } // CreateIso3166_3()

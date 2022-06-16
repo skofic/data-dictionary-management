@@ -10,7 +10,7 @@ FOR vertex, edge, path IN 1..10
              edge.`_rels_predicate` == "_enum_pred_enum-of") OR
             (edge._from == @target AND
              edge.`_rels_predicate` == "_enum_pred_enum-of") )
-//    OPTIONS {"order": "dfs", "uniqueVertices": "path"}
+    OPTIONS {"order": "dfs", "uniqueVertices": "path"}
     FILTER edge._to == @target OR
            edge._from == @target
     RETURN path
