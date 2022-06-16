@@ -22,7 +22,7 @@
 		"_from": "_info",
 		"_to": "_term_descriptor",
 		"_predicate": "_predicate_property-of",
-		"_path": ["_term"]
+		"_path": ["_term_descriptor"]
 	},
 	{
 		"_from": "_data",
