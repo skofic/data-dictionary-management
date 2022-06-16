@@ -19,10 +19,16 @@
 	},
 	
 	{
-		"_from": "_data",
+		"_from": "toc_dictionary",
 		"_to": "toc_enum",
 		"_predicate": "_predicate_section-of",
 		"_path": ["toc", "toc_enum"]
+	},
+	{
+		"_from": "_data",
+		"_to": "toc_dictionary",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_enum", "toc_object"]
 	},
 	{
 		"_from": "_class",
@@ -57,14 +63,14 @@
 	
 	{
 		"_from": "_predicate",
-		"_to": "toc_enum",
+		"_to": "toc_dictionary",
 		"_predicate": "_predicate_section-of",
 		"_path": ["toc", "toc_enum"]
 	},
 	
 	{
 		"_from": "_unit",
-		"_to": "toc_enum",
+		"_to": "toc_dictionary",
 		"_predicate": "_predicate_section-of",
 		"_path": ["toc", "toc_enum"]
 	},
@@ -268,5 +274,312 @@
 		"_to": "iso",
 		"_predicate": "_predicate_section-of",
 		"_path": ["toc", "toc_enum"]
-	}	
+	},
+	
+	{
+		"_from": "toc_dictionary",
+		"_to": "toc_object",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_object"]
+	},
+	{
+		"_from": "_term",
+		"_to": "toc_dictionary",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_object", "toc_descriptor"]
+	},
+	{
+		"_from": "_term_descriptor",
+		"_to": "toc_dictionary",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_object"]
+	},
+	{
+		"_from": "_term_object",
+		"_to": "toc_dictionary",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_object"]
+	},
+	{
+		"_from": "_edge",
+		"_to": "toc_dictionary",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_object"]
+	},
+	{
+		"_from": "_identification",
+		"_to": "toc_dictionary",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_object"]
+	},
+	{
+		"_from": "_documentation",
+		"_to": "toc_dictionary",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_object"]
+	},
+	{
+		"_from": "_container",
+		"_to": "_data",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_object"]
+	},
+	{
+		"_from": "_container_list",
+		"_to": "_data",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_object"]
+	},
+	{
+		"_from": "_container_scalar",
+		"_to": "_data",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_object"]
+	},
+	{
+		"_from": "_container_array",
+		"_to": "_data",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_object"]
+	},
+	{
+		"_from": "_container_set",
+		"_to": "_data",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_object"]
+	},
+	{
+		"_from": "_container_dict",
+		"_to": "_data",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_object"]
+	},
+	{
+		"_from": "_container_dict_key",
+		"_to": "_data",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_object"]
+	},
+	{
+		"_from": "_range_value",
+		"_to": "_data",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_object"]
+	},
+	{
+		"_from": "_range_value",
+		"_to": "_data",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_object"]
+	},
+	{
+		"_from": "_range_elements",
+		"_to": "_data",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_object"]
+	},
+	{
+		"_from": "_rule",
+		"_to": "toc_dictionary",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_object"]
+	},
+	{
+		"_from": "_constraints",
+		"_to": "_rule",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_object"]
+	},
+	{
+		"_from": "_selection-terms",
+		"_to": "_rule",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_object"]
+	},
+	{
+		"_from": "_selection-descriptors",
+		"_to": "_rule",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_object"]
+	},
+	{
+		"_from": "_selection-values",
+		"_to": "_rule",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_object"]
+	},
+	{
+		"_from": "toc_dictionary",
+		"_to": "toc_descriptor",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_code",
+		"_to": "_term",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_nid",
+		"_to": "_code",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_lid",
+		"_to": "_code",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_gid",
+		"_to": "_code",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_aid",
+		"_to": "_code",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_pid",
+		"_to": "_code",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_name",
+		"_to": "_code",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_info",
+		"_to": "_term",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_title",
+		"_to": "_info",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_definition",
+		"_to": "_info",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_description",
+		"_to": "_info",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_examples",
+		"_to": "_info",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_notes",
+		"_to": "_info",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_data",
+		"_to": "_term",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_scalar",
+		"_to": "_data",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_class",
+		"_to": "_scalar",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_type",
+		"_to": "_scalar",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_kind",
+		"_to": "_scalar",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_format",
+		"_to": "_scalar",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_unit",
+		"_to": "_scalar",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_unit-name",
+		"_to": "_scalar",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_regexp",
+		"_to": "_scalar",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_range",
+		"_to": "_scalar",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_valid-range",
+		"_to": "_scalar",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_normal-range",
+		"_to": "_scalar",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_array",
+		"_to": "_data",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_set",
+		"_to": "_data",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_dict",
+		"_to": "_data",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	}
 ]

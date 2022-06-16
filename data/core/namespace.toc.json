@@ -50,5 +50,19 @@
 			"_definition": {"iso_639_3_eng": "Descriptors table of contents."},
 			"_description": {"iso_639_3_eng": "This *namespace* groups into a navigable *tree* all *descriptors*. The tree leaf will be the *descriptor* and all predicates will be the [section-of](_predicate_section-of) predicate."}
 		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "toc",
+			"_lid": "dictionary",
+			"_gid": "toc_dictionary",
+			"_aid": ["dictionary"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Dictionary"},
+			"_definition": {"iso_639_3_eng": "Dictionary elements."},
+			"_description": {"iso_639_3_eng": "This *namespace* is a *group* for all *dictionary* *types* and *descriptors*."}
+		}
 	}
 ]
