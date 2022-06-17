@@ -17,24 +17,6 @@
 			"_immutable": ["_scalar", "_array", "_set", "_dict"]
 		}
 	},
-	{
-		"_code": {
-			"_nid": "_container",
-			"_lid": "list",
-			"_gid": "_container_list",
-			"_aid": ["list"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "List data container"},
-			"_definition": {"iso_639_3_eng": "This object contains the properties that define the shape and type of list data containers."},
-			"_description": {"iso_639_3_eng": "This object data structure defines the *shape* of [descriptor](_term_descriptor) lists of *data values*. The data structure allows *one* among the following *properties*:\n\n- [Array](_array): if *data* is a *list* of values.\n- [Set](_set): if *data* is a *list* of *unique* values."},
-			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_array\": {\n\t\t\"_class\": \"_class_quantity\",\n\t\t\"_type\": \"_type_number\",\n\t\t\"_valid-range\": {\n\t\t\t\"_min-range-inclusive\": 0.0,\n\t\t\t\"_max-range-exclusive\": 100.0,\n\t\t}\n\t\t\"_unit\": \"_unit_length_cm\"\n\t}\n}\n```\n\nThis example describes a *list* of *continuous quantitative* values *greater or equal* to `0.0` and *less than* `100.0` representing a *length* in *centimetres*.\n\n```json\n{\n\t\"_array\": {\n\t\t\"_set\": {\n\t\t\t\"_class\": \"_class_quantity\",\n\t\t\t\"_type\": \"_type_integer\"\n\t\t}\n\t}\n}\n```\n\nThis example describes a *list* of *discrete quantitative unique values*."}
-		},
-		"_rule": {
-			"_required": {"_selection-descriptors_one-none": ["_array", "_set"]},
-			"_immutable": ["_array", "_set"]
-		}
-	},
 	
 	{
 		"_code": {
