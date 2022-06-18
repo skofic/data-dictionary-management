@@ -2354,7 +2354,7 @@ function CreateIso3166_2_edges(items) {
 
 			//
 			// Init local storage.
-			//
+			//\
 			const code = item['code'].slice(0, 2)
 			const term = kGlob.globals.res.terms[item['code']]
 

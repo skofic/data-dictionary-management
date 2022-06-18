@@ -176,7 +176,7 @@
 		"_from": "iso_639",
 		"_to": "iso",
 		"_predicate": "_predicate_section-of",
-		"_path": ["toc", "toc_enum"]
+		"_path": ["toc", "toc_enum", "toc_descriptor"]
 	},
 	{
 		"_from": "iso_639_1",
@@ -218,7 +218,7 @@
 		"_from": "iso_3166",
 		"_to": "iso",
 		"_predicate": "_predicate_section-of",
-		"_path": ["toc", "toc_enum"]
+		"_path": ["toc", "toc_enum", "toc_descriptor"]
 	},
 	{
 		"_from": "iso_3166_1",
@@ -230,7 +230,7 @@
 		"_from": "iso_3166_2",
 		"_to": "iso_3166",
 		"_predicate": "_predicate_section-of",
-		"_path": ["toc", "toc_enum"]
+		"_path": ["toc", "toc_enum", "toc_descriptor"]
 	},
 	{
 		"_from": "iso_3166_2_type",
@@ -242,18 +242,18 @@
 		"_from": "iso_3166_3",
 		"_to": "iso_3166",
 		"_predicate": "_predicate_section-of",
-		"_path": ["toc", "toc_enum"]
+		"_path": ["toc", "toc_enum", "toc_descriptor"]
 	},
 	{
 		"_from": "iso_4217",
 		"_to": "iso",
 		"_predicate": "_predicate_section-of",
-		"_path": ["toc", "toc_enum"]
+		"_path": ["toc", "toc_enum", "toc_descriptor"]
 	},
 	{
 		"_from": "iso_15924",
 		"_to": "iso",
 		"_predicate": "_predicate_section-of",
-		"_path": ["toc", "toc_enum"]
+		"_path": ["toc", "toc_enum", "toc_descriptor"]
 	}
 ]
