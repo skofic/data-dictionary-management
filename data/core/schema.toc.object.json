@@ -27,7 +27,7 @@
 		"_from": "_edge",
 		"_to": "toc_dictionary",
 		"_predicate": "_predicate_section-of",
-		"_path": ["toc", "toc_object"]
+		"_path": ["toc", "toc_object", "toc_descriptor"]
 	},
 	{
 		"_from": "_identification",

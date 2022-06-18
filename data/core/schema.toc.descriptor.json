@@ -578,5 +578,271 @@
 		"_to": "_default-value",
 		"_predicate": "_predicate_section-of",
 		"_path": ["toc", "toc_descriptor"]
+	},
+	
+	{
+		"_from": "_from",
+		"_to": "_edge",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_to",
+		"_to": "_edge",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_predicate",
+		"_to": "_edge",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_path",
+		"_to": "_edge",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	
+	{
+		"_from": "eufgis",
+		"_to": "toc_descriptor",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_country",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_number",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_gene-number",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_province",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_department",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_municioality",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_name",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_latitude",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_longitude",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_center",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_polygon",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_geodetic-datum",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_coordinates-restriction",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_elevation-min",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_elevation-max",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_area",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_ownership",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_type",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_year",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_visit",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_soil-remarks",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_unit-remarks",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_species",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_population_species",
+		"_to": "gcu_population",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_population_number",
+		"_to": "gcu_population",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_population_established",
+		"_to": "gcu_population",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_population_last",
+		"_to": "gcu_population",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_population_status",
+		"_to": "gcu_population",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_population_situ",
+		"_to": "gcu_population",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_population_origin",
+		"_to": "gcu_population",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_population_system",
+		"_to": "gcu_population",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_population_management",
+		"_to": "gcu_population",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_population_justification",
+		"_to": "gcu_population",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_population_reproducing",
+		"_to": "gcu_population",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_population_sex-ratio",
+		"_to": "gcu_population",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_population_regeneration",
+		"_to": "gcu_population",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_population_distribution",
+		"_to": "gcu_population",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_population_share",
+		"_to": "gcu_population",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_population_remarks",
+		"_to": "gcu_population",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
 	}
 ]
