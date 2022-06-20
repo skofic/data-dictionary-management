@@ -4,6 +4,3 @@
 [submodule "external/countries"]
 	path = external/countries
 	url = https://github.com/mledoze/countries.git
-[submodule "external/country-flags"]
-	path = external/country-flags
-	url = https://github.com/hjnilsson/country-flags.git
