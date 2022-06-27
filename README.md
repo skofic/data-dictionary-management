@@ -22,13 +22,13 @@ The `esternal` directory contains three submodules required by the scripts:
 
 The `data` directory contains two directories:
 
-- *base*: Here are the JSON files for the core dictionary terms and edges.
+- *core*: Here are the JSON files for the core dictionary terms and edges.
 
-- *processed*: This directory contains the processed - *ready to be inserted into the database* - JSOn files. Note that when you run the `init.js` script, besides generating the JSON files, the script will write the data to the database.
+- *processed*: This directory contains the processed - *ready to be inserted into the database* - JSON files. Note that when you run the `init.js` script, besides generating the JSON files, the script will write the data to the database.
 
 The database should be [ArangoDB](https://www.arangodb.com), check it out and install it if you want to try this out.
 
-You should create a `user.globals.js` file, look at the `user.globals.example.js `for info.
+You should update the `user.globals.js` file according to your settings.
 
 The data dictionary uses three collections:
 
@@ -37,6 +37,8 @@ The data dictionary uses three collections:
 * ***schemas*** is an *edge collection* that connects the terms together to form *enumerations* and *structures*.
 
 * ***topos*** is an *edge collection* that contains *experimental relationships*, someday it will morph into a feature.
+
+Note that the above collection names are the root names, depending on the value of  *`db.mount`* in the `user.globals.js`, so if `db.mount` is "ddict" and `db.terms_col` is "terms", the actual collection name will be "ddict_terms".
 
 The `init.js` script will load all those standards into the database, creating a clean slate data dictionary.
 

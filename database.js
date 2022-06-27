@@ -8,6 +8,7 @@ const { Database, CollectionType } = require("arangojs")	// ArangoDB driver.
 
 const kGlob = require('./globals')			// Generic globals.
 const kPriv = require('./user.globals')		// User-provided globals.
+const kDb = require('./db.globals')			// Database globals.
 
 /**
  * Initialise database.
@@ -44,20 +45,20 @@ async function InitDatabase(db)
 		switch(item.name) {
 
 			// Terms.
-			case kPriv.user.db.terms_col:
-				collection = db.collection(kPriv.user.db.terms_col)
+			case kDb.collection_terms:
+				collection = db.collection(kDb.collection_terms)
 				await collection.drop()
 				break
 
 			// Schema.
-			case kPriv.user.db.edges_col:
-				collection = db.collection(kPriv.user.db.edges_col)
+			case kDb.collection_edges:
+				collection = db.collection(kDb.collection_edges)
 				await collection.drop()
 				break
 
 			// Topo.
-			case kPriv.user.db.topos_col:
-				collection = db.collection(kPriv.user.db.topos_col)
+			case kDb.collection_topos:
+				collection = db.collection(kDb.collection_topos)
 				await collection.drop()
 				break
 
@@ -72,9 +73,9 @@ async function InitDatabase(db)
 	//
 	// Create collections.
 	//
-	await InitTermCollection(db, kPriv.user.db.terms_col)
-	await InitEdgeCollection(db, kPriv.user.db.edges_col)
-	await InitTopoCollection(db, kPriv.user.db.topos_col)
+	await InitTermCollection(db, kDb.collection_terms)
+	await InitEdgeCollection(db, kDb.collection_edges)
+	await InitTopoCollection(db, kDb.collection_topos)
 	await InitErrorCollection(db, kPriv.user.db.error_col)
 
 	//
@@ -266,9 +267,9 @@ async function InitSchemaGraph(db)
 	//
 	const info = await graph.create([
 		{
-			collection: kPriv.user.db.edges_col,
-			from: [kPriv.user.db.terms_col],
-			to: [kPriv.user.db.terms_col],
+			collection: kDb.collection_edges,
+			from: [kDb.collection_terms],
+			to: [kDb.collection_terms],
 		}
 	]);
 
@@ -293,9 +294,9 @@ async function InitTopoGraph(db)
 	//
 	const info = await graph.create([
 		{
-			collection: kPriv.user.db.topos_col,
-			from: [kPriv.user.db.terms_col],
-			to: [kPriv.user.db.terms_col],
+			collection: kDb.collection_topos,
+			from: [kDb.collection_terms],
+			to: [kDb.collection_terms],
 		}
 	]);
 

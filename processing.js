@@ -11,6 +11,7 @@ const { Database, aql } = require("arangojs")	// ArangoDB driver.
 
 const kGlob = require('./globals')				// Generic globals.
 const kPriv = require('./user.globals')			// User-provided globals.
+const kDb = require('./db.globals')				// Database globals.
 
 /**
  * Process base files.
@@ -27,7 +28,7 @@ async function ProcessDictionaryFiles(db) {
 	//
 	await ProcessFiles(
 		db,										// Database connection.
-		kPriv.user.db.terms_col,				// Database collection name.
+		kDb.collection_terms,					// Database collection name.
 		GetFilesList(
 			kGlob.globals.path.base,			// Source data files directory.
 			'.json', 					// File extension.
@@ -41,7 +42,7 @@ async function ProcessDictionaryFiles(db) {
 	//
 	await ProcessFiles(
 		db,										// Database connection.
-		kPriv.user.db.edges_col,				// Database collection name.
+		kDb.collection_edges,				// Database collection name.
 		GetFilesList(
 			kGlob.globals.path.base,			// Source data files directory.
 			'.json', 					// File extension.
@@ -121,7 +122,7 @@ async function ValidateTerms(db) {
 	//
 	let error_count = 0
 	let cache = new Set()
-	const collection = db.collection(kPriv.user.db.terms_col);
+	const collection = db.collection(kDb.collection_terms);
 	const error_collection = db.collection(kPriv.user.db.error_col)
 
 	//
@@ -200,8 +201,8 @@ async function ValidateEdges(db) {
 	//
 	let error_count = 0
 	let cache = new Set()
-	const collection = db.collection(kPriv.user.db.edges_col)
-	const terms_collection = db.collection(kPriv.user.db.terms_col)
+	const collection = db.collection(kDb.collection_edges)
+	const terms_collection = db.collection(kDb.collection_terms)
 	const error_collection = db.collection(kPriv.user.db.error_col)
 
 	//
@@ -257,8 +258,8 @@ async function ValidateTopos(db) {
 	//
 	let error_count = 0
 	let cache = new Set()
-	const collection = db.collection(kPriv.user.db.topos_col)
-	const terms_collection = db.collection(kPriv.user.db.terms_col)
+	const collection = db.collection(kDb.collection_topos)
+	const terms_collection = db.collection(kDb.collection_terms)
 	const error_collection = db.collection(kPriv.user.db.error_col)
 
 	//
@@ -840,7 +841,7 @@ async function LoadIso639_1(db) {
 	//
 	await ProcessItems(
 		db,
-		kPriv.user.db.terms_col,
+		kDb.collection_terms,
 		Object.values(kGlob.globals.res.terms),
 		ProcessTerm,
 		'enumeration.iso.639.1'
@@ -851,7 +852,7 @@ async function LoadIso639_1(db) {
 	//
 	await ProcessItems(
 		db,
-		kPriv.user.db.edges_col,
+		kDb.collection_edges,
 		kGlob.globals.res.edges,
 		ProcessEdge,
 		'schema.iso.639.1'
@@ -916,7 +917,7 @@ async function LoadIso639_2(db) {
 	//
 	await ProcessItems(
 		db,
-		kPriv.user.db.terms_col,
+		kDb.collection_terms,
 		Object.values(kGlob.globals.res.terms),
 		ProcessTerm,
 		'enumeration.iso.639.2'
@@ -927,7 +928,7 @@ async function LoadIso639_2(db) {
 	//
 	await ProcessItems(
 		db,
-		kPriv.user.db.edges_col,
+		kDb.collection_edges,
 		kGlob.globals.res.edges,
 		ProcessEdge,
 		'schema.iso.639.2'
@@ -990,7 +991,7 @@ async function LoadIso639_3(db) {
 	//
 	await ProcessItems(
 		db,
-		kPriv.user.db.terms_col,
+		kDb.collection_terms,
 		Object.values(kGlob.globals.res.terms),
 		ProcessTerm,
 		'enumeration.iso.639.3'
@@ -1001,7 +1002,7 @@ async function LoadIso639_3(db) {
 	//
 	await ProcessItems(
 		db,
-		kPriv.user.db.edges_col,
+		kDb.collection_edges,
 		kGlob.globals.res.edges,
 		ProcessEdge,
 		'schema.iso.639.3'
@@ -1066,7 +1067,7 @@ async function LoadIso639_5(db) {
 	//
 	await ProcessItems(
 		db,
-		kPriv.user.db.terms_col,
+		kDb.collection_terms,
 		Object.values(kGlob.globals.res.terms),
 		ProcessTerm,
 		'enumeration.iso.639.5'
@@ -1077,7 +1078,7 @@ async function LoadIso639_5(db) {
 	//
 	await ProcessItems(
 		db,
-		kPriv.user.db.edges_col,
+		kDb.collection_edges,
 		kGlob.globals.res.edges,
 		ProcessEdge,
 		'schema.iso.639.5'
@@ -1140,7 +1141,7 @@ async function LoadIso4217(db) {
 	//
 	await ProcessItems(
 		db,
-		kPriv.user.db.terms_col,
+		kDb.collection_terms,
 		Object.values(kGlob.globals.res.terms),
 		ProcessTerm,
 		'enumeration.iso.4217'
@@ -1151,7 +1152,7 @@ async function LoadIso4217(db) {
 	//
 	await ProcessItems(
 		db,
-		kPriv.user.db.edges_col,
+		kDb.collection_edges,
 		kGlob.globals.res.edges,
 		ProcessEdge,
 		'schema.iso.4217'
@@ -1214,7 +1215,7 @@ async function LoadIso15924(db) {
 	//
 	await ProcessItems(
 		db,
-		kPriv.user.db.terms_col,
+		kDb.collection_terms,
 		Object.values(kGlob.globals.res.terms),
 		ProcessTerm,
 		'enumeration.iso.15924'
@@ -1225,7 +1226,7 @@ async function LoadIso15924(db) {
 	//
 	await ProcessItems(
 		db,
-		kPriv.user.db.edges_col,
+		kDb.collection_edges,
 		kGlob.globals.res.edges,
 		ProcessEdge,
 		'schema.iso.15924'
@@ -1323,7 +1324,7 @@ async function LoadIso3166_1(db) {
 	//
 	await ProcessItems(
 		db,
-		kPriv.user.db.terms_col,
+		kDb.collection_terms,
 		Object.values(kGlob.globals.res.terms),
 		ProcessTerm,
 		'enumeration.iso.3166.1'
@@ -1334,7 +1335,7 @@ async function LoadIso3166_1(db) {
 	//
 	await ProcessItems(
 		db,
-		kPriv.user.db.edges_col,
+		kDb.collection_edges,
 		kGlob.globals.res.edges,
 		ProcessEdge,
 		'schema.iso.3166.1'
@@ -1345,7 +1346,7 @@ async function LoadIso3166_1(db) {
 	//
 	await ProcessItems(
 		db,
-		kPriv.user.db.topos_col,
+		kDb.collection_topos,
 		kGlob.globals.res.topos,
 		ProcessEdge,
 		'topo.iso.3166.1'
@@ -1419,7 +1420,7 @@ async function LoadIso3166_2(db) {
 	//
 	await ProcessItems(
 		db,
-		kPriv.user.db.terms_col,
+		kDb.collection_terms,
 		Object.values(kGlob.globals.res.types),
 		ProcessTerm,
 		'enumeration.iso.3166.2.types'
@@ -1430,7 +1431,7 @@ async function LoadIso3166_2(db) {
 	//
 	await ProcessItems(
 		db,
-		kPriv.user.db.terms_col,
+		kDb.collection_terms,
 		Object.values(kGlob.globals.res.terms),
 		ProcessTerm,
 		'enumeration.iso.3166.2'
@@ -1441,7 +1442,7 @@ async function LoadIso3166_2(db) {
 	//
 	await ProcessItems(
 		db,
-		kPriv.user.db.edges_col,
+		kDb.collection_edges,
 		kGlob.globals.res.edges,
 		ProcessEdge,
 		'schema.iso.3166.2'
@@ -1452,7 +1453,7 @@ async function LoadIso3166_2(db) {
 	//
 	await ProcessItems(
 		db,
-		kPriv.user.db.topos_col,
+		kDb.collection_topos,
 		kGlob.globals.res.topos,
 		ProcessEdge,
 		'topo.iso.3166.2'
@@ -1515,7 +1516,7 @@ async function LoadIso3166_3(db) {
 	//
 	await ProcessItems(
 		db,
-		kPriv.user.db.terms_col,
+		kDb.collection_terms,
 		Object.values(kGlob.globals.res.terms),
 		ProcessTerm,
 		'enumeration.iso.3166.3'
@@ -1526,7 +1527,7 @@ async function LoadIso3166_3(db) {
 	//
 	await ProcessItems(
 		db,
-		kPriv.user.db.edges_col,
+		kDb.collection_edges,
 		kGlob.globals.res.edges,
 		ProcessEdge,
 		'schema.iso.3166.3'
@@ -3212,19 +3213,19 @@ function ProcessEdge(edge) {
 			if('_path' in edge) {
 
 				//
+				// Set term record references.
+				//
+				const srcRef = kDb.collection_terms + '/' + ProcessGlobalIdentifier(edge._from)
+				const dstRef = kDb.collection_terms + '/' + ProcessGlobalIdentifier(edge._to)
+
+				//
 				// Create key string.
 				//
-				const index = edge._from
+				const index = srcRef
 							+ kGlob.globals.token.tok
 							+ edge._predicate
 							+ kGlob.globals.token.tok
-							+ edge._to
-
-				//
-				// Set term record references.
-				//
-				const srcRef = kPriv.user.db.terms_col + '/' + ProcessGlobalIdentifier(edge._from)
-				const dstRef = kPriv.user.db.terms_col + '/' + ProcessGlobalIdentifier(edge._to)
+							+ dstRef
 
 				//
 				// Init new term with _key.
@@ -3287,21 +3288,22 @@ function ProcessEdge(edge) {
  * @returns {string} - _key value
  */
 function ProcessGlobalIdentifier(identifier) {
+	return (identifier.length > 0) ? identifier : ':'								// ==>
 
 	//
 	// Parse settings.
 	//
-	switch(kPriv.user.flag.key_encode)
-	{
-		case 'MD5':
-			return md5(identifier)													// ==>
-
-		case 'GID':
-			return (identifier.length > 0) ? identifier : ':'						// ==>
-
-		default:
-			throw(Error(`Invalid user globals key_encode flag value, found [${kPriv.user.flag}]`))
-	}
+	// switch(kPriv.user.flag.key_encode)
+	// {
+	// 	case 'MD5':
+	// 		return md5(identifier)													// ==>
+	//
+	// 	case 'GID':
+	// 		return (identifier.length > 0) ? identifier : ':'						// ==>
+	//
+	// 	default:
+	// 		throw(Error(`Invalid user globals key_encode flag value, found [${kPriv.user.flag}]`))
+	// }
 
 } // ProcessGlobalIdentifier()
 
