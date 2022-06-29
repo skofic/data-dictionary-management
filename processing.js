@@ -1832,34 +1832,28 @@ function CreateIso639_3(item) {
 	//
 	// Create and add scope edge to buffer.
 	//
-	// edge = {
-	// 	_from: gid,
-	// 	_to: term.iso_639_scope,
-	// 	_predicate: '_predicate_enum-of',
-	// 	_path: ['iso']
-	// }
-	// if((item['scope'] === 'M') || (item['scope'] === 'S')) {
-	// 	edge._path.push(nid)
-	// }
-	// kGlob.globals.res.edges.push(edge)
-	//
-	// MILKO - Disabled to remove ISO path.
+	if((item['scope'] === 'M') || (item['scope'] === 'S')) {
+		edge = {
+			_from: gid,
+			_to: term.iso_639_scope,
+			_predicate: '_predicate_enum-of',
+			_path: ['iso_639_3']
+		}
+		kGlob.globals.res.edges.push(edge)
+	}
 
 	//
 	// Create, process and add type edge to buffer.
 	//
-	// edge = {
-	// 	_from: gid,
-	// 	_to: term['iso_639_type'],
-	// 	_predicate: '_predicate_enum-of',
-	// 	_path: ['iso']
-	// }
-	// if(item['scope'] === 'I') {
-	// 	edge._path.push(nid)
-	// }
-	// kGlob.globals.res.edges.push(edge)
-	//
-	// MILKO - Disabled to remove ISO path.
+	if(item['scope'] === 'I') {
+		edge = {
+			_from: gid,
+			_to: term['iso_639_type'],
+			_predicate: '_predicate_enum-of',
+			_path: ['iso_639_3']
+		}
+		kGlob.globals.res.edges.push(edge)
+	}
 
 } // CreateIso639_3()
 
