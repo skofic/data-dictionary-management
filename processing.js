@@ -1369,7 +1369,7 @@ async function LoadIso3166_1(db) {
  * @returns {Promise<void>}
  */
 async function LoadIso3166_2(db) {
-	console.log(`\n==> Handling ISO 3166-1`)
+	console.log(`\n==> Handling ISO 3166-2`)
 
 	//
 	// Reset buffers.

@@ -110,5 +110,8 @@ dist
 **/.DS_Store
 
 ### User files.
-/user.globals.js
+./user.globals.js
 /data/scrap/
+
+### certificates
+*.crt
