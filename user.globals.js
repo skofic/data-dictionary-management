@@ -18,27 +18,12 @@
 
 const user = {
 
-	// "db": {
-	// 	"host": "http://192.168.178.2:8529",
-	// 	"name": "metadata",
-	//
-	// 	"user": "eufgis_developer",
-	// 	"pass": "letmein",
-	//
-	// 	"mount": "dict",
-	//
-	// 	"terms_col": "terms",
-	// 	"edges_col": "schemas",
-	// 	"topos_col": "topos",
-	// 	"error_col": "errors"
-	// },
-
 	"db": {
-		"host": "https://d2d7b726936b.arangodb.cloud:18529",
+		"host": "http://192.168.188.2:8529",
 		"name": "metadata",
 
-		"user": "root",
-		"pass": "mHskEhUcUlsGjOhEKwVX",
+		"user": "eufgis_developer",
+		"pass": "letmein",
 
 		"mount": "dict",
 
