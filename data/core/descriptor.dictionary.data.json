@@ -226,9 +226,11 @@
 		},
 		"_data": {
 			"_set": {
-				"_class": "_class_category",
-				"_type": "_type_enum",
-				"_kind": ["_any-term"]
+				"_scalar": {
+					"_class": "_class_category",
+					"_type": "_type_enum",
+					"_kind": ["_any-term"]
+				}
 			}
 		}
 	},

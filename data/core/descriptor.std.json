@@ -69,8 +69,10 @@
 		},
 		"_data": {
 			"_set": {
-				"_class": "_class_category",
-				"_type": "_type_string"
+				"_scalar": {
+					"_class": "_class_category",
+					"_type": "_type_string"
+				}
 			}
 		}
 	},
@@ -87,9 +89,11 @@
 		},
 		"_data": {
 			"_set": {
-				"_class": "_class_category",
-				"_type": "_type_string",
-				"_regexp": "^\\+[0-9]+$"
+				"_scalar": {
+					"_class": "_class_category",
+					"_type": "_type_string",
+					"_regexp": "^\\+[0-9]+$"
+				}
 			}
 		}
 	},
@@ -126,9 +130,11 @@
 		},
 		"_data": {
 			"_set": {
-				"_class": "_class_category",
-				"_type": "_type_enum",
-				"_kind": ["iso_639_3"]
+				"_scalar": {
+					"_class": "_class_category",
+					"_type": "_type_enum",
+					"_kind": ["iso_639_3"]
+				}
 			}
 		}
 	},
@@ -146,9 +152,11 @@
 		},
 		"_data": {
 			"_set": {
-				"_class": "_class_category",
-				"_type": "_type_enum",
-				"_kind": ["iso_4217"]
+				"_scalar": {
+					"_class": "_class_category",
+					"_type": "_type_enum",
+					"_kind": ["iso_4217"]
+				}
 			}
 		}
 	},
@@ -166,9 +174,11 @@
 		},
 		"_data": {
 			"_set": {
-				"_class": "_class_category",
-				"_type": "_type_enum",
-				"_kind": ["iso_3166_1"]
+				"_scalar": {
+					"_class": "_class_category",
+					"_type": "_type_enum",
+					"_kind": ["iso_3166_1"]
+				}
 			}
 		}
 	},

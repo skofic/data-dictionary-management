@@ -77,9 +77,11 @@
 		},
 		"_data": {
 			"_set": {
-				"_class": "_class_other",
-				"_type": "_type_enum",
-				"_kind": ["_any-descriptor"]
+				"_scalar": {
+					"_class": "_class_other",
+					"_type": "_type_enum",
+					"_kind": ["_any-descriptor"]
+				}
 			}
 		}
 	},
@@ -97,9 +99,11 @@
 		},
 		"_data": {
 			"_set": {
-				"_class": "_class_other",
-				"_type": "_type_enum",
-				"_kind": ["_any-descriptor"]
+				"_scalar": {
+					"_class": "_class_other",
+					"_type": "_type_enum",
+					"_kind": ["_any-descriptor"]
+				}
 			}
 		}
 	},
@@ -117,9 +121,11 @@
 		},
 		"_data": {
 			"_set": {
-				"_class": "_class_other",
-				"_type": "_type_enum",
-				"_kind": ["_any-descriptor"]
+				"_scalar": {
+					"_class": "_class_other",
+					"_type": "_type_enum",
+					"_kind": ["_any-descriptor"]
+				}
 			}
 		}
 	},
@@ -137,9 +143,11 @@
 		},
 		"_data": {
 			"_set": {
-				"_class": "_class_other",
-				"_type": "_type_enum",
-				"_kind": ["_any-descriptor"]
+				"_scalar": {
+					"_class": "_class_other",
+					"_type": "_type_enum",
+					"_kind": ["_any-descriptor"]
+				}
 			}
 		}
 	},
@@ -179,9 +187,11 @@
 		},
 		"_data": {
 			"_set": {
-				"_class": "_class_other",
-				"_type": "_type_enum",
-				"_kind": ["_any-term"]
+				"_scalar": {
+					"_class": "_class_other",
+					"_type": "_type_enum",
+					"_kind": ["_any-term"]
+				}
 			}
 		}
 	},
@@ -199,9 +209,11 @@
 		},
 		"_data": {
 			"_set": {
-				"_class": "_class_other",
-				"_type": "_type_enum",
-				"_kind": ["_any-term"]
+				"_scalar": {
+					"_class": "_class_other",
+					"_type": "_type_enum",
+					"_kind": ["_any-term"]
+				}
 			}
 		}
 	},
@@ -219,9 +231,11 @@
 		},
 		"_data": {
 			"_set": {
-				"_class": "_class_other",
-				"_type": "_type_enum",
-				"_kind": ["_any-term"]
+				"_scalar": {
+					"_class": "_class_other",
+					"_type": "_type_enum",
+					"_kind": ["_any-term"]
+				}
 			}
 		}
 	},
@@ -241,9 +255,11 @@
 		"_data": {
 			"_array": {
 				"_set": {
-					"_class": "_class_other",
-					"_type": "_type_enum",
-					"_kind": ["_any-term"]
+					"_scalar": {
+						"_class": "_class_other",
+						"_type": "_type_enum",
+						"_kind": ["_any-term"]
+					}
 				}
 			}
 		}
@@ -262,9 +278,11 @@
 		},
 		"_data": {
 			"_set": {
-				"_class": "_class_other",
-				"_type": "_type_enum",
-				"_kind": ["_any-term"]
+				"_scalar": {
+					"_class": "_class_other",
+					"_type": "_type_enum",
+					"_kind": ["_any-term"]
+				}
 			}
 		}
 	},
@@ -283,9 +301,11 @@
 		},
 		"_data": {
 			"_set": {
-				"_class": "_class_other",
-				"_type": "_type_enum",
-				"_kind": ["_any-descriptor"]
+				"_scalar": {
+					"_class": "_class_other",
+					"_type": "_type_enum",
+					"_kind": ["_any-descriptor"]
+				}
 			}
 		}
 	},
@@ -303,9 +323,11 @@
 		},
 		"_data": {
 			"_set": {
-				"_class": "_class_other",
-				"_type": "_type_enum",
-				"_kind": ["_any-descriptor"]
+				"_scalar": {
+					"_class": "_class_other",
+					"_type": "_type_enum",
+					"_kind": ["_any-descriptor"]
+				}
 			}
 		}
 	},
@@ -323,9 +345,11 @@
 		},
 		"_data": {
 			"_set": {
-				"_class": "_class_other",
-				"_type": "_type_enum",
-				"_kind": ["_any-descriptor"]
+				"_scalar": {
+					"_class": "_class_other",
+					"_type": "_type_enum",
+					"_kind": ["_any-descriptor"]
+				}
 			}
 		}
 	},
@@ -345,9 +369,11 @@
 		"_data": {
 			"_array": {
 				"_set": {
-					"_class": "_class_other",
-					"_type": "_type_enum",
-					"_kind": ["_any-descriptor"]
+					"_scalar": {
+						"_class": "_class_other",
+						"_type": "_type_enum",
+						"_kind": ["_any-descriptor"]
+					}
 				}
 			}
 		}
@@ -366,9 +392,11 @@
 		},
 		"_data": {
 			"_set": {
-				"_class": "_class_other",
-				"_type": "_type_enum",
-				"_kind": ["_any-descriptor"]
+				"_scalar": {
+					"_class": "_class_other",
+					"_type": "_type_enum",
+					"_kind": ["_any-descriptor"]
+				}
 			}
 		}
 	},

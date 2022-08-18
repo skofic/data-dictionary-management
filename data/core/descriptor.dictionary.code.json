@@ -98,8 +98,10 @@
 		},
 		"_data": {
 			"_set": {
-				"_class": "_class_other",
-				"_type": "_type_string"
+				"_scalar": {
+					"_class": "_class_other",
+					"_type": "_type_string"
+				}
 			}
 		}
 	},
@@ -117,8 +119,10 @@
 		},
 		"_data": {
 			"_set": {
-				"_class": "_class_other",
-				"_type": "_type_string"
+				"_scalar": {
+					"_class": "_class_other",
+					"_type": "_type_string"
+				}
 			}
 		}
 	},

@@ -366,9 +366,11 @@
 		},
 		"_data": {
 			"_set": {
-				"_class": "_class_category",
-				"_type": "_type_enum",
-				"_kind": ["gcu_types"]
+				"_scalar": {
+					"_class": "_class_category",
+					"_type": "_type_enum",
+					"_kind": ["gcu_types"]
+				}
 			}
 		}
 	},
@@ -463,8 +465,10 @@
 		},
 		"_data": {
 			"_set": {
-				"_class": "_class_category",
-				"_type": "_type_string"
+				"_scalar": {
+					"_class": "_class_category",
+					"_type": "_type_string"
+				}
 			}
 		}
 	},
@@ -483,8 +487,10 @@
 		},
 		"_data": {
 			"_set": {
-				"_class": "_class_category",
-				"_type": "_type_string"
+				"_scalar": {
+					"_class": "_class_category",
+					"_type": "_type_string"
+				}
 			}
 		}
 	},  
@@ -737,9 +743,11 @@
 		},
 		"_data": {
 			"_set": {
-				"_class": "_class_category",
-				"_type": "_type_enum",
-				"_kind": ["gcu_population_distributions"]
+				"_scalar": {
+					"_class": "_class_category",
+					"_type": "_type_enum",
+					"_kind": ["gcu_population_distributions"]
+				}
 			}
 		}
 	},
