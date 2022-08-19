@@ -86,55 +86,25 @@
 	},
 	
 	{
-		"_from": "_class",
+		"_from": "_scalar",
 		"_to": "_container_array",
 		"_predicate": "_predicate_property-of",
 		"_path": ["_container_array"]
 	},
 	{
-		"_from": "_type",
+		"_from": "_array",
 		"_to": "_container_array",
 		"_predicate": "_predicate_property-of",
 		"_path": ["_container_array"]
 	},
 	{
-		"_from": "_kind",
+		"_from": "_set",
 		"_to": "_container_array",
 		"_predicate": "_predicate_property-of",
 		"_path": ["_container_array"]
 	},
 	{
-		"_from": "_format",
-		"_to": "_container_array",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_container_array"]
-	},
-	{
-		"_from": "_unit",
-		"_to": "_container_array",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_container_array"]
-	},
-	{
-		"_from": "_unit-name",
-		"_to": "_container_array",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_container_array"]
-	},
-	{
-		"_from": "_regexp",
-		"_to": "_container_array",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_container_array"]
-	},
-	{
-		"_from": "_valid-range",
-		"_to": "_container_array",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_container_array"]
-	},
-	{
-		"_from": "_normal-range",
+		"_from": "_dict",
 		"_to": "_container_array",
 		"_predicate": "_predicate_property-of",
 		"_path": ["_container_array"]
@@ -147,55 +117,7 @@
 	},
 	
 	{
-		"_from": "_class",
-		"_to": "_container_set",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_container_set"]
-	},
-	{
-		"_from": "_type",
-		"_to": "_container_set",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_container_set"]
-	},
-	{
-		"_from": "_kind",
-		"_to": "_container_set",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_container_set"]
-	},
-	{
-		"_from": "_format",
-		"_to": "_container_set",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_container_set"]
-	},
-	{
-		"_from": "_unit",
-		"_to": "_container_set",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_container_set"]
-	},
-	{
-		"_from": "_unit-name",
-		"_to": "_container_set",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_container_set"]
-	},
-	{
-		"_from": "_regexp",
-		"_to": "_container_set",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_container_set"]
-	},
-	{
-		"_from": "_valid-range",
-		"_to": "_container_set",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_container_set"]
-	},
-	{
-		"_from": "_normal-range",
+		"_from": "_scalar",
 		"_to": "_container_set",
 		"_predicate": "_predicate_property-of",
 		"_path": ["_container_set"]
