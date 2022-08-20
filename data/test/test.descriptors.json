@@ -1,0 +1,62 @@
+[
+	{
+        "_key": "test",
+		"_code": {
+			"_lid": "test",
+			"_gid": "test",
+			"_aid": ["test"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Test data namespace"},
+			"_definition": {"iso_639_3_eng": "This namespace groups all test data."}
+		}
+	},
+	{
+        "_key": "test_descriptor",
+		"_code": {
+			"_nid": "test",
+			"_lid": "descriptor",
+			"_gid": "test_descriptor",
+			"_aid": ["descriptor"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Test descriptor data namespace"},
+			"_definition": {"iso_639_3_eng": "This namespace groups all test descriptors."}
+		}
+	},
+	
+	{
+        "_key": "test_descriptor_array1",
+		"_code": {
+			"_nid": "test_descriptor",
+			"_lid": "array1",
+			"_gid": "test_descriptor_array1",
+			"_aid": ["array1"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Test descriptor for arrays"},
+			"_definition": {"iso_639_3_eng": "This descriptor can be used to test nested arrays."},
+			"_description": {"iso_639_3_eng": "This descriptor holds an array, which holds an array with at mleast three elements, which holds a set with exactly two terms."}
+		},
+		"_data": {
+            "_array": {
+                "_array": {
+                    "_elements": {
+                        "_min-items": 3
+                    },
+                    "_set": {
+                        "_elements": {
+                            "_min-items": 2,
+                            "_mmax-items": 2
+                        },
+             			"_scalar": {
+            				"_class": "_class_other",
+            				"_type": "_type_enum",
+            				"_kind": ["_any-term"]
+            			}
+                   }
+                }
+            }
+		}
+	}
+]
