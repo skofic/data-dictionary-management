@@ -47,7 +47,7 @@
                     "_set": {
                         "_elements": {
                             "_min-items": 2,
-                            "_mmax-items": 2
+                            "_max-items": 2
                         },
              			"_scalar": {
             				"_class": "_class_other",
