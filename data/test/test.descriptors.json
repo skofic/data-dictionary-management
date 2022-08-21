@@ -52,7 +52,7 @@
              			"_scalar": {
             				"_class": "_class_other",
             				"_type": "_type_enum",
-            				"_kind": ["_any-term"]
+            				"_kind": ["_type", "_format"]
             			}
                    }
                 }
