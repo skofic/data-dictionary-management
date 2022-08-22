@@ -49,6 +49,12 @@
 					"_type"
 				]
 			},
+			"_banned": [
+				"_scalar",
+				"_array",
+				"_set",
+				"_dict"
+			],
 			"_recommended": {
 				"_selection-descriptors_all": [
 					"_class"
@@ -105,6 +111,11 @@
 					"_scalar"
 				]
 			},
+			"_banned": [
+				"_array",
+				"_set",
+				"_dict"
+			],
 			"_immutable": [
 				"_scalar"
 			]
@@ -121,7 +132,7 @@
 			"_title": {"iso_639_3_eng": "Dictionary data definition"},
 			"_definition": {"iso_639_3_eng": "Data container and type definitions for a key/value dictionary."},
 			"_description": {"iso_639_3_eng": "This [object data structure](_term_object) defines the *type* and *organisation* of a *key/value dictionary*. The data structure features the following properties:\n\n- [Key data definition](_container_key): This *required* property provides the *data definition* for the *dictionary keys*.\n- [Value data definition](_container_value): This *required* property provides the *data definition* for the *dictionary values*."},
-			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_dict\": {\n\t\t\"_dict_key\": {\n\t\t\t\"_class\": \"_class_category\",\n\t\t\t\"_type\": \"_type_enum\",\n\t\t\t\"_kind\": \"iso_639_3\"\n\t\t},\n\t\t\"_dict_value\": {\n\t\t\t\"_array\": {\n\t\t\t\t\"_class\": \"_class_other\",\n\t\t\t\t\"_type\": \"_type_object\",\n\t\t\t\t\"_kind\": \"some_object_definition\",\n\t\t\t\t\"_min-items\": 5,\n\t\t\t\t\"_max-items\": 10\n\t\t\t}\n\t\t}\n\t}\n}\n```\n\nThis example describes a *dictionary* whose *keys* are the [global identifiers](_gid) of the ISO 639 languages *controlled vocabulary elements*, and the values are *arrays* of *objects* that correspond to the `some_object_definition` *data structure type*; these *array* values must have a *minimum* of `5` elements and a *maximum* of `10` elements.\n\n```json\n{\n\t\"_dict\": {\n\t\t\"_dict_key\": {\n\t\t\t\"_class\": \"_class_other\",\n\t\t\t\"_type\": \"_type_string\"\n\t\t},\n\t\t\"_dict_value\": {\n\t\t\t\"_scalar\": {\n\t\t\t\t\"_class\": \"_class_other\",\n\t\t\t\t\"_type\": \"_type_string\",\n\t\t\t\t\"_format\": \"_format_markdown\"\n\t\t\t}\n\t\t}\n\t}\n}\n```\n\nThis example describes a *dictionary* whose *keys* are *plain strings* and *values* are *text* in *Markdown* format. It implements a *multilingual styled text*.\n\n```json\n{\n\t\"_dict\": {\n\t\t\"_dict_key\": {\n\t\t\t\"_class\": \"_class_category\",\n\t\t\t\"_type\": \"_type_enum\",\n\t\t\t\"_kind\": \"iso_3166_1\"\n\t\t},\n\t\t\"_dict_value\": {\n\t\t\t\"_dict\": {\n\t\t\t\t\"_dict_key\": {\n\t\t\t\t\t\"_class\": \"_class_category\",\n\t\t\t\t\t\"_type\": \"_type_enum\",\n\t\t\t\t\t\"_kind\": \"iso_639_3\"\n\t\t\t\t},\n\t\t\t\t\"_dict_value\": {\n\t\t\t\t\t\"_array\": {\n\t\t\t\t\t\t\"_class\": \"_class_other\",\n\t\t\t\t\t\t\"_type\": \"_type_object\",\n\t\t\t\t\t\t\"_kind\": \"some_object_definition\",\n\t\t\t\t\t\t\"_min-items\": 5,\n\t\t\t\t\t\t\"_max-items\": 10\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}\n```\n\nThis example describes a *dictionary* whose *keys* are the [global identifiers](_gid) of the ISO 3166 country *controlled vocabulary elements*, and the values are *another dictionary* whose keys are ISO 639 languages and whose *values* are *arrays* that correspond to the `some_object_definition` *data structure type*; these *array* values must have a *minimum* of `5` elements and a *maximum* of `10` elements. This is an example of a recursive dictionary definition."}
+			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_dict\": {\n\t\t\"_dict_key\": {\n\t\t\t\"_class\": \"_class_category\",\n\t\t\t\"_type_key\": \"_type_enum\",\n\t\t\t\"_kind\": \"iso_639_3\"\n\t\t},\n\t\t\"_dict_value\": {\n\t\t\t\"_array\": {\n\t\t\t\t\"_class\": \"_class_other\",\n\t\t\t\t\"_type\": \"_type_object\",\n\t\t\t\t\"_kind\": \"some_object_definition\",\n\t\t\t\t\"_elements\": {\n\t\t\t\t\t\"_min-items\": 5,\n\t\t\t\t\t\"_max-items\": 10\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}\n```\n\nThis example describes a *dictionary* whose *keys* are the [global identifiers](_gid) of the ISO 639 languages *controlled vocabulary elements*, and the values are *arrays* of *objects* that correspond to the `some_object_definition` *data structure type*; these *array* values must have a *minimum* of `5` elements and a *maximum* of `10` elements.\n\n```json\n{\n\t\"_dict\": {\n\t\t\"_dict_key\": {\n\t\t\t\"_class\": \"_class_other\",\n\t\t\t\"_type_key\": \"_type_string\"\n\t\t},\n\t\t\"_dict_value\": {\n\t\t\t\"_scalar\": {\n\t\t\t\t\"_class\": \"_class_other\",\n\t\t\t\t\"_type\": \"_type_string\",\n\t\t\t\t\"_format\": \"_format_markdown\"\n\t\t\t}\n\t\t}\n\t}\n}\n```\n\nThis example describes a *dictionary* whose *keys* are *plain strings* and *values* are *text* in *Markdown* format. It implements a *multilingual styled text*.\n\n```json\n{\n\t\"_dict\": {\n\t\t\"_dict_key\": {\n\t\t\t\"_class\": \"_class_category\",\n\t\t\t\"_type_key\": \"_type_enum\",\n\t\t\t\"_kind\": \"iso_3166_1\"\n\t\t},\n\t\t\"_dict_value\": {\n\t\t\t\"_dict\": {\n\t\t\t\t\"_dict_key\": {\n\t\t\t\t\t\"_class\": \"_class_category\",\n\t\t\t\t\t\"_type_key\": \"_type_enum\",\n\t\t\t\t\t\"_kind\": \"iso_639_3\"\n\t\t\t\t},\n\t\t\t\t\"_dict_value\": {\n\t\t\t\t\t\"_array\": {\n\t\t\t\t\t\t\"_class\": \"_class_other\",\n\t\t\t\t\t\t\"_type\": \"_type_object\",\n\t\t\t\t\t\t\"_kind\": \"some_object_definition\",\n\t\t\t\t\t\t\"_elements\": {\n\t\t\t\t\t\t\t\"_min-items\": 5,\n\t\t\t\t\t\t\t\"_max-items\": 10\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}\n```\n\nThis example describes a *dictionary* whose *keys* are the [global identifiers](_gid) of the ISO 3166 country *controlled vocabulary elements*, and the values are *another dictionary* whose keys are ISO 639 languages and whose *values* are *arrays* that correspond to the `some_object_definition` *data structure type*; these *array* values must have a *minimum* of `5` elements and a *maximum* of `10` elements. This is an example of a recursive dictionary definition."}
 		},
 		"_rule": {
 			"_required": {
@@ -129,7 +140,13 @@
 					"_dict_key",
 					"_dict_value"
 				]
-			}
+			},
+			"_banned": [
+				"_scalar",
+				"_array",
+				"_set",
+				"_dict"
+			]
 		}
 	},
 	
@@ -144,7 +161,7 @@
 			"_title": {"iso_639_3_eng": "Dictionary key data definition"},
 			"_definition": {"iso_639_3_eng": "Data container and type definitions for dictionary keys."},
 			"_description": {"iso_639_3_eng": "This [object](_container_dict_key) defines the *type* of the *key* in a [dictionary](_container_dict). *Keys* are *strings* that *may* be *bound* to a *controlled vocabulary*."},
-			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_dict_key\": {\n\t\t\"_class\": \"_class_category\",\n\t\t\"_type\": \"_type_enum\",\n\t\t\"_kind\": \"iso_639_3\"\n\t}\n}\n```\n\nThis example describes a *dictionary* whose *keys* are the [global identifiers](_gid) of the ISO 639 languages *controlled vocabulary elements*.\n\n```json\n{\n\t\"_dict_key\": {\n\t\t\"_class\": \"_class_other\",\n\t\t\"_type\": \"_type_string\"\n\t}\n}\n```\n\nThis example describes a *dictionary* whose *keys* are *plain strings*."}
+			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_dict_key\": {\n\t\t\"_class\": \"_class_category\",\n\t\t\"_type_key\": \"_type_enum\",\n\t\t\"_kind\": \"iso_639_3\"\n\t}\n}\n```\n\nThis example describes a *dictionary* whose *keys* are the [global identifiers](_gid) of the ISO 639 languages *controlled vocabulary elements*.\n\n```json\n{\n\t\"_dict_key\": {\n\t\t\"_class\": \"_class_other\",\n\t\t\"_type_key\": \"_type_string\"\n\t}\n}\n```\n\nThis example describes a *dictionary* whose *keys* are *plain strings*."}
 		},
 		"_rule": {
 			"_required": {
@@ -152,6 +169,9 @@
 					"_type_key"
 				]
 			},
+			"_banned": [
+				"_type"
+			],
 			"_recommended": {
 				"_selection-descriptors_all": [
 					"_class"
