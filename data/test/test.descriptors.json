@@ -12,12 +12,12 @@
 		}
 	},
 	{
-        "_key": "test_descriptor",
+        "_key": "test_descriptors",
 		"_code": {
 			"_nid": "test",
-			"_lid": "descriptor",
-			"_gid": "test_descriptor",
-			"_aid": ["descriptor"]
+			"_lid": "descriptors",
+			"_gid": "test_descriptors",
+			"_aid": ["descriptors"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Test descriptor data namespace"},
@@ -26,11 +26,11 @@
 	},
 	
 	{
-        "_key": "test_descriptor_array1",
+        "_key": "test_descriptors_array1",
 		"_code": {
-			"_nid": "test_descriptor",
+			"_nid": "test_descriptors",
 			"_lid": "array1",
-			"_gid": "test_descriptor_array1",
+			"_gid": "test_descriptors_array1",
 			"_aid": ["array1"]
 		},
 		"_info": {
@@ -56,6 +56,70 @@
             			}
                    }
                 }
+            }
+		}
+	},
+	
+	{
+        "_key": "test_descriptors_term",
+		"_code": {
+			"_nid": "test_descriptors",
+			"_lid": "term",
+			"_gid": "test_descriptors_term",
+			"_aid": ["term"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Test term descriptor"},
+			"_definition": {"iso_639_3_eng": "This descriptor can be used to test term objects."},
+			"_description": {"iso_639_3_eng": "This descriptor holds a term object."}
+		},
+		"_data": {
+            "_scalar": {
+               "_class": "_class_other",
+               "_type": "_type_object",
+               "_kind": ["_term"]
+            }
+		}
+	},
+	{
+        "_key": "test_descriptors_descriptor",
+		"_code": {
+			"_nid": "test_descriptors",
+			"_lid": "descriptor",
+			"_gid": "test_descriptors_descriptor",
+			"_aid": ["descriptor"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Test descriptor"},
+			"_definition": {"iso_639_3_eng": "This descriptor can be used to test descriptor objects."},
+			"_description": {"iso_639_3_eng": "This descriptor holds a descriptor term."}
+		},
+		"_data": {
+            "_scalar": {
+               "_class": "_class_other",
+               "_type": "_type_object",
+               "_kind": ["_term_descriptor"]
+            }
+		}
+	},
+	{
+        "_key": "test_descriptors_object",
+		"_code": {
+			"_nid": "test_descriptors",
+			"_lid": "object",
+			"_gid": "test_descriptors_object",
+			"_aid": ["object"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Test object descriptor"},
+			"_definition": {"iso_639_3_eng": "This descriptor can be used to test objects."},
+			"_description": {"iso_639_3_eng": "This descriptor holds an object."}
+		},
+		"_data": {
+            "_scalar": {
+               "_class": "_class_other",
+               "_type": "_type_object",
+               "_kind": ["_term_object"]
             }
 		}
 	}
