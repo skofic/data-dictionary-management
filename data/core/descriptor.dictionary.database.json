@@ -53,7 +53,7 @@
 			"_scalar": {
 				"_class": "_class_other",
 				"_type": "_type_string",
-				"_regexp": "^[a-zA-Z0-9-:.@+,=;$!*'%]{1,254}$"
+				"_regexp": "^[a-zA-Z0-9-:._@+,=;$!*'%]{1,254}$"
 			}
 		}
 	},
