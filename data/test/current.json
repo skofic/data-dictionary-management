@@ -1,0 +1,41 @@
+{
+    "descriptor": "test_descriptors_dictionary",
+    "value": {
+        "iso_3466_1_ITA": {
+            "iso_639_3_ita": [
+                {
+                    "_lid": "bubu",
+                    "_gid": "bubu",
+                    "_aid": ["bubu"]
+                },
+                {
+                    "_lid": "baba",
+                    "_gid": "baba",
+                    "_aid": ["baba"]
+                },
+                {
+                   "_lid": "bebe",
+                    "_gid": "bebe",
+                    "_aid": ["bebe"]
+                }
+            ],
+            "fr": [
+                {
+                    "_lid": "bubu",
+                    "_gid": "bubu",
+                    "_aid": ["bubu"]
+                },
+                {
+                    "_lid": "baba",
+                    "_gid": "baba",
+                    "_aid": ["baba"]
+                },
+                {
+                   "_lid": "bebe",
+                    "_gid": "bebe",
+                    "_aid": ["bebe"]
+                }
+            ]
+        }
+    }
+}

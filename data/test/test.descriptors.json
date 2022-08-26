@@ -1,125 +1,170 @@
 [
-	{
+    {
         "_key": "test",
-		"_code": {
-			"_lid": "test",
-			"_gid": "test",
-			"_aid": ["test"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Test data namespace"},
-			"_definition": {"iso_639_3_eng": "This namespace groups all test data."}
-		}
-	},
-	{
+        "_code": {
+            "_lid": "test",
+            "_gid": "test",
+            "_aid": ["test"]
+        },
+        "_info": {
+            "_title": {"iso_639_3_eng": "Test data namespace"},
+            "_definition": {"iso_639_3_eng": "This namespace groups all test data."}
+        }
+    },
+    {
         "_key": "test_descriptors",
-		"_code": {
-			"_nid": "test",
-			"_lid": "descriptors",
-			"_gid": "test_descriptors",
-			"_aid": ["descriptors"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Test descriptor data namespace"},
-			"_definition": {"iso_639_3_eng": "This namespace groups all test descriptors."}
-		}
-	},
-	
-	{
+        "_code": {
+            "_nid": "test",
+            "_lid": "descriptors",
+            "_gid": "test_descriptors",
+            "_aid": ["descriptors"]
+        },
+        "_info": {
+            "_title": {"iso_639_3_eng": "Test descriptor data namespace"},
+            "_definition": {"iso_639_3_eng": "This namespace groups all test descriptors."}
+        }
+    },
+    {
         "_key": "test_descriptors_array1",
-		"_code": {
-			"_nid": "test_descriptors",
-			"_lid": "array1",
-			"_gid": "test_descriptors_array1",
-			"_aid": ["array1"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Test descriptor for arrays"},
-			"_definition": {"iso_639_3_eng": "This descriptor can be used to test nested arrays."},
-			"_description": {"iso_639_3_eng": "This descriptor holds an array, which holds an array with at mleast three elements, which holds a set with exactly two terms."}
-		},
-		"_data": {
+        "_code": {
+            "_nid": "test_descriptors",
+            "_lid": "array1",
+            "_gid": "test_descriptors_array1",
+            "_aid": ["array1"]
+        },
+        "_info": {
+            "_title": {"iso_639_3_eng": "Test descriptor for arrays"},
+            "_definition": {"iso_639_3_eng": "This descriptor can be used to test nested arrays."},
+            "_description": {"iso_639_3_eng": "This descriptor holds an array, which holds an array with at mleast three elements, which holds a set with exactly two terms."}
+        },
+        "_data": {
             "_array": {
                 "_array": {
-                    "_elements": {
-                        "_min-items": 3
-                    },
+                    "_elements": {"_min-items": 3},
                     "_set": {
                         "_elements": {
                             "_min-items": 2,
                             "_max-items": 2
                         },
-             			"_scalar": {
-            				"_class": "_class_other",
-            				"_type": "_type_enum",
-            				"_kind": ["_type", "_format"]
-            			}
-                   }
+                        "_scalar": {
+                            "_class": "_class_other",
+                            "_type": "_type_enum",
+                            "_kind": [
+                                "_type",
+                                "_format"
+                            ]
+                        }
+                    }
                 }
             }
-		}
-	},
-	{
+        }
+    },
+    {
         "_key": "test_descriptors_term",
-		"_code": {
-			"_nid": "test_descriptors",
-			"_lid": "term",
-			"_gid": "test_descriptors_term",
-			"_aid": ["term"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Test term descriptor"},
-			"_definition": {"iso_639_3_eng": "This descriptor can be used to test term objects."},
-			"_description": {"iso_639_3_eng": "This descriptor holds a term object."}
-		},
-		"_data": {
+        "_code": {
+            "_nid": "test_descriptors",
+            "_lid": "term",
+            "_gid": "test_descriptors_term",
+            "_aid": ["term"]
+        },
+        "_info": {
+            "_title": {"iso_639_3_eng": "Test term descriptor"},
+            "_definition": {"iso_639_3_eng": "This descriptor can be used to test term objects."},
+            "_description": {"iso_639_3_eng": "This descriptor holds a term object."}
+        },
+        "_data": {
             "_scalar": {
-               "_class": "_class_other",
-               "_type": "_type_object",
-               "_kind": ["_term"]
+                "_class": "_class_other",
+                "_type": "_type_object",
+                "_kind": ["_term"]
             }
-		}
-	},
-	{
+        }
+    },
+    {
         "_key": "test_descriptors_descriptor",
-		"_code": {
-			"_nid": "test_descriptors",
-			"_lid": "descriptor",
-			"_gid": "test_descriptors_descriptor",
-			"_aid": ["descriptor"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Test descriptor"},
-			"_definition": {"iso_639_3_eng": "This descriptor can be used to test descriptor objects."},
-			"_description": {"iso_639_3_eng": "This descriptor holds a descriptor term."}
-		},
-		"_data": {
+        "_code": {
+            "_nid": "test_descriptors",
+            "_lid": "descriptor",
+            "_gid": "test_descriptors_descriptor",
+            "_aid": ["descriptor"]
+        },
+        "_info": {
+            "_title": {"iso_639_3_eng": "Test descriptor"},
+            "_definition": {"iso_639_3_eng": "This descriptor can be used to test descriptor objects."},
+            "_description": {"iso_639_3_eng": "This descriptor holds a descriptor term."}
+        },
+        "_data": {
             "_scalar": {
-               "_class": "_class_other",
-               "_type": "_type_object",
-               "_kind": ["_term_descriptor"]
+                "_class": "_class_other",
+                "_type": "_type_object",
+                "_kind": ["_term_descriptor"]
             }
-		}
-	},
-	{
+        }
+    },
+    {
         "_key": "test_descriptors_object",
-		"_code": {
-			"_nid": "test_descriptors",
-			"_lid": "object",
-			"_gid": "test_descriptors_object",
-			"_aid": ["object"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Test object descriptor"},
-			"_definition": {"iso_639_3_eng": "This descriptor can be used to test objects."},
-			"_description": {"iso_639_3_eng": "This descriptor holds an object."}
-		},
-		"_data": {
+        "_code": {
+            "_nid": "test_descriptors",
+            "_lid": "object",
+            "_gid": "test_descriptors_object",
+            "_aid": ["object"]
+        },
+        "_info": {
+            "_title": {"iso_639_3_eng": "Test object descriptor"},
+            "_definition": {"iso_639_3_eng": "This descriptor can be used to test objects."},
+            "_description": {"iso_639_3_eng": "This descriptor holds an object."}
+        },
+        "_data": {
             "_scalar": {
-               "_class": "_class_other",
-               "_type": "_type_object",
-               "_kind": ["_term_object"]
+                "_class": "_class_other",
+                "_type": "_type_object",
+                "_kind": ["_term_object"]
             }
-		}
-	}
+        }
+    },
+    {
+        "_key": "test_descriptors_dictionary",
+        "_code": {
+            "_nid": "test_descriptors",
+            "_lid": "dictionary",
+            "_gid": "test_descriptors_dictionary",
+            "_aid": ["dictionary"]
+        },
+        "_info": {
+            "_title": {"iso_639_3_eng": "Test dictionary descriptor"},
+            "_definition": {"iso_639_3_eng": "This descriptor can be used to test dictionaries."},
+            "_description": {"iso_639_3_eng": "This descriptor holds a dictionary."}
+        },
+        "_data": {
+            "_dict": {
+                "_dict_key": {
+                    "_class": "_class_category",
+                    "_type_key": "_type_enum",
+                    "_kind": ["iso_3166_1"]
+                },
+                "_dict_value": {
+                    "_dict": {
+                        "_dict_key": {
+                            "_class": "_class_category",
+                            "_type_key": "_type_enum",
+                            "_kind": ["iso_639_3"]
+                        },
+                        "_dict_value": {
+                            "_array": {
+                                "_elements": {
+                                    "_min-items": 3,
+                                    "_max-items": 5
+                                },
+                                "_scalar": {
+                                    "_class": "_class_other",
+                                    "_type": "_type_object",
+                                    "_kind": ["_identification"]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 ]
