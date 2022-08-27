@@ -6,7 +6,8 @@
                 {
                     "_lid": "bubu",
                     "_gid": "bubu",
-                    "_aid": ["bubu"]
+                    "_aid": ["bubu"],
+                    "XXX": "unknown"
                 },
                 {
                     "_lid": "baba",
