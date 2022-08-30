@@ -25,6 +25,20 @@
         }
     },
     {
+        "_key": "test_types",
+        "_code": {
+            "_nid": "test",
+            "_lid": "types",
+            "_gid": "test_types",
+            "_aid": ["types"]
+        },
+        "_info": {
+            "_title": {"iso_639_3_eng": "Test types data namespace"},
+            "_definition": {"iso_639_3_eng": "This namespace groups all test types."}
+        }
+    },
+    
+    {
         "_key": "test_descriptors_array1",
         "_code": {
             "_nid": "test_descriptors",
@@ -164,6 +178,86 @@
                         }
                     }
                 }
+            }
+        }
+    },
+    
+    {
+        "_key": "test_country",
+        "_code": {
+            "_nid": "test",
+            "_lid": "country",
+            "_gid": "test_country",
+            "_aid": ["country"]
+        },
+        "_info": {
+            "_title": {"iso_639_3_eng": "Test country code"},
+            "_definition": {"iso_639_3_eng": "This descriptor holds a country code."}
+        },
+        "_data": {
+            "_scalar": {
+                "_class": "_class_category",
+                "_type": "_type_enum",
+                "_kind": ["iso_3166_1"]
+            }
+        }
+    },
+    {
+        "_key": "test_language",
+        "_code": {
+            "_nid": "test",
+            "_lid": "language",
+            "_gid": "test_language",
+            "_aid": ["language"]
+        },
+        "_info": {
+            "_title": {"iso_639_3_eng": "Test language code"},
+            "_definition": {"iso_639_3_eng": "This descriptor holds a language code."}
+        },
+        "_data": {
+            "_scalar": {
+                "_class": "_class_category",
+                "_type": "_type_enum",
+                "_kind": ["iso_639_3"]
+            }
+        }
+    },
+    
+    {
+        "_key": "test_types_object1",
+        "_code": {
+            "_nid": "test_types",
+            "_lid": "object1",
+            "_gid": "test_types_object1",
+            "_aid": ["object1"]
+        },
+        "_info": {
+            "_title": {"iso_639_3_eng": "Test object type"},
+            "_definition": {"iso_639_3_eng": "This type can be used to qualify objects."},
+            "_description": {"iso_639_3_eng": "This type holds an object."}
+        },
+		"_rule": {
+			"_required": {"_selection-descriptors_all": ["test_country", "test_language"]}
+		}
+    },
+    
+    {
+        "_key": "test_descriptors_object1",
+        "_code": {
+            "_nid": "test_descriptors",
+            "_lid": "object1",
+            "_gid": "test_descriptors_object1",
+            "_aid": ["object1"]
+        },
+        "_info": {
+            "_title": {"iso_639_3_eng": "Test object descriptor"},
+            "_definition": {"iso_639_3_eng": "This descriptor can be used to test objects."}
+        },
+        "_data": {
+            "_scalar": {
+                "_class": "_class_other",
+                "_type": "_type_object",
+                "_kind": ["test_types_object1"]
             }
         }
     }
