@@ -1,8 +1,8 @@
 {
     "descriptor": "test_descriptors_dictionary",
     "value": {
-        "iso_3466_1_ITA": {
-            "iso_639_3_ita": [
+        "IT": {
+            "it": [
                 {
                     "_lid": "bubu",
                     "_gid": "bubu",
@@ -15,7 +15,7 @@
                     "_aid": ["baba"]
                 },
                 {
-                   "_lid": "bebe",
+                    "_lid": "bebe",
                     "_gid": "bebe",
                     "_aid": ["bebe"]
                 }
@@ -29,14 +29,65 @@
                 {
                     "_lid": "baba",
                     "_gid": "baba",
-                    "_aid": ["baba"]
+                    "_aid": ["baba"],
+                    "test_descriptors_dictionary": {
+                        "IT": {
+                            "it": [
+                                {
+                                    "_lid": "bubu",
+                                    "_gid": "bubu",
+                                    "_aid": ["bubu"],
+                                    "XXX": "unknown"
+                                },
+                                {
+                                    "_lid": "baba",
+                                    "_gid": "baba",
+                                    "_aid": ["baba"]
+                                },
+                                {
+                                    "_lid": "bebe",
+                                    "_gid": "bebe",
+                                    "_aid": ["bebe"]
+                                }
+                            ],
+                            "fr": [
+                                {
+                                    "_lid": "bubu",
+                                    "_gid": "bubu",
+                                    "_aid": ["bubu"]
+                                },
+                                {
+                                    "_lid": "baba",
+                                    "_gid": "baba",
+                                    "_aid": ["baba"]
+                                },
+                                {
+                                    "_lid": "bebe",
+                                    "_gid": "bebe",
+                                    "_aid": ["bebe"]
+                                }
+                            ]
+                        }
+                    }
                 },
                 {
-                   "_lid": "bebe",
+                    "_lid": "bebe",
                     "_gid": "bebe",
                     "_aid": ["bebe"]
                 }
             ]
         }
     }
+}
+
+{
+  "descriptor": "test_descriptors_object1",
+  "value": {
+    "test_country": "ITA",
+    "test_language": "it",
+    "test_descriptors_object1": {
+      "test_country": "FR",
+      "test_language": "fr"
+    }
+  }
 }
