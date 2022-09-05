@@ -1,11 +1,5 @@
 [
 	{
-		"_from": "_key",
-		"_to": "_term",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_term"]
-	},
-	{
 		"_from": "_code",
 		"_to": "_term",
 		"_predicate": "_predicate_property-of",
@@ -18,12 +12,6 @@
 		"_path": ["_term"]
 	},
 	
-	{
-		"_from": "_key",
-		"_to": "_term_descriptor",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_term_descriptor"]
-	},
 	{
 		"_from": "_code",
 		"_to": "_term_descriptor",
@@ -44,12 +32,6 @@
 	},
 	
 	{
-		"_from": "_key",
-		"_to": "_term_object",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_term_object"]
-	},
-	{
 		"_from": "_code",
 		"_to": "_term_object",
 		"_predicate": "_predicate_property-of",
@@ -66,36 +48,5 @@
 		"_to": "_term_object",
 		"_predicate": "_predicate_property-of",
 		"_path": ["_term_object"]
-	},
-	
-	{
-		"_from": "_key",
-		"_to": "_edge",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_edge"]
-	},
-	{
-		"_from": "_from",
-		"_to": "_edge",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_edge"]
-	},
-	{
-		"_from": "_to",
-		"_to": "_edge",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_edge"]
-	},
-	{
-		"_from": "_predicate",
-		"_to": "_edge",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_edge"]
-	},
-	{
-		"_from": "_path",
-		"_to": "_edge",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_edge"]
 	}
 ]

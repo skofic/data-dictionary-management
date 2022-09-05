@@ -1,0 +1,107 @@
+[	
+	{
+		"_from": "iso_639_scope_I",
+		"_to": "iso_639_scope",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["iso_639_scope"]
+	},
+	{
+		"_from": "iso_639_scope_M",
+		"_to": "iso_639_scope",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["iso_639_scope"]
+	},
+	{
+		"_from": "iso_639_scope_S",
+		"_to": "iso_639_scope",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["iso_639_scope"]
+	},
+	
+	{
+		"_from": "iso_639_type_A",
+		"_to": "iso_639_type",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["iso_639_type"]
+	},
+	{
+		"_from": "iso_639_type_C",
+		"_to": "iso_639_type",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["iso_639_type"]
+	},
+	{
+		"_from": "iso_639_type_E",
+		"_to": "iso_639_type",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["iso_639_type"]
+	},
+	{
+		"_from": "iso_639_type_H",
+		"_to": "iso_639_type",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["iso_639_type"]
+	},
+	{
+		"_from": "iso_639_type_L",
+		"_to": "iso_639_type",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["iso_639_type"]
+	},
+	{
+		"_from": "iso_639_type_S",
+		"_to": "iso_639_type",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["iso_639_type"]
+	},
+
+	{
+		"_from": "iso_639_scope_I",
+		"_to": "iso_639_3",
+		"_predicate": "_predicate_section-of",
+		"_path": ["iso_639_3"]
+	},
+	{
+		"_from": "iso_639_scope_M",
+		"_to": "iso_639_3",
+		"_predicate": "_predicate_section-of",
+		"_path": ["iso_639_3"]
+	},
+	{
+		"_from": "iso_639_scope_S",
+		"_to": "iso_639_3",
+		"_predicate": "_predicate_section-of",
+		"_path": ["iso_639_3"]
+	},
+
+	{
+		"_from": "iso_639_type_A",
+		"_to": "iso_639_scope_I",
+		"_predicate": "_predicate_section-of",
+		"_path": ["iso_639_3"]
+	},
+	{
+		"_from": "iso_639_type_C",
+		"_to": "iso_639_scope_I",
+		"_predicate": "_predicate_section-of",
+		"_path": ["iso_639_3"]
+	},
+	{
+		"_from": "iso_639_type_E",
+		"_to": "iso_639_scope_I",
+		"_predicate": "_predicate_section-of",
+		"_path": ["iso_639_3"]
+	},
+	{
+		"_from": "iso_639_type_H",
+		"_to": "iso_639_scope_I",
+		"_predicate": "_predicate_section-of",
+		"_path": ["iso_639_3"]
+	},
+	{
+		"_from": "iso_639_type_L",
+		"_to": "iso_639_scope_I",
+		"_predicate": "_predicate_section-of",
+		"_path": ["iso_639_3"]
+	}
+]

@@ -9,21 +9,14 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "Constraints section"},
 			"_definition": {"iso_639_3_eng": "This object groups all properties whose function is to provide rules and constraints applying to object data structures in the data dictionary."},
-			"_description": {"iso_639_3_eng": "All *terms* that *represent object structure definitions* require this element which features the following *ioptional* properties:\n\n- [Required](_required): A [descriptors selection](_selection-descriptors) representing the selection of required properties.\n- [Recommended](_recommended): A [descriptors selection](_selection-descriptors) representing the selection of recommended properties.\n- [Banned](_banned): A list of properties that will be removed from the object prior to storing it.\n- [Computed](_computed): A list of properties that will be automatically filled prior to storing the object.\n- [Locked](_locked): The list of properties that cannot be modified by users.\n- [Immutable](_immutable): The list of properties that cannot be modified once the object has been stored.\n- [Default value](_default-value): A dictionary whose keys are the descriptor [global identifier](_gid) and the values are a [values selection](_selection-values).\n\nThis property is required for terms defining an object structure. This property can be empty, in which case it means that all the object's properties are optional."},
-			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_rule\": {\n\t\t\"_required\": {\n\t\t\t\"_selection-descriptors_one\": [\"one\", \"two\", \"three\"],\n\t\t\t\"_selection-descriptors_any\": [\"red\", \"green\", \"blue\"],\n\t\t\t\"_selection-descriptors_all\": [\"mon\", \"tue\", \"wed\"]\n\t\t},\n\t\t\"_recommended\": {\n\t\t\t\"_selection-descriptors_any\": [\"thu\", \"fri\"]\n\t\t},\n\t\t\"_banned\": [\"sat\", \"sun\"],\n\t\t\"_computed\": [\"_key\"],\n\t\t\"_locked\": [\"_rev\"],\n\t\t\"_immutable\": [\"_key\"],\n\t\t\"_default-value\": {\n\t\t\t\"one\": 1,\n\t\t\t\"two\": 2,\n\t\t\t\"three\": [1, 2, 3],\n\t\t\t\"red\": \"It is red\"\n\t\t}\n\t}\n}\n```\n\nThis rule requires the following conditions to be true:\n\n- It must contain one of the following descriptors: `one`, `two` or `three`\n- It must contain one or more of the following descriptors: `red`, `green` or `blue`.\n- It must contain all of the following descriptors: `mon`, `tue` and `wed`.\n- It is recommended to contain one or more of the following descriptors: `thu` and/or `fri`.\n- It must not contain the following descriptors: `sat` and `sun`.\n- The `_key` descriptor is computed.\n- The `_rev` descriptor is locked: it cannot be modified.\n- The `_key` descriptor's value is immutable.\n- If omitted, the following descriptors will take the following values:\n    - `one`: `1`\n    - `two`: `2`\n    - `three`: `[1, 2, 3]`\n    - `red`: `\"It is red\"`"}
+			"_description": {"iso_639_3_eng": "All *terms* that *represent object structure definitions* require this element which features the following *ioptional* properties:\n\n- [Required](_required): A [descriptors selection](_selection-descriptors) representing the selection of required properties.\n- [Recommended](_recommended): A [descriptors selection](_selection-descriptors) representing the selection of recommended properties.\n- [Banned](_banned): A list of properties that will be removed from the object prior to storing it.\n- [Computed](_computed): A list of properties that will be automatically filled prior to storing the object.\n- [Locked](_locked): The list of properties that cannot be modified by users.\n- [Immutable](_immutable): The list of properties that cannot be modified once the object has been stored.\n- [Default value](_default-value): A dictionary whose keys are the descriptor [global identifier](_gid) and the values are a [values selection](_selection-values).\n\nThe property may also be an *empty object*, in that case there are no restrictions."},
+			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_rule\": {\n\t\t\"_required\": {\n\t\t\t\"_selection-descriptors_one\": [\"one\", \"two\", \"three\"],\n\t\t\t\"_selection-descriptors_any\": [\"red\", \"green\", \"blue\"],\n\t\t\t\"_selection-descriptors_all\": [\"mon\", \"tue\", \"wed\"]\n\t\t},\n\t\t\"_recommended\": {\n\t\t\t\"_selection-descriptors_any\": [\"thu\", \"fri\"]\n\t\t},\n\t\t\"_banned\": [\"sat\", \"sun\"],\n\t\t\"_computed\": [\"_key\"],\n\t\t\"_locked\": [\"_rev\"],\n\t\t\"_immutable\": [\"_key\"],\n\t\t\"_default-value\": {\n\t\t\t\"one\": 1,\n\t\t\t\"two\": 2,\n\t\t\t\"three\": [1, 2, 3],\n\t\t\t\"red\": \"It is red\"\n\t\t}\n\t}\n}\n```"}
 		},
 		"_data": {
 			"_scalar": {
 				"_class": "_class_other",
 				"_type": "_type_object",
-				"_kind": ["_rule"]
-			}
-		},
-		"_rule": {
-			"_recommended": {
-				"_selection-descriptors_any": [
-					"_recommended"
-				]
+				"_kind": ["_constraints"]
 			}
 		}
 	},

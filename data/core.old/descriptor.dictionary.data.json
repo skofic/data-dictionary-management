@@ -16,24 +16,8 @@
 			"_scalar": {
 				"_class": "_class_other",
 				"_type": "_type_object",
-				"_kind": ["_data"]
+				"_kind": ["_container"]
 			}
-		},
-		"_rule": {
-			"_required": {
-				"_selection-descriptors_one-none": [
-					"_scalar",
-					"_array",
-					"_set",
-					"_dict"
-				]
-			},
-			"_immutable": [
-				"_scalar",
-				"_array",
-				"_set",
-				"_dict"
-			]
 		}
 	},
 
@@ -54,25 +38,7 @@
 			"_scalar": {
 				"_class": "_class_other",
 				"_type": "_type_object",
-				"_kind": ["_scalar"]
-			}
-		},
-		"_rule": {
-			"_required": {
-				"_selection-descriptors_all": [
-					"_type"
-				]
-			},
-			"_banned": [
-				"_scalar",
-				"_array",
-				"_set",
-				"_dict"
-			],
-			"_recommended": {
-				"_selection-descriptors_all": [
-					"_class"
-				]
+				"_kind": ["_container_scalar"]
 			}
 		}
 	},
@@ -93,24 +59,8 @@
 			"_scalar": {
 				"_class": "_class_other",
 				"_type": "_type_object",
-				"_kind": ["_array"]
+				"_kind": ["_container_array"]
 			}
-		},
-		"_rule": {
-			"_required": {
-				"_selection-descriptors_one-none": [
-					"_scalar",
-					"_array",
-					"_set",
-					"_dict"
-				]
-			},
-			"_immutable": [
-				"_scalar",
-				"_array",
-				"_set",
-				"_dict"
-			]
 		}
 	},
 	{
@@ -130,23 +80,8 @@
 			"_scalar": {
 				"_class": "_class_other",
 				"_type": "_type_object",
-				"_kind": ["_set"]
+				"_kind": ["_container_set"]
 			}
-		},
-		"_rule": {
-			"_required": {
-				"_selection-descriptors_one-none": [
-					"_scalar"
-				]
-			},
-			"_banned": [
-				"_array",
-				"_set",
-				"_dict"
-			],
-			"_immutable": [
-				"_scalar"
-			]
 		}
 	},
 	{
@@ -166,22 +101,8 @@
 			"_scalar": {
 				"_class": "_class_other",
 				"_type": "_type_object",
-				"_kind": ["_dict"]
+				"_kind": ["_container_dict"]
 			}
-		},
-		"_rule": {
-			"_required": {
-				"_selection-descriptors_all": [
-					"_dict_key",
-					"_dict_value"
-				]
-			},
-			"_banned": [
-				"_scalar",
-				"_array",
-				"_set",
-				"_dict"
-			]
 		}
 	},
 
@@ -202,22 +123,7 @@
 			"_scalar": {
 				"_class": "_class_other",
 				"_type": "_type_object",
-				"_kind": ["_dict_key"]
-			}
-		},
-		"_rule": {
-			"_required": {
-				"_selection-descriptors_all": [
-					"_type_key"
-				]
-			},
-			"_banned": [
-				"_type"
-			],
-			"_recommended": {
-				"_selection-descriptors_all": [
-					"_class"
-				]
+				"_kind": ["_container_dict_key"]
 			}
 		}
 	},
@@ -238,7 +144,7 @@
 			"_scalar": {
 				"_class": "_class_other",
 				"_type": "_type_object",
-				"_kind": ["_data"]
+				"_kind": ["_container"]
 			}
 		}
 	},
@@ -323,7 +229,7 @@
 				"_scalar": {
 					"_class": "_class_category",
 					"_type": "_type_enum",
-					"_kind": ["_kind", "_any-term"]
+					"_kind": ["_any-term"]
 				}
 			}
 		}
@@ -426,12 +332,7 @@
 			"_scalar": {
 				"_class": "_class_quantity",
 				"_type": "_type_object",
-				"_kind": ["_elements"]
-			}
-		},
-		"_rule": {
-			"_required": {
-				"_selection-descriptors_any": ["_min-items", "_max-items"]
+				"_kind": ["_range_elements"]
 			}
 		}
 	},
@@ -452,15 +353,7 @@
 			"_scalar": {
 				"_class": "_class_quantity",
 				"_type": "_type_object",
-				"_kind": ["_range"]
-			}
-		},
-		"_rule": {
-			"_required": {
-				"_selection-descriptors_any-one": [
-					["_min-range-inclusive", "_min-range-exclusive"],
-					["_max-range-inclusive", "_max-range-exclusive"]
-				]
+				"_kind": ["_range_value"]
 			}
 		}
 	},
@@ -481,7 +374,7 @@
 			"_scalar": {
 				"_class": "_class_quantity",
 				"_type": "_type_object",
-				"_kind": ["_range"]
+				"_kind": ["_range_value"]
 			}
 		}
 	},
@@ -502,7 +395,7 @@
 			"_scalar": {
 				"_class": "_class_quantity",
 				"_type": "_type_object",
-				"_kind": ["_range"]
+				"_kind": ["_range_value"]
 			}
 		}
 	},

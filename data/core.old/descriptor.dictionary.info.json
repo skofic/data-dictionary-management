@@ -16,16 +16,7 @@
 			"_scalar": {
 				"_class": "_class_category",
 				"_type": "_type_object",
-				"_kind": ["_info"]
-			}
-		},
-		"_rule": {
-			"_recommended": {
-				"_selection-descriptors_all": [
-					"_title",
-					"_definition",
-					"_description"
-				]
+				"_kind": ["_documentation"]
 			}
 		}
 	},

@@ -2227,9 +2227,10 @@ function CreateIso3166_1(item) {
 	//
 	// Handle EUFGIS country.
 	//
-	if(kGlob.globals.eufgis.countries.has(lid)) {
-		edge._path.push("eufgis_countries")
-	}
+	// MILKO - Commented to review aded data.
+	// if(kGlob.globals.eufgis.countries.has(lid)) {
+	// 	edge._path.push("eufgis_countries")
+	// }
 
 	//
 	// Add to buffer.

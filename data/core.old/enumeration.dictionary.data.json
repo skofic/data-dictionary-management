@@ -23,36 +23,8 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "Quantitative value"},
 			"_definition": {"iso_639_3_eng": "Discrete or continuous quantitative value."},
-			"_description": {"iso_639_3_eng": "This term represents a *quantity*, a *discrete* or *continuous* value, it does not represent a [category](_class_category) and can take an *infinite number of values*, it is by definition *numeric*.\n\nThis specific data type identifies a *single data point*, not a [calculated](_class_quantity_calculated) coefficient or [average](_class_quantity_averaged) value."},
+			"_description": {"iso_639_3_eng": "This term represents a *quantity*, a *discrete* or *continuous* value, it does not represent a [category](_class_category) and can take an *infinite number of values*, it is by definition *numeric*."},
 			"_examples": {"iso_639_3_eng": "Quantitative example data could be *height*, *weight*, *number of inhabitants*. In general, any value that represents *amounts* or *actual measurements*, would be considered a *quantitative value*."}
-		}
-	},
-	{
-		"_code": {
-			"_nid": "_class_quantity",
-			"_lid": "calculated",
-			"_gid": "_class_quantity_calculated",
-			"_aid": ["calculated"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Calculated quantitative value"},
-			"_definition": {"iso_639_3_eng": "Discrete or continuous quantitative value that is obtained through the processing of a series of other values."},
-			"_description": {"iso_639_3_eng": "This term represents a *quantity*, a *discrete* or *continuous* value that has been *obtained* by *processing* a set of *other values*.\n\nThis specific data type identifies a coefficient or index, not a [single](_class_quantity) data point, or an [average](_class_quantity_averaged) or mean of data points."},
-			"_examples": {"iso_639_3_eng": "Calculated quantitative data could be a *number* calculated by *aggregating* several *traits* *weighted* by *coefficients* to result in a *single score*."}
-		}
-	},
-	{
-		"_code": {
-			"_nid": "_class_quantity",
-			"_lid": "averaged",
-			"_gid": "_class_quantity_averaged",
-			"_aid": ["averaged"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Averaged quantitative value"},
-			"_definition": {"iso_639_3_eng": "Discrete or continuous quantitative value that is obtained by averaging of a series of data points."},
-			"_description": {"iso_639_3_eng": "This term represents a *quantity*, a *discrete* or *continuous* value that indicates an *average* of a *series* of *data points*.\n\nThis specific data type identifies an average or mean, not a [single](_class_quantity) data point, or a [processed](_class_quantity_calculated) or calculated value."},
-			"_examples": {"iso_639_3_eng": "Averaged quantitative value could be the *average* or *mean* of a time period or other range of single data points."}
 		}
 	},
 	{

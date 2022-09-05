@@ -1,44 +1,44 @@
 [
 	{
 		"_from": "_nid",
-		"_to": "_code",
+		"_to": "_identification",
 		"_predicate": "_predicate_property-of",
-		"_path": ["_code"]
+		"_path": ["_identification"]
 	},
 	{
 		"_from": "_lid",
-		"_to": "_code",
+		"_to": "_identification",
 		"_predicate": "_predicate_property-of",
-		"_path": ["_code"]
+		"_path": ["_identification"]
 	},
 	{
 		"_from": "_gid",
-		"_to": "_code",
+		"_to": "_identification",
 		"_predicate": "_predicate_property-of",
-		"_path": ["_code"]
+		"_path": ["_identification"]
 	},
 	{
 		"_from": "_aid",
-		"_to": "_code",
+		"_to": "_identification",
 		"_predicate": "_predicate_property-of",
-		"_path": ["_code"]
+		"_path": ["_identification"]
 	},
 	{
 		"_from": "_pid",
-		"_to": "_code",
+		"_to": "_identification",
 		"_predicate": "_predicate_property-of",
-		"_path": ["_code"]
+		"_path": ["_identification"]
 	},
 	{
 		"_from": "_name",
-		"_to": "_code",
+		"_to": "_identification",
 		"_predicate": "_predicate_property-of",
-		"_path": ["_code"]
+		"_path": ["_identification"]
 	},
 	{
 		"_from": "_regexp",
-		"_to": "_code",
+		"_to": "_identification",
 		"_predicate": "_predicate_property-of",
-		"_path": ["_code"]
+		"_path": ["_identification"]
 	}
 ]

@@ -12,18 +12,6 @@
 		"_path": ["_class"]
 	},
 	{
-		"_from": "_class_quantity_calculated",
-		"_to": "_class",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_class"]
-	},
-	{
-		"_from": "_class_quantity_averaged",
-		"_to": "_class",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_class"]
-	},
-	{
 		"_from": "_class_time",
 		"_to": "_class",
 		"_predicate": "_predicate_enum-of",
@@ -34,6 +22,31 @@
 		"_to": "_class",
 		"_predicate": "_predicate_enum-of",
 		"_path": ["_class"]
+	},
+	
+	{
+		"_from": "_container_scalar",
+		"_to": "_container",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_container"]
+	},
+	{
+		"_from": "_container_array",
+		"_to": "_container",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_container"]
+	},
+	{
+		"_from": "_container_set",
+		"_to": "_container",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_container"]
+	},
+	{
+		"_from": "_container_dict",
+		"_to": "_container",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_container"]
 	},
 	
 	
@@ -177,31 +190,5 @@
 		"_to": "_format",
 		"_predicate": "_predicate_enum-of",
 		"_path": ["_format"]
-	},
-
-
-	{
-		"_from": "_any-term",
-		"_to": "_kind",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_kind"]
-	},
-	{
-		"_from": "_any-enum",
-		"_to": "_kind",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_kind"]
-	},
-	{
-		"_from": "_any-descriptor",
-		"_to": "_kind",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_kind"]
-	},
-	{
-		"_from": "_any-object",
-		"_to": "_kind",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_kind"]
 	}
 ]

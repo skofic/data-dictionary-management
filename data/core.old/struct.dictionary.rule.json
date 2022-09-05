@@ -1,45 +1,45 @@
 [
 	{
 		"_from": "_required",
-		"_to": "_rule",
+		"_to": "_constraints",
 		"_predicate": "_predicate_property-of",
-		"_path": ["_rule"]
+		"_path": ["_constraints"]
 	},
 	{
 		"_from": "_recommended",
-		"_to": "_rule",
+		"_to": "_constraints",
 		"_predicate": "_predicate_property-of",
-		"_path": ["_rule"]
+		"_path": ["_constraints"]
 	},
 	{
 		"_from": "_banned",
-		"_to": "_rule",
+		"_to": "_constraints",
 		"_predicate": "_predicate_property-of",
-		"_path": ["_rule"]
+		"_path": ["_constraints"]
 	},
 	{
 		"_from": "_computed",
-		"_to": "_rule",
+		"_to": "_constraints",
 		"_predicate": "_predicate_property-of",
-		"_path": ["_rule"]
+		"_path": ["_constraints"]
 	},
 	{
 		"_from": "_locked",
-		"_to": "_rule",
+		"_to": "_constraints",
 		"_predicate": "_predicate_property-of",
-		"_path": ["_rule"]
+		"_path": ["_constraints"]
 	},
 	{
 		"_from": "_immutable",
-		"_to": "_rule",
+		"_to": "_constraints",
 		"_predicate": "_predicate_property-of",
-		"_path": ["_rule"]
+		"_path": ["_constraints"]
 	},
 	{
 		"_from": "_default-value",
-		"_to": "_rule",
+		"_to": "_constraints",
 		"_predicate": "_predicate_property-of",
-		"_path": ["_rule"]
+		"_path": ["_constraints"]
 	},
 	
 	{

@@ -2,6 +2,21 @@
 	{
 		"_code": {
 			"_nid": "",
+			"_lid": "constraints",
+			"_gid": "_constraints",
+			"_aid": ["constraints"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Rules and constraints"},
+			"_definition": {"iso_639_3_eng": "This object groups all properties whose function is to manage constraints of [object data structures](_type_object) in the data dictionary."},
+			"_description": {"iso_639_3_eng": "This *object* is used by all *object structure definition terms*, constituting the *core* of the *data dictionary*, which are involved in *defining rules* that determine if a *data structure* or *object* is *valid* and how it is *constructed*. The definition does not have any required properties."}
+		},
+		"_rule": {}
+	},
+
+	{
+		"_code": {
+			"_nid": "",
 			"_lid": "selection-terms",
 			"_gid": "_selection-terms",
 			"_aid": ["selection-terms"]

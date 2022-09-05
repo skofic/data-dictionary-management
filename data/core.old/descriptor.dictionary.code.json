@@ -16,28 +16,8 @@
 			"_scalar": {
 				"_class": "_class_other",
 				"_type": "_type_object",
-				"_kind": ["_code"]
+				"_kind": ["_identification"]
 			}
-		},
-		"_rule": {
-			"_required": {
-				"_selection-descriptors_all": [
-					"_lid",
-					"_gid",
-					"_aid"
-				]
-			},
-			"_computed": [
-				"_gid"
-			],
-			"_immutable": [
-				"_nid",
-				"_lid",
-				"_gid"
-			],
-			"_locked": [
-				"_gid"
-			]
 		}
 	},
 

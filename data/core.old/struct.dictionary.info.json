@@ -1,32 +1,32 @@
 [
 	{
 		"_from": "_title",
-		"_to": "_info",
+		"_to": "_documentation",
 		"_predicate": "_predicate_property-of",
-		"_path": ["_info"]
+		"_path": ["_documentation"]
 	},
 	{
 		"_from": "_definition",
-		"_to": "_info",
+		"_to": "_documentation",
 		"_predicate": "_predicate_property-of",
-		"_path": ["_info"]
+		"_path": ["_documentation"]
 	},
 	{
 		"_from": "_description",
-		"_to": "_info",
+		"_to": "_documentation",
 		"_predicate": "_predicate_property-of",
-		"_path": ["_info"]
+		"_path": ["_documentation"]
 	},
 	{
 		"_from": "_examples",
-		"_to": "_info",
+		"_to": "_documentation",
 		"_predicate": "_predicate_property-of",
-		"_path": ["_info"]
+		"_path": ["_documentation"]
 	},
 	{
 		"_from": "_notes",
-		"_to": "_info",
+		"_to": "_documentation",
 		"_predicate": "_predicate_property-of",
-		"_path": ["_info"]
+		"_path": ["_documentation"]
 	}
 ]

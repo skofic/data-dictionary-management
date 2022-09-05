@@ -27,14 +27,14 @@
 	{
 		"_code": {
 			"_nid": "",
-			"_lid": "any-enum",
-			"_gid": "_any-enum",
-			"_aid": ["any-enum"]
+			"_lid": "any-object",
+			"_gid": "_any-object",
+			"_aid": ["any-object"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Any enumeration"},
-			"_definition": {"iso_639_3_eng": "This wildcard represents any enumerated term."},
-			"_description": {"iso_639_3_eng": "When defining a [descriptor](_term_descriptor), if the [data type](_type) is [enumeration](_type_enum) and you set the [type reference](_kind_) to this *value*, it means that the descriptor's value can be the [global identifier](_gid) of any *term* that is used as an *element* of a *controlled vocabulary*."}
+			"_title": {"iso_639_3_eng": "Any object"},
+			"_definition": {"iso_639_3_eng": "This wildcard represents any object type."},
+			"_description": {"iso_639_3_eng": "When defining a [descriptor](_term_descriptor), if the [data type](_type) is [object](_type_object) and you set the [type reference](_kind_) to this *value*, it means that the descriptor's value can be the [global identifier](_gid) of any *term* that represents an [object data structure definition](_term_object).\n\nTerms that represent *object definitions* must *include* the [rule](_rule) property section."}
 		}
 	},
 	{
@@ -48,19 +48,6 @@
 			"_title": {"iso_639_3_eng": "Any descriptor"},
 			"_definition": {"iso_639_3_eng": "This wildcard represents any descriptor."},
 			"_description": {"iso_639_3_eng": "When defining a [descriptor](_term_descriptor), if the [data type](_type) is [enumeration](_type_enum) and you set the [type reference](_kind_) to this *value*, it means that the descriptor's value can be the [global identifier](_gid) of any *term* that represents a [descriptor](_term_descriptor).\n\nTerms that represent *descriptors* must *include* the [data](_data) property section."}
-		}
-	},
-	{
-		"_code": {
-			"_nid": "",
-			"_lid": "any-object",
-			"_gid": "_any-object",
-			"_aid": ["any-object"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Any object"},
-			"_definition": {"iso_639_3_eng": "This wildcard represents any object type."},
-			"_description": {"iso_639_3_eng": "When defining a [descriptor](_term_descriptor), if the [data type](_type) is [object](_type_object) and you set the [type reference](_kind_) to this *value*, it means that the descriptor's *value* can be *any object structure*.\n\nThis means that the *object* can have *any property* and there are *no restrictions* or *constraints*, however, when *validating* the value, the object *will be parsed* and its *properties* will be *matched* to existing *descriptors*."}
 		}
 	}
 ]
