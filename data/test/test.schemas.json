@@ -1,14 +1,14 @@
 [
 	{
 		"_from": "test_country",
-		"_to": "test_types_object1",
+		"_to": "test_types_object-01",
 		"_predicate": "_predicate_property-of",
-		"_path": ["test_types_object1"]
+		"_path": ["test_types_object-01"]
 	},
 	{
 		"_from": "test_language",
-		"_to": "test_types_object1",
+		"_to": "test_types_object-01",
 		"_predicate": "_predicate_property-of",
-		"_path": ["test_types_object1"]
+		"_path": ["test_types_object-01"]
 	}
 ]

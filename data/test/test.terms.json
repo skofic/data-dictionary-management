@@ -11,13 +11,14 @@
             "_definition": {"iso_639_3_eng": "This namespace groups all test data."}
         }
     },
+    
     {
-        "_key": "test_descriptors",
+        "_key": "test_descriptor",
         "_code": {
             "_nid": "test",
-            "_lid": "descriptors",
-            "_gid": "test_descriptors",
-            "_aid": ["descriptors"]
+            "_lid": "descriptor",
+            "_gid": "test_descriptor",
+            "_aid": ["descriptor"]
         },
         "_info": {
             "_title": {"iso_639_3_eng": "Test descriptor data namespace"},
@@ -25,12 +26,12 @@
         }
     },
     {
-        "_key": "test_types",
+        "_key": "test_type",
         "_code": {
             "_nid": "test",
-            "_lid": "types",
-            "_gid": "test_types",
-            "_aid": ["types"]
+            "_lid": "type",
+            "_gid": "test_type",
+            "_aid": ["type"]
         },
         "_info": {
             "_title": {"iso_639_3_eng": "Test types data namespace"},
@@ -39,12 +40,63 @@
     },
     
     {
-        "_key": "test_descriptors_array1",
+        "_key": "test_type_object-01",
         "_code": {
-            "_nid": "test_descriptors",
-            "_lid": "array1",
-            "_gid": "test_descriptors_array1",
-            "_aid": ["array1"]
+            "_nid": "test_type",
+            "_lid": "object-01",
+            "_gid": "test_type_object-01",
+            "_aid": ["object-01"]
+        },
+        "_info": {
+            "_title": {"iso_639_3_eng": "Test object type"},
+            "_definition": {"iso_639_3_eng": "This type can be used to qualify objects."},
+            "_description": {"iso_639_3_eng": "This type holds an object."}
+        },
+		"_rule": {
+			"_required": {
+				"_selection-descriptors_all": [
+					"test_country",
+					"test_language"
+				]
+			}
+		}
+    },
+    
+    {
+        "_key": "test_type_object-02",
+        "_code": {
+            "_nid": "test_type",
+            "_lid": "object-02",
+            "_gid": "test_type_object-02",
+            "_aid": ["object-02"]
+        },
+        "_info": {
+            "_title": {"iso_639_3_eng": "Test object type"},
+            "_definition": {"iso_639_3_eng": "This type can be used to test constraints."}
+        },
+		"_rule": {
+			"_required": {
+				"_selection-descriptors_all": [
+					"test_country",
+					"test_language"
+				]
+			},
+			"_default-value": {
+				"my_number": 12,
+				"my_label": "default label",
+				"my_list": [1, 2, 3]
+			}
+
+		}
+    },
+    
+    {
+        "_key": "test_descriptor_array",
+        "_code": {
+            "_nid": "test_descriptor",
+            "_lid": "array",
+            "_gid": "test_descriptor_array",
+            "_aid": ["array"]
         },
         "_info": {
             "_title": {"iso_639_3_eng": "Test descriptor for arrays"},
@@ -64,8 +116,8 @@
                             "_class": "_class_other",
                             "_type": "_type_enum",
                             "_kind": [
-                                "_type",
-                                "_format"
+                                "_format",
+                                "_type"
                             ]
                         }
                     }
@@ -74,11 +126,11 @@
         }
     },
     {
-        "_key": "test_descriptors_term",
+        "_key": "test_descriptor_term",
         "_code": {
-            "_nid": "test_descriptors",
+            "_nid": "test_descriptor",
             "_lid": "term",
-            "_gid": "test_descriptors_term",
+            "_gid": "test_descriptor_term",
             "_aid": ["term"]
         },
         "_info": {
@@ -95,11 +147,11 @@
         }
     },
     {
-        "_key": "test_descriptors_descriptor",
+        "_key": "test_descriptor_descriptor",
         "_code": {
-            "_nid": "test_descriptors",
+            "_nid": "test_descriptor",
             "_lid": "descriptor",
-            "_gid": "test_descriptors_descriptor",
+            "_gid": "test_descriptor_descriptor",
             "_aid": ["descriptor"]
         },
         "_info": {
@@ -116,11 +168,11 @@
         }
     },
     {
-        "_key": "test_descriptors_object",
+        "_key": "test_descriptor_object",
         "_code": {
-            "_nid": "test_descriptors",
+            "_nid": "test_descriptor",
             "_lid": "object",
-            "_gid": "test_descriptors_object",
+            "_gid": "test_descriptor_object",
             "_aid": ["object"]
         },
         "_info": {
@@ -137,11 +189,11 @@
         }
     },
     {
-        "_key": "test_descriptors_dictionary",
+        "_key": "test_descriptor_dictionary",
         "_code": {
-            "_nid": "test_descriptors",
+            "_nid": "test_descriptor",
             "_lid": "dictionary",
-            "_gid": "test_descriptors_dictionary",
+            "_gid": "test_descriptor_dictionary",
             "_aid": ["dictionary"]
         },
         "_info": {
@@ -172,7 +224,7 @@
                                 "_scalar": {
                                     "_class": "_class_other",
                                     "_type": "_type_object",
-                                    "_kind": ["_identification"]
+                                    "_kind": ["_code"]
                                 }
                             }
                         }
@@ -224,30 +276,12 @@
     },
     
     {
-        "_key": "test_types_object1",
+        "_key": "test_descriptor_object-01",
         "_code": {
-            "_nid": "test_types",
-            "_lid": "object1",
-            "_gid": "test_types_object1",
-            "_aid": ["object1"]
-        },
-        "_info": {
-            "_title": {"iso_639_3_eng": "Test object type"},
-            "_definition": {"iso_639_3_eng": "This type can be used to qualify objects."},
-            "_description": {"iso_639_3_eng": "This type holds an object."}
-        },
-		"_rule": {
-			"_required": {"_selection-descriptors_all": ["test_country", "test_language"]}
-		}
-    },
-    
-    {
-        "_key": "test_descriptors_object1",
-        "_code": {
-            "_nid": "test_descriptors",
-            "_lid": "object1",
-            "_gid": "test_descriptors_object1",
-            "_aid": ["object1"]
+            "_nid": "test_descriptor",
+            "_lid": "object-01",
+            "_gid": "test_descriptor_object-01",
+            "_aid": ["object-01"]
         },
         "_info": {
             "_title": {"iso_639_3_eng": "Test object descriptor"},
@@ -257,7 +291,49 @@
             "_scalar": {
                 "_class": "_class_other",
                 "_type": "_type_object",
-                "_kind": ["test_types_object1"]
+                "_kind": ["test_type_object-01"]
+            }
+        }
+    },
+    
+    {
+        "_key": "test_descriptor_object-02",
+        "_code": {
+            "_nid": "test_descriptor",
+            "_lid": "object-02",
+            "_gid": "test_descriptor_object-02",
+            "_aid": ["object-02"]
+        },
+        "_info": {
+            "_title": {"iso_639_3_eng": "Test object descriptor"},
+            "_definition": {"iso_639_3_eng": "This descriptor can be used to test objects."}
+        },
+        "_data": {
+            "_scalar": {
+                "_class": "_class_other",
+                "_type": "_type_object",
+                "_kind": ["test_type_object-02"]
+            }
+        }
+    },
+    
+    {
+        "_key": "test_descriptor_object-03",
+        "_code": {
+            "_nid": "test_descriptor",
+            "_lid": "object-03",
+            "_gid": "test_descriptor_object-03",
+            "_aid": ["object-03"]
+        },
+        "_info": {
+            "_title": {"iso_639_3_eng": "Test object descriptor"},
+            "_definition": {"iso_639_3_eng": "This descriptor can be used to test objects."}
+        },
+        "_data": {
+            "_scalar": {
+                "_class": "_class_other",
+                "_type": "_type_object",
+                "_kind": ["test_type_object-01", "_any-object"]
             }
         }
     }

@@ -1,5 +1,5 @@
 {
-    "descriptor": "test_descriptors_dictionary",
+    "descriptor": "test_descriptor_dictionary",
     "value": {
         "IT": {
             "it": [
@@ -30,7 +30,7 @@
                     "_lid": "baba",
                     "_gid": "baba",
                     "_aid": ["baba"],
-                    "test_descriptors_dictionary": {
+                    "test_descriptor_dictionary": {
                         "IT": {
                             "it": [
                                 {
@@ -81,11 +81,23 @@
 }
 
 {
-  "descriptor": "test_descriptors_object1",
+  "descriptor": "test_descriptor_object-01",
   "value": {
     "test_country": "ITA",
     "test_language": "it",
-    "test_descriptors_object1": {
+    "test_descriptor_object-01": {
+      "test_country": "FR",
+      "test_language": "fr"
+    }
+  }
+}
+
+{
+  "descriptor": "test_descriptor_object-02",
+  "value": {
+    "test_country": "ITA",
+    "test_language": "it",
+    "test_descriptor_object-01": {
       "test_country": "FR",
       "test_language": "fr"
     }

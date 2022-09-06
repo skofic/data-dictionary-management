@@ -1,0 +1,20 @@
+{
+	"descriptor": "_code",
+	"value": {
+	    "_lid": "bo",
+	    "_gid": "bo",
+	    "_aid": ["bo"],
+	    "_code": {
+    	    "_lid": "bo",
+    	    "_gid": "bo",
+    	    "_aid": ["bo"],
+    	    "_code": {
+        	    "_lid": "bo",
+        	    "_gid": "n_bo",
+        	    "_aid": ["bo"],
+        	    "_type": "string",
+        	    "_nid": "iso"
+    	    }
+	    }
+	}
+}
