@@ -1,0 +1,225 @@
+[
+	{
+		"_from": "_scalar",
+		"_to": "_container",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_container"]
+	},
+	{
+		"_from": "_array",
+		"_to": "_container",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_container"]
+	},
+	{
+		"_from": "_set",
+		"_to": "_container",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_container"]
+	},
+	{
+		"_from": "_dict",
+		"_to": "_container",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_container"]
+	},
+	
+	{
+		"_from": "_class",
+		"_to": "_container_scalar",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_container_scalar"]
+	},
+	{
+		"_from": "_type",
+		"_to": "_container_scalar",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_container_scalar"]
+	},
+	{
+		"_from": "_kind",
+		"_to": "_container_scalar",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_container_scalar"]
+	},
+	{
+		"_from": "_format",
+		"_to": "_container_scalar",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_container_scalar"]
+	},
+	{
+		"_from": "_unit",
+		"_to": "_container_scalar",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_container_scalar"]
+	},
+	{
+		"_from": "_unit-name",
+		"_to": "_container_scalar",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_container_scalar"]
+	},
+	{
+		"_from": "_regexp",
+		"_to": "_container_scalar",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_container_scalar"]
+	},
+	{
+		"_from": "_range",
+		"_to": "_container_scalar",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_container_scalar"]
+	},
+	{
+		"_from": "_valid-range",
+		"_to": "_container_scalar",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_container_scalar"]
+	},
+	{
+		"_from": "_normal-range",
+		"_to": "_container_scalar",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_container_scalar"]
+	},
+	
+	{
+		"_from": "_scalar",
+		"_to": "_container_array",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_container_array"]
+	},
+	{
+		"_from": "_array",
+		"_to": "_container_array",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_container_array"]
+	},
+	{
+		"_from": "_set",
+		"_to": "_container_array",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_container_array"]
+	},
+	{
+		"_from": "_dict",
+		"_to": "_container_array",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_container_array"]
+	},
+	{
+		"_from": "_elements",
+		"_to": "_container_array",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_container_array"]
+	},
+	
+	{
+		"_from": "_scalar",
+		"_to": "_container_set",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_container_set"]
+	},
+	{
+		"_from": "_elements",
+		"_to": "_container_set",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_container_set"]
+	},
+	
+	{
+		"_from": "_dict_key",
+		"_to": "_container_dict",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_container_dict"]
+	},
+	{
+		"_from": "_dict_value",
+		"_to": "_container_dict",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_container_dict"]
+	},
+	
+	{
+		"_from": "_class",
+		"_to": "_container_dict_key",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_container_dict_key"]
+	},
+	{
+		"_from": "_type_key",
+		"_to": "_container_dict_key",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_container_dict_key"]
+	},
+	{
+		"_from": "_kind",
+		"_to": "_container_dict_key",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_container_dict_key"]
+	},
+	{
+		"_from": "_format",
+		"_to": "_container_dict_key",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_container_dict_key"]
+	},
+	{
+		"_from": "_unit",
+		"_to": "_container_dict_key",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_container_dict_key"]
+	},
+	{
+		"_from": "_unit-name",
+		"_to": "_container_dict_key",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_container_dict_key"]
+	},
+	{
+		"_from": "_regexp",
+		"_to": "_container_dict_key",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_container_dict_key"]
+	},
+	
+	{
+		"_from": "_min-range-inclusive",
+		"_to": "_range_value",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_range_value"]
+	},
+	{
+		"_from": "_max-range-inclusive",
+		"_to": "_range_value",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_range_value"]
+	},
+	{
+		"_from": "_min-range-exclusive",
+		"_to": "_range_value",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_range_value"]
+	},
+	{
+		"_from": "_max-range-exclusive",
+		"_to": "_range_value",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_range_value"]
+	},
+	
+	{
+		"_from": "_min-items",
+		"_to": "_range_elements",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_range_elements"]
+	},
+	{
+		"_from": "_max-items",
+		"_to": "_range_elements",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_range_elements"]
+	}
+]

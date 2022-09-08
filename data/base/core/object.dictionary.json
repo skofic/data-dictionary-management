@@ -1,0 +1,111 @@
+[
+	{
+		"_code": {
+			"_nid": "",
+			"_lid": "term",
+			"_gid": "_term",
+			"_aid": ["term"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Term"},
+			"_definition": {"iso_639_3_eng": "Term data structure."},
+			"_description": {"iso_639_3_eng": "*Terms* are the *base class* upon which all elements of the data dictionary are created. This data definition includes the *minimum viable data structure* for instantiating *namespaces*, *types* and *enumerations*.\n\n*Terms* require the [identification](_code) and [documentation](_info) sections, while the [data](_data) section should only be included by *descriptors*. Any additional property is allowed."},
+			"_examples": {"iso_639_3_eng": "Generic term example:\n\n```json\n\t{\n\t\t\"_code\": {\n\t\t\t\"_nid\": \"namespace\",\n\t\t\t\"_lid\": \"local-identifier\",\n\t\t\t\"_gid\": \"namespace_local-identifier\",\n\t\t\t\"_aid\": [\"local-identifier\"]\n\t\t},\n\t\t\"_info\": {\n\t\t\t\"_title\": {\n\t\t\t\t\"iso_639_3_eng\": \"Title, name or label\",\n\t\t\t\t\"iso_639_3_ita\": \"Titolo, nome o etichetta\"\n\t\t\t},\n\t\t\t\"_definition\": {\n\t\t\t\t\"iso_639_3_eng\": \"Definition\",\n\t\t\t\t\"iso_639_3_ita\": \"Definizione\"\n\t\t\t},\n\t\t\t\"_description\": {\n\t\t\t\t\"iso_639_3_eng\": \"Full description.\",\n\t\t\t\t\"iso_639_3_ita\": \"Descrizione completa.\"\n\t\t\t},\n\t\t\t\"_examples\": {\n\t\t\t\t\"iso_639_3_eng\": \"Usage examples.\",\n\t\t\t\t\"iso_639_3_ita\": \"Esempi di uso.\"\n\t\t\t}\n\t\t}\n\t}\n```"}
+		},
+		"_rule": {
+			"_required": {
+				"_selection-descriptors_all": [
+					"_key",
+					"_code",
+					"_info"
+				]
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_term",
+			"_lid": "descriptor",
+			"_gid": "_term_descriptor",
+			"_aid": ["descriptor"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Descriptor"},
+			"_definition": {"iso_639_3_eng": "Descriptor data structure."},
+			"_description": {"iso_639_3_eng": "*Descriptors* are terms that define properties that carry values. They *inherit* all *properties* from *terms*, but add a section of [attributes](_data) that *describes* the *type* of *data* they define."},
+			"_examples": {"iso_639_3_eng": "Descriptor example:\n\n```json\n\t{\n\t\t\"_code\": {\n\t\t\t\"_nid\": \"namespace\",\n\t\t\t\"_lid\": \"local-identifier\",\n\t\t\t\"_gid\": \"namespace_local-identifier\",\n\t\t\t\"_aid\": [\"local-identifier\"]\n\t\t},\n\t\t\"_info\": {\n\t\t\t\"_title\": {\n\t\t\t\t\"iso_639_3_eng\": \"Title, name or label\",\n\t\t\t\t\"iso_639_3_ita\": \"Titolo, nome o etichetta\"\n\t\t\t},\n\t\t\t\"_definition\": {\n\t\t\t\t\"iso_639_3_eng\": \"Definition\",\n\t\t\t\t\"iso_639_3_ita\": \"Definizione\"\n\t\t\t},\n\t\t\t\"_description\": {\n\t\t\t\t\"iso_639_3_eng\": \"Full description.\",\n\t\t\t\t\"iso_639_3_ita\": \"Descrizione completa.\"\n\t\t\t},\n\t\t\t\"_examples\": {\n\t\t\t\t\"iso_639_3_eng\": \"Usage examples.\",\n\t\t\t\t\"iso_639_3_ita\": \"Esempi di uso.\"\n\t\t\t}\n\t\t},\n\t\t\"_data\": {\n \t\t\t\"_dict\": {\n\t\t\t\t\"_dict_key\": {\n\t\t\t\t\t\"_class\": \"_class_category\",\n\t\t\t\t\t\"_type\": \"_type_enum\",\n\t\t\t\t\t\"_kind\": [\"iso_639_3\"]\n\t\t\t\t},\n\t\t\t\t\"_dict_value\": {\n\t\t\t\t\t\"_scalar\": {\n\t\t\t\t\t\t\"_class\": \"_class_other\",\n\t\t\t\t\t\t\"_type\": \"_type_string\",\n\t\t\t\t\t\t\"_format\": \"_format_markdown\"\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n```"}
+		},
+		"_rule": {
+			"_required": {
+				"_selection-descriptors_all": [
+					"_key",
+					"_code",
+					"_info",
+					"_data"
+				]
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_term",
+			"_lid": "object",
+			"_gid": "_term_object",
+			"_aid": ["object"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Object"},
+			"_definition": {"iso_639_3_eng": "Object data structure definition."},
+			"_description": {"iso_639_3_eng": "This data definition includes the *minimum viable data structure* for instantiating *object type definitions*.\n\n*Objects* require the *identification*, *documentation* and *rules* sections, while the *data* section is only required by *descriptors*."},
+			"_examples": {"iso_639_3_eng": "Object structure refinition example:\n\n```json\n\t{\n\t\t\"_code\": {\n\t\t\t\"_nid\": \"namespace\",\n\t\t\t\"_lid\": \"local-identifier\",\n\t\t\t\"_gid\": \"namespace_local-identifier\",\n\t\t\t\"_aid\": [\"local-identifier\"]\n\t\t},\n\t\t\"_info\": {\n\t\t\t\"_title\": {\n\t\t\t\t\"iso_639_3_eng\": \"Title, name or label\",\n\t\t\t\t\"iso_639_3_ita\": \"Titolo, nome o etichetta\"\n\t\t\t},\n\t\t\t\"_definition\": {\n\t\t\t\t\"iso_639_3_eng\": \"Definition\",\n\t\t\t\t\"iso_639_3_ita\": \"Definizione\"\n\t\t\t},\n\t\t\t\"_description\": {\n\t\t\t\t\"iso_639_3_eng\": \"Full description.\",\n\t\t\t\t\"iso_639_3_ita\": \"Descrizione completa.\"\n\t\t\t},\n\t\t\t\"_examples\": {\n\t\t\t\t\"iso_639_3_eng\": \"Usage examples.\",\n\t\t\t\t\"iso_639_3_ita\": \"Esempi di uso.\"\n\t\t\t}\n\t\t},\n\t\t\"_rule\": {\n\t\t\t \"_required\": {\n\t\t\t\t\"_selection-descriptors_all\": [\"d1\", \"d2\"]\n\t\t\t},\n\t\t\t\"_recommended\": {\n\t\t\t\t\"_selection-descriptors_one\": [\"d3\", \"d4\"],\n\t\t\t\t\"_selection-descriptors_any\": [\"d4\", \"d5\"]\n\t\t\t},\n\t\t\t\"_banned\": [\"b1\", \"b2\", \"b3\"]\n\t\t\t\"_computed\": [\"d1\"],\n\t\t\t\"_locked\": [\"d6\"],\n\t\t\t\"_immutable\": [\"d2\", \"d3\"],\n\t\t\t\"_default-value\": {\n\t\t\t\t\"my_number\": 12,\n\t\t\t\t\"my_label\": \"default label\",\n\t\t\t\t\"my_list\": [1, 2, 3]\n\t\t\t}\n\t\t}\n\t}\n```"}
+		},
+		"_rule": {
+			"_required": {
+				"_selection-descriptors_all": [
+					"_key",
+					"_code",
+					"_info",
+					"_rule"
+				]
+			}
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "",
+			"_lid": "edge",
+			"_gid": "_edge",
+			"_aid": ["edge"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Edge"},
+			"_definition": {"iso_639_3_eng": "Edge data structure"},
+			"_description": {"iso_639_3_eng": "*Edges* are *objects* that define the *relationships* between nodes in a *directed graph*. This data structure is implemented using the [ArangoDB](https://www.arangodb.com) edge record, in particular:\n\n- The [key](_key) property is required and should be the MD5 hash of the *concatenation* of the [source term reference](_from) , [predicate](_predicate) and [destination term reference](_to) properties separated by a slash (`/`) token. This means that there can be only one edge connecting the source and destination nodes with a specific predicate.\n- The [predicate](_predicate) property is required, it indicates the nature or function of the relationship.\n- The [path](_path) property is also required in order to allow more than one path to share the same source, predicate and destination combination."},
+			"_examples": {"iso_639_3_eng": "Edge example:\n\n```json\n{\n\t\"_key\": \"20103dc79d7f368e2624a0f781c31e05\",\n\t\"_from\": \"terms/source_node\",\n\t\"_to\": \"terms/destination_node\",\n\t\"_predicate\": \"_edge_predicate_enum-of\",\n\t\"_path\": [\"destination_node\", \"other_node\"]\n}\n```\n\nThis example represents an *edge* that connects `source_node` to `destination_node` making `source_node` an *enumeration element* of the `destination_node` *controlled vocabulary*. Two controlled vocabularies share this relationship: `destination_node` and `other_node`."}
+		},
+		"_rule": {
+			"_required": {
+				"_selection-descriptors_all": [
+					"_key",
+					"_from",
+					"_to",
+					"_predicate",
+					"_path"
+				]
+			},
+			"_computed": [
+				"_key"
+			],
+			"_immutable": [
+				"_key",
+				"_from",
+				"_to",
+				"_predicate"
+			],
+			"_locked": [
+				"_key"
+			]
+		}
+	}
+]

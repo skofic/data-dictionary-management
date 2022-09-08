@@ -1,0 +1,137 @@
+[
+	{
+		"_from": "_required",
+		"_to": "_rule",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_rule"]
+	},
+	{
+		"_from": "_recommended",
+		"_to": "_rule",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_rule"]
+	},
+	{
+		"_from": "_banned",
+		"_to": "_rule",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_rule"]
+	},
+	{
+		"_from": "_computed",
+		"_to": "_rule",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_rule"]
+	},
+	{
+		"_from": "_locked",
+		"_to": "_rule",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_rule"]
+	},
+	{
+		"_from": "_immutable",
+		"_to": "_rule",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_rule"]
+	},
+	{
+		"_from": "_default-value",
+		"_to": "_rule",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_rule"]
+	},
+	
+	{
+		"_from": "_selection-terms_one",
+		"_to": "_selection-terms",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_selection-terms"]
+	},
+	{
+		"_from": "_selection-terms_one-none",
+		"_to": "_selection-terms",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_selection-terms"]
+	},
+	{
+		"_from": "_selection-terms_any",
+		"_to": "_selection-terms",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_selection-terms"]
+	},
+	{
+		"_from": "_selection-terms_any-one",
+		"_to": "_selection-terms",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_selection-terms"]
+	},
+	{
+		"_from": "_selection-terms_all",
+		"_to": "_selection-terms",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_selection-terms"]
+	},
+	
+	{
+		"_from": "_selection-descriptors_one",
+		"_to": "_selection-descriptors",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_selection-descriptors"]
+	},
+	{
+		"_from": "_selection-descriptors_one-none",
+		"_to": "_selection-descriptors",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_selection-descriptors"]
+	},
+	{
+		"_from": "_selection-descriptors_any",
+		"_to": "_selection-descriptors",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_selection-descriptors"]
+	},
+	{
+		"_from": "_selection-descriptors_any-one",
+		"_to": "_selection-descriptors",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_selection-descriptors"]
+	},
+	{
+		"_from": "_selection-descriptors_all",
+		"_to": "_selection-descriptors",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_selection-descriptors"]
+	},
+	
+	{
+		"_from": "_selection-values_one",
+		"_to": "_selection-values",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_selection-values"]
+	},
+	{
+		"_from": "_selection-values_one-none",
+		"_to": "_selection-values",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_selection-values"]
+	},
+	{
+		"_from": "_selection-values_any",
+		"_to": "_selection-values",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_selection-values"]
+	},
+	{
+		"_from": "_selection-values_any-one",
+		"_to": "_selection-values",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_selection-values"]
+	},
+	{
+		"_from": "_selection-values_all",
+		"_to": "_selection-values",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_selection-values"]
+	}
+]

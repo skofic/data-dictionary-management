@@ -9,7 +9,12 @@
 const globals = {
 
 	"path": {
-		"base": "./data/core/",
+		"core": "./data/base/core",
+		"std": "./data/base/std",
+		"geo": "./data/base/geo",
+		"iso": "./data/base/iso",
+		"eufgis": "./data/base/eufgis",
+
 		"processed": "./data/processed/",
 
 		"iso_json": "./external/iso-codes/data/",

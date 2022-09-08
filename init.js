@@ -75,7 +75,7 @@ async function main()
 		console.log("============================")
 		await process.ProcessIsoStandards(db)
 
-		console.log("\n============================")
+		console.log("\n========x====================")
 		console.log("Validating dictionary.")
 		console.log("============================")
 		errors = await process.ValidateTerms(db)

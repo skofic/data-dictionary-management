@@ -1,0 +1,1097 @@
+[
+	{
+		"_from": "toc_dictionary",
+		"_to": "toc_descriptor",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "eufgis",
+		"_to": "toc_descriptor",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "geo",
+		"_to": "toc_descriptor",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "iso",
+		"_to": "toc_descriptor",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "std",
+		"_to": "toc_descriptor",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	
+	{
+		"_from": "_code",
+		"_to": "_term",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_nid",
+		"_to": "_code",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_lid",
+		"_to": "_code",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_gid",
+		"_to": "_code",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_aid",
+		"_to": "_code",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_pid",
+		"_to": "_code",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_name",
+		"_to": "_code",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	
+	{
+		"_from": "_info",
+		"_to": "_term",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_title",
+		"_to": "_info",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_definition",
+		"_to": "_info",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_description",
+		"_to": "_info",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_examples",
+		"_to": "_info",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_notes",
+		"_to": "_info",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	
+	{
+		"_from": "_data",
+		"_to": "_term",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_scalar",
+		"_to": "_data",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_class",
+		"_to": "_scalar",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_type",
+		"_to": "_scalar",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_kind",
+		"_to": "_scalar",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_format",
+		"_to": "_scalar",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_unit",
+		"_to": "_scalar",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_unit-name",
+		"_to": "_scalar",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_regexp",
+		"_to": "_scalar",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_range",
+		"_to": "_scalar",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_min-range-inclusive",
+		"_to": "_range",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_max-range-inclusive",
+		"_to": "_range",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_min-range-exclusive",
+		"_to": "_range",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_max-range-exclusive",
+		"_to": "_range",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_valid-range",
+		"_to": "_scalar",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_min-range-inclusive",
+		"_to": "_valid-range",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_max-range-inclusive",
+		"_to": "_valid-range",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_min-range-exclusive",
+		"_to": "_valid-range",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_max-range-exclusive",
+		"_to": "_valid-range",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_normal-range",
+		"_to": "_scalar",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_min-range-inclusive",
+		"_to": "_normal-range",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_max-range-inclusive",
+		"_to": "_normal-range",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_min-range-exclusive",
+		"_to": "_normal-range",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_max-range-exclusive",
+		"_to": "_normal-range",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},	
+	{
+		"_from": "_array",
+		"_to": "_data",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_class",
+		"_to": "_array",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_type",
+		"_to": "_array",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_kind",
+		"_to": "_array",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_format",
+		"_to": "_array",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_unit",
+		"_to": "_array",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_unit-name",
+		"_to": "_array",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_regexp",
+		"_to": "_array",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_valid-range",
+		"_to": "_array",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_normal-range",
+		"_to": "_array",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_elements",
+		"_to": "_array",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_min-items",
+		"_to": "_elements",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_max-items",
+		"_to": "_elements",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},	
+	{
+		"_from": "_set",
+		"_to": "_data",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_class",
+		"_to": "_set",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_type",
+		"_to": "_set",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_kind",
+		"_to": "_set",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_format",
+		"_to": "_set",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_unit",
+		"_to": "_set",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_unit-name",
+		"_to": "_set",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_regexp",
+		"_to": "_set",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_valid-range",
+		"_to": "_set",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_normal-range",
+		"_to": "_set",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_elements",
+		"_to": "_set",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},	
+	{
+		"_from": "_dict",
+		"_to": "_data",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_dict_key",
+		"_to": "_dict",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_class",
+		"_to": "_dict_key",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_type_key",
+		"_to": "_dict_key",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_kind",
+		"_to": "_dict_key",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_format",
+		"_to": "_dict_key",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_unit",
+		"_to": "_dict_key",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_unit-name",
+		"_to": "_dict_key",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_regexp",
+		"_to": "_dict_key",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_regexp",
+		"_to": "_dict_key",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},	
+	{
+		"_from": "_dict_value",
+		"_to": "_dict",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_scalar",
+		"_to": "_dict_value",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_array",
+		"_to": "_dict_value",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_set",
+		"_to": "_dict_value",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_dict",
+		"_to": "_dict_value",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	
+	{
+		"_from": "_rule",
+		"_to": "_term",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_required",
+		"_to": "_rule",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_selection-descriptors_one",
+		"_to": "_required",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_selection-descriptors_one-none",
+		"_to": "_required",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_selection-descriptors_any",
+		"_to": "_required",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_selection-descriptors_any-one",
+		"_to": "_required",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_selection-descriptors_all",
+		"_to": "_required",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},	
+	{
+		"_from": "_recommended",
+		"_to": "_rule",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_selection-descriptors_one",
+		"_to": "_recommended",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_selection-descriptors_one-none",
+		"_to": "_recommended",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_selection-descriptors_any",
+		"_to": "_recommended",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_selection-descriptors_any-one",
+		"_to": "_recommended",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_selection-descriptors_all",
+		"_to": "_recommended",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_banned",
+		"_to": "_rule",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_computed",
+		"_to": "_rule",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_locked",
+		"_to": "_rule",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_immutable",
+		"_to": "_rule",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_default-value",
+		"_to": "_rule",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_dict",
+		"_to": "_default-value",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	
+	{
+		"_from": "_from",
+		"_to": "_edge",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_to",
+		"_to": "_edge",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_predicate",
+		"_to": "_edge",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "_path",
+		"_to": "_edge",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	
+	{
+		"_from": "gcu_country",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_number",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_gene-number",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_province",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_department",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_municioality",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_name",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_latitude",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_longitude",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_center",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_polygon",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_geodetic-datum",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_coordinates-restriction",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_elevation-min",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_elevation-max",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_area",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_ownership",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_type",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_year",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_visit",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_soil-remarks",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_unit-remarks",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_species",
+		"_to": "gcu",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_population_species",
+		"_to": "gcu_population",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_population_number",
+		"_to": "gcu_population",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_population_established",
+		"_to": "gcu_population",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_population_last",
+		"_to": "gcu_population",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_population_status",
+		"_to": "gcu_population",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_population_situ",
+		"_to": "gcu_population",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_population_origin",
+		"_to": "gcu_population",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_population_system",
+		"_to": "gcu_population",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_population_management",
+		"_to": "gcu_population",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_population_justification",
+		"_to": "gcu_population",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_population_reproducing",
+		"_to": "gcu_population",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_population_sex-ratio",
+		"_to": "gcu_population",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_population_regeneration",
+		"_to": "gcu_population",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_population_distribution",
+		"_to": "gcu_population",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_population_share",
+		"_to": "gcu_population",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "gcu_population_remarks",
+		"_to": "gcu_population",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	
+	{
+		"_from": "geo_datum",
+		"_to": "geo",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "geo_datum_ellipsoid",
+		"_to": "geo",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "geo_datum_delta-a",
+		"_to": "geo",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "geo_datum_delta-f",
+		"_to": "geo",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "geo_datum_delta-x",
+		"_to": "geo",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "geo_datum_delta-y",
+		"_to": "geo",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "geo_datum_delta-z",
+		"_to": "geo",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	
+	{
+		"_from": "iso_639_scope",
+		"_to": "iso_639",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "iso_639_type",
+		"_to": "iso_639",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "iso_639_alpha2",
+		"_to": "iso_639",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "iso_639_alpha3",
+		"_to": "iso_639",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "iso_639_bibliographic",
+		"_to": "iso_639",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "iso_639_common",
+		"_to": "iso_639",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "iso_639_inverted",
+		"_to": "iso_639",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "iso_3166_alpha2",
+		"_to": "iso_3166",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "iso_3166_alpha3",
+		"_to": "iso_3166",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "iso_3166_numeric",
+		"_to": "iso_3166",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "iso_3166_official-name",
+		"_to": "iso_3166",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "iso_3166_common-name",
+		"_to": "iso_3166",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "iso_3166_2_type",
+		"_to": "iso_3166_2",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "iso_3166_3_alpha4",
+		"_to": "iso_3166_3",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "iso_3166_3_withdrawal",
+		"_to": "iso_3166_3",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "iso_4217_alpha3",
+		"_to": "iso_4217",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "iso_4217_numeric",
+		"_to": "iso_4217",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "iso_15924_alpha4",
+		"_to": "iso_15924",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "iso_15924_numeric",
+		"_to": "iso_15924",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	
+	{
+		"_from": "std_country",
+		"_to": "std",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "std_country_ioc",
+		"_to": "std_country",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "std_country_flag",
+		"_to": "std_country",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "std_country_emoji",
+		"_to": "std_country",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "std_country_tld",
+		"_to": "std_country",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "std_country_tel",
+		"_to": "std_country",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "std_country_area",
+		"_to": "std_country",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "std_country_languages",
+		"_to": "std_country",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "std_country_currencies",
+		"_to": "std_country",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "std_country_borders",
+		"_to": "std_country",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "std_country_region",
+		"_to": "std_country",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	},
+	{
+		"_from": "std_country_sub-region",
+		"_to": "std_country",
+		"_predicate": "_predicate_section-of",
+		"_path": ["toc", "toc_descriptor"]
+	}
+]

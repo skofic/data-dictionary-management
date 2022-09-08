@@ -24,32 +24,51 @@ const kDb = require('./db.globals')				// Database globals.
 async function ProcessDictionaryFiles(db) {
 
 	//
-	// Process term files.
+	// Select base directory according to flags.
 	//
-	await ProcessFiles(
-		db,										// Database connection.
-		kDb.collection_terms,					// Database collection name.
-		GetFilesList(
-			kGlob.globals.path.base,			// Source data files directory.
-			'.json', 					// File extension.
-			kGlob.globals.file_prefixes.term	// Selection name prefixes.
-		),
-		ProcessTerm 							// Object processing callback.
-	)
+	let paths = [kGlob.globals.path.core]
+	if(!kPriv.user.flag.only_core) {
+		paths.push(kGlob.globals.path.std)
+		paths.push(kGlob.globals.path.geo)
+		paths.push(kGlob.globals.path.iso)
+		if(kPriv.user.flag.do_eufgis) {
+			paths.push(kGlob.globals.path.eufgis)
+		}
+	}
 
 	//
-	// Process edge files.
+	// Iterate paths.
 	//
-	await ProcessFiles(
-		db,										// Database connection.
-		kDb.collection_edges,				// Database collection name.
-		GetFilesList(
-			kGlob.globals.path.base,			// Source data files directory.
-			'.json', 					// File extension.
-			kGlob.globals.file_prefixes.edge	// Selection name prefixes.
-		),
-		ProcessEdge								// Object processing callback.
-	)
+	for(const path of paths) {
+
+		//
+		// Process term files.
+		//
+		await ProcessFiles(
+			db,										// Database connection.
+			kDb.collection_terms,					// Database collection name.
+			GetFilesList(
+				path,								// Source data files directory.
+				'.json', 					// File extension.
+				kGlob.globals.file_prefixes.term	// Selection name prefixes.
+			),
+			ProcessTerm 							// Object processing callback.
+		)
+
+		//
+		// Process edge files.
+		//
+		await ProcessFiles(
+			db,										// Database connection.
+			kDb.collection_edges,					// Database collection name.
+			GetFilesList(
+				path,								// Source data files directory.
+				'.json', 					// File extension.
+				kGlob.globals.file_prefixes.edge	// Selection name prefixes.
+			),
+			ProcessEdge								// Object processing callback.
+		)
+	}
 
 } // ProcessDictionaryFiles()
 
@@ -62,29 +81,35 @@ async function ProcessDictionaryFiles(db) {
 async function ProcessIsoStandards(db) {
 
 	//
-	// Handle ISO 639 languages.
+	// Skip if only core.
 	//
-	await LoadIso639_3(db)	// ISO 639-3.
-	await LoadIso639_1(db)	// ISO 639-1.
-	await LoadIso639_2(db)	// ISO 639-2.
-	await LoadIso639_5(db)	// ISO 639-5.
+	if(!kPriv.user.flag.only_core) {
 
-	//
-	// Handle ISO 4217 currencies.
-	//
-	await LoadIso4217(db)	// ISO 4217.
+		//
+		// Handle ISO 639 languages.
+		//
+		await LoadIso639_3(db)	// ISO 639-3.
+		await LoadIso639_1(db)	// ISO 639-1.
+		await LoadIso639_2(db)	// ISO 639-2.
+		await LoadIso639_5(db)	// ISO 639-5.
 
-	//
-	// Handle ISO 15924 currencies.
-	//
-	await LoadIso15924(db)	// ISO 15924.
+		//
+		// Handle ISO 4217 currencies.
+		//
+		await LoadIso4217(db)	// ISO 4217.
 
-	//
-	// Handle ISO 3166 countries.
-	//
-	await LoadIso3166_1(db)	// ISO 3166-1.
-	await LoadIso3166_2(db)	// ISO 3166-2.
-	await LoadIso3166_3(db)	// ISO 3166-3.
+		//
+		// Handle ISO 15924 currencies.
+		//
+		await LoadIso15924(db)	// ISO 15924.
+
+		//
+		// Handle ISO 3166 countries.
+		//
+		await LoadIso3166_1(db)	// ISO 3166-1.
+		await LoadIso3166_2(db)	// ISO 3166-2.
+		await LoadIso3166_3(db)	// ISO 3166-3.
+	}
 
 } // ProcessIsoStandards()
 
@@ -2227,10 +2252,11 @@ function CreateIso3166_1(item) {
 	//
 	// Handle EUFGIS country.
 	//
-	// MILKO - Commented to review aded data.
-	// if(kGlob.globals.eufgis.countries.has(lid)) {
-	// 	edge._path.push("eufgis_countries")
-	// }
+	if(kPriv.user.flag.do_eufgis) {
+		if(kGlob.globals.eufgis.countries.has(lid)) {
+			edge._path.push("eufgis_countries")
+		}
+	}
 
 	//
 	// Add to buffer.

@@ -1,0 +1,44 @@
+[
+	{
+		"_code": {
+			"_nid": "",
+			"_lid": "predicate",
+			"_gid": "_predicate",
+			"_aid": ["predicate"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Relationship predicate"},
+			"_definition": {"iso_639_3_eng": "Type or classification of the relationship."},
+			"_description": {"iso_639_3_eng": "A relationship predicate indicates the *type*, *nature* or *class* of the relationship. You may have several edges connecting the same nodes, but each edge must have a *different* predicate."}
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_category",
+				"_type": "_type_enum",
+				"_kind": ["_predicate"]
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "",
+			"_lid": "path",
+			"_gid": "_path",
+			"_aid": ["path"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Relationship paths"},
+			"_definition": {"iso_639_3_eng": "List of path roots that share the edge."},
+			"_description": {"iso_639_3_eng": "This field is an *array* of [global identifiers](_gid) representing the *list* of *paths* sharing the edge: these global identifiers represent the root node of the paths. The field is used to allow more than one path to share the same edge in a *graph*."}
+		},
+		"_data": {
+			"_set": {
+				"_scalar": {
+					"_class": "_class_category",
+					"_type": "_type_enum",
+					"_kind": ["_any-term"]
+				}
+			}
+		}
+	}
+]

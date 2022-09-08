@@ -1,0 +1,494 @@
+[
+	{
+		"_code": {
+			"_nid": "",
+			"_lid": "rule",
+			"_gid": "_rule",
+			"_aid": ["rule"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Constraints section"},
+			"_definition": {"iso_639_3_eng": "This object groups all properties whose function is to provide rules and constraints applying to object data structures in the data dictionary."},
+			"_description": {"iso_639_3_eng": "All *terms* that *represent object structure definitions* require this element which features the following *ioptional* properties:\n\n- [Required](_required): A [descriptors selection](_selection-descriptors) representing the selection of required properties.\n- [Recommended](_recommended): A [descriptors selection](_selection-descriptors) representing the selection of recommended properties.\n- [Banned](_banned): A list of properties that will be removed from the object prior to storing it.\n- [Computed](_computed): A list of properties that will be automatically filled prior to storing the object.\n- [Locked](_locked): The list of properties that cannot be modified by users.\n- [Immutable](_immutable): The list of properties that cannot be modified once the object has been stored.\n- [Default value](_default-value): A dictionary whose keys are the descriptor [global identifier](_gid) and the values are a [values selection](_selection-values).\n\nThis property is required for terms defining an object structure. This property can be empty, in which case it means that all the object's properties are optional."},
+			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_rule\": {\n\t\t\"_required\": {\n\t\t\t\"_selection-descriptors_one\": [\"one\", \"two\", \"three\"],\n\t\t\t\"_selection-descriptors_any\": [\"red\", \"green\", \"blue\"],\n\t\t\t\"_selection-descriptors_all\": [\"mon\", \"tue\", \"wed\"]\n\t\t},\n\t\t\"_recommended\": {\n\t\t\t\"_selection-descriptors_any\": [\"thu\", \"fri\"]\n\t\t},\n\t\t\"_banned\": [\"sat\", \"sun\"],\n\t\t\"_computed\": [\"_key\"],\n\t\t\"_locked\": [\"_rev\"],\n\t\t\"_immutable\": [\"_key\"],\n\t\t\"_default-value\": {\n\t\t\t\"one\": 1,\n\t\t\t\"two\": 2,\n\t\t\t\"three\": [1, 2, 3],\n\t\t\t\"red\": \"It is red\"\n\t\t}\n\t}\n}\n```\n\nThis rule requires the following conditions to be true:\n\n- It must contain one of the following descriptors: `one`, `two` or `three`\n- It must contain one or more of the following descriptors: `red`, `green` or `blue`.\n- It must contain all of the following descriptors: `mon`, `tue` and `wed`.\n- It is recommended to contain one or more of the following descriptors: `thu` and/or `fri`.\n- It must not contain the following descriptors: `sat` and `sun`.\n- The `_key` descriptor is computed.\n- The `_rev` descriptor is locked: it cannot be modified.\n- The `_key` descriptor's value is immutable.\n- If omitted, the following descriptors will take the following values:\n    - `one`: `1`\n    - `two`: `2`\n    - `three`: `[1, 2, 3]`\n    - `red`: `\"It is red\"`"}
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_other",
+				"_type": "_type_object",
+				"_kind": ["_rule"]
+			}
+		},
+		"_rule": {
+			"_recommended": {
+				"_selection-descriptors_any": [
+					"_recommended"
+				]
+			}
+		}
+	},
+
+	{
+		"_code": {
+			"_nid": "",
+			"_lid": "required",
+			"_gid": "_required",
+			"_aid": ["required"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Required properties"},
+			"_definition": {"iso_639_3_eng": "Selection of required properties."},
+			"_description": {"iso_639_3_eng": "This field contains a *descriptors selection rule* that determines which *set* of *descriptors* must be *included* in the *data structure definition* of the *object* for it to be considered *valid*.\n\nThe *data type* of the selection *values* must be the *global identifier* of the *descriptors* that must be *included* in the *object data structure*.\n\nIn order for the *object data structure* to be *valid*, its *properties* must *include* the *elements* of this *selection*."},
+			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_selection-descriptors_one\": [one, two, three],\n\t\"_selection-descriptors_any\": [red, green, blue],\n\t\"_selection-descriptors_all\": [mon. tue, wed]\n}\n```\n\nThis selection rule implies the following conditions:\n\n- At least *one* of `[red, green, blue]` is required.\n- *One* or *more* of `[odd, even] `are required.\n- *All* of `[mon, tue, wed]` are required.\n  \n\nThe following are valid:\n\n- `[red, even, mon, tue, wed]`  \n- `[green, odd, mon, tue, wed]` \n- `[blue, odd, even, mon, tue, wed]`\n  \n\nThe following are invalid:\n\n- `[even, mon, tue, wed]` \n- `[green, mon, tue, wed]`\n- `[blue, odd, even, tue, wed]`"}
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_other",
+				"_type": "_type_object",
+				"_kind": ["_selection-descriptors"]
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "",
+			"_lid": "recommended",
+			"_gid": "_recommended",
+			"_aid": ["recommended"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Recommended properties"},
+			"_definition": {"iso_639_3_eng": "Selection of recommended properties."},
+			"_description": {"iso_639_3_eng": "This field contains a *descriptors selection rule* that determines which *set* of *descriptors* are *recommended* to be *included* in the *data structure definition* of the *object*. By recommended it means that you are strongly encouraged to include the selection of properties in the object.\n\nThe *data type* of the selection *values* must be the *global identifier* of the *descriptors* that are *recommended*.\n\nIf these properties are not added to the object this doesn't mean that the object is invalid."},
+			"_examples": {"iso_639_3_eng": "```json\n\t\"_selection-descriptors_one\": [one, two, three],\n\t\"_selection-descriptors_any\": [red, green, blue],\n\t\"_selection-descriptors_all\": [mon. tue, wed]\n}\n```\n\nThis selection rule implies the following conditions:\n\n- At least *one* of `[red, green, blue]` is recommended.\n- *One* or *more* of `[odd, even] `are recommended.\n- *All* of `[mon, tue, wed]` are recommended."}
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_other",
+				"_type": "_type_object",
+				"_kind": ["_selection-descriptors"]
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "",
+			"_lid": "banned",
+			"_gid": "_banned",
+			"_aid": ["banned"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Banned properties"},
+			"_definition": {"iso_639_3_eng": "List of banned properties."},
+			"_description": {"iso_639_3_eng": "This field contains a set of *descriptors* that should *not* be *included* in the *data structure definition* of the *object.\n\nThe *data type* of the set *values* must be the *global identifier* of the *descriptors*.\n\nIn order for the *object data structure* to be *valid*, its *properties* *must not include* the *elements* of this *set*.\n\nThis rule should be evaluated at the *end* of the *validation workflow* and should *not trigger* an *error*: all banned properties should simply be *removed*."}
+		},
+		"_data": {
+			"_set": {
+				"_scalar": {
+					"_class": "_class_other",
+					"_type": "_type_enum",
+					"_kind": ["_any-descriptor"]
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "",
+			"_lid": "computed",
+			"_gid": "_computed",
+			"_aid": ["computed"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Computed properties"},
+			"_definition": {"iso_639_3_eng": "List of computed properties."},
+			"_description": {"iso_639_3_eng": "This field contains the list of *properties* that are automatically *computed*, their value is *calculated* before *storing* the *record*."}
+		},
+		"_data": {
+			"_set": {
+				"_scalar": {
+					"_class": "_class_other",
+					"_type": "_type_enum",
+					"_kind": ["_any-descriptor"]
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "",
+			"_lid": "locked",
+			"_gid": "_locked",
+			"_aid": ["locked"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Locked properties"},
+			"_definition": {"iso_639_3_eng": "List of locked properties."},
+			"_description": {"iso_639_3_eng": "This field contains the list of *properties* that are considered *read only*, their value can only be *displayed*. This behaviour also extends to nested object properties."}
+		},
+		"_data": {
+			"_set": {
+				"_scalar": {
+					"_class": "_class_other",
+					"_type": "_type_enum",
+					"_kind": ["_any-descriptor"]
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "",
+			"_lid": "immutable",
+			"_gid": "_immutable",
+			"_aid": ["immutable"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Immutable properties"},
+			"_definition": {"iso_639_3_eng": "List of immutable properties."},
+			"_description": {"iso_639_3_eng": "This field contains the list of *properties* that are considered *Iimmutable*: once the record has been stored, their value cannot be *modified or removed*. This behaviour also extends to nested object properties."}
+		},
+		"_data": {
+			"_set": {
+				"_scalar": {
+					"_class": "_class_other",
+					"_type": "_type_enum",
+					"_kind": ["_any-descriptor"]
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "",
+			"_lid": "default-value",
+			"_gid": "_default-value",
+			"_aid": ["default-value"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Default value"},
+			"_definition": {"iso_639_3_eng": "List of property default values."},
+			"_description": {"iso_639_3_eng": "This field is a *key/value dictionary* in which the *key* is the *property name*, which is the *global identifier* of the *descriptor*, and the *value* represents the *default value* for that *property*.\n\nThe data is defined as an object that can have any property or value: default values are added before validation, so values and descriptors will follow standard rules."},
+			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"my_number\": 12,\n\t\"my_label\": \"default label\",\n\t\"my_list\": [1, 2, 3]\n}\n```\n\nThis will set:\n\n- `my_number` to 12.\n- `my_label` to `\"default label\"`.\n- `my_list` to `1`, `2` and `3`."}
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_other",
+				"_type": "_type_object",
+				"_kind": ["_any-object"]
+			}
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "_selection-terms",
+			"_lid": "one",
+			"_gid": "_selection-terms_one",
+			"_aid": ["one"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "One of"},
+			"_definition": {"iso_639_3_eng": "Selection should contain one term from the array."},
+			"_description": {"iso_639_3_eng": "The rule determines that *one* of the terms in the *array* should be part of the *selection*.\n\nThe *terms* of the *set* are represented by their *global identifiers*."}
+		},
+		"_data": {
+			"_set": {
+				"_scalar": {
+					"_class": "_class_other",
+					"_type": "_type_enum",
+					"_kind": ["_any-term"]
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_selection-terms",
+			"_lid": "one-none",
+			"_gid": "_selection-terms_one-none",
+			"_aid": ["one-none"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "One of or none"},
+			"_definition": {"iso_639_3_eng": "Selection should contain one term from the set or none."},
+			"_description": {"iso_639_3_eng": "The rule determines that either *one* of the terms in the *set* should be part of the *selection*, or the selection should be empty.\n\nThe *terms* of the *set* are represented by their *global identifiers*."}
+		},
+		"_data": {
+			"_set": {
+				"_scalar": {
+					"_class": "_class_other",
+					"_type": "_type_enum",
+					"_kind": ["_any-term"]
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_selection-terms",
+			"_lid": "any",
+			"_gid": "_selection-terms_any",
+			"_aid": ["any"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Any of"},
+			"_definition": {"iso_639_3_eng": "Selection should contain one or more terms from the set."},
+			"_description": {"iso_639_3_eng": "The rule determines that *one* or *more* of the terms in the *set* should be part of the *selection*.\n\nThe *terms* of the *set* are represented by their *global identifiers*."}
+		},
+		"_data": {
+			"_set": {
+				"_scalar": {
+					"_class": "_class_other",
+					"_type": "_type_enum",
+					"_kind": ["_any-term"]
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_selection-terms",
+			"_lid": "any-one",
+			"_gid": "_selection-terms_any-one",
+			"_aid": ["any-one"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Any one of"},
+			"_definition": {"iso_639_3_eng": "The selection should include one element from each of list of sets and one or more of the elements from that selection will become the result."},
+			"_description": {"iso_639_3_eng": "This descriptor contains a *parent array* that contains a *list* of *sets*: the rule determines that at most *one element* should be selected from *each* of the *child sets* and *one* or *more* elements of that selection will become the *result*. It is like combining an [any](_selection-terms_any) selection with a [one](_selection-terms_one) selection.\n\nThe *terms* in the *child sets* are represented by their [global identifiers](_gid)."},
+			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_selection-terms_any-one\": [\n\t\t[\"red\", \"green\", \"blue\"],\n\t\t[\"Monday\", \"Tuesday\"]\n\t]\n}\n```\n\nThis example implements a selection of colours for Monday or Tuesday:\n\n- In the *child sets* selection you choose *one* from each, that is: `red`, `green` or `blue` from the *first* set of colours and `Monday` or `Tuesday` fron the `second` weekdays set.\n  \n- Once the selection of elements in the *child sets* has been done, the result will become *one* or *more* elements of the *child sets selection*.\n  \n\nSo some possible results could be:\n\n- `[\"red\", \"Monday\"]`\n- `[\"green\"]`\n- `[Tuesday\"]`\n- `[\"blue\", \"Tuesday\"]`"}
+		},
+		"_data": {
+			"_array": {
+				"_set": {
+					"_scalar": {
+						"_class": "_class_other",
+						"_type": "_type_enum",
+						"_kind": ["_any-term"]
+					}
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_selection-terms",
+			"_lid": "all",
+			"_gid": "_selection-terms_all",
+			"_aid": ["all"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "All of"},
+			"_definition": {"iso_639_3_eng": "Selection should contain all terms from the set."},
+			"_description": {"iso_639_3_eng": "The rule determines that *all* of the terms in the *set* should be part of the *selection*.\n\nTThe *terms* of the *set* are represented by their *global identifiers*."}
+		},
+		"_data": {
+			"_set": {
+				"_scalar": {
+					"_class": "_class_other",
+					"_type": "_type_enum",
+					"_kind": ["_any-term"]
+				}
+			}
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "_selection-descriptors",
+			"_lid": "one",
+			"_gid": "_selection-descriptors_one",
+			"_aid": ["one"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "One of"},
+			"_definition": {"iso_639_3_eng": "Selection should contain one descriptor from the set."},
+			"_description": {"iso_639_3_eng": "The rule determines that *one* of the descriptors in the *set* should be part of the *selection*.\n\nThe *descriptors* of the *set* are represented by their *global identifiers*."}
+		},
+		"_data": {
+			"_set": {
+				"_scalar": {
+					"_class": "_class_other",
+					"_type": "_type_enum",
+					"_kind": ["_any-descriptor"]
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_selection-descriptors",
+			"_lid": "one-none",
+			"_gid": "_selection-descriptors_one-none",
+			"_aid": ["one-none"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "One of or none"},
+			"_definition": {"iso_639_3_eng": "Selection should contain one descriptor from the set or none."},
+			"_description": {"iso_639_3_eng": "The rule determines that either *one* of the descriptors in the *set* should be part of the *selection*, or the selection should be empty.\n\nThe *descriptors* of the *set* are represented by their *global identifiers*."}
+		},
+		"_data": {
+			"_set": {
+				"_scalar": {
+					"_class": "_class_other",
+					"_type": "_type_enum",
+					"_kind": ["_any-descriptor"]
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_selection-descriptors",
+			"_lid": "any",
+			"_gid": "_selection-descriptors_any",
+			"_aid": ["any"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Any of"},
+			"_definition": {"iso_639_3_eng": "Selection should contain one or more descriptors from the set."},
+			"_description": {"iso_639_3_eng": "The rule determines that *one* or *more* of the descriptors in the *set* should be part of the *selection*.\n\nThe *descriptors* of the *set* are represented by their *global identifiers*."}
+		},
+		"_data": {
+			"_set": {
+				"_scalar": {
+					"_class": "_class_other",
+					"_type": "_type_enum",
+					"_kind": ["_any-descriptor"]
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_selection-descriptors",
+			"_lid": "any-one",
+			"_gid": "_selection-descriptors_any-one",
+			"_aid": ["any-one"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Any one of"},
+			"_definition": {"iso_639_3_eng": "The selection should include one or no element from each of list of sets, the result should have at least one element."},
+			"_description": {"iso_639_3_eng": "This descriptor contains a *list* of *sets*: the rule determines that at most *one element* should be selected from *each* of the *child sets* and *one* or *more* elements of that selection will become the *result*.\n\nThe *descriptors* in the *child sets* are represented by their [global identifiers](_gid)."},
+			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_selection-descriptors_any-one\": [\n\t\t[\"minimum_inclusive\", \"minimum_exclusive\"],\n\t\t[\"maximum_inclusive\", \"maximum_exclusive\"]\n\t]\n}\n```\n\nThis example implements a selection for a range:\n\n- In the *child sets* selection you choose *one* from each, that is: `minimum_inclusive` or `minimum_exclusive` from the *first* set and `maximum_inclusive` or `maximum_exclusive` fron the `second` set.\n- Once the selection of elements in the *child sets* has been done, the result will become *one* or *more* elements of the *child sets selection*.\n\nSo the possible results could be:\n\n- `[\"minimum_inclusive\"]`\n- `[\"minimum_exclusive\"]`\n- `[\"maximum_inclusive\"]`\n- `[\"maximum_exclusive\"]`\n- `[\"minimum_inclusive\", \"maximum_inclusive\"]`\n- `[\"minimum_inclusive\", \"maximum_exclusive\"]`\n- `[\"minimum_exclusive\", \"maximum_inclusive\"]`\n- `[\"minimum_exclusive\", \"maximum_exclusive\"]`"}
+		},
+		"_data": {
+			"_array": {
+				"_set": {
+					"_scalar": {
+						"_class": "_class_other",
+						"_type": "_type_enum",
+						"_kind": ["_any-descriptor"]
+					}
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_selection-descriptors",
+			"_lid": "all",
+			"_gid": "_selection-descriptors_all",
+			"_aid": ["all"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "All of"},
+			"_definition": {"iso_639_3_eng": "Selection should contain all descriptors from the set."},
+			"_description": {"iso_639_3_eng": "The rule determines that *all* of the descriptors in the *set* should be part of the *selection*.\n\nTThe *descriptors* of the *set* are represented by their *global identifiers*."}
+		},
+		"_data": {
+			"_set": {
+				"_scalar": {
+					"_class": "_class_other",
+					"_type": "_type_enum",
+					"_kind": ["_any-descriptor"]
+				}
+			}
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "_selection-values",
+			"_lid": "one",
+			"_gid": "_selection-values_one",
+			"_aid": ["one"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "One of"},
+			"_definition": {"iso_639_3_eng": "Selection should contain one value from the array."},
+			"_description": {"iso_639_3_eng": "The rule determines that *one* of the values in the *set* should be part of the *selection*."}
+		},
+		"_data": {
+			"_set": {}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_selection-values",
+			"_lid": "one-none",
+			"_gid": "_selection-values_one-none",
+			"_aid": ["one-none"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "One of or none"},
+			"_definition": {"iso_639_3_eng": "Selection should contain one value from the set or none."},
+			"_description": {"iso_639_3_eng": "The rule determines that either *one* of the values in the *set* should be part of the *selection*, or the selection should be empty."}
+		},
+		"_data": {
+			"_set": {}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_selection-values",
+			"_lid": "any",
+			"_gid": "_selection-values_any",
+			"_aid": ["any"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Any of"},
+			"_definition": {"iso_639_3_eng": "Selection should contain one or more values from the set."},
+			"_description": {"iso_639_3_eng": "The rule determines that *one* or *more* values in the *set* should be part of the *selection*."}
+		},
+		"_data": {
+			"_set": {}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_selection-values",
+			"_lid": "any-one",
+			"_gid": "_selection-values_any-one",
+			"_aid": ["any-one"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Any one of"},
+			"_definition": {"iso_639_3_eng": "The selection should include one element from each of list of sets and one or more of the elements from that selection will become the result."},
+			"_description": {"iso_639_3_eng": "This descriptor contains a *parent array* that contains a *list* of *sets*: the rule determines that at most *one element* should be selected from *each* of the *child sets* and *one* or *more* elements of that selection will become the *result*. It is like combining an [any](_selection-valuesany) selection with a [one](_selection-values_one) selection.\n\nThe *values* in the *child sets* can be any value."},
+			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_selection-terms_any-one\": [\n\t\t[\"red\", \"green\", \"blue\"],\n\t\t[\"Monday\", \"Tuesday\"]\n\t]\n}\n```\n\nThis example implements a selection of colours for Monday or Tuesday:\n\n- In the *child sets* selection you choose *one* from each, that is: `red`, `green` or `blue` from the *first* set of colours and `Monday` or `Tuesday` fron the `second` weekdays set.\n  \n- Once the selection of elements in the *child sets* has been done, the result will become *one* or *more* elements of the *child sets selection*.\n  \n\nSo some possible results could be:\n\n- `[\"red\", \"Monday\"]`\n- `[\"green\"]`\n- `[Tuesday\"]`\n- `[\"blue\", \"Tuesday\"]`"}
+		},
+		"_data": {
+			"_array": {
+				"_set": {}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_selection-values",
+			"_lid": "all",
+			"_gid": "_selection-values_all",
+			"_aid": ["all"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "All of"},
+			"_definition": {"iso_639_3_eng": "Selection should contain all values from the set."},
+			"_description": {"iso_639_3_eng": "The rule determines that *all* of the values in the *set* should be part of the *selection*."}
+		},
+		"_data": {
+			"_set": {}
+		}
+	}
+]

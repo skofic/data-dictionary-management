@@ -1,0 +1,14 @@
+[
+	{
+		"_code": {
+			"_lid": "geo",
+			"_gid": "geo",
+			"_aid": ["geo"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Geodesy standards"},
+			"_definition": {"iso_639_3_eng": "Standards regarding geographic locations, measurements and methods."},
+			"_description": {"iso_639_3_eng": "This namespace groups all terms and descriptors that represent standards in the geodesic domain."}
+		}
+	}
+]

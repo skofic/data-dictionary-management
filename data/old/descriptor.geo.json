@@ -1,0 +1,136 @@
+[
+	{
+		"_code": {
+			"_nid": "geo",
+			"_lid": "datum",
+			"_gid": "geo_datum",
+			"_aid": ["datum"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Geodetic datum"},
+			"_definition": {"iso_639_3_eng": "A geodetic datum is an abstract coordinate system with a reference surface (such as sea level) that serves to provide known locations to begin surveys and create maps. "},
+			"_description": {"iso_639_3_eng": "A *geodetic datum* or *geodetic system* (also: *geodetic reference datum*, *geodetic reference system*, or *geodetic reference frame*) is a global [datum reference](https://en.wikipedia.org/wiki/Datum_reference \"Datum reference\") or [reference frame](https://en.wikipedia.org/wiki/Reference_frame \"Reference frame\") for precisely representing the position of [locations](https://en.wikipedia.org/wiki/Location \"Location\") on [Earth](https://en.wikipedia.org/wiki/Earth \"Earth\") or other planetary bodies by means of *[geodetic coordinates](https://en.wikipedia.org/wiki/Geodetic_coordinates \"Geodetic coordinates\")*."}
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_category",
+				"_type": "_type_enum",
+				"_kind": ["geo_datum"]
+			}
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "geo_datum",
+			"_lid": "ellipsoid",
+			"_gid": "geo_datum_ellipsoid",
+			"_aid": ["ellipsoid"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Ellipsoid"},
+			"_definition": {"iso_639_3_eng": "Reference ellipsoid."},
+			"_description": {"iso_639_3_eng": "Because of their relative simplicity, [reference ellipsoids](https://en.wikipedia.org/wiki/Reference_ellipsoid) are used as a preferred surface on which [geodetic network](https://en.wikipedia.org/wiki/Geodetic_network \"Geodetic network\")computations are performed and point coordinates such as [latitude](https://en.wikipedia.org/wiki/Latitude \"Latitude\"), [longitude](https://en.wikipedia.org/wiki/Longitude \"Longitude\"), and [elevation](https://en.wikipedia.org/wiki/Elevation \"Elevation\") are defined.\n\nIn the context of standardization and geographic applications, a *geodesic reference ellipsoid* is the mathematical model used as foundation by [spatial reference system](https://en.wikipedia.org/wiki/Spatial_reference_system \"Spatial reference system\") or [geodetic datum](https://en.wikipedia.org/wiki/Geodetic_datum \"Geodetic datum\") definitions."}
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_category",
+				"_type": "_type_enum",
+				"_kind": ["geo_ellipsoids"]
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "geo_datum",
+			"_lid": "delta-a",
+			"_gid": "geo_datum_delta-a",
+			"_aid": ["delta-a"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Parameter Delta A"},
+			"_definition": {"iso_639_3_eng": "WGS-84 Equatorial radius minus the specified datum Equatorial radius in meters."}
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_quantity",
+				"_type": "_type_number"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "geo_datum",
+			"_lid": "delta-f",
+			"_gid": "geo_datum_delta-f",
+			"_aid": ["delta-f"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Parameter Delta F"},
+			"_definition": {"iso_639_3_eng": "WGS-84 flattening minus the specified datum flattening multiplied by 10^4."}
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_quantity",
+				"_type": "_type_number"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "geo_datum",
+			"_lid": "delta-x",
+			"_gid": "geo_datum_delta-x",
+			"_aid": ["delta-x"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Parameter Delta X"},
+			"_definition": {"iso_639_3_eng": "Delta X, Y, Z parameters are WGS-84 X, Y, Z parameters minus the specified datum X, Y, Z in meters."},
+			"_description": {"iso_639_3_eng": "The Delta X, Y, and Z parameters are added to the specified datum X, Y, Z to convert to WGS-84."}
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_quantity",
+				"_type": "_type_integer"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "geo_datum",
+			"_lid": "delta-y",
+			"_gid": "geo_datum_delta-y",
+			"_aid": ["delta-y"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Parameter Delta Y"},
+			"_definition": {"iso_639_3_eng": "Delta X, Y, Z parameters are WGS-84 X, Y, Z parameters minus the specified datum X, Y, Z in meters."},
+			"_description": {"iso_639_3_eng": "The Delta X, Y, and Z parameters are added to the specified datum X, Y, Z to convert to WGS-84."}
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_quantity",
+				"_type": "_type_integer"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "geo_datum",
+			"_lid": "delta-z",
+			"_gid": "geo_datum_delta-z",
+			"_aid": ["delta-z"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Parameter Delta Z"},
+			"_definition": {"iso_639_3_eng": "Delta X, Y, Z parameters are WGS-84 X, Y, Z parameters minus the specified datum X, Y, Z in meters."},
+			"_description": {"iso_639_3_eng": "The Delta X, Y, and Z parameters are added to the specified datum X, Y, Z to convert to WGS-84."}
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_quantity",
+				"_type": "_type_integer"
+			}
+		}
+	}
+]
