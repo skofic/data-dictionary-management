@@ -27,8 +27,39 @@ const user = {
 
 		"mount": "dict",
 
+		"collections": {
+			"core": {
+				"terms": "core_terms",
+				"edges": "core_edges"
+			},
+			"geo": {
+				"terms": "geo_terms",
+				"edges": "geo_edges"
+			},
+			"std": {
+				"terms": "std_terms",
+				"edges": "std_edges"
+			},
+			"iso": {
+				"terms": "iso_terms",
+				"edges": "iso_edges"
+			},
+			"eufgis": {
+				"terms": "eufgis_terms",
+				"edges": "eufgis_edges"
+			},
+
+			"topos": "topo_edges",
+			"errors": "errors"
+		},
+
+		"graphs": {
+			"core": "schema",
+			"topo": "topo"
+		},
+
 		"terms_col": "terms",
-		"edges_col": "schemas",
+		"edges_col": "edges",
 		"topos_col": "topos",
 		"error_col": "errors"
 	},

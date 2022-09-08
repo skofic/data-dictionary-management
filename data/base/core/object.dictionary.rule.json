@@ -1,19 +1,19 @@
 [
 	{
-		"_code": {
-			"_nid": "",
-			"_lid": "selection-terms",
-			"_gid": "_selection-terms",
-			"_aid": ["selection-terms"]
+		"core_terms/code": {
+			"core_terms/nid": "",
+			"core_terms/lid": "selection-terms",
+			"core_terms/gid": "_selection-terms",
+			"core_terms/aid": ["selection-terms"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Terms selection"},
-			"_definition": {"iso_639_3_eng": "Rule for the selection of terms, one can provide three lists: select one in the list, select any in the list, select all in the list."},
-			"_description": {"iso_639_3_eng": "The structure has *three possible properties* and all properties have as *value* a *set* of *term global identifiers*. At least one property must be provided and the set value must have at least one element.\n\n- [One](_selection-terms_one): Only one element from the list.\n- [Any](_selection-terms_any): One or more elements from the list.\n- [All](_selection-terms_all): All elements from the list.\n\nThe combination of these three values represents the *selection of terms*."},
-			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_selection-terms_one\": [one, two, three],\n\t\"_selection-terms_any\": [red, green, blue],\n\t\"_selection-terms_all\": [mon. tue, wed]\n}\n```\n\nThis selection rule implies the following conditions:\n\n- At least *one* of `[red, green, blue]` is required.\n- *One* or *more* of `[odd, even] `are required.\n- *All* of `[mon, tue, wed]` are required.\n\nThe following are valid:\n\n- `[red, even, mon, tue, wed]`\n- `[green, odd, mon, tue, wed]`\n- `[blue, odd, even, mon, tue, wed]`\n\nThe following are invalid:\n\n- `[even, mon, tue, wed]`\n- `[green, mon, tue, wed]`\n- `[blue, odd, even, tue, wed]`"}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Terms selection"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Rule for the selection of terms, one can provide three lists: select one in the list, select any in the list, select all in the list."},
+			"core_terms/description": {"iso_terms/639_3_eng": "The structure has *three possible properties* and all properties have as *value* a *set* of *term global identifiers*. At least one property must be provided and the set value must have at least one element.\n\n- [One](_selection-terms_one): Only one element from the list.\n- [Any](_selection-terms_any): One or more elements from the list.\n- [All](_selection-terms_all): All elements from the list.\n\nThe combination of these three values represents the *selection of terms*."},
+			"core_terms/examples": {"iso_terms/639_3_eng": "```json\n{\n\t\"_selection-terms_one\": [one, two, three],\n\t\"_selection-terms_any\": [red, green, blue],\n\t\"_selection-terms_all\": [mon. tue, wed]\n}\n```\n\nThis selection rule implies the following conditions:\n\n- At least *one* of `[red, green, blue]` is required.\n- *One* or *more* of `[odd, even] `are required.\n- *All* of `[mon, tue, wed]` are required.\n\nThe following are valid:\n\n- `[red, even, mon, tue, wed]`\n- `[green, odd, mon, tue, wed]`\n- `[blue, odd, even, mon, tue, wed]`\n\nThe following are invalid:\n\n- `[even, mon, tue, wed]`\n- `[green, mon, tue, wed]`\n- `[blue, odd, even, tue, wed]`"}
 		},
-		"_rule": {
-			"_required": {
+		"core_terms/rule": {
+			"core_terms/required": {
 				"_selection-descriptors_any": [
 					"_selection-terms_one",
 					"_selection-terms_one-none",
@@ -25,20 +25,20 @@
 		}
 	},
 	{
-		"_code": {
-			"_nid": "",
-			"_lid": "selection-descriptors",
-			"_gid": "_selection-descriptors",
-			"_aid": ["selection-descriptors"]
+		"core_terms/code": {
+			"core_terms/nid": "",
+			"core_terms/lid": "selection-descriptors",
+			"core_terms/gid": "_selection-descriptors",
+			"core_terms/aid": ["selection-descriptors"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Descriptors selection"},
-			"_definition": {"iso_639_3_eng": "Rule for the selection of descriptors, one can provide three lists: select one in the list, select any in the list, select all in the list."},
-			"_description": {"iso_639_3_eng": "The structure has *three possible properties* and all properties have as *value* a *set* of *descriptor global identifiers*. At least one property must be provided and the set value must have at least one element.\n\n- [One](_selection-descriptors_one): Only one element from the list.\n- [Any](_selection-descriptors_any): One or more elements from the list.\n- [All](_selection-descriptors_all): All elements from the list.\n\nThe combination of these three values represents the *selection of descriptors*."},
-			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_selection-descriptors_one\": [one, two, three],\n\t\"_selection-descriptors_any\": [red, green, blue],\n\t\"_selection-descriptors_all\": [mon. tue, wed]\n}\n```\n\nThis selection rule implies the following conditions:\n\n- At least *one* of `[red, green, blue]` is required.\n- *One* or *more* of `[odd, even] `are required.\n- *All* of `[mon, tue, wed]` are required.\n\nThe following are valid:\n\n- `[red, even, mon, tue, wed]`\n- `[green, odd, mon, tue, wed]`\n- `[blue, odd, even, mon, tue, wed]`\n\nThe following are invalid:\n\n- `[even, mon, tue, wed]`\n- `[green, mon, tue, wed]`\n- `[blue, odd, even, tue, wed]`"}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Descriptors selection"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Rule for the selection of descriptors, one can provide three lists: select one in the list, select any in the list, select all in the list."},
+			"core_terms/description": {"iso_terms/639_3_eng": "The structure has *three possible properties* and all properties have as *value* a *set* of *descriptor global identifiers*. At least one property must be provided and the set value must have at least one element.\n\n- [One](_selection-descriptors_one): Only one element from the list.\n- [Any](_selection-descriptors_any): One or more elements from the list.\n- [All](_selection-descriptors_all): All elements from the list.\n\nThe combination of these three values represents the *selection of descriptors*."},
+			"core_terms/examples": {"iso_terms/639_3_eng": "```json\n{\n\t\"_selection-descriptors_one\": [one, two, three],\n\t\"_selection-descriptors_any\": [red, green, blue],\n\t\"_selection-descriptors_all\": [mon. tue, wed]\n}\n```\n\nThis selection rule implies the following conditions:\n\n- At least *one* of `[red, green, blue]` is required.\n- *One* or *more* of `[odd, even] `are required.\n- *All* of `[mon, tue, wed]` are required.\n\nThe following are valid:\n\n- `[red, even, mon, tue, wed]`\n- `[green, odd, mon, tue, wed]`\n- `[blue, odd, even, mon, tue, wed]`\n\nThe following are invalid:\n\n- `[even, mon, tue, wed]`\n- `[green, mon, tue, wed]`\n- `[blue, odd, even, tue, wed]`"}
 		},
-		"_rule": {
-			"_required": {
+		"core_terms/rule": {
+			"core_terms/required": {
 				"_selection-descriptors_any": [
 					"_selection-descriptors_one",
 					"_selection-descriptors_one-none",
@@ -50,20 +50,20 @@
 		}
 	},
 	{
-		"_code": {
-			"_nid": "",
-			"_lid": "selection-values",
-			"_gid": "_selection-values",
-			"_aid": ["selection-values"]
+		"core_terms/code": {
+			"core_terms/nid": "",
+			"core_terms/lid": "selection-values",
+			"core_terms/gid": "_selection-values",
+			"core_terms/aid": ["selection-values"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Values selection"},
-			"_definition": {"iso_639_3_eng": "Rule for the selection of values, one can provide three lists: select one in the list, select any in the list, select all in the list."},
-			"_description": {"iso_639_3_eng": "The structure has *three possible properties* whose *data* is a *set* of *values* of *any type*. At least one property must be provided and the set value must have at least one element.\n\n- [One](_selection-terms_one): Only one element from the list.\n- [Any](_selection-terms_any): One or more elements from the list.\n- [All](_selection-terms_all): All elements from the list.\n\nThe combination of these three values represents the *selection of values*."},
-			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_selection-values_one\": [one, two, three],\n\t\"_selection-values_any\": [true, false],\n\t\"_selection-values_all\": [1. 2, 3]\n}\n```\n\nThis selection rule implies the following conditions:\n\n- At least *one* of `[one, two, three]` is required.\n- *One* or *more* of `[true, false] `are required.\n- *All* of `[1. 2, 3]` are required.\n\nThe following are valid:\n\n- `[one, true, 1, 2, 3]`\n- `[two, false, 1, 2, 3]`\n- `[three, true, false, 1, 2, 3]`\n\nThe following are invalid:\n\n- `[false, 1, 2, 3]`\n- `[two, 1, 2, 3]`\n- `[three, true, false, 2, 3]`"}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Values selection"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Rule for the selection of values, one can provide three lists: select one in the list, select any in the list, select all in the list."},
+			"core_terms/description": {"iso_terms/639_3_eng": "The structure has *three possible properties* whose *data* is a *set* of *values* of *any type*. At least one property must be provided and the set value must have at least one element.\n\n- [One](_selection-terms_one): Only one element from the list.\n- [Any](_selection-terms_any): One or more elements from the list.\n- [All](_selection-terms_all): All elements from the list.\n\nThe combination of these three values represents the *selection of values*."},
+			"core_terms/examples": {"iso_terms/639_3_eng": "```json\n{\n\t\"_selection-values_one\": [one, two, three],\n\t\"_selection-values_any\": [true, false],\n\t\"_selection-values_all\": [1. 2, 3]\n}\n```\n\nThis selection rule implies the following conditions:\n\n- At least *one* of `[one, two, three]` is required.\n- *One* or *more* of `[true, false] `are required.\n- *All* of `[1. 2, 3]` are required.\n\nThe following are valid:\n\n- `[one, true, 1, 2, 3]`\n- `[two, false, 1, 2, 3]`\n- `[three, true, false, 1, 2, 3]`\n\nThe following are invalid:\n\n- `[false, 1, 2, 3]`\n- `[two, 1, 2, 3]`\n- `[three, true, false, 2, 3]`"}
 		},
-		"_rule": {
-			"_required": {
+		"core_terms/rule": {
+			"core_terms/required": {
 				"_selection-descriptors_any": [
 					"_selection-values_one",
 					"_selection-values_one-none",

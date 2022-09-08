@@ -1,66 +1,66 @@
 [
 	{
-		"_code": {
-			"_lid": "",
-			"_gid": ""
+		"core_terms/code": {
+			"core_terms/lid": "",
+			"core_terms/gid": ""
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Default namespace"},
-			"_definition": {"iso_639_3_eng": "Default namespace for all core terms of the data dictionary."},
-			"_description": {"iso_639_3_eng": "This *root namespace* is resenved to *terms* that constitute the *core* of the *data dictionary*. This namespace should *only* be *used* for *core elements of the data dictionary* or for terms that *represent global or default* items of *general purpose*. The namespace should only be used by *data dictionary curators*, including using it as a *parent namespace*."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Default namespace"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Default namespace for all core terms of the data dictionary."},
+			"core_terms/description": {"iso_terms/639_3_eng": "This *root namespace* is resenved to *terms* that constitute the *core* of the *data dictionary*. This namespace should *only* be *used* for *core elements of the data dictionary* or for terms that *represent global or default* items of *general purpose*. The namespace should only be used by *data dictionary curators*, including using it as a *parent namespace*."}
 		}
 	},
 	
 	{
-		"_code": {
-			"_nid": "",
-			"_lid": "any-term",
-			"_gid": "_any-term",
-			"_aid": ["any-term"]
+		"core_terms/code": {
+			"core_terms/nid": "",
+			"core_terms/lid": "any-term",
+			"core_terms/gid": "_any-term",
+			"core_terms/aid": ["any-term"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Any term"},
-			"_definition": {"iso_639_3_eng": "This wildcard represents any term."},
-			"_description": {"iso_639_3_eng": "When defining a [descriptor](_term_descriptor), if the [data type](_type) is [enumeration](_type_enum) and you set the [type reference](_kind_) to this *value*, it means that the descriptor's value can be the [global identifier](_gid) of any *term*. This *includes* terms representing [object definitions](_term_object) and [descriptors](_term_descriptor)."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Any term"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "This wildcard represents any term."},
+			"core_terms/description": {"iso_terms/639_3_eng": "When defining a [descriptor](_term_descriptor), if the [data type](_type) is [enumeration](_type_enum) and you set the [type reference](_kind_) to this *value*, it means that the descriptor's value can be the [global identifier](_gid) of any *term*. This *includes* terms representing [object definitions](_term_object) and [descriptors](_term_descriptor)."}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "",
-			"_lid": "any-enum",
-			"_gid": "_any-enum",
-			"_aid": ["any-enum"]
+		"core_terms/code": {
+			"core_terms/nid": "",
+			"core_terms/lid": "any-enum",
+			"core_terms/gid": "_any-enum",
+			"core_terms/aid": ["any-enum"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Any enumeration"},
-			"_definition": {"iso_639_3_eng": "This wildcard represents any enumerated term."},
-			"_description": {"iso_639_3_eng": "When defining a [descriptor](_term_descriptor), if the [data type](_type) is [enumeration](_type_enum) and you set the [type reference](_kind_) to this *value*, it means that the descriptor's value can be the [global identifier](_gid) of any *term* that is used as an *element* of a *controlled vocabulary*."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Any enumeration"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "This wildcard represents any enumerated term."},
+			"core_terms/description": {"iso_terms/639_3_eng": "When defining a [descriptor](_term_descriptor), if the [data type](_type) is [enumeration](_type_enum) and you set the [type reference](_kind_) to this *value*, it means that the descriptor's value can be the [global identifier](_gid) of any *term* that is used as an *element* of a *controlled vocabulary*."}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "",
-			"_lid": "any-descriptor",
-			"_gid": "_any-descriptor",
-			"_aid": ["any-descriptor"]
+		"core_terms/code": {
+			"core_terms/nid": "",
+			"core_terms/lid": "any-descriptor",
+			"core_terms/gid": "_any-descriptor",
+			"core_terms/aid": ["any-descriptor"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Any descriptor"},
-			"_definition": {"iso_639_3_eng": "This wildcard represents any descriptor."},
-			"_description": {"iso_639_3_eng": "When defining a [descriptor](_term_descriptor), if the [data type](_type) is [enumeration](_type_enum) and you set the [type reference](_kind_) to this *value*, it means that the descriptor's value can be the [global identifier](_gid) of any *term* that represents a [descriptor](_term_descriptor).\n\nTerms that represent *descriptors* must *include* the [data](_data) property section."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Any descriptor"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "This wildcard represents any descriptor."},
+			"core_terms/description": {"iso_terms/639_3_eng": "When defining a [descriptor](_term_descriptor), if the [data type](_type) is [enumeration](_type_enum) and you set the [type reference](_kind_) to this *value*, it means that the descriptor's value can be the [global identifier](_gid) of any *term* that represents a [descriptor](_term_descriptor).\n\nTerms that represent *descriptors* must *include* the [data](_data) property section."}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "",
-			"_lid": "any-object",
-			"_gid": "_any-object",
-			"_aid": ["any-object"]
+		"core_terms/code": {
+			"core_terms/nid": "",
+			"core_terms/lid": "any-object",
+			"core_terms/gid": "_any-object",
+			"core_terms/aid": ["any-object"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Any object"},
-			"_definition": {"iso_639_3_eng": "This wildcard represents any object type."},
-			"_description": {"iso_639_3_eng": "When defining a [descriptor](_term_descriptor), if the [data type](_type) is [object](_type_object) and you set the [type reference](_kind_) to this *value*, it means that the descriptor's *value* can be *any object structure*.\n\nThis means that the *object* can have *any property* and there are *no restrictions* or *constraints*, however, when *validating* the value, the object *will be parsed* and its *properties* will be *matched* to existing *descriptors*."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Any object"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "This wildcard represents any object type."},
+			"core_terms/description": {"iso_terms/639_3_eng": "When defining a [descriptor](_term_descriptor), if the [data type](_type) is [object](_type_object) and you set the [type reference](_kind_) to this *value*, it means that the descriptor's *value* can be *any object structure*.\n\nThis means that the *object* can have *any property* and there are *no restrictions* or *constraints*, however, when *validating* the value, the object *will be parsed* and its *properties* will be *matched* to existing *descriptors*."}
 		}
 	}
 ]

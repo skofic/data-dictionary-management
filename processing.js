@@ -24,32 +24,39 @@ const kDb = require('./db.globals')				// Database globals.
 async function ProcessDictionaryFiles(db) {
 
 	//
-	// Select base directory according to flags.
+	// Load used namespaces.
 	//
-	let paths = [kGlob.globals.path.core]
+	let namespaces = ["core"]
 	if(!kPriv.user.flag.only_core) {
-		paths.push(kGlob.globals.path.std)
-		paths.push(kGlob.globals.path.geo)
-		paths.push(kGlob.globals.path.iso)
+		namespaces.push("std")
+		namespaces.push("geo")
+		namespaces.push("iso")
 		if(kPriv.user.flag.do_eufgis) {
-			paths.push(kGlob.globals.path.eufgis)
+			namespaces.push("eufgis")
 		}
 	}
 
 	//
-	// Iterate paths.
+	// Iterate namespaces.
 	//
-	for(const path of paths) {
+	for(const namespace of namespaces) {
+
+		//
+		// Init loop storage.
+		//
+		const path = kGlob.globals.path[namespace]
+		const terms_name = kPriv.user.db.collections[namespace].terms
+		const edges_name = kPriv.user.db.collections[namespace].edges
 
 		//
 		// Process term files.
 		//
 		await ProcessFiles(
 			db,										// Database connection.
-			kDb.collection_terms,					// Database collection name.
+			terms_name,								// Database collection name.
 			GetFilesList(
 				path,								// Source data files directory.
-				'.json', 					// File extension.
+				'.json',					// File extension.
 				kGlob.globals.file_prefixes.term	// Selection name prefixes.
 			),
 			ProcessTerm 							// Object processing callback.
@@ -60,13 +67,13 @@ async function ProcessDictionaryFiles(db) {
 		//
 		await ProcessFiles(
 			db,										// Database connection.
-			kDb.collection_edges,					// Database collection name.
+			edges_name,								// Database collection name.
 			GetFilesList(
 				path,								// Source data files directory.
-				'.json', 					// File extension.
+				'.json',					// File extension.
 				kGlob.globals.file_prefixes.edge	// Selection name prefixes.
 			),
-			ProcessEdge								// Object processing callback.
+			ProcessEdge 							// Object processing callback.
 		)
 	}
 
@@ -89,6 +96,7 @@ async function ProcessIsoStandards(db) {
 		// Handle ISO 639 languages.
 		//
 		await LoadIso639_3(db)	// ISO 639-3.
+		return
 		await LoadIso639_1(db)	// ISO 639-1.
 		await LoadIso639_2(db)	// ISO 639-2.
 		await LoadIso639_5(db)	// ISO 639-5.
@@ -1016,7 +1024,7 @@ async function LoadIso639_3(db) {
 	//
 	await ProcessItems(
 		db,
-		kDb.collection_terms,
+		kPriv.user.db.collections.iso.terms,
 		Object.values(kGlob.globals.res.terms),
 		ProcessTerm,
 		'enumeration.iso.639.3'
@@ -1027,7 +1035,7 @@ async function LoadIso639_3(db) {
 	//
 	await ProcessItems(
 		db,
-		kDb.collection_edges,
+		kPriv.user.db.collections.iso.edges,
 		kGlob.globals.res.edges,
 		ProcessEdge,
 		'schema.iso.639.3'

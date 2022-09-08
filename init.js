@@ -74,6 +74,7 @@ async function main()
 		console.log("Loading ISO standards.")
 		console.log("============================")
 		await process.ProcessIsoStandards(db)
+		return
 
 		console.log("\n========x====================")
 		console.log("Validating dictionary.")

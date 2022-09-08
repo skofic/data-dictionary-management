@@ -1,27 +1,27 @@
 [
 	{
-		"_code": {
-			"_lid": "std",
-			"_gid": "std",
-			"_aid": ["std"]
+		"core_terms/code": {
+			"core_terms/lid": "std",
+			"core_terms/gid": "std",
+			"core_terms/aid": ["std"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Generic standards"},
-			"_definition": {"iso_639_3_eng": "Generic common standards."},
-			"_description": {"iso_639_3_eng": "This namespace groups all terms and descriptors that represent general purpose standards."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Generic standards"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Generic common standards."},
+			"core_terms/description": {"iso_terms/639_3_eng": "This namespace groups all terms and descriptors that represent general purpose standards."}
 		}
 	},	
 	{
-		"_code": {
-			"_nid": "std",
-			"_lid": "country",
-			"_gid": "std_country",
-			"_aid": ["country"]
+		"core_terms/code": {
+			"core_terms/nid": "std",
+			"core_terms/lid": "country",
+			"core_terms/gid": "std_country",
+			"core_terms/aid": ["country"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Country standards"},
-			"_definition": {"iso_639_3_eng": "Generic country standards."},
-			"_description": {"iso_639_3_eng": "This namespace groups all terms and descriptors representing standards pertaining to countries."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Country standards"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Generic country standards."},
+			"core_terms/description": {"iso_terms/639_3_eng": "This namespace groups all terms and descriptors representing standards pertaining to countries."}
 		}
 	}
 ]

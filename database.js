@@ -6,7 +6,6 @@
 
 const { Database, CollectionType } = require("arangojs")	// ArangoDB driver.
 
-const kGlob = require('./globals')			// Generic globals.
 const kPriv = require('./user.globals')		// User-provided globals.
 const kDb = require('./db.globals')			// Database globals.
 
@@ -27,61 +26,70 @@ async function InitDatabase(db)
 	const collections = await db.listCollections(true)
 
 	//
+	// Init collection names.
+	//
+	let col_terms = [kPriv.user.db.collections.core.terms]
+	let col_edges = [kPriv.user.db.collections.core.edges]
+	let col_errors = [kPriv.user.db.collections.errors]
+	let col_topos = []
+
+	//
+	// Load collection names.
+	//
+	if(!kPriv.user.flag.only_core) {
+		col_terms = col_terms.concat([
+			kPriv.user.db.collections.geo.terms,
+			kPriv.user.db.collections.std.terms,
+			kPriv.user.db.collections.iso.terms,
+		])
+		col_edges = col_edges.concat([
+			kPriv.user.db.collections.geo.edges,
+			kPriv.user.db.collections.std.edges,
+			kPriv.user.db.collections.iso.edges,
+		])
+		col_topos.push(kPriv.user.db.collections.topos)
+		if(kPriv.user.flag.do_eufgis) {
+			col_terms.push(kPriv.user.db.collections.eufgis.terms)
+			col_edges.push(kPriv.user.db.collections.eufgis.edges)
+		}
+	}
+
+	//
 	// Drop graphs.
 	//
-	let graph = null
 	for(item of graphs) {
 		console.log(`Dropping graph ${item.name}`)
-		const graph = db.graph(item.name)
-		await graph.drop()
+		await db.graph(item.name).drop()
 	}
 
 	//
 	// Drop collections.
 	//
-	let collection = null
 	for(item of collections) {
 		console.log(`Dropping collection ${item.name}`)
-		switch(item.name) {
-
-			// Terms.
-			case kDb.collection_terms:
-				collection = db.collection(kDb.collection_terms)
-				await collection.drop()
-				break
-
-			// Schema.
-			case kDb.collection_edges:
-				collection = db.collection(kDb.collection_edges)
-				await collection.drop()
-				break
-
-			// Topo.
-			case kDb.collection_topos:
-				collection = db.collection(kDb.collection_topos)
-				await collection.drop()
-				break
-
-			// Errors.
-			case kPriv.user.db.error_col:
-				collection = db.collection(kPriv.user.db.error_col)
-				await collection.drop()
-				break
-		}
+		await db.collection(item.name).drop()
 	}
 
 	//
 	// Create collections.
 	//
-	await InitTermCollection(db, kDb.collection_terms)
-	await InitEdgeCollection(db, kDb.collection_edges)
-	await InitTopoCollection(db, kDb.collection_topos)
-	await InitErrorCollection(db, kPriv.user.db.error_col)
+	for(const name of col_terms) {
+		await InitTermCollection(db, name)
+	}
+	for(const name of col_edges) {
+		await InitEdgeCollection(db, name)
+	}
+	for(const name of col_topos) {
+		await InitTopoCollection(db, name)
+	}
+	for(const name of col_errors) {
+		await InitErrorCollection(db, name)
+	}
 
 	//
 	// Create graphs.
 	//
-	await InitSchemaGraph(db)
+	await InitSchemaGraph(db)		// Creates only core graph.
 	await InitTopoGraph(db)
 
 } // InitDatabase()
@@ -210,6 +218,7 @@ async function InitErrorCollection(db, name)
 /**
  * Delete error collection.
  * It expects the collection to have been previously created.
+ * This function is used after validating inserted documents.
  * @param {Database} db - Database connection.
  * @param {string} name - Collection name.
  * @returns {Promise<void>}
@@ -234,22 +243,30 @@ async function DropErrorCollection(db, name)
 async function InitSchemaGraph(db)
 {
 	//
+	// Init local storage.
+	//
+	const graphName = kPriv.user.db.graphs.core
+	const edge_name = kPriv.user.db.collections.core.edges
+	const subject_names = [kPriv.user.db.collections.core.terms]
+	const object_names = [kPriv.user.db.collections.core.terms]
+
+	//
 	// Instantiate graph.
 	//
-	const graph = db.graph('schema')
+	const graph = db.graph(graphName)
 
 	//
 	// Create graph.
 	//
 	const info = await graph.create([
 		{
-			collection: kDb.collection_edges,
-			from: [kDb.collection_terms],
-			to: [kDb.collection_terms],
+			collection: edge_name,
+			from: subject_names,
+			to: object_names,
 		}
 	]);
 
-	console.log(`Created graph ${'schema'}`)
+	console.log(`Created graph ${graphName}`)
 
 } // InitSchemaGraph()
 
@@ -261,22 +278,51 @@ async function InitSchemaGraph(db)
 async function InitTopoGraph(db)
 {
 	//
-	// Instantiate graph.
+	// Skip if only core.
 	//
-	const graph = db.graph('topo')
+	if(!kPriv.user.flag.only_core) {
 
-	//
-	// Create graph.
-	//
-	const info = await graph.create([
-		{
-			collection: kDb.collection_topos,
-			from: [kDb.collection_terms],
-			to: [kDb.collection_terms],
+		//
+		// Init local storage.
+		//
+		const graphName = kPriv.user.db.graphs.topo
+		const edge_name = kPriv.user.db.collections.topos
+		let subject_names = [
+			kPriv.user.db.collections.core.terms,
+			kPriv.user.db.collections.geo.terms,
+			kPriv.user.db.collections.std.terms,
+			kPriv.user.db.collections.iso.terms
+		]
+		if(kPriv.user.flag.do_eufgis) {
+			subject_names.push(kPriv.user.db.collections.eufgis.terms)
 		}
-	]);
+		let object_names = [
+			kPriv.user.db.collections.geo.terms,
+			kPriv.user.db.collections.std.terms,
+			kPriv.user.db.collections.iso.terms
+		]
+		if(kPriv.user.flag.do_eufgis) {
+			object_names.push(kPriv.user.db.collections.eufgis.terms)
+		}
 
-	console.log(`Created graph ${'topo'}`)
+		//
+		// Instantiate graph.
+		//
+		const graph = db.graph(graphName)
+
+		//
+		// Create graph.
+		//
+		const info = await graph.create([
+			{
+				collection: edge_name,
+				from: subject_names,
+				to: object_names,
+			}
+		]);
+
+		console.log(`Created graph ${graphName}`)
+	}
 
 } // InitTopoaGraph()
 

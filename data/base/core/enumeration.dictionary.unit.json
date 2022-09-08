@@ -1,290 +1,290 @@
 [
 	{
-		"_code": {
-			"_nid": "_unit",
-			"_lid": "length",
-			"_gid": "_unit_length",
-			"_aid": ["length"]
+		"core_terms/code": {
+			"core_terms/nid": "_unit",
+			"core_terms/lid": "length",
+			"core_terms/gid": "_unit_length",
+			"core_terms/aid": ["length"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Length"},
-			"_definition": {"iso_639_3_eng": "Length measurement units"}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Length"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Length measurement units"}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "_unit_length",
-			"_lid": "km",
-			"_gid": "_unit_length_km",
-			"_aid": ["km"]
+		"core_terms/code": {
+			"core_terms/nid": "_unit_length",
+			"core_terms/lid": "km",
+			"core_terms/gid": "_unit_length_km",
+			"core_terms/aid": ["km"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Kilometer"}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Kilometer"}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "_unit_length",
-			"_lid": "m",
-			"_gid": "_unit_length_m",
-			"_aid": ["m"]
+		"core_terms/code": {
+			"core_terms/nid": "_unit_length",
+			"core_terms/lid": "m",
+			"core_terms/gid": "_unit_length_m",
+			"core_terms/aid": ["m"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Metre"}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Metre"}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "_unit_length",
-			"_lid": "cm",
-			"_gid": "_unit_length_cm",
-			"_aid": ["cm"]
+		"core_terms/code": {
+			"core_terms/nid": "_unit_length",
+			"core_terms/lid": "cm",
+			"core_terms/gid": "_unit_length_cm",
+			"core_terms/aid": ["cm"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Centimeter"}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Centimeter"}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "_unit_length",
-			"_lid": "mm",
-			"_gid": "_unit_length_mm",
-			"_aid": ["mm"]
+		"core_terms/code": {
+			"core_terms/nid": "_unit_length",
+			"core_terms/lid": "mm",
+			"core_terms/gid": "_unit_length_mm",
+			"core_terms/aid": ["mm"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Millimeter"}
-		}
-	},
-	
-	{
-		"_code": {
-			"_nid": "_unit",
-			"_lid": "area",
-			"_gid": "_unit_area",
-			"_aid": ["area"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Area"},
-			"_definition": {"iso_639_3_eng": "Area measurement units"}
-		}
-	},
-	{
-		"_code": {
-			"_nid": "_unit_area",
-			"_lid": "km",
-			"_gid": "_unit_area_km",
-			"_aid": ["km"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Square kilometer"}
-		}
-	},
-	{
-		"_code": {
-			"_nid": "_unit_area",
-			"_lid": "ha",
-			"_gid": "_unit_area_ha",
-			"_aid": ["ha"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Hectare"}
-		}
-	},
-	{
-		"_code": {
-			"_nid": "_unit_area",
-			"_lid": "m",
-			"_gid": "_unit_area_m",
-			"_aid": ["m"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Square metre"}
-		}
-	},
-	{
-		"_code": {
-			"_nid": "_unit_area",
-			"_lid": "cm",
-			"_gid": "_unit_area_cm",
-			"_aid": ["cm"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Square centimeter"}
-		}
-	},
-	{
-		"_code": {
-			"_nid": "_unit_area",
-			"_lid": "mm",
-			"_gid": "_unit_area_mm",
-			"_aid": ["mm"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Square millimeter"}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Millimeter"}
 		}
 	},
 	
 	{
-		"_code": {
-			"_nid": "_unit",
-			"_lid": "weight",
-			"_gid": "_unit_weight",
-			"_aid": ["weight"]
+		"core_terms/code": {
+			"core_terms/nid": "_unit",
+			"core_terms/lid": "area",
+			"core_terms/gid": "_unit_area",
+			"core_terms/aid": ["area"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Weight"},
-			"_definition": {"iso_639_3_eng": "Weight measurement units"}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Area"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Area measurement units"}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "_unit_weight",
-			"_lid": "kg",
-			"_gid": "_unit_weight_kg",
-			"_aid": ["kg"]
+		"core_terms/code": {
+			"core_terms/nid": "_unit_area",
+			"core_terms/lid": "km",
+			"core_terms/gid": "_unit_area_km",
+			"core_terms/aid": ["km"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Kilogram"}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Square kilometer"}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "_unit_weight",
-			"_lid": "g",
-			"_gid": "_unit_weight_g",
-			"_aid": ["g"]
+		"core_terms/code": {
+			"core_terms/nid": "_unit_area",
+			"core_terms/lid": "ha",
+			"core_terms/gid": "_unit_area_ha",
+			"core_terms/aid": ["ha"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Gram"}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Hectare"}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "_unit_weight",
-			"_lid": "cg",
-			"_gid": "_unit_weight_cg",
-			"_aid": ["cg"]
+		"core_terms/code": {
+			"core_terms/nid": "_unit_area",
+			"core_terms/lid": "m",
+			"core_terms/gid": "_unit_area_m",
+			"core_terms/aid": ["m"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Centigram"}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Square metre"}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "_unit_weight",
-			"_lid": "mg",
-			"_gid": "_unit_weight_mg",
-			"_aid": ["mg"]
+		"core_terms/code": {
+			"core_terms/nid": "_unit_area",
+			"core_terms/lid": "cm",
+			"core_terms/gid": "_unit_area_cm",
+			"core_terms/aid": ["cm"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Milligram"}
-		}
-	},
-	
-	{
-		"_code": {
-			"_nid": "_unit",
-			"_lid": "time",
-			"_gid": "_unit_time",
-			"_aid": ["time"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Time"},
-			"_definition": {"iso_639_3_eng": "Time measurement units"}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Square centimeter"}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "_unit_time",
-			"_lid": "h",
-			"_gid": "_unit_time_h",
-			"_aid": ["h"]
+		"core_terms/code": {
+			"core_terms/nid": "_unit_area",
+			"core_terms/lid": "mm",
+			"core_terms/gid": "_unit_area_mm",
+			"core_terms/aid": ["mm"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Hour"}
-		}
-	},
-	{
-		"_code": {
-			"_nid": "_unit_time",
-			"_lid": "m",
-			"_gid": "_unit_time_m",
-			"_aid": ["m"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Minute"}
-		}
-	},
-	{
-		"_code": {
-			"_nid": "_unit_time",
-			"_lid": "s",
-			"_gid": "_unit_time_s",
-			"_aid": ["s"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Second"}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Square millimeter"}
 		}
 	},
 	
 	{
-		"_code": {
-			"_nid": "_unit",
-			"_lid": "age",
-			"_gid": "_unit_age",
-			"_aid": ["age"]
+		"core_terms/code": {
+			"core_terms/nid": "_unit",
+			"core_terms/lid": "weight",
+			"core_terms/gid": "_unit_weight",
+			"core_terms/aid": ["weight"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Age"},
-			"_definition": {"iso_639_3_eng": "Age measurement units"}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Weight"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Weight measurement units"}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "_unit_age",
-			"_lid": "y",
-			"_gid": "_unit_age_y",
-			"_aid": ["y"]
+		"core_terms/code": {
+			"core_terms/nid": "_unit_weight",
+			"core_terms/lid": "kg",
+			"core_terms/gid": "_unit_weight_kg",
+			"core_terms/aid": ["kg"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Years"},
-			"_definition": {"iso_639_3_eng": "Age in years."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Kilogram"}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "_unit_age",
-			"_lid": "m",
-			"_gid": "_unit_age_m",
-			"_aid": ["m"]
+		"core_terms/code": {
+			"core_terms/nid": "_unit_weight",
+			"core_terms/lid": "g",
+			"core_terms/gid": "_unit_weight_g",
+			"core_terms/aid": ["g"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Months"},
-			"_definition": {"iso_639_3_eng": "Age in months."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Gram"}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "_unit_age",
-			"_lid": "w",
-			"_gid": "_unit_age_w",
-			"_aid": ["w"]
+		"core_terms/code": {
+			"core_terms/nid": "_unit_weight",
+			"core_terms/lid": "cg",
+			"core_terms/gid": "_unit_weight_cg",
+			"core_terms/aid": ["cg"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Weeks"},
-			"_definition": {"iso_639_3_eng": "Age in weeks."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Centigram"}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "_unit_age",
-			"_lid": "d",
-			"_gid": "_unit_age_d",
-			"_aid": ["d"]
+		"core_terms/code": {
+			"core_terms/nid": "_unit_weight",
+			"core_terms/lid": "mg",
+			"core_terms/gid": "_unit_weight_mg",
+			"core_terms/aid": ["mg"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Days"},
-			"_definition": {"iso_639_3_eng": "Age in days."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Milligram"}
+		}
+	},
+	
+	{
+		"core_terms/code": {
+			"core_terms/nid": "_unit",
+			"core_terms/lid": "time",
+			"core_terms/gid": "_unit_time",
+			"core_terms/aid": ["time"]
+		},
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Time"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Time measurement units"}
+		}
+	},
+	{
+		"core_terms/code": {
+			"core_terms/nid": "_unit_time",
+			"core_terms/lid": "h",
+			"core_terms/gid": "_unit_time_h",
+			"core_terms/aid": ["h"]
+		},
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Hour"}
+		}
+	},
+	{
+		"core_terms/code": {
+			"core_terms/nid": "_unit_time",
+			"core_terms/lid": "m",
+			"core_terms/gid": "_unit_time_m",
+			"core_terms/aid": ["m"]
+		},
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Minute"}
+		}
+	},
+	{
+		"core_terms/code": {
+			"core_terms/nid": "_unit_time",
+			"core_terms/lid": "s",
+			"core_terms/gid": "_unit_time_s",
+			"core_terms/aid": ["s"]
+		},
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Second"}
+		}
+	},
+	
+	{
+		"core_terms/code": {
+			"core_terms/nid": "_unit",
+			"core_terms/lid": "age",
+			"core_terms/gid": "_unit_age",
+			"core_terms/aid": ["age"]
+		},
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Age"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Age measurement units"}
+		}
+	},
+	{
+		"core_terms/code": {
+			"core_terms/nid": "_unit_age",
+			"core_terms/lid": "y",
+			"core_terms/gid": "_unit_age_y",
+			"core_terms/aid": ["y"]
+		},
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Years"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Age in years."}
+		}
+	},
+	{
+		"core_terms/code": {
+			"core_terms/nid": "_unit_age",
+			"core_terms/lid": "m",
+			"core_terms/gid": "_unit_age_m",
+			"core_terms/aid": ["m"]
+		},
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Months"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Age in months."}
+		}
+	},
+	{
+		"core_terms/code": {
+			"core_terms/nid": "_unit_age",
+			"core_terms/lid": "w",
+			"core_terms/gid": "_unit_age_w",
+			"core_terms/aid": ["w"]
+		},
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Weeks"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Age in weeks."}
+		}
+	},
+	{
+		"core_terms/code": {
+			"core_terms/nid": "_unit_age",
+			"core_terms/lid": "d",
+			"core_terms/gid": "_unit_age_d",
+			"core_terms/aid": ["d"]
+		},
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Days"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Age in days."}
 		}
 	}
 ]

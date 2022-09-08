@@ -4,19 +4,18 @@
  * Generic template
  */
 
-const kGlob = require('./globals')			// Generic globals.
-const kPriv = require('user.globals')		// User-provided globals.
 const { Database } = require("arangojs")	// ArangoDB driver.
+const kPriv = require('./user.globals')		// User-provided globals.
 
 //
 // Connect to database.
 //
 const db = new Database({
-	url: 'http://' + kPriv.user.db.host,
-	databaseName: kPriv.user.db.name,
-	auth: {
-		username: kPriv.user.db.user,
-		password: kPriv.user.db.pass
+	url: kPriv.user.db.host,			// Host.
+	databaseName: kPriv.user.db.name,	// Database name.
+	auth: {								// Authentication:
+		username: kPriv.user.db.user,	// user code,
+		password: kPriv.user.db.pass	// user password.
 	}
 })
 
@@ -27,15 +26,17 @@ const db = new Database({
  */
 async function main()
 {
-	try
-	{
+	//
+	// Test map callback with more than one argument.
+	//
+	function callback(item) {
+		return item + 10
+	}
 
-	} // TRY BLOCK
+	let array = [1, 2, 3]
+	let result = array.map(callback)
 
-	catch(error)
-	{
-
-	} // CATCH BLOCK
+	console.log(result)
 
 } // main()
 

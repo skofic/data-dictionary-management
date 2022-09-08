@@ -1,285 +1,285 @@
 [
 	{
-		"_code": {
-			"_nid": "gcu",
-			"_lid": "country",
-			"_gid": "gcu_country",
+		"core_terms/code": {
+			"core_terms/nid": "gcu",
+			"core_terms/lid": "country",
+			"core_terms/gid": "gcu_country",
 			"_pid": "UnitCountry",
-			"_aid": ["country"]
+			"core_terms/aid": ["country"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Unit country"},
-			"_definition": {"iso_639_3_eng": "Country in which the gene conservation unit is located."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Unit country"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Country in which the gene conservation unit is located."}
 		},
-		"_data": {
-			"_scalar": {
-				"_class": "_class_category",
-				"_type": "_type_enum",
-				"_kind": ["eufgis_countries"]
+		"core_terms/data": {
+			"core_terms/scalar": {
+				"core_terms/class": "_class_category",
+				"core_terms/class": "core_terms/type_enum",
+				"core_terms/kind": ["eufgis_countries"]
 			}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "gcu",
-			"_lid": "number",
-			"_gid": "gcu_number",
+		"core_terms/code": {
+			"core_terms/nid": "gcu",
+			"core_terms/lid": "number",
+			"core_terms/gid": "gcu_number",
 			"_pid": "UnitNumber",
-			"_aid": ["number"]
+			"core_terms/aid": ["number"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Unit number"},
-			"_definition": {"iso_639_3_eng": "Unique identifier of the unit."},
-			"_description": {"iso_639_3_eng": "This number is the unique identifier of the unit described. This number should not be duplicated or reassigned to another unit."},
-			"_examples": {"iso_639_3_eng": "`FIN00001`: A finnish unit's number."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Unit number"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Unique identifier of the unit."},
+			"core_terms/description": {"iso_terms/639_3_eng": "This number is the unique identifier of the unit described. This number should not be duplicated or reassigned to another unit."},
+			"core_terms/examples": {"iso_terms/639_3_eng": "`FIN00001`: A finnish unit's number."}
 		},
-		"_data": {
-			"_scalar": {
-				"_class": "_class_other",
-				"_type": "_type_string",
-				"_regexp": "^[A-Z]{3}[0-9]{5}$"
+		"core_terms/data": {
+			"core_terms/scalar": {
+				"core_terms/class": "core_terms/class_other",
+				"core_terms/type": "core_terms/type_string",
+				"core_terms/regexp": "^[A-Z]{3}[0-9]{5}$"
 			}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "gcu",
-			"_lid": "gene-number",
-			"_gid": "gcu_gene-number",
+		"core_terms/code": {
+			"core_terms/nid": "gcu",
+			"core_terms/lid": "gene-number",
+			"core_terms/gid": "gcu_gene-number",
 			"_pid": "UnitGeneNumber",
-			"_aid": ["gene-number"]
+			"core_terms/aid": ["gene-number"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "National gene conservation unit number"},
-			"_definition": {"iso_639_3_eng": "Unit number from the national registry."},
-			"_examples": {"iso_639_3_eng": "`GR 19`"}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "National gene conservation unit number"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Unit number from the national registry."},
+			"core_terms/examples": {"iso_terms/639_3_eng": "`GR 19`"}
 		},
-		"_data": {
-			"_scalar": {
-				"_class": "_class_other",
-				"_type": "_type_string"
+		"core_terms/data": {
+			"core_terms/scalar": {
+				"core_terms/class": "core_terms/class_other",
+				"core_terms/type": "core_terms/type_string"
 			}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "gcu",
-			"_lid": "province",
-			"_gid": "gcu_province",
+		"core_terms/code": {
+			"core_terms/nid": "gcu",
+			"core_terms/lid": "province",
+			"core_terms/gid": "gcu_province",
 			"_pid": "UnitProvince",
-			"_aid": ["province"]
+			"core_terms/aid": ["province"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Unit province or state"},
-			"_definition": {"iso_639_3_eng": "Name of the primary administrative subdivision of the country where the unit is located."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Unit province or state"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Name of the primary administrative subdivision of the country where the unit is located."}
 		},
-		"_data": {
-			"_scalar": {
-				"_class": "_class_other",
-				"_type": "_type_string"
+		"core_terms/data": {
+			"core_terms/scalar": {
+				"core_terms/class": "core_terms/class_other",
+				"core_terms/type": "core_terms/type_string"
 			}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "gcu",
-			"_lid": "department",
-			"_gid": "gcu_department",
+		"core_terms/code": {
+			"core_terms/nid": "gcu",
+			"core_terms/lid": "department",
+			"core_terms/gid": "gcu_department",
 			"_pid": "UnitDepartment",
-			"_aid": ["department"]
+			"core_terms/aid": ["department"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Unit department or county"},
-			"_definition": {"iso_639_3_eng": "Name of the secondary administrative subdivision (within a province or state) of the country where the unit is located."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Unit department or county"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Name of the secondary administrative subdivision (within a province or state) of the country where the unit is located."}
 		},
-		"_data": {
-			"_scalar": {
-				"_class": "_class_other",
-				"_type": "_type_string"
+		"core_terms/data": {
+			"core_terms/scalar": {
+				"core_terms/class": "core_terms/class_other",
+				"core_terms/type": "core_terms/type_string"
 			}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "gcu",
-			"_lid": "municioality",
-			"_gid": "gcu_municioality",
+		"core_terms/code": {
+			"core_terms/nid": "gcu",
+			"core_terms/lid": "municioality",
+			"core_terms/gid": "gcu_municioality",
 			"_pid": "UnitMunicipality",
-			"_aid": ["municioality"]
+			"core_terms/aid": ["municioality"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Unit municipality"},
-			"_definition": {"iso_639_3_eng": "Name of the lowest administrative subdivision where the unit is located."},
-			"_examples": {"iso_639_3_eng": "`Rovaniemi`"}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Unit municipality"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Name of the lowest administrative subdivision where the unit is located."},
+			"core_terms/examples": {"iso_terms/639_3_eng": "`Rovaniemi`"}
 		},
-		"_data": {
-			"_scalar": {
-				"_class": "_class_other",
-				"_type": "_type_string"
+		"core_terms/data": {
+			"core_terms/scalar": {
+				"core_terms/class": "core_terms/class_other",
+				"core_terms/type": "core_terms/type_string"
 			}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "gcu",
-			"_lid": "name",
-			"_gid": "gcu_name",
+		"core_terms/code": {
+			"core_terms/nid": "gcu",
+			"core_terms/lid": "name",
+			"core_terms/gid": "gcu_name",
 			"_pid": "UnitLocalName",
-			"_aid": ["name"]
+			"core_terms/aid": ["name"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Unit local name"},
-			"_definition": {"iso_639_3_eng": "Local name of the area or forest."},
-			"_examples": {"iso_639_3_eng": "`Koiravaara`"}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Unit local name"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Local name of the area or forest."},
+			"core_terms/examples": {"iso_terms/639_3_eng": "`Koiravaara`"}
 		},
-		"_data": {
-			"_scalar": {
-				"_class": "_class_other",
-				"_type": "_type_string"
+		"core_terms/data": {
+			"core_terms/scalar": {
+				"core_terms/class": "core_terms/class_other",
+				"core_terms/type": "core_terms/type_string"
 			}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "gcu",
-			"_lid": "latitude",
-			"_gid": "gcu_latitude",
+		"core_terms/code": {
+			"core_terms/nid": "gcu",
+			"core_terms/lid": "latitude",
+			"core_terms/gid": "gcu_latitude",
 			"_pid": "UnitLatitude",
-			"_aid": ["latitude"]
+			"core_terms/aid": ["latitude"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Latitude"},
-			"_definition": {"iso_639_3_eng": "Latitude of the centre of the unit."},
-			"_description": {"iso_639_3_eng": "3 separate numerical fields + 1 field for `N` or `S`.\n\nIf data will be provided in centesimal degrees, the DB will automatically convert to Sexagesimal."},
-			"_examples": {"iso_639_3_eng": "`66°31&apos;32.34&quot;N`, `89°0&apos;59.12&quot;S`"}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Latitude"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Latitude of the centre of the unit."},
+			"core_terms/description": {"iso_terms/639_3_eng": "3 separate numerical fields + 1 field for `N` or `S`.\n\nIf data will be provided in centesimal degrees, the DB will automatically convert to Sexagesimal."},
+			"core_terms/examples": {"iso_terms/639_3_eng": "`66°31&apos;32.34&quot;N`, `89°0&apos;59.12&quot;S`"}
 		},
-		"_data": {
-			"_scalar": {
-				"_class": "_class_other",
-				"_type": "_type_string",
-				"_regexp": "^([0-9]|[1-8][0-9]|90)°([0-9]|[1-5][0-9]|60)'([0-9]|[1-5][0-9]|60)(.[0-9]+)?\"(N|S)$"
+		"core_terms/data": {
+			"core_terms/scalar": {
+				"core_terms/class": "core_terms/class_other",
+				"core_terms/type": "core_terms/type_string",
+				"core_terms/regexp": "^([0-9]|[1-8][0-9]|90)°([0-9]|[1-5][0-9]|60)'([0-9]|[1-5][0-9]|60)(.[0-9]+)?\"(N|S)$"
 			}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "gcu",
-			"_lid": "longitude",
-			"_gid": "gcu_longitude",
+		"core_terms/code": {
+			"core_terms/nid": "gcu",
+			"core_terms/lid": "longitude",
+			"core_terms/gid": "gcu_longitude",
 			"_pid": "UnitLongitude",
-			"_aid": ["longitude"]
+			"core_terms/aid": ["longitude"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Longitude"},
-			"_definition": {"iso_639_3_eng": "Longitude of the centre of the unit."},
-			"_description": {"iso_639_3_eng": "3 separate numerical fields + 1 field for `E` or `W`.\n\nIf data will be provided in centesimal degrees, the DB will automatically convert to Sexagesimal."},
-			"_examples": {"iso_639_3_eng": "`125°31&apos;32.34&quot;E`, `12°0&apos;59.12&quot;W`"}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Longitude"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Longitude of the centre of the unit."},
+			"core_terms/description": {"iso_terms/639_3_eng": "3 separate numerical fields + 1 field for `E` or `W`.\n\nIf data will be provided in centesimal degrees, the DB will automatically convert to Sexagesimal."},
+			"core_terms/examples": {"iso_terms/639_3_eng": "`125°31&apos;32.34&quot;E`, `12°0&apos;59.12&quot;W`"}
 		},
-		"_data": {
-			"_scalar": {
-				"_class": "_class_other",
-				"_type": "_type_string",
-				"_regexp": "^([0-9]|[1-9][0-9]|1[0-7][0-9]|180)°([0-9]|[1-5][0-9]|60)';([0-9]|[0-5][0-9])(.[0-9]+)?\";(E|W)$"
+		"core_terms/data": {
+			"core_terms/scalar": {
+				"core_terms/class": "core_terms/class_other",
+				"core_terms/type": "core_terms/type_string",
+				"core_terms/regexp": "^([0-9]|[1-9][0-9]|1[0-7][0-9]|180)°([0-9]|[1-5][0-9]|60)';([0-9]|[0-5][0-9])(.[0-9]+)?\";(E|W)$"
 			}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "gcu",
-			"_lid": "center",
-			"_gid": "gcu_center",
-			"_aid": ["center"]
+		"core_terms/code": {
+			"core_terms/nid": "gcu",
+			"core_terms/lid": "center",
+			"core_terms/gid": "gcu_center",
+			"core_terms/aid": ["center"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "GCU center coordinates"},
-			"_definition": {"iso_639_3_eng": "Latitude and longitude of the center of the gene conservation unit."},
-			"_description": {"iso_639_3_eng": "The field is a GeoJSON structure that records the center of the gene conservation unit. The shape should be a point."},
-			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"type\": \"Point\",\n\t\"coordinates\": [11.2179807, 42.415644]\n}\n```\n\nThe location of a monument dedicated to Caravaggio in a pine forest in Italy."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "GCU center coordinates"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Latitude and longitude of the center of the gene conservation unit."},
+			"core_terms/description": {"iso_terms/639_3_eng": "The field is a GeoJSON structure that records the center of the gene conservation unit. The shape should be a point."},
+			"core_terms/examples": {"iso_terms/639_3_eng": "```json\n{\n\t\"type\": \"Point\",\n\t\"coordinates\": [11.2179807, 42.415644]\n}\n```\n\nThe location of a monument dedicated to Caravaggio in a pine forest in Italy."}
 		},
-		"_data": {
-			"_scalar": {
-				"_class": "_class_other",
-				"_type": "_type_geo-json"
+		"core_terms/data": {
+			"core_terms/scalar": {
+				"core_terms/class": "core_terms/class_other",
+				"core_terms/type": "_type_geo-json"
 			}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "gcu",
-			"_lid": "polygon",
-			"_gid": "gcu_polygon",
-			"_aid": ["polygon"]
+		"core_terms/code": {
+			"core_terms/nid": "gcu",
+			"core_terms/lid": "polygon",
+			"core_terms/gid": "gcu_polygon",
+			"core_terms/aid": ["polygon"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "GCU polygon"},
-			"_definition": {"iso_639_3_eng": "Shape of the gene conservation unit."},
-			"_description": {"iso_639_3_eng": "The field is a GeoJSON structure that records the shape of the gene conservation unit. The shape can be a polygon or multipolygon."},
-			"_examples": {"iso_639_3_eng": "Here is an example with no holes:\n\n```json\n{\n\t\"type\": \"Polygon\",\n\t\t\"coordinates\": [\n\t\t[\n\t\t\t[100.0, 0.0],\n\t\t\t[101.0, 0.0],\n\t\t\t[101.0, 1.0],\n\t\t\t[100.0, 1.0],\n\t\t\t[100.0, 0.0]\n\t\t]\n\t]\n}\n```\n\nHere is an example with a hole:\n\n```json\n{\n\t\"type\": \"Polygon\",\n\t\"coordinates\": [\n\t\t[\n\t\t\t[100.0, 0.0],\n\t\t\t[101.0, 0.0],\n\t\t\t[101.0, 1.0],\n\t\t\t[100.0, 1.0],\n\t\t\t[100.0, 0.0]\n\t\t],\n\t\t[\n\t\t\t[100.8, 0.8],\n\t\t\t[100.8, 0.2],\n\t\t\t[100.2, 0.2],\n\t\t\t[100.2, 0.8],\n\t\t\t[100.8, 0.8]\n\t\t]\n\t]\n}\n```"}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "GCU polygon"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Shape of the gene conservation unit."},
+			"core_terms/description": {"iso_terms/639_3_eng": "The field is a GeoJSON structure that records the shape of the gene conservation unit. The shape can be a polygon or multipolygon."},
+			"core_terms/examples": {"iso_terms/639_3_eng": "Here is an example with no holes:\n\n```json\n{\n\t\"type\": \"Polygon\",\n\t\t\"coordinates\": [\n\t\t[\n\t\t\t[100.0, 0.0],\n\t\t\t[101.0, 0.0],\n\t\t\t[101.0, 1.0],\n\t\t\t[100.0, 1.0],\n\t\t\t[100.0, 0.0]\n\t\t]\n\t]\n}\n```\n\nHere is an example with a hole:\n\n```json\n{\n\t\"type\": \"Polygon\",\n\t\"coordinates\": [\n\t\t[\n\t\t\t[100.0, 0.0],\n\t\t\t[101.0, 0.0],\n\t\t\t[101.0, 1.0],\n\t\t\t[100.0, 1.0],\n\t\t\t[100.0, 0.0]\n\t\t],\n\t\t[\n\t\t\t[100.8, 0.8],\n\t\t\t[100.8, 0.2],\n\t\t\t[100.2, 0.2],\n\t\t\t[100.2, 0.8],\n\t\t\t[100.8, 0.8]\n\t\t]\n\t]\n}\n```"}
 		},
-		"_data": {
-			"_scalar": {
-				"_class": "_class_other",
-				"_type": "_type_geo-json"
+		"core_terms/data": {
+			"core_terms/scalar": {
+				"core_terms/class": "core_terms/class_other",
+				"core_terms/type": "_type_geo-json"
 			}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "gcu",
-			"_lid": "geodetic-datum",
-			"_gid": "gcu_geodetic-datum",
+		"core_terms/code": {
+			"core_terms/nid": "gcu",
+			"core_terms/lid": "geodetic-datum",
+			"core_terms/gid": "gcu_geodetic-datum",
 			"_pid": "UnitGeodeticDatum",
-			"_aid": ["geodetic-datum"]
+			"core_terms/aid": ["geodetic-datum"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Unit geodetic datum"},
-			"_definition": {"iso_639_3_eng": "Datum of the projection used to obtain the coordinates."},
-			"_description": {"iso_639_3_eng": "A horizontal geodetic datum based on an ellipsoid that has its origin at the earth&apos;s center of mass. Examples are the *World Geodetic System of 1984*, the *North American Datum of 1983*, and the *Geodetic Datum of Australia of 1994*. The first uses the WGS84 ellipsoid; the latter two use the GRS80 ellipsoid.\n\nIf not provided `WGS 1984` will be used."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Unit geodetic datum"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Datum of the projection used to obtain the coordinates."},
+			"core_terms/description": {"iso_terms/639_3_eng": "A horizontal geodetic datum based on an ellipsoid that has its origin at the earth&apos;s center of mass. Examples are the *World Geodetic System of 1984*, the *North American Datum of 1983*, and the *Geodetic Datum of Australia of 1994*. The first uses the WGS84 ellipsoid; the latter two use the GRS80 ellipsoid.\n\nIf not provided `WGS 1984` will be used."}
 		},
-		"_data": {
-			"_scalar": {
-				"_class": "_class_category",
-				"_type": "_type_enum",
-				"_kind": ["geo_datum"]
+		"core_terms/data": {
+			"core_terms/scalar": {
+				"core_terms/class": "_class_category",
+				"core_terms/class": "core_terms/type_enum",
+				"core_terms/kind": ["geo_datum"]
 			}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "gcu",
-			"_lid": "coordinates-restriction",
-			"_gid": "gcu_coordinates-restriction",
+		"core_terms/code": {
+			"core_terms/nid": "gcu",
+			"core_terms/lid": "coordinates-restriction",
+			"core_terms/gid": "gcu_coordinates-restriction",
 			"_pid": "UnitCoordinatesRestriction",
-			"_aid": ["coordinates-restriction"]
+			"core_terms/aid": ["coordinates-restriction"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Coordinates privacy"},
-			"_definition": {"iso_639_3_eng": "Restriction in making the geographical coordinates publically available."},
-			"_description": {"iso_639_3_eng": "If `Yes` the accuracy of the geographic\ndata will be modified when making the\ninformation available."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Coordinates privacy"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Restriction in making the geographical coordinates publically available."},
+			"core_terms/description": {"iso_terms/639_3_eng": "If `Yes` the accuracy of the geographic\ndata will be modified when making the\ninformation available."}
 		},
-		"_data": {
-			"_scalar": {
-				"_class": "_class_category",
-				"_type": "_type_boolean"
+		"core_terms/data": {
+			"core_terms/scalar": {
+				"core_terms/class": "_class_category",
+				"core_terms/type": "_type_boolean"
 			}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "gcu",
-			"_lid": "elevation-min",
-			"_gid": "gcu_elevation-min",
+		"core_terms/code": {
+			"core_terms/nid": "gcu",
+			"core_terms/lid": "elevation-min",
+			"core_terms/gid": "gcu_elevation-min",
 			"_pid": "UnitMinimumElevation",
-			"_aid": ["elevation-min"]
+			"core_terms/aid": ["elevation-min"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Unit minimum elevation"},
-			"_definition": {"iso_639_3_eng": "The minimum elevation of the unit expressed in meters above mean sea level. Negative values are allowed."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Unit minimum elevation"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "The minimum elevation of the unit expressed in meters above mean sea level. Negative values are allowed."}
 		},
-		"_data": {
-			"_scalar": {
-				"_class": "_class_quantity",
-				"_type": "_type_integer",
+		"core_terms/data": {
+			"core_terms/scalar": {
+				"core_terms/class": "_class_quantity",
+				"core_terms/type": "_type_integer",
 				"_unit": "_units_length_m",
 				"_valid-range": {
 					"_min-range-inclusive": -413,
@@ -289,21 +289,21 @@
 		}
 	},
 	{
-		"_code": {
-			"_nid": "gcu",
-			"_lid": "elevation-max",
-			"_gid": "gcu_elevation-max",
+		"core_terms/code": {
+			"core_terms/nid": "gcu",
+			"core_terms/lid": "elevation-max",
+			"core_terms/gid": "gcu_elevation-max",
 			"_pid": "UnitMaximumElevation",
-			"_aid": ["elevation-max"]
+			"core_terms/aid": ["elevation-max"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Unit maximum elevation"},
-			"_definition": {"iso_639_3_eng": "The maximum elevation of the unit expressed in meters above mean sea level. Negative values are allowed."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Unit maximum elevation"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "The maximum elevation of the unit expressed in meters above mean sea level. Negative values are allowed."}
 		},
-		"_data": {
-			"_scalar": {
-				"_class": "_class_quantity",
-				"_type": "_type_integer",
+		"core_terms/data": {
+			"core_terms/scalar": {
+				"core_terms/class": "_class_quantity",
+				"core_terms/type": "_type_integer",
 				"_unit": "_units_length_m",
 				"_valid-range": {
 					"_min-range-inclusive": -413,
@@ -313,460 +313,460 @@
 		}
 	},
 	{
-		"_code": {
-			"_nid": "gcu",
-			"_lid": "area",
-			"_gid": "gcu_area",
+		"core_terms/code": {
+			"core_terms/nid": "gcu",
+			"core_terms/lid": "area",
+			"core_terms/gid": "gcu_area",
 			"_pid": "UnitArea",
-			"_aid": ["area"]
+			"core_terms/aid": ["area"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Unit surface area"},
-			"_definition": {"iso_639_3_eng": "Total surface area of the unit in hectares, accuracy of 0.1 ha."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Unit surface area"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Total surface area of the unit in hectares, accuracy of 0.1 ha."}
 		},
-		"_data": {
-			"_scalar": {
-				"_class": "_class_quantity",
-				"_type": "_type_number",
+		"core_terms/data": {
+			"core_terms/scalar": {
+				"core_terms/class": "_class_quantity",
+				"core_terms/type": "_type_number",
 				"_unit": "_units_area_ha"
 			}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "gcu",
-			"_lid": "ownership",
-			"_gid": "gcu_ownership",
+		"core_terms/code": {
+			"core_terms/nid": "gcu",
+			"core_terms/lid": "ownership",
+			"core_terms/gid": "gcu_ownership",
 			"_pid": "UnitOwnership",
-			"_aid": ["ownership"]
+			"core_terms/aid": ["ownership"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Ownership of the unit"},
-			"_definition": {"iso_639_3_eng": "Total surface area of the unit in hectares, accuracy of 0.1 ha."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Ownership of the unit"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Total surface area of the unit in hectares, accuracy of 0.1 ha."}
 		},
-		"_data": {
-			"_scalar": {
-				"_class": "_class_category",
-				"_type": "_type_enum",
-				"_kind": ["gcu_ownerships"]
+		"core_terms/data": {
+			"core_terms/scalar": {
+				"core_terms/class": "_class_category",
+				"core_terms/class": "core_terms/type_enum",
+				"core_terms/kind": ["gcu_ownerships"]
 			}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "gcu",
-			"_lid": "type",
-			"_gid": "gcu_type",
+		"core_terms/code": {
+			"core_terms/nid": "gcu",
+			"core_terms/lid": "type",
+			"core_terms/gid": "gcu_type",
 			"_pid": "UnitType",
-			"_aid": ["type"]
+			"core_terms/aid": ["type"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Unit type"},
-			"_definition": {"iso_639_3_eng": "Type and function of the unit."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Unit type"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Type and function of the unit."}
 		},
-		"_data": {
-			"_set": {
-				"_scalar": {
-					"_class": "_class_category",
-					"_type": "_type_enum",
-					"_kind": ["gcu_types"]
+		"core_terms/data": {
+			"core_terms/set": {
+				"core_terms/scalar": {
+					"core_terms/class": "_class_category",
+					"core_terms/class": "core_terms/type_enum",
+					"core_terms/kind": ["gcu_types"]
 				}
 			}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "gcu",
-			"_lid": "year",
-			"_gid": "gcu_year",
+		"core_terms/code": {
+			"core_terms/nid": "gcu",
+			"core_terms/lid": "year",
+			"core_terms/gid": "gcu_year",
 			"_pid": "UnitDataCollectionY",
-			"_aid": ["year"]
+			"core_terms/aid": ["year"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Year of collection of the field data entered"},
-			"_definition": {"iso_639_3_eng": "Year when the data on the unit was collected in the field."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Year of collection of the field data entered"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Year when the data on the unit was collected in the field."}
 		},
-		"_data": {
-			"_scalar": {
-				"_class": "_class_time",
-				"_type": "_type_integer",
-				"_regexp": "^[0-9]{4}$"
+		"core_terms/data": {
+			"core_terms/scalar": {
+				"core_terms/class": "_class_time",
+				"core_terms/type": "_type_integer",
+				"core_terms/regexp": "^[0-9]{4}$"
 			}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "gcu",
-			"_lid": "visit",
-			"_gid": "gcu_visit",
+		"core_terms/code": {
+			"core_terms/nid": "gcu",
+			"core_terms/lid": "visit",
+			"core_terms/gid": "gcu_visit",
 			"_pid": "UnitLastVisitYear",
-			"_aid": ["visit"]
+			"core_terms/aid": ["visit"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Year of the most recent visit"}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Year of the most recent visit"}
 		},
-		"_data": {
-			"_scalar": {
-				"_class": "_class_time",
-				"_type": "_type_integer",
-				"_regexp": "^[0-9]{4}$"
+		"core_terms/data": {
+			"core_terms/scalar": {
+				"core_terms/class": "_class_time",
+				"core_terms/type": "_type_integer",
+				"core_terms/regexp": "^[0-9]{4}$"
 			}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "gcu",
-			"_lid": "soil-remarks",
-			"_gid": "gcu_soil-remarks",
+		"core_terms/code": {
+			"core_terms/nid": "gcu",
+			"core_terms/lid": "soil-remarks",
+			"core_terms/gid": "gcu_soil-remarks",
 			"_pid": "UnitSoilRemarks",
-			"_aid": ["soil-remarks"]
+			"core_terms/aid": ["soil-remarks"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Soil remarks"},
-			"_definition": {"iso_639_3_eng": "Remarks on specific soil characteristics."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Soil remarks"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Remarks on specific soil characteristics."}
 		},
-		"_data": {
-			"_scalar": {
-				"_class": "_class_other",
-				"_type": "_type_string"
+		"core_terms/data": {
+			"core_terms/scalar": {
+				"core_terms/class": "core_terms/class_other",
+				"core_terms/type": "core_terms/type_string"
 			}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "gcu",
-			"_lid": "unit-remarks",
-			"_gid": "gcu_unit-remarks",
+		"core_terms/code": {
+			"core_terms/nid": "gcu",
+			"core_terms/lid": "unit-remarks",
+			"core_terms/gid": "gcu_unit-remarks",
 			"_pid": "UnitRemarks",
-			"_aid": ["unit-remarks"]
+			"core_terms/aid": ["unit-remarks"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Unit remarks"},
-			"_definition": {"iso_639_3_eng": "Remarks on other specific characteristics of the unit."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Unit remarks"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Remarks on other specific characteristics of the unit."}
 		},
-		"_data": {
-			"_scalar": {
-				"_class": "_class_other",
-				"_type": "_type_string"
+		"core_terms/data": {
+			"core_terms/scalar": {
+				"core_terms/class": "core_terms/class_other",
+				"core_terms/type": "core_terms/type_string"
 			}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "gcu",
-			"_lid": "species",
-			"_gid": "gcu_species",
+		"core_terms/code": {
+			"core_terms/nid": "gcu",
+			"core_terms/lid": "species",
+			"core_terms/gid": "gcu_species",
 			"_pid": "UnitSpecies",
-			"_aid": ["species"]
+			"core_terms/aid": ["species"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "All tree species growing in the unit"},
-			"_definition": {"iso_639_3_eng": "List of target and non target species growing in the unit, give full Latin name (genus, species, sub-species as appropriate)."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "All tree species growing in the unit"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "List of target and non target species growing in the unit, give full Latin name (genus, species, sub-species as appropriate)."}
 		},
-		"_data": {
-			"_set": {
-				"_scalar": {
-					"_class": "_class_category",
-					"_type": "_type_string"
+		"core_terms/data": {
+			"core_terms/set": {
+				"core_terms/scalar": {
+					"core_terms/class": "_class_category",
+					"core_terms/type": "core_terms/type_string"
 				}
 			}
 		}
 	},
 	
 	{
-		"_code": {
-			"_nid": "gcu_population",
-			"_lid": "species",
-			"_gid": "gcu_population_species",
+		"core_terms/code": {
+			"core_terms/nid": "gcu_population",
+			"core_terms/lid": "species",
+			"core_terms/gid": "gcu_population_species",
 			"_pid": "PopulationTargetSpecies",
-			"_aid": ["species"]
+			"core_terms/aid": ["species"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Target species"},
-			"_definition": {"iso_639_3_eng": "List of target species growing in the unit, give full Latin name (genus, species, sub-species as appropriate). Multiple choice."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Target species"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "List of target species growing in the unit, give full Latin name (genus, species, sub-species as appropriate). Multiple choice."}
 		},
-		"_data": {
-			"_set": {
-				"_scalar": {
-					"_class": "_class_category",
-					"_type": "_type_string"
+		"core_terms/data": {
+			"core_terms/set": {
+				"core_terms/scalar": {
+					"core_terms/class": "_class_category",
+					"core_terms/type": "core_terms/type_string"
 				}
 			}
 		}
 	},  
 	{
-		"_code": {
-			"_nid": "gcu_population",
-			"_lid": "number",
-			"_gid": "gcu_population_number",
+		"core_terms/code": {
+			"core_terms/nid": "gcu_population",
+			"core_terms/lid": "number",
+			"core_terms/gid": "gcu_population_number",
 			"_pid": "PopulationUnitNumber",
-			"_aid": ["number"]
+			"core_terms/aid": ["number"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Population number"},
-			"_definition": {"iso_639_3_eng": "National population unit number."},
-			"_examples": {"iso_639_3_eng": "`GR 19 Unit 3334TTT6-2`"}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Population number"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "National population unit number."},
+			"core_terms/examples": {"iso_terms/639_3_eng": "`GR 19 Unit 3334TTT6-2`"}
 		},
-		"_data": {
-			"_scalar": {
-				"_class": "_class_other",
-				"_type": "_type_string"
+		"core_terms/data": {
+			"core_terms/scalar": {
+				"core_terms/class": "core_terms/class_other",
+				"core_terms/type": "core_terms/type_string"
 			}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "gcu_population",
-			"_lid": "established",
-			"_gid": "gcu_population_established",
+		"core_terms/code": {
+			"core_terms/nid": "gcu_population",
+			"core_terms/lid": "established",
+			"core_terms/gid": "gcu_population_established",
 			"_pid": "PopulationEstablishmentYear",
-			"_aid": ["established"]
+			"core_terms/aid": ["established"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Year of Establishment of the GCU for the species"},
-			"_definition": {"iso_639_3_eng": "Year when the gene conservation activities for the given species have started in the unit."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Year of Establishment of the GCU for the species"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Year when the gene conservation activities for the given species have started in the unit."}
 		},
-		"_data": {
-			"_scalar": {
-				"_class": "_class_time",
-				"_type": "_type_integer",
-				"_regexp": "^[0-9]{4}$"
+		"core_terms/data": {
+			"core_terms/scalar": {
+				"core_terms/class": "_class_time",
+				"core_terms/type": "_type_integer",
+				"core_terms/regexp": "^[0-9]{4}$"
 			}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "gcu_population",
-			"_lid": "last",
-			"_gid": "gcu_population_last",
+		"core_terms/code": {
+			"core_terms/nid": "gcu_population",
+			"core_terms/lid": "last",
+			"core_terms/gid": "gcu_population_last",
 			"_pid": "PopulationLastVisitYear",
-			"_aid": ["last"]
+			"core_terms/aid": ["last"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Year of the most recent visit"}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Year of the most recent visit"}
 		},
-		"_data": {
-			"_scalar": {
-				"_class": "_class_time",
-				"_type": "_type_integer",
-				"_regexp": "^[0-9]{4}$"
+		"core_terms/data": {
+			"core_terms/scalar": {
+				"core_terms/class": "_class_time",
+				"core_terms/type": "_type_integer",
+				"core_terms/regexp": "^[0-9]{4}$"
 			}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "gcu_population",
-			"_lid": "status",
-			"_gid": "gcu_population_status",
+		"core_terms/code": {
+			"core_terms/nid": "gcu_population",
+			"core_terms/lid": "status",
+			"core_terms/gid": "gcu_population_status",
 			"_pid": "PopulationStatus",
-			"_aid": ["status"]
+			"core_terms/aid": ["status"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Population status"},
-			"_definition": {"iso_639_3_eng": "Status of the target tree population regarding the EUFORGEN common action plans."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Population status"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Status of the target tree population regarding the EUFORGEN common action plans."}
 		},
-		"_data": {
-			"_scalar": {
-				"_class": "_class_category",
-				"_type": "_type_enum",
-				"_kind": ["gcu_population_statuses"]
+		"core_terms/data": {
+			"core_terms/scalar": {
+				"core_terms/class": "_class_category",
+				"core_terms/class": "core_terms/type_enum",
+				"core_terms/kind": ["gcu_population_statuses"]
 			}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "gcu_population",
-			"_lid": "situ",
-			"_gid": "gcu_population_situ",
+		"core_terms/code": {
+			"core_terms/nid": "gcu_population",
+			"core_terms/lid": "situ",
+			"core_terms/gid": "gcu_population_situ",
 			"_pid": "PopulationSitu",
-			"_aid": ["situ"]
+			"core_terms/aid": ["situ"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Population category"},
-			"_definition": {"iso_639_3_eng": "Status of the target tree population regarding its locality."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Population category"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Status of the target tree population regarding its locality."}
 		},
-		"_data": {
-			"_scalar": {
-				"_class": "_class_category",
-				"_type": "_type_enum",
-				"_kind": ["gcu_population_situs"]
+		"core_terms/data": {
+			"core_terms/scalar": {
+				"core_terms/class": "_class_category",
+				"core_terms/class": "core_terms/type_enum",
+				"core_terms/kind": ["gcu_population_situs"]
 			}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "gcu_population",
-			"_lid": "origin",
-			"_gid": "gcu_population_origin",
+		"core_terms/code": {
+			"core_terms/nid": "gcu_population",
+			"core_terms/lid": "origin",
+			"core_terms/gid": "gcu_population_origin",
 			"_pid": "PopulationOrigin",
-			"_aid": ["origin"]
+			"core_terms/aid": ["origin"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Population origin"},
-			"_definition": {"iso_639_3_eng": "Origin of the material."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Population origin"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Origin of the material."}
 		},
-		"_data": {
-			"_scalar": {
-				"_class": "_class_category",
-				"_type": "_type_enum",
-				"_kind": ["gcu_population_origins"]
+		"core_terms/data": {
+			"core_terms/scalar": {
+				"core_terms/class": "_class_category",
+				"core_terms/class": "core_terms/type_enum",
+				"core_terms/kind": ["gcu_population_origins"]
 			}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "gcu_population",
-			"_lid": "system",
-			"_gid": "gcu_population_system",
+		"core_terms/code": {
+			"core_terms/nid": "gcu_population",
+			"core_terms/lid": "system",
+			"core_terms/gid": "gcu_population_system",
 			"_pid": "PopulationSystem",
-			"_aid": ["system"]
+			"core_terms/aid": ["system"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Predominant silvicultural system"}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Predominant silvicultural system"}
 		},
-		"_data": {
-			"_scalar": {
-				"_class": "_class_category",
-				"_type": "_type_enum",
-				"_kind": ["gcu_population_systems"]
+		"core_terms/data": {
+			"core_terms/scalar": {
+				"core_terms/class": "_class_category",
+				"core_terms/class": "core_terms/type_enum",
+				"core_terms/kind": ["gcu_population_systems"]
 			}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "gcu_population",
-			"_lid": "management",
-			"_gid": "gcu_population_management",
+		"core_terms/code": {
+			"core_terms/nid": "gcu_population",
+			"core_terms/lid": "management",
+			"core_terms/gid": "gcu_population_management",
 			"_pid": "PopulationManagement",
-			"_aid": ["management"]
+			"core_terms/aid": ["management"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Population management"},
-			"_definition": {"iso_639_3_eng": "Level of management allowed to favour the target species."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Population management"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Level of management allowed to favour the target species."}
 		},
-		"_data": {
-			"_scalar": {
-				"_class": "_class_category",
-				"_type": "_type_enum",
-				"_kind": ["gcu_population_managements"]
+		"core_terms/data": {
+			"core_terms/scalar": {
+				"core_terms/class": "_class_category",
+				"core_terms/class": "core_terms/type_enum",
+				"core_terms/kind": ["gcu_population_managements"]
 			}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "gcu_population",
-			"_lid": "justification",
-			"_gid": "gcu_population_justification",
+		"core_terms/code": {
+			"core_terms/nid": "gcu_population",
+			"core_terms/lid": "justification",
+			"core_terms/gid": "gcu_population_justification",
 			"_pid": "PopulationJustification",
-			"_aid": ["justification"]
+			"core_terms/aid": ["justification"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Population justification"},
-			"_definition": {"iso_639_3_eng": "Main reason for carrying out gene conservation for this species."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Population justification"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Main reason for carrying out gene conservation for this species."}
 		},
-		"_data": {
-			"_scalar": {
-				"_class": "_class_category",
-				"_type": "_type_enum",
-				"_kind": ["gcu_population_justifications"]
+		"core_terms/data": {
+			"core_terms/scalar": {
+				"core_terms/class": "_class_category",
+				"core_terms/class": "core_terms/type_enum",
+				"core_terms/kind": ["gcu_population_justifications"]
 			}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "gcu_population",
-			"_lid": "reproducing",
-			"_gid": "gcu_population_reproducing",
+		"core_terms/code": {
+			"core_terms/nid": "gcu_population",
+			"core_terms/lid": "reproducing",
+			"core_terms/gid": "gcu_population_reproducing",
 			"_pid": "PopulationReproducingTrees",
-			"_aid": ["reproducing"]
+			"core_terms/aid": ["reproducing"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Population reproducing trees"},
-			"_definition": {"iso_639_3_eng": "Total number of reproducing trees per unit."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Population reproducing trees"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Total number of reproducing trees per unit."}
 		},
-		"_data": {
-			"_scalar": {
-				"_class": "_class_category",
-				"_type": "_type_enum",
-				"_kind": ["gcu_population_reproducings"]
+		"core_terms/data": {
+			"core_terms/scalar": {
+				"core_terms/class": "_class_category",
+				"core_terms/class": "core_terms/type_enum",
+				"core_terms/kind": ["gcu_population_reproducings"]
 			}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "gcu_population",
-			"_lid": "sex-ratio",
-			"_gid": "gcu_population_sex-ratio",
+		"core_terms/code": {
+			"core_terms/nid": "gcu_population",
+			"core_terms/lid": "sex-ratio",
+			"core_terms/gid": "gcu_population_sex-ratio",
 			"_pid": "PopulationSexRatio",
-			"_aid": ["sex-ratio"]
+			"core_terms/aid": ["sex-ratio"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Population sex ratio"}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Population sex ratio"}
 		},
-		"_data": {
-			"_scalar": {
-				"_class": "_class_category",
-				"_type": "_type_enum",
-				"_kind": ["gcu_population_sex-ratios"]
+		"core_terms/data": {
+			"core_terms/scalar": {
+				"core_terms/class": "_class_category",
+				"core_terms/class": "core_terms/type_enum",
+				"core_terms/kind": ["gcu_population_sex-ratios"]
 			}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "gcu_population",
-			"_lid": "regeneration",
-			"_gid": "gcu_population_regeneration",
+		"core_terms/code": {
+			"core_terms/nid": "gcu_population",
+			"core_terms/lid": "regeneration",
+			"core_terms/gid": "gcu_population_regeneration",
 			"_pid": "PopulationRegeneration",
-			"_aid": ["regeneration"]
+			"core_terms/aid": ["regeneration"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Status of long-term viable regeneration"}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Status of long-term viable regeneration"}
 		},
-		"_data": {
-			"_scalar": {
-				"_class": "_class_category",
-				"_type": "_type_enum",
-				"_kind": ["gcu_population_regenerations"]
+		"core_terms/data": {
+			"core_terms/scalar": {
+				"core_terms/class": "_class_category",
+				"core_terms/class": "core_terms/type_enum",
+				"core_terms/kind": ["gcu_population_regenerations"]
 			}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "gcu_population",
-			"_lid": "distribution",
-			"_gid": "gcu_population_distribution",
+		"core_terms/code": {
+			"core_terms/nid": "gcu_population",
+			"core_terms/lid": "distribution",
+			"core_terms/gid": "gcu_population_distribution",
 			"_pid": "PopulationDistribution",
-			"_aid": ["distribution"]
+			"core_terms/aid": ["distribution"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Distribution of the reproducing trees in the unit"}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Distribution of the reproducing trees in the unit"}
 		},
-		"_data": {
-			"_set": {
-				"_scalar": {
-					"_class": "_class_category",
-					"_type": "_type_enum",
-					"_kind": ["gcu_population_distributions"]
+		"core_terms/data": {
+			"core_terms/set": {
+				"core_terms/scalar": {
+					"core_terms/class": "_class_category",
+					"core_terms/class": "core_terms/type_enum",
+					"core_terms/kind": ["gcu_population_distributions"]
 				}
 			}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "gcu_population",
-			"_lid": "share",
-			"_gid": "gcu_population_share",
+		"core_terms/code": {
+			"core_terms/nid": "gcu_population",
+			"core_terms/lid": "share",
+			"core_terms/gid": "gcu_population_share",
 			"_pid": "PopulationShare",
-			"_aid": ["share"]
+			"core_terms/aid": ["share"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Population share"},
-			"_definition": {"iso_639_3_eng": "Estimated share of the total area within the unit in which the species is occurring (%)."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Population share"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Estimated share of the total area within the unit in which the species is occurring (%)."}
 		},
-		"_data": {
-			"_scalar": {
-				"_class": "_class_quantity",
-				"_type": "_type_number",
+		"core_terms/data": {
+			"core_terms/scalar": {
+				"core_terms/class": "_class_quantity",
+				"core_terms/type": "_type_number",
 				"_valid-range": {
 					"_min-range-inclusive": 0.0,
 					"_max-range-inclusive": 100.0
@@ -775,21 +775,21 @@
 		}
 	},
 	{
-		"_code": {
-			"_nid": "gcu_population",
-			"_lid": "remarks",
-			"_gid": "gcu_population_remarks",
+		"core_terms/code": {
+			"core_terms/nid": "gcu_population",
+			"core_terms/lid": "remarks",
+			"core_terms/gid": "gcu_population_remarks",
 			"_pid": "PopulationRemarks",
-			"_aid": ["remarks"]
+			"core_terms/aid": ["remarks"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Population remarks"},
-			"_definition": {"iso_639_3_eng": "Remarks on the population."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Population remarks"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Remarks on the population."}
 		},
-		"_data": {
-			"_scalar": {
-				"_class": "_class_other",
-				"_type": "_type_string"
+		"core_terms/data": {
+			"core_terms/scalar": {
+				"core_terms/class": "core_terms/class_other",
+				"core_terms/type": "core_terms/type_string"
 			}
 		}
 	}

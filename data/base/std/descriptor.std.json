@@ -1,234 +1,234 @@
 [
 	{
-		"_code": {
-			"_nid": "std_country",
-			"_lid": "ioc",
-			"_gid": "std_country_ioc",
-			"_aid": ["ioc"]
+		"core_terms/code": {
+			"core_terms/nid": "std_country",
+			"core_terms/lid": "ioc",
+			"core_terms/gid": "std_country_ioc",
+			"core_terms/aid": ["ioc"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "IOC code"},
-			"_definition": {"iso_639_3_eng": "International Olympic Committee code."},
-			"_description": {"iso_639_3_eng": "The [International Olympic Committee](https://en.wikipedia.org/wiki/International_Olympic_Committee \"International Olympic Committee\") (IOC) uses [three-letter abbreviation](https://en.wikipedia.org/wiki/Three-letter_abbreviation \"Three-letter abbreviation\") [country codes](https://en.wikipedia.org/wiki/Country_codes \"Country codes\") to refer to each group of athletes that participate in the [Olympic Games](https://en.wikipedia.org/wiki/Olympic_Games \"Olympic Games\"). Each [geocode](https://en.wikipedia.org/wiki/Geocode \"Geocode\") usually identifies a [National Olympic Committee](https://en.wikipedia.org/wiki/National_Olympic_Committee \"National Olympic Committee\") (NOC), but there are several codes that have been used for other instances in past Games, such as teams composed of athletes from multiple nations, or groups of athletes not formally representing any nation."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "IOC code"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "International Olympic Committee code."},
+			"core_terms/description": {"iso_terms/639_3_eng": "The [International Olympic Committee](https://en.wikipedia.org/wiki/International_Olympic_Committee \"International Olympic Committee\") (IOC) uses [three-letter abbreviation](https://en.wikipedia.org/wiki/Three-letter_abbreviation \"Three-letter abbreviation\") [country codes](https://en.wikipedia.org/wiki/Country_codes \"Country codes\") to refer to each group of athletes that participate in the [Olympic Games](https://en.wikipedia.org/wiki/Olympic_Games \"Olympic Games\"). Each [geocode](https://en.wikipedia.org/wiki/Geocode \"Geocode\") usually identifies a [National Olympic Committee](https://en.wikipedia.org/wiki/National_Olympic_Committee \"National Olympic Committee\") (NOC), but there are several codes that have been used for other instances in past Games, such as teams composed of athletes from multiple nations, or groups of athletes not formally representing any nation."}
 		},
-		"_data": {
-			"_scalar": {
-				"_class": "_class_category",
-				"_type": "_type_string"
+		"core_terms/data": {
+			"core_terms/scalar": {
+				"core_terms/class": "_class_category",
+				"core_terms/type": "core_terms/type_string"
 			}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "std_country",
-			"_lid": "flag",
-			"_gid": "std_country_flag",
-			"_aid": ["flag"]
+		"core_terms/code": {
+			"core_terms/nid": "std_country",
+			"core_terms/lid": "flag",
+			"core_terms/gid": "std_country_flag",
+			"core_terms/aid": ["flag"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Flag"},
-			"_definition": {"iso_639_3_eng": "Flag of country."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Flag"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Flag of country."}
 		},
-		"_data": {
-			"_scalar": {
-				"_class": "_class_other",
-				"_type": "_type_string",
+		"core_terms/data": {
+			"core_terms/scalar": {
+				"core_terms/class": "core_terms/class_other",
+				"core_terms/type": "core_terms/type_string",
 				"_format": "_format_svg"
 			}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "std_country",
-			"_lid": "emoji",
-			"_gid": "std_country_emoji",
-			"_aid": ["emoji"]
+		"core_terms/code": {
+			"core_terms/nid": "std_country",
+			"core_terms/lid": "emoji",
+			"core_terms/gid": "std_country_emoji",
+			"core_terms/aid": ["emoji"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Emoji flag"},
-			"_definition": {"iso_639_3_eng": "Flag of country, using Unicode regional indicator symbol letters."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Emoji flag"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Flag of country, using Unicode regional indicator symbol letters."}
 		},
-		"_data": {
-			"_scalar": {
-				"_class": "_class_category",
-				"_type": "_type_string",
-				"_regexp": "^[🇦-🇿]{2}$"
+		"core_terms/data": {
+			"core_terms/scalar": {
+				"core_terms/class": "_class_category",
+				"core_terms/type": "core_terms/type_string",
+				"core_terms/regexp": "^[🇦-🇿]{2}$"
 			}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "std_country",
-			"_lid": "tld",
-			"_gid": "std_country_tld",
-			"_aid": ["tld"]
+		"core_terms/code": {
+			"core_terms/nid": "std_country",
+			"core_terms/lid": "tld",
+			"core_terms/gid": "std_country_tld",
+			"core_terms/aid": ["tld"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Top-level domains"},
-			"_definition": {"iso_639_3_eng": "A top-level domain (TLD) is one of the domains at the highest level in the hierarchical Domain Name System of the Internet after the root domain."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Top-level domains"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "A top-level domain (TLD) is one of the domains at the highest level in the hierarchical Domain Name System of the Internet after the root domain."}
 		},
-		"_data": {
-			"_set": {
-				"_scalar": {
-					"_class": "_class_category",
-					"_type": "_type_string"
+		"core_terms/data": {
+			"core_terms/set": {
+				"core_terms/scalar": {
+					"core_terms/class": "_class_category",
+					"core_terms/type": "core_terms/type_string"
 				}
 			}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "std_country",
-			"_lid": "tel",
-			"_gid": "std_country_tel",
-			"_aid": ["tel"]
+		"core_terms/code": {
+			"core_terms/nid": "std_country",
+			"core_terms/lid": "tel",
+			"core_terms/gid": "std_country_tel",
+			"core_terms/aid": ["tel"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Calling codes"},
-			"_definition": {"iso_639_3_eng": "Country calling codes or country dial-in codes are telephone number prefixes for reaching telephone subscribers in the networks of the member countries or regions of the International Telecommunication Union (ITU)."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Calling codes"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Country calling codes or country dial-in codes are telephone number prefixes for reaching telephone subscribers in the networks of the member countries or regions of the International Telecommunication Union (ITU)."}
 		},
-		"_data": {
-			"_set": {
-				"_scalar": {
-					"_class": "_class_category",
-					"_type": "_type_string",
-					"_regexp": "^\\+[0-9]+$"
+		"core_terms/data": {
+			"core_terms/set": {
+				"core_terms/scalar": {
+					"core_terms/class": "_class_category",
+					"core_terms/type": "core_terms/type_string",
+					"core_terms/regexp": "^\\+[0-9]+$"
 				}
 			}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "std_country",
-			"_lid": "area",
-			"_gid": "std_country_area",
-			"_aid": ["area"]
+		"core_terms/code": {
+			"core_terms/nid": "std_country",
+			"core_terms/lid": "area",
+			"core_terms/gid": "std_country_area",
+			"core_terms/aid": ["area"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Land area"},
-			"_definition": {"iso_639_3_eng": "Land area in km²."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Land area"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "Land area in km²."}
 		},
-		"_data": {
-			"_scalar": {
-				"_class": "_class_quantity",
-				"_type": "_type_number",
+		"core_terms/data": {
+			"core_terms/scalar": {
+				"core_terms/class": "_class_quantity",
+				"core_terms/type": "_type_number",
 				"_unit": "_unit_area_km"
 			}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "std_country",
-			"_lid": "languages",
-			"_gid": "std_country_languages",
-			"_aid": ["languages"]
+		"core_terms/code": {
+			"core_terms/nid": "std_country",
+			"core_terms/lid": "languages",
+			"core_terms/gid": "std_country_languages",
+			"core_terms/aid": ["languages"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Official languages"},
-			"_definition": {"iso_639_3_eng": "List of official languages."},
-			"_description": {"iso_639_3_eng": "This descriptor is also used as a *predicate*, in that case, the *source* node is the *language* and the *destination* node is the *country*; the predicate would mean *is official language in*."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Official languages"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "List of official languages."},
+			"core_terms/description": {"iso_terms/639_3_eng": "This descriptor is also used as a *predicate*, in that case, the *source* node is the *language* and the *destination* node is the *country*; the predicate would mean *is official language in*."}
 		},
-		"_data": {
-			"_set": {
-				"_scalar": {
-					"_class": "_class_category",
-					"_type": "_type_enum",
-					"_kind": ["iso_639_3"]
+		"core_terms/data": {
+			"core_terms/set": {
+				"core_terms/scalar": {
+					"core_terms/class": "_class_category",
+					"core_terms/class": "core_terms/type_enum",
+					"core_terms/kind": ["iso_639_3"]
 				}
 			}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "std_country",
-			"_lid": "currencies",
-			"_gid": "std_country_currencies",
-			"_aid": ["currencies"]
+		"core_terms/code": {
+			"core_terms/nid": "std_country",
+			"core_terms/lid": "currencies",
+			"core_terms/gid": "std_country_currencies",
+			"core_terms/aid": ["currencies"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Currencies"},
-			"_definition": {"iso_639_3_eng": "List of currencies."},
-			"_description": {"iso_639_3_eng": "This descriptor is also used as a *predicate*, in that case, the *source* node is the *currency* and the *destination* node is the *country*; the predicate would mean *is official currency in in*."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Currencies"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "List of currencies."},
+			"core_terms/description": {"iso_terms/639_3_eng": "This descriptor is also used as a *predicate*, in that case, the *source* node is the *currency* and the *destination* node is the *country*; the predicate would mean *is official currency in in*."}
 		},
-		"_data": {
-			"_set": {
-				"_scalar": {
-					"_class": "_class_category",
-					"_type": "_type_enum",
-					"_kind": ["iso_4217"]
+		"core_terms/data": {
+			"core_terms/set": {
+				"core_terms/scalar": {
+					"core_terms/class": "_class_category",
+					"core_terms/class": "core_terms/type_enum",
+					"core_terms/kind": ["iso_4217"]
 				}
 			}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "std_country",
-			"_lid": "borders",
-			"_gid": "std_country_borders",
-			"_aid": ["borders"]
+		"core_terms/code": {
+			"core_terms/nid": "std_country",
+			"core_terms/lid": "borders",
+			"core_terms/gid": "std_country_borders",
+			"core_terms/aid": ["borders"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Borders"},
-			"_definition": {"iso_639_3_eng": "List of land borders."},
-			"_description": {"iso_639_3_eng": "This descriptor is also used as a *predicate*, in that case, the *source* node is the *country of interest* and the *destination* node is the *bordering country*; the predicate would mean *shares border with*."}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Borders"},
+			"core_terms/definition": {"iso_terms/639_3_eng": "List of land borders."},
+			"core_terms/description": {"iso_terms/639_3_eng": "This descriptor is also used as a *predicate*, in that case, the *source* node is the *country of interest* and the *destination* node is the *bordering country*; the predicate would mean *shares border with*."}
 		},
-		"_data": {
-			"_set": {
-				"_scalar": {
-					"_class": "_class_category",
-					"_type": "_type_enum",
-					"_kind": ["iso_3166_1"]
+		"core_terms/data": {
+			"core_terms/set": {
+				"core_terms/scalar": {
+					"core_terms/class": "_class_category",
+					"core_terms/class": "core_terms/type_enum",
+					"core_terms/kind": ["iso_3166_1"]
 				}
 			}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "std_country",
-			"_lid": "region",
-			"_gid": "std_country_region",
-			"_aid": ["region"]
+		"core_terms/code": {
+			"core_terms/nid": "std_country",
+			"core_terms/lid": "region",
+			"core_terms/gid": "std_country_region",
+			"core_terms/aid": ["region"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Region"}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Region"}
 		},
-		"_data": {
+		"core_terms/data": {
 			"_dict": {
 				"_dict_key": {
-					"_class": "_class_category",
-					"_type": "_type_enum",
-					"_kind": ["iso_639_3"]
+					"core_terms/class": "_class_category",
+					"core_terms/class": "core_terms/type_enum",
+					"core_terms/kind": ["iso_639_3"]
 				},
 				"_dict_value": {
-					"_scalar": {
-						"_class": "_class_category",
-						"_type": "_type_string"
+					"core_terms/scalar": {
+						"core_terms/class": "_class_category",
+						"core_terms/type": "core_terms/type_string"
 					}
 				}
 			}
 		}
 	},
 	{
-		"_code": {
-			"_nid": "std_country",
-			"_lid": "sub-region",
-			"_gid": "std_country_sub-region",
-			"_aid": ["sub-region"]
+		"core_terms/code": {
+			"core_terms/nid": "std_country",
+			"core_terms/lid": "sub-region",
+			"core_terms/gid": "std_country_sub-region",
+			"core_terms/aid": ["sub-region"]
 		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Subregion"}
+		"core_terms/info": {
+			"core_terms/title": {"iso_terms/639_3_eng": "Subregion"}
 		},
-		"_data": {
+		"core_terms/data": {
 			"_dict": {
 				"_dict_key": {
-					"_class": "_class_category",
-					"_type": "_type_enum",
-					"_kind": ["iso_639_3"]
+					"core_terms/class": "_class_category",
+					"core_terms/class": "core_terms/type_enum",
+					"core_terms/kind": ["iso_639_3"]
 				},
 				"_dict_value": {
-					"_scalar": {
-						"_class": "_class_category",
-						"_type": "_type_string"
+					"core_terms/scalar": {
+						"core_terms/class": "_class_category",
+						"core_terms/type": "core_terms/type_string"
 					}
 				}
 			}
