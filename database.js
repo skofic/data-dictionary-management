@@ -37,36 +37,55 @@ async function InitDatabase(db)
 	}
 
 	//
+	// Drop all collections.
+	//
+	if(kPriv.user.flag.drop_all_collections) {
+		for(item of collections) {
+			console.log(`Dropping collection ${item.name}`)
+			await db.collection(item.name).drop()
+		}
+	}
+
+
+	//
 	// Drop collections.
 	//
-	let collection = null
 	for(item of collections) {
-		console.log(`Dropping collection ${item.name}`)
-		switch(item.name) {
 
-			// Terms.
-			case kDb.collection_terms:
-				collection = db.collection(kDb.collection_terms)
-				await collection.drop()
-				break
+		//
+		// Drop all.
+		//
+		if(kPriv.user.flag.drop_all_collections) {
+			console.log(`Dropping collection ${item.name}`)
+			await db.collection(item.name).drop()
+		}
 
-			// Schema.
-			case kDb.collection_edges:
-				collection = db.collection(kDb.collection_edges)
-				await collection.drop()
-				break
+		//
+		// Drop if relevant.
+		//
+		else {
+			switch(item.name) {
 
-			// Topo.
-			case kDb.collection_topos:
-				collection = db.collection(kDb.collection_topos)
-				await collection.drop()
-				break
+				// Terms.
+				case kDb.collection_terms:
+					await db.collection(kDb.collection_terms).drop()
+					break
 
-			// Errors.
-			case kPriv.user.db.error_col:
-				collection = db.collection(kPriv.user.db.error_col)
-				await collection.drop()
-				break
+				// Schema.
+				case kDb.collection_edges:
+					await db.collection(kDb.collection_edges).drop()
+					break
+
+				// Topo.
+				case kDb.collection_topos:
+					await db.collection(kDb.collection_topos).drop()
+					break
+
+				// Errors.
+				case kPriv.user.db.error_col:
+					await db.collection(kPriv.user.db.error_col).drop()
+					break
+			}
 		}
 	}
 

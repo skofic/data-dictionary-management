@@ -35,6 +35,7 @@ const user = {
 
 	"flag": {
 		// "key_encode": "GID",
+		"drop_all_collections": false,
 		"write_file": true,
 		"only_core": false,
 		"do_eufgis": true
