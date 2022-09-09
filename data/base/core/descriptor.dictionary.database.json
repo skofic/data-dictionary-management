@@ -13,8 +13,8 @@
 		},
 		"_data": {
 			"_scalar": {
-				"_class": "_class_other",
-				"_type": "_type_record"
+				"_type": "_type_string",
+				"_regexp": "^[a-zA-Z0-9-:.@+,=;$!*'%\/]{1,254}$"
 			}
 		}
 	},
@@ -32,7 +32,6 @@
 		},
 		"_data": {
 			"_scalar": {
-				"_class": "_class_other",
 				"_type": "_type_string"
 			}
 		}
@@ -51,7 +50,6 @@
 		},
 		"_data": {
 			"_scalar": {
-				"_class": "_class_other",
 				"_type": "_type_string",
 				"_regexp": "^[a-zA-Z0-9-:._@+,=;$!*'%]{1,254}$"
 			}
@@ -72,8 +70,9 @@
 		},
 		"_data": {
 			"_scalar": {
-				"_class": "_class_other",
-				"_type": "_type_record"
+				"_class": "_class_reference",
+				"_type": "_type_handle",
+				"_kind_handle": ["@@terms/_any-document"]
 			}
 		}
 	},
@@ -91,8 +90,9 @@
 		},
 		"_data": {
 			"_scalar": {
-				"_class": "_class_other",
-				"_type": "_type_record"
+				"_class": "_class_reference",
+				"_type": "_type_handle",
+				"_kind_handle": ["@@terms/_any-document"]
 			}
 		}
 	}

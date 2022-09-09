@@ -9,7 +9,7 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "Enumeration of"},
 			"_definition": {"iso_639_3_eng": "The source node is a controlled vocabulary element of the destination node."},
-			"_description": {"iso_639_3_eng": "This predicate is used in [controlled vocabulary](_type_enum) graphs. When two nodes are related with this predicate, it means that the *source* node is a controlled vocabulary *element* of the *destination* node. This means that the source node can be used as a *valid choice* when presenting users with an options list."}
+			"_description": {"iso_639_3_eng": "The value is a *reference* to a *document* in the form of the document's [handle](_id).\n\nThe document must be a *controlled vocabulary type*, this means that it must be a *node* in a graph *related* with the [enumeration](_predicate_enum-of) [predicate](_predicate), whose root must be among the elements of the set.\n\nWhen you select this [type](_type) you are *required* to include, in the descriptor definition, the data type [kind](_kind). This is a set of *controlled vocabulary types* or *term wildcards* to which the current descriptor's value must conform. Values defined by this type must belong to *at least one* element of the data [kind](_kind) set."}
 		}
 	},
 	{

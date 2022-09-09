@@ -14,6 +14,19 @@
 	{
 		"_code": {
 			"_nid": "",
+			"_lid": "any-document",
+			"_gid": "_any-document",
+			"_aid": ["any-document"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Any document"},
+			"_definition": {"iso_639_3_eng": "This wildcard represents any document in any colletion."},
+			"_description": {"iso_639_3_eng": "When defining a *descriptor* with a [document handle](_type_handle) [data type](_type), you must provide the [data kind](_kind_handle) reference, this wildcard indicates that the document can come from any collection. *This wildcard can only be used with descriptors of [document handle](_type_handle) [data type](_type)*."}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "",
 			"_lid": "any-term",
 			"_gid": "_any-term",
 			"_aid": ["any-term"]

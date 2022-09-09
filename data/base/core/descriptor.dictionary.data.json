@@ -14,7 +14,6 @@
 		},
 		"_data": {
 			"_scalar": {
-				"_class": "_class_other",
 				"_type": "_type_object",
 				"_kind": ["_data"]
 			}
@@ -52,7 +51,6 @@
 		},
 		"_data": {
 			"_scalar": {
-				"_class": "_class_other",
 				"_type": "_type_object",
 				"_kind": ["_scalar"]
 			}
@@ -91,7 +89,6 @@
 		},
 		"_data": {
 			"_scalar": {
-				"_class": "_class_other",
 				"_type": "_type_object",
 				"_kind": ["_array"]
 			}
@@ -128,7 +125,6 @@
 		},
 		"_data": {
 			"_scalar": {
-				"_class": "_class_other",
 				"_type": "_type_object",
 				"_kind": ["_set"]
 			}
@@ -164,7 +160,6 @@
 		},
 		"_data": {
 			"_scalar": {
-				"_class": "_class_other",
 				"_type": "_type_object",
 				"_kind": ["_dict"]
 			}
@@ -200,7 +195,6 @@
 		},
 		"_data": {
 			"_scalar": {
-				"_class": "_class_other",
 				"_type": "_type_object",
 				"_kind": ["_dict_key"]
 			}
@@ -236,7 +230,6 @@
 		},
 		"_data": {
 			"_scalar": {
-				"_class": "_class_other",
 				"_type": "_type_object",
 				"_kind": ["_data"]
 			}
@@ -275,7 +268,7 @@
 			"_title": {"iso_639_3_eng": "Data type"},
 			"_definition": {"iso_639_3_eng": "Primitive data type of the descriptor values, the type of scalar data or the type of array or set elements."},
 			"_description": {"iso_639_3_eng": "The type should indicate whether the [descriptor](_term_descriptor) *data* represents a number, a string or another type. The type applies to *scalar data values* or to the *elements* of *lists* and *sets*."},
-			"_examples": {"iso_639_3_eng": "These are the allowed values:\n\n- [Boolean](_type_boolean): *True* or *false* value.\n  \n- [Integer](_type_integer): *Numeric discrete* value.\n  \n- [Numeric](_type_number): *Numeric discrete* or *continuous* value; will be considered a *floating point number*.\n  \n- [String](_type_string): A *character* or *text*; assumed to be encoded in UTF-8.\n  \n- [Record](_type_record): String, it is a record reference, expressed as the `_id` of a *database record*.\n  \n- [Time-stamp](_type_timestamp): A *time stamp* expressed in the *native database format*, used to indicate a precise moment in time.\n  \n- [Enumeration](_type_enum): String, it is a *controlled vocabulary* element. Use the [type reference](_kind) property to indicate which enumeration to use. If you provide in the [type reference](_kind) the wildcard term [any term](_any-term), the value can be the [global identifier](_gid) of *any term*.\n  \n- [Object](_type_object): An *object data structure*. Use the [type reference](_kind) property to indicate which [object data structure type](_term_object) to use. If you *omit* the [type reference](_kind) field, the value can be *any object*."}
+			"_examples": {"iso_639_3_eng": "These are the allowed values:\n\n- [Boolean](_type_boolean): *True* or *false* value.\n- [Integer](_type_integer): *Numeric discrete* value.\n- [Numeric](_type_number): *Numeric discrete* or *continuous* value; will be considered a *floating point number*.\n- [String](_type_string): A *character* or *text*; assumed to be encoded in UTF-8.\n- [Document handle](_type_handle): String, it is a record reference, expressed as the `_id` of a *database record*.\n- [Time-stamp](_type_number_timestamp): A *time stamp* expressed as the Unix timestamp in number format,it is used to indicate a precise moment in time.\n- [Enumeration](_type_enum): String, it is a *controlled vocabulary* element. Use the [type reference](_kind) property to indicate which enumeration to use. If you provide in the [type reference](_kind) the wildcard term [any term](_any-term), the value can be the [global identifier](_gid) of *any term*.\n- [Object](_type_object): An *object data structure*. Use the [type reference](_kind) property to indicate which [object data structure type](_term_object) to use. If you *omit* the [type reference](_kind) field, the value can be *any object*."}
 		},
 		"_data": {
 			"_scalar": {
@@ -314,16 +307,16 @@
 			"_aid": ["kind"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Type reference"},
-			"_definition": {"iso_639_3_eng": "This field is a reference to a controlled vocabulary type term, or to an object data structure definition type term. In both cases it is the global identifier of the term that defines either of these two types."},
-			"_description": {"iso_639_3_eng": "This field is relevant only in the following cases:\n\n- The [data type](_type_) is [enumeration](_type_enum): in that case you *must* reference the *controlled vocabulary type* by providing its term [global identifier](_gid). If you provide the wildcard term [any-term](_any-term), the value can be the [global identifier](_gid) of *any term*, if you provide the wildcard term [any-descriptor](_any-descriptor), the value can be the [global identifier](_gid) of *any descriptor*. A term that represents a controlled vocabulary is the *root* node of a directed graph in which at least one element is related with the [enumeration-of](_predicate_enum-of) [predicate](_predicate).\n- The [data type](_type_) is [object](_type_object): in that case you *must* reference the *object data structure type* by providing its term [global identifier](_gid). If you provide the wildcard term [any-object](_any-object), the value can be the [global identifier](_gid) of any [object data structure definition](_type_object). A term that represents an object data structure definition is the *root* node of a directed graph in which at least one element is related with the [property-of](_predicate_enum-of) [predicate](_predicate).\n\nThe value is a set, this means that you can match enumerations in more than one controlled vocabulary and objects in more than one structure definition."}
+			"_title": {"iso_639_3_eng": "Data type references"},
+			"_definition": {"iso_639_3_eng": "Set of data type references to which the property value must belong. The reference must be in the form of a term global identifier."},
+			"_description": {"iso_639_3_eng": "This field is a [set](_set) of [global identifiers](_gid) which reference terms that represent root elements of controlled vocabularies, object data structures and other kind of graphs. The field is relevant to the [data type](_type) of the current descriptor and is required and restricted in the following cases:\n\n- If the [data type](_type_) of the current descriptor is [enumeration](_type_enum), this field is required and can be used to *restrict* the *value* of the *current descriptor* to only the *elements* of the *controlled vocabularies* belonging to this *set*, the value of the current descriptor should be the term [global identifier](_gid). Besides enumeration types, you can include a set of wildcards:\n    - [Any term](_any-term): The current descriptor value can be the [global identifier](_gid) of any document from the *terms collection*.\n    - [Any enumeration](_any-enum): The current descriptor value can be the [global identifier](_gid) of any element of  *controlled vocabularies* defined in the *terms collection*, this means that the graphs referenced in this set will be traversed resolving nodes related by the [enumeration](_predicate_enum-of) [predicate](_predicate).\n    - [Any descriptor](_any-descriptor): The current descriptor value can be the [global identifier](_gid) of any document from the *terms collection* that defines a *descriptor*.\n- If the [data type](_type_) of the current descriptor is [object](_type_object), this field is required and can be used to *restrict* the *value* of the *current descriptor* to only the *object data structures* belonging to this *set*, the value of the current descriptor should be the term [global identifier](_gid). Besides data object structure types, you can include a set of wildcards:\n    - [Any object](_any-object): The current descriptor value can be the [global identifier](_gid) of any document from the *terms collection* that defines an *object data structure*, this means that the graphs referenced in this set will be traversed resolving nodes related by the [property](_predicate_property-of) [predicate](_predicate).\n\nBoth [data types](_type) listed above indicate that the current descriptor *value* will be the [global identifier](_gid) of a document belonging to the data dictionary *terms collection*."}
 		},
 		"_data": {
 			"_set": {
 				"_scalar": {
 					"_class": "_class_category",
-					"_type": "_type_enum",
-					"_kind": ["_kind", "_any-term"]
+					"_type": "_type_ref",
+					"_kind": ["_any-document"]
 				}
 			}
 		}
@@ -403,7 +396,6 @@
 		},
 		"_data": {
 			"_scalar": {
-				"_class": "_class_other",
 				"_type": "_type_string"
 			}
 		}

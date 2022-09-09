@@ -16,6 +16,20 @@
 	{
 		"_code": {
 			"_nid": "_class",
+			"_lid": "reference",
+			"_gid": "_class_reference",
+			"_aid": ["reference"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Reference value"},
+			"_definition": {"iso_639_3_eng": "Reference to another value."},
+			"_description": {"iso_639_3_eng": "The value itself is a [string](_type_string), but this string is a *reference* to another item that *holds* a *value* of *indetermined category*."},
+			"_examples": {"iso_639_3_eng": "Reference example data could be the *identifier* of a *value* stored in *another document*."}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_class",
 			"_lid": "quantity",
 			"_gid": "_class_quantity",
 			"_aid": ["quantity"]
@@ -69,20 +83,6 @@
 			"_examples": {"iso_639_3_eng": "Time example data could be a *date*, a *date and time*, a *day* of the *week*."}
 		}
 	},
-	{
-		"_code": {
-			"_nid": "_class",
-			"_lid": "other",
-			"_gid": "_class_other",
-			"_aid": ["other"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Not categorical or quantitative"},
-			"_definition": {"iso_639_3_eng": "Descriptive non quantitative or categorical value."},
-			"_description": {"iso_639_3_eng": "This term represents a *name* or *hash*, does *not* represent a *quantity* and does not represent a *category*, can take an *infinite number of values*."},
-			"_examples": {"iso_639_3_eng": "Data that is *neither quantitative nor categorical* could be a person's *name*, a *social security number* or a *description* text. In general such data can take an infinite amount of values and does not represent an amount."}
-		}
-	},
 	
 	{
 		"_code": {
@@ -125,6 +125,19 @@
 	{
 		"_code": {
 			"_nid": "_type",
+			"_lid": "timestamp",
+			"_gid": "_type_timestamp",
+			"_aid": ["timestamp"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Time stamp"},
+			"_definition": {"iso_639_3_eng": "Timestamp expressed as a numeric unix time."},
+			"_description": {"iso_639_3_eng": "This value represents a *time stamp* expressed as a *Unix time* (also known as *Epoch time*). It is a *number* that represents an instant in time with *millisecond* precision."}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_type",
 			"_lid": "string",
 			"_gid": "_type_string",
 			"_aid": ["string"]
@@ -144,34 +157,86 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Enumeration"},
-			"_definition": {"iso_639_3_eng": "The value must belong to a controlled vocabulary"},
-			"_description": {"iso_639_3_eng": "The value must be *chosen* from a *set* of *values belonging* to a *controlled vocabulary*, the value will be the *global identifier* of the enumeration *element*. Controlled vocabularies are organised as a directed graph in which terms are the nodes."}
+			"_definition": {"iso_639_3_eng": "String from a controlled vocabulary."},
+			"_description": {"iso_639_3_eng": "The value of the descriptor must be an *element* of a *controlled vocabulary*. Descriptors of this [data type](_type) require the [data kind](_kind) property: this allows *restricting* the value to the *controlled vocabulary types* referenced in the [data kind](_kind) set."}
 		}
 	},
 	{
 		"_code": {
 			"_nid": "_type",
-			"_lid": "record",
-			"_gid": "_type_record",
-			"_aid": ["record"]
+			"_lid": "ref",
+			"_gid": "_type_ref",
+			"_aid": ["ref"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Record reference"},
-			"_definition": {"iso_639_3_eng": "Reference to a specific database record."},
-			"_description": {"iso_639_3_eng": "This value represents the *unique identifier* of a *record* at the *database level*. It is the `_id `of a database record. This value references a single record among all collections in the database."}
+			"_title": {"iso_639_3_eng": "Document reference"},
+			"_definition": {"iso_639_3_eng": "Reference string to a document in any collection."},
+			"_description": {"iso_639_3_eng": "The value is a *reference* to a *document* in the form of the document's [handle](_id).\n\nWhen you select this [data type](_type) you are *required* to include, in the descriptor definition, the data type [kind](_kind), the latter is a list of *wildcards* that can be used to further restrict the scope of the reference. The data [kind](_kind) can be used to restrict the scope of the references, it is allowed to include the following elements\n\n- [Any document](_any-document): The value should be a [handle](_id) to a *document* from *any collection*.\n- [Any term](_any-term): The value should be a [handle](_id) to any document from the *dictionary terms collection*.\n- [Any enumeration](_any-enum): The value should be a [handle](_id) to an *element* from any *controlled vocabulary*.\n- [Any descriptor](_any-descriptor): The value should be a [handle](_id) to a document defining a *descriptor*.\n- [Any object](_any-object): The value should be a [handle](_id) to a document defining an *object data structure*."}
 		}
 	},
 	{
 		"_code": {
-			"_nid": "_type",
-			"_lid": "timestamp",
-			"_gid": "_type_timestamp",
-			"_aid": ["timestamp"]
+			"_nid": "_type_ref",
+			"_lid": "gid",
+			"_gid": "_type_ref_gid",
+			"_aid": ["gid"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Time stamp"},
-			"_definition": {"iso_639_3_eng": "Timestamp expressed as a numeric unix time."},
-			"_description": {"iso_639_3_eng": "This value represents a *time stamp* expressed as a *Unix time* (also known as *Epoch time*. It is a number that represents an instant in time with *millisecond* precision."}
+			"_title": {"iso_639_3_eng": "Global identifier reference"},
+			"_definition": {"iso_639_3_eng": "Document global identifier string."},
+			"_description": {"iso_639_3_eng": "The descriptor's value must be the [global identifier](_gid) of a *document* belonging to *any collection*."}
+		}
+	},,
+	{
+		"_code": {
+			"_nid": "_type_ref",
+			"_lid": "enum",
+			"_gid": "_type_ref_enum",
+			"_aid": ["enum"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Enumeration document reference"},
+			"_definition": {"iso_639_3_eng": "Reference to a controlled vocabulary type string."},
+			"_description": {"iso_639_3_eng": "The descriptor's value must be the [document handle](_id) to a *term* defining a *controlled vocabulary type*. This corresponds to the *root node* of a *graph* that can be *traversed* using the [enumeration](_predicate_enum-of) [predicate](_predicate).\n\nTerms of this type must be *referenced* by an *edge* with an [enumeration](_predicate_enum-of) [predicate](_predicate)."}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_type_ref",
+			"_lid": "object",
+			"_gid": "_type_ref_object",
+			"_aid": ["object"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Object type document reference"},
+			"_definition": {"iso_639_3_eng": "Reference to an object data structure type string."},
+			"_description": {"iso_639_3_eng": "The descriptor's value must be the [document handle](_id) to a *term* defining an *object data structure*. This corresponds to a document that includes the [rule section](_rule)."}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_type_ref",
+			"_lid": "descriptor",
+			"_gid": "_type_ref_descriptor",
+			"_aid": ["descriptor"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Descriptor document reference"},
+			"_definition": {"iso_639_3_eng": "Reference to a descriptor type string."},
+			"_description": {"iso_639_3_eng": "The descriptor's value must be the [document handle](_id) to a *term* defining a *descriptor*. This corresponds to a document that includes the [data section](_data)."}
+		}
+	}
+	{
+		"_code": {
+			"_nid": "_type",
+			"_lid": "object",
+			"_gid": "_type_object",
+			"_aid": ["object"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Object"},
+			"_definition": {"iso_639_3_eng": "Data structure or object."},
+			"_description": {"iso_639_3_eng": "The value of the descriptor must be an *object* or *data structure*. Descriptors of this [data type](_type) require the [data kind](_kind) property: this allows *restricting* the *data structure type* to the *object data structure definitions* referenced in the [data kind](_kind) set."}
 		}
 	},
 	{
@@ -186,19 +251,6 @@
 			"_definition": {"iso_639_3_eng": "Geospatial shape."},
 			"_description": {"iso_639_3_eng": "This data type represents the `geometry` property of a GeoJSON structure. GeoJSON is a geospatial data format based on JSON. It defines several different types of JSON objects and the way in which they can be combined to represent data about geographic shapes on the Earth surface. GeoJSON uses a geographic coordinate reference system, World Geodetic System 1984 (WGS 84), and units of decimal degrees.\n\nThis `geometry` object has two required properties: `type` and `coordinates` . The `type` refers to seven shape types indicated by the following case-sensitive strings: `Point`, `MultiPoint`, `LineString`, `MultiLineString`, `Polygon`, `MultiPolygon`, and `GeometryCollection`. The `coordinates` property contains the coordinates of the geometry, these coordinates depend on the geometry type, but the lowest common denominator is the coordinate, which is an array of two *decimal degrees* numbers representing exactly in this order the *longitude* and the *latitude* of the *coordinate*."},
 			"_examples": {"iso_639_3_eng": "[GeoJSON Point](https://tools.ietf.org/html/rfc7946#section-3.1.2) is a [position](https://tools.ietf.org/html/rfc7946#section-3.1.1) comprised of a longitude and a latitude:\n\n```json\n{\n\t\"type\": \"Point\",\n\t\"coordinates\": [100.0, 0.0]\n}\n```\n\nA [GeoJSON MultiPoint](https://tools.ietf.org/html/rfc7946#section-3.1.7) is an array of positions:\n\n```json\n{\n\t\"type\": \"MultiPoint\",\n\t\"coordinates\": [\n\t\t[100.0, 0.0],\n\t\t[101.0, 1.0]\n\t]\n}\n```\n\nA [GeoJSON LineString](https://tools.ietf.org/html/rfc7946#section-3.1.4) is an array of two or more positions:\n\n```json\n{\n\t\"type\": \"LineString\",\n\t\"coordinates\": [\n\t\t[100.0, 0.0],\n\t\t[101.0, 1.0]\n\t]\n}\n```\n\nA [GeoJSON MultiLineString](https://tools.ietf.org/html/rfc7946#section-3.1.5) is an array of LineString coordinate arrays:\n\n```json\n{\n\t\"type\": \"MultiLineString\",\n\t\"coordinates\": [\n\t\t[\n\t\t\t[100.0, 0.0],\n\t\t\t[101.0, 1.0]\n\t\t],\n\t\t[\n\t\t\t[102.0, 2.0],\n\t\t\t[103.0, 3.0]\n\t\t]\n\t]\n}\n```\n\nA [GeoJSON Polygon](https://tools.ietf.org/html/rfc7946#section-3.1.6) consists of a series of closed `LineString` objects (ring-like). These *Linear Ring*objects consist of four or more vertices with the first and last coordinate pairs being equal. Coordinates of a Polygon are an array of linear ring coordinate arrays. The first element in the array represents the exterior ring. Any subsequent elements represent interior rings (holes within the surface).\n\nA number of rules apply:\n\n- A polygon must contain at least one linear ring, i.e., it must not be empty.\n- A linear ring may not be empty, it needs at least three *distinct* coordinates, that is, at least 4 coordinate pairs (since the first and last must be the same).\n- No two edges of linear rings in the polygon must intersect, in particular, no linear ring may be self-intersecting.\n- Within the same linear ring consecutive coordinates may be the same, otherwise (except the first and last one) all coordinates need to be distinct.\n- Linear rings of a polygon must not share edges, they may however share vertices.\n- A linear ring defines two regions on the sphere. ArangoDB 3.9 and older will always interpret the region of smaller area to be the interior of the ring. This introduces a practical limitation that no polygon may have an outer ring enclosing more than half the Earth’s surface.\n- The interior rings must be contained in the (interior) of the outer ring.\n- Polygon rings should follow the right-hand rule for orientation (counterclockwise external rings, clockwise internal rings).\n\nHere is an example with no holes:\n\n```json\n{\n\t\"type\": \"Polygon\",\n\t\t\"coordinates\": [\n\t\t[\n\t\t\t[100.0, 0.0],\n\t\t\t[101.0, 0.0],\n\t\t\t[101.0, 1.0],\n\t\t\t[100.0, 1.0],\n\t\t\t[100.0, 0.0]\n\t\t]\n\t]\n}\n```\n\nHere is an example with a hole:\n\n```json\n{\n\t\"type\": \"Polygon\",\n\t\"coordinates\": [\n\t\t[\n\t\t\t[100.0, 0.0],\n\t\t\t[101.0, 0.0],\n\t\t\t[101.0, 1.0],\n\t\t\t[100.0, 1.0],\n\t\t\t[100.0, 0.0]\n\t\t],\n\t\t[\n\t\t\t[100.8, 0.8],\n\t\t\t[100.8, 0.2],\n\t\t\t[100.2, 0.2],\n\t\t\t[100.2, 0.8],\n\t\t\t[100.8, 0.8]\n\t\t]\n\t]\n}\n```\n\nA [GeoJSON MultiPolygon](https://tools.ietf.org/html/rfc7946#section-3.1.6) consists of multiple polygons. The “coordinates” member is an array of *Polygon* coordinate arrays. See [above](https://www.arangodb.com/docs/stable/indexing-geo.html#polygon) for the rules and the meaning of polygons.\n\nAdditionally, the following rules apply:\n\n- No two edges in the linear rings of the polygons of a MultiPolygon may intersect.\n- Polygons in the same MultiPolygon may not share edges, they may share coordinates.\n\nExample with two polygons, the second one with a hole:\n\n```json\n{\n\t\"type\": \"MultiPolygon\",\n\t\"coordinates\": [\n\t\t[\n\t\t\t[\n\t\t\t\t[102.0, 2.0],\n\t\t\t\t[103.0, 2.0],\n\t\t\t\t[103.0, 3.0],\n\t\t\t\t[102.0, 3.0],\n\t\t\t\t[102.0, 2.0]\n\t\t\t]\n\t\t],\n\t\t[\n\t\t\t[\n\t\t\t\t[100.0, 0.0],\n\t\t\t\t[101.0, 0.0],\n\t\t\t\t[101.0, 1.0],\n\t\t\t\t[100.0, 1.0],\n\t\t\t\t[100.0, 0.0]\n\t\t\t],\n\t\t\t[\n\t\t\t\t[100.2, 0.2],\n\t\t\t\t[100.2, 0.8],\n\t\t\t\t[100.8, 0.8],\n\t\t\t\t[100.8, 0.2],\n\t\t\t\t[100.2, 0.2]\n\t\t\t]\n\t\t]\n\t]\n}\n```"}
-		}
-	},
-	{
-		"_code": {
-			"_nid": "_type",
-			"_lid": "object",
-			"_gid": "_type_object",
-			"_aid": ["object"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Object"},
-			"_definition": {"iso_639_3_eng": "Data structure or object."},
-			"_description": {"iso_639_3_eng": "An *object* type represents a *data structure*. It is implemented as a *directed graph* in which *nodes* are the *structure property descriptors*."}
 		}
 	},
 

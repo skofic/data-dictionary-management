@@ -1,156 +1,156 @@
 [
 	{
-		"_from": "_unit_length",
-		"_to": "_unit",
-		"_predicate": "_predicate_section-of",
-		"_path": ["_unit", "toc", "toc_enum"]
+		"_from": "@@terms/_unit_length",
+		"_to": "@@terms/_unit",
+		"_predicate": "@@terms/_predicate_section-of",
+		"_path": ["@@terms/_unit"]
 	},
 	{
-		"_from": "_unit_length_km",
-		"_to": "_unit_length",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_unit"]
+		"_from": "@@terms/_unit_length_km",
+		"_to": "@@terms/_unit_length",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_unit"]
 	},
 	{
-		"_from": "_unit_length_m",
-		"_to": "_unit_length",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_unit"]
+		"_from": "@@terms/_unit_length_m",
+		"_to": "@@terms/_unit_length",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_unit"]
 	},
 	{
-		"_from": "_unit_length_cm",
-		"_to": "_unit_length",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_unit"]
+		"_from": "@@terms/_unit_length_cm",
+		"_to": "@@terms/_unit_length",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_unit"]
 	},
 	{
-		"_from": "_unit_length_mm",
-		"_to": "_unit_length",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_unit"]
-	},
-	
-	{
-		"_from": "_unit_area",
-		"_to": "_unit",
-		"_predicate": "_predicate_section-of",
-		"_path": ["_unit", "toc", "toc_enum"]
-	},
-	{
-		"_from": "_unit_area_km",
-		"_to": "_unit_area",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_unit"]
-	},
-	{
-		"_from": "_unit_area_ha",
-		"_to": "_unit_area",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_unit"]
-	},
-	{
-		"_from": "_unit_area_m",
-		"_to": "_unit_area",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_unit"]
-	},
-	{
-		"_from": "_unit_area_cm",
-		"_to": "_unit_area",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_unit"]
-	},
-	{
-		"_from": "_unit_area_mm",
-		"_to": "_unit_area",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_unit"]
+		"_from": "@@terms/_unit_length_mm",
+		"_to": "@@terms/_unit_length",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_unit"]
 	},
 	
 	{
-		"_from": "_unit_weight",
-		"_to": "_unit",
-		"_predicate": "_predicate_section-of",
-		"_path": ["_unit", "toc", "toc_enum"]
+		"_from": "@@terms/_unit_area",
+		"_to": "@@terms/_unit",
+		"_predicate": "@@terms/_predicate_section-of",
+		"_path": ["@@terms/_unit"]
 	},
 	{
-		"_from": "_unit_weight_kg",
-		"_to": "_unit_weight",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_unit"]
+		"_from": "@@terms/_unit_area_km",
+		"_to": "@@terms/_unit_area",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_unit"]
 	},
 	{
-		"_from": "_unit_weight_g",
-		"_to": "_unit_weight",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_unit"]
+		"_from": "@@terms/_unit_area_ha",
+		"_to": "@@terms/_unit_area",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_unit"]
 	},
 	{
-		"_from": "_unit_weight_cg",
-		"_to": "_unit_weight",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_unit"]
+		"_from": "@@terms/_unit_area_m",
+		"_to": "@@terms/_unit_area",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_unit"]
 	},
 	{
-		"_from": "_unit_weight_mg",
-		"_to": "_unit_weight",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_unit"]
-	},
-	
-	{
-		"_from": "_unit_time",
-		"_to": "_unit",
-		"_predicate": "_predicate_section-of",
-		"_path": ["_unit", "toc", "toc_enum"]
+		"_from": "@@terms/_unit_area_cm",
+		"_to": "@@terms/_unit_area",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_unit"]
 	},
 	{
-		"_from": "_unit_time_h",
-		"_to": "_unit_time",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_unit"]
-	},
-	{
-		"_from": "_unit_time_m",
-		"_to": "_unit_time",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_unit"]
-	},
-	{
-		"_from": "_unit_time_s",
-		"_to": "_unit_time",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_unit"]
+		"_from": "@@terms/_unit_area_mm",
+		"_to": "@@terms/_unit_area",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_unit"]
 	},
 	
 	{
-		"_from": "_unit_age",
-		"_to": "_unit",
-		"_predicate": "_predicate_section-of",
-		"_path": ["_unit", "toc", "toc_enum"]
+		"_from": "@@terms/_unit_weight",
+		"_to": "@@terms/_unit",
+		"_predicate": "@@terms/_predicate_section-of",
+		"_path": ["@@terms/_unit"]
 	},
 	{
-		"_from": "_unit_age_y",
-		"_to": "_unit_age",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_unit"]
+		"_from": "@@terms/_unit_weight_kg",
+		"_to": "@@terms/_unit_weight",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_unit"]
 	},
 	{
-		"_from": "_unit_age_m",
-		"_to": "_unit_age",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_unit"]
+		"_from": "@@terms/_unit_weight_g",
+		"_to": "@@terms/_unit_weight",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_unit"]
 	},
 	{
-		"_from": "_unit_age_w",
-		"_to": "_unit_age",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_unit"]
+		"_from": "@@terms/_unit_weight_cg",
+		"_to": "@@terms/_unit_weight",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_unit"]
 	},
 	{
-		"_from": "_unit_age_d",
-		"_to": "_unit_age",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_unit"]
+		"_from": "@@terms/_unit_weight_mg",
+		"_to": "@@terms/_unit_weight",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_unit"]
+	},
+	
+	{
+		"_from": "@@terms/_unit_time",
+		"_to": "@@terms/_unit",
+		"_predicate": "@@terms/_predicate_section-of",
+		"_path": ["@@terms/_unit"]
+	},
+	{
+		"_from": "@@terms/_unit_time_h",
+		"_to": "@@terms/_unit_time",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_unit"]
+	},
+	{
+		"_from": "@@terms/_unit_time_m",
+		"_to": "@@terms/_unit_time",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_unit"]
+	},
+	{
+		"_from": "@@terms/_unit_time_s",
+		"_to": "@@terms/_unit_time",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_unit"]
+	},
+	
+	{
+		"_from": "@@terms/_unit_age",
+		"_to": "@@terms/_unit",
+		"_predicate": "@@terms/_predicate_section-of",
+		"_path": ["@@terms/_unit"]
+	},
+	{
+		"_from": "@@terms/_unit_age_y",
+		"_to": "@@terms/_unit_age",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_unit"]
+	},
+	{
+		"_from": "@@terms/_unit_age_m",
+		"_to": "@@terms/_unit_age",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_unit"]
+	},
+	{
+		"_from": "@@terms/_unit_age_w",
+		"_to": "@@terms/_unit_age",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_unit"]
+	},
+	{
+		"_from": "@@terms/_unit_age_d",
+		"_to": "@@terms/_unit_age",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_unit"]
 	}
 ]

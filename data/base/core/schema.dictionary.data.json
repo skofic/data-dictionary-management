@@ -1,207 +1,231 @@
 [
 	{
-		"_from": "_class_category",
-		"_to": "_class",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_class"]
+		"_from": "@@terms/_class_category",
+		"_to": "@@terms/_class",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_class"]
 	},
 	{
-		"_from": "_class_quantity",
-		"_to": "_class",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_class"]
+		"_from": "@@terms/_class_reference",
+		"_to": "@@terms/_class",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_class"]
 	},
 	{
-		"_from": "_class_quantity_calculated",
-		"_to": "_class",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_class"]
+		"_from": "@@terms/_class_quantity",
+		"_to": "@@terms/_class",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_class"]
 	},
 	{
-		"_from": "_class_quantity_averaged",
-		"_to": "_class",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_class"]
+		"_from": "@@terms/_class_quantity_calculated",
+		"_to": "@@terms/_class_quantity",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_class"]
 	},
 	{
-		"_from": "_class_time",
-		"_to": "_class",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_class"]
+		"_from": "@@terms/_class_quantity_averaged",
+		"_to": "@@terms/_class_quantity",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_class"]
 	},
 	{
-		"_from": "_class_other",
-		"_to": "_class",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_class"]
-	},
-	
-	
-	{
-		"_from": "_type",
-		"_to": "_type_key",
-		"_predicate": "_predicate_bridge-of",
-		"_path": ["_type_key"]
-	},
-
-
-	{
-		"_from": "_type_boolean",
-		"_to": "_type",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_type"]
-	},
-	{
-		"_from": "_type_integer",
-		"_to": "_type",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_type"]
-	},
-	{
-		"_from": "_type_number",
-		"_to": "_type",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_type"]
-	},
-	{
-		"_from": "_type_string",
-		"_to": "_type",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_type", "_type_key"]
-	},
-	{
-		"_from": "_type_enum",
-		"_to": "_type",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_type", "_type_key"]
-	},
-	{
-		"_from": "_type_record",
-		"_to": "_type",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_type"]
-	},
-	{
-		"_from": "_type_timestamp",
-		"_to": "_type",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_type"]
-	},
-	{
-		"_from": "_type_geo-json",
-		"_to": "_type",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_type"]
-	},
-	{
-		"_from": "_type_object",
-		"_to": "_type",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_type"]
+		"_from": "@@terms/_class_time",
+		"_to": "@@terms/_class",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_class"]
 	},
 	
+	
 	{
-		"_from": "_format_markdown",
-		"_to": "_format",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_format"]
-	},
-	{
-		"_from": "_format_html",
-		"_to": "_format",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_format"]
-	},
-	{
-		"_from": "_format_uri",
-		"_to": "_format",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_format"]
-	},
-	{
-		"_from": "_format_hex",
-		"_to": "_format",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_format"]
-	},
-	{
-		"_from": "_format_svg",
-		"_to": "_format",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_format"]
-	},
-	{
-		"_from": "_format_email",
-		"_to": "_format",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_format"]
-	},
-	{
-		"_from": "_format_ymd",
-		"_to": "_format",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_format"]
-	},
-	{
-		"_from": "_format_date",
-		"_to": "_format",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_format"]
-	},
-	{
-		"_from": "_format_time",
-		"_to": "_format",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_format"]
-	},
-	{
-		"_from": "_format_date-time",
-		"_to": "_format",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_format"]
-	},
-	{
-		"_from": "_format_hostname",
-		"_to": "_format",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_format"]
-	},
-	{
-		"_from": "_format_ipv4",
-		"_to": "_format",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_format"]
-	},
-	{
-		"_from": "_format_ipv6",
-		"_to": "_format",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_format"]
+		"_from": "@@terms/_type",
+		"_to": "@@terms/_type_key",
+		"_predicate": "@@terms/_predicate_bridge-of",
+		"_path": ["@@terms/_type_key"]
 	},
 
 
 	{
-		"_from": "_any-term",
-		"_to": "_kind",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_kind"]
+		"_from": "@@terms/_type_boolean",
+		"_to": "@@terms/_type",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_type"]
 	},
 	{
-		"_from": "_any-enum",
-		"_to": "_kind",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_kind"]
+		"_from": "@@terms/_type_integer",
+		"_to": "@@terms/_type",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_type"]
 	},
 	{
-		"_from": "_any-descriptor",
-		"_to": "_kind",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_kind"]
+		"_from": "@@terms/_type_number",
+		"_to": "@@terms/_type",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_type"]
 	},
 	{
-		"_from": "_any-object",
-		"_to": "_kind",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_kind"]
+		"_from": "@@terms/_type_number_timestamp",
+		"_to": "@@terms/_type",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_type"]
+	},
+	{
+		"_from": "@@terms/_type_string",
+		"_to": "@@terms/_type",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_type", "@@terms/_type_key"]
+	},
+	{
+		"_from": "@@terms/_type_enum",
+		"_to": "@@terms/_type",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_type", "@@terms/_type_key"]
+	},
+	{
+		"_from": "@@terms/_type_ref",
+		"_to": "@@terms/_type",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_type"]
+	},
+	{
+		"_from": "@@terms/_type_ref_gid",
+		"_to": "@@terms/_type",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_type"]
+	},
+	{
+		"_from": "@@terms/_type_ref_enum",
+		"_to": "@@terms/_type",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_type"]
+	},
+	{
+		"_from": "@@terms/_type_ref_object",
+		"_to": "@@terms/_type",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_type"]
+	},
+	{
+		"_from": "@@terms/_type_ref_descriptor",
+		"_to": "@@terms/_type",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_type"]
+	},
+	{
+		"_from": "@@terms/_type_object",
+		"_to": "@@terms/_type",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_type"]
+	},
+	{
+		"_from": "@@terms/_type_geo-json",
+		"_to": "@@terms/_type",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_type"]
+	},
+	
+	{
+		"_from": "@@terms/_format_markdown",
+		"_to": "@@terms/_format",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_format"]
+	},
+	{
+		"_from": "@@terms/_format_html",
+		"_to": "@@terms/_format",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_format"]
+	},
+	{
+		"_from": "@@terms/_format_uri",
+		"_to": "@@terms/_format",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_format"]
+	},
+	{
+		"_from": "@@terms/_format_hex",
+		"_to": "@@terms/_format",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_format"]
+	},
+	{
+		"_from": "@@terms/_format_svg",
+		"_to": "@@terms/_format",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_format"]
+	},
+	{
+		"_from": "@@terms/_format_email",
+		"_to": "@@terms/_format",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_format"]
+	},
+	{
+		"_from": "@@terms/_format_ymd",
+		"_to": "@@terms/_format",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_format"]
+	},
+	{
+		"_from": "@@terms/_format_date",
+		"_to": "@@terms/_format",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_format"]
+	},
+	{
+		"_from": "@@terms/_format_time",
+		"_to": "@@terms/_format",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_format"]
+	},
+	{
+		"_from": "@@terms/_format_date-time",
+		"_to": "@@terms/_format",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_format"]
+	},
+	{
+		"_from": "@@terms/_format_hostname",
+		"_to": "@@terms/_format",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_format"]
+	},
+	{
+		"_from": "@@terms/_format_ipv4",
+		"_to": "@@terms/_format",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_format"]
+	},
+	{
+		"_from": "@@terms/_format_ipv6",
+		"_to": "@@terms/_format",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_format"]
+	},
+
+
+	{
+		"_from": "@@terms/_any-term",
+		"_to": "@@terms/_kind",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_kind"]
+	},
+	{
+		"_from": "@@terms/_any-enum",
+		"_to": "@@terms/_kind",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_kind"]
+	},
+	{
+		"_from": "@@terms/_any-descriptor",
+		"_to": "@@terms/_kind",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_kind"]
+	},
+	{
+		"_from": "@@terms/_any-object",
+		"_to": "@@terms/_kind",
+		"_predicate": "@@terms/_predicate_enum-of",
+		"_path": ["@@terms/_kind"]
 	}
 ]

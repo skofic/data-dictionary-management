@@ -14,7 +14,6 @@
 		},
 		"_data": {
 			"_scalar": {
-				"_class": "_class_other",
 				"_type": "_type_object",
 				"_kind": ["_rule"]
 			}
@@ -43,7 +42,6 @@
 		},
 		"_data": {
 			"_scalar": {
-				"_class": "_class_other",
 				"_type": "_type_object",
 				"_kind": ["_selection-descriptors"]
 			}
@@ -64,7 +62,6 @@
 		},
 		"_data": {
 			"_scalar": {
-				"_class": "_class_other",
 				"_type": "_type_object",
 				"_kind": ["_selection-descriptors"]
 			}
@@ -85,8 +82,7 @@
 		"_data": {
 			"_set": {
 				"_scalar": {
-					"_class": "_class_other",
-					"_type": "_type_enum",
+					"_type": "_type_ref",
 					"_kind": ["_any-descriptor"]
 				}
 			}
@@ -107,8 +103,7 @@
 		"_data": {
 			"_set": {
 				"_scalar": {
-					"_class": "_class_other",
-					"_type": "_type_enum",
+					"_type": "_type_ref",
 					"_kind": ["_any-descriptor"]
 				}
 			}
@@ -129,8 +124,7 @@
 		"_data": {
 			"_set": {
 				"_scalar": {
-					"_class": "_class_other",
-					"_type": "_type_enum",
+					"_type": "_type_ref",
 					"_kind": ["_any-descriptor"]
 				}
 			}
@@ -151,8 +145,7 @@
 		"_data": {
 			"_set": {
 				"_scalar": {
-					"_class": "_class_other",
-					"_type": "_type_enum",
+					"_type": "_type_ref",
 					"_kind": ["_any-descriptor"]
 				}
 			}
@@ -173,7 +166,6 @@
 		},
 		"_data": {
 			"_scalar": {
-				"_class": "_class_other",
 				"_type": "_type_object",
 				"_kind": ["_any-object"]
 			}
@@ -195,8 +187,7 @@
 		"_data": {
 			"_set": {
 				"_scalar": {
-					"_class": "_class_other",
-					"_type": "_type_enum",
+					"_type": "_type_ref",
 					"_kind": ["_any-term"]
 				}
 			}
@@ -217,8 +208,7 @@
 		"_data": {
 			"_set": {
 				"_scalar": {
-					"_class": "_class_other",
-					"_type": "_type_enum",
+					"_type": "_type_ref",
 					"_kind": ["_any-term"]
 				}
 			}
@@ -239,8 +229,7 @@
 		"_data": {
 			"_set": {
 				"_scalar": {
-					"_class": "_class_other",
-					"_type": "_type_enum",
+					"_type": "_type_ref",
 					"_kind": ["_any-term"]
 				}
 			}
@@ -263,8 +252,7 @@
 			"_array": {
 				"_set": {
 					"_scalar": {
-						"_class": "_class_other",
-						"_type": "_type_enum",
+						"_type": "_type_ref",
 						"_kind": ["_any-term"]
 					}
 				}
@@ -286,8 +274,7 @@
 		"_data": {
 			"_set": {
 				"_scalar": {
-					"_class": "_class_other",
-					"_type": "_type_enum",
+					"_type": "_type_ref",
 					"_kind": ["_any-term"]
 				}
 			}
@@ -309,8 +296,7 @@
 		"_data": {
 			"_set": {
 				"_scalar": {
-					"_class": "_class_other",
-					"_type": "_type_enum",
+					"_type": "_type_ref",
 					"_kind": ["_any-descriptor"]
 				}
 			}
@@ -331,8 +317,7 @@
 		"_data": {
 			"_set": {
 				"_scalar": {
-					"_class": "_class_other",
-					"_type": "_type_enum",
+					"_type": "_type_ref",
 					"_kind": ["_any-descriptor"]
 				}
 			}
@@ -353,8 +338,7 @@
 		"_data": {
 			"_set": {
 				"_scalar": {
-					"_class": "_class_other",
-					"_type": "_type_enum",
+					"_type": "_type_ref",
 					"_kind": ["_any-descriptor"]
 				}
 			}
@@ -377,8 +361,7 @@
 			"_array": {
 				"_set": {
 					"_scalar": {
-						"_class": "_class_other",
-						"_type": "_type_enum",
+						"_type": "_type_ref",
 						"_kind": ["_any-descriptor"]
 					}
 				}
@@ -400,8 +383,7 @@
 		"_data": {
 			"_set": {
 				"_scalar": {
-					"_class": "_class_other",
-					"_type": "_type_enum",
+					"_type": "_type_ref",
 					"_kind": ["_any-descriptor"]
 				}
 			}

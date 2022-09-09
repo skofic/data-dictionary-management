@@ -1,44 +1,44 @@
 [
 	{
-		"_from": "_nid",
-		"_to": "_code",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_code"]
+		"_from": "@@terms/_nid",
+		"_to": "@@terms/_code",
+		"_predicate": "@@terms/_predicate_property-of",
+		"_path": ["@@terms/_code"]
 	},
 	{
-		"_from": "_lid",
-		"_to": "_code",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_code"]
+		"_from": "@@terms/_lid",
+		"_to": "@@terms/_code",
+		"_predicate": "@@terms/_predicate_property-of",
+		"_path": ["@@terms/_code"]
 	},
 	{
-		"_from": "_gid",
-		"_to": "_code",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_code"]
+		"_from": "@@terms/_gid",
+		"_to": "@@terms/_code",
+		"_predicate": "@@terms/_predicate_property-of",
+		"_path": ["@@terms/_code"]
 	},
 	{
-		"_from": "_aid",
-		"_to": "_code",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_code"]
+		"_from": "@@terms/_aid",
+		"_to": "@@terms/_code",
+		"_predicate": "@@terms/_predicate_property-of",
+		"_path": ["@@terms/_code"]
 	},
 	{
-		"_from": "_pid",
-		"_to": "_code",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_code"]
+		"_from": "@@terms/_pid",
+		"_to": "@@terms/_code",
+		"_predicate": "@@terms/_predicate_property-of",
+		"_path": ["@@terms/_code"]
 	},
 	{
-		"_from": "_name",
-		"_to": "_code",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_code"]
+		"_from": "@@terms/_name",
+		"_to": "@@terms/_code",
+		"_predicate": "@@terms/_predicate_property-of",
+		"_path": ["@@terms/_code"]
 	},
 	{
-		"_from": "_regexp",
-		"_to": "_code",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_code"]
+		"_from": "@@terms/_regexp",
+		"_to": "@@terms/_code",
+		"_predicate": "@@terms/_predicate_property-of",
+		"_path": ["@@terms/_code"]
 	}
 ]

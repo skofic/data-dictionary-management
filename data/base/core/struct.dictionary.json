@@ -1,101 +1,101 @@
 [
 	{
-		"_from": "_key",
-		"_to": "_term",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_term"]
+		"_from": "@@terms/_key",
+		"_to": "@@terms/_term",
+		"_predicate": "@@terms/_predicate_property-of",
+		"_path": ["@@terms/_term"]
 	},
 	{
-		"_from": "_code",
-		"_to": "_term",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_term"]
+		"_from": "@@terms/_code",
+		"_to": "@@terms/_term",
+		"_predicate": "@@terms/_predicate_property-of",
+		"_path": ["@@terms/_term"]
 	},
 	{
-		"_from": "_info",
-		"_to": "_term",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_term"]
-	},
-	
-	{
-		"_from": "_key",
-		"_to": "_term_descriptor",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_term_descriptor"]
-	},
-	{
-		"_from": "_code",
-		"_to": "_term_descriptor",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_term_descriptor"]
-	},
-	{
-		"_from": "_info",
-		"_to": "_term_descriptor",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_term_descriptor"]
-	},
-	{
-		"_from": "_data",
-		"_to": "_term_descriptor",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_term_descriptor"]
+		"_from": "@@terms/_info",
+		"_to": "@@terms/_term",
+		"_predicate": "@@terms/_predicate_property-of",
+		"_path": ["@@terms/_term"]
 	},
 	
 	{
-		"_from": "_key",
-		"_to": "_term_object",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_term_object"]
+		"_from": "@@terms/_key",
+		"_to": "@@terms/_term_descriptor",
+		"_predicate": "@@terms/_predicate_property-of",
+		"_path": ["@@terms/_term_descriptor"]
 	},
 	{
-		"_from": "_code",
-		"_to": "_term_object",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_term_object"]
+		"_from": "@@terms/_code",
+		"_to": "@@terms/_term_descriptor",
+		"_predicate": "@@terms/_predicate_property-of",
+		"_path": ["@@terms/_term_descriptor"]
 	},
 	{
-		"_from": "_info",
-		"_to": "_term_object",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_term_object"]
+		"_from": "@@terms/_info",
+		"_to": "@@terms/_term_descriptor",
+		"_predicate": "@@terms/_predicate_property-of",
+		"_path": ["@@terms/_term_descriptor"]
 	},
 	{
-		"_from": "_rule",
-		"_to": "_term_object",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_term_object"]
+		"_from": "@@terms/_data",
+		"_to": "@@terms/_term_descriptor",
+		"_predicate": "@@terms/_predicate_property-of",
+		"_path": ["@@terms/_term_descriptor"]
 	},
 	
 	{
-		"_from": "_key",
-		"_to": "_edge",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_edge"]
+		"_from": "@@terms/_key",
+		"_to": "@@terms/_term_object",
+		"_predicate": "@@terms/_predicate_property-of",
+		"_path": ["@@terms/_term_object"]
 	},
 	{
-		"_from": "_from",
-		"_to": "_edge",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_edge"]
+		"_from": "@@terms/_code",
+		"_to": "@@terms/_term_object",
+		"_predicate": "@@terms/_predicate_property-of",
+		"_path": ["@@terms/_term_object"]
 	},
 	{
-		"_from": "_to",
-		"_to": "_edge",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_edge"]
+		"_from": "@@terms/_info",
+		"_to": "@@terms/_term_object",
+		"_predicate": "@@terms/_predicate_property-of",
+		"_path": ["@@terms/_term_object"]
 	},
 	{
-		"_from": "_predicate",
-		"_to": "_edge",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_edge"]
+		"_from": "@@terms/_rule",
+		"_to": "@@terms/_term_object",
+		"_predicate": "@@terms/_predicate_property-of",
+		"_path": ["@@terms/_term_object"]
+	},
+	
+	{
+		"_from": "@@terms/_key",
+		"_to": "@@terms/_edge",
+		"_predicate": "@@terms/_predicate_property-of",
+		"_path": ["@@terms/_edge"]
 	},
 	{
-		"_from": "_path",
-		"_to": "_edge",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_edge"]
+		"_from": "@@terms/_from",
+		"_to": "@@terms/_edge",
+		"_predicate": "@@terms/_predicate_property-of",
+		"_path": ["@@terms/_edge"]
+	},
+	{
+		"_from": "@@terms/_to",
+		"_to": "@@terms/_edge",
+		"_predicate": "@@terms/_predicate_property-of",
+		"_path": ["@@terms/_edge"]
+	},
+	{
+		"_from": "@@terms/_predicate",
+		"_to": "@@terms/_edge",
+		"_predicate": "@@terms/_predicate_property-of",
+		"_path": ["@@terms/_edge"]
+	},
+	{
+		"_from": "@@terms/_path",
+		"_to": "@@terms/_edge",
+		"_predicate": "@@terms/_predicate_property-of",
+		"_path": ["@@terms/_edge"]
 	}
 ]

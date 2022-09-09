@@ -31,8 +31,7 @@
 		},
 		"_data": {
 			"_scalar": {
-				"_class": "_class_other",
-				"_type": "_type_string",
+								"_type": "_type_string",
 				"_format": "_format_svg"
 			}
 		}
