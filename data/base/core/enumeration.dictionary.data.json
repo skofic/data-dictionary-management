@@ -170,8 +170,8 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Time stamp"},
-			"_definition": {"iso_639_3_eng": "timestamp expressed in the native database format."},
-			"_description": {"iso_639_3_eng": "This value represents a *time stamp* expressed in the *native format* of the *database*. It should be able to *express* a *precise moment* in time."}
+			"_definition": {"iso_639_3_eng": "Timestamp expressed as a numeric unix time."},
+			"_description": {"iso_639_3_eng": "This value represents a *time stamp* expressed as a *Unix time* (also known as *Epoch time*. It is a number that represents an instant in time with *millisecond* precision."}
 		}
 	},
 	{
