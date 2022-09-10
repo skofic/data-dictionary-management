@@ -56,7 +56,8 @@
 		"_data": {
 			"_scalar": {
 				"_class": "_class_reference",
-				"_type": "_type_ref_gid"
+				"_type": "_type_string_key",
+				"_kind": ["_any-term"]
 			}
 		}
 	},
@@ -75,6 +76,7 @@
 		},
 		"_data": {
 			"_scalar": {
+				"_class": "_class_identifier",
 				"_type": "_type_string",
 				"_regexp": "^[a-zA-Z0-9-:.@+,=;$!*'%]{1,254}$"
 			}
@@ -95,6 +97,7 @@
 		},
 		"_data": {
 			"_scalar": {
+				"_class": "_class_identifier",
 				"_type": "_type_string"
 			}
 		}
@@ -115,7 +118,7 @@
 		"_data": {
 			"_set": {
 				"_scalar": {
-					"_class": "_class_category",
+					"_class": "_class_identifier",
 					"_type": "_type_string"
 				}
 			}
@@ -136,7 +139,7 @@
 		"_data": {
 			"_set": {
 				"_scalar": {
-					"_class": "_class_reference",
+					"_class": "_class_identifier",
 					"_type": "_type_string"
 				}
 			}
@@ -157,7 +160,7 @@
 		},
 		"_data": {
 			"_scalar": {
-				"_class": "_class_category",
+				"_class": "_class_identifier",
 				"_type": "_type_string"
 			}
 		}

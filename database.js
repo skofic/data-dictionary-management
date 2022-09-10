@@ -37,17 +37,6 @@ async function InitDatabase(db)
 	}
 
 	//
-	// Drop all collections.
-	//
-	if(kPriv.user.flag.drop_all_collections) {
-		for(item of collections) {
-			console.log(`Dropping collection ${item.name}`)
-			await db.collection(item.name).drop()
-		}
-	}
-
-
-	//
 	// Drop collections.
 	//
 	for(item of collections) {

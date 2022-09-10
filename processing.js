@@ -254,7 +254,7 @@ async function ValidateEdges(db) {
 		//
 		// Validate sections.
 		//
-		errors = await ValidateEdgeSection(edge, key, cache, collection, terms_collection)
+		errors = await ValidateEdgeSection(edge, key, cache, db, collection, terms_collection)
 		if(errors.length > 0) {
 			error_count += errors.length
 			await error_collection.import(errors)
@@ -311,7 +311,7 @@ async function ValidateTopos(db) {
 		//
 		// Validate sections.
 		//
-		errors = await ValidateEdgeSection(edge, key, cache, collection, terms_collection)
+		errors = await ValidateEdgeSection(edge, key, cache, db, collection, terms_collection)
 		if(errors.length > 0) {
 			error_count += errors.length
 			await error_collection.import(errors)
@@ -705,11 +705,12 @@ async function ValidateDescriptorReference(reference, cache, collection) {
  * @param section {object} - Edge.
  * @param key {string} - Edge key.
  * @param cache {Set} - Set of checked term keys.
- * @param collection - Database edge collection.
+ * @param database {Database} - Database reference.
+ * @param collection {Collection} - Database edge collection.
  * @param terms_collection - Database terms collection.
  * @returns {Promise<[{string}]>} - List of properties with errors.
  */
-async function ValidateEdgeSection(section, key, cache, collection, terms_collection) {
+async function ValidateEdgeSection(section, key, cache, database, collection, terms_collection) {
 
 	//
 	// Init local storage.
@@ -800,7 +801,8 @@ async function ValidateEdgeSection(section, key, cache, collection, terms_collec
 		section._path
 			.forEach( async (element) => {
 				if(!cache.has(element)) {
-					exists = await terms_collection.documentExists(element)
+					// exists = await terms_collection.documentExists(element)
+					exists = await database.exists(element)
 					if(exists) {
 						cache.add(element)
 					} else {
@@ -1354,6 +1356,18 @@ async function LoadIso3166_1(db) {
 		ProcessTerm,
 		'enumeration.iso.3166.1'
 	)
+
+	//
+	// Add eufgis bridge to iso countries.
+	//
+	if(kPriv.user.flag.do_eufgis) {
+		kGlob.globals.res.edges.push({
+			_from: 'eufgis_countries',
+			_to: 'iso_3166_1',
+			_predicate: '_predicate_bridge-of',
+			_path: ['eufgis_countries']
+		})
+	}
 
 	//
 	// Write edges.
@@ -2242,7 +2256,7 @@ function CreateIso3166_1(item) {
 	//
 	// instantiate edge.
 	//
-	var edge = {
+	let edge = {
 		_from: gid,
 		_to: nid,
 		_predicate: '_predicate_enum-of',
@@ -2254,7 +2268,7 @@ function CreateIso3166_1(item) {
 	//
 	if(kPriv.user.flag.do_eufgis) {
 		if(kGlob.globals.eufgis.countries.has(lid)) {
-			edge._path.push("eufgis_countries")
+			edge._path.push('eufgis_countries')
 		}
 	}
 
@@ -3236,8 +3250,13 @@ function ProcessEdge(edge) {
 				//
 				// Set term record references.
 				//
-				const srcRef = kDb.collection_terms + '/' + ProcessGlobalIdentifier(edge._from)
-				const dstRef = kDb.collection_terms + '/' + ProcessGlobalIdentifier(edge._to)
+				const srcRef = MakeHandleReference(ProcessGlobalIdentifier(edge._from))
+				const dstRef = MakeHandleReference(ProcessGlobalIdentifier(edge._to))
+
+				//
+				// Set path references.
+				//
+				edge['_path'] = edge['_path'].map(item =>MakeHandleReference(item))
 
 				//
 				// Create key string.
@@ -3625,6 +3644,36 @@ function ParseIsoPoFile(fileName,blockRegex, nameRegex) {
 	return result																	// ==>
 
 } // ParseIsoPoFile()
+
+/**
+ * Create document handle
+ * Provided the document _key and the collection name,
+ * this function will return its handle.
+ * @param theKey {String}: The document _key.
+ * @param theCollection {String}: The collection name, defaults to terms.
+ * @returns {string}: The document handle.
+ */
+function MakeHandleReference(theKey, theCollection = null)
+{
+	//
+	// Check if key has already collection.
+	//
+	// const regex = /\//
+	// if(theKey.match(regex)) {
+	// 	return theKey															// ==>
+	// }
+
+	//
+	// Init collection.
+	//
+	if(theCollection === null) {
+		theCollection = kDb.collection_terms
+	}
+
+	return theCollection + '/' + theKey											// ==>
+
+} // MakeHandleReference()
+
 
 module.exports = {
 	ProcessDictionaryFiles, ProcessIsoStandards,

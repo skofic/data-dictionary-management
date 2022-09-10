@@ -14,7 +14,6 @@
 		},
 		"_data": {
 			"_scalar": {
-				"_class": "_class_category",
 				"_type": "_type_object",
 				"_kind": ["_info"]
 			}
@@ -46,7 +45,7 @@
 			"_dict": {
 				"_dict_key": {
 					"_class": "_class_category",
-					"_type": "_type_enum",
+					"_type": "_type_string_enum",
 					"_kind": ["iso_639_3"]
 				},
 				"_dict_value": {
@@ -73,7 +72,7 @@
 			"_dict": {
 				"_dict_key": {
 					"_class": "_class_category",
-					"_type": "_type_enum",
+					"_type": "_type_string_enum",
 					"_kind": ["iso_639_3"]
 				},
 				"_dict_value": {
@@ -100,7 +99,7 @@
 			"_dict": {
 				"_dict_key": {
 					"_class": "_class_category",
-					"_type": "_type_enum",
+					"_type": "_type_string_enum",
 					"_kind": ["iso_639_3"]
 				},
 				"_dict_value": {
@@ -128,7 +127,7 @@
 			"_dict": {
 				"_dict_key": {
 					"_class": "_class_category",
-					"_type": "_type_enum",
+					"_type": "_type_string_enum",
 					"_kind": ["iso_639_3"]
 				},
 				"_dict_value": {
@@ -156,7 +155,7 @@
 			"_dict": {
 				"_dict_key": {
 					"_class": "_class_category",
-					"_type": "_type_enum",
+					"_type": "_type_string_enum",
 					"_kind": ["iso_639_3"]
 				},
 				"_dict_value": {

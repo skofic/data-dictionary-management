@@ -30,6 +30,20 @@
 	{
 		"_code": {
 			"_nid": "_class",
+			"_lid": "identifier",
+			"_gid": "_class_identifier",
+			"_aid": ["identifier"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Identifier value"},
+			"_definition": {"iso_639_3_eng": "A value that represents an identifier."},
+			"_description": {"iso_639_3_eng": "The value is used to *identify* and *select* an *item* in a *collection* of *elements* of the *same type*."},
+			"_examples": {"iso_639_3_eng": "Identifier example data could be the *code* assigned to a *country*, or the *social security number* for a *person*."}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_class",
 			"_lid": "quantity",
 			"_gid": "_class_quantity",
 			"_aid": ["quantity"]
@@ -124,14 +138,14 @@
 	},
 	{
 		"_code": {
-			"_nid": "_type",
+			"_nid": "_type_number",
 			"_lid": "timestamp",
-			"_gid": "_type_timestamp",
+			"_gid": "_type_number_timestamp",
 			"_aid": ["timestamp"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Time stamp"},
-			"_definition": {"iso_639_3_eng": "Timestamp expressed as a numeric unix time."},
+			"_definition": {"iso_639_3_eng": "Timestamp expressed as a numeric unix timestamp."},
 			"_description": {"iso_639_3_eng": "This value represents a *time stamp* expressed as a *Unix time* (also known as *Epoch time*). It is a *number* that represents an instant in time with *millisecond* precision."}
 		}
 	},
@@ -150,82 +164,43 @@
 	},
 	{
 		"_code": {
-			"_nid": "_type",
+			"_nid": "_type_string",
+			"_lid": "key",
+			"_gid": "_type_string_key",
+			"_aid": ["key"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Key reference"},
+			"_definition": {"iso_639_3_eng": "Reference to a term's global identifier."},
+			"_description": {"iso_639_3_eng": "It is a [string](_type_string) representing the [global identifier](_gid) of a *document* from the *terms collection*."}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_type_string",
+			"_lid": "handle",
+			"_gid": "_type_string_handle",
+			"_aid": ["handle"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Document handle"},
+			"_definition": {"iso_639_3_eng": "Reference to a document belonging to any collection."},
+			"_description": {"iso_639_3_eng": "It is a [string](_type_string) representing the [document handle](_id) of a *document* that can come from *any collection*."}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_type_string",
 			"_lid": "enum",
-			"_gid": "_type_enum",
+			"_gid": "_type_string_enum",
 			"_aid": ["enum"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Enumeration"},
-			"_definition": {"iso_639_3_eng": "String from a controlled vocabulary."},
-			"_description": {"iso_639_3_eng": "The value of the descriptor must be an *element* of a *controlled vocabulary*. Descriptors of this [data type](_type) require the [data kind](_kind) property: this allows *restricting* the value to the *controlled vocabulary types* referenced in the [data kind](_kind) set."}
+			"_definition": {"iso_639_3_eng": "Global identifier of a term belonging to a controlled vocabulary."},
+			"_description": {"iso_639_3_eng": "It is a [string](_type_string) representing the [global identifier](_gid) of a *document* from the *terms collection*. This document *must* be an *element* of a *specific controlled vocabulary*, which is a *graph* of *term nodes* related with the [enumeration](_predicate_enum-of) [predicate](_predicate)."}
 		}
 	},
-	{
-		"_code": {
-			"_nid": "_type",
-			"_lid": "ref",
-			"_gid": "_type_ref",
-			"_aid": ["ref"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Document reference"},
-			"_definition": {"iso_639_3_eng": "Reference string to a document in any collection."},
-			"_description": {"iso_639_3_eng": "The value is a *reference* to a *document* in the form of the document's [handle](_id).\n\nWhen you select this [data type](_type) you are *required* to include, in the descriptor definition, the data type [kind](_kind), the latter is a list of *wildcards* that can be used to further restrict the scope of the reference. The data [kind](_kind) can be used to restrict the scope of the references, it is allowed to include the following elements\n\n- [Any document](_any-document): The value should be a [handle](_id) to a *document* from *any collection*.\n- [Any term](_any-term): The value should be a [handle](_id) to any document from the *dictionary terms collection*.\n- [Any enumeration](_any-enum): The value should be a [handle](_id) to an *element* from any *controlled vocabulary*.\n- [Any descriptor](_any-descriptor): The value should be a [handle](_id) to a document defining a *descriptor*.\n- [Any object](_any-object): The value should be a [handle](_id) to a document defining an *object data structure*."}
-		}
-	},
-	{
-		"_code": {
-			"_nid": "_type_ref",
-			"_lid": "gid",
-			"_gid": "_type_ref_gid",
-			"_aid": ["gid"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Global identifier reference"},
-			"_definition": {"iso_639_3_eng": "Document global identifier string."},
-			"_description": {"iso_639_3_eng": "The descriptor's value must be the [global identifier](_gid) of a *document* belonging to *any collection*."}
-		}
-	},,
-	{
-		"_code": {
-			"_nid": "_type_ref",
-			"_lid": "enum",
-			"_gid": "_type_ref_enum",
-			"_aid": ["enum"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Enumeration document reference"},
-			"_definition": {"iso_639_3_eng": "Reference to a controlled vocabulary type string."},
-			"_description": {"iso_639_3_eng": "The descriptor's value must be the [document handle](_id) to a *term* defining a *controlled vocabulary type*. This corresponds to the *root node* of a *graph* that can be *traversed* using the [enumeration](_predicate_enum-of) [predicate](_predicate).\n\nTerms of this type must be *referenced* by an *edge* with an [enumeration](_predicate_enum-of) [predicate](_predicate)."}
-		}
-	},
-	{
-		"_code": {
-			"_nid": "_type_ref",
-			"_lid": "object",
-			"_gid": "_type_ref_object",
-			"_aid": ["object"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Object type document reference"},
-			"_definition": {"iso_639_3_eng": "Reference to an object data structure type string."},
-			"_description": {"iso_639_3_eng": "The descriptor's value must be the [document handle](_id) to a *term* defining an *object data structure*. This corresponds to a document that includes the [rule section](_rule)."}
-		}
-	},
-	{
-		"_code": {
-			"_nid": "_type_ref",
-			"_lid": "descriptor",
-			"_gid": "_type_ref_descriptor",
-			"_aid": ["descriptor"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Descriptor document reference"},
-			"_definition": {"iso_639_3_eng": "Reference to a descriptor type string."},
-			"_description": {"iso_639_3_eng": "The descriptor's value must be the [document handle](_id) to a *term* defining a *descriptor*. This corresponds to a document that includes the [data section](_data)."}
-		}
-	}
 	{
 		"_code": {
 			"_nid": "_type",
@@ -234,16 +209,16 @@
 			"_aid": ["object"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Object"},
+			"_title": {"iso_639_3_eng": "Data structure"},
 			"_definition": {"iso_639_3_eng": "Data structure or object."},
-			"_description": {"iso_639_3_eng": "The value of the descriptor must be an *object* or *data structure*. Descriptors of this [data type](_type) require the [data kind](_kind) property: this allows *restricting* the *data structure type* to the *object data structure definitions* referenced in the [data kind](_kind) set."}
+			"_description": {"iso_639_3_eng": "The descriptor value *must* be an *object* or *data structure*. The [data kind](_kind) can be used to *specify* the *structure type* or to specify a [wildcard](_any-object) to consider the value as *any valid object*."}
 		}
 	},
 	{
 		"_code": {
-			"_nid": "_type",
+			"_nid": "_type_object",
 			"_lid": "geo-json",
-			"_gid": "_type_geo-json",
+			"_gid": "_type_object_geo-json",
 			"_aid": ["geo-json"]
 		},
 		"_info": {

@@ -14,7 +14,7 @@
 		"_data": {
 			"_scalar": {
 				"_type": "_type_string",
-				"_regexp": "^[a-zA-Z0-9-:.@+,=;$!*'%\/]{1,254}$"
+				"_regexp": "^[a-zA-Z0-9-_:.@+,=;$!*'%\/]{1,254}$"
 			}
 		}
 	},
@@ -71,8 +71,7 @@
 		"_data": {
 			"_scalar": {
 				"_class": "_class_reference",
-				"_type": "_type_handle",
-				"_kind_handle": ["@@terms/_any-document"]
+				"_type": "_type_string_handle"
 			}
 		}
 	},
@@ -91,8 +90,7 @@
 		"_data": {
 			"_scalar": {
 				"_class": "_class_reference",
-				"_type": "_type_handle",
-				"_kind_handle": ["@@terms/_any-document"]
+				"_type": "_type_string_handle"
 			}
 		}
 	}

@@ -19,7 +19,7 @@
 const user = {
 
 	"db": {
-		"host": "http://192.168.178.2:8529",
+		"host": "http://192.168.188.2:8529",
 		"name": "metadata",
 
 		"user": "eufgis_developer",
@@ -28,14 +28,14 @@ const user = {
 		"mount": "dict",
 
 		"terms_col": "terms",
-		"edges_col": "schemas",
+		"edges_col": "edges",
 		"topos_col": "topos",
 		"error_col": "errors"
 	},
 
 	"flag": {
 		// "key_encode": "GID",
-		"drop_all_collections": false,
+		"drop_all_collections": true,
 		"write_file": true,
 		"only_core": false,
 		"do_eufgis": true

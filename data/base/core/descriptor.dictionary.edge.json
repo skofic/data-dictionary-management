@@ -14,8 +14,8 @@
 		"_data": {
 			"_scalar": {
 				"_class": "_class_category",
-				"_type": "_type_ref",
-				"_kind": ["@@terms/_any-document"]
+				"_type": "_type_string_enum",
+				"_kind": ["_predicate"]
 			}
 		}
 	},
@@ -34,9 +34,8 @@
 		"_data": {
 			"_set": {
 				"_scalar": {
-					"_class": "_class_category",
-					"_type": "_type_ref",
-					"_kind": ["@@terms/_any-document"]
+					"_class": "_class_reference",
+					"_type": "_type_string_handle"
 				}
 			}
 		}

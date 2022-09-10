@@ -1,32 +1,32 @@
 [
 	{
-		"_from": "@@terms/_title",
-		"_to": "@@terms/_info",
-		"_predicate": "@@terms/_predicate_property-of",
-		"_path": ["@@terms/_info"]
+		"_from": "_title",
+		"_to": "_info",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_info"]
 	},
 	{
-		"_from": "@@terms/_definition",
-		"_to": "@@terms/_info",
-		"_predicate": "@@terms/_predicate_property-of",
-		"_path": ["@@terms/_info"]
+		"_from": "_definition",
+		"_to": "_info",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_info"]
 	},
 	{
-		"_from": "@@terms/_description",
-		"_to": "@@terms/_info",
-		"_predicate": "@@terms/_predicate_property-of",
-		"_path": ["@@terms/_info"]
+		"_from": "_description",
+		"_to": "_info",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_info"]
 	},
 	{
-		"_from": "@@terms/_examples",
-		"_to": "@@terms/_info",
-		"_predicate": "@@terms/_predicate_property-of",
-		"_path": ["@@terms/_info"]
+		"_from": "_examples",
+		"_to": "_info",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_info"]
 	},
 	{
-		"_from": "@@terms/_notes",
-		"_to": "@@terms/_info",
-		"_predicate": "@@terms/_predicate_property-of",
-		"_path": ["@@terms/_info"]
+		"_from": "_notes",
+		"_to": "_info",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_info"]
 	}
 ]

@@ -14,7 +14,7 @@
 		"_data": {
 			"_scalar": {
 				"_class": "_class_category",
-				"_type": "_type_enum",
+				"_type": "_type_string_enum",
 				"_kind": ["eufgis_countries"]
 			}
 		}
@@ -190,7 +190,7 @@
 		},
 		"_data": {
 			"_scalar": {
-								"_type": "_type_geo-json"
+								"_type": "_type_object_geo-json"
 			}
 		}
 	},
@@ -209,7 +209,7 @@
 		},
 		"_data": {
 			"_scalar": {
-								"_type": "_type_geo-json"
+								"_type": "_type_object_geo-json"
 			}
 		}
 	},
@@ -229,7 +229,7 @@
 		"_data": {
 			"_scalar": {
 				"_class": "_class_category",
-				"_type": "_type_enum",
+				"_type": "_type_string_enum",
 				"_kind": ["geo_datum"]
 			}
 		}
@@ -337,7 +337,7 @@
 		"_data": {
 			"_scalar": {
 				"_class": "_class_category",
-				"_type": "_type_enum",
+				"_type": "_type_string_enum",
 				"_kind": ["gcu_ownerships"]
 			}
 		}
@@ -358,7 +358,7 @@
 			"_set": {
 				"_scalar": {
 					"_class": "_class_category",
-					"_type": "_type_enum",
+					"_type": "_type_string_enum",
 					"_kind": ["gcu_types"]
 				}
 			}
@@ -555,7 +555,7 @@
 		"_data": {
 			"_scalar": {
 				"_class": "_class_category",
-				"_type": "_type_enum",
+				"_type": "_type_string_enum",
 				"_kind": ["gcu_population_statuses"]
 			}
 		}
@@ -575,7 +575,7 @@
 		"_data": {
 			"_scalar": {
 				"_class": "_class_category",
-				"_type": "_type_enum",
+				"_type": "_type_string_enum",
 				"_kind": ["gcu_population_situs"]
 			}
 		}
@@ -595,7 +595,7 @@
 		"_data": {
 			"_scalar": {
 				"_class": "_class_category",
-				"_type": "_type_enum",
+				"_type": "_type_string_enum",
 				"_kind": ["gcu_population_origins"]
 			}
 		}
@@ -614,7 +614,7 @@
 		"_data": {
 			"_scalar": {
 				"_class": "_class_category",
-				"_type": "_type_enum",
+				"_type": "_type_string_enum",
 				"_kind": ["gcu_population_systems"]
 			}
 		}
@@ -634,7 +634,7 @@
 		"_data": {
 			"_scalar": {
 				"_class": "_class_category",
-				"_type": "_type_enum",
+				"_type": "_type_string_enum",
 				"_kind": ["gcu_population_managements"]
 			}
 		}
@@ -654,7 +654,7 @@
 		"_data": {
 			"_scalar": {
 				"_class": "_class_category",
-				"_type": "_type_enum",
+				"_type": "_type_string_enum",
 				"_kind": ["gcu_population_justifications"]
 			}
 		}
@@ -674,7 +674,7 @@
 		"_data": {
 			"_scalar": {
 				"_class": "_class_category",
-				"_type": "_type_enum",
+				"_type": "_type_string_enum",
 				"_kind": ["gcu_population_reproducings"]
 			}
 		}
@@ -693,7 +693,7 @@
 		"_data": {
 			"_scalar": {
 				"_class": "_class_category",
-				"_type": "_type_enum",
+				"_type": "_type_string_enum",
 				"_kind": ["gcu_population_sex-ratios"]
 			}
 		}
@@ -712,7 +712,7 @@
 		"_data": {
 			"_scalar": {
 				"_class": "_class_category",
-				"_type": "_type_enum",
+				"_type": "_type_string_enum",
 				"_kind": ["gcu_population_regenerations"]
 			}
 		}
@@ -732,7 +732,7 @@
 			"_set": {
 				"_scalar": {
 					"_class": "_class_category",
-					"_type": "_type_enum",
+					"_type": "_type_string_enum",
 					"_kind": ["gcu_population_distributions"]
 				}
 			}

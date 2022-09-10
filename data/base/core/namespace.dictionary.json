@@ -14,19 +14,6 @@
 	{
 		"_code": {
 			"_nid": "",
-			"_lid": "any-document",
-			"_gid": "_any-document",
-			"_aid": ["any-document"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Any document"},
-			"_definition": {"iso_639_3_eng": "This wildcard represents any document in any colletion."},
-			"_description": {"iso_639_3_eng": "When defining a *descriptor* with a [document handle](_type_handle) [data type](_type), you must provide the [data kind](_kind_handle) reference, this wildcard indicates that the document can come from any collection. *This wildcard can only be used with descriptors of [document handle](_type_handle) [data type](_type)*."}
-		}
-	},
-	{
-		"_code": {
-			"_nid": "",
 			"_lid": "any-term",
 			"_gid": "_any-term",
 			"_aid": ["any-term"]
@@ -34,7 +21,7 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "Any term"},
 			"_definition": {"iso_639_3_eng": "This wildcard represents any term."},
-			"_description": {"iso_639_3_eng": "When defining a [descriptor](_term_descriptor), if the [data type](_type) is [enumeration](_type_enum) and you set the [type reference](_kind_) to this *value*, it means that the descriptor's value can be the [global identifier](_gid) of any *term*. This *includes* terms representing [object definitions](_term_object) and [descriptors](_term_descriptor)."}
+			"_description": {"iso_639_3_eng": "When defining a [descriptor](_term_descriptor), if the [data type](_type) is [enumeration](_type_string_enum) and you set the [type reference](_kind_) to this *value*, it means that the descriptor's value can be the [global identifier](_gid) of any *term*. This *includes* terms representing [object definitions](_term_object) and [descriptors](_term_descriptor)."}
 		}
 	},
 	{
@@ -47,7 +34,7 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "Any enumeration"},
 			"_definition": {"iso_639_3_eng": "This wildcard represents any enumerated term."},
-			"_description": {"iso_639_3_eng": "When defining a [descriptor](_term_descriptor), if the [data type](_type) is [enumeration](_type_enum) and you set the [type reference](_kind_) to this *value*, it means that the descriptor's value can be the [global identifier](_gid) of any *term* that is used as an *element* of a *controlled vocabulary*."}
+			"_description": {"iso_639_3_eng": "When defining a [descriptor](_term_descriptor), if the [data type](_type) is [enumeration](_type_string_enum) and you set the [type reference](_kind_) to this *value*, it means that the descriptor's value can be the [global identifier](_gid) of any *term* that is used as an *element* of a *controlled vocabulary*."}
 		}
 	},
 	{
@@ -60,7 +47,7 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "Any descriptor"},
 			"_definition": {"iso_639_3_eng": "This wildcard represents any descriptor."},
-			"_description": {"iso_639_3_eng": "When defining a [descriptor](_term_descriptor), if the [data type](_type) is [enumeration](_type_enum) and you set the [type reference](_kind_) to this *value*, it means that the descriptor's value can be the [global identifier](_gid) of any *term* that represents a [descriptor](_term_descriptor).\n\nTerms that represent *descriptors* must *include* the [data](_data) property section."}
+			"_description": {"iso_639_3_eng": "When defining a [descriptor](_term_descriptor), if the [data type](_type) is [enumeration](_type_string_enum) and you set the [type reference](_kind_) to this *value*, it means that the descriptor's value can be the [global identifier](_gid) of any *term* that represents a [descriptor](_term_descriptor).\n\nTerms that represent *descriptors* must *include* the [data](_data) property section."}
 		}
 	},
 	{
