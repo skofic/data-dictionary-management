@@ -19,7 +19,7 @@
 const user = {
 
 	"db": {
-		"host": "http://192.168.188.2:8529",
+		"host": "http://192.168.178.2:8529",
 		"name": "metadata",
 
 		"user": "eufgis_developer",
