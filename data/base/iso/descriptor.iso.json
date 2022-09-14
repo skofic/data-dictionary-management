@@ -112,7 +112,7 @@
 			"_dict": {
 				"_dict_key": {
 					"_class": "_class_category",
-					"_type": "_type_string_enum",
+					"_type_key": "_type_string_enum",
 					"_kind": ["iso_639_3"]
 				},
 				"_dict_value": {
@@ -138,7 +138,7 @@
 			"_dict": {
 				"_dict_key": {
 					"_class": "_class_category",
-					"_type": "_type_string_enum",
+					"_type_key": "_type_string_enum",
 					"_kind": ["iso_639_3"]
 				},
 				"_dict_value": {
@@ -224,7 +224,7 @@
 			"_dict": {
 				"_dict_key": {
 					"_class": "_class_category",
-					"_type": "_type_string_enum",
+					"_type_key": "_type_string_enum",
 					"_kind": ["iso_639_3"]
 				},
 				"_dict_value": {
@@ -250,7 +250,7 @@
 			"_dict": {
 				"_dict_key": {
 					"_class": "_class_category",
-					"_type": "_type_string_enum",
+					"_type_key": "_type_string_enum",
 					"_kind": ["iso_639_3"]
 				},
 				"_dict_value": {
