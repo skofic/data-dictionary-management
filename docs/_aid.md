@@ -14,7 +14,7 @@
 > 
 > ------
 
-###### List of local identifiers matching the item.
+###### List of official identifiers.
 
 
 
@@ -26,9 +26,9 @@ This list should collect all *identifiers* that could be used to *reference the 
 
 In the case of *variables*, these identifiers may be useful to *match the descriptor* when receiving external datasets.
 
-In the case of *enumerations*, the list should include all *alternative codes* that correspond to the *current local identifier*:. In all cases, the *local identifier* must be *included* in the list.
+In the case of *enumerations*, the list should include all *alternative codes* that correspond to the current [local identifier](_lid.md). In all cases, the [local identifier](_lid.md) must be *included* in this list.
 
-Note that these identifiers should be official or globally recognised, such as alternative ISO codes, these identifiers should not be confused with the identifiers provided by the data or metadata providers.
+Note that these identifiers should be *official* or *globally recognised* standards, such as alternative ISO codes. *Restricting* the list to *common standards* will make this property *more useful* and *accurate*.
 
 
 
@@ -36,6 +36,15 @@ Note that these identifiers should be official or globally recognised, such as a
 > 
 > ------
 
-`["stemp", "soilTemp", "soil_temperature"]`: Three possible identifiers for the *soil temperature* descriptor.
+```json
+{
+	"_nid": "iso_3166_1",
+	"_lid": "ITA",
+	"_gid": "iso_3166_1_ITA",
+	"_aid": ["ITA", "IT"],
+	"_name": "Italia",
+	"_regexp": "[A-Z]{3,3}"
+}
+```
 
-`["IT", "ITA"]`: All codes that identify the country *Italy*: `ITA` is the preferred code, but `IT` could also be used to refer to Italy.
+In the above term `ITA` is the *official code* for Italy, but `IT` is an alternative code: all elements of the `_aid` list of codes can be used to select this term.

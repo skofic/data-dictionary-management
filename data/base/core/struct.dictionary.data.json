@@ -86,6 +86,67 @@
 	},
 	
 	{
+		"_from": "_class",
+		"_to": "_set_scalar",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_scalar"]
+	},
+	{
+		"_from": "_set_type",
+		"_to": "_set_scalar",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_scalar"]
+	},
+	{
+		"_from": "_kind",
+		"_to": "_set_scalar",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_scalar"]
+	},
+	{
+		"_from": "_format",
+		"_to": "_set_scalar",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_scalar"]
+	},
+	{
+		"_from": "_unit",
+		"_to": "_set_scalar",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_scalar"]
+	},
+	{
+		"_from": "_unit-name",
+		"_to": "_set_scalar",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_scalar"]
+	},
+	{
+		"_from": "_regexp",
+		"_to": "_set_scalar",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_scalar"]
+	},
+	{
+		"_from": "_range",
+		"_to": "_set_scalar",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_scalar"]
+	},
+	{
+		"_from": "_valid-range",
+		"_to": "_set_scalar",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_scalar"]
+	},
+	{
+		"_from": "_normal-range",
+		"_to": "_set_scalar",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_scalar"]
+	},
+	
+	{
 		"_from": "_scalar",
 		"_to": "_array",
 		"_predicate": "_predicate_property-of",
@@ -117,7 +178,7 @@
 	},
 	
 	{
-		"_from": "_scalar",
+		"_from": "_set_scalar",
 		"_to": "_set",
 		"_predicate": "_predicate_property-of",
 		"_path": ["_set"]

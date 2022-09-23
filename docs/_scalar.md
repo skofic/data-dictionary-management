@@ -14,7 +14,7 @@
 > 
 > ------
 
-###### This property describes a scalar data value, scalar values are single values that do not represent lists or other containers.
+###### This property describes a container for a single value of any type.
 
 
 
@@ -33,58 +33,68 @@ This property defines the *shape* and *type* of *scalar data values*. A *number*
 ```json
 {
 	"_scalar": {
-		"_class": "_data_class_quantity",
-		"_type": "_data_type_integer",
-		"_min-range-inclusive": 5,
-		"_max-range-inclusive": 10
+		"_class": "_class_quantity",
+		"_type": "_type_integer",
+		"_valid-range": {
+			"_min-range-inclusive": 5,
+			"_max-range-inclusive": 10
+		}
 	}
 }
 ```
+This example describes a [quantitative](__class_quantity.md) *scalar* discrete [integer](_type_integer.md) value in the *range* from `5` to `10` inclusive.
 
-This example describes a *scalar discrete integer* value in the range from `5` to `10` inclusive.
+
+
 
 ```json
 {
 	"_scalar": {
-		"_class": "_data_class_quantity",
-		"_type": "_data_type_number",
-		"_min-range-inclusive": 0.0,
-		"_max-range-exclusive": 100.0,
-		"_unit": "_data_unit_length_cm"
+		"_class": "_class_quantity",
+		"_type": "_type_number",
+		"_valid-range": {
+			"_min-range-inclusive": 0.0,
+			"_max-range-exclusive": 100.0
+		},
+		"_unit": "_unit_length_cm"
 	}
 }
 ```
+This example describes a [continuous](_type_number.md) [quantitative](_class_quantity.md) value *greater or equal* to `0.0` and *less than* `100.0` representing a length in [centimetres](_unit_length_cm.md).
 
-This example describes a *continuous quantitative* value *greater or equal* to `0.0` and *less than* `100.0` representing a *length* in *centimetres*.
+
+
 
 ```json
 {
 	"_scalar": {
-		"_class": "_data_class_category",
-		"_type": "_data_type_enum",
-		"_kind": "iso_639_3"
+		"_class": "_class_category",
+		"_type": "_type_string_enum",
+		"_kind": ["iso_639_3"]
 	}
 }
 ```
+This example describes a [categorical](_class_category.md) [enumeration](_type_string_enum.md) that must be chosen from the [controlled vocabulary](iso_639_3.md) of ISO 639 *language codes*.
 
-This example describes a *categorical string* that must be chosen from the *controlled vocabulary* of ISO 639 *language codes*.
+
+
 
 ```json
 {
 	"_scalar": {
-		"_class": "_data_class_other",
-		"_type": "_data_type_string",
-		"_format": "_data_format_markdown"
+		"_type": "_type_string",
+		"_format": "_format_markdown"
 	}
 }
 ```
+This example describes a [text](_type_string.md) value *encoded* in [Markdown](_format_markdown.md) format.
 
-This example describes a *text* value *encoded* in *Markdown* format.
+
+
 
 ```json
 {
 	"_scalar": {}
 }
 ```
-
-This example shows a *scalar data definition* that can contain *any value*. This, however, indicates that the *value* may be an *object* or a *single value*, but *not an array*.
+This example shows the *data definition* for a *descriptor* that can hold *scalar* values of *any type*, this means that the container *does not accept* [arrays](_array.md), [sets](_set.md) or [dictionaries](_dict.md).

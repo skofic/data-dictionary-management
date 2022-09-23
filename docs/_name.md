@@ -22,7 +22,7 @@
 > 
 > ------
 
-This field should be used to *record* the *identifier* or *name* originally used to *refer* to the *instance* of the *descriptor*. This is generally used to record the *name* in the *native language* without needing to reference the actual language.
+This field should be included if there is a specific *denomination* or *name* that can be used to refer to the *instance* of the *term*. This is generally used to record the *name* in the *native language* without needing to reference the actual language.
 
 
 
