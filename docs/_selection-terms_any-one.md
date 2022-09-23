@@ -1,20 +1,36 @@
 ### _selection-terms_any-one
 
-------
+
+
+> TITLE
+> 
+> ------
 
 #### Any one of
 
-------
+
+
+> DEFINITION
+> 
+> ------
 
 ###### The selection should include one element from each of list of sets and one or more of the elements from that selection will become the result.
 
-------
+
+
+> DESCRIPTION
+> 
+> ------
 
 This descriptor contains a *parent array* that contains a *list* of *sets*: the rule determines that at most *one element* should be selected from *each* of the *child sets* and *one* or *more* elements of that selection will become the *result*. It is like combining an [any](_selection-terms_any) selection with a [one](_selection-terms_one) selection.
 
 The *terms* in the *child sets* are represented by their [global identifiers](_gid).
 
-------
+
+
+> EXAMPLES
+> 
+> ------
 
 ```json
 {

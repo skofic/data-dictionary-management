@@ -1,14 +1,26 @@
 ### _notes
 
-------
+
+
+> TITLE
+> 
+> ------
 
 #### Notes
 
-------
+
+
+> DEFINITION
+> 
+> ------
 
 ###### Notes, comments and feedback.
 
-------
+
+
+> DESCRIPTION
+> 
+> ------
 
 This field could be used to add user provided *comments* and *notes*.
 

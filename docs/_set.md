@@ -1,18 +1,34 @@
 ### _set
 
-------
+
+
+> TITLE
+> 
+> ------
 
 #### Set data container
 
-------
+
+
+> DEFINITION
+> 
+> ------
 
 ###### This property describes a set of data value, a set is a list of values of the same type that are unique.
 
-------
+
+
+> DESCRIPTION
+> 
+> ------
 
 This property defines the *shape* and *type* of a *set* of *values*. The values in the set must be *unique*, they *cannot* be *repeated*, and the *type definitions* refer to the *set elements*.
 
-------
+
+
+> EXAMPLES
+> 
+> ------
 
 ```json
 {

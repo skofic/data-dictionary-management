@@ -1,20 +1,36 @@
 ### _array
 
-------
+
+
+> TITLE
+> 
+> ------
 
 #### Array data container
 
-------
+
+
+> DEFINITION
+> 
+> ------
 
 ###### This property describes an array data values, an array is a list of values of the same type.
 
-------
+
+
+> DESCRIPTION
+> 
+> ------
 
 This property defines the *shape* and *type* of an *array* of *values*. An array is a *list* of *values* of the *same type*, values can be *repeated* and the *type definitions* refer to the *list elements*.
 
 The property can either contain the definition of the array elements data type, or it can contain an array or set container.
 
-------
+
+
+> EXAMPLES
+> 
+> ------
 
 ```json
 {

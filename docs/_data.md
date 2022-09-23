@@ -1,14 +1,26 @@
 ### _data
 
-------
+
+
+> TITLE
+> 
+> ------
 
 #### Data section
 
-------
+
+
+> DEFINITION
+> 
+> ------
 
 ###### This property groups all properties whose function is to define the shape and type of data, terms that represent descriptors must contain this property.
 
-------
+
+
+> DESCRIPTION
+> 
+> ------
 
 All terms that feature this property are [descriptors](_term_descriptor), all *other* term types *should not* have it. This [object](_container) requires *one* of the following properties:
 
@@ -19,7 +31,11 @@ All terms that feature this property are [descriptors](_term_descriptor), all *o
 
 You can set this property to an *empty object*, in that case it means that the *descriptor* can have *any container* with *any value*.
 
-------
+
+
+> EXAMPLES
+> 
+> ------
 
 ```json
 {

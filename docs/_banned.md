@@ -1,14 +1,26 @@
 ### _banned
 
-------
+
+
+> TITLE
+> 
+> ------
 
 #### Banned properties
 
-------
+
+
+> DEFINITION
+> 
+> ------
 
 ###### List of banned properties.
 
-------
+
+
+> DESCRIPTION
+> 
+> ------
 
 This field contains a set of *descriptors* that should *not* be *included* in the *data structure definition* of the *object.
 

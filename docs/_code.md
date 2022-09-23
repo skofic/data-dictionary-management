@@ -1,14 +1,26 @@
 ### _code
 
-------
+
+
+> TITLE
+> 
+> ------
 
 #### Identification section
 
-------
+
+
+> DEFINITION
+> 
+> ------
 
 ###### This object groups all properties whose function is to identify terms in the data dictionary.
 
-------
+
+
+> DESCRIPTION
+> 
+> ------
 
 All terms *require* this object property which features the following identifiers:
 
@@ -22,7 +34,11 @@ All terms *require* this object property which features the following identifier
 
 This object section groups all the relevant information needed to identigy terms using codes.
 
-------
+
+
+> EXAMPLES
+> 
+> ------
 
 ```json
 {

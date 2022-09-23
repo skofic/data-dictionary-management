@@ -1,18 +1,34 @@
 ### _normal-range
 
-------
+
+
+> TITLE
+> 
+> ------
 
 #### Normal range of values
 
-------
+
+
+> DEFINITION
+> 
+> ------
 
 ###### This field indicates the normal range for values, values that are out of range are considered outliers, not errors.
 
-------
+
+
+> DESCRIPTION
+> 
+> ------
 
 This field defines a *continuous numeric range* that represents the bounds *beyond which* values are considered *outliers*.
 
-------
+
+
+> EXAMPLES
+> 
+> ------
 
 ```json
 {

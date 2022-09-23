@@ -1,14 +1,26 @@
 ### _aid
 
-------
+
+
+> TITLE
+> 
+> ------
 
 #### All identifiers
 
-------
+
+
+> DEFINITION
+> 
+> ------
 
 ###### List of local identifiers matching the item.
 
-------
+
+
+> DESCRIPTION
+> 
+> ------
 
 This list should collect all *identifiers* that could be used to *reference the term*.
 
@@ -18,7 +30,11 @@ In the case of *enumerations*, the list should include all *alternative codes* t
 
 Note that these identifiers should be official or globally recognised, such as alternative ISO codes, these identifiers should not be confused with the identifiers provided by the data or metadata providers.
 
-------
+
+
+> EXAMPLES
+> 
+> ------
 
 `["stemp", "soilTemp", "soil_temperature"]`: Three possible identifiers for the *soil temperature* descriptor.
 

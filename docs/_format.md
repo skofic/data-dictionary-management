@@ -1,20 +1,36 @@
 ### _format
 
-------
+
+
+> TITLE
+> 
+> ------
 
 #### Data format
 
-------
+
+
+> DEFINITION
+> 
+> ------
 
 ###### Format or encoding of the data.
 
-------
+
+
+> DESCRIPTION
+> 
+> ------
 
 This field can be used to indicate that the *value* is *formatted* or *encoded*. The idea is to implement backend functions for validating or processing data provided in the format and handle appropriately the format when returning the data to the user, such as displaying styled text when handling *markdown* or *html*.
 
 In general, the *data type* will be *string*.
 
-------
+
+
+> EXAMPLES
+> 
+> ------
 
 The field is a controlled vocabulary, these are the allowed values:
 

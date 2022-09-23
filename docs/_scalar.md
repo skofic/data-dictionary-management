@@ -1,18 +1,34 @@
 ### _scalar
 
-------
+
+
+> TITLE
+> 
+> ------
 
 #### Scalar data container
 
-------
+
+
+> DEFINITION
+> 
+> ------
 
 ###### This property describes a scalar data value, scalar values are single values that do not represent lists or other containers.
 
-------
+
+
+> DESCRIPTION
+> 
+> ------
 
 This property defines the *shape* and *type* of *scalar data values*. A *number* or a *text* are examples of a scalar values; an *array* of *elements* or a key/value *dictionary* would *not* be considered a scalar value.
 
-------
+
+
+> EXAMPLES
+> 
+> ------
 
 ```json
 {

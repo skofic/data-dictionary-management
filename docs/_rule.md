@@ -1,14 +1,26 @@
 ### _rule
 
-------
+
+
+> TITLE
+> 
+> ------
 
 #### Constraints section
 
-------
+
+
+> DEFINITION
+> 
+> ------
 
 ###### This object groups all properties whose function is to provide rules and constraints applying to object data structures in the data dictionary.
 
-------
+
+
+> DESCRIPTION
+> 
+> ------
 
 All *terms* that *represent object structure definitions* require this element which features the following *ioptional* properties:
 
@@ -22,7 +34,11 @@ All *terms* that *represent object structure definitions* require this element w
 
 This property is required for terms defining an object structure. This property can be empty, in which case it means that all the object's properties are optional.
 
-------
+
+
+> EXAMPLES
+> 
+> ------
 
 ```json
 {

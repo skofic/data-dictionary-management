@@ -1,20 +1,36 @@
 ### _dict_value
 
-------
+
+
+> TITLE
+> 
+> ------
 
 #### Dictionary value data definition
 
-------
+
+
+> DEFINITION
+> 
+> ------
 
 ###### Data container and type definitions for dictionary values.
 
-------
+
+
+> DESCRIPTION
+> 
+> ------
 
 This [object](_container) defines the *type* of the *value* in a [dictionary](_container_dict), dictionary values can be of *any type*.
 
 The *property* is *required*, but you can set it to an *empty object*: in that case it means that the dictionary can have *values* of *any type*.
 
-------
+
+
+> EXAMPLES
+> 
+> ------
 
 ```json
 {
