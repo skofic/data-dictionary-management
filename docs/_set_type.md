@@ -37,4 +37,4 @@ This property is used to define the *data type* of [set](_set.md) *elements*, th
 - [Document handle](_type_string_handle.md): A [string](_type_string.md) representing the [document handle](_id.md) of a *record* belonging to *any collection*. No other [data section](_set_scalar.md) properties are expected.
 - [Enumeration](_type_string_enum.md): A [string](_type_string.md) representing the [global identifier](_gid.md) of a *document* belonging to the *terms collection* that is part of a *controlled vocabulary*. The [data section](_set_scalar.md) can include the following properties: [format](_format.md), [unit](_unit.md), [unit name](_unit-name.md) and [regular expression](_regexp.md). In addition, the [data section](_set_scalar.md) *requires* the [data kind](_kind.md) field, that is *must* *specify* from which *controlled vocabulary* the value must be *chosen*.
 
-If the [data type](_set_type.md) is *required*.
+The [set](_set.md) container *requires* this property.

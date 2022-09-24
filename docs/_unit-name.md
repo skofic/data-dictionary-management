@@ -14,7 +14,7 @@
 > 
 > ------
 
-###### Preferred measurement unit for the values of the descriptor, expressed as a name or symbol.
+###### Name of the measurement unit in which the value is expressed.
 
 
 
@@ -22,4 +22,4 @@
 > 
 > ------
 
-The field represents the *default unit* for the *values* of the descriptor. This means that when storing values, these should be *converted* to this *default unit*. This field should *only* be used if the desired *unit* is *not available* in the [data unit](_unit) *controlled vocabulary*.
+This field can be used to indicate the *data unit* of the *value* in the event the [units controlled vocabulary](_unit.md) does not feature it.
