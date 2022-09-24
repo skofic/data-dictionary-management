@@ -2,25 +2,28 @@
 
 
 
-> TITLE
-> 
-> ------
+------
+TITLE
+
+------
 
 #### Key data type
 
 
 
-> DEFINITION
-> 
-> ------
+------
+DEFINITION
+
+------
 
 ###### The data type of a key.
 
 
 
-> DESCRIPTION
-> 
-> ------
+------
+DESCRIPTION
+
+------
 
 This field defines the data type of a *dictionary key*, it is an [enumerated](_type_string_enum.md) choice that can take the following values:
 

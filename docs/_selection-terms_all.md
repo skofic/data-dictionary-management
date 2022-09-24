@@ -2,25 +2,28 @@
 
 
 
-> TITLE
-> 
-> ------
+------
+TITLE
+
+------
 
 #### All of
 
 
 
-> DEFINITION
-> 
-> ------
+------
+DEFINITION
+
+------
 
 ###### Selection should contain all terms from the set.
 
 
 
-> DESCRIPTION
-> 
-> ------
+------
+DESCRIPTION
+
+------
 
 The rule determines that *all* of the terms in the *set* should be part of the *selection*.
 

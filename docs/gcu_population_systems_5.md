@@ -2,16 +2,18 @@
 
 
 
-> TITLE
-> 
-> ------
+------
+TITLE
+
+------
 
 #### Close-to-nature forestry
 
 
 
-> DEFINITION
-> 
-> ------
+------
+DEFINITION
+
+------
 
 ###### Continuous cover forest, selective logging.

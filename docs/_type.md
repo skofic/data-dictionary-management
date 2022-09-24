@@ -2,25 +2,28 @@
 
 
 
-> TITLE
-> 
-> ------
+------
+TITLE
+
+------
 
 #### Data type
 
 
 
-> DEFINITION
-> 
-> ------
+------
+DEFINITION
+
+------
 
 ###### The data type of the descriptor's value.
 
 
 
-> DESCRIPTION
-> 
-> ------
+------
+DESCRIPTION
+
+------
 
 The *data type* defines the *type* that the *value* or *values* held by the *descriptor* should have. This type applies to the [scalar](_scalar.md) dimension of the *value*, this means that, in the case of an [array](_array.md) or [set](_set.md), the type *applies* to the list *elements*.
 

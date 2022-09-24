@@ -2,16 +2,18 @@
 
 
 
-> TITLE
-> 
-> ------
+------
+TITLE
+
+------
 
 #### Population category
 
 
 
-> DEFINITION
-> 
-> ------
+------
+DEFINITION
+
+------
 
 ###### Status of the target tree population regarding its locality.

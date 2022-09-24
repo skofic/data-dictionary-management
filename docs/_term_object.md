@@ -2,25 +2,28 @@
 
 
 
-> TITLE
-> 
-> ------
+------
+TITLE
+
+------
 
 #### Object
 
 
 
-> DEFINITION
-> 
-> ------
+------
+DEFINITION
+
+------
 
 ###### Object data structure definition.
 
 
 
-> DESCRIPTION
-> 
-> ------
+------
+DESCRIPTION
+
+------
 
 This data definition includes the *minimum viable data structure* for instantiating *object type definitions*.
 
@@ -28,9 +31,10 @@ This data definition includes the *minimum viable data structure* for instantiat
 
 
 
-> EXAMPLES
-> 
-> ------
+------
+EXAMPLES
+
+------
 
 Object structure refinition example:
 

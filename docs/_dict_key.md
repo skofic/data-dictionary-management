@@ -2,25 +2,28 @@
 
 
 
-> TITLE
-> 
-> ------
+------
+TITLE
+
+------
 
 #### Dictionary key data container
 
 
 
-> DEFINITION
-> 
-> ------
+------
+DEFINITION
+
+------
 
 ###### This property describes the data type of dictionary keys, which must be strings.
 
 
 
-> DESCRIPTION
-> 
-> ------
+------
+DESCRIPTION
+
+------
 
 This property is an *object structure* that contains the *data definition* for a *dictionary key*. Dictionary keys can be [strings](_type_string.md) or [enumerations](_type_string_enum.md).
 
@@ -28,9 +31,10 @@ You *cannot omit* this *property*, but you can *set* it to an *empty object*, in
 
 
 
-> EXAMPLES
-> 
-> ------
+------
+EXAMPLES
+
+------
 
 ```json
 {

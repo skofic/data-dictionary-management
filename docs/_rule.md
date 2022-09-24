@@ -2,25 +2,28 @@
 
 
 
-> TITLE
-> 
-> ------
+------
+TITLE
+
+------
 
 #### Constraints section
 
 
 
-> DEFINITION
-> 
-> ------
+------
+DEFINITION
+
+------
 
 ###### This object groups all properties whose function is to provide rules and constraints applying to object data structures in the data dictionary.
 
 
 
-> DESCRIPTION
-> 
-> ------
+------
+DESCRIPTION
+
+------
 
 All *terms* that *represent object structure definitions* require this element which features the following *ioptional* properties:
 
@@ -36,9 +39,10 @@ This property is required for terms defining an object structure. This property 
 
 
 
-> EXAMPLES
-> 
-> ------
+------
+EXAMPLES
+
+------
 
 ```json
 {

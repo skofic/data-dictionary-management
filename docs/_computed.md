@@ -2,24 +2,27 @@
 
 
 
-> TITLE
-> 
-> ------
+------
+TITLE
+
+------
 
 #### Computed properties
 
 
 
-> DEFINITION
-> 
-> ------
+------
+DEFINITION
+
+------
 
 ###### List of computed properties.
 
 
 
-> DESCRIPTION
-> 
-> ------
+------
+DESCRIPTION
+
+------
 
 This field contains the list of *properties* that are automatically *computed*, their value is *calculated* before *storing* the *record*.

@@ -2,25 +2,28 @@
 
 
 
-> TITLE
-> 
-> ------
+------
+TITLE
+
+------
 
 #### Edge
 
 
 
-> DEFINITION
-> 
-> ------
+------
+DEFINITION
+
+------
 
 ###### Edge data structure
 
 
 
-> DESCRIPTION
-> 
-> ------
+------
+DESCRIPTION
+
+------
 
 *Edges* are *objects* that define the *relationships* between nodes in a *directed graph*. This data structure is implemented using the [ArangoDB](https://www.arangodb.com) edge record, in particular:
 
@@ -30,9 +33,10 @@
 
 
 
-> EXAMPLES
-> 
-> ------
+------
+EXAMPLES
+
+------
 
 Edge example:
 

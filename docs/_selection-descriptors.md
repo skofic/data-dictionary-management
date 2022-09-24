@@ -2,25 +2,28 @@
 
 
 
-> TITLE
-> 
-> ------
+------
+TITLE
+
+------
 
 #### Descriptors selection
 
 
 
-> DEFINITION
-> 
-> ------
+------
+DEFINITION
+
+------
 
 ###### Rule for the selection of descriptors, one can provide three lists: select one in the list, select any in the list, select all in the list.
 
 
 
-> DESCRIPTION
-> 
-> ------
+------
+DESCRIPTION
+
+------
 
 The structure has *three possible properties* and all properties have as *value* a *set* of *descriptor global identifiers*. At least one property must be provided and the set value must have at least one element.
 
@@ -32,9 +35,10 @@ The combination of these three values represents the *selection of descriptors*.
 
 
 
-> EXAMPLES
-> 
-> ------
+------
+EXAMPLES
+
+------
 
 ```json
 {

@@ -2,25 +2,28 @@
 
 
 
-> TITLE
-> 
-> ------
+------
+TITLE
+
+------
 
 #### Any object
 
 
 
-> DEFINITION
-> 
-> ------
+------
+DEFINITION
+
+------
 
 ###### This wildcard represents any object type.
 
 
 
-> DESCRIPTION
-> 
-> ------
+------
+DESCRIPTION
+
+------
 
 When defining a [descriptor](_term_descriptor), if the [data type](_type) is [object](_type_object) and you set the [type reference](_kind_) to this *value*, it means that the descriptor's *value* can be *any object structure*.
 

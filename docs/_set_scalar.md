@@ -2,33 +2,37 @@
 
 
 
-> TITLE
-> 
-> ------
+------
+TITLE
+
+------
 
 #### Set scalar data container
 
 
 
-> DEFINITION
-> 
-> ------
+------
+DEFINITION
+
+------
 
 ###### This property describes the container for the elements of a set.
 
 
 
-> DESCRIPTION
-> 
-> ------
+------
+DESCRIPTION
+
+------
 
 This property defines the [data type](_set_type.md) of the *elements* of a [set](_set.md). Since a set is a *list* of *unique elements*, these elements must be *comparable* in order to prevent duplicate items. Set elements can be [booleans](_type_boolean.md), [integers](_type_integer.md), [floats](_type_number.md) and [strings](_type_string.md).
 
 
 
-> EXAMPLES
-> 
-> ------
+------
+EXAMPLES
+
+------
 
 ```json
 {

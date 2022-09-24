@@ -2,25 +2,28 @@
 
 
 
-> TITLE
-> 
-> ------
+------
+TITLE
+
+------
 
 #### Required properties
 
 
 
-> DEFINITION
-> 
-> ------
+------
+DEFINITION
+
+------
 
 ###### Selection of required properties.
 
 
 
-> DESCRIPTION
-> 
-> ------
+------
+DESCRIPTION
+
+------
 
 This field contains a *descriptors selection rule* that determines which *set* of *descriptors* must be *included* in the *data structure definition* of the *object* for it to be considered *valid*.
 
@@ -30,9 +33,10 @@ In order for the *object data structure* to be *valid*, its *properties* must *i
 
 
 
-> EXAMPLES
-> 
-> ------
+------
+EXAMPLES
+
+------
 
 ```json
 {

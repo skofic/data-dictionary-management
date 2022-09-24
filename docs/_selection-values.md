@@ -2,25 +2,28 @@
 
 
 
-> TITLE
-> 
-> ------
+------
+TITLE
+
+------
 
 #### Values selection
 
 
 
-> DEFINITION
-> 
-> ------
+------
+DEFINITION
+
+------
 
 ###### Rule for the selection of values, one can provide three lists: select one in the list, select any in the list, select all in the list.
 
 
 
-> DESCRIPTION
-> 
-> ------
+------
+DESCRIPTION
+
+------
 
 The structure has *three possible properties* whose *data* is a *set* of *values* of *any type*. At least one property must be provided and the set value must have at least one element.
 
@@ -32,9 +35,10 @@ The combination of these three values represents the *selection of values*.
 
 
 
-> EXAMPLES
-> 
-> ------
+------
+EXAMPLES
+
+------
 
 ```json
 {

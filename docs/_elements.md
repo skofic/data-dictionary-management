@@ -2,33 +2,37 @@
 
 
 
-> TITLE
-> 
-> ------
+------
+TITLE
+
+------
 
 #### Allowed number of elements
 
 
 
-> DEFINITION
-> 
-> ------
+------
+DEFINITION
+
+------
 
 ###### This field indicates the allowed range of elements.
 
 
 
-> DESCRIPTION
-> 
-> ------
+------
+DESCRIPTION
+
+------
 
 This field is used to *limit* the *number of items* in [arrays](_type_array) or [sets](_type_set). It is a *discrete range* that must be *greater than zero*.
 
 
 
-> EXAMPLES
-> 
-> ------
+------
+EXAMPLES
+
+------
 
 ```json
 {

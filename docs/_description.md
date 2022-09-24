@@ -2,25 +2,28 @@
 
 
 
-> TITLE
-> 
-> ------
+------
+TITLE
+
+------
 
 #### Description
 
 
 
-> DEFINITION
-> 
-> ------
+------
+DEFINITION
+
+------
 
 ###### A long text or document explaining how the descriptor value is obtained, and how its data can be used.
 
 
 
-> DESCRIPTION
-> 
-> ------
+------
+DESCRIPTION
+
+------
 
 The description is the area in which everything that could not be included in the [definition](_definition) should be presented. This should be an occasion to explain *why* the descriptor value is *used*, which measurement *methods* were used to obtain the values and all the other details that would allow a *non specialist* user *understand* how to *use* and *provide* such data.
 

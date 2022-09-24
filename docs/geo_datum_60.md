@@ -2,8 +2,9 @@
 
 
 
-> TITLE
-> 
-> ------
+------
+TITLE
+
+------
 
 #### Johnston Island '61

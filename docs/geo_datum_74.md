@@ -2,8 +2,9 @@
 
 
 
-> TITLE
-> 
-> ------
+------
+TITLE
+
+------
 
 #### Midway Astro '61

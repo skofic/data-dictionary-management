@@ -2,25 +2,28 @@
 
 
 
-> TITLE
-> 
-> ------
+------
+TITLE
+
+------
 
 #### Local identifier
 
 
 
-> DEFINITION
-> 
-> ------
+------
+DEFINITION
+
+------
 
 ###### The unique identifier of the term, within its namespace.
 
 
 
-> DESCRIPTION
-> 
-> ------
+------
+DESCRIPTION
+
+------
 
 Terms are *uniquely identified* by their [global identifier](_gid.md), which is the concatenation of their [namespace](_nid.md) identifier and *local identifier*, this property, separated by an underscore (`_`) *token*.
 
@@ -30,9 +33,10 @@ This field is *required* and must be *unique* within its [namespace](_nid.md), o
 
 
 
-> EXAMPLES
-> 
-> ------
+------
+EXAMPLES
+
+------
 
 ```json
 {

@@ -2,17 +2,19 @@
 
 
 
-> TITLE
-> 
-> ------
+------
+TITLE
+
+------
 
 #### IPv6 address
 
 
 
-> DEFINITION
-> 
-> ------
+------
+DEFINITION
+
+------
 
 ###### A *string* representing an *IPv6* internet *address*, as defined in RFC 2373, section 2.2.
 

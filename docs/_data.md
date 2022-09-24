@@ -2,25 +2,28 @@
 
 
 
-> TITLE
-> 
-> ------
+------
+TITLE
+
+------
 
 #### Data section
 
 
 
-> DEFINITION
-> 
-> ------
+------
+DEFINITION
+
+------
 
 ###### This property groups all properties whose function is to define the shape and type of data, terms that represent descriptors must contain this property.
 
 
 
-> DESCRIPTION
-> 
-> ------
+------
+DESCRIPTION
+
+------
 
 All terms that feature this property are [descriptors](_term_descriptor.md), all *other* term types *should not* have it. This object requires *one* of the following properties:
 
@@ -33,9 +36,10 @@ You can set this property to an *empty object*, in that case it means that the *
 
 
 
-> EXAMPLES
-> 
-> ------
+------
+EXAMPLES
+
+------
 
 ```json
 {

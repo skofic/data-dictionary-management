@@ -2,25 +2,28 @@
 
 
 
-> TITLE
-> 
-> ------
+------
+TITLE
+
+------
 
 #### Title
 
 
 
-> DEFINITION
-> 
-> ------
+------
+DEFINITION
+
+------
 
 ###### Title, name or label.
 
 
 
-> DESCRIPTION
-> 
-> ------
+------
+DESCRIPTION
+
+------
 
 Namespaces are used to *group terms* under a common *category*, and to *disambiguate* [local identifiers](_lid). The namespace is *concatenated* to the [local identifier](_lid) to form the [global identifier](_gid) that is the *unique identifier* of the *term* in the *data dictionary*.
 

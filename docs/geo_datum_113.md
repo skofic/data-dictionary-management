@@ -2,8 +2,9 @@
 
 
 
-> TITLE
-> 
-> ------
+------
+TITLE
+
+------
 
 #### Tananarive Observatory '25

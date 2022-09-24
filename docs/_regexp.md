@@ -2,25 +2,28 @@
 
 
 
-> TITLE
-> 
-> ------
+------
+TITLE
+
+------
 
 #### Validation pattern
 
 
 
-> DEFINITION
-> 
-> ------
+------
+DEFINITION
+
+------
 
 ###### Regular expression for validating the value.
 
 
 
-> DESCRIPTION
-> 
-> ------
+------
+DESCRIPTION
+
+------
 
 This field can be used to *validate* [string](_string.md) data by ensuring it follows a predefined *pattern*. This pattern is a *regular expression*, *regex*, according to the [ECMA 262](http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf) dialect.
 
@@ -30,9 +33,10 @@ If this property is used in a [descriptor](_term_descriiptor.md) that also serve
 
 
 
-> EXAMPLES
-> 
-> ------
+------
+EXAMPLES
+
+------
 
 - `the.\*fox`: Will *match* "*the quick brown fox*".
 - `^[A-Z]{3}[0-9]{4}$`: Will *match* "*ITA1234*".

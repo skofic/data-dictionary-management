@@ -2,16 +2,18 @@
 
 
 
-> TITLE
-> 
-> ------
+------
+TITLE
+
+------
 
 #### Hexadecimal
 
 
 
-> DEFINITION
-> 
-> ------
+------
+DEFINITION
+
+------
 
 ###### A string representing a [hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal) value.

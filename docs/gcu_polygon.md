@@ -2,33 +2,37 @@
 
 
 
-> TITLE
-> 
-> ------
+------
+TITLE
+
+------
 
 #### GCU polygon
 
 
 
-> DEFINITION
-> 
-> ------
+------
+DEFINITION
+
+------
 
 ###### Shape of the gene conservation unit.
 
 
 
-> DESCRIPTION
-> 
-> ------
+------
+DESCRIPTION
+
+------
 
 The field is a GeoJSON geometry structure that records the shape of the gene conservation unit. The shape can be a polygon or multipolygon.
 
 
 
-> EXAMPLES
-> 
-> ------
+------
+EXAMPLES
+
+------
 
 Here is an example with no holes:
 

@@ -2,25 +2,28 @@
 
 
 
-> TITLE
-> 
-> ------
+------
+TITLE
+
+------
 
 #### Term
 
 
 
-> DEFINITION
-> 
-> ------
+------
+DEFINITION
+
+------
 
 ###### Term data structure.
 
 
 
-> DESCRIPTION
-> 
-> ------
+------
+DESCRIPTION
+
+------
 
 *Terms* are the *base class* upon which all elements of the data dictionary are created. This data definition includes the *minimum viable data structure* for instantiating *namespaces*, *types* and *enumerations*.
 
@@ -28,9 +31,10 @@
 
 
 
-> EXAMPLES
-> 
-> ------
+------
+EXAMPLES
+
+------
 
 Generic term example:
 

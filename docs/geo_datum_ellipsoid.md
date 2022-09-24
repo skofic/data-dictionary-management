@@ -2,25 +2,28 @@
 
 
 
-> TITLE
-> 
-> ------
+------
+TITLE
+
+------
 
 #### Ellipsoid
 
 
 
-> DEFINITION
-> 
-> ------
+------
+DEFINITION
+
+------
 
 ###### Reference ellipsoid.
 
 
 
-> DESCRIPTION
-> 
-> ------
+------
+DESCRIPTION
+
+------
 
 Because of their relative simplicity, [reference ellipsoids](https://en.wikipedia.org/wiki/Reference_ellipsoid) are used as a preferred surface on which [geodetic network](https://en.wikipedia.org/wiki/Geodetic_network "Geodetic network")computations are performed and point coordinates such as [latitude](https://en.wikipedia.org/wiki/Latitude "Latitude"), [longitude](https://en.wikipedia.org/wiki/Longitude "Longitude"), and [elevation](https://en.wikipedia.org/wiki/Elevation "Elevation") are defined.
 

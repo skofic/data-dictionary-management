@@ -2,25 +2,28 @@
 
 
 
-> TITLE
-> 
-> ------
+------
+TITLE
+
+------
 
 #### Global identifier
 
 
 
-> DEFINITION
-> 
-> ------
+------
+DEFINITION
+
+------
 
 ###### The unique identifier of the term.
 
 
 
-> DESCRIPTION
-> 
-> ------
+------
+DESCRIPTION
+
+------
 
 Terms are *uniquely identified* by the *global identifier*, which is the concatenation of the [namespace](_nid.md) identifier and the [local identifier](_lid.md), separated by an underscore (`_`) *token*. The value is *computed* before *storing* the record in the *database*, so it is *read-only*.
 
@@ -28,9 +31,10 @@ This value is also *copied* to the [document key](_key.md), becoming the *unique
 
 
 
-> EXAMPLES
-> 
-> ------
+------
+EXAMPLES
+
+------
 
 ```json
 {

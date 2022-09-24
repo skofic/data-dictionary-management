@@ -2,25 +2,28 @@
 
 
 
-> TITLE
-> 
-> ------
+------
+TITLE
+
+------
 
 #### Relationship predicate
 
 
 
-> DEFINITION
-> 
-> ------
+------
+DEFINITION
+
+------
 
 ###### Type or classification of the relationship.
 
 
 
-> DESCRIPTION
-> 
-> ------
+------
+DESCRIPTION
+
+------
 
 A relationship predicate indicates the *type*, *nature* or *class* of a relationship. You may have several edges connecting the same nodes, but each edge must have a *different* predicate: this means that the combination of [subject](_from), predicate and [object](_to) must be unique.
 

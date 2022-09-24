@@ -2,25 +2,28 @@
 
 
 
-> TITLE
-> 
-> ------
+------
+TITLE
+
+------
 
 #### GeoJSON geometry
 
 
 
-> DEFINITION
-> 
-> ------
+------
+DEFINITION
+
+------
 
 ###### Geospatial shape.
 
 
 
-> DESCRIPTION
-> 
-> ------
+------
+DESCRIPTION
+
+------
 
 This data type represents the `geometry` property of a GeoJSON geometry structure. GeoJSON is a geospatial data format based on JSON. It defines several different types of JSON objects and the way in which they can be combined to represent data about geographic shapes on the Earth surface. GeoJSON uses a geographic coordinate reference system, World Geodetic System 1984 (WGS 84), and units of decimal degrees.
 
@@ -28,9 +31,10 @@ This `geometry` object has two required properties: `type` and `coordinates` . T
 
 
 
-> EXAMPLES
-> 
-> ------
+------
+EXAMPLES
+
+------
 
 [GeoJSON Point](https://tools.ietf.org/html/rfc7946#section-3.1.2) is a [position](https://tools.ietf.org/html/rfc7946#section-3.1.1) comprised of a longitude and a latitude:
 

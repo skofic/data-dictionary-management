@@ -2,17 +2,19 @@
 
 
 
-> TITLE
-> 
-> ------
+------
+TITLE
+
+------
 
 #### IPv4 address
 
 
 
-> DEFINITION
-> 
-> ------
+------
+DEFINITION
+
+------
 
 ###### A *string* representing an *IPv4* internet *address*, according to dotted-quad ABNF syntax as defined in RFC 2673, section 3.2.
 

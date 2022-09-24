@@ -2,25 +2,28 @@
 
 
 
-> TITLE
-> 
-> ------
+------
+TITLE
+
+------
 
 #### Documentation section
 
 
 
-> DEFINITION
-> 
-> ------
+------
+DEFINITION
+
+------
 
 ###### This object groups all properties whose function is to document, explain and comment on terms.
 
 
 
-> DESCRIPTION
-> 
-> ------
+------
+DESCRIPTION
+
+------
 
 This property should represent the *name*, *title* or *label* that represents the term. This *text* will be used as a *label* in *input forms*, or as table *headers* in which data will be displayed.
 
@@ -30,9 +33,10 @@ This property is *required* by all term types, there is only *one* instance in w
 
 
 
-> EXAMPLES
-> 
-> ------
+------
+EXAMPLES
+
+------
 
 ```json
 {

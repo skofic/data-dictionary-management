@@ -2,25 +2,28 @@
 
 
 
-> TITLE
-> 
-> ------
+------
+TITLE
+
+------
 
 #### Definition
 
 
 
-> DEFINITION
-> 
-> ------
+------
+DEFINITION
+
+------
 
 ###### A one paragraph text that provides a definition or summary explanation.
 
 
 
-> DESCRIPTION
-> 
-> ------
+------
+DESCRIPTION
+
+------
 
 The definition should explain the *what*. By reading this text one should understand what the descriptor's data *represents*. Details concerning measurement methods, usage of such data and the environment should be covered in the [description](_description).
 

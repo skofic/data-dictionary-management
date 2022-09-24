@@ -2,25 +2,28 @@
 
 
 
-> TITLE
-> 
-> ------
+------
+TITLE
+
+------
 
 #### Set data container
 
 
 
-> DEFINITION
-> 
-> ------
+------
+DEFINITION
+
+------
 
 ###### This property describes a container for an array of unique elements of the same data type.
 
 
 
-> DESCRIPTION
-> 
-> ------
+------
+DESCRIPTION
+
+------
 
 This property defines the *shape* and *type* of a *set* of *items*. A *set* is a *list* of *values* of the *same type*, values must be *unique* and the *type definitions* refer to the *list elements*.
 
@@ -28,9 +31,10 @@ The property *must* contain the [scalar](_set_scalar.md) container which defines
 
 
 
-> EXAMPLES
-> 
-> ------
+------
+EXAMPLES
+
+------
 
 ```json
 {
