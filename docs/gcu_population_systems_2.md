@@ -3,17 +3,9 @@
 
 
 ------
-TITLE
-
-------
-
 #### Clear-cutting with artificial regeneration
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### Planting or seeding.

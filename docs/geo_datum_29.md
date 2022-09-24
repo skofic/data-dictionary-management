@@ -3,8 +3,4 @@
 
 
 ------
-TITLE
-
-------
-
 #### Central America (NAD27)

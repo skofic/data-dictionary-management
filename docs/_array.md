@@ -3,28 +3,16 @@
 
 
 ------
-TITLE
-
-------
-
 #### Array data container
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### This property describes a container for an array of elements of the same data type.
 
 
 
 ------
-DESCRIPTION
-
-------
-
 This property defines the *shape* and *type* of an *array* of *items*. An array is a *list* of *values* of the *same type*, values can be *repeated* and the *type definitions* refer to the *list elements*.
 
 The property can contain *one* of the following elements:
@@ -39,10 +27,6 @@ The property may also be *empty*, in which case the array *elements* can be of a
 
 
 ------
-EXAMPLES
-
-------
-
 ```json
 {
 	"_array": {

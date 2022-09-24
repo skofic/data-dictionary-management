@@ -3,17 +3,9 @@
 
 
 ------
-TITLE
-
-------
-
 #### Biodiversity conservation
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### Biodiversity conservation of habitats and/or species.

@@ -3,8 +3,4 @@
 
 
 ------
-TITLE
-
-------
-
 #### Wake-Eniwetok '60

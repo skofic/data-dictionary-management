@@ -3,28 +3,16 @@
 
 
 ------
-TITLE
-
-------
-
 #### Relationship predicate
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### Type or classification of the relationship.
 
 
 
 ------
-DESCRIPTION
-
-------
-
 A relationship predicate indicates the *type*, *nature* or *class* of a relationship. You may have several edges connecting the same nodes, but each edge must have a *different* predicate: this means that the combination of [subject](_from), predicate and [object](_to) must be unique.
 
 Predicates are indicated as the [handle](_id) of the *document* that *identifies* the *relationship type*, By definition, predicates can be *any document*, but *this term* is itself also the *root* of a *controlled vocabulary* that *defines* all the *default relationship enumerations* of the *data dictionary*, which are used to define *controlled vocabularies*, *object data structures* and other generic *graphs*, these are the default predicates:

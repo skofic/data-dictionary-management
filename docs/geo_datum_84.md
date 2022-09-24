@@ -3,8 +3,4 @@
 
 
 ------
-TITLE
-
-------
-
 #### Old Hawaiian mean

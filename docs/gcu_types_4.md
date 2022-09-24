@@ -3,17 +3,9 @@
 
 
 ------
-TITLE
-
-------
-
 #### Protective forest area
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### Soil, water, timber line, etc.

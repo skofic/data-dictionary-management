@@ -3,8 +3,4 @@
 
 
 ------
-TITLE
-
-------
-
 #### Camp Area Astro

@@ -3,8 +3,4 @@
 
 
 ------
-TITLE
-
-------
-
 #### Bellevue (IGN)

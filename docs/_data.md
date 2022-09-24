@@ -3,28 +3,16 @@
 
 
 ------
-TITLE
-
-------
-
 #### Data section
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### This property groups all properties whose function is to define the shape and type of data, terms that represent descriptors must contain this property.
 
 
 
 ------
-DESCRIPTION
-
-------
-
 All terms that feature this property are [descriptors](_term_descriptor.md), all *other* term types *should not* have it. This object requires *one* of the following properties:
 
 - [Scalar data container](_scalar.md): This property contains the *data type* definitions and *constraints* for *scalar data values*.
@@ -37,10 +25,6 @@ You can set this property to an *empty object*, in that case it means that the *
 
 
 ------
-EXAMPLES
-
-------
-
 ```json
 {
 	"_data": {

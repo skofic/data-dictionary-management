@@ -3,8 +3,4 @@
 
 
 ------
-TITLE
-
-------
-
 #### Astro B4 Sor.Atoll

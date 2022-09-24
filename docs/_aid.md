@@ -3,28 +3,16 @@
 
 
 ------
-TITLE
-
-------
-
 #### All identifiers
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### List of official identifiers.
 
 
 
 ------
-DESCRIPTION
-
-------
-
 This list should collect all *identifiers* that could be used to *reference the term*.
 
 In the case of *variables*, these identifiers may be useful to *match the descriptor* when receiving external datasets.
@@ -36,10 +24,6 @@ Note that these identifiers should be *official* or *globally recognised* standa
 
 
 ------
-EXAMPLES
-
-------
-
 ```json
 {
 	"_nid": "iso_3166_1",

@@ -3,28 +3,16 @@
 
 
 ------
-TITLE
-
-------
-
 #### Enumeration of
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### The source node is a controlled vocabulary element of the destination node.
 
 
 
 ------
-DESCRIPTION
-
-------
-
 The value is a *reference* to a *document* in the form of the document's [handle](_id).
 
 The document must be a *controlled vocabulary type*, this means that it must be a *node* in a graph *related* with the [enumeration](_predicate_enum-of) [predicate](_predicate), whose root must be among the elements of the set.

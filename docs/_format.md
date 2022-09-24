@@ -3,28 +3,16 @@
 
 
 ------
-TITLE
-
-------
-
 #### Data format
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### Format or encoding of the data.
 
 
 
 ------
-DESCRIPTION
-
-------
-
 This field can be used to indicate that the *value* is *formatted* or *encoded*. The idea is to implement backend functions for validating or processing data provided in the format and handle appropriately the format when returning the data to the user, such as displaying styled text when handling *markdown* or *html*.
 
 In general, the *data type* will be *string*.
@@ -32,10 +20,6 @@ In general, the *data type* will be *string*.
 
 
 ------
-EXAMPLES
-
-------
-
 This field can be used to indicate in which standard the *value* is *formatted* or *encoded*. The idea is to implement backend functions for validating or processing data provided in the format and handle appropriately the format when returning the data to the user, such as displaying styled text when handling *markdown* or *html*.
 
 The [data type](_type.md) of the value will be [string](_type_string.md), these are the currently codified formats:

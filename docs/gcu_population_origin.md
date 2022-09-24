@@ -3,17 +3,9 @@
 
 
 ------
-TITLE
-
-------
-
 #### Population origin
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### Origin of the material.

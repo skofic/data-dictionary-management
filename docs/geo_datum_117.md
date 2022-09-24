@@ -3,8 +3,4 @@
 
 
 ------
-TITLE
-
-------
-
 #### Tristan Astro 1968

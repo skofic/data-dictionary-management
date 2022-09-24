@@ -3,37 +3,21 @@
 
 
 ------
-TITLE
-
-------
-
 #### Dictionary data container
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### This property describes a key/value data dictionary, in which a string key is used to access a value.
 
 
 
 ------
-DESCRIPTION
-
-------
-
 This property defines the *shape* and *type* of a *key/value dictionary*. *Keys* are *strings* that *may* be *bound* to a *controlled vocabulary*, while *values* may be of *any type*. Once defined the *value type*, this must apply to *all values* in the *dictionary*.
 
 
 
 ------
-EXAMPLES
-
-------
-
 ```json
 {
 	"_dict_key": {

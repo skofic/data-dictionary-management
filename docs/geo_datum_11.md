@@ -3,8 +3,4 @@
 
 
 ------
-TITLE
-
-------
-
 #### Astro Beacon "E"

@@ -3,8 +3,4 @@
 
 
 ------
-TITLE
-
-------
-
 #### Canal Zone (NAD27)

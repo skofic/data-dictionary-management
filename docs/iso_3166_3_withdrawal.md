@@ -3,17 +3,9 @@
 
 
 ------
-TITLE
-
-------
-
 #### Withdrawal date
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### Date of withdrawal from ISO 3166-1.

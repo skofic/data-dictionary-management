@@ -3,28 +3,16 @@
 
 
 ------
-TITLE
-
-------
-
 #### Identification section
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### This object groups all properties whose function is to identify terms in the data dictionary.
 
 
 
 ------
-DESCRIPTION
-
-------
-
 All terms *require* this object property which features the following identifiers:
 
 - [Namespace](_nid.md): The namespace is the [global identifier](_gid.md) of a *term* that is used to *disambiguate* [local identifiers](_lid.md). This can be used to allow several terms to share the same [code](_lid.md). This property is *optional*.
@@ -40,10 +28,6 @@ This object section groups all the relevant information needed to *identify* *te
 
 
 ------
-EXAMPLES
-
-------
-
 ```json
 {
 	"_code": {

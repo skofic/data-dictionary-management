@@ -3,8 +3,4 @@
 
 
 ------
-TITLE
-
-------
-
 #### Thai/Viet (Indian)

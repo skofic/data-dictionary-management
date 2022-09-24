@@ -3,8 +3,4 @@
 
 
 ------
-TITLE
-
-------
-
 #### Masirah Is. (Nahrwan)

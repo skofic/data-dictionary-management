@@ -3,28 +3,16 @@
 
 
 ------
-TITLE
-
-------
-
 #### Values selection
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### Rule for the selection of values, one can provide three lists: select one in the list, select any in the list, select all in the list.
 
 
 
 ------
-DESCRIPTION
-
-------
-
 The structure has *three possible properties* whose *data* is a *set* of *values* of *any type*. At least one property must be provided and the set value must have at least one element.
 
 - [One](_selection-terms_one): Only one element from the list.
@@ -36,10 +24,6 @@ The combination of these three values represents the *selection of values*.
 
 
 ------
-EXAMPLES
-
-------
-
 ```json
 {
 	"_selection-values_one": [one, two, three],

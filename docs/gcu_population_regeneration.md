@@ -3,8 +3,4 @@
 
 
 ------
-TITLE
-
-------
-
 #### Status of long-term viable regeneration

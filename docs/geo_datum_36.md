@@ -3,8 +3,4 @@
 
 
 ------
-TITLE
-
-------
-
 #### Djakarta(Batavia)

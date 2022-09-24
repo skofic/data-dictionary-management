@@ -3,8 +3,4 @@
 
 
 ------
-TITLE
-
-------
-
 #### No silviculture

@@ -3,8 +3,4 @@
 
 
 ------
-TITLE
-
-------
-
 #### Population sex ratio

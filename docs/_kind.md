@@ -3,28 +3,16 @@
 
 
 ------
-TITLE
-
-------
-
 #### Data type references
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### This property indicates the data type reference, it specifies to which enumeration or data structure the value must belong.
 
 
 
 ------
-DESCRIPTION
-
-------
-
 This field is a [set](_set.md) of [global identifiers](_gid.md) which reference terms that represent *root elements* of [controlled vocabularies](_type_string_enum.md), [object data structures](_type_object.md) and other kind of *graphs*. The field is relevant to the [data type](_type.md) of the current descriptor and is *required* and *restricted* to the following [data type](_type.md) values:
 
 - [Key reference](_type_string_key.md): the *data kind* is required and can take the following values:

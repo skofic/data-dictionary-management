@@ -3,8 +3,4 @@
 
 
 ------
-TITLE
-
-------
-
 #### South American 1969

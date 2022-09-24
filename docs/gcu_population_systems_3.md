@@ -3,17 +3,9 @@
 
 
 ------
-TITLE
-
-------
-
 #### Clear-cutting with natural regeneration
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### Seed trees or strips.

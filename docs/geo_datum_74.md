@@ -3,8 +3,4 @@
 
 
 ------
-TITLE
-
-------
-
 #### Midway Astro '61

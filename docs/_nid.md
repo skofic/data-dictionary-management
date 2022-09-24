@@ -3,28 +3,16 @@
 
 
 ------
-TITLE
-
-------
-
 #### Namespace identifier
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### A reference to the term that represents the namespace of the current term, the value is the namespace term global identifier.
 
 
 
 ------
-DESCRIPTION
-
-------
-
 *Namespaces* are used to *group* terms under the same *category* or *classification*, the value of this property is the [global identifier](_gid.md) of the *term* that *represents* the *namespace* of the *current term*.
 
 Namespaces are also used to *disambiguate* [local identifiers](_lid.md): *local identifiers* must be *unique* within the same *namespace*.
@@ -36,10 +24,6 @@ Any term's [global identifier](_gid.md) can be used as a *namespace*.
 
 
 ------
-EXAMPLES
-
-------
-
 ```json
 {
 	"_nid": "iso_3166_1",

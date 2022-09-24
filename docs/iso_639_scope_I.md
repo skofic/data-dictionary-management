@@ -3,8 +3,4 @@
 
 
 ------
-TITLE
-
-------
-
 #### Individual language

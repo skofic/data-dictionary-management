@@ -3,26 +3,14 @@
 
 
 ------
-TITLE
-
-------
-
 #### Integer
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### Discrete value.
 
 
 
 ------
-DESCRIPTION
-
-------
-
 Integer numeric value.

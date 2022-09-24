@@ -3,37 +3,21 @@
 
 
 ------
-TITLE
-
-------
-
 #### Range of values
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### This field indicates a range of values.
 
 
 
 ------
-DESCRIPTION
-
-------
-
 This field defines a *continuous numeric range*.
 
 
 
 ------
-EXAMPLES
-
-------
-
 ```json
 {
 	  "_min-range-inclusive": 0.0,

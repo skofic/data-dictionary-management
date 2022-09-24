@@ -3,28 +3,16 @@
 
 
 ------
-TITLE
-
-------
-
 #### Set elements data type
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### The data type of the elements of a set.
 
 
 
 ------
-DESCRIPTION
-
-------
-
 This property is used to define the *data type* of [set](_set.md) *elements*, these are the allowed values:
 
 - [Boolean](_type_boolean.md): *True* or *false* value.

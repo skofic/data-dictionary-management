@@ -3,8 +3,4 @@
 
 
 ------
-TITLE
-
-------
-
 #### Even sex ratio

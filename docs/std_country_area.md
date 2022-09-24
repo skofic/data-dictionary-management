@@ -3,17 +3,9 @@
 
 
 ------
-TITLE
-
-------
-
 #### Land area
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### Land area in km².

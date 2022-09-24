@@ -3,28 +3,16 @@
 
 
 ------
-TITLE
-
-------
-
 #### Set data container
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### This property describes a container for an array of unique elements of the same data type.
 
 
 
 ------
-DESCRIPTION
-
-------
-
 This property defines the *shape* and *type* of a *set* of *items*. A *set* is a *list* of *values* of the *same type*, values must be *unique* and the *type definitions* refer to the *list elements*.
 
 The property *must* contain the [scalar](_set_scalar.md) container which defines the [data type](_set_type.md) of the set *elements*, which includes [booleans](_type_boolean.md), [integers](_type_integer.md), [floats](_type_number.md) and [strings](_type_string.md).
@@ -32,10 +20,6 @@ The property *must* contain the [scalar](_set_scalar.md) container which defines
 
 
 ------
-EXAMPLES
-
-------
-
 ```json
 {
 	"_set": {

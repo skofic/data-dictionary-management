@@ -3,28 +3,16 @@
 
 
 ------
-TITLE
-
-------
-
 #### Term
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### Term data structure.
 
 
 
 ------
-DESCRIPTION
-
-------
-
 *Terms* are the *base class* upon which all elements of the data dictionary are created. This data definition includes the *minimum viable data structure* for instantiating *namespaces*, *types* and *enumerations*.
 
 *Terms* require the [identification](_code) and [documentation](_info) sections, while the [data](_data) section should only be included by *descriptors*. Any additional property is allowed.
@@ -32,10 +20,6 @@ DESCRIPTION
 
 
 ------
-EXAMPLES
-
-------
-
 Generic term example:
 
 ```json

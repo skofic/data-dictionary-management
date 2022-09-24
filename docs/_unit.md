@@ -3,28 +3,16 @@
 
 
 ------
-TITLE
-
-------
-
 #### Data unit
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### Measurement unit in which the value is expressed.
 
 
 
 ------
-DESCRIPTION
-
-------
-
 The field represents the *default unit* for the *values* of the descriptor. This means that when storing values, these should be *converted* to this *default unit*. The field is a controlled vocabulary that has the following values:
 
 - Length:

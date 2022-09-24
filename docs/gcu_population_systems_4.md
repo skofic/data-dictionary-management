@@ -3,8 +3,4 @@
 
 
 ------
-TITLE
-
-------
-
 #### Shelterwood systems

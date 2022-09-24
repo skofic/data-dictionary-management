@@ -229,7 +229,7 @@ function FormatSection(theSection, theContent)
 	//
 	// Set section header.
 	//
-	let section = `\n\n\n\n------\n${theSection.toUpperCase()}\n\n------\n\n`
+	let section = `\n\n\n\n------\n`
 
 	//
 	// Set section content.

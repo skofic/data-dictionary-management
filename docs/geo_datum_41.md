@@ -3,8 +3,4 @@
 
 
 ------
-TITLE
-
-------
-
 #### European 1950 mean

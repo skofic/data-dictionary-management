@@ -3,17 +3,9 @@
 
 
 ------
-TITLE
-
-------
-
 #### Public ownership
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### The gene conservation unit is publicly owned.

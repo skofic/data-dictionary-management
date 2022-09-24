@@ -3,8 +3,4 @@
 
 
 ------
-TITLE
-
-------
-
 #### Gunung Serindung 1962

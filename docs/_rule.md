@@ -3,28 +3,16 @@
 
 
 ------
-TITLE
-
-------
-
 #### Constraints section
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### This object groups all properties whose function is to provide rules and constraints applying to object data structures in the data dictionary.
 
 
 
 ------
-DESCRIPTION
-
-------
-
 All *terms* that *represent object structure definitions* require this element which features the following *ioptional* properties:
 
 - [Required](_required): A [descriptors selection](_selection-descriptors) representing the selection of required properties.
@@ -40,10 +28,6 @@ This property is required for terms defining an object structure. This property 
 
 
 ------
-EXAMPLES
-
-------
-
 ```json
 {
 	"_rule": {

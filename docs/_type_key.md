@@ -3,28 +3,16 @@
 
 
 ------
-TITLE
-
-------
-
 #### Key data type
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### The data type of a key.
 
 
 
 ------
-DESCRIPTION
-
-------
-
 This field defines the data type of a *dictionary key*, it is an [enumerated](_type_string_enum.md) choice that can take the following values:
 
 - [String](_type_string.md): A *character* or *text* encoded in UTF-8. The [data section](_data.md) can include the [regular expression](_regexp.md) property.

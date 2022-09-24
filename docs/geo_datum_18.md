@@ -3,8 +3,4 @@
 
 
 ------
-TITLE
-
-------
-
 #### Bogota Observatory

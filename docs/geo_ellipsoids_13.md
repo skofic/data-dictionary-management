@@ -3,8 +3,4 @@
 
 
 ------
-TITLE
-
-------
-
 #### Modified Airy

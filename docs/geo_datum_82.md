@@ -3,8 +3,4 @@
 
 
 ------
-TITLE
-
-------
-
 #### Observatorio 1966

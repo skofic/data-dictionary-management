@@ -3,17 +3,9 @@
 
 
 ------
-TITLE
-
-------
-
 #### Boolean
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### True or false value

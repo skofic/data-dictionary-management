@@ -3,17 +3,9 @@
 
 
 ------
-TITLE
-
-------
-
 #### Subset type
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### Type of subset of the country.

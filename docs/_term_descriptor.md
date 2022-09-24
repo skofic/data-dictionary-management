@@ -3,37 +3,21 @@
 
 
 ------
-TITLE
-
-------
-
 #### Descriptor
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### Descriptor data structure.
 
 
 
 ------
-DESCRIPTION
-
-------
-
 *Descriptors* are terms that define properties that carry values. They *inherit* all *properties* from *terms*, but add a section of [attributes](_data) that *describes* the *type* of *data* they define.
 
 
 
 ------
-EXAMPLES
-
-------
-
 Descriptor example:
 
 ```json

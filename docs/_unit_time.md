@@ -3,17 +3,9 @@
 
 
 ------
-TITLE
-
-------
-
 #### Time
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### Time measurement units

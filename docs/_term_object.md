@@ -3,28 +3,16 @@
 
 
 ------
-TITLE
-
-------
-
 #### Object
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### Object data structure definition.
 
 
 
 ------
-DESCRIPTION
-
-------
-
 This data definition includes the *minimum viable data structure* for instantiating *object type definitions*.
 
 *Objects* require the *identification*, *documentation* and *rules* sections, while the *data* section is only required by *descriptors*.
@@ -32,10 +20,6 @@ This data definition includes the *minimum viable data structure* for instantiat
 
 
 ------
-EXAMPLES
-
-------
-
 Object structure refinition example:
 
 ```json

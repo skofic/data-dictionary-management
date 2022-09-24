@@ -3,8 +3,4 @@
 
 
 ------
-TITLE
-
-------
-
 #### Conservation through active intervention carried out

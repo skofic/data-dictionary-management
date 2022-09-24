@@ -3,8 +3,4 @@
 
 
 ------
-TITLE
-
-------
-
 #### Carribean (NAD27)

@@ -3,8 +3,4 @@
 
 
 ------
-TITLE
-
-------
-
 #### Pitcairn Astro '67

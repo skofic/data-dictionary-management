@@ -3,17 +3,9 @@
 
 
 ------
-TITLE
-
-------
-
 #### Months
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### Age in months.

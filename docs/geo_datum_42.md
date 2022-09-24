@@ -3,8 +3,4 @@
 
 
 ------
-TITLE
-
-------
-
 #### European 1979 mean

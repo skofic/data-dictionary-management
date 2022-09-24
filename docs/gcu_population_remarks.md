@@ -3,17 +3,9 @@
 
 
 ------
-TITLE
-
-------
-
 #### Population remarks
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### Remarks on the population.

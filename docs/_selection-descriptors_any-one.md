@@ -3,28 +3,16 @@
 
 
 ------
-TITLE
-
-------
-
 #### Any one of
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### The selection should include one or no element from each of list of sets, the result should have at least one element.
 
 
 
 ------
-DESCRIPTION
-
-------
-
 This descriptor contains a *list* of *sets*: the rule determines that at most *one element* should be selected from *each* of the *child sets* and *one* or *more* elements of that selection will become the *result*.
 
 The *descriptors* in the *child sets* are represented by their [global identifiers](_gid).
@@ -32,10 +20,6 @@ The *descriptors* in the *child sets* are represented by their [global identifie
 
 
 ------
-EXAMPLES
-
-------
-
 ```json
 {
 	"_selection-descriptors_any-one": [

@@ -3,28 +3,16 @@
 
 
 ------
-TITLE
-
-------
-
 #### Edge
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### Edge data structure
 
 
 
 ------
-DESCRIPTION
-
-------
-
 *Edges* are *objects* that define the *relationships* between nodes in a *directed graph*. This data structure is implemented using the [ArangoDB](https://www.arangodb.com) edge record, in particular:
 
 - The [key](_key) property is required and should be the MD5 hash of the *concatenation* of the [source term reference](_from) , [predicate](_predicate) and [destination term reference](_to) properties separated by a slash (`/`) token. This means that there can be only one edge connecting the source and destination nodes with a specific predicate.
@@ -34,10 +22,6 @@ DESCRIPTION
 
 
 ------
-EXAMPLES
-
-------
-
 Edge example:
 
 ```json

@@ -3,8 +3,4 @@
 
 
 ------
-TITLE
-
-------
-
 #### Required management intervention

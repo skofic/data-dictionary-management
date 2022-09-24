@@ -3,17 +3,9 @@
 
 
 ------
-TITLE
-
-------
-
 #### Common name
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### Common name of the language.

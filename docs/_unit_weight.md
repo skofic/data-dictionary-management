@@ -3,17 +3,9 @@
 
 
 ------
-TITLE
-
-------
-
 #### Weight
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### Weight measurement units

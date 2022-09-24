@@ -3,28 +3,16 @@
 
 
 ------
-TITLE
-
-------
-
 #### Documentation section
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### This object groups all properties whose function is to document, explain and comment on terms.
 
 
 
 ------
-DESCRIPTION
-
-------
-
 This property should represent the *name*, *title* or *label* that represents the term. This *text* will be used as a *label* in *input forms*, or as table *headers* in which data will be displayed.
 
 The contents are a *key/value dictionary* in which the *key* represents the *language* in which the title is expressed, and the *value* is the *title* in *plain text*.
@@ -34,10 +22,6 @@ This property is *required* by all term types, there is only *one* instance in w
 
 
 ------
-EXAMPLES
-
-------
-
 ```json
 {
 	"_info": {

@@ -3,28 +3,16 @@
 
 
 ------
-TITLE
-
-------
-
 #### Data classification
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### This enumerated value indicates to which class or category the descriptor's value belongs.
 
 
 
 ------
-DESCRIPTION
-
-------
-
 The class can be selected from the following choices:
 
 - [Category](_class_category.md): The value is *categorical*.

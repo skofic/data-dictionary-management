@@ -3,17 +3,9 @@
 
 
 ------
-TITLE
-
-------
-
 #### Days
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### Age in days.

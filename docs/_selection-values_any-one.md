@@ -3,28 +3,16 @@
 
 
 ------
-TITLE
-
-------
-
 #### Any one of
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### The selection should include one element from each of list of sets and one or more of the elements from that selection will become the result.
 
 
 
 ------
-DESCRIPTION
-
-------
-
 This descriptor contains a *parent array* that contains a *list* of *sets*: the rule determines that at most *one element* should be selected from *each* of the *child sets* and *one* or *more* elements of that selection will become the *result*. It is like combining an [any](_selection-valuesany) selection with a [one](_selection-values_one) selection.
 
 The *values* in the *child sets* can be any value.
@@ -32,10 +20,6 @@ The *values* in the *child sets* can be any value.
 
 
 ------
-EXAMPLES
-
-------
-
 ```json
 {
 	"_selection-terms_any-one": [

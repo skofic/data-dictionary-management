@@ -3,17 +3,9 @@
 
 
 ------
-TITLE
-
-------
-
 #### GCU population origins
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### Origin of the population.

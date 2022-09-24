@@ -3,17 +3,9 @@
 
 
 ------
-TITLE
-
-------
-
 #### Length
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### Length measurement units

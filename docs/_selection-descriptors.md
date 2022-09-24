@@ -3,28 +3,16 @@
 
 
 ------
-TITLE
-
-------
-
 #### Descriptors selection
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### Rule for the selection of descriptors, one can provide three lists: select one in the list, select any in the list, select all in the list.
 
 
 
 ------
-DESCRIPTION
-
-------
-
 The structure has *three possible properties* and all properties have as *value* a *set* of *descriptor global identifiers*. At least one property must be provided and the set value must have at least one element.
 
 - [One](_selection-descriptors_one): Only one element from the list.
@@ -36,10 +24,6 @@ The combination of these three values represents the *selection of descriptors*.
 
 
 ------
-EXAMPLES
-
-------
-
 ```json
 {
 	"_selection-descriptors_one": [one, two, three],

@@ -3,17 +3,9 @@
 
 
 ------
-TITLE
-
-------
-
 #### Flag
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### Flag of country.

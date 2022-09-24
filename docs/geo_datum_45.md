@@ -3,8 +3,4 @@
 
 
 ------
-TITLE
-
-------
-
 #### Geodetic Datum '49

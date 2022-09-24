@@ -3,8 +3,4 @@
 
 
 ------
-TITLE
-
-------
-
 #### Sierra Leone 1960

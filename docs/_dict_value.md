@@ -3,28 +3,16 @@
 
 
 ------
-TITLE
-
-------
-
 #### Dictionary value data definition
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### This property describes the data type of dictionary key values.
 
 
 
 ------
-DESCRIPTION
-
-------
-
 This *object* defines the *type* of the *value* in a [dictionary](_dict.md), dictionary values can be of *any type*.
 
 The *property* is *required*, but you can set it to an *empty object*: in that case it means that the dictionary can have *values* of *any shape* or *type*.
@@ -32,10 +20,6 @@ The *property* is *required*, but you can set it to an *empty object*: in that c
 
 
 ------
-EXAMPLES
-
-------
-
 ```json
 {
 	"_dict_value": {

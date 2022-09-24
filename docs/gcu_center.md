@@ -3,37 +3,21 @@
 
 
 ------
-TITLE
-
-------
-
 #### GCU center coordinates
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### Latitude and longitude of the center of the gene conservation unit.
 
 
 
 ------
-DESCRIPTION
-
-------
-
 The field is a GeoJSON geometry structure that records the center of the gene conservation unit. The shape should be a point.
 
 
 
 ------
-EXAMPLES
-
-------
-
 ```json
 {
 	"type": "Point",

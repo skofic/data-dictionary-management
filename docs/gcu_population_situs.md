@@ -3,17 +3,9 @@
 
 
 ------
-TITLE
-
-------
-
 #### GCU population categories
 
 
 
 ------
-DEFINITION
-
-------
-
 ###### Locality of the population.
