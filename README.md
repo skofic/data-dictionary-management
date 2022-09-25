@@ -55,4 +55,4 @@ The dictionary is under development, there is not yet public documentation on *w
 
 Stay tuned...
 
-Read the documentation [here](docs/index.md).
+Read the documentation [here](docs/README.md).
