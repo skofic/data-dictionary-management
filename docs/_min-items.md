@@ -3,16 +3,16 @@
 
 
 ------
-#### Minimum number of items
+#### Minimum number of elements
 
 
 
 ------
-###### This field indicates the minimum number of items a list or set should have.
+###### This field indicates the minimum number of elements an item may contain.
 
 
 
 ------
-This field is relevant only when the *data container* is [array](_array_) or [set](_set_): it indicates the *minimum number of elements* the [array](_array_) or [set](_set_) should have.
+This field can be used to indicate the *minimum number* of *elements* an item may contain. The property is used by the elements range [descriptor](_elements.md) to indicate the minimum bound for [array](_array.md) and [set](_set.md) data [container](_data.md) [elements](_elements.md).
 
-The value is an integer and the *bound* is *inclusive*.
+The value is an *integer* and the *bound* is *inclusive*, the item to which the property refers to cannot have *less* elements than the value held by this field.

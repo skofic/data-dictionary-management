@@ -3,16 +3,16 @@
 
 
 ------
-#### Maximum number of items
+#### Maximum number of elements
 
 
 
 ------
-###### This field indicates the maximum number of items a list or set should have.
+###### This field indicates the maximum number of elements an item may contain.
 
 
 
 ------
-This field is relevant only when the *data container* is [array](_array_) or [set](_set_): it indicates the *maximum number of elements* the [array](_array_) or [set](_set_) should have.
+This field can be used to indicate the *maximum number* of *elements* an item may contain. The property is used by the elements range [descriptor](_elements.md) to indicate the maximum bound for [array](_array.md) and [set](_set.md) data [container](_data.md) [elements](_elements.md).
 
-The value is an integer and the *bound* is *inclusive*.
+The value is an *integer* and the *bound* is *inclusive*, the item to which the property refers to cannot have *more* elements than the value held by this field.

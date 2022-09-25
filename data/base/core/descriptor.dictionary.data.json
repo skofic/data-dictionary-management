@@ -466,9 +466,9 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Allowed number of elements"},
-			"_definition": {"iso_639_3_eng": "This field indicates the allowed range of elements."},
-			"_description": {"iso_639_3_eng": "This field is used to *limit* the *number of items* in [arrays](_type_array) or [sets](_type_set). It is a *discrete range* that must be *greater than zero*."},
-			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_min-items\": 1,\n\t\"_max-items\": 8\n}\n```\n\nThe *array* or *set* can have between `1` and `8` elements.\n\n```json\n{\n\t\"_min-items\": 0\n}\n```\n\nThe *array* or *set* must have at least *one* element.\n\n```json\n{\n\t\"_max-items\": 10\n}\n```\n\nThe *array* or *set* must have less than 10 items."}
+			"_definition": {"iso_639_3_eng": "This field indicates the allowed range of elements for arrays and sets."},
+			"_description": {"iso_639_3_eng": "This field is used to *limit* the *number of items* in [arrays](_array.md) or [sets](_set.md). It is a *discrete range* that must be *greater than zero*."},
+			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_elements\": {\n\t\t\"_min-items\": 1,\n\t\t\"_max-items\": 8\n\t}\n}\n```\nThe [array](_array.md) or [set](_set.md) can have between `1` and `8` elements.\n\n\n\n```json\n{\n\t\"_elements\": {\n\t\t\"_min-items\": 0\n\t}\n}\n```\nThe [array](_array.md) or [set](_set.md) must have at least *one* element.\n\n\n\n```json\n{\n\t\"_elements\": {\n\t\t\"_max-items\": 10\n\t}\n}\n```\nThe [array](_array.md) or [set](_set.md) must have *less* than 10 items."}
 		},
 		"_data": {
 			"_scalar": {
@@ -492,9 +492,9 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Range of values"},
-			"_definition": {"iso_639_3_eng": "This field indicates a range of values."},
-			"_description": {"iso_639_3_eng": "This field defines a *continuous numeric range*."},
-			"_examples": {"iso_639_3_eng": "```json\n{\n\t  \"_min-range-inclusive\": 0.0,\n\t  \"_max-range-inclusive\": 100.0\n}\n```\n\nThis represents a *percentage range*, values are *greater* or *equal* to `0` and smaller or equal to `100`. Fractional values are allowed.\n\n```json\n{\n\t  \"_min-range-inclusive\": 0,\n\t  \"_max-range-inclusive\": 100\n}\n```\n\nSame as above, except that we use integers. Fractional values are allowed.\n\n```json\n{\n\t  \"_min-range-exclusive\": 0\n}\n```\n\nValues are greater than `0`. Fractional values are allowed."}
+			"_definition": {"iso_639_3_eng": "This property indicates a generic range of values."},
+			"_description": {"iso_639_3_eng": "This property can be used to indicate a [continuous](_type_number.md) numeric *range*, this range may *ignore* the *lower* or *upper* bound, and it allows specifying whether the *bounds* are *included* in the range, or not. The property is an object that may contain the following combination of elements:\n\n- [Minimum range inclusive](_min-range-inclusive.md): The value must be greater than or equal to the bound.\n- [Minimum range exclusive](_min-range-exclusive.md): The value must be greater than the bound.\n- [Maximum range inclusive](_max-range-inclusive.md): The value must be less than or equal to the bound.\n- [Maximum range exclusive](_max-range-exclusive.md): The value must be less than the bound.\n\nIt is possible to omit the minimum or maximum bound.\n\nThe *range* defined by this property is *generic*, this means that values out of the range are not necessarily expected to be incorrect."},
+			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_range\": {\n\t\t\"_min-range-inclusive\": 0.0,\n\t\t\"_max-range-inclusive\": 100.0\n\t}\n}\n```\nThis represents a *percentage range*, values are *greater* than or *equal* to `0` and smaller or equal to `100`. Fractional values are allowed.\n\n\n\n```json\n{\n\t\"_range\": {\n\t\t\"_min-range-inclusive\": 0,\n\t\t\"_max-range-inclusive\": 100\n\t}\n}\n```\nSame as above, except that we use integers. Fractional values are allowed.\n\n\n\n```json\n{\n\t\"_range\": {\n\t\t\"_min-range-exclusive\": 0\n\t}\n}\n```\nValues are greater than `0`. Fractional values are allowed."}
 		},
 		"_data": {
 			"_scalar": {
@@ -521,9 +521,9 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Valid range of values"},
-			"_definition": {"iso_639_3_eng": "This field indicates the allowed range for values, values that are out of range are considered errors."},
-			"_description": {"iso_639_3_eng": "This field defines a *continuous numeric range* within which values are considered *correct*; values *out* of this *range* are considered *errors*."},
-			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_min-range-inclusive\": 0.0,\n\t\"_max-range-inclusive\": 100.0\n}\n```\n\nThis represents a *percentage range*, values must be *greater* or *equal* to `0` and must be smaller or equal to `100`. Fractional values are allowed. `0.0` is *correct*, `100` is *correct*, `101` is *incorrect* and `-0.1` is *incorrect*.\n\n```json\n{\n\t\"_min-range-inclusive\": 0,\n\t\"_max-range-inclusive\": 100\n}\n```\n\nSame as above, except that we use integers. Fractional values are allowed.\n\n```json\n{\n\t\"_min-range-exclusive\": 0\n}\n```\n\nValues must be greater than `0`. Fractional values are allowed. `0` is *incorrect*, `1` is *correct*, `2.5` is *correct*, `-0.01` is *incorrect*."}
+			"_definition": {"iso_639_3_eng": "This field indicates the allowed range for values, values that are out of range are considered invalid."},
+			"_description": {"iso_639_3_eng": "This property defines the range within which a value can be considered correct. Values that out of this range are considered errors. This [continuous](_type_number.md) numeric *range* may *ignore* the *lower* or *upper* bound, and it allows specifying whether the *bounds* are *included* in the range, or not. The property is an object that may contain the following combination of elements:\n\n- [Minimum range inclusive](_min-range-inclusive.md): The value must be greater than or equal to the bound.\n- [Minimum range exclusive](_min-range-exclusive.md): The value must be greater than the bound.\n- [Maximum range inclusive](_max-range-inclusive.md): The value must be less than or equal to the bound.\n- [Maximum range exclusive](_max-range-exclusive.md): The value must be less than the bound.\n\nIt is possible to omit the minimum or maximum bound.\n\nValues that *do not belong* in the *range* interval are considered *incorrect*."},
+			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_valid-range\": {\n\t\t\"_min-range-inclusive\": 0.0,\n\t\t\"_max-range-inclusive\": 100.0\n\t}\n}\n```\nThis *range* considers all values greater than `100.0` and smaller than `0.0` to be errors.\n\n\n\n```json\n{\n\t\"_valid-range\": {\n\t\t\"_min-range-inclusive\": 0,\n\t\t\"_max-range-inclusive\": 100\n\t}\n}\n```\nThis *range* is equivalent to the first one, except that in this case we don't add decimals to the bounds.\n\n\n\n```json\n{\n\t\"_valid-range\": {\n\t\t\"_min-range-exclusive\": 0\n\t}\n}\n```\nThis *range* considers all positive values greater than 0 to be correct."}
 		},
 		"_data": {
 			"_scalar": {
@@ -543,8 +543,8 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "Normal range of values"},
 			"_definition": {"iso_639_3_eng": "This field indicates the normal range for values, values that are out of range are considered outliers, not errors."},
-			"_description": {"iso_639_3_eng": "This field defines a *continuous numeric range* that represents the bounds *beyond which* values are considered *outliers*."},
-			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_min-range-inclusive\": 0.0,\n\t\"_max-range-inclusive\": 100.0\n}\n```\n\nValues below `0.0` and greater than `100.0` are considered *outliers*, no value is considered errors.\n\n```json\n{\n\t\"_min-range-inclusive\": 0,\n\t\"_max-range-inclusive\": 100\n}\n```\n\nSame as above, except that we use integers. Fractional values are allowed.\n\n```json\n{\n\t\"_min-range-exclusive\": 0\n}\n```\n\nAll values below `0` are considered outliers, no value is considered an error."}
+			"_description": {"iso_639_3_eng": "This property defines the range in which values are considered *normal*, values out of this range are considered *outliers*. This [continuous](_type_number.md) numeric *range* may *ignore* the *lower* or *upper* bound, and it allows specifying whether the *bounds* are *included* in the range, or not. The property is an object that may contain the following combination of elements:\n\n- [Minimum range inclusive](_min-range-inclusive.md): The value must be greater than or equal to the bound.\n- [Minimum range exclusive](_min-range-exclusive.md): The value must be greater than the bound.\n- [Maximum range inclusive](_max-range-inclusive.md): The value must be less than or equal to the bound.\n- [Maximum range exclusive](_max-range-exclusive.md): The value must be less than the bound.\n\nIt is possible to omit the minimum or maximum bound.\n\nOut of range values are considered outliers."},
+			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_normal-range\": {\n\t\t\"_min-range-inclusive\": 0.0,\n\t\t\"_max-range-inclusive\": 100.0\n\t}\n}\n```\nThis *range* considers all values greater than `100.0` or smaller than `0.0` to be outliers.\n\n\n\n```json\n{\n\t\"_normal-range\": {\n\t\t\"_min-range-inclusive\": 0,\n\t\t\"_max-range-inclusive\": 100\n\t}\n}\n```\nThis *range* is equivalent to the first one, except that in this case we don't add decimals to the bounds.\n\n\n\n```json\n{\n\t\"_normal-range\": {\n\t\t\"_min-range-exclusive\": 0\n\t}\n}\n```\nThis *range* considers all positive values greater than 0 to be normal, and all others to be outliers.\n\n"}
 		},
 		"_data": {
 			"_scalar": {
@@ -563,9 +563,9 @@
 			"_aid": ["min-items"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Minimum number of items"},
-			"_definition": {"iso_639_3_eng": "This field indicates the minimum number of items a list or set should have."},
-			"_description": {"iso_639_3_eng": "This field is relevant only when the *data container* is [array](_array_) or [set](_set_): it indicates the *minimum number of elements* the [array](_array_) or [set](_set_) should have.\n\nThe value is an integer and the *bound* is *inclusive*."}
+			"_title": {"iso_639_3_eng": "Minimum number of elements"},
+			"_definition": {"iso_639_3_eng": "This field indicates the minimum number of elements an item may contain."},
+			"_description": {"iso_639_3_eng": "This field can be used to indicate the *minimum number* of *elements* an item may contain. The property is used by the elements range [descriptor](_elements.md) to indicate the minimum bound for [array](_array.md) and [set](_set.md) data [container](_data.md) [elements](_elements.md).\n\nThe value is an *integer* and the *bound* is *inclusive*, the item to which the property refers to cannot have *less* elements than the value held by this field."}
 		},
 		"_data": {
 			"_scalar": {
@@ -585,9 +585,9 @@
 			"_aid": ["max-items"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Maximum number of items"},
-			"_definition": {"iso_639_3_eng": "This field indicates the maximum number of items a list or set should have."},
-			"_description": {"iso_639_3_eng": "This field is relevant only when the *data container* is [array](_array_) or [set](_set_): it indicates the *maximum number of elements* the [array](_array_) or [set](_set_) should have.\n\nThe value is an integer and the *bound* is *inclusive*."}
+			"_title": {"iso_639_3_eng": "Maximum number of elements"},
+			"_definition": {"iso_639_3_eng": "This field indicates the maximum number of elements an item may contain."},
+			"_description": {"iso_639_3_eng": "This field can be used to indicate the *maximum number* of *elements* an item may contain. The property is used by the elements range [descriptor](_elements.md) to indicate the maximum bound for [array](_array.md) and [set](_set.md) data [container](_data.md) [elements](_elements.md).\n\nThe value is an *integer* and the *bound* is *inclusive*, the item to which the property refers to cannot have *more* elements than the value held by this field."}
 		},
 		"_data": {
 			"_scalar": {
@@ -605,8 +605,8 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Range minimum inclusive"},
-			"_definition": {"iso_639_3_eng": "This field indicates the minimum value in a range, including the bound itself."},
-			"_description": {"iso_639_3_eng": "This field is relevant only for *numeric* [discrete](_type_integer) or [continuous](_type_number) data, it indicates the *minimum bound* of a *range*, *including* the *bound* value. Only numbers *greater or equal* to this field's value are considered *valid*."}
+			"_definition": {"iso_639_3_eng": "This field indicates the minimum value in a range, including the bound value."},
+			"_description": {"iso_639_3_eng": "This field is relevant only for *numeric* [discrete](_type_integer) or [continuous](_type_number) data, it indicates the *minimum bound* of a [range](_range.md), *including* the *bound* value. Only numbers *greater or equal* to this field's value belong to the [range](_range.md)."}
 		},
 		"_data": {
 			"_scalar": {
@@ -624,8 +624,8 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Range maximum inclusive"},
-			"_definition": {"iso_639_3_eng": "This field indicates the maximum value in a range, including the bound itself."},
-			"_description": {"iso_639_3_eng": "This field is relevant only for *numeric* [discrete](_type_integer) or [continuous](_type_number) data, it indicates the *maximum bound* of a *range*, *including* the *bound* value. Only numbers *smaller or equal* to this field's value are considered *valid*."}
+			"_definition": {"iso_639_3_eng": "This field indicates the maximum value in a range, including the bound value."},
+			"_description": {"iso_639_3_eng": "This field is relevant only for *numeric* [discrete](_type_integer) or [continuous](_type_number) data, it indicates the *maximum bound* of a [range](_range.md), *including* the *bound* value. Only numbers *smaller or equal* to this field's value belong to the [range](_range.md)."}
 		},
 		"_data": {
 			"_scalar": {
@@ -643,8 +643,8 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Range minimum exclusive"},
-			"_definition": {"iso_639_3_eng": "This field indicates the minimum value in a range, excluding the bound itself."},
-			"_description": {"iso_639_3_eng": "This field is relevant only for *numeric* [discrete](_type_integer) or [continuous](_type_number) data, it indicates the *minimum bound* of a *range*, *excluding* the *bound* value. Only numbers *greater* than this field's value are considered *valid*."}
+			"_definition": {"iso_639_3_eng": "This field indicates the minimum value in a range, excluding the bound value."},
+			"_description": {"iso_639_3_eng": "This field is relevant only for *numeric* [discrete](_type_integer) or [continuous](_type_number) data, it indicates the *minimum bound* of a [range](_range.md), *excluding* the *bound* value. Only numbers *greater* than this field's value belong to the [range](_range.md)."}
 		},
 		"_data": {
 			"_scalar": {
@@ -662,8 +662,8 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Range maximum exclusive"},
-			"_definition": {"iso_639_3_eng": "This field indicates the maximum value in a range, excluding the bound itself."},
-			"_description": {"iso_639_3_eng": "This field is relevant only for *numeric* [discrete](_type_integer) or [continuous](_type_number) data, it indicates the *maximum bound* of a *range*, *excluding* the *bound* value. Only numbers *smaller* than this field's value are considered *valid*."}
+			"_definition": {"iso_639_3_eng": "This field indicates the maximum value in a range, excluding the bound value."},
+			"_description": {"iso_639_3_eng": "This field is relevant only for *numeric* [discrete](_type_integer) or [continuous](_type_number) data, it indicates the *maximum bound* of a [range](_range.md), *excluding* the *bound* value. Only numbers *smaller* than this field's value belong to the [range](_range.md)."}
 		},
 		"_data": {
 			"_scalar": {
