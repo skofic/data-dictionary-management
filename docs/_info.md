@@ -13,11 +13,17 @@
 
 
 ------
-This property should represent the *name*, *title* or *label* that represents the term. This *text* will be used as a *label* in *input forms*, or as table *headers* in which data will be displayed.
+This property holds a [section](_type_object.md) that *groups* all the fields used to *document* a *term*. All the properties contained in this section are a key/value [dictionaries](_dict.md) in which the *key* is an [enumerated](_type_string_enum.md) [language](iso_639_3) code, and the value is the [text](_type_string.md) representing the [title](_title.md), [definition](_definition.md), [description](_description.md), [examples](_examples.md) and [notes](_notes.md) regarding the *term* in which the *section* is *included*.
 
-The contents are a *key/value dictionary* in which the *key* represents the *language* in which the title is expressed, and the *value* is the *title* in *plain text*.
+This property is *required* by all term types, there is only *one* case in which it can be *omitted*: if the term is a [controlled vocabulary element](_type_string_enum.md) and there is a [bridge](_predicate_bridge-of.md) relationship to a preferred term, this section can be omitted, since it would contain the same content as the referenced term. This case occurs when the same enumeration has different codes and you want to enforce one specific code version as default.
 
-This property is *required* by all term types, there is only *one* instance in which it can be *omitted*: if the term is a *controlled vocabulary element* and there is a [bridge](_predicate_bridge-of) relationship to a preferred term, this section can be omitted, since it would contain the same content as the referenced term. This case occurs when the same enumeration has different codes and you want to enforce a specific code version as default.
+This section includes the following properties:
+
+- [Title](_title.md): title, name or label.
+- [Definition](_definition.md): definition or summary description.
+- [Description](_description.md): extensive and thorough description with explanations.
+- [Examples](_examples.md): eventual usage examples.
+- [Notes](_notes.md): notes, comments and additional information.
 
 
 
@@ -25,13 +31,26 @@ This property is *required* by all term types, there is only *one* instance in w
 ```json
 {
 	"_info": {
-		"_title": "Elevation",
-		"_definition": "Elevation records a location altitude starting from sea level."
-		"_description": "This *measuremenr* is important to correctly assess climatic variables.",
-		"_examples": "`0`: Sea level.
-`1500`: Elevation at 1500m.
-`-20`: Negative elevations are allowed."
-		"_notes": "The value *must* be expressed in meters."
+		"_title": {
+			"iso_639_3_eng": "Elevation",
+			"iso_639_3_ita": "Elevazione"
+		},
+		"_definition": {
+			"iso_639_3_eng": "Altitude starting from sea level.",
+			"iso_639_3_ita": "Altitudine a partire dal livello del mare."
+		},
+		"_description": {
+			"iso_639_3_eng": "Used in climatic and geographic datasets.",
+			"iso_639_3_ita": "Utilizzato nei dati climatici e geografici."
+		},
+		"_examples": {
+			"iso_639_3_eng": "0: sea level; 1500: location.",
+			"iso_639_3_ita": "0: livello del mare; 1500: posizione."
+		},
+		"_notes": {
+			"iso_639_3_eng": "Values must be expressed in meters.",
+			"iso_639_3_ita": "I valori devono essere espressi in metri."
+		}
 	}
 }
 ```
