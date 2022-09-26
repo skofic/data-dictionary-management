@@ -131,17 +131,18 @@
 		},
 		"_rule": {
 			"_required": {
-				"_selection-descriptors_one-none": [
-					"_scalar"
+				"_selection-descriptors_all": [
+					"_set_scalar"
 				]
 			},
 			"_banned": [
+				"_scalar",
 				"_array",
 				"_set",
 				"_dict"
 			],
 			"_immutable": [
-				"_scalar"
+				"_set_scalar"
 			]
 		}
 	},
