@@ -157,7 +157,7 @@ Only *one* of the above containers may be included at the level of the [data con
 
 ##### Scalar container (`_scalar`)
 
-The leaf element of any data definition is a [scalar](_scalar.md) value. A scalar value is a *data container* that holds a *single* value, *not a list* of values. These are common *types* of *scalar values*:
+The leaf element of any data definition is a [scalar](_scalar.md) value. A scalar value is a *data container* that holds a *single* value, not [arrays](_array.md), [sets](_set.md) or [dictionaries](_dict.md).. These are common *types* of *scalar values*:
 
 - A [boolean](_type_boolean.md) value, `true` or `false`.
 - An [integer](_type_integer.md) or a [float](_type_number.md) including a [timestamp](_type_number_timestamp.md).
@@ -167,7 +167,7 @@ The leaf element of any data definition is a [scalar](_scalar.md) value. A scala
 The *scalar container definition* is an [object structure](_scalar.md) that holds the following descriptors:
 
 - [Classification](_class.md) (`_class`): An enumeration indicating the data classification.
-- [Data type](_type.md) (`_type`): An enumeration indicating the type of the data.
+- [Data type](_type.md) (`_type`): An enumeration indicating the data type of the value, only scalar containers get to define the type.
 - [Data kind](_kind.md) (`_kind`): This field is related to the [data type](_type.md) (`_type`) value, the data kind is used to *restrict* [enumerations](_type_enum.md) to a specific *controlled vocabulary* and [objects](_type_object.md) to a specific object *structure definition*.
 - [Format](_format.md) (`_format`): This field is an [enumeration](_type_string_enum.md) used to indicate in what format the character data is encoded.
 - [Unit](_unit.md) (`_unit`): An [enumeration](_type_string_enum.md) that indicates in what unit the data is represented.
@@ -177,5 +177,179 @@ The *scalar container definition* is an [object structure](_scalar.md) that hold
 - [Valid range](_valid-range.md) (`_valid-range`): A structure property indicating the *range* within which values are *valid*; values out of range are considered *errors*.
 - [Normal range](_normal-range.md) (`_normal-range`): A structure property indicating the *range* within which values are considered *normal*; values out of range are considered *outliers*.
 
+The section *requires* the [data type](_type.md) property, which defines the *type* of the *scalar value*. The section may also be left *empty*, in which case the *value* can be a *scalar* of the above types.
+
+```json
+{
+	"_data": {
+		"_scalar": {
+			"_class": "_class_quantity",
+			"_type": "_type_integer",
+			"_valid-range": {
+				"_min-range-inclusive": 5,
+				"_max-range-inclusive": 10
+			}
+		}
+	}
+}
+```
+
+The above example describes a [quantitative](__class_quantity.md) [scalar](_scalar.md) discrete [integer](_type_integer.md) value in the [range](_range.md) from `5` to `10` inclusive.
 
 
+```json
+{
+	"_data": {
+		"_scalar": {
+			"_class": "_class_quantity",
+			"_type": "_type_number",
+			"_valid-range": {
+				"_min-range-inclusive": 0.0,
+				"_max-range-exclusive": 100.0
+			},
+			"_unit": "_unit_length_cm"
+		}
+	}
+}
+```
+
+The above example describes a [continuous](_type_number.md) [quantitative](_class_quantity.md) [scalar](_scalar.md) value *greater or equal* to `0.0` and *less than* `100.0` representing a [length](_unit_length.md) in [centimetres](_unit_length_cm.md).
+
+
+```json
+{
+	"_data": {
+		"_scalar": {
+			"_class": "_class_category",
+			"_type": "_type_string_enum",
+			"_kind": ["iso_639_3"]
+		}
+	}
+}
+```
+
+The above example describes a [categorical](_class_category.md) [enumeration](_type_string_enum.md) that must be chosen from the [controlled vocabulary](_type_string_enum.md) of [ISO 639](iso_639_3) *language codes*.
+
+
+```json
+{
+	"_data": {
+		"_scalar": {
+			"_type": "_type_string",
+			"_format": "_format_markdown"
+		}
+	}
+}
+```
+
+The above example describes a [text](_type_string.md) value *encoded* in [Markdown](_format_markdown.md) format.
+
+
+```json
+{
+	"_scalar": {}
+}
+```
+
+The above example shows the *data definition* for a *descriptor* that can hold *scalar* values of *any type*.
+
+##### Array container (`_array`)
+
+The [array](_array.md) section defines a *container* for a *list* of *values*, the section must contain *one* or *none* of the following data definition sections: the [scalar section](_scalar.md) (`_scalar`), the [array section](_array.md) (`_array`), the [set section](_set.md) (`_set`) or the [dictionary section](_dict.md) (`_dict`). If the section is *empty*, it means that the *value* can be an *array* of *any shape* or *type*.
+
+```json
+{
+	"_data": {
+		"_array": {
+			"_scalar": {
+				"_class": "_class_quantity",
+				"_type": "_type_integer",
+				"_valid-range": {
+					"_min-range-inclusive": 5,
+					"_max-range-inclusive": 10
+				}
+			}
+		}
+	}
+}
+```
+
+The above example describes an *array* of [scalar](_scalar.md) [integer](_type_integer.md) values in the [range](_valid-range.md) from `5` to `10` inclusive, the *list element* values are [quantitatve](_class_quantity.md).
+
+```json
+{
+	"_data": {
+		"_array": {
+			"_array": {
+				"_scalar": {
+					"_class": "_class_quantity",
+					"_type": "_type_number",
+					"_valid-range": {
+						"_min-range-inclusive": 0.0,
+						"_max-range-exclusive": 100.0
+					},
+					"_unit": "_unit_length_cm"
+				}
+			}
+		}
+	}
+}
+```
+
+The above example describes a [list](_array.md) of [number](_type_number.md) [arrays](_array.md) whose values must be *greater than or equal* to `0.0` and *less than* `100.0` representing [lengths](_unit_length.md) in [centimetres](_unit_length_cm.md), the *elements* of the *inner list* are [quantitatve](_class_quantity.md).
+
+```json
+{
+	"_data": {
+		"_array": {
+			"_set": {
+				"_scalar": {
+					"_class": "_class_category",
+					"_type": "_type_string_enum",
+					"_kind": ["iso_639_3"]
+				}
+			}
+		}
+	}
+}
+```
+
+The above example describes an [array](_array.md) of [sets](_set.md) whose *elements* belong to the [enumeration](_type_string_enum.md) of ISO 639 [language codes](iso_639_3.md), the *elements* of the *inner set* are [categorical](_class_category.md).
+
+```json
+{
+	"_data": {
+		"_array": {
+			"_dict": {
+				"_dict_key": {
+					"_class": "_class_category",
+					"_type_key": "_type_string_enum",
+					"_kind": ["iso_3166_1"]
+				},
+				"_dict_value": {
+					"_scalar": {
+						"_type": "_type_object",
+						"_kind": ["my_struct_definition"]
+					}
+				}
+			}
+		}
+	}
+}
+```
+
+The above example describes an [array](_array.md) of [key/value dictionary](_dict.md) *items*. The [dictionary keys](_dict_key.md) are [categorical](_class_category.md) and must be selected among the elements of the [ISO country codes](iso_3166_1.md) [controlled vocabulary](_type_string_enum.md). The dictionary values are [objects](_type_object.md) of the `my_struct_definition` class.
+
+```json
+{
+	"_data": {
+		"_array": {}
+	}
+}
+```
+
+The above example describes an [array](_array.md) that can have *elements* of *any shape* or *type*.
+
+##### Set container (`_set`)
+
+The [set](_set.md) section defines a *container* for a *list* of *unique values*, which means that no two values in the list must be the same. This section must contain the [scalar set section](_set_scalar.md) (`_scalar`), this section cannot be left empty.
