@@ -247,6 +247,31 @@
 	},
 	
 	{
+		"_from": "_scalar",
+		"_to": "_dict_value",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_dict_value"]
+	},
+	{
+		"_from": "_array",
+		"_to": "_dict_value",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_dict_value"]
+	},
+	{
+		"_from": "_set",
+		"_to": "_dict_value",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_dict_value"]
+	},
+	{
+		"_from": "_dict",
+		"_to": "_dict_value",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_dict_value"]
+	},
+	
+	{
 		"_from": "_min-range-inclusive",
 		"_to": "_range",
 		"_predicate": "_predicate_property-of",

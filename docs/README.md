@@ -352,4 +352,113 @@ The above example describes an [array](_array.md) that can have *elements* of *a
 
 ##### Set container (`_set`)
 
-The [set](_set.md) section defines a *container* for a *list* of *unique values*, which means that no two values in the list must be the same. This section must contain the [scalar set section](_set_scalar.md) (`_scalar`), this section cannot be left empty.
+The [set](_set.md) section defines a *container* for a *list* of *unique values*, which means that no two values in the list must be the same. This section must contain the [scalar set section](_set_scalar.md) (`_set_scalar`), this section cannot be left empty.
+
+Given that the elements of the set must implement equality, the type of data that sets can hold is limited to:
+
+- [Boolean](_type_boolean.md) values, `true` or `false`.
+- [Integers](_type_integer.md) or [floats](_type_number.md) including [timestamps](_type_number_timestamp.md).
+- Text [strings](_type_string.md), including [key references](_type_string_key-md), [document handles](_type_string_handle.md) and a [controlled vocabulary elements](_type_string_enum.md).
+
+```json
+{
+	"_data": {
+		"_set": {
+			"_set_scalar": {
+				"_set_type": "_type_boolean"
+			}
+		}
+	}
+}
+```
+
+This example describes a *set* of [booleans](_type_boolean.md); such a *set* can *only* contain *one* element, `true` or `false`.
+
+
+```json
+{
+	"_data": {
+		"_set": {
+			"_set_scalar": {
+				"_class": "_class_quantity",
+				"_set_type": "_type_integer"
+			}
+		}
+	}
+}
+```
+
+This example describes a *set* of [discrete](_type_integer.md) [quantitative](_class_quantity.md) values.
+
+
+```json
+{
+	"_data": {
+		"_set": {
+			"_set_scalar": {
+				"_class": "_class_quantity",
+				"_set_type": "_type_number",
+				"_valid-range": {
+					"_min-range-inclusive": 0.0,
+					"_max-range-exclusive": 100.0
+				},
+				"_unit": "_unit_length_cm"
+			}
+		}
+	}
+}
+```
+
+This example describes a *set* of [continuous](_type_number.md) [quantitative](_class_quantity.md) values *greater or equal* to `0.0` and *less than* `100.0` representing [centimetres](_unit_length_cm.md).
+
+
+```json
+{
+	"_data": {
+		"_set": {
+			"_set_scalar": {
+				"_class": "_class_category",
+				"_set_type": "_type_string_enum",
+				"_kind": ["iso_639_3"]
+			}
+		}
+	}
+}
+```
+
+This example describes a set of [categorical](_class_category.md) [enumerations](_type_string_enum.md) that must be chosen from the [controlled vocabulary](_type_string_enum.md) of [ISO 639](iso_639_3.md) *language codes*.
+
+###### Set scalar container (`_set_scalar`)
+
+A set can only contain scalar elements, for this reason the type of value must be known: this means that the scalar container must contain the [set scalar container](_set_scalar.md) definition (`_set_scalar`). This container definition is similar to the [scalar](_scalar.md) container, but it includes a smaller selection of properties:
+
+- [Classification](_class.md) (`_class`): An enumeration indicating the data classification.
+- [Data type](_set_type.md) (`_set_type`): An enumeration indicating the data type of the value. Note that this property is similar to the scalar container data type, but it does not include the [object](_type_object.md) and [_type_object_geo-json.md]() data types.
+- [Data kind](_kind.md) (`_kind`): This field is related to the [data type](_set_type.md) (`_set_type`) value, the data kind is used to *restrict* [enumerations](_type_enum.md) to a specific *controlled vocabulary*.
+- [Format](_format.md) (`_format`): This field is an [enumeration](_type_string_enum.md) used to indicate in what format the character data is encoded.
+- [Unit](_unit.md) (`_unit`): An [enumeration](_type_string_enum.md) that indicates in what unit the data is represented.
+- [Unit name](_unit-name.md) (`_unit-name`): The name of the unit, in case it is not yet part of the [unit](_unit.md) enumeration.
+- [Regular expression](_regexp.md) (`_regexp`): A *validation* pattern for [strings](_type_string.md).
+- [Range](_range.md) (`_range`): A structure property indicating a generic *range*.
+- [Valid range](_valid-range.md) (`_valid-range`): A structure property indicating the *range* within which values are *valid*; values out of range are considered *errors*.
+- [Normal range](_normal-range.md) (`_normal-range`): A structure property indicating the *range* within which values are considered *normal*; values out of range are considered *outliers*.
+
+##### Dictionary container (`_dict`)
+
+A [dictionary](_dict.md) is technically an object, except that its property names are dynamic, which makes them keys, rather than descriptors.
+
+When validating dictionaries, the *key* and the *value* are handled separately, the *keys* are defined in the [dictionary key container](_dict_key.md) and are *not matched* to *descriptors*, the *values* are defined in the [dictionary value container](_dict_value.md).
+
+This container section *expects both* of the following properties:
+
+- [Dictionary key definition](_dict_key.md) (`_dict_key`): This section defines the type of dictionary keys, which are by definition [strings](_type_string.md), including [document keys](_type_string_key.md) and [enumerations](_type_string_enum.md). This section is similar to the [scalar container definition](_scalar.md), and it features the following properties:
+    - [Classification](_class.md) (`_class`): An enumeration indicating the data classification.
+    - [Data type](_type_key.ms) (`_type_key`): An enumeration indicating the data type of the value. Note that this property is similar to the scalar container data type, but it does not include the [object](_type_object.md) and [GeoJson](_type_object_geo-json.md) data types.
+    - [Data kind](_kind.md) (`_kind`): This field is related to the [data type](_type_key.md) (`_type_key`) value, the data kind is used to *restrict* [enumerations](_type_enum.md) to a specific *controlled vocabulary*.
+    - [Format](_format.md) (`_format`): This field is an [enumeration](_type_string_enum.md) used to indicate in what format the character data is encoded.
+    - [Unit](_unit.md) (`_unit`): An [enumeration](_type_string_enum.md) that indicates in what unit the data is represented.
+    - [Unit name](_unit-name.md) (`_unit-name`): The name of the unit, in case it is not yet part of the [unit](_unit.md) enumeration.
+    - [Regular expression](_regexp.md) (`_regexp`): A *validation* pattern for [strings](_type_string.md).
+- [Dictionary data definition](_dict_value.md) (`_dict_value`): This section defines the *shape* and *type* of the data that constitutes the *value* part of the dictionary key/value pair. This container section 
+
+##### 
