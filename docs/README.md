@@ -568,5 +568,141 @@ This example describes a dictionary whose *keys* are plain [strings](_type_strin
 
 The [term](_term_object.md) that contains this [section](_rule.md) is the root of a tree graph in which are connected all the [descriptor terms](_term_descriptor.md) that represent the properties that belong to that term. This tells us which are the properties that belong to that object definition. This [section](_rule.md) contains fields that can be used to define which properties are required, which should not be included and other information, the section has the following fields:
 
-- [Required properties](_required.md) (_required): This field 
+- [Required properties](_required.md) (`_required`): This section can be used to indicate which properties are required by the object, if this rule is not satisfied, this means that the object is invalid. The section can contain the following fields:
+    - [One of](_selection-descriptors_one.md) (`_selection-descriptors_one`): should contain *one* descriptor from the set.
+    - [One or none](_selection-descriptors_one-none.md) (`_selection-descriptors_one-none`): should contain *one* descriptor from the set or *none*.
+    - [Any of](_selection-descriptors_any.md) (`_selection-descriptors_any`): should contain *one* or *more* descriptors from the set.
+    - [Any one in](_selection-descriptors_any-one.md) (`_selection-descriptors_any-one`): should include *one* or *no* element from *each list* of sets, the result should have at *least one* element.
+    - [All of](_selection-descriptors_all.md) (`_selection-descriptors_all`): should contain *all* descriptors from the set.
+- [Recommended properties](_recommended.md) (`_recommended`): This section can be used to indicate properties that are recommended to be included in the object, but that are not necessarily required. This section contains the same fields as the [required properties section](_required.md)(`_required`).
+- [Banned properties](_banned.md) (`_banned`): This field is a [set](_set.md) of [descriptor](_term_descriptor.md) [global identifiers](_gid.md) listing which properties *should not* be *included* in the object.
+- [Computed properties](_computed.md) (`_computed`): This field is a set of [descriptor](_term_descriptor.md) [global identifiers](_gid.md) listing which properties are *computed*, meaning that their content is automatically calculated.
 
+- [Locked properties](_locked.md) (`_locked`): This field is a set of [descriptor](_term_descriptor.md) [global identifiers](_gid.md) listing which properties are *locked*, meaning that their content *cannot* be *modified*, but they can be *deleted*. This applies also to nested properties.
+- [Immutable properties](_immutable.md) (`_immutable`): This field is a set of [descriptor](_term_descriptor.md) [global identifiers](_gid.md) listing which properties are *immutable*, meaning that their content *cannot* be *modified* and they *cannot* be *deleted*. This applies also to nested properties.
+- [Default values](_default-value.md) (`_default-value`): This is an [object](_type_object.md) whose properties correspond to properties in the object, and the values represent the default values. Before storing the document, if the object does not have already any of the properties in the default values object, these will be added along with their default value.
+
+Any [term](_term_object.md) that features this [section](_rule.md) can be used as a value of the [data kind](_kind.md) for values of [type](_type.md) [object](_type_object.md).
+
+```json
+{
+	"_rule": {
+		"_required": {
+			"_selection-descriptors_one": ["one", "two", "three"],
+			"_selection-descriptors_any": ["red", "green", "blue"],
+			"_selection-descriptors_all": ["mon", "tue", "wed"]
+		},
+		"_recommended": {
+			"_selection-descriptors_any": ["thu", "fri"]
+		},
+		"_banned": ["sat", "sun"],
+		"_computed": ["_key"],
+		"_locked": ["lock"],
+		"_immutable": ["_key"],
+		"_default-value": {
+			"one": 1,
+			"two": 2,
+			"three": [1, 2, 3],
+			"red": "It is red"
+		}
+	}
+}
+```
+
+[Objects](_type_object.md) whose [data kind](_kind.md) features this [rule section](_rule.md) should satisfy the following conditions:
+
+- It must contain one of the following descriptors: `one`, `two` or `three`
+- It must contain one or more of the following descriptors: `red`, `green` or `blue`.
+- It must contain all of the following descriptors: `mon`, `tue` and `wed`.
+- It is recommended to contain one or more of the following descriptors: `thu` and/or `fri`.
+- It must not contain the following descriptors: `sat` and `sun`.
+- The `_key` descriptor is computed.
+- The `lock` descriptor is locked: it cannot be modified, but it can be deleted.
+- The `_key` descriptor's value is immutable: it cannot be modified or deleted.
+- If omitted, the following descriptors will be added to the object along with the following default values:
+    - `one`: `1`
+    - `two`: `2`
+    - `three`: `[1, 2, 3]`
+    - `red`: `"It is red"`
+
+### Edges
+
+Terms are used to define descriptors, object definitions, types and enumerations, they do so by providing properties that indicate the rules that must be satisfied so that the entity defined by the term can behave correctly. However, that is only one part of the picture: terms are related to each other forming graphs that represent controlled vocabularies, data structure property dependencies and any other relationship of the form **subject** => **predicate** => **object**.
+
+[Edges](_edge.md) are documents, from the *edges* collection, that contain a [reference](_type_string_handle.md) to the [subject](_from.md) node, a [predicate](_predicate.md) that indicates the *type* of *relationship*, and a [reference](_type_string_handle.md) to the [object](_to.md) node.
+
+![](/Users/milko/Local/Development/Projects/EUFGIS/data-dictionary-management/docs/subject-Predicate-Object.png)
+
+In the above simple example, `A` is the [subject](_from.md), `Belongs to` is the [predicate](_predicate.md) and `B` is the [object](_to.md). No two edges can share the same combination, this means that there can only be one edge connecting two terms, in the same direction, with the same predicate. Using this mechanism we can create large graphs that can describe the structure of many objects used in the data dictionary.
+
+An edge must contain the following properties:
+
+- [Subject](_from.md) (`_from`): The [source node](_from.md) of the relationship, it is the subject of the verb defined by the [predicate](_predicate.md). The value of this field is the [handle](_type_string_handle.md) of the document representing the [subjet node](_from.md).
+- [Predicate](_predicate.md) (`_predicate`): The predicate defines the type and nature of the relationship, it describes how the two nodes are related. The value of this field is the [global identifier](_gid.md) of the [predicates](_predicate.md) [enumeration](_type_string_enum.md), which currently has the following values:
+    - [Enumeration of](_predicate_enum-of.md) (`_predicate_enum-of`): The [source](_from.md) (`_from`) term is an [enumerated](_type_string_enum.md) element of the [destination](_to.md) (`_to`) term. This means that the [source term](_from.md) is a valid choice in the [enumeration](_type_string_enum.md) defined by the [destination term](_to.md).
+    - [Property of](_predicate_property-of.md) (`_predicate_property-of`): The [source](_from.md) (`_from`) descriptor is a property belonging to the [destination](_to.md) (`_to`) term. This means that the [source term](_from.md) is a property belonging to the [object structure](_type_object.md) defined by the [destination term](_to.md).
+    - [Section of](_predicate_section-of.md) (`_predicate_section-of`): The [source](_from.md) (`_from`) node is a *section*, *category* or *group* of the [destination](_to.md) (`_to`) node. Such relationships are used to group elements under a common parent that will not be an active member of the graph.
+    - [Bridge of](_predicate_bridge-of.md) (`_predicate_bridge-of`): The [destination](_to.md) (`_to`) node will use the graph of the [source](_from.md) node *without including* the *source node* in its own graph.
+- [Object](_to.md) (`_to`): The [destination node](_to.md) of the relationship, it is the object of the verb defined by the [predicate](_predicate.md). The value of this field is the [handle](_type_string_handle.md) of the document representing the [object node](_to.md).
+- [Path](_path.md) (`_path`): This field is a [set](_set.md) of [document handles](_type_string_handle.md) listing all the branches that make use of that specific [edge](_edge.md). This property allows different graphs to share the same edge and not lose their path. The values represent all root nodes whose graphs cross this [edge](edge.md).
+
+The [document key](_key.md) of [edges](_edge.md) is computed by concatenating the [source node](_from.md), the [predicate](_predicate.md) and the [destination node](_to.md), separated by the slash (`/`) token, in an MD5 hash. This ensures that no two edges share the same relationship. The [path](_path.md) property makes it possible to have several graph branches use the same edge, and a side effect of this is that all the edges of a specific graph will have the reference to the root node in the elements of the [path](_path) property.
+
+Graphs are used in the dictionary to implement [controlled vocabularies](_type_string_enum.md):
+
+![GraphSimpleEnum](/Users/milko/Local/Development/Projects/EUFGIS/data-dictionary-management/docs/GraphSimpleEnum.png)
+
+In the above example we have an [enumeration](_type_string_enum.md) called *COUNTRIES* that has two elements: *ITALY* and *FRANCE*. This results in two edges:
+
+```json
+[
+	{
+		"_from": "terms/ITALY",
+		"_predicate": "_predicate_enum-of",
+		"_to": "terms/COUNTRIES",
+		"_path": ["terms/COUNTRIES"]
+	},
+	
+	{
+		"_from": "terms/FRANCE",
+		"_predicate": "_predicate_enum-of",
+		"_to": "terms/COUNTRIES",
+		"_path": ["terms/COUNTRIES"]
+	}
+]
+```
+
+ITALY and FRANCE are two valid elements of the COUNTRIES enumeration.
+
+Enumerations may contain a hierarchy, meaning that an element may contain other elements, and both the container and the contained elements are valid choices:
+
+![GraphEnumHierarchic](/Users/milko/Local/Development/Projects/EUFGIS/data-dictionary-management/docs/GraphEnumHierarchic.png)
+
+In the above example we have a LOCATION enumeration in which both EUROPE and ASIA are valid elements, you may select FRANCE as a location, but also ASIA, and at the same time EUROPE and ASIA act as groups for the respective countries.
+
+Suppose that we have a lot of countries and we want to group them under [sections](_predicate_section-of.md):
+
+![](/Users/milko/Local/Development/Projects/EUFGIS/data-dictionary-management/docs/GraphEnumSection.png)
+
+Here we have two sections, EUROPE and ASIA: each country belongs to its section, but ASIA and EUROPE are not valid enumeration choices, they are categories that can be used to implement popup lists.
+
+If we were to traverse the graph we would begin with COUNTRIES and reach the [edge](_edge.md) that connects it with EUROPE using the [section](_predicate_section-of.md) [predicate](_predicate.md). Since sections are ignored, we continue and reach ITALY: that is a valid choice, because the [predicate](_predicate.md) is [enumeration-of](_predicate_enum-of.md).
+
+Now suppose we want to create an enumeration that uses the COUNTRIES graph, but only includes a subset of the elements, this can be done by using the [path](_path.md) [edge](_edge.md) property and the [bridge-of](_predicate_bridge-of) [predicate](_predicate.md):
+
+![GraphEnumBridge](/Users/milko/Local/Development/Projects/EUFGIS/data-dictionary-management/docs/GraphEnumBridge.png)
+
+In the above example we want to create the MY-ENUM enumeration that only includes ITALY and INDIA. We do the following:
+
+- We create an edge between COUNTRIES and MY-ENUM with the [bridge-of](_predicate_bridge-of.md) [predicate](_predicate.md). This means that when traversing the graph using MY-ENUM as the reference graph, we shall ignore the COUNTRIES node,
+- We traverse the graph to the EUROPE and ASIA [sections](_predicate_section-of.md) where we simply append the MY-ENUM reference to the [path](_path.md) property of the [edges](_edge.md) that connect the nodes we are interested of: in our case ITALY and INDIA.
+
+This way we have the following advantages:
+
+- We reduce the number of edges.
+- We can use existing enumerations in the user interface when creating new graphs that share branches.
+- If the order of traversal is not important, we can reach all the elements of a specific graph only by querying the path property.
+
+The same mechanism is valid for [object](_type_object.md) structures: the [property-of](_predicate_property-of.md) [predicate](_predicate.md) replaces the [enumeration-of](_predicate_enum-of.md) one.
+
+Graphs could be used also to organise user interface elements, such as forms, disclosure sections and other structured display elements by adding new descriptors.
