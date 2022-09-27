@@ -474,7 +474,99 @@ This container section *expects both* of the following properties:
 
 The [key definition]() (`dict_key`) may be left *empty*, in that case keys are expected to be plain [strings](_type_string.md). The [value definition](_dict_value.md) (`_dict_value`) can also be left *empty*, in that case the value can take any shape or type. Finally, the [dictionary container section](_dict.md) (`_dict`) can also be left empty, in which case keys are expected to be plain strings and values anything.
 
+```json
+{
+	"_dict": {
+		"_dict_key": {
+			"_class": "_class_category",
+			"_type_key": "_type_string_enum",
+			"_kind": "iso_639_3"
+		},
+		"_dict_value": {
+			"_array": {
+				"_scalar": {
+					"_class": "_class_other",
+					"_type": "_type_object",
+					"_kind": ["some_object_definition"]
+				},
+				"_elements": {
+					"_min-items": 5,
+					"_max-items": 10
+				}
+			}
+		}
+	}
+}
+```
+
+This example describes a [dictionary](_dict.md) whose [keys](_dict_key.md) are the [global identifiers](_gid.md) of the [ISO 639 languages](iso_639_3.md) [controlled vocabulary](_type_string_enum.md) elements, and the values are [arrays](_array.md) of [objects](_type_object.md) that correspond to the `some_object_definition` [data structure](_term_object.md) [definition](_rule.md); these *array* values must have a *minimum* of `5` elements and a *maximum* of `10` elements.
+
+```json
+{
+	"_dict_key": {
+		"_class": "_class_other",
+		"_type_key": "_type_string"
+	},
+	"_dict_value": {
+		"_scalar": {
+			"_class": "_class_other",
+			"_type": "_type_string",
+			"_format": "_format_markdown"
+		}
+	}
+}
+```
+
+This example describes a [dictionary](_dict.md) whose [keys](_dict_key.md) are plain [strings](_type_string.md) and [values](_dict_value.md) are [text](_type_string.md) in Markdown [format](_format_markdown.md). It implements a multilingual styled text field.
+
+```json
+{
+	"_dict_key": {
+		"_class": "_class_category",
+		"_type_key": "_type_string_enum",
+		"_kind": "iso_3166_1"
+	},
+	"_dict_value": {
+		"_dict": {
+			"_dict_key": {
+				"_class": "_class_category",
+				"_type_key": "_type_string_enum",
+				"_kind": "iso_639_3"
+			},
+			"_dict_value": {
+				"_array": {
+					"_scalar": {
+						"_class": "_class_other",
+						"_type": "_type_object",
+						"_kind": "some_object_definition",
+					},
+					"_elements": {
+						"_min-items": 5,
+						"_max-items": 10
+					}
+				}
+			}
+		}
+	}
+}
+```
+
+This example describes a [dictionary](_dict.md) whose [keys](_dict_key.md) are the [global identifiers](_gid.md) of the [ISO 3166](iso_3166_1.md) country [controlled vocabulary](_type_string_enum.md) elements, and the [values](_dict_value.md) are another [dictionary](_dict.md) whose keys are [ISO 639 language](iso_639_3.md) [codes](_type_string_enum.md) and whose [values](_dict_value.md) are [arrays](_array.md) that correspond to the `some_object_definition` data structure [type](_term_object.md); these array values must have a *minimum* of `5` elements and a *maximum* of `10` elements. This is an example of a recursive dictionary definition.
+
+```json
+{
+	"_dict_key": {},
+	"_dict_value": {}
+}
+```
+
+This example describes a dictionary whose *keys* are plain [strings](_type_string.md) and whose *values* can be *any container* with *any value*.
+
 #### Data structure section (`_rule`)
 
-[This section](_rule.md) is *required* by terms that represent [object definitions](_term_object.md). You define object data by creating a [descriptor term](_term_descriptor.md) with a [data type](_type.md) of [object](_type_object.md) (`_type_object`). This 
+[This section](_rule.md) is *required* by terms that represent [object definitions](_term_object.md). You define object data by creating a [descriptor term](_term_descriptor.md) with a [data type](_type.md) of [object](_type_object.md) (`_type_object`). This only tells the dictionary that the descriptor is an [object](_type_object.md), but the properties it contains and which ones are required is not known: this is why we have the [data kind](_kind.md) property in which we can set the [object definition term](_term_object.md) that contains these rules.
+
+The [term](_term_object.md) that contains this [section](_rule.md) is the root of a tree graph in which are connected all the [descriptor terms](_term_descriptor.md) that represent the properties that belong to that term. This tells us which are the properties that belong to that object definition. This [section](_rule.md) contains fields that can be used to define which properties are required, which should not be included and other information, the section has the following fields:
+
+- [Required properties](_required.md) (_required): This field 
 

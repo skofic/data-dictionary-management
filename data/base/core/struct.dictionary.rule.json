@@ -43,6 +43,19 @@
 	},
 	
 	{
+		"_from": "_selection-descriptors",
+		"_to": "_required",
+		"_predicate": "_predicate_bridge-of",
+		"_path": ["_required"]
+	},
+	{
+		"_from": "_selection-descriptors",
+		"_to": "_recommended",
+		"_predicate": "_predicate_bridge-of",
+		"_path": ["_recommended"]
+	},
+	
+	{
 		"_from": "_selection-terms_one",
 		"_to": "_selection-terms",
 		"_predicate": "_predicate_property-of",
@@ -77,31 +90,31 @@
 		"_from": "_selection-descriptors_one",
 		"_to": "_selection-descriptors",
 		"_predicate": "_predicate_property-of",
-		"_path": ["_selection-descriptors"]
+		"_path": ["_selection-descriptors", "_required", "_recommended"]
 	},
 	{
 		"_from": "_selection-descriptors_one-none",
 		"_to": "_selection-descriptors",
 		"_predicate": "_predicate_property-of",
-		"_path": ["_selection-descriptors"]
+		"_path": ["_selection-descriptors", "_required", "_recommended"]
 	},
 	{
 		"_from": "_selection-descriptors_any",
 		"_to": "_selection-descriptors",
 		"_predicate": "_predicate_property-of",
-		"_path": ["_selection-descriptors"]
+		"_path": ["_selection-descriptors", "_required", "_recommended"]
 	},
 	{
 		"_from": "_selection-descriptors_any-one",
 		"_to": "_selection-descriptors",
 		"_predicate": "_predicate_property-of",
-		"_path": ["_selection-descriptors"]
+		"_path": ["_selection-descriptors", "_required", "_recommended"]
 	},
 	{
 		"_from": "_selection-descriptors_all",
 		"_to": "_selection-descriptors",
 		"_predicate": "_predicate_property-of",
-		"_path": ["_selection-descriptors"]
+		"_path": ["_selection-descriptors", "_required", "_recommended"]
 	},
 	
 	{
