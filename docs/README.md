@@ -452,13 +452,29 @@ When validating dictionaries, the *key* and the *value* are handled separately, 
 This container section *expects both* of the following properties:
 
 - [Dictionary key definition](_dict_key.md) (`_dict_key`): This section defines the type of dictionary keys, which are by definition [strings](_type_string.md), including [document keys](_type_string_key.md) and [enumerations](_type_string_enum.md). This section is similar to the [scalar container definition](_scalar.md), and it features the following properties:
+
     - [Classification](_class.md) (`_class`): An enumeration indicating the data classification.
-    - [Data type](_type_key.ms) (`_type_key`): An enumeration indicating the data type of the value. Note that this property is similar to the scalar container data type, but it does not include the [object](_type_object.md) and [GeoJson](_type_object_geo-json.md) data types.
+    - [Data type](_type_key.ms) (`_type_key`): An enumeration indicating the data type of the value. Note that this property is similar to the scalar container data type, but it does not include the [boolean](_type_boolean.md), [integer](_type_integer.md), [number](_type_number.md), [document handle](_type_string_handle.md), [object](_type_object.md) and [GeoJson](_type_object_geo-json.md) data types.
     - [Data kind](_kind.md) (`_kind`): This field is related to the [data type](_type_key.md) (`_type_key`) value, the data kind is used to *restrict* [enumerations](_type_enum.md) to a specific *controlled vocabulary*.
     - [Format](_format.md) (`_format`): This field is an [enumeration](_type_string_enum.md) used to indicate in what format the character data is encoded.
     - [Unit](_unit.md) (`_unit`): An [enumeration](_type_string_enum.md) that indicates in what unit the data is represented.
     - [Unit name](_unit-name.md) (`_unit-name`): The name of the unit, in case it is not yet part of the [unit](_unit.md) enumeration.
     - [Regular expression](_regexp.md) (`_regexp`): A *validation* pattern for [strings](_type_string.md).
-- [Dictionary data definition](_dict_value.md) (`_dict_value`): This section defines the *shape* and *type* of the data that constitutes the *value* part of the dictionary key/value pair. This container section 
 
-##### 
+- [Dictionary data definition](_dict_value.md) (`_dict_value`): This section defines the *shape* and *type* of the data that constitutes the *value* part of the dictionary key/value pair. This container section expects the same elements as the [data section definition](_data.md):
+
+    - [Scalar container](_scalar.md) (`_scalar`): Scalar data type definition.
+
+    - [Array container](_array.md) (`_array`):Array container definition.
+
+    - [Set container](_set.md) (`_set`): Set container definition.
+
+    - [Dictionary container](_dict.md) (`_dict`): Key/value dictionary definition.
+
+
+The [key definition]() (`dict_key`) may be left *empty*, in that case keys are expected to be plain [strings](_type_string.md). The [value definition](_dict_value.md) (`_dict_value`) can also be left *empty*, in that case the value can take any shape or type. Finally, the [dictionary container section](_dict.md) (`_dict`) can also be left empty, in which case keys are expected to be plain strings and values anything.
+
+#### Data structure section (`_rule`)
+
+[This section](_rule.md) is *required* by terms that represent [object definitions](_term_object.md). You define object data by creating a [descriptor term](_term_descriptor.md) with a [data type](_type.md) of [object](_type_object.md) (`_type_object`). This 
+

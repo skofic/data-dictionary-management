@@ -3,25 +3,25 @@
 		"_from": "_scalar",
 		"_to": "_data",
 		"_predicate": "_predicate_property-of",
-		"_path": ["_data"]
+		"_path": ["_data", "_dict_value"]
 	},
 	{
 		"_from": "_array",
 		"_to": "_data",
 		"_predicate": "_predicate_property-of",
-		"_path": ["_data"]
+		"_path": ["_data", "_dict_value"]
 	},
 	{
 		"_from": "_set",
 		"_to": "_data",
 		"_predicate": "_predicate_property-of",
-		"_path": ["_data"]
+		"_path": ["_data", "_dict_value"]
 	},
 	{
 		"_from": "_dict",
 		"_to": "_data",
 		"_predicate": "_predicate_property-of",
-		"_path": ["_data"]
+		"_path": ["_data", "_dict_value"]
 	},
 	
 	{
@@ -204,6 +204,13 @@
 	},
 	
 	{
+		"_from": "_dict",
+		"_to": "_dict_value",
+		"_predicate": "_predicate_bridge-of",
+		"_path": ["_dict_value"]
+	},
+	
+	{
 		"_from": "_class",
 		"_to": "_dict_key",
 		"_predicate": "_predicate_property-of",
@@ -244,31 +251,6 @@
 		"_to": "_dict_key",
 		"_predicate": "_predicate_property-of",
 		"_path": ["_dict_key"]
-	},
-	
-	{
-		"_from": "_scalar",
-		"_to": "_dict_value",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_dict_value"]
-	},
-	{
-		"_from": "_array",
-		"_to": "_dict_value",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_dict_value"]
-	},
-	{
-		"_from": "_set",
-		"_to": "_dict_value",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_dict_value"]
-	},
-	{
-		"_from": "_dict",
-		"_to": "_dict_value",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_dict_value"]
 	},
 	
 	{
