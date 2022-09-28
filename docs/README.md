@@ -690,7 +690,7 @@ If we were to traverse the graph we would begin with COUNTRIES and reach the [ed
 
 Now suppose we want to create an enumeration that uses the COUNTRIES graph, but only includes a subset of the elements, this can be done by using the [path](_path.md) [edge](_edge.md) property and the [bridge-of](_predicate_bridge-of) [predicate](_predicate.md):
 
-![GraphEnumBridge](/Users/milko/Local/Development/Projects/EUFGIS/data-dictionary-management/docs/GraphEnumBridge.png)
+![GraphEnumBridge](./GraphEnumBridge.png)
 
 In the above example we want to create the MY-ENUM enumeration that only includes ITALY and INDIA. We do the following:
 
