@@ -631,7 +631,7 @@ Terms are used to define descriptors, object definitions, types and enumerations
 
 [Edges](_edge.md) are documents, from the *edges* collection, that contain a [reference](_type_string_handle.md) to the [subject](_from.md) node, a [predicate](_predicate.md) that indicates the *type* of *relationship*, and a [reference](_type_string_handle.md) to the [object](_to.md) node.
 
-![](/Users/milko/Local/Development/Projects/EUFGIS/data-dictionary-management/docs/subject-Predicate-Object.png)
+![](./subject-Predicate-Object.png)
 
 In the above simple example, `A` is the [subject](_from.md), `Belongs to` is the [predicate](_predicate.md) and `B` is the [object](_to.md). No two edges can share the same combination, this means that there can only be one edge connecting two terms, in the same direction, with the same predicate. Using this mechanism we can create large graphs that can describe the structure of many objects used in the data dictionary.
 
@@ -650,7 +650,7 @@ The [document key](_key.md) of [edges](_edge.md) is computed by concatenating th
 
 Graphs are used in the dictionary to implement [controlled vocabularies](_type_string_enum.md):
 
-![GraphSimpleEnum](/Users/milko/Local/Development/Projects/EUFGIS/data-dictionary-management/docs/GraphSimpleEnum.png)
+![GraphSimpleEnum](./GraphSimpleEnum.png)
 
 In the above example we have an [enumeration](_type_string_enum.md) called *COUNTRIES* that has two elements: *ITALY* and *FRANCE*. This results in two edges:
 
@@ -676,13 +676,13 @@ ITALY and FRANCE are two valid elements of the COUNTRIES enumeration.
 
 Enumerations may contain a hierarchy, meaning that an element may contain other elements, and both the container and the contained elements are valid choices:
 
-![GraphEnumHierarchic](/Users/milko/Local/Development/Projects/EUFGIS/data-dictionary-management/docs/GraphEnumHierarchic.png)
+![GraphEnumHierarchic](./GraphEnumHierarchic.png)
 
 In the above example we have a LOCATION enumeration in which both EUROPE and ASIA are valid elements, you may select FRANCE as a location, but also ASIA, and at the same time EUROPE and ASIA act as groups for the respective countries.
 
 Suppose that we have a lot of countries and we want to group them under [sections](_predicate_section-of.md):
 
-![](/Users/milko/Local/Development/Projects/EUFGIS/data-dictionary-management/docs/GraphEnumSection.png)
+![](./GraphEnumSection.png)
 
 Here we have two sections, EUROPE and ASIA: each country belongs to its section, but ASIA and EUROPE are not valid enumeration choices, they are categories that can be used to implement popup lists.
 
