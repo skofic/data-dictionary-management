@@ -1,0 +1,579 @@
+[
+	{
+		"_from": "_toc_descriptors",
+		"_to": "_toc",
+		"_predicate": "_predicate_section-of",
+		"_path": ["_toc"]
+	},
+	{
+		"_from": "_toc_enumerations",
+		"_to": "_toc",
+		"_predicate": "_predicate_section-of",
+		"_path": ["_toc"]
+	},
+	{
+		"_from": "_toc_objects",
+		"_to": "_toc",
+		"_predicate": "_predicate_section-of",
+		"_path": ["_toc"]
+	},
+
+	{
+		"_from": "_code",
+		"_to": "_toc_descriptors",
+		"_predicate": "_predicate_section-of",
+		"_path": ["_toc_descriptors"]
+	},
+	{
+		"_from": "_info",
+		"_to": "_toc_descriptors",
+		"_predicate": "_predicate_section-of",
+		"_path": ["_toc_descriptors"]
+	},
+	{
+		"_from": "_data",
+		"_to": "_toc_descriptors",
+		"_predicate": "_predicate_section-of",
+		"_path": ["_toc_descriptors"]
+	},
+	{
+		"_from": "_rule",
+		"_to": "_toc_descriptors",
+		"_predicate": "_predicate_section-of",
+		"_path": ["_toc_descriptors"]
+	},
+
+	{
+		"_from": "_nid",
+		"_to": "_code",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_code"]
+	},
+	{
+		"_from": "_lid",
+		"_to": "_code",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_code"]
+	},
+	{
+		"_from": "_gid",
+		"_to": "_code",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_code"]
+	},
+	{
+		"_from": "_aid",
+		"_to": "_code",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_code"]
+	},
+	{
+		"_from": "_pid",
+		"_to": "_code",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_code"]
+	},
+	{
+		"_from": "_name",
+		"_to": "_code",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_code"]
+	},
+	{
+		"_from": "_regexp",
+		"_to": "_code",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_code"]
+	},
+
+	{
+		"_from": "_title",
+		"_to": "_info",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_info"]
+	},
+	{
+		"_from": "_definition",
+		"_to": "_info",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_info"]
+	},
+	{
+		"_from": "_description",
+		"_to": "_info",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_info"]
+	},
+	{
+		"_from": "_examples",
+		"_to": "_info",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_info"]
+	},
+	{
+		"_from": "_notes",
+		"_to": "_info",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_info"]
+	},
+
+	{
+		"_from": "_scalar",
+		"_to": "_data",
+		"_predicate": "_predicate_section-of",
+		"_path": ["_data"]
+	},
+	{
+		"_from": "_array",
+		"_to": "_data",
+		"_predicate": "_predicate_section-of",
+		"_path": ["_data"]
+	},
+	{
+		"_from": "_set",
+		"_to": "_data",
+		"_predicate": "_predicate_section-of",
+		"_path": ["_data"]
+	},
+	{
+		"_from": "_dict",
+		"_to": "_data",
+		"_predicate": "_predicate_section-of",
+		"_path": ["_data"]
+	},
+
+	{
+		"_from": "_class",
+		"_to": "_scalar",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_scalar"]
+	},
+	{
+		"_from": "_type",
+		"_to": "_scalar",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_scalar"]
+	},
+	{
+		"_from": "_kind",
+		"_to": "_scalar",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_scalar"]
+	},
+	{
+		"_from": "_format",
+		"_to": "_scalar",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_scalar"]
+	},
+	{
+		"_from": "_unit",
+		"_to": "_scalar",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_scalar"]
+	},
+	{
+		"_from": "_unit-name",
+		"_to": "_scalar",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_scalar"]
+	},
+	{
+		"_from": "_regexp",
+		"_to": "_scalar",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_scalar"]
+	},
+	{
+		"_from": "_range",
+		"_to": "_scalar",
+		"_predicate": "_predicate_section-of",
+		"_path": ["_scalar"]
+	},
+	{
+		"_from": "_valid-range",
+		"_to": "_scalar",
+		"_predicate": "_predicate_section-of",
+		"_path": ["_scalar"]
+	},
+	{
+		"_from": "_normal-range",
+		"_to": "_scalar",
+		"_predicate": "_predicate_section-of",
+		"_path": ["_scalar"]
+	},
+
+	{
+		"_from": "_toc_min-range",
+		"_to": "_range",
+		"_predicate": "_predicate_section-of",
+		"_path": ["_range"]
+	},
+	{
+		"_from": "_toc_max-range",
+		"_to": "_range",
+		"_predicate": "_predicate_section-of",
+		"_path": ["_range"]
+	},
+	{
+		"_from": "_toc_min-range",
+		"_to": "_valid-range",
+		"_predicate": "_predicate_section-of",
+		"_path": ["_valid-range"]
+	},
+	{
+		"_from": "_toc_max-range",
+		"_to": "_valid-range",
+		"_predicate": "_predicate_section-of",
+		"_path": ["_valid-range"]
+	},
+	{
+		"_from": "_toc_min-range",
+		"_to": "_normal-range",
+		"_predicate": "_predicate_section-of",
+		"_path": ["_normal-range"]
+	},
+	{
+		"_from": "_toc_max-range",
+		"_to": "_normal-range",
+		"_predicate": "_predicate_section-of",
+		"_path": ["_normal-range"]
+	},
+
+	{
+		"_from": "_min-range-inclusive",
+		"_to": "_toc_min-range",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_toc_min-range"]
+	},
+	{
+		"_from": "_min-range-exclusive",
+		"_to": "_toc_min-range",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_toc_min-range"]
+	},
+
+	{
+		"_from": "_max-range-inclusive",
+		"_to": "_toc_max-range",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_toc_max-range"]
+	},
+	{
+		"_from": "_max-range-exclusive",
+		"_to": "_toc_max-range",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_toc_max-range"]
+	},
+
+	{
+		"_from": "_scalar",
+		"_to": "_array",
+		"_predicate": "_predicate_section-of",
+		"_path": ["_array"]
+	},
+	{
+		"_from": "_array",
+		"_to": "_array",
+		"_predicate": "_predicate_section-of",
+		"_path": ["_array"]
+	},
+	{
+		"_from": "_set",
+		"_to": "_array",
+		"_predicate": "_predicate_section-of",
+		"_path": ["_array"]
+	},
+	{
+		"_from": "_dict",
+		"_to": "_array",
+		"_predicate": "_predicate_section-of",
+		"_path": ["_array"]
+	},
+	{
+		"_from": "_elements",
+		"_to": "_array",
+		"_predicate": "_predicate_section-of",
+		"_path": ["_array"]
+	},
+
+	{
+		"_from": "_min-items",
+		"_to": "_elements",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_elements"]
+	},
+	{
+		"_from": "_max-items",
+		"_to": "_elements",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_elements"]
+	},
+
+	{
+		"_from": "_set_scalar",
+		"_to": "_set",
+		"_predicate": "_predicate_section-of",
+		"_path": ["_set"]
+	},
+	{
+		"_from": "_elements",
+		"_to": "_set",
+		"_predicate": "_predicate_section-of",
+		"_path": ["_set"]
+	},
+
+	{
+		"_from": "_class",
+		"_to": "_set_scalar",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_set_scalar"]
+	},
+	{
+		"_from": "_set_type",
+		"_to": "_set_scalar",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_set_scalar"]
+	},
+	{
+		"_from": "_kind",
+		"_to": "_set_scalar",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_set_scalar"]
+	},
+	{
+		"_from": "_format",
+		"_to": "_set_scalar",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_set_scalar"]
+	},
+	{
+		"_from": "_unit",
+		"_to": "_set_scalar",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_set_scalar"]
+	},
+	{
+		"_from": "_unit-name",
+		"_to": "_set_scalar",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_set_scalar"]
+	},
+	{
+		"_from": "_regexp",
+		"_to": "_set_scalar",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_set_scalar"]
+	},
+	{
+		"_from": "_range",
+		"_to": "_set_scalar",
+		"_predicate": "_predicate_section-of",
+		"_path": ["_set_scalar"]
+	},
+	{
+		"_from": "_valid-range",
+		"_to": "_set_scalar",
+		"_predicate": "_predicate_section-of",
+		"_path": ["_set_scalar"]
+	},
+	{
+		"_from": "_normal-range",
+		"_to": "_set_scalar",
+		"_predicate": "_predicate_section-of",
+		"_path": ["_set_scalar"]
+	},
+
+	{
+		"_from": "_set_scalar",
+		"_to": "_set",
+		"_predicate": "_predicate_section-of",
+		"_path": ["_set"]
+	},
+	{
+		"_from": "_elements",
+		"_to": "_set",
+		"_predicate": "_predicate_section-of",
+		"_path": ["_set"]
+	},
+
+	{
+		"_from": "_dict_key",
+		"_to": "_dict",
+		"_predicate": "_predicate_section-of",
+		"_path": ["_dict"]
+	},
+	{
+		"_from": "_dict_value",
+		"_to": "_dict",
+		"_predicate": "_predicate_section-of",
+		"_path": ["_dict"]
+	},
+
+	{
+		"_from": "_class",
+		"_to": "_dict_key",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_dict_key"]
+	},
+	{
+		"_from": "_kind",
+		"_to": "_dict_key",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_dict_key"]
+	},
+	{
+		"_from": "_format",
+		"_to": "_dict_key",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_dict_key"]
+	},
+	{
+		"_from": "_unit",
+		"_to": "_dict_key",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_dict_key"]
+	},
+	{
+		"_from": "_unit-name",
+		"_to": "_dict_key",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_dict_key"]
+	},
+	{
+		"_from": "_regexp",
+		"_to": "_dict_key",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_dict_key"]
+	},
+
+	{
+		"_from": "_scalar",
+		"_to": "_dict_value",
+		"_predicate": "_predicate_section-of",
+		"_path": ["_dict_value"]
+	},
+	{
+		"_from": "_array",
+		"_to": "_dict_value",
+		"_predicate": "_predicate_section-of",
+		"_path": ["_dict_value"]
+	},
+	{
+		"_from": "_set",
+		"_to": "_dict_value",
+		"_predicate": "_predicate_section-of",
+		"_path": ["_dict_value"]
+	},
+	{
+		"_from": "_dict",
+		"_to": "_dict_value",
+		"_predicate": "_predicate_section-of",
+		"_path": ["_dict_value"]
+	},
+
+	{
+		"_from": "_required",
+		"_to": "_rule",
+		"_predicate": "_predicate_section-of",
+		"_path": ["_rule"]
+	},
+	{
+		"_from": "_recommended",
+		"_to": "_rule",
+		"_predicate": "_predicate_section-of",
+		"_path": ["_rule"]
+	},
+	{
+		"_from": "_banned",
+		"_to": "_rule",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_rule"]
+	},
+	{
+		"_from": "_computed",
+		"_to": "_rule",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_rule"]
+	},
+	{
+		"_from": "_locked",
+		"_to": "_rule",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_rule"]
+	},
+	{
+		"_from": "_immutable",
+		"_to": "_rule",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_rule"]
+	},
+	{
+		"_from": "_default-value",
+		"_to": "_rule",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_rule"]
+	},
+
+	{
+		"_from": "_selection-descriptors_one",
+		"_to": "_required",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_required"]
+	},
+	{
+		"_from": "_selection-descriptors_one-none",
+		"_to": "_required",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_required"]
+	},
+	{
+		"_from": "_selection-descriptors_any",
+		"_to": "_required",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_required"]
+	},
+	{
+		"_from": "_selection-descriptors_any-one",
+		"_to": "_required",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_required"]
+	},
+	{
+		"_from": "_selection-descriptors_all",
+		"_to": "_required",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_required"]
+	},
+
+	{
+		"_from": "_selection-descriptors_one",
+		"_to": "_recommended",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_recommended"]
+	},
+	{
+		"_from": "_selection-descriptors_one-none",
+		"_to": "_recommended",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_recommended"]
+	},
+	{
+		"_from": "_selection-descriptors_any",
+		"_to": "_recommended",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_recommended"]
+	},
+	{
+		"_from": "_selection-descriptors_any-one",
+		"_to": "_recommended",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_recommended"]
+	},
+	{
+		"_from": "_selection-descriptors_all",
+		"_to": "_recommended",
+		"_predicate": "_predicate_field-of",
+		"_path": ["_recommended"]
+	}
+]

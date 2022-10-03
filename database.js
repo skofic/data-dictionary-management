@@ -89,8 +89,8 @@ async function InitDatabase(db)
 	//
 	// Create graphs.
 	//
-	await InitSchemaGraph(db)
-	await InitTopoGraph(db)
+	// await InitSchemaGraph(db)
+	// await InitTopoGraph(db)
 
 } // InitDatabase()
 

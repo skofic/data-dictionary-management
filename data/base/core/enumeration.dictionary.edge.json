@@ -25,6 +25,19 @@
 			"_description": {"iso_639_3_eng": "This predicate is used in [object](_type_object) graphs. When two nodes are related with this predicate, it means that the *source* node is a *property* of the *destination* node. This means that the source node should be considered a *property* of the *data structure* defined by the *destination* node. This also implies that the source node represents a *descriptor*."}
 		}
 	},
+	{
+		"_code": {
+			"_nid": "_predicate",
+			"_lid": "field-of",
+			"_gid": "_predicate_field-of",
+			"_aid": ["field-of"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Field of"},
+			"_definition": {"iso_639_3_eng": "The source node is a field of the destination node."},
+			"_description": {"iso_639_3_eng": "This [predicate](_predicate.md) can be used to create graphs that can be used in *user interfaces* as *forms* or *tables of content*. The *field-of* predicate indicates that the [source](_from.md) node is a *field of*, or an *element* of the [object](_to.md) node. This denomination is *general*, it *does not* indicate a *precise function* such as [enumeration](_predicate_enum-of.md) or [property](_predicate_property-of.md), it indicates a *membership* that is *general* in nature."}
+		}
+	},
 	
 	{
 		"_code": {
