@@ -149,9 +149,9 @@
 	
 	{
 		"_code": {
-			"_nid": "gcu_population",
+			"_nid": "gcu_pop",
 			"_lid": "statuses",
-			"_gid": "gcu_population_statuses",
+			"_gid": "gcu_pop_statuses",
 			"_aid": ["statuses"]
 		},
 		"_info": {
@@ -161,9 +161,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu_population_statuses",
+			"_nid": "gcu_pop_statuses",
 			"_lid": "1",
-			"_gid": "gcu_population_statuses_1",
+			"_gid": "gcu_pop_statuses_1",
 			"_aid": ["1"]
 		},
 		"_info": {
@@ -172,9 +172,9 @@
 	},   
 	{
 		"_code": {
-			"_nid": "gcu_population_statuses",
+			"_nid": "gcu_pop_statuses",
 			"_lid": "2",
-			"_gid": "gcu_population_statuses_2",
+			"_gid": "gcu_pop_statuses_2",
 			"_aid": ["2"]
 		},
 		"_info": {
@@ -183,9 +183,9 @@
 	},   
 	{
 		"_code": {
-			"_nid": "gcu_population_statuses",
+			"_nid": "gcu_pop_statuses",
 			"_lid": "3",
-			"_gid": "gcu_population_statuses_3",
+			"_gid": "gcu_pop_statuses_3",
 			"_aid": ["3"]
 		},
 		"_info": {
@@ -195,9 +195,9 @@
 
 	{
 		"_code": {
-			"_nid": "gcu_population",
+			"_nid": "gcu_pop",
 			"_lid": "situs",
-			"_gid": "gcu_population_situs",
+			"_gid": "gcu_pop_situs",
 			"_aid": ["situs"]
 		},
 		"_info": {
@@ -207,9 +207,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu_population_situs",
+			"_nid": "gcu_pop_situs",
 			"_lid": "1",
-			"_gid": "gcu_population_situs_1",
+			"_gid": "gcu_pop_situs_1",
 			"_aid": ["1"]
 		},
 		"_info": {
@@ -218,9 +218,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu_population_situs",
+			"_nid": "gcu_pop_situs",
 			"_lid": "2",
-			"_gid": "gcu_population_situs_2",
+			"_gid": "gcu_pop_situs_2",
 			"_aid": ["2"]
 		},
 		"_info": {
@@ -230,9 +230,9 @@
 	
 	{
 		"_code": {
-			"_nid": "gcu_population",
+			"_nid": "gcu_pop",
 			"_lid": "origins",
-			"_gid": "gcu_population_origins",
+			"_gid": "gcu_pop_origins",
 			"_aid": ["origins"]
 		},
 		"_info": {
@@ -242,9 +242,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu_population_origins",
+			"_nid": "gcu_pop_origins",
 			"_lid": "1",
-			"_gid": "gcu_population_origins_1",
+			"_gid": "gcu_pop_origins_1",
 			"_aid": ["1"]
 		},
 		"_info": {
@@ -253,9 +253,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu_population_origins",
+			"_nid": "gcu_pop_origins",
 			"_lid": "2",
-			"_gid": "gcu_population_origins_2",
+			"_gid": "gcu_pop_origins_2",
 			"_aid": ["2"]
 		},
 		"_info": {
@@ -264,9 +264,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu_population_origins",
+			"_nid": "gcu_pop_origins",
 			"_lid": "3",
-			"_gid": "gcu_population_origins_3",
+			"_gid": "gcu_pop_origins_3",
 			"_aid": ["3"]
 		},
 		"_info": {
@@ -276,9 +276,9 @@
 
 	{
 		"_code": {
-			"_nid": "gcu_population",
+			"_nid": "gcu_pop",
 			"_lid": "systems",
-			"_gid": "gcu_population_systems",
+			"_gid": "gcu_pop_systems",
 			"_aid": ["systems"]
 		},
 		"_info": {
@@ -287,9 +287,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu_population_systems",
+			"_nid": "gcu_pop_systems",
 			"_lid": "1",
-			"_gid": "gcu_population_systems_1",
+			"_gid": "gcu_pop_systems_1",
 			"_aid": ["1"]
 		},
 		"_info": {
@@ -298,9 +298,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu_population_systems",
+			"_nid": "gcu_pop_systems",
 			"_lid": "2",
-			"_gid": "gcu_population_systems_2",
+			"_gid": "gcu_pop_systems_2",
 			"_aid": ["2"]
 		},
 		"_info": {
@@ -310,9 +310,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu_population_systems",
+			"_nid": "gcu_pop_systems",
 			"_lid": "3",
-			"_gid": "gcu_population_systems_3",
+			"_gid": "gcu_pop_systems_3",
 			"_aid": ["3"]
 		},
 		"_info": {
@@ -322,9 +322,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu_population_systems",
+			"_nid": "gcu_pop_systems",
 			"_lid": "4",
-			"_gid": "gcu_population_systems_4",
+			"_gid": "gcu_pop_systems_4",
 			"_aid": ["4"]
 		},
 		"_info": {
@@ -333,9 +333,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu_population_systems",
+			"_nid": "gcu_pop_systems",
 			"_lid": "5",
-			"_gid": "gcu_population_systems_5",
+			"_gid": "gcu_pop_systems_5",
 			"_aid": ["5"]
 		},
 		"_info": {
@@ -345,9 +345,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu_population_systems",
+			"_nid": "gcu_pop_systems",
 			"_lid": "6",
-			"_gid": "gcu_population_systems_6",
+			"_gid": "gcu_pop_systems_6",
 			"_aid": ["6"]
 		},
 		"_info": {
@@ -357,9 +357,9 @@
 
 	{
 		"_code": {
-			"_nid": "gcu_population",
+			"_nid": "gcu_pop",
 			"_lid": "managements",
-			"_gid": "gcu_population_managements",
+			"_gid": "gcu_pop_managements",
 			"_aid": ["managements"]
 		},
 		"_info": {
@@ -368,9 +368,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu_population_managements",
+			"_nid": "gcu_pop_managements",
 			"_lid": "1",
-			"_gid": "gcu_population_managements_1",
+			"_gid": "gcu_pop_managements_1",
 			"_aid": ["1"]
 		},
 		"_info": {
@@ -379,9 +379,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu_population_managements",
+			"_nid": "gcu_pop_managements",
 			"_lid": "2",
-			"_gid": "gcu_population_managements_2",
+			"_gid": "gcu_pop_managements_2",
 			"_aid": ["2"]
 		},
 		"_info": {
@@ -390,9 +390,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu_population_managements",
+			"_nid": "gcu_pop_managements",
 			"_lid": "3",
-			"_gid": "gcu_population_managements_3",
+			"_gid": "gcu_pop_managements_3",
 			"_aid": ["3"]
 		},
 		"_info": {
@@ -402,9 +402,9 @@
 	
 	{
 		"_code": {
-			"_nid": "gcu_population",
+			"_nid": "gcu_pop",
 			"_lid": "justifications",
-			"_gid": "gcu_population_justifications",
+			"_gid": "gcu_pop_justifications",
 			"_aid": ["justifications"]
 		},
 		"_info": {
@@ -413,9 +413,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu_population_justifications",
+			"_nid": "gcu_pop_justifications",
 			"_lid": "1",
-			"_gid": "gcu_population_justifications_1",
+			"_gid": "gcu_pop_justifications_1",
 			"_aid": ["1"]
 		},
 		"_info": {
@@ -424,9 +424,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu_population_justifications",
+			"_nid": "gcu_pop_justifications",
 			"_lid": "2",
-			"_gid": "gcu_population_justifications_2",
+			"_gid": "gcu_pop_justifications_2",
 			"_aid": ["2"]
 		},
 		"_info": {
@@ -435,9 +435,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu_population_justifications",
+			"_nid": "gcu_pop_justifications",
 			"_lid": "3",
-			"_gid": "gcu_population_justifications_3",
+			"_gid": "gcu_pop_justifications_3",
 			"_aid": ["3"]
 		},
 		"_info": {
@@ -447,9 +447,9 @@
 	
 	{
 		"_code": {
-			"_nid": "gcu_population",
+			"_nid": "gcu_pop",
 			"_lid": "reproducings",
-			"_gid": "gcu_population_reproducings",
+			"_gid": "gcu_pop_reproducings",
 			"_aid": ["reproducings"]
 		},
 		"_info": {
@@ -458,9 +458,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu_population_reproducings",
+			"_nid": "gcu_pop_reproducings",
 			"_lid": "1",
-			"_gid": "gcu_population_reproducings_1",
+			"_gid": "gcu_pop_reproducings_1",
 			"_aid": ["1"]
 		},
 		"_info": {
@@ -473,9 +473,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu_population_reproducings",
+			"_nid": "gcu_pop_reproducings",
 			"_lid": "2",
-			"_gid": "gcu_population_reproducings_2",
+			"_gid": "gcu_pop_reproducings_2",
 			"_aid": ["2"]
 		},
 		"_info": {
@@ -488,9 +488,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu_population_reproducings",
+			"_nid": "gcu_pop_reproducings",
 			"_lid": "3",
-			"_gid": "gcu_population_reproducings_3",
+			"_gid": "gcu_pop_reproducings_3",
 			"_aid": ["3"]
 		},
 		"_info": {
@@ -503,9 +503,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu_population_reproducings",
+			"_nid": "gcu_pop_reproducings",
 			"_lid": "4",
-			"_gid": "gcu_population_reproducings_4",
+			"_gid": "gcu_pop_reproducings_4",
 			"_aid": ["4"]
 		},
 		"_info": {
@@ -518,9 +518,9 @@
 	
 	{
 		"_code": {
-			"_nid": "gcu_population",
+			"_nid": "gcu_pop",
 			"_lid": "sex-ratios",
-			"_gid": "gcu_population_sex-ratios",
+			"_gid": "gcu_pop_sex-ratios",
 			"_aid": ["sex-ratios"]
 		},
 		"_info": {
@@ -529,9 +529,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu_population_sex-ratios",
+			"_nid": "gcu_pop_sex-ratios",
 			"_lid": "1",
-			"_gid": "gcu_population_sex-ratios_1",
+			"_gid": "gcu_pop_sex-ratios_1",
 			"_aid": ["1"]
 		},
 		"_info": {
@@ -540,9 +540,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu_population_sex-ratios",
+			"_nid": "gcu_pop_sex-ratios",
 			"_lid": "2",
-			"_gid": "gcu_population_sex-ratios_2",
+			"_gid": "gcu_pop_sex-ratios_2",
 			"_aid": ["2"]
 		},
 		"_info": {
@@ -551,9 +551,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu_population_sex-ratios",
+			"_nid": "gcu_pop_sex-ratios",
 			"_lid": "3",
-			"_gid": "gcu_population_sex-ratios_3",
+			"_gid": "gcu_pop_sex-ratios_3",
 			"_aid": ["3"]
 		},
 		"_info": {
@@ -563,9 +563,9 @@
 	
 	{
 		"_code": {
-			"_nid": "gcu_population",
+			"_nid": "gcu_pop",
 			"_lid": "regenerations",
-			"_gid": "gcu_population_regenerations",
+			"_gid": "gcu_pop_regenerations",
 			"_aid": ["regenerations"]
 		},
 		"_info": {
@@ -574,9 +574,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu_population_regenerations",
+			"_nid": "gcu_pop_regenerations",
 			"_lid": "1",
-			"_gid": "gcu_population_regenerations_1",
+			"_gid": "gcu_pop_regenerations_1",
 			"_aid": ["1"]
 		},
 		"_info": {
@@ -585,9 +585,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu_population_regenerations",
+			"_nid": "gcu_pop_regenerations",
 			"_lid": "2",
-			"_gid": "gcu_population_regenerations_2",
+			"_gid": "gcu_pop_regenerations_2",
 			"_aid": ["2"]
 		},
 		"_info": {
@@ -596,9 +596,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu_population_regenerations",
+			"_nid": "gcu_pop_regenerations",
 			"_lid": "3",
-			"_gid": "gcu_population_regenerations_3",
+			"_gid": "gcu_pop_regenerations_3",
 			"_aid": ["3"]
 		},
 		"_info": {
@@ -608,9 +608,9 @@
 	
 	{
 		"_code": {
-			"_nid": "gcu_population",
+			"_nid": "gcu_pop",
 			"_lid": "distributions",
-			"_gid": "gcu_population_distributions",
+			"_gid": "gcu_pop_distributions",
 			"_aid": ["distributions"]
 		},
 		"_info": {
@@ -619,9 +619,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu_population_distributions",
+			"_nid": "gcu_pop_distributions",
 			"_lid": "1",
-			"_gid": "gcu_population_distributions_1",
+			"_gid": "gcu_pop_distributions_1",
 			"_aid": ["1"]
 		},
 		"_info": {
@@ -630,9 +630,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu_population_distributions",
+			"_nid": "gcu_pop_distributions",
 			"_lid": "2",
-			"_gid": "gcu_population_distributions_2",
+			"_gid": "gcu_pop_distributions_2",
 			"_aid": ["2"]
 		},
 		"_info": {
@@ -641,9 +641,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu_population_distributions",
+			"_nid": "gcu_pop_distributions",
 			"_lid": "3",
-			"_gid": "gcu_population_distributions_3",
+			"_gid": "gcu_pop_distributions_3",
 			"_aid": ["3"]
 		},
 		"_info": {

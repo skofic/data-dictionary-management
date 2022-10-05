@@ -24,17 +24,150 @@
 			"_description": {"iso_639_3_eng": "Namespace grouping all terms and descriptors specific to gene conservation units."}
 		}
 	},
+	
 	{
 		"_code": {
 			"_nid": "gcu",
-			"_lid": "population",
-			"_gid": "gcu_population",
-			"_aid": ["population"]
+			"_lid": "id",
+			"_gid": "gcu_id",
+			"_aid": ["id"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "GCU target tree population"},
-			"_definition": {"iso_639_3_eng": "Tree species population living in a gene conservation unit designated to be monitored and documented."},
-			"_description": {"iso_639_3_eng": "Namespace grouping all terms and descriptors specific to gene conservation unit populations."}
+			"_title": {"iso_639_3_eng": "Identification"},
+			"_definition": {"iso_639_3_eng": "Gene conservation unit identification properties."}
+		}
+	},	
+	{
+		"_code": {
+			"_nid": "gcu",
+			"_lid": "loc",
+			"_gid": "gcu_loc",
+			"_aid": ["loc"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Location"},
+			"_definition": {"iso_639_3_eng": "Gene conservation unit location properties."}
+		}
+	},	
+	{
+		"_code": {
+			"_nid": "gcu",
+			"_lid": "map",
+			"_gid": "gcu_map",
+			"_aid": ["map"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Map"},
+			"_definition": {"iso_639_3_eng": "Gene conservation unit mapping properties."}
+		}
+	},	
+	{
+		"_code": {
+			"_nid": "gcu",
+			"_lid": "clim",
+			"_gid": "gcu_clim",
+			"_aid": ["clim"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Climate"},
+			"_definition": {"iso_639_3_eng": "Gene conservation unit climatic properties."}
+		}
+	},	
+	{
+		"_code": {
+			"_nid": "gcu",
+			"_lid": "info",
+			"_gid": "gcu_info",
+			"_aid": ["info"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Remarks"},
+			"_definition": {"iso_639_3_eng": "Gene conservation unit remarks and general information properties."}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "gcu",
+			"_lid": "pop",
+			"_gid": "gcu_pop",
+			"_aid": ["pop"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Species"},
+			"_definition": {"iso_639_3_eng": "Tree species population living in a gene conservation unit designated to be monitored and documented."}
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "gcu_id",
+			"_lid": "custom",
+			"_gid": "gcu_id_custom",
+			"_aid": ["custom"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Custom identification"},
+			"_definition": {"iso_639_3_eng": "Custom gene conservation unit identification properties."}
+		}
+	},	
+	{
+		"_code": {
+			"_nid": "gcu_loc",
+			"_lid": "custom",
+			"_gid": "gcu_loc_custom",
+			"_aid": ["loc"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Custom location"},
+			"_definition": {"iso_639_3_eng": "Custom gene conservation unit location properties."}
+		}
+	},	
+	{
+		"_code": {
+			"_nid": "gcu_map",
+			"_lid": "custom",
+			"_gid": "gcu_map_custom",
+			"_aid": ["custom"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Custom map"},
+			"_definition": {"iso_639_3_eng": "Custom gene conservation unit mapping properties."}
+		}
+	},	
+	{
+		"_code": {
+			"_nid": "gcu_clim",
+			"_lid": "custom",
+			"_gid": "gcu_clim_custom",
+			"_aid": ["custom"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Custom climate"},
+			"_definition": {"iso_639_3_eng": "Custom gene conservation unit climatic properties."}
+		}
+	},	
+	{
+		"_code": {
+			"_nid": "gcu_info",
+			"_lid": "custom",
+			"_gid": "gcu_info_custom",
+			"_aid": ["custom"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Custom remarks"},
+			"_definition": {"iso_639_3_eng": "Custom gene conservation unit remarks and general information properties."}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "gcu_pop",
+			"_lid": "custom",
+			"_gid": "gcu_pop_custom",
+			"_aid": ["custom"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Custom species"},
+			"_definition": {"iso_639_3_eng": "Custom gene conservation unit population properties."}
 		}
 	}
 ]
