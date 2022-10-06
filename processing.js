@@ -7,6 +7,7 @@
 const fs = require("fs")						// File system utilities.
 const pt = require("path")						// Directory path helper.
 const md5 = require("md5")						// MD5 hash library.
+const http = require("http")					// HTTP module.
 const { Database, aql } = require("arangojs")	// ArangoDB driver.
 
 const kGlob = require('./globals')				// Generic globals.
@@ -112,6 +113,98 @@ async function ProcessIsoStandards(db) {
 	}
 
 } // ProcessIsoStandards()
+
+/**
+ * Validate documents
+ * This function will iterate all terms and edges and call the validation service.
+ * @param db: Database connection.
+ * @return {int}: Number of errors.
+ */
+async function ValidateDocuments(db)
+{
+	//
+	// Init local storage.
+	//
+	let error_count = 0
+	const col_terms = db.collection(kDb.collection_terms)
+	const col_edges = db.collection(kDb.collection_edges)
+	const col_errors = db.collection(kPriv.user.db.error_col)
+
+	//
+	// Query all terms.
+	//
+	console.log(`==> Querying all terms`)
+	const terms = await db.query(aql`
+      FOR term IN ${col_terms}
+      RETURN term
+    `);
+
+	//
+	// Iterate all terms.
+	//
+	console.log(`==> Iterating all terms`)
+	for await (const term of terms) {
+
+		//
+		// Create payload.
+		//
+		const data = JSON.stringify({
+			"definition": {
+				"_scalar": {
+					"_type": "_type_object",
+					"_kind": "_any-object"
+				}
+			},
+			"value": term,
+			"language": "iso_639_3_eng"
+		})
+
+		//
+		// Set call options.
+		//
+		const options = {
+			host: kPriv.user.db.hostname,
+			"port": kPriv.user.db.port,
+			path: '/_db/metadata/dict/check/definition',
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+				'Content-Length': data.length
+			}
+		}
+
+		//
+		// Create request.
+		//
+		const req = http.request(options, (res) => {
+			let data = '';
+
+			console.log('Status Code:', res.statusCode);
+
+			res.on('data', (chunk) => {
+				data += chunk;
+			});
+
+			res.on('end', () => {
+				console.log('Body: ', JSON.parse(data));
+			});
+
+		}).on("error", (err) => {
+			console.log("Error: ", err.message);
+		});
+
+		//
+		// Perform request.
+		//
+		req.write(data);
+		req.end();
+		break
+
+	} // Iterating terms.
+
+	return error_count																// ==>
+
+} // ValidateDocuments()
 
 /**
  * Validate database term records.
@@ -3677,5 +3770,6 @@ function MakeHandleReference(theKey, theCollection = null)
 
 module.exports = {
 	ProcessDictionaryFiles, ProcessIsoStandards,
-	ValidateTerms, ValidateEdges, ValidateTopos
+	ValidateTerms, ValidateEdges, ValidateTopos,
+	ValidateDocuments
 }
