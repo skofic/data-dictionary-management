@@ -15,58 +15,8 @@
  * - **error_col**: Errors collection name suffix, *see mount*.
  * - **write_file**: Flag determining whether files will be written to the processed directory.
  */
-/*
-const user = {
 
-	"db": {
-		"host": "http://192.168.178.2:8529",
-		"name": "metadata",
-
-		"user": "eufgis_developer",
-		"pass": "letmein",
-
-		"mount": "dict",
-
-		"terms_col": "terms",
-		"edges_col": "edges",
-		"topos_col": "topos",
-		"error_col": "errors"
-	},
-
-	"flag": {
-		// "key_encode": "GID",
-		"drop_all_collections": true,
-		"write_file": true,
-		"only_core": false,
-		"do_eufgis": true
-	}
-}
-*/
-
-const user = {
-
-	"db": {
-		"host": "https://a525261164c6.arangodb.cloud:8529/",
-		"name": "metadata",
-
-		"user": "root",
-		"pass": "MNe6TjCmCisDjKWNwu2G",
-
-		"mount": "dict",
-
-		"terms_col": "terms",
-		"edges_col": "edges",
-		"topos_col": "topos",
-		"error_col": "errors"
-	},
-
-	"flag": {
-		// "key_encode": "GID",
-		"drop_all_collections": true,
-		"write_file": true,
-		"only_core": false,
-		"do_eufgis": true
-	}
-}
+const fs = require('fs');
+const user = JSON.parse(fs.readFileSync('dbCredentials.newtvision.json'))
 
 module.exports = { user }

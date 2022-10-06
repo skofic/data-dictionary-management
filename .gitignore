@@ -114,3 +114,9 @@ dist
 
 ### certificates
 *.crt
+
+###
+# LOCAL FILES
+###
+dbCredentials.oasis.json
+dbCredentials.newtvision.json
