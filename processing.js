@@ -144,6 +144,7 @@ async function ValidateDocuments(db)
 	//
 	console.log(`==> Iterating all terms`)
 	for await (const term of terms) {
+		let done = false
 
 		//
 		// Create payload.
@@ -152,7 +153,7 @@ async function ValidateDocuments(db)
 			"definition": {
 				"_scalar": {
 					"_type": "_type_object",
-					"_kind": "_any-object"
+					"_kind": ["_any-object"]
 				}
 			},
 			"value": term,
@@ -186,7 +187,15 @@ async function ValidateDocuments(db)
 			});
 
 			res.on('end', () => {
-				console.log('Body: ', JSON.parse(data));
+				// console.log('Body: ', JSON.parse(data));
+				//
+				// Handle errors.
+				//
+				const result = JSON.parse(data)
+				if(result.result.status.code !== 0) {
+					console.log('Body: ', result)
+					done = true
+				}
 			});
 
 		}).on("error", (err) => {
@@ -198,7 +207,13 @@ async function ValidateDocuments(db)
 		//
 		req.write(data);
 		req.end();
-		break
+
+		//
+		// Stop on error.
+		//
+		if(done) {
+			break
+		}
 
 	} // Iterating terms.
 
