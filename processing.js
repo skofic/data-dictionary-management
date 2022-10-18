@@ -119,7 +119,7 @@ async function ProcessIsoStandards(db) {
  * Validate documents
  * This function will iterate all terms and edges and call the validation service.
  * @param db: Database connection.
- * @return {int}: Number of errors.
+ * @return {Promise<int>}: Number of errors.
  */
 async function ValidateDocuments(db)
 {
@@ -144,6 +144,7 @@ async function ValidateDocuments(db)
 	//
 	// Iterate all terms.
 	//
+	let processed = 0
 	console.log(`==> Iterating all terms`)
 	for await (const term of terms) {
 
@@ -151,14 +152,8 @@ async function ValidateDocuments(db)
 		// Create data payload.
 		//
 		const postData = JSON.stringify({
-			definition: {
-				_scalar: {
-					_type: '_type_object',
-					_kind: ['_any-object']
-				}
-			},
 			value: term,
-			language: 'iso_639_ita'
+			language: 'iso_639_eng'
 		})
 
 		//
@@ -167,7 +162,7 @@ async function ValidateDocuments(db)
 		const options = {
 			hostname: kPriv.user.db.hostname,
 			port: 8529,
-			path: '/_db/metadata/dict/check/definition',
+			path: '/_db/metadata/dict/check/object',
 			method: 'POST',
 			headers: {
 				'Accept': 'application/json;charset=UTF-8',
@@ -201,14 +196,33 @@ async function ValidateDocuments(db)
 				// Parse result.
 				//
 				try {
+					//
+					// Decode result.
+					//
 					const result = JSON.parse(data)
+					let report = {
+						value: JSON.parse(JSON.stringify(result.value)),
+						result: {}
+					}
 
 					//
-					// Handle validation error or warning.
+					// Handle errors.
 					//
-					if(result.result.status.code !== 0) {
-						console.log(`${term._key} ${result.result.status.code} - ${result.result.status.message}`)
-						col_errors.insert(result)
+					let errors = 0
+					for(const property in result.result) {
+						if(result.result[property].status.code !== 0) {
+							console.log(`[${term._key}] (${result.result[property].status.code}) ${result.result[property].status.message}`)
+							report.result[property] = JSON.parse(JSON.stringify(result.result[property]))
+							errors += 1
+						}
+					}
+
+					//
+					// Handle errors.
+					//
+					if(errors > 0) {
+						error_count += 1
+						const _ = col_errors.save(report)
 					}
 
 				} catch (err) {

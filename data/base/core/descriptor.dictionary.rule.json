@@ -81,9 +81,9 @@
 		},
 		"_data": {
 			"_set": {
-				"_scalar": {
+				"_set_scalar": {
 					"_class": "_class_reference",
-					"_type": "_type_string_key",
+					"_set_type": "_type_string_key",
 					"_kind": ["_any-descriptor"]
 				}
 			}
@@ -103,9 +103,9 @@
 		},
 		"_data": {
 			"_set": {
-				"_scalar": {
+				"_set_scalar": {
 					"_class": "_class_reference",
-					"_type": "_type_string_key",
+					"_set_type": "_type_string_key",
 					"_kind": ["_any-descriptor"]
 				}
 			}
@@ -125,7 +125,7 @@
 		},
 		"_data": {
 			"_set": {
-				"_scalar": {
+				"_set_scalar": {
 					"_class": "_class_reference",
 					"_type": "_type_string_key",
 					"_kind": ["_any-descriptor"]
@@ -147,9 +147,9 @@
 		},
 		"_data": {
 			"_set": {
-				"_scalar": {
+				"_set_scalar": {
 					"_class": "_class_reference",
-					"_type": "_type_string_key",
+					"_set_type": "_type_string_key",
 					"_kind": ["_any-descriptor"]
 				}
 			}
@@ -190,7 +190,7 @@
 		},
 		"_data": {
 			"_set": {
-				"_scalar": {
+				"_set_scalar": {
 					"_class": "_class_reference",
 					"_type": "_type_string_key",
 					"_kind": ["_any-term"]
@@ -212,9 +212,9 @@
 		},
 		"_data": {
 			"_set": {
-				"_scalar": {
+				"_set_scalar": {
 					"_class": "_class_reference",
-					"_type": "_type_string_key",
+					"_set_type": "_type_string_key",
 					"_kind": ["_any-term"]
 				}
 			}
@@ -234,7 +234,7 @@
 		},
 		"_data": {
 			"_set": {
-				"_scalar": {
+				"_set_scalar": {
 					"_class": "_class_reference",
 					"_type": "_type_string_key",
 					"_kind": ["_any-term"]
@@ -258,9 +258,9 @@
 		"_data": {
 			"_array": {
 				"_set": {
-					"_scalar": {
+					"_set_scalar": {
 						"_class": "_class_reference",
-						"_type": "_type_string_key",
+						"_set_type": "_type_string_key",
 						"_kind": ["_any-term"]
 					}
 				}
@@ -281,7 +281,7 @@
 		},
 		"_data": {
 			"_set": {
-				"_scalar": {
+				"_set_scalar": {
 					"_class": "_class_reference",
 					"_type": "_type_string_key",
 					"_kind": ["_any-term"]
@@ -304,9 +304,9 @@
 		},
 		"_data": {
 			"_set": {
-				"_scalar": {
+				"_set_scalar": {
 					"_class": "_class_reference",
-					"_type": "_type_string_key",
+					"_set_type": "_type_string_key",
 					"_kind": ["_any-descriptor"]
 				}
 			}
@@ -326,7 +326,7 @@
 		},
 		"_data": {
 			"_set": {
-				"_scalar": {
+				"_set_scalar": {
 					"_class": "_class_reference",
 					"_type": "_type_string_key",
 					"_kind": ["_any-descriptor"]
@@ -348,9 +348,9 @@
 		},
 		"_data": {
 			"_set": {
-				"_scalar": {
+				"_set_scalar": {
 					"_class": "_class_reference",
-					"_type": "_type_string_key",
+					"_set_type": "_type_string_key",
 					"_kind": ["_any-descriptor"]
 				}
 			}
@@ -372,7 +372,7 @@
 		"_data": {
 			"_array": {
 				"_set": {
-					"_scalar": {
+					"_set_scalar": {
 						"_class": "_class_reference",
 						"_type": "_type_string_key",
 						"_kind": ["_any-descriptor"]
@@ -395,9 +395,9 @@
 		},
 		"_data": {
 			"_set": {
-				"_scalar": {
+				"_set_scalar": {
 					"_class": "_class_reference",
-					"_type": "_type_string_key",
+					"_set_type": "_type_string_key",
 					"_kind": ["_any-descriptor"]
 				}
 			}

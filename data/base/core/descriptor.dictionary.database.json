@@ -13,8 +13,7 @@
 		},
 		"_data": {
 			"_scalar": {
-				"_type": "_type_string",
-				"_regexp": "^[a-zA-Z0-9-_:.@+,=;$!*'%\/]{1,254}$"
+				"_type": "_type_string"
 			}
 		}
 	},
@@ -51,7 +50,7 @@
 		"_data": {
 			"_scalar": {
 				"_type": "_type_string",
-				"_regexp": "^[a-zA-Z0-9-:._@+,=;$!*'%]{1,254}$"
+				"_regexp": "^[a-zA-Z0-9-:.@+,=;$!*'%()_]{1,254}$"
 			}
 		}
 	},

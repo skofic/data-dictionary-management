@@ -370,9 +370,9 @@
 		},
 		"_data": {
 			"_set": {
-				"_scalar": {
+				"_set_scalar": {
 					"_class": "_class_category",
-					"_type": "_type_string_key",
+					"_set_type": "_type_string_key",
 					"_kind": ["_any-term"]
 				}
 			}

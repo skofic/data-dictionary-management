@@ -59,7 +59,6 @@ async function main()
 	try
 	{
 		let errors = 0
-		let has_errors = false
 
 		console.log("\============================")
 		console.log("Initialising database.")
@@ -80,30 +79,10 @@ async function main()
 		console.log("Validating dictionary.")
 		console.log("============================")
 		errors = await process.ValidateDocuments(db)
-// 		errors = await process.ValidateTerms(db)
-// 		if(errors > 0) {
-// 			has_errors = true
-// 			console.log(`!!! ${errors} errors!`)
-// 		} else {
-// 			console.log(`    no errors.`)
-// 		}
-// 		errors = await process.ValidateEdges(db)
-// 		if(errors > 0) {
-// 			has_errors = true
-// 			console.log(`!!! ${errors} errors!`)
-// 		} else {
-// 			console.log(`    no errors.`)
-// 		}
-// 		errors = await process.ValidateTopos(db)
-// 		if(errors > 0) {
-// 			has_errors = true
-// 			console.log(`!!! ${errors} errors!`)
-// 		} else {
-// 			console.log(`    no errors.`)
-// 		}
-// 		if(! has_errors) {
-// 			await dbutils.DropErrorCollection(db, kPriv.user.db.error_col)
-// 		}
+		console.log(`${errors} errors.`)
+		// if(errors === 0) {
+		// 	await dbutils.DropErrorCollection(db, kPriv.user.db.error_col)
+		// }
 
 	} // TRY BLOCK
 
