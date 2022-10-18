@@ -6,6 +6,7 @@
 
 const fs = require("fs")						// File system utilities.
 const pt = require("path")						// Directory path helper.
+const axios = require('axios')					// Axios networking library.
 const md5 = require("md5")						// MD5 hash library.
 const http = require("http")					// HTTP module.
 const { Database, aql } = require("arangojs")	// ArangoDB driver.
@@ -129,91 +130,103 @@ async function ValidateDocuments(db)
 	const col_terms = db.collection(kDb.collection_terms)
 	const col_edges = db.collection(kDb.collection_edges)
 	const col_errors = db.collection(kPriv.user.db.error_col)
+	const path = `${kPriv.user.db.host}/_db/metadata/dict/check/definition`
 
 	//
 	// Query all terms.
 	//
 	console.log(`==> Querying all terms`)
 	const terms = await db.query(aql`
-      FOR term IN ${col_terms}
-      RETURN term
-    `);
+	  FOR term IN ${col_terms}
+	  RETURN term
+	`)
 
 	//
 	// Iterate all terms.
 	//
 	console.log(`==> Iterating all terms`)
 	for await (const term of terms) {
-		let done = false
 
 		//
-		// Create payload.
+		// Create data payload.
 		//
-		const data = JSON.stringify({
-			"definition": {
-				"_scalar": {
-					"_type": "_type_object",
-					"_kind": ["_any-object"]
+		const postData = JSON.stringify({
+			definition: {
+				_scalar: {
+					_type: '_type_object',
+					_kind: ['_any-object']
 				}
 			},
-			"value": term,
-			"language": "iso_639_3_eng"
+			value: term,
+			language: 'iso_639_ita'
 		})
 
 		//
-		// Set call options.
+		// Set request options.
 		//
 		const options = {
-			host: kPriv.user.db.hostname,
-			"port": kPriv.user.db.port,
+			hostname: kPriv.user.db.hostname,
+			port: 8529,
 			path: '/_db/metadata/dict/check/definition',
 			method: 'POST',
 			headers: {
+				'Accept': 'application/json;charset=UTF-8',
 				'Content-Type': 'application/json',
-				'Content-Length': data.length
+				'Content-Length': Buffer.byteLength(postData)
 			}
 		}
 
 		//
-		// Create request.
+		// Define request.
 		//
-		const req = http.request(options, (res) => {
-			let data = '';
+		const request = http.request(options, (response) => {
+			let data = ''
 
-			console.log('Status Code:', res.statusCode);
+			response.setEncoding('utf8')
 
-			res.on('data', (chunk) => {
-				data += chunk;
-			});
+			response.on('data',  (chunk) => {
+				data += chunk
+			})
 
-			res.on('end', () => {
-				// console.log('Body: ', JSON.parse(data));
+			response.on('end', () => {
+
 				//
-				// Handle errors.
+				// Intercept errors.
 				//
-				const result = JSON.parse(data)
-				if(result.result.status.code !== 0) {
-					console.log('Body: ', result)
-					done = true
+				if(response.statusCode !== 200) {
+					throw Error(`${response.statusCode} - ${response.statusMessage}`)
 				}
-			});
 
-		}).on("error", (err) => {
-			console.log("Error: ", err.message);
-		});
+				//
+				// Parse result.
+				//
+				try {
+					const result = JSON.parse(data)
+
+					//
+					// Handle validation error or warning.
+					//
+					if(result.result.status.code !== 0) {
+						console.log(`${term._key} ${result.result.status.code} - ${result.result.status.message}`)
+						col_errors.insert(result)
+					}
+
+				} catch (err) {
+					throw(err)
+				}
+			})
+
+		}).on('error', (error) => {
+			throw error
+		})
 
 		//
-		// Perform request.
+		// Make request.
 		//
-		req.write(data);
-		req.end();
+		request.write(postData)
+		request.end
 
-		//
-		// Stop on error.
-		//
-		if(done) {
-			break
-		}
+		await new Promise(r => setTimeout(r, 5))
 
 	} // Iterating terms.
 

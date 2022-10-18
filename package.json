@@ -24,6 +24,7 @@
   "homepage": "https://github.com/skofic/data-dictionary-management#readme",
   "dependencies": {
     "arangojs": "^7.7.0",
+    "axios": "^1.1.2",
     "md5": "^2.3.0"
   }
 }

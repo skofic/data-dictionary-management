@@ -79,31 +79,31 @@ async function main()
 		console.log("\n============================")
 		console.log("Validating dictionary.")
 		console.log("============================")
-		errors = process.ValidateDocuments(db)
-		// errors = await process.ValidateTerms(db)
-		// if(errors > 0) {
-		// 	has_errors = true
-		// 	console.log(`!!! ${errors} errors!`)
-		// } else {
-		// 	console.log(`    no errors.`)
-		// }
-		// errors = await process.ValidateEdges(db)
-		// if(errors > 0) {
-		// 	has_errors = true
-		// 	console.log(`!!! ${errors} errors!`)
-		// } else {
-		// 	console.log(`    no errors.`)
-		// }
-		// errors = await process.ValidateTopos(db)
-		// if(errors > 0) {
-		// 	has_errors = true
-		// 	console.log(`!!! ${errors} errors!`)
-		// } else {
-		// 	console.log(`    no errors.`)
-		// }
-		// if(! has_errors) {
-		// 	await dbutils.DropErrorCollection(db, kPriv.user.db.error_col)
-		// }
+		errors = await process.ValidateDocuments(db)
+// 		errors = await process.ValidateTerms(db)
+// 		if(errors > 0) {
+// 			has_errors = true
+// 			console.log(`!!! ${errors} errors!`)
+// 		} else {
+// 			console.log(`    no errors.`)
+// 		}
+// 		errors = await process.ValidateEdges(db)
+// 		if(errors > 0) {
+// 			has_errors = true
+// 			console.log(`!!! ${errors} errors!`)
+// 		} else {
+// 			console.log(`    no errors.`)
+// 		}
+// 		errors = await process.ValidateTopos(db)
+// 		if(errors > 0) {
+// 			has_errors = true
+// 			console.log(`!!! ${errors} errors!`)
+// 		} else {
+// 			console.log(`    no errors.`)
+// 		}
+// 		if(! has_errors) {
+// 			await dbutils.DropErrorCollection(db, kPriv.user.db.error_col)
+// 		}
 
 	} // TRY BLOCK
 
