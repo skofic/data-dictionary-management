@@ -78,11 +78,8 @@ async function main()
 		console.log("\n============================")
 		console.log("Validating dictionary.")
 		console.log("============================")
-		errors = await process.ValidateDocuments(db)
+		errors = await process.ValidateTerms(db)
 		console.log(`${errors} errors.`)
-		// if(errors === 0) {
-		// 	await dbutils.DropErrorCollection(db, kPriv.user.db.error_col)
-		// }
 
 	} // TRY BLOCK
 

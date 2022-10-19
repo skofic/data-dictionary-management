@@ -131,7 +131,7 @@
 		},
 		"_rule": {
 			"_required": {
-				"_selection-descriptors_all": [
+				"_selection-descriptors_one-none": [
 					"_set_scalar"
 				]
 			},
@@ -332,7 +332,7 @@
 			"_scalar": {
 				"_class": "_class_category",
 				"_type": "_type_string_enum",
-				"_kind": ["_type"]
+				"_kind": ["_set_type"]
 			}
 		}
 	},

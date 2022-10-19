@@ -294,7 +294,7 @@
 			"_scalar": {
 				"_class": "_class_quantity",
 				"_type": "_type_integer",
-				"_unit": "_units_length_m",
+				"_unit": "_unit_length_m",
 				"_valid-range": {
 					"_min-range-inclusive": -413,
 					"_max-range-inclusive": 8848

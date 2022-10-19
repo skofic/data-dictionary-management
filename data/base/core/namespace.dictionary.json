@@ -2,7 +2,8 @@
 	{
 		"_code": {
 			"_lid": "",
-			"_gid": ""
+			"_gid": "",
+			"_aid": [""]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Default namespace"},

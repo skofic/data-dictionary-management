@@ -127,17 +127,13 @@ async function ValidateDocuments(db)
 	// Init local storage.
 	//
 	let error_count = 0
-	const col_terms = db.collection(kDb.collection_terms)
-	const col_edges = db.collection(kDb.collection_edges)
-	const col_errors = db.collection(kPriv.user.db.error_col)
-	const path = `${kPriv.user.db.host}/_db/metadata/dict/check/definition`
 
 	//
 	// Query all terms.
 	//
 	console.log(`==> Querying all terms`)
 	const terms = await db.query(aql`
-	  FOR term IN ${col_terms}
+	  FOR term IN ${db.collection(kDb.collection_terms)}
 	  RETURN term
 	`)
 
@@ -222,7 +218,7 @@ async function ValidateDocuments(db)
 					//
 					if(errors > 0) {
 						error_count += 1
-						const _ = col_errors.save(report)
+						// db.collection(kDb.collection_errors).save(report)
 					}
 
 				} catch (err) {
@@ -250,28 +246,6 @@ async function ValidateDocuments(db)
 
 /**
  * Validate database term records.
- * Scan all terms and ensure that all references are valid.
- * The checks will validate the following:
- * - Code section: ensure record has code section.
- * - Code properties: ensure record has _lid, _gid and _aid.
- * - Namespace: Ensure _code._nid is valid.
- * - Global identifier: Should match key.
- * - Class: Check class.
- * - Type: Check type and type-key.
- * - Kind: check type reference.
- * - Format: check format.
- * - Unit: check unit.
- * - Required: ensure all descriptor references are valid.
- * - Recommended: ensure all descriptor references are valid.
- * - Banned, computed, locked, immutable: check references.
- * - Default value: check that properties refer to descriptors.
- *
- * If there are errors, the information will be written to the errors
- * collection which has the following structure:
- * - collection: Name of the database collection of the offending document.
- * - key: Key of the offending document.
- * - property: Name of the offending property.
- * - value: Offending value, or null if it is a missing value.
  * @param db - Database connection.
  * @returns {Promise<Number>}
  */
@@ -280,67 +254,85 @@ async function ValidateTerms(db) {
 	//
 	// Init local storage.
 	//
+	let processed = 0
 	let error_count = 0
-	let cache = new Set()
-	const collection = db.collection(kDb.collection_terms);
-	const error_collection = db.collection(kPriv.user.db.error_col)
+	let page_records = 0
+	const url = `${kPriv.user.db.host}/_db/metadata/dict/check/object`
 
 	//
-	// Query all terms.
+	// Get cursor.
 	//
 	console.log(`==> Querying all terms`)
-	const terms = await db.query(aql`
-      FOR term IN ${collection}
-      RETURN term
-    `);
+	const cursor = await db.query(aql`
+	  FOR term IN ${db.collection(kDb.collection_terms)}
+	  RETURN term
+	`)
+
+	//
+	// Resolve all records.
+	//
+	const terms = await cursor.all()
 
 	//
 	// Iterate all terms.
 	//
 	console.log(`==> Iterating all terms`)
-	for await (const term of terms) {
+	for(const term of terms) {
+		// for await (const term of terms) {
+		processed += 1
 
 		//
-		// Init loop storage.
+		// Create data payload.
 		//
-		let errors = []
-		let key = term._key
+		const postData = {
+			value: term,
+			language: 'iso_639_eng'
+		}
 
 		//
-		// Validate sections.
+		// Validate.
 		//
-		if(term.hasOwnProperty('_code')) {
-			errors = errors.concat(await ValidateCodeSection(term._code, key, cache, collection))
+		const response = await axios.post(url, postData)
+		if(response.status !== 200) {
+			throw Error(`(${response.status}) - ${response.statusText}`)
 		}
-		else {
-			errors.push({
-				"collection": collection.name,
-				"key": key,
-				"property": '_code',
-				"value": null
-			})
+
+		//
+		// Init response.
+		//
+		let report = {
+			value: JSON.parse(JSON.stringify(response.data.value)),
+			result: {}
 		}
-		if(term.hasOwnProperty('_info')) {
-			errors = errors.concat(await ValidateInfoSection(term._info, key, cache, collection))
-		}
-		if(term.hasOwnProperty('_data')) {
-			errors = errors.concat(await ValidateDataSection(term._data, key, cache, collection))
-		}
-		if(term.hasOwnProperty('_rule')) {
-			errors = errors.concat(await ValidateRuleSection(term._rule, key, cache, collection))
+
+		//
+		// Handle errors.
+		//
+		let errors = 0
+		for(const property in response.data.result) {
+			if(response.data.result[property].status.code !== 0) {
+				console.log(`[${term._key}] (${response.data.result[property].status.code}) ${response.data.result[property].status.message}`)
+				report.result[property] = JSON.parse(JSON.stringify(response.data.result[property]))
+				errors += 1
+			}
 		}
 
 		//
 		// Write errors.
 		//
-		if(errors.length > 0) {
-			error_count += errors.length
-			await error_collection.import(errors)
-			errors = []
-		}
-	}
+		if(errors > 0) {
+			error_count += 1
+			db.collection(kDb.collection_errors).save(report)
 
-	return error_count																// ==>
+		} else {
+			console.log(term._key)
+		}
+
+	} // Iterating terms.
+
+	console.log(`Processed ${processed} terms.`)
+
+	return error_count															// ==>
 
 } // ValidateTerms()
 
@@ -360,42 +352,6 @@ async function ValidateEdges(db) {
 	// Init local storage.
 	//
 	let error_count = 0
-	let cache = new Set()
-	const collection = db.collection(kDb.collection_edges)
-	const terms_collection = db.collection(kDb.collection_terms)
-	const error_collection = db.collection(kPriv.user.db.error_col)
-
-	//
-	// Query all terms.
-	//
-	console.log(`==> Querying all edges`)
-	const edges = await db.query(aql`
-      FOR edge IN ${collection}
-      RETURN edge
-    `);
-
-	//
-	// Iterate all edges.
-	//
-	console.log(`==> Iterating all edges`)
-	for await (const edge of edges) {
-
-		//
-		// Init loop storage.
-		//
-		let errors = []
-		let key = edge._key
-
-		//
-		// Validate sections.
-		//
-		errors = await ValidateEdgeSection(edge, key, cache, db, collection, terms_collection)
-		if(errors.length > 0) {
-			error_count += errors.length
-			await error_collection.import(errors)
-			errors = []
-		}
-	}
 
 	return error_count																// ==>
 
@@ -417,545 +373,10 @@ async function ValidateTopos(db) {
 	// Init local storage.
 	//
 	let error_count = 0
-	let cache = new Set()
-	const collection = db.collection(kDb.collection_topos)
-	const terms_collection = db.collection(kDb.collection_terms)
-	const error_collection = db.collection(kPriv.user.db.error_col)
-
-	//
-	// Query all terms.
-	//
-	console.log(`==> Querying all topos`)
-	const edges = await db.query(aql`
-      FOR edge IN ${collection}
-      RETURN edge
-    `);
-
-	//
-	// Iterate all edges.
-	//
-	console.log(`==> Iterating all topos`)
-	for await (const edge of edges) {
-
-		//
-		// Init loop storage.
-		//
-		let errors = []
-		let key = edge._key
-
-		//
-		// Validate sections.
-		//
-		errors = await ValidateEdgeSection(edge, key, cache, db, collection, terms_collection)
-		if(errors.length > 0) {
-			error_count += errors.length
-			await error_collection.import(errors)
-			errors = []
-		}
-	}
 
 	return error_count																// ==>
 
 } // ValidateTopos()
-
-/**
- * Validate code section.
- * This function will validate the term code section and log to console all properties that
- * have at least one error, by displaying the term key and the invalid terms or descriptors.
- * @param section {object} - Term section.
- * @param key {string} - Term key.
- * @param cache {Set} - Set of checked term keys.
- * @param collection - Database collection.
- * @returns {Promise<[{object}]>} - List of properties with errors.
- */
-async function ValidateCodeSection(section, key, cache, collection) {
-
-	//
-	// Init local storage.
-	//
-	let errors = []						// Reset errors list.
-
-	//
-	// Check namespace.
-	//
-	if(section.hasOwnProperty('_nid') && section._nid.length > 0) {
-		if(!cache.has(section._nid)) {
-			const exists = await collection.documentExists(section._nid)
-			if(exists) {
-				cache.add(section._nid)
-			} else {
-				errors.push({
-					"collection": collection.name,
-					"key": key,
-					"property": '_code._nid',
-					"value": section._nid
-				})
-			}
-		}
-	}
-
-	return errors																	// ==>
-
-} // ValidateCodeSection()
-
-/**
- * Validate documentation section.
- * This function will validate the term documentation section and log to console all properties that
- * have at least one error, by displaying the term key and the invalid terms or descriptors.
- * @param section {object} - Term section.
- * @param key {string} - Term key.
- * @param cache {Set} - Set of checked term keys.
- * @param collection - Database collection.
- * @returns {Promise<[{string}]>} - List of properties with errors.
- */
-async function ValidateInfoSection(section, key, cache, collection) {
-
-	//
-	// Init local storage.
-	//
-	let errors = []						// Reset errors list.
-
-	//
-	// Check documentation properties.
-	//
-	Object.getOwnPropertyNames(section)
-		.forEach( (property) => {
-			Object.getOwnPropertyNames(section[property])
-				.forEach( async (language) => {
-					if(!cache.has(language)) {
-						const exists = await collection.documentExists(language)
-						if(exists) {
-							cache.add(language)
-						} else {
-							errors.push({
-								"collection": collection.name,
-								"key": key,
-								"property": '_info.' + property,
-								"value": language
-							})
-						}
-					}
-				})
-		})
-
-	return errors																	// ==>
-
-} // ValidateCodeSection()
-
-/**
- * Validate data section.
- * This function will validate the term data section and log to console all properties that
- * have at least one error, by displaying the term key and the invalid terms or descriptors.
- * @param section {object} - Term section.
- * @param key {string} - Term key.
- * @param cache {Set} - Set of checked term keys.
- * @param collection - Database collection.
- * @returns {Promise<[{string}]>} - List of properties with errors.
- */
-async function ValidateDataSection(section, key, cache, collection) {
-
-	//
-	// Init local storage.
-	//
-	let errors = []						// Reset errors list.
-
-	//
-	// Check namespace.
-	//
-	Object.getOwnPropertyNames(section)
-		.forEach( async (container) => {
-			switch(container) {
-				case '_dict':
-					if((!section[container].hasOwnProperty('_dict_key'))
-						|| (!section[container].hasOwnProperty('_dict_value'))) {
-						if(!section[container].hasOwnProperty('_dict_key')) {
-							errors.push({
-								"collection": collection.name,
-								"key": key,
-								"property": '_data._dict._dict_key',
-								"value": null
-							})
-						}
-						if(!section[container].hasOwnProperty('_dict_value')) {
-							errors.push({
-								"collection": collection.name,
-								"key": key,
-								"property": '_data._dict._dict_value',
-								"value": null
-							})
-						}
-					} else {
-						errors = errors.concat(
-							await ValidateDataElements(
-								section[container]._dict_key,
-								key,
-								'_dict._dict_key',
-								cache,
-								collection
-							)
-						)
-						errors = errors.concat(
-							await ValidateDataElements(
-								section[container]._dict_value,
-								key,
-								'_dict._dict_value',
-								cache,
-								collection
-							)
-						)
-					}
-					break
-
-				default:
-					if(Object.entries(section).length > 0) {
-						errors = errors.concat(
-							await ValidateDataElements(
-								section,
-								key,
-								container,
-								cache,
-								collection
-							)
-						)
-					}
-					break
-			}
-		})
-
-	return errors																	// ==>
-
-} // ValidateDataSection()
-
-/**
- * Validate rule section.
- * This function will validate the term rule section and log to console all properties that
- * have at least one error, by displaying the term key and the invalid terms or descriptors.
- * @param section {object} - Term section.
- * @param key {string} - Term key.
- * @param cache {Set} - Set of checked term keys.
- * @param collection - Database collection.
- * @returns {Promise<[{string}]>} - List of properties with errors.
- */
-async function ValidateRuleSection(section, key,  cache, collection) {
-
-	//
-	// Init local storage.
-	//
-	let errors = []						// Reset errors list.
-	let exceptions = []					// Reset error elements.
-
-	//
-	// Check section.
-	//
-	Object.getOwnPropertyNames(section)
-		.forEach( async (container) => {
-			switch(container) {
-				case '_required':
-				case '_recommended':
-					Object.getOwnPropertyNames(section[container])
-						.forEach( async (selector) => {
-							exceptions = []
-							section[container][selector]
-								.forEach( async (element) => {
-									if(Array.isArray(element)) {
-										element
-											.forEach( async (item) => {
-												exceptions.push(
-													await ValidateDescriptorReference(item, cache, collection)
-												)
-											})
-									} else {
-										exceptions.push(
-											await ValidateDescriptorReference(element, cache, collection)
-										)
-									}
-								})
-							if(exceptions.length > 0) {
-								errors.push({
-									"collection": collection.name,
-									"key": key,
-									"property": '_rule-' + container + '.' + selector,
-									"value": exceptions
-								})
-							}
-						})
-					break
-
-				case '_banned':
-				case '_computed':
-				case '_locked':
-				case '_immutable':
-					exceptions = []
-					section[container]
-						.forEach( async (element) => {
-							exceptions.push(
-								await ValidateDescriptorReference(element, cache, collection)
-							)
-						})
-					if(exceptions.length > 0) {
-						errors.push({
-							"collection": collection.name,
-							"key": key,
-							"property": '_rule-' + container,
-							"value": exceptions
-						})
-					}
-					break
-
-				case "_default-value":
-					exceptions = []
-					Object.getOwnPropertyNames(section[container])
-						.forEach( async (element) => {
-							exceptions.push(
-								await ValidateDescriptorReference(element, cache, collection)
-							)
-						})
-					if(exceptions.length > 0) {
-						errors.push({
-							"collection": collection.name,
-							"key": key,
-							"property": '_rule-' + container,
-							"value": exceptions
-						})
-					}
-					break
-			}
-		})
-
-	return errors																	// ==>
-
-} // ValidateRuleSection()
-
-/**
- * Validate data elements.
- * This function will validate the term data section elements and log to console all properties that
- * have at least one error, by displaying the term key and the invalid terms or descriptors.
- * @param section {object} - Term section.
- * @param key {string} - Term key.
- * @param field {string} - Term field name.
- * @param cache {Set} - Set of checked term keys.
- * @param collection - Database collection.
- * @returns {Promise<[{string}]>} - List of properties with errors.
- */
-async function ValidateDataElements(section, key, field, cache, collection) {
-
-	//
-	// Init local storage.
-	//
-	let errors = []						// Reset errors list.
-
-	//
-	// Check namespace.
-	//
-	Object.getOwnPropertyNames(section)
-		.forEach( async (element) => {
-			let value = section[element]
-			switch(element) {
-				case '_class':
-				case '_type':
-				case '_type_key':
-				case '_format':
-				case '_unit':
-					if(!cache.has(value)) {
-						const exists = await collection.documentExists(value)
-						if(exists) {
-							cache.add(value)
-						} else {
-							errors.push({
-								"collection": collection.name,
-								"key": key,
-								"property": field + '.' + element,
-								"value": value
-							})
-						}
-					}
-					break
-
-				case '_kind':
-					value.forEach( async (kind) => {
-						if(!cache.has(kind)) {
-							const exists = await collection.documentExists(kind)
-							if(exists) {
-								cache.add(kind)
-							} else {
-								errors.push({
-									"collection": collection.name,
-									"key": key,
-									"property": field + '.' + element,
-									"value": kind
-								})
-							}
-						}
-					})
-					break
-
-				default:
-					break
-			}
-		})
-
-	return errors																	// ==>
-
-} // ValidateDataElements()
-
-/**
- * Validate descriptor elements.
- * This function will validate the provided value ensuring it is a term reference,
- * but also that the referenced term is a descriptor.
- * @param reference {string} - Term reference.
- * @param cache {Set} - Set of checked term keys.
- * @param collection - Database collection.
- * @returns {Promise<[{string}]>} - List of properties with errors.
- */
-async function ValidateDescriptorReference(reference, cache, collection) {
-
-	//
-	// Init local storage.
-	//
-	let errors = []						// Reset errors list.
-
-	//
-	// Load term.
-	//
-	const term = await collection.document(reference, { graceful: true });
-	if (term) {
-		if(! cache.has(reference)) {
-			cache.add(reference)
-		}
-		if(! term.hasOwnProperty('_data')) {
-			errors.push("!NOT A DESCRIPTOR!")
-		}
-	} else {
-		errors.push(reference)
-	}
-
-	return errors																	// ==>
-
-} // ValidateDescriptorReference()
-
-/**
- * Validate edge.
- * This function will validate the edge elements and log to console all properties that
- * have at least one error, by displaying the term key and the invalid terms or descriptors.
- * @param section {object} - Edge.
- * @param key {string} - Edge key.
- * @param cache {Set} - Set of checked term keys.
- * @param database {Database} - Database reference.
- * @param collection {Collection} - Database edge collection.
- * @param terms_collection - Database terms collection.
- * @returns {Promise<[{string}]>} - List of properties with errors.
- */
-async function ValidateEdgeSection(section, key, cache, database, collection, terms_collection) {
-
-	//
-	// Init local storage.
-	//
-	let errors = []						// Reset errors list.
-	let terms_collection_name = terms_collection.name
-
-	//
-	// Check missing properties.
-	//
-	if(! section.hasOwnProperty('_predicate')) {
-		errors.push({
-			"collection": collection.name,
-			"key": key,
-			"property": '_predicate',
-			"value": null
-		})
-	}
-	if(! section.hasOwnProperty('_path')) {
-		errors.push({
-			"collection": collection.name,
-			"key": key,
-			"property": '_path',
-			"value": null
-		})
-	}
-
-	//
-	// Check properties.
-	//
-	if(errors.length === 0) {
-		let exists = false
-
-		//
-		// _from
-		//
-		if(! cache.has(section._from.substring(terms_collection_name.length + 1))) {
-			exists = await terms_collection.documentExists(section._from)
-			if(exists) {
-				cache.add(section._from.substring(terms_collection_name.length + 1))
-			} else {
-				errors.push({
-					"collection": collection.name,
-					"key": key,
-					"property": '_from',
-					"value": section._from
-				})
-			}
-		}
-
-		//
-		// _to
-		//
-		if(! cache.has(section._to.substring(terms_collection_name.length + 1))) {
-			exists = await terms_collection.documentExists(section._to)
-			if(exists) {
-				cache.add(section._to.substring(terms_collection_name.length + 1))
-			} else {
-				errors.push({
-					"collection": collection.name,
-					"key": key,
-					"property": '_to',
-					"value": section._to
-				})
-			}
-		}
-
-		//
-		// Predicate.
-		//
-		if(!cache.has(section._predicate)) {
-			exists = await terms_collection.documentExists(section._predicate)
-			if(exists) {
-				cache.add(section._predicate)
-			} else {
-				errors.push({
-					"collection": collection.name,
-					"key": key,
-					"property": '_predicate',
-					"value": section._predicate
-				})
-			}
-		}
-
-		//
-		// Path.
-		//
-		section._path
-			.forEach( async (element) => {
-				if(!cache.has(element)) {
-					// exists = await terms_collection.documentExists(element)
-					exists = await database.exists(element)
-					if(exists) {
-						cache.add(element)
-					} else {
-						errors.push({
-							"collection": collection.name,
-							"key": key,
-							"property": '_path',
-							"value": element
-						})
-					}
-				}
-			})
-
-	}
-
-	return errors																	// ==>
-
-} // ValidateEdgeSection()
 
 /********************************************************************************/
 /* FUNCTIONS AND UTILITIES SECTION												*/
