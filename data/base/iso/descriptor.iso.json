@@ -275,12 +275,10 @@
 			"_definition": {"iso_639_3_eng": "Type of subset of the country."}
 		},
 		"_data": {
-			"_set": {
-				"_set_scalar": {
-					"_class": "_class_category",
-					"_set_type": "_type_string_enum",
-					"_kind": ["iso_3166_2_type"]
-				}
+			"_scalar": {
+				"_class": "_class_category",
+				"_type": "_type_string_enum",
+				"_kind": ["iso_3166_2_type"]
 			}
 		}
 	},
@@ -298,12 +296,10 @@
 			"_description": {"iso_639_3_eng": "Each former country name in ISO 3166-3 is assigned a four-letter alphabetic code. The first two letters are the [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 \"ISO 3166-1 alpha-2\") code of the former country, while the last two letters are allocated according to the following rules:[[2]](https://en.wikipedia.org/wiki/ISO_3166-3#cite_note-2)\n\n- If the country changed its name, the new ISO 3166-1 alpha-2 code is used, or the special code AA is used if its alpha-2 code was not changed.\n- If the country merged into an existing country, the ISO 3166-1 alpha-2 code of this country is used.\n- If the country was divided into several parts, the special code HH is used to indicate that there is no single successor country, with the exception of [Serbia and Montenegro](https://en.wikipedia.org/wiki/Serbia_and_Montenegro \"Serbia and Montenegro\"), for which XX is used to avoid duplicate use of the same ISO 3166-3 code, as the alpha-2 code CS had twice been deleted from ISO 3166-1, the first time due to the split of Czechoslovakia and the second time due to the split of Serbia and Montenegro."}
 		},
 		"_data": {
-			"_set": {
-				"_set_scalar": {
-					"_class": "_class_category",
-					"_set_type": "_type_string",
-					"_regexp": "^[A-Z]{2,4}$"
-				}
+			"_scalar": {
+				"_class": "_class_category",
+				"_type": "_type_string",
+				"_regexp": "^[A-Z]{2,4}$"
 			}
 		}
 	},
@@ -319,12 +315,10 @@
 			"_definition": {"iso_639_3_eng": "Date of withdrawal from ISO 3166-1."}
 		},
 		"_data": {
-			"_set": {
-				"_set_scalar": {
-					"_class": "_class_time",
-					"_set_type": "_type_string",
-					"_regexp": "^[0-9]{4}(|-[0-9]{2}){2}$"
-				}
+			"_scalar": {
+				"_class": "_class_time",
+				"_type": "_type_string",
+				"_regexp": "^[0-9]{4}(|-[0-9]{2}){2}$"
 			}
 		}
 	},
@@ -341,12 +335,10 @@
 			"_definition": {"iso_639_3_eng": "Three letter code of the currency."}
 		},
 		"_data": {
-			"_set": {
-				"_scalar": {
-					"_class": "_class_category",
-					"_type": "_type_string",
-					"_regexp": "^[A-Z]{3}$"
-				}
+			"_scalar": {
+				"_class": "_class_category",
+				"_type": "_type_string",
+				"_regexp": "^[A-Z]{3}$"
 			}
 		}
 	},
@@ -363,12 +355,10 @@
 			"_description": {"iso_639_3_eng": "[ISO 4217]([ISO 4217 - Wikipedia](https://en.wikipedia.org/wiki/ISO_4217)) also assigns a three-digit numeric code to each currency, much like the three-digit numeric code assigned to each country by [ISO 3166](https://en.wikipedia.org/wiki/ISO_3166 \"ISO 3166\"). The numeric code assigned to a currency by ISO 4217 is usually the same as the numeric code assigned to the corresponding country by [ISO 3166-1](https://en.wikipedia.org/wiki/ISO_3166-1 \"ISO 3166-1\"). For example, USD ([United States dollar](https://en.wikipedia.org/wiki/United_States_dollar \"United States dollar\")) has numeric code 840 which is also the numeric code for the US (United States)."}
 		},
 		"_data": {
-			"_set": {
-				"_set_scalar": {
-					"_class": "_class_category",
-					"_set_type": "_type_string",
-					"_regexp": "^[0-9]{3}$"
-				}
+			"_scalar": {
+				"_class": "_class_category",
+				"_type": "_type_string",
+				"_regexp": "^[0-9]{3}$"
 			}
 		}
 	},
@@ -386,12 +376,10 @@
 			"_description": {"iso_639_3_eng": "[ISO 15924]([ISO 15924 - Wikipedia](https://en.wikipedia.org/wiki/ISO_15924)), is an [international standard](https://en.wikipedia.org/wiki/ISO_standard \"ISO standard\") defining codes for [writing systems](https://en.wikipedia.org/wiki/Writing_systems \"Writing systems\") or *scripts* (a *set of graphic characters used for the written form of one or more languages*). Each script is given both a four-letter code and a numeric code."}
 		},
 		"_data": {
-			"_set": {
-				"_set_scalar": {
-					"_class": "_class_category",
-					"_set_type": "_type_string",
-					"_regexp": "^[A-Z]{2,4}$"
-				}
+			"_scalar": {
+				"_class": "_class_category",
+				"_type": "_type_string",
+				"_regexp": "^[A-Z]{2,4}$"
 			}
 		}
 	},
@@ -408,12 +396,10 @@
 			"_description": {"iso_639_3_eng": "[ISO 15924]([ISO 15924 - Wikipedia](https://en.wikipedia.org/wiki/ISO_15924)), is an [international standard](https://en.wikipedia.org/wiki/ISO_standard \"ISO standard\") defining codes for [writing systems](https://en.wikipedia.org/wiki/Writing_systems \"Writing systems\") or *scripts* (a *set of graphic characters used for the written form of one or more languages*). Each script is given both a four-letter code and a three character numeric code."}
 		},
 		"_data": {
-			"_set": {
-				"_set_scalar": {
-					"_class": "_class_category",
-					"_set_type": "_type_string",
-					"_regexp": "^[0-9]{3}$"
-				}
+			"_scalar": {
+				"_class": "_class_category",
+				"_type": "_type_string",
+				"_regexp": "^[0-9]{3}$"
 			}
 		}
 	}

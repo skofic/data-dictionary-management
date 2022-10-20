@@ -123,124 +123,105 @@ async function ProcessIsoStandards(db) {
  */
 async function ValidateDocuments(db)
 {
+
 	//
 	// Init local storage.
 	//
+	let processed = 0
 	let error_count = 0
+	let page_records = 0
+	const url = `${kPriv.user.db.host}/_db/metadata/dict/check/objects`
 
 	//
-	// Query all terms.
+	// Get cursor.
 	//
 	console.log(`==> Querying all terms`)
-	const terms = await db.query(aql`
-	  FOR term IN ${db.collection(kDb.collection_terms)}
-	  RETURN term
+	const cursor = await db.query(aql`
+		FOR term IN ${db.collection(kDb.collection_terms)}
+		LIMIT ${page_records}, ${kPriv.user.db.page_records}
+		RETURN term
 	`)
 
 	//
-	// Iterate all terms.
+	// Turn pages.
 	//
-	let processed = 0
 	console.log(`==> Iterating all terms`)
-	for await (const term of terms) {
+	let records = await cursor.all()
+	while(records.length > 0) {
 
 		//
 		// Create data payload.
 		//
-		const postData = JSON.stringify({
-			value: term,
+		const postData = {
+			value: records,
 			language: 'iso_639_eng'
-		})
-
-		//
-		// Set request options.
-		//
-		const options = {
-			hostname: kPriv.user.db.hostname,
-			port: 8529,
-			path: '/_db/metadata/dict/check/object',
-			method: 'POST',
-			headers: {
-				'Accept': 'application/json;charset=UTF-8',
-				'Content-Type': 'application/json',
-				'Content-Length': Buffer.byteLength(postData)
-			}
 		}
 
 		//
-		// Define request.
+		// Validate.
 		//
-		const request = http.request(options, (response) => {
-			let data = ''
+		const response = await axios.post(url, postData)
+		if(response.status !== 200) {
+			throw Error(`(${response.status}) - ${response.statusText}`)
+		}
 
-			response.setEncoding('utf8')
+		//
+		// Init response.
+		//
+		let report = {
+			value: [],
+			result: []
+		}
 
-			response.on('data',  (chunk) => {
-				data += chunk
-			})
-
-			response.on('end', () => {
-
-				//
-				// Intercept errors.
-				//
-				if(response.statusCode !== 200) {
-					throw Error(`${response.statusCode} - ${response.statusMessage}`)
+		//
+		// Scan statuses.
+		//
+		let errors = 0
+		let signal = {}
+		for(let i = 0; i < response.data.result.length; i++) {
+			let ok = true
+			const status = response.data.result[i]
+			signal = {}
+			for(const property in status) {
+				if(status[property].status.code !== 0) {
+					ok = false
+					console.log(`[${response.data.value[i]._key}] (${status[property].status.code}) ${status[property].status.message}`)
+					signal[property] = JSON.parse(JSON.stringify(status[property]))
+					errors += 1
 				}
+			}
 
-				//
-				// Parse result.
-				//
-				try {
-					//
-					// Decode result.
-					//
-					const result = JSON.parse(data)
-					let report = {
-						value: JSON.parse(JSON.stringify(result.value)),
-						result: {}
-					}
+			//
+			// Handle errors.
+			//
+			if(!ok) {
+				error_count += 1
+				report.value.push(response.data.value[i])
+				report.result.push(signal)
+				db.collection(kDb.collection_errors).save(report)
+			}
 
-					//
-					// Handle errors.
-					//
-					let errors = 0
-					for(const property in result.result) {
-						if(result.result[property].status.code !== 0) {
-							console.log(`[${term._key}] (${result.result[property].status.code}) ${result.result[property].status.message}`)
-							report.result[property] = JSON.parse(JSON.stringify(result.result[property]))
-							errors += 1
-						}
-					}
+			processed += 1
+		}
 
-					//
-					// Handle errors.
-					//
-					if(errors > 0) {
-						error_count += 1
-						// db.collection(kDb.collection_errors).save(report)
-					}
-
-				} catch (err) {
-					throw(err)
-				}
-			})
-
-		}).on('error', (error) => {
-			throw error
-		})
+		console.log(processed)
 
 		//
-		// Make request.
+		// Get next page.
 		//
-		request.write(postData)
-		request.end
+		page_records += kPriv.user.db.page_records
+		const cursor = await db.query(aql`
+			FOR term IN ${db.collection(kDb.collection_terms)}
+			LIMIT ${page_records}, ${kPriv.user.db.page_records}
+			RETURN term
+		`)
+		records = await cursor.all()
 
-		await new Promise(r => setTimeout(r, 5))
+	} // Page not empty.
 
-	} // Iterating terms.
+	console.log(`Processed ${processed} terms.`)
 
-	return error_count																// ==>
+	return error_count															// ==>
 
 } // ValidateDocuments()
 
