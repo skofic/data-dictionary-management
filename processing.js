@@ -147,6 +147,7 @@ async function ValidateDocuments(db)
 	//
 	console.log(`==> Iterating all terms`)
 	let records = await cursor.all()
+
 	while(records.length > 0) {
 
 		//

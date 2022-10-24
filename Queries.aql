@@ -1,16 +1,16 @@
 //
-// Data Dictionary - Return preferred element path.
+// Find enumeration from term _id.
 //
-WITH terms
-FOR vertex, edge, path IN 1..10
-    INBOUND @root
-    GRAPH "schema"
-    PRUNE @pathId NOT IN edge.`/rels/path` AND
-          ( (edge._to == @target AND
-             edge.`_rels_predicate` == "_enum_pred_enum-of") OR
-            (edge._from == @target AND
-             edge.`_rels_predicate` == "_enum_pred_enum-of") )
-    OPTIONS {"order": "dfs", "uniqueVertices": "path"}
-    FILTER edge._to == @target OR
-           edge._from == @target
-    RETURN path
+for term IN @targets
+    LET selection = (
+        FOR edge IN edges
+            FILTER ( edge._to == term OR
+                     edge._from == term )
+            FILTER edge._predicate == "_predicate_enum-of"
+            FILTER @enum IN edge._path
+        RETURN edge._from
+    )
+RETURN {
+    "term": term,
+    "edge": selection[0]
+}
