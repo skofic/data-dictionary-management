@@ -107,7 +107,7 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Boolean"},
-			"_definition": {"iso_639_3_eng": "True or false value"}
+			"_definition": {"iso_639_3_eng": "True or false value."}
 		}
 	},
 	{

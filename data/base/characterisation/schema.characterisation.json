@@ -1,0 +1,14 @@
+[
+	{
+		"_from": "tree",
+		"_to": "_domain",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_domain"]
+	},
+	{
+		"_from": "stand",
+		"_to": "_domain",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_domain"]
+	}
+]

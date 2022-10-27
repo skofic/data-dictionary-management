@@ -14,6 +14,7 @@ const globals = {
 		"geo": "./data/base/geo",
 		"iso": "./data/base/iso",
 		"eufgis": "./data/base/eufgis",
+		"characterisation": "./data/base/characterisation",
 
 		"processed": "./data/processed/",
 

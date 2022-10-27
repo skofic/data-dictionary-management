@@ -36,6 +36,9 @@ async function ProcessDictionaryFiles(db) {
 		if(kPriv.user.flag.do_eufgis) {
 			paths.push(kGlob.globals.path.eufgis)
 		}
+		if(kPriv.user.flag.do_characterisation) {
+			paths.push(kGlob.globals.path.characterisation)
+		}
 	}
 
 	//

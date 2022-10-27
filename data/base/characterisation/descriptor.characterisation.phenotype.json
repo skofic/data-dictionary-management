@@ -1,0 +1,591 @@
+[
+	{
+		"_code": {
+			"_lid": "cbh",
+			"_gid": "cbh",
+			"_pid": ["cbh"],
+			"_aid": ["cbh"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Breast height trunk circumference"},
+			"_definition": {"iso_639_3_eng": "Circumference of the trunk at breash height (1.30 m)"},
+			"_description": {"iso_639_3_eng": "A measure of tree size, circumference of the trunk at breath height (1.30 m) in cm measured with circular tape. Tree level data."},
+			"_notes": {"iso_639_3_eng": "This tree level property can also be averaged across trees to provide an equivalent GCU-level estimate (with associated variance)."},
+			"_data_provider": [
+				"Maurizio Mencuccini <m.mencuccini@creaf.uab.cat>"
+			]
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_quantity",
+				"_domain": "tree",
+				"_type": "_type_number",
+				"_unit": "_unit_length_cm",
+				"_valid-range": {
+					"_min-range-exclusive": 0.0,
+					"_max-range-exclusive": 1000.0
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "cbh",
+			"_lid": "ci-95-interval",
+			"_gid": "cbh_ci-95-interval",
+			"_aid": ["ci-95-interval"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "BCH 95% confidence interval"},
+			"_definition": {"iso_639_3_eng": "Circumference of the trunk at breash height 95% confidence interval."},
+			"_description": {"iso_639_3_eng": "95% confidence level interval for [circumference of the trunk at breash height](./cbh.md)."}
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_quantity",
+				"_domain": "tree",
+				"_type": "_type_number"
+			}
+		}
+	},
+	
+	{
+		"_code": {
+			"_lid": "Dsoil",
+			"_gid": "Dsoil",
+			"_pid": ["Dsoil"],
+			"_aid": ["Dsoil"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Soil depth"},
+			"_definition": {"iso_639_3_eng": "Vertical distance from soil surface to the bottom of the excavated pit or of the auger core."},
+			"_description": {"iso_639_3_eng": "Soil depth is determined either by excavating a pit or by extrating a soil core using an auger down to the depth where rocks are found and extracting further soil is impossible - Stand level data."},
+			"_data_provider": [
+				"Florence Jean"
+			]
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_quantity",
+				"_domain": "soil",
+				"_type": "_type_number",
+				"_unit": "_unit_length_cm",
+				"_valid-range": {
+					"_min-range-exclusive": 0.0,
+					"_max-range-exclusive": 1.0
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_lid": "Pi100",
+			"_gid": "Pi100",
+			"_pid": ["Pi100"],
+			"_aid": ["Pi100"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Leaf osmotic potential at saturation"},
+			"_definition": {"iso_639_3_eng": "The osmotic potential when leaves are fully turgid."},
+			"_description": {"iso_639_3_eng": "The osmotic potential at saturation is an index of investment of solutes by turgid leaves to maintain turgpr. It is measured by osmometry on extracted sap. Tree level data."},
+			"_data_provider": [
+				"Maurizio Mencuccini <m.mencuccini@creaf.uab.cat>"
+			]
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_quantity",
+				"_domain": "tree",
+				"_type": "_type_number",
+				"_unit-name": "MPa",
+				"_valid-range": {
+					"_min-range-exclusive": -5.0,
+					"_max-range-exclusive": 0.0
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_lid": "TLP",
+			"_gid": "TLP",
+			"_pid": ["TLP"],
+			"_aid": ["TLP"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Leaf turgor loss point"},
+			"_definition": {"iso_639_3_eng": "The water potential at which leaves lose turgor."},
+			"_description": {"iso_639_3_eng": "Turgor loss point is an index of drought resistance and it is measured by osmometry on extracted sap. Tree level data."},
+			"_notes": {"iso_639_3_eng": "This tree level property can also be averaged across trees to provide an equivalent GCU-level estimate (with associated variance)."},
+			"_data_provider": [
+				"Maurizio Mencuccini <m.mencuccini@creaf.uab.cat>"
+			]
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_quantity",
+				"_domain": "tree",
+				"_type": "_type_number",
+				"_unit-name": "MPa",
+				"_valid-range": {
+					"_min-range-exclusive": -5.0,
+					"_max-range-exclusive": 0.0
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_lid": "P50",
+			"_gid": "P50",
+			"_pid": ["P50"],
+			"_aid": ["P50"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Xylem vulnerability to embolism"},
+			"_definition": {"iso_639_3_eng": "The water potential at which 50% of the xylem conductivity is lost."},
+			"_description": {"iso_639_3_eng": "Vulnerability to embolism is an index of drought resistance and it is measured using a rotary instrument called cavitron. Tree level data."},
+			"_notes": {"iso_639_3_eng": "This tree level property can also be averaged across trees to provide an equivalent GCU-level estimate (with associated variance)."},
+			"_data_provider": [
+				"Maurizio Mencuccini <m.mencuccini@creaf.uab.cat>"
+			]
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_quantity",
+				"_domain": "tree",
+				"_type": "_type_number",
+				"_unit-name": "MPa",
+				"_valid-range": {
+					"_min-range-exclusive": -15.0,
+					"_max-range-exclusive": 0.0
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_lid": "Gres",
+			"_gid": "Gres",
+			"_pid": ["Gres"],
+			"_aid": ["Gres"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Leaf residual conductance"},
+			"_definition": {"iso_639_3_eng": "The leaf water vapour conductance remaining after stomatal closure."},
+			"_description": {"iso_639_3_eng": "Residual (or minimum) conductance is an index of drought resistance and it is measured by weight loss under standard conditions. Tree level data."},
+			"_notes": {"iso_639_3_eng": "This tree level property can also be averaged across trees to provide an equivalent GCU-level estimate (with associated variance)."},
+			"_data_provider": [
+				"Maurizio Mencuccini <m.mencuccini@creaf.uab.cat>"
+			]
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_quantity",
+				"_domain": "tree",
+				"_type": "_type_number",
+				"_unit-name": "mmol m-2 s-1",
+				"_valid-range": {
+					"_min-range-exclusive": 0.0,
+					"_max-range-exclusive": 50.0
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_lid": "Gres",
+			"_gid": "Gres",
+			"_pid": ["Gres"],
+			"_aid": ["Gres"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Leaf residual conductance"},
+			"_definition": {"iso_639_3_eng": "The leaf water vapour conductance remaining after stomatal closure."},
+			"_description": {"iso_639_3_eng": "Residual (or minimum) conductance is an index of drought resistance and it is measured by weight loss under standard conditions. Tree level data."},
+			"_notes": {"iso_639_3_eng": "This tree level property can also be averaged across trees to provide an equivalent GCU-level estimate (with associated variance)."},
+			"_data_provider": [
+				"Maurizio Mencuccini <m.mencuccini@creaf.uab.cat>"
+			]
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_quantity",
+				"_domain": "tree",
+				"_type": "_type_number",
+				"_unit-name": "mmol m-2 s-1",
+				"_valid-range": {
+					"_min-range-exclusive": 0.0,
+					"_max-range-exclusive": 50.0
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_lid": "Cleaf",
+			"_gid": "Cleaf",
+			"_pid": ["Cleaf"],
+			"_aid": ["Cleaf"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Leaf hydraulic capacitance"},
+			"_definition": {"iso_639_3_eng": "The change in leaf relative water content RWC per unit change in water potential."},
+			"_description": {"iso_639_3_eng": "Hydraulic capacitance is an index of drought resistance and it is measured by weight loss under standard conditions. Tree level data."},
+			"_notes": {"iso_639_3_eng": "This tree level property can also be averaged across trees to provide an equivalent GCU-level estimate (with associated variance)."},
+			"_data_provider": [
+				"Maurizio Mencuccini <m.mencuccini@creaf.uab.cat>"
+			]
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_quantity",
+				"_domain": "tree",
+				"_type": "_type_number",
+				"_unit-name": "%RWC MPa-1",
+				"_valid-range": {
+					"_min-range-exclusive": 0.0,
+					"_max-range-exclusive": 50.0
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_lid": "HV",
+			"_gid": "HV",
+			"_pid": ["HV"],
+			"_aid": ["HV"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Huber value"},
+			"_definition": {"iso_639_3_eng": "The ratio of under-bark wood cross-sectional area to subtended leaf area in a branch."},
+			"_description": {"iso_639_3_eng": "The HV is an index of investment of dry matter in supporting branch xylem tissues for the conduction of water towards the subtended areas of the transpiring leaves. Tree level data."},
+			"_data_provider": [
+				"Maurizio Mencuccini <m.mencuccini@creaf.uab.cat>"
+			]
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_quantity",
+				"_domain": "tree",
+				"_type": "_type_number",
+				"_unit-name": "cm2 cm-2",
+				"_valid-range": {
+					"_min-range-exclusive": 0.000001,
+					"_max-range-exclusive": 0.01
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_lid": "Htot",
+			"_gid": "Htot",
+			"_pid": ["Htot"],
+			"_aid": ["Htot"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Total height"},
+			"_definition": {"iso_639_3_eng": "Vertical tree height from ground level to the upmost tip."},
+			"_description": {"iso_639_3_eng": "A measure of tree size, tree total height in m is measured with a clinometer. Tree level data."},
+			"_notes": {"iso_639_3_eng": "This tree level property can also be averaged across trees to provide an equivalent GCU-level estimate (with associated variance)."},
+			"_data_provider": [
+				"Maurizio Mencuccini <m.mencuccini@creaf.uab.cat>"
+			]
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_quantity",
+				"_domain": "tree",
+				"_type": "_type_number",
+				"_unit": "_unit_length_m",
+				"_valid-range": {
+					"_min-range-exclusive": 0.0,
+					"_max-range-exclusive": 100.0
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_lid": "Hcrown",
+			"_gid": "Hcrown",
+			"_pid": ["Hcrown"],
+			"_aid": ["Hcrown"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Basal crown height"},
+			"_definition": {"iso_639_3_eng": "Vertical tree height from ground level to the lowermost live branch on the main stem."},
+			"_description": {"iso_639_3_eng": "A measure of tree size, tree basal crown height in m is measured with a clinometer. Tree level data."},
+			"_notes": {"iso_639_3_eng": "This tree level property can also be averaged across trees to provide an equivalent GCU-level estimate (with associated variance)."},
+			"_data_provider": [
+				"Maurizio Mencuccini <m.mencuccini@creaf.uab.cat>"
+			]
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_quantity",
+				"_domain": "tree",
+				"_type": "_type_number",
+				"_unit": "_unit_length_m",
+				"_valid-range": {
+					"_min-range-exclusive": 0.0,
+					"_max-range-exclusive": 100.0
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_lid": "SLA",
+			"_gid": "SLA",
+			"_pid": ["SLA"],
+			"_aid": ["SLA"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Specific leaf area"},
+			"_definition": {"iso_639_3_eng": "The ratio between the projected area of a fresh leaf and its dry mass."},
+			"_description": {"iso_639_3_eng": "SLA is the ratio of investment of dry matter into leaves and the return in terms of area for photosynthesis. The area is projected for broadleaves but accounts for cylindrical geometry for conifer needles."},
+			"_data_provider": [
+				"Maurizio Mencuccini <m.mencuccini@creaf.uab.cat>"
+			]
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_quantity",
+				"_domain": "tree",
+				"_type": "_type_number",
+				"_unit_name": "mm2 mg-1",
+				"_valid-range": {
+					"_min-range-exclusive": 0.0,
+					"_max-range-exclusive": 50.0
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_lid": "WCC",
+			"_gid": "WCC",
+			"_pid": ["WCC"],
+			"_aid": ["WCC"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Wood carbon content"},
+			"_definition": {"iso_639_3_eng": "The percentage of wood dry mass that is composed of carbon atoms."},
+			"_description": {"iso_639_3_eng": "WCC is obtained by mass spectrometry of dried and ground wood samples."},
+			"_data_provider": [
+				"Maurizio Mencuccini <m.mencuccini@creaf.uab.cat>"
+			]
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_quantity",
+				"_domain": "tree",
+				"_type": "_type_number",
+				"_unit_name": "% or 100*g g-1",
+				"_valid-range": {
+					"_min-range-exclusive": 30.0,
+					"_max-range-exclusive": 70.0
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_lid": "LNC",
+			"_gid": "LNC",
+			"_pid": ["LNC"],
+			"_aid": ["LNC"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Leaf nitrogen content"},
+			"_definition": {"iso_639_3_eng": "The percentage of leaf dry mass that is composed of nitrogen atoms."},
+			"_description": {"iso_639_3_eng": "LNC is obtained by mass spectrometry of dried and ground leaf samples."},
+			"_data_provider": [
+				"Maurizio Mencuccini <m.mencuccini@creaf.uab.cat>"
+			]
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_quantity",
+				"_domain": "tree",
+				"_type": "_type_number",
+				"_unit_name": "% or 100*g g-1",
+				"_valid-range": {
+					"_min-range-exclusive": 0.0,
+					"_max-range-exclusive": 5.0
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_lid": "Leaf-delta13C",
+			"_gid": "Leaf-delta13C",
+			"_pid": ["Leaf delta13C"],
+			"_aid": ["Leaf-delta13C"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Leaf delta 13C"},
+			"_definition": {"iso_639_3_eng": "The isotopic ratio of 13C to the more abundant 12C carbon atoms relative to a standard reference material in per mils in leaf samples."},
+			"_description": {"iso_639_3_eng": "Leaf delta13C is obtained by mass spectrometry of dried and ground leaf samples. Being relative to a standard reference material, it is always negative."},
+			"_data_provider": [
+				"Maurizio Mencuccini <m.mencuccini@creaf.uab.cat>"
+			]
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_quantity",
+				"_domain": "tree",
+				"_type": "_type_number",
+				"_unit_name": "per mil or 1000 g g-1",
+				"_valid-range": {
+					"_min-range-exclusive": -40.0,
+					"_max-range-exclusive": 0.0
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_lid": "Wood-delta13C",
+			"_gid": "Wood-delta13C",
+			"_pid": ["Wood delta13C"],
+			"_aid": ["Wood-delta13C"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Wood delta 13C"},
+			"_definition": {"iso_639_3_eng": "The isotopic ratio of 13C to the more abundant 12C carbon atoms relative to a standard reference material in per mils in wood samples."},
+			"_description": {"iso_639_3_eng": "Wood delta13C is obtained by mass spectrometry of dried and ground leaf samples. Being relative to a standard reference material, it is always negative."},
+			"_data_provider": [
+				"Maurizio Mencuccini <m.mencuccini@creaf.uab.cat>"
+			]
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_quantity",
+				"_domain": "tree",
+				"_type": "_type_number",
+				"_unit_name": "per mil or 1000 g g-1",
+				"_valid-range": {
+					"_min-range-exclusive": -40.0,
+					"_max-range-exclusive": 0.0
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_lid": "Leaf-delta15N",
+			"_gid": "Leaf-delta15N",
+			"_pid": ["Leaf delta15N"],
+			"_aid": ["Leaf-delta15N"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Leaf delta 15N"},
+			"_definition": {"iso_639_3_eng": "The isotopic ratio of 15N to the more abundant 14N nitrogen atoms relative to a standard reference material in per mils in leaf samples."},
+			"_description": {"iso_639_3_eng": "Leaf delta15N is obtained by mass spectrometry of dried and ground leaf samples. Being relative to a standard reference material, it is always negative."},
+			"_data_provider": [
+				"Maurizio Mencuccini <m.mencuccini@creaf.uab.cat>"
+			]
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_quantity",
+				"_domain": "tree",
+				"_type": "_type_number",
+				"_unit_name": "per mil or 1000 g g-1",
+				"_valid-range": {
+					"_min-range-exclusive": -20.0,
+					"_max-range-exclusive": 20.0
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_lid": "Leaf-CN",
+			"_gid": "Leaf-CN",
+			"_pid": ["Leaf CN"],
+			"_aid": ["Leaf-CN"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Leaf carbon to nitrogen ratio"},
+			"_definition": {"iso_639_3_eng": "The ratio of carbon to nitrogen atoms in leaf dry tissues."},
+			"_description": {"iso_639_3_eng": "Leaf C/N ratio is obtained by mass spectrometry of dried and ground leaf samples."},
+			"_data_provider": [
+				"Maurizio Mencuccini <m.mencuccini@creaf.uab.cat>"
+			]
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_quantity",
+				"_domain": "tree",
+				"_type": "_type_number",
+				"_unit_name": "g g-1",
+				"_valid-range": {
+					"_min-range-exclusive": 0.0,
+					"_max-range-exclusive": 1000.0
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_lid": "WD",
+			"_gid": "WD",
+			"_pid": ["WD"],
+			"_aid": ["WD"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Wood density"},
+			"_definition": {"iso_639_3_eng": "The ratio of wood dry mass divided by its fresh volume."},
+			"_description": {"iso_639_3_eng": "Wood density is the ratio of biomass invested in wood per unit of volume. It is obtained by weighing and following determination of volume."},
+			"_data_provider": [
+				"Maurizio Mencuccini <m.mencuccini@creaf.uab.cat>"
+			]
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_quantity",
+				"_domain": "tree",
+				"_type": "_type_number",
+				"_unit_name": "g cm-3",
+				"_valid-range": {
+					"_min-range-exclusive": 0.1,
+					"_max-range-exclusive": 1.0
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_lid": "BD",
+			"_gid": "BD",
+			"_pid": ["BD"],
+			"_aid": ["BD"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Bark density"},
+			"_definition": {"iso_639_3_eng": "The ratio of bark dry mass divided by its fresh volume."},
+			"_description": {"iso_639_3_eng": "Bark density is the ratio of biomass invested in bark per unit of volume. It is obtained by weighing and following determination of volume."},
+			"_data_provider": [
+				"Maurizio Mencuccini <m.mencuccini@creaf.uab.cat>"
+			]
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_quantity",
+				"_domain": "tree",
+				"_type": "_type_number",
+				"_unit_name": "g cm-3",
+				"_valid-range": {
+					"_min-range-exclusive": 0.1,
+					"_max-range-exclusive": 1.0
+				}
+			}
+		}
+	}
+]
