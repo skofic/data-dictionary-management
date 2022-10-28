@@ -31,6 +31,12 @@
 		"_path": ["_scalar", "_set_scalar"]
 	},
 	{
+		"_from": "_subject",
+		"_to": "_scalar",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_scalar", "_set_scalar"]
+	},
+	{
 		"_from": "_domain",
 		"_to": "_scalar",
 		"_predicate": "_predicate_property-of",

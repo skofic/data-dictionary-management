@@ -1,18 +1,6 @@
 [
 	{
 		"_code": {
-			"_lid": "char",
-			"_gid": "char",
-			"_aid": ["char"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Characterisation"},
-			"_definition": {"iso_639_3_eng": "This namespace groups all terms that deal with characterisation data, both at the tree and gcu level."}
-		}
-	},
-	
-	{
-		"_code": {
 			"_lid": "tree",
 			"_gid": "tree",
 			"_aid": ["tree"]
@@ -33,6 +21,73 @@
 			"_title": {"iso_639_3_eng": "Stand level trait"},
 			"_definition": {"iso_639_3_eng": "The data or term refers to stand domain information."},
 			"_description": {"iso_639_3_eng": "This category indicates that the *descriptor* or *term* describes a *trait* belonging to a *stand* or *unit* containing tree populations. This category *excludes traits associated to the tree*, the *trait* must *characterise* the *stand* or *unit*."}
+		}
+	},
+	
+	{
+		"_code": {
+			"_lid": "phenotypic",
+			"_gid": "phenotypic",
+			"_aid": ["phenotypic"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Phenotypic"},
+			"_definition": {"iso_639_3_eng": "Phenotypic data"}
+		}
+	},
+	{
+		"_code": {
+			"_lid": "modelled",
+			"_gid": "modelled",
+			"_aid": ["modelled"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Modelled"},
+			"_definition": {"iso_639_3_eng": "Modelled data"}
+		}
+	},
+	{
+		"_code": {
+			"_lid": "genetic",
+			"_gid": "genetic",
+			"_aid": ["genetic"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Genetic"},
+			"_definition": {"iso_639_3_eng": "Genetic data"}
+		}
+	},
+	{
+		"_code": {
+			"_lid": "general",
+			"_gid": "general",
+			"_aid": ["general"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "General"},
+			"_definition": {"iso_639_3_eng": "General data"}
+		}
+	},
+	{
+		"_code": {
+			"_lid": "environmental",
+			"_gid": "environmental",
+			"_aid": ["environmental"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Environmental"},
+			"_definition": {"iso_639_3_eng": "Environmental data"}
+		}
+	},
+	{
+		"_code": {
+			"_lid": "compound",
+			"_gid": "compound",
+			"_aid": ["compound"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Compound"},
+			"_definition": {"iso_639_3_eng": "Compound data"}
 		}
 	}
 ]

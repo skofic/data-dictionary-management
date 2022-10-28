@@ -22,7 +22,8 @@ async function main()
 		"namespace.geo.json",
 		"namespace.iso.json",
 		"namespace.std.json",
-		"namespace.eufgis.json"
+		"namespace.eufgis.json",
+		"namespace.characterisation.json"
 	]
 
 	//
@@ -38,7 +39,8 @@ async function main()
 		"descriptor.geo.json",
 		"descriptor.iso.json",
 		"descriptor.std.json",
-		"descriptor.eufgis.json"
+		"descriptor.eufgis.json",
+		"descriptor.characterisation.phenotype.json"
 	]
 
 	//

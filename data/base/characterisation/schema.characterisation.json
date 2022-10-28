@@ -1,12 +1,49 @@
 [
 	{
 		"_from": "tree",
+		"_to": "_subject",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_subject"]
+	},
+	{
+		"_from": "stand",
+		"_to": "_subject",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_subject"]
+	},
+	
+	{
+		"_from": "phenotypic",
 		"_to": "_domain",
 		"_predicate": "_predicate_enum-of",
 		"_path": ["_domain"]
 	},
 	{
-		"_from": "stand",
+		"_from": "modelled",
+		"_to": "_domain",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_domain"]
+	},
+	{
+		"_from": "genetic",
+		"_to": "_domain",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_domain"]
+	},
+	{
+		"_from": "general",
+		"_to": "_domain",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_domain"]
+	},
+	{
+		"_from": "environmental",
+		"_to": "_domain",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_domain"]
+	},
+	{
+		"_from": "compound",
 		"_to": "_domain",
 		"_predicate": "_predicate_enum-of",
 		"_path": ["_domain"]

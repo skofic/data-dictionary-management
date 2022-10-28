@@ -74,6 +74,11 @@ async function InitDatabase(db)
 				case kPriv.user.db.error_col:
 					await db.collection(kPriv.user.db.error_col).drop()
 					break
+
+				// Characterisation.
+				case kPriv.user.db.char_col:
+					await db.collection(kPriv.user.db.char_col).drop()
+					break
 			}
 		}
 	}
@@ -85,6 +90,7 @@ async function InitDatabase(db)
 	await InitEdgeCollection(db, kDb.collection_edges)
 	await InitTopoCollection(db, kDb.collection_topos)
 	await InitErrorCollection(db, kPriv.user.db.error_col)
+	await InitCharCollection(db, kPriv.user.db.char_col)
 
 	//
 	// Create graphs.
@@ -233,6 +239,24 @@ async function DropErrorCollection(db, name)
 	console.log(`Dropped collection ${name}`)
 
 } // DropErrorCollection()
+
+/**
+ * Initialise characterisation collection.
+ * It expects the collection to have been previously dropped.
+ * @param {Database} db - Database connection.
+ * @param {string} name - Collection name.
+ * @returns {Promise<void>}
+ */
+async function InitCharCollection(db, name)
+{
+	//
+	// Create collection.
+	//
+	const collection = await db.createCollection(name)
+
+	console.log(`Created characterisation collection ${name}`)
+
+} // InitCharCollection()
 
 /**
  * Initialise schema graph.

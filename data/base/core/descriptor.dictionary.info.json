@@ -166,5 +166,28 @@
 				}
 			}
 		}
+	},
+
+	{
+		"_code": {
+			"_nid": "",
+			"_lid": "provider",
+			"_gid": "_provider",
+			"_aid": ["provider"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Data provider"},
+			"_definition": {"iso_639_3_eng": "Name and contact of the people who provided the data definition."},
+			"_description": {"iso_639_3_eng": "This list of references should be used to provide all the *sources* of the *data definition*. This information can be useful when further information is needed.\n\nThe minimum information should be the name and the e-mail, if available. One can also add comments and other information if relevant."},
+			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_data_provider\": [\n\t\t\"John Smith <j.smith@someinstitute.edu>\",\n\t\t\"Robert Frost <enquiries@knoweverything.com> Just for very difficult questions.\",\n\t\t\"Tree Institute - 5, Oak Drive, Massachussets,USA\"\n\t]\n}\n```\nThe above example contains a list of three contacts. The first one contains a valid e-mail format string, the second adds a comment at the end, and the last one includes a mailing address."}
+		},
+		"_data": {
+			"_set": {
+				"_set_scalar": {
+					"_class": "_class_category",
+					"_set_type": "_type_string"
+				}
+			}
+		}
 	}
 ]
