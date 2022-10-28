@@ -8,7 +8,7 @@
 
 
 ------
-###### Circumference of the trunk at breash height (1.30 m)
+###### Circumference of the trunk at breash height (1.30 m).
 
 
 
