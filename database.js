@@ -254,6 +254,27 @@ async function InitCharCollection(db, name)
 	//
 	const collection = await db.createCollection(name)
 
+	//
+	// Add indexes.
+	//
+	await collection.ensureIndex({
+		type: 'persistent',
+		fields: ['species', 'gcu_id_number'],
+		deduplicate: true,
+		estimates: true,
+		name: "idx-char-species-gcu",
+		unique: false
+	})
+
+	await collection.ensureIndex({
+		type: 'persistent',
+		fields: ['species', 'gcu_id_number', 'tree_code'],
+		deduplicate: true,
+		estimates: true,
+		name: "idx-char-species-gcu-tree",
+		unique: false
+	})
+
 	console.log(`Created characterisation collection ${name}`)
 
 } // InitCharCollection()
