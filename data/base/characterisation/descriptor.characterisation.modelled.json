@@ -1,0 +1,62 @@
+[
+	{
+		"_code": {
+			"_lid": "FD",
+			"_gid": "FD",
+			"_pid": ["FD"],
+			"_aid": ["FD"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Frost damage"},
+			"_definition": {"iso_639_3_eng": "The simulated percentage of leaf buds killed by one or more frost events during the year."},
+			"_description": {"iso_639_3_eng": "The vulnerability of buds to late frosts depends on the stage of bud development. We model with CASTANEA the process of dormancy breaking during which this vulnerability increases. The damage is then calculated by crossing the vulnerability of the buds and the minimum temperatures."}
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_quantity",
+				"_domain": ["modelled"],
+				"_type": "_type_number"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_lid": "PLC",
+			"_gid": "PLC",
+			"_pid": ["PLC"],
+			"_aid": ["PLC"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Hydraulic failure"},
+			"_definition": {"iso_639_3_eng": "The simulated cumulative percentage of conductance loss due to one or more drought events during the year."},
+			"_description": {"iso_639_3_eng": "The SurEau model estimate soil and plant water status at an hourly time step and derived the hydraulic safety margins and  the risk of hydraulic failure. It is based on an integrated soil-plant hydraulic model solving the water balance of different plant compartments (canopy and stem, roots and three soil layers)using a semi-implicit numerical resolution. It relies on hourly climate variable and on measurable soil and plant traits."}
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_quantity",
+				"_domain": ["modelled"],
+				"_type": "_type_number"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_lid": "CS",
+			"_gid": "CS",
+			"_pid": ["CS"],
+			"_aid": ["CS"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Carbon starvation"},
+			"_definition": {"iso_639_3_eng": "The simulated cumulative deficit in Non-Structural Carboydrates (NSC) during the year."},
+			"_description": {"iso_639_3_eng": "The CASTANEA model simulates photosynthesis, respiration and carbon allocation on a daily basis. The remaining carbon is allocated to reserves and is remobilized in non-vegetative periods or during drought episodes."}
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_quantity",
+				"_domain": ["modelled"],
+				"_type": "_type_number"
+			}
+		}
+	}
+]
