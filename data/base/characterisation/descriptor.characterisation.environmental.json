@@ -107,6 +107,29 @@
 	},
 	{
 		"_code": {
+			"_nid": "gcu_loc",
+			"_lid": "MaxLST",
+			"_gid": "gcu_loc_MaxLST",
+			"_pid": ["MaxLST"],
+			"_aid": ["MaxLST"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "GCU Max Land surface temperature"},
+			"_definition": {"iso_639_3_eng": "Land Surface Temperature (skin temperature) of the GCU during summer month."},
+			"_description": {"iso_639_3_eng": "Maximum monthly land surface temperature in °C. The average of the maximum values of the GCU area is computed for the polygon foot print of GCU boundaries."}
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_quantity_averaged",
+				"_domain": ["environmental"],
+				"_subject": "stand",
+				"_type": "_type_number",
+				"_unit_name": "°C"
+			}
+		}
+	},
+	{
+		"_code": {
 			"_nid": "gcu",
 			"_lid": "AvTreeHeight",
 			"_gid": "gcu_AvTreeHeight",
