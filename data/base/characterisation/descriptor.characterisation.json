@@ -39,6 +39,27 @@
 	},
 	{
 		"_code": {
+			"_lid": "species-list",
+			"_gid": "species-list",
+			"_pid": ["SpeciesList"],
+			"_aid": ["species-list"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Species list"},
+			"_definition": {"iso_639_3_eng": "List of tree or population species."},
+			"_description": {"iso_639_3_eng": "Provide the *list of species* of the *individual tree* or *population* to which *data* is *referring* to."}
+		},
+		"_data": {
+			"_set": {
+				"_set_scalar": {
+					"_class": "_class_category",
+					"_type": "_type_string"
+				}
+			}
+		}
+	},
+	{
+		"_code": {
 			"_nid": "tree",
 			"_lid": "code",
 			"_gid": "tree_code",

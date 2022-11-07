@@ -285,5 +285,26 @@
 				}
 			}
 		}
+	},
+	{
+		"_code": {
+			"_nid": "gcu",
+			"_lid": "AvCanopyHeight",
+			"_gid": "gcu_AvCanopyHeight",
+			"_pid": ["Av_canopy_height"],
+			"_aid": ["AvCanopyHeight"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Average GCU canopy height"},
+			"_definition": {"iso_639_3_eng": "Averaged canopy height iver the polygon in meters."}
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_quantity_averaged",
+				"_domain": ["environmental"],
+				"_type": "_type_number",
+				"_unit": "_unit_length_m"
+			}
+		}
 	}
 ]
