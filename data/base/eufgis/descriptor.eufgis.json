@@ -36,7 +36,7 @@
 		"_data": {
 			"_scalar": {
 				"_type": "_type_string",
-				"_regexp": "^[A-Z]{3}[0-9]{5}$"
+				"_regexp": "^[A-Z]{3}[0-9]{4,5}$"
 			}
 		}
 	},
