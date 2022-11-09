@@ -39,27 +39,6 @@
 	},
 	{
 		"_code": {
-			"_lid": "species-list",
-			"_gid": "species-list",
-			"_pid": ["SpeciesList"],
-			"_aid": ["species-list"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Species list"},
-			"_definition": {"iso_639_3_eng": "List of tree or population species."},
-			"_description": {"iso_639_3_eng": "Provide the *list of species* of the *individual tree* or *population* to which *data* is *referring* to."}
-		},
-		"_data": {
-			"_set": {
-				"_set_scalar": {
-					"_class": "_class_category",
-					"_set_type": "_type_string"
-				}
-			}
-		}
-	},
-	{
-		"_code": {
 			"_nid": "tree",
 			"_lid": "code",
 			"_gid": "tree_code",
@@ -70,6 +49,25 @@
 			"_title": {"iso_639_3_eng": "Tree identifier"},
 			"_definition": {"iso_639_3_eng": "Identifier code assigned to the tree."},
 			"_description": {"iso_639_3_eng": "Provide the identifier assigned to the specific tree. When you *include* this field, it indicates that the *trait data* refers to a *single tree*. If you *omit* this field it means that the *trait data* refers to a [species](./species.md) in a [unit](./gcu_id_number,md)."}
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_identifier",
+				"_type": "_type_string"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_lid": "project",
+			"_gid": "project",
+			"_pid": ["Project"],
+			"_aid": ["project"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Project"},
+			"_definition": {"iso_639_3_eng": "Project to which the experiment, dataset or measurement belongs."},
+			"_description": {"iso_639_3_eng": "The field is not coded, provide the acronym of the project."}
 		},
 		"_data": {
 			"_scalar": {

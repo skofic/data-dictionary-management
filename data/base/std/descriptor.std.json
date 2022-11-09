@@ -232,5 +232,81 @@
 				}
 			}
 		}
+	},
+	{
+		"_code": {
+			"_nid": "std",
+			"_lid": "comments",
+			"_gid": "std_comments",
+			"_aid": ["comments"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Comments and notes"},
+			"_definition": {"iso_639_3_eng": "Notes, comments and other additional information."},
+			"_description": {"iso_639_3_eng": "Use this field as a pasteboard to add relevant information that does not belong to existing descriptors. This field can be associated to any level, from the observation to the GCU. The field does not hold any indication to the language of the comments."}
+		},
+		"_data": {
+			"_scalar": {
+				"_type": "_type_string"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "std",
+			"_lid": "location",
+			"_gid": "std_location",
+			"_aid": ["location"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Location"},
+			"_definition": {"iso_639_3_eng": "Geographic coordinates or shape."},
+			"_description": {"iso_639_3_eng": "This field contains the [GeoJSON](https://geojson.org) geometry corresponding to the *geographic location* or *area* related to the information record which contains it. Use it to indicate the location of a tree or the area in which samples have been collected."}
+		},
+		"_data": {
+			"_scalar": {
+				"_type": "_type_object_geo-json"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "std",
+			"_lid": "dataset",
+			"_gid": "std_dataset",
+			"_aid": ["dataset"],
+			"_pid": ["Dataset"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Dataset"},
+			"_definition": {"iso_639_3_eng": "Dataset name or acronym."},
+			"_description": {"iso_639_3_eng": "Provide a name or acronym to identify the dataset. This will be used as a group to mark all the measurements or observations that comprise a single dataset. Try not to reuse the same code for other datasets."}
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_identifier",
+				"_type": "_type_string"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "std_dataset",
+			"_lid": "local",
+			"_gid": "std_dataset_local",
+			"_aid": ["local"],
+			"_pid": ["LocalDataset"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Local dataset"},
+			"_definition": {"iso_639_3_eng": "Local dataset name or acronym."},
+			"_description": {"iso_639_3_eng": "This field can be used to indicate the identifier of the local dataset."}
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_identifier",
+				"_type": "_type_string"
+			}
+		}
 	}
 ]

@@ -212,7 +212,7 @@
 		"_code": {
 			"_lid": "Inbreeding",
 			"_gid": "Inbreeding",
-			"_pid": ["Inbreeding", "F"],
+			"_pid": ["Inbreeding", "F", "Fis"],
 			"_aid": ["Inbreeding"]
 		},
 		"_info": {
@@ -277,6 +277,64 @@
 			"_title": {"iso_639_3_eng": "Tajima's D"},
 			"_definition": {"iso_639_3_eng": "Neutrality test statistics."},
 			"_description": {"iso_639_3_eng": "Tajima's D is a statistical test created to distinguish between a DNA sequence evolving randomly (\"neutrally\") versus one evolving under a non-random process, including directional selection or balancing selection, demographic expansion or contraction, genetic hitchhiking, or introgression."}
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_quantity",
+				"_domain": ["genetic"],
+				"_type": "_type_number"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_lid": "SampleSize",
+			"_gid": "SampleSize",
+			"_pid": ["SampleSize", "N"],
+			"_aid": ["SampleSize"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Sample size"},
+			"_definition": {"iso_639_3_eng": "Number of individuals used to calculate the measurement."}
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_quantity",
+				"_domain": ["genetic"],
+				"_type": "_type_integer"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_lid": "1-Qinter",
+			"_gid": "1-Qinter",
+			"_pid": ["1-Qinter"],
+			"_aid": ["1-Qinter"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Qinter"},
+			"_definition": {"iso_639_3_eng": "Inter-individual diversity within populations."}
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_quantity",
+				"_domain": ["genetic"],
+				"_type": "_type_number"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "1-Qinter",
+			"_lid": "corrected",
+			"_gid": "1-Qinter_corrected",
+			"_pid": ["1-Qinter-corrected"],
+			"_aid": ["corrected"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Qinter corrected"},
+			"_definition": {"iso_639_3_eng": "Inter-individual diversity within populations corrected by sample size."}
 		},
 		"_data": {
 			"_scalar": {
