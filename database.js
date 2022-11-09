@@ -259,19 +259,28 @@ async function InitCharCollection(db, name)
 	//
 	await collection.ensureIndex({
 		type: 'persistent',
-		fields: ['species', 'gcu_id_number'],
+		fields: ['species'],
 		deduplicate: true,
 		estimates: true,
-		name: "idx-char-species-gcu",
+		name: "idx-char-species",
 		unique: false
 	})
 
 	await collection.ensureIndex({
 		type: 'persistent',
-		fields: ['species', 'gcu_id_number', 'tree_code'],
+		fields: ['gcu_id_number'],
 		deduplicate: true,
 		estimates: true,
-		name: "idx-char-species-gcu-tree",
+		name: "idx-char-gcu",
+		unique: false
+	})
+
+	await collection.ensureIndex({
+		type: 'geo',
+		fields: ['std_location'],
+		geoJson: true,
+		sparse: true,
+		name: "idx-char-location",
 		unique: false
 	})
 
