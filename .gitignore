@@ -120,3 +120,8 @@ dist
 ###
 dbCredentials.oasis.json
 dbCredentials.newtvision.json
+
+###
+# EXPORT DIRECTORY
+###
+/export/

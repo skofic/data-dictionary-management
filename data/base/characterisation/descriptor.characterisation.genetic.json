@@ -313,7 +313,7 @@
 			"_aid": ["1-Qinter"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Qinter"},
+			"_title": {"iso_639_3_eng": "1-Qinter"},
 			"_definition": {"iso_639_3_eng": "Inter-individual diversity within populations."}
 		},
 		"_data": {
@@ -333,7 +333,7 @@
 			"_aid": ["corrected"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Qinter corrected"},
+			"_title": {"iso_639_3_eng": "1-Qinter corrected"},
 			"_definition": {"iso_639_3_eng": "Inter-individual diversity within populations corrected by sample size."}
 		},
 		"_data": {

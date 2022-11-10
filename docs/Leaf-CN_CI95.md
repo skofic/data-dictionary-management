@@ -3,7 +3,7 @@
 
 
 ------
-#### 95% confidence interval
+#### Leaf CN ratio 95% confidence interval
 
 
 

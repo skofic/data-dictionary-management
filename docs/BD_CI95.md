@@ -3,7 +3,7 @@
 
 
 ------
-#### 95% confidence interval
+#### Bark density 95% confidence interval
 
 
 

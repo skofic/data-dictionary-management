@@ -3,7 +3,7 @@
 
 
 ------
-#### 95% confidence interval
+#### Leaf nitrogen content 95% confidence interval
 
 
 

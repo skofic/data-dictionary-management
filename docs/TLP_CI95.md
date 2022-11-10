@@ -3,7 +3,7 @@
 
 
 ------
-#### 95% confidence interval
+#### Leaf turgor loss point 95% confidence interval
 
 
 

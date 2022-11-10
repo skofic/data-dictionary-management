@@ -3,7 +3,7 @@
 
 
 ------
-#### 95% confidence interval
+#### Breast height trunk circumference 95% confidence interval
 
 
 

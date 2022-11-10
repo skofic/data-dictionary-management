@@ -3,7 +3,7 @@
 
 
 ------
-#### 95% confidence interval
+#### Leaf osmotic potential at saturation 95% confidence interval
 
 
 

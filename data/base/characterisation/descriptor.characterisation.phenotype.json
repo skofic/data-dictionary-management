@@ -38,7 +38,7 @@
 			"_aid": ["CI95"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "95% confidence interval"},
+			"_title": {"iso_639_3_eng": "Breast height trunk circumference 95% confidence interval"},
 			"_definition": {"iso_639_3_eng": "95% confidence interval for circumference of the trunk at breash height."},
 			"_description": {"iso_639_3_eng": "Difference between [circumference of the trunk at breash height](./cbh.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
@@ -121,7 +121,7 @@
 			"_aid": ["CI95"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "95% confidence interval"},
+			"_title": {"iso_639_3_eng": "Leaf osmotic potential at saturation 95% confidence interval"},
 			"_definition": {"iso_639_3_eng": "95% confidence interval for leaf osmotic potential at saturation."},
 			"_description": {"iso_639_3_eng": "Difference between [leaf osmotic potential at saturation](./Pi0.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
@@ -175,7 +175,7 @@
 			"_aid": ["CI95"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "95% confidence interval"},
+			"_title": {"iso_639_3_eng": "Leaf turgor loss point 95% confidence interval"},
 			"_definition": {"iso_639_3_eng": "95% confidence interval for leaf turgor loss point."},
 			"_description": {"iso_639_3_eng": "Difference between [leaf turgor loss point](./TLP.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
@@ -229,7 +229,7 @@
 			"_aid": ["CI95"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "95% confidence interval"},
+			"_title": {"iso_639_3_eng": "Xylem vulnerability to embolism 95% confidence interval"},
 			"_definition": {"iso_639_3_eng": "95% confidence interval for xylem vulnerability to embolism."},
 			"_description": {"iso_639_3_eng": "Difference between [xylem vulnerability to embolism](./P50.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
@@ -283,7 +283,7 @@
 			"_aid": ["CI95"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "95% confidence interval"},
+			"_title": {"iso_639_3_eng": "Leaf residual conductance 95% confidence interval"},
 			"_definition": {"iso_639_3_eng": "95% confidence interval for leaf residual conductance."},
 			"_description": {"iso_639_3_eng": "Difference between [leaf residual conductance](./Gres.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
@@ -337,7 +337,7 @@
 			"_aid": ["CI95"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "95% confidence interval"},
+			"_title": {"iso_639_3_eng": "Leaf hydraulic capacitance 95% confidence interval"},
 			"_definition": {"iso_639_3_eng": "95% confidence interval for leaf hydraulic capacitance."},
 			"_description": {"iso_639_3_eng": "Difference between [leaf hydraulic capacitance](./Cleaf.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
@@ -390,7 +390,7 @@
 			"_aid": ["CI95"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "95% confidence interval"},
+			"_title": {"iso_639_3_eng": "Huber value 95% confidence interval"},
 			"_definition": {"iso_639_3_eng": "95% confidence interval for Huber value."},
 			"_description": {"iso_639_3_eng": "Difference between [Huber value](./HV.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
@@ -444,7 +444,7 @@
 			"_aid": ["CI95"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "95% confidence interval"},
+			"_title": {"iso_639_3_eng": "Total height 95% confidence interval"},
 			"_definition": {"iso_639_3_eng": "95% confidence interval for total height."},
 			"_description": {"iso_639_3_eng": "Difference between [total height](./Htot.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
@@ -498,7 +498,7 @@
 			"_aid": ["CI95"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "95% confidence interval"},
+			"_title": {"iso_639_3_eng": "Basal crown height 95% confidence interval"},
 			"_definition": {"iso_639_3_eng": "95% confidence interval for basal crown height."},
 			"_description": {"iso_639_3_eng": "Difference between [basal crown height](./Hcrown.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
@@ -551,7 +551,7 @@
 			"_aid": ["CI95"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "95% confidence interval"},
+			"_title": {"iso_639_3_eng": "Specific leaf area 95% confidence interval"},
 			"_definition": {"iso_639_3_eng": "95% confidence interval for specific leaf area."},
 			"_description": {"iso_639_3_eng": "Difference between [specific leaf area](./SLA.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
@@ -604,7 +604,7 @@
 			"_aid": ["CI95"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "95% confidence interval"},
+			"_title": {"iso_639_3_eng": "Wood carbon content 95% confidence interval"},
 			"_definition": {"iso_639_3_eng": "95% confidence interval for wood carbon content."},
 			"_description": {"iso_639_3_eng": "Difference between [wood carbon content](./WCC.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
@@ -657,7 +657,7 @@
 			"_aid": ["CI95"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "95% confidence interval"},
+			"_title": {"iso_639_3_eng": "Leaf nitrogen content 95% confidence interval"},
 			"_definition": {"iso_639_3_eng": "95% confidence interval for leaf nitrogen content."},
 			"_description": {"iso_639_3_eng": "Difference between [leaf nitrogen content](./LNC.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
@@ -710,7 +710,7 @@
 			"_aid": ["CI95"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "95% confidence interval"},
+			"_title": {"iso_639_3_eng": "Leaf delta 13C 95% confidence interval"},
 			"_definition": {"iso_639_3_eng": "95% confidence interval for leaf delta 13C."},
 			"_description": {"iso_639_3_eng": "Difference between [leaf delta 13C](./Leaf-delta13C.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
@@ -763,7 +763,7 @@
 			"_aid": ["CI95"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "95% confidence interval"},
+			"_title": {"iso_639_3_eng": "Wood delta 13C 95% confidence interval"},
 			"_definition": {"iso_639_3_eng": "95% confidence interval for wood delta 13C."},
 			"_description": {"iso_639_3_eng": "Difference between [wood delta 13C](./Wood-delta13C.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
@@ -816,7 +816,7 @@
 			"_aid": ["CI95"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "95% confidence interval"},
+			"_title": {"iso_639_3_eng": "Leaf delta 15N 95% confidence interval"},
 			"_definition": {"iso_639_3_eng": "95% confidence interval for leaf delta 15N."},
 			"_description": {"iso_639_3_eng": "Difference between [leaf delta 15N](./Leaf-delta15N.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
@@ -869,7 +869,7 @@
 			"_aid": ["CI95"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "95% confidence interval"},
+			"_title": {"iso_639_3_eng": "Leaf CN ratio 95% confidence interval"},
 			"_definition": {"iso_639_3_eng": "95% confidence interval for leaf CN ratio."},
 			"_description": {"iso_639_3_eng": "Difference between [leaf CN ratio](./Leaf-CN.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
@@ -922,7 +922,7 @@
 			"_aid": ["CI95"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "95% confidence interval"},
+			"_title": {"iso_639_3_eng": "Wood density 95% confidence interval"},
 			"_definition": {"iso_639_3_eng": "95% confidence interval for wood density."},
 			"_description": {"iso_639_3_eng": "Difference between [wood density](./WD.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
@@ -975,7 +975,7 @@
 			"_aid": ["CI95"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "95% confidence interval"},
+			"_title": {"iso_639_3_eng": "Bark density 95% confidence interval"},
 			"_definition": {"iso_639_3_eng": "95% confidence interval for bark density."},
 			"_description": {"iso_639_3_eng": "Difference between [bark density](./BD.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},

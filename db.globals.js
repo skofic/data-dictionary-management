@@ -21,4 +21,10 @@ const collection_char = kPriv.user.db.char_col
 
 const collection_errors = kPriv.user.db.error_col
 
-module.exports = { collection_terms, collection_edges, collection_topos, collection_errors }
+module.exports = {
+	collection_terms,
+	collection_edges,
+	collection_topos,
+	collection_char,
+	collection_errors
+}

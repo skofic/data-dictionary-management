@@ -3,7 +3,7 @@
 
 
 ------
-#### 95% confidence interval
+#### Leaf delta 13C 95% confidence interval
 
 
 

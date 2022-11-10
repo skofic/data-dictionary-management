@@ -3,7 +3,7 @@
 
 
 ------
-#### 95% confidence interval
+#### Wood delta 13C 95% confidence interval
 
 
 

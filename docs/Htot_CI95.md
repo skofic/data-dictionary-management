@@ -3,7 +3,7 @@
 
 
 ------
-#### 95% confidence interval
+#### Total height 95% confidence interval
 
 
 

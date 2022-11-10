@@ -3,7 +3,7 @@
 
 
 ------
-#### 95% confidence interval
+#### Specific leaf area 95% confidence interval
 
 
 

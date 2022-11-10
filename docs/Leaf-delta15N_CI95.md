@@ -3,7 +3,7 @@
 
 
 ------
-#### 95% confidence interval
+#### Leaf delta 15N 95% confidence interval
 
 
 

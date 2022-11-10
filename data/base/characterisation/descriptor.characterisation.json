@@ -1,25 +1,6 @@
 [
 	{
 		"_code": {
-			"_lid": "date",
-			"_gid": "date",
-			"_pid": ["DateMeasure"],
-			"_aid": ["date"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Date"},
-			"_definition": {"iso_639_3_eng": "Date of event, observation, measurement or sampling."},
-			"_description": {"iso_639_3_eng": "The date is expressed as an 8 character value in which the date is expressed as YYYYMMDD, 4 digit year, 2 digit month and 2 digit day. If the day is not known it can be omitted. If the month is not known both the day and month can be omitted."}
-		},
-		"_data": {
-			"_scalar": {
-				"_class": "_class_category",
-				"_type": "_type_string"
-			}
-		}
-	},
-	{
-		"_code": {
 			"_lid": "species",
 			"_gid": "species",
 			"_pid": ["Species"],

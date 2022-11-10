@@ -3,7 +3,7 @@
 
 
 ------
-#### 95% confidence interval
+#### Wood carbon content 95% confidence interval
 
 
 

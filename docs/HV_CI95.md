@@ -3,7 +3,7 @@
 
 
 ------
-#### 95% confidence interval
+#### Huber value 95% confidence interval
 
 
 

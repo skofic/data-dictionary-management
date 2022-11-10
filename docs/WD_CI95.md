@@ -3,7 +3,7 @@
 
 
 ------
-#### 95% confidence interval
+#### Wood density 95% confidence interval
 
 
 

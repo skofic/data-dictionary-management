@@ -3,7 +3,7 @@
 
 
 ------
-#### 95% confidence interval
+#### Leaf residual conductance 95% confidence interval
 
 
 

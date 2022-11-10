@@ -3,7 +3,7 @@
 
 
 ------
-#### 95% confidence interval
+#### Leaf hydraulic capacitance 95% confidence interval
 
 
 
