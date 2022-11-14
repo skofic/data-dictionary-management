@@ -311,6 +311,26 @@
 	},
 	{
 		"_code": {
+			"_nid": "std_dataset",
+			"_lid": "file",
+			"_gid": "std_dataset_file",
+			"_aid": ["file"],
+			"_pid": ["Filename"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Dataset file"},
+			"_definition": {"iso_639_3_eng": "Filename of the dataset."},
+			"_description": {"iso_639_3_eng": "This field can be used to indicate the filename from which the dataset has been extracted."}
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_identifier",
+				"_type": "_type_string"
+			}
+		}
+	},
+	{
+		"_code": {
 			"_nid": "std",
 			"_lid": "date",
 			"_gid": "std_date",
@@ -324,7 +344,26 @@
 		},
 		"_data": {
 			"_scalar": {
-				"_class": "_class_category",
+				"_class": "_class_time",
+				"_type": "_type_string"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "std_date",
+			"_lid": "submission",
+			"_gid": "std_date_submission",
+			"_aid": ["submission"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Submission date"},
+			"_definition": {"iso_639_3_eng": "Date in which the data was submitted."},
+			"_description": {"iso_639_3_eng": "The date is expressed as an 8 character value in which the date is expressed as YYYYMMDD, 4 digit year, 2 digit month and 2 digit day. If the day is not known it can be omitted. If the month is not known both the day and month can be omitted."}
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_time",
 				"_type": "_type_string"
 			}
 		}
