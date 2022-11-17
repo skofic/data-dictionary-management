@@ -1,9 +1,9 @@
 [
 	{
 		"_code": {
-			"_nid": "gcu_loc",
+			"_nid": "chr_envi",
 			"_lid": "AvElevation",
-			"_gid": "gcu_loc_AvElevation",
+			"_gid": "chr_envi_AvElevation",
 			"_pid": ["AvElevation"],
 			"_aid": ["AvElevation"]
 		},
@@ -15,7 +15,7 @@
 		"_data": {
 			"_scalar": {
 				"_class": "_class_quantity_averaged",
-				"_domain": ["environmental"],
+				"_domain": ["envi"],
 				"_subject": "stand",
 				"_type": "_type_number",
 				"_unit": "_unit_length_m",
@@ -28,9 +28,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu_loc",
+			"_nid": "chr_envi",
 			"_lid": "AvSlope",
-			"_gid": "gcu_loc_AvSlope",
+			"_gid": "chr_envi_AvSlope",
 			"_pid": ["AvSlope"],
 			"_aid": ["AvSlope"]
 		},
@@ -42,7 +42,7 @@
 		"_data": {
 			"_scalar": {
 				"_class": "_class_quantity_averaged",
-				"_domain": ["environmental"],
+				"_domain": ["envi"],
 				"_subject": "stand",
 				"_type": "_type_number",
 				"_unit_name": "degrees DMS",
@@ -55,9 +55,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu_loc",
+			"_nid": "chr_envi",
 			"_lid": "AvAspect",
-			"_gid": "gcu_loc_AvAspect",
+			"_gid": "chr_envi_AvAspect",
 			"_pid": ["AvAspect"],
 			"_aid": ["AvAspect"]
 		},
@@ -69,7 +69,7 @@
 		"_data": {
 			"_scalar": {
 				"_class": "_class_quantity_averaged",
-				"_domain": ["environmental"],
+				"_domain": ["envi"],
 				"_subject": "stand",
 				"_type": "_type_number",
 				"_unit_name": "degrees DMS",
@@ -82,9 +82,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu_loc",
+			"_nid": "chr_envi",
 			"_lid": "LST",
-			"_gid": "gcu_loc_LST",
+			"_gid": "chr_envi_LST",
 			"_pid": ["LST"],
 			"_aid": ["LST"]
 		},
@@ -97,7 +97,7 @@
 			"_array": {
 				"_scalar": {
 					"_class": "_class_quantity_averaged",
-					"_domain": ["environmental"],
+					"_domain": ["envi"],
 					"_subject": "stand",
 					"_type": "_type_number",
 					"_unit_name": "Kelvin"
@@ -107,9 +107,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu_loc",
+			"_nid": "chr_envi",
 			"_lid": "MaxLST",
-			"_gid": "gcu_loc_MaxLST",
+			"_gid": "chr_envi_MaxLST",
 			"_pid": ["MaxLST"],
 			"_aid": ["MaxLST"]
 		},
@@ -121,7 +121,7 @@
 		"_data": {
 			"_scalar": {
 				"_class": "_class_quantity_averaged",
-				"_domain": ["environmental"],
+				"_domain": ["envi"],
 				"_subject": "stand",
 				"_type": "_type_number",
 				"_unit_name": "°C"
@@ -130,9 +130,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu",
+			"_nid": "chr_envi",
 			"_lid": "AvTreeHeight",
-			"_gid": "gcu_AvTreeHeight",
+			"_gid": "chr_envi_AvTreeHeight",
 			"_pid": ["AvTreeHeight"],
 			"_aid": ["AvTreeHeight"]
 		},
@@ -144,7 +144,7 @@
 		"_data": {
 			"_scalar": {
 				"_class": "_class_quantity_averaged",
-				"_domain": ["environmental"],
+				"_domain": ["envi"],
 				"_subject": "stand",
 				"_type": "_type_number",
 				"_unit": "_unit_length_m"
@@ -153,9 +153,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu",
+			"_nid": "chr_envi",
 			"_lid": "AvBiomass",
-			"_gid": "gcu_AvBiomass",
+			"_gid": "chr_envi_AvBiomass",
 			"_pid": ["AvBiomass"],
 			"_aid": ["AvBiomass"]
 		},
@@ -167,7 +167,7 @@
 		"_data": {
 			"_scalar": {
 				"_class": "_class_quantity_averaged",
-				"_domain": ["environmental"],
+				"_domain": ["envi"],
 				"_subject": "stand",
 				"_type": "_type_number",
 				"_unit_name": "t/ha"
@@ -176,9 +176,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu",
+			"_nid": "chr_envi",
 			"_lid": "AvNDVI",
-			"_gid": "gcu_AvNDVI",
+			"_gid": "chr_envi_AvNDVI",
 			"_pid": ["AvNDVI"],
 			"_aid": ["AvNDVI"]
 		},
@@ -191,7 +191,7 @@
 			"_array": {
 				"_scalar": {
 					"_class": "_class_quantity_averaged",
-					"_domain": ["environmental"],
+					"_domain": ["envi"],
 					"_type": "_type_number"
 				}
 			}
@@ -199,9 +199,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu",
+			"_nid": "chr_envi",
 			"_lid": "AvLAI",
-			"_gid": "gcu_AvLAI",
+			"_gid": "chr_envi_AvLAI",
 			"_pid": ["AvLAI"],
 			"_aid": ["AvLAI"]
 		},
@@ -214,7 +214,7 @@
 			"_array": {
 				"_scalar": {
 					"_class": "_class_quantity_averaged",
-					"_domain": ["environmental"],
+					"_domain": ["envi"],
 					"_type": "_type_number"
 				}
 			}
@@ -222,9 +222,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu",
+			"_nid": "chr_envi",
 			"_lid": "MaxLAI",
-			"_gid": "gcu_MaxLAI",
+			"_gid": "chr_envi_MaxLAI",
 			"_pid": ["MaxLAI"],
 			"_aid": ["MaxLAI"]
 		},
@@ -236,16 +236,16 @@
 		"_data": {
 			"_scalar": {
 				"_class": "_class_quantity_averaged",
-				"_domain": ["environmental"],
+				"_domain": ["envi"],
 				"_type": "_type_number"
 			}
 		}
 	},
 	{
 		"_code": {
-			"_nid": "gcu",
+			"_nid": "chr_envi",
 			"_lid": "AvGPP",
-			"_gid": "gcu_AvGPP",
+			"_gid": "chr_envi_AvGPP",
 			"_pid": ["AvGPP"],
 			"_aid": ["AvGPP"]
 		},
@@ -258,7 +258,7 @@
 			"_array": {
 				"_scalar": {
 					"_class": "_class_quantity_averaged",
-					"_domain": ["environmental"],
+					"_domain": ["envi"],
 					"_type": "_type_number",
 					"_unit_name": "kg/m2"
 				}
@@ -267,9 +267,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu",
+			"_nid": "chr_envi",
 			"_lid": "SumGPP",
-			"_gid": "gcu_SumGPP",
+			"_gid": "chr_envi_SumGPP",
 			"_pid": ["SumGPP"],
 			"_aid": ["SumGPP"]
 		},
@@ -281,16 +281,16 @@
 		"_data": {
 			"_scalar": {
 				"_class": "_class_quantity_averaged",
-				"_domain": ["environmental"],
+				"_domain": ["envi"],
 				"_type": "_type_number"
 			}
 		}
 	},
 	{
 		"_code": {
-			"_nid": "gcu",
+			"_nid": "chr_envi",
 			"_lid": "AvNDWI",
-			"_gid": "gcu_AvNDWI",
+			"_gid": "chr_envi_AvNDWI",
 			"_pid": ["AvNDWI"],
 			"_aid": ["AvNDWI"]
 		},
@@ -303,7 +303,7 @@
 			"_array": {
 				"_scalar": {
 					"_class": "_class_quantity_averaged",
-					"_domain": ["environmental"],
+					"_domain": ["envi"],
 					"_type": "_type_number"
 				}
 			}
@@ -311,9 +311,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "gcu",
+			"_nid": "chr_envi",
 			"_lid": "AvCanopyHeight",
-			"_gid": "gcu_AvCanopyHeight",
+			"_gid": "chr_envi_AvCanopyHeight",
 			"_pid": ["Av_canopy_height"],
 			"_aid": ["AvCanopyHeight"]
 		},
@@ -324,7 +324,7 @@
 		"_data": {
 			"_scalar": {
 				"_class": "_class_quantity_averaged",
-				"_domain": ["environmental"],
+				"_domain": ["envi"],
 				"_type": "_type_number",
 				"_unit": "_unit_length_m"
 			}

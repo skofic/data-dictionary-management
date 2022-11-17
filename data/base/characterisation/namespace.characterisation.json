@@ -1,6 +1,19 @@
 [
 	{
 		"_code": {
+			"_lid": "chr",
+			"_gid": "chr",
+			"_aid": ["chr"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Characterisation"},
+			"_definition": {"iso_639_3_eng": "Characterisation data."},
+			"_description": {"iso_639_3_eng": "This category is used as the namespace for characterisation data."}
+		}
+	},
+	
+	{
+		"_code": {
 			"_lid": "tree",
 			"_gid": "tree",
 			"_aid": ["tree"]
@@ -26,9 +39,9 @@
 	
 	{
 		"_code": {
-			"_lid": "phenotypic",
-			"_gid": "phenotypic",
-			"_aid": ["phenotypic"]
+			"_lid": "pheno",
+			"_gid": "pheno",
+			"_aid": ["pheno"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Phenotypic"},
@@ -37,9 +50,9 @@
 	},
 	{
 		"_code": {
-			"_lid": "modelled",
-			"_gid": "modelled",
-			"_aid": ["modelled"]
+			"_lid": "model",
+			"_gid": "model",
+			"_aid": ["model"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Modelled"},
@@ -48,9 +61,9 @@
 	},
 	{
 		"_code": {
-			"_lid": "genetic",
-			"_gid": "genetic",
-			"_aid": ["genetic"]
+			"_lid": "gent",
+			"_gid": "gent",
+			"_aid": ["gent"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Genetic"},
@@ -59,9 +72,9 @@
 	},
 	{
 		"_code": {
-			"_lid": "general",
-			"_gid": "general",
-			"_aid": ["general"]
+			"_lid": "genl",
+			"_gid": "genl",
+			"_aid": ["genl"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "General"},
@@ -70,9 +83,9 @@
 	},
 	{
 		"_code": {
-			"_lid": "environmental",
-			"_gid": "environmental",
-			"_aid": ["environmental"]
+			"_lid": "envi",
+			"_gid": "envi",
+			"_aid": ["envi"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Environmental"},
@@ -81,13 +94,86 @@
 	},
 	{
 		"_code": {
-			"_lid": "compound",
-			"_gid": "compound",
-			"_aid": ["compound"]
+			"_lid": "comp",
+			"_gid": "comp",
+			"_aid": ["comp"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Compound"},
 			"_definition": {"iso_639_3_eng": "Compound data"}
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "chr",
+			"_lid": "pheno",
+			"_gid": "chr_pheno",
+			"_aid": ["pheno"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Phenotypic"},
+			"_definition": {"iso_639_3_eng": "Phenotypic characterisation data"}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr",
+			"_lid": "model",
+			"_gid": "chr_model",
+			"_aid": ["model"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Modelled"},
+			"_definition": {"iso_639_3_eng": "Modelled characterisation data"}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr",
+			"_lid": "gent",
+			"_gid": "chr_gent",
+			"_aid": ["gent"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Genetic"},
+			"_definition": {"iso_639_3_eng": "Genetic characterisation data"}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr",
+			"_lid": "genl",
+			"_gid": "chr_genl",
+			"_aid": ["genl"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "General"},
+			"_definition": {"iso_639_3_eng": "General characterisation data"}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr",
+			"_lid": "envi",
+			"_gid": "chr_envi",
+			"_aid": ["envi"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Environmental"},
+			"_definition": {"iso_639_3_eng": "Environmental characterisation data"}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr",
+			"_lid": "comp",
+			"_gid": "chr_comp",
+			"_aid": ["comp"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Compound"},
+			"_definition": {"iso_639_3_eng": "Compound characterisation data"}
 		}
 	}
 ]

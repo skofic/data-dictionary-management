@@ -1,0 +1,469 @@
+[
+	{
+		"_from": "std_descriptor",
+		"_to": "chr",
+		"_predicate": "_predicate_section-of",
+		"_path": ["chr"]
+	},
+	
+	{
+		"_from": "pheno",
+		"_to": "std_descriptor",
+		"_predicate": "_predicate_section-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_pheno_cbh",
+		"_to": "pheno",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_pheno_cbh_CI95",
+		"_to": "pheno",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_pheno_Dsoil",
+		"_to": "pheno",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_pheno_Pi0",
+		"_to": "pheno",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_pheno_Pi0_CI95",
+		"_to": "pheno",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_pheno_TLP",
+		"_to": "pheno",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_pheno_TLP_CI95",
+		"_to": "pheno",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_pheno_P50",
+		"_to": "pheno",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_pheno_P50_CI95",
+		"_to": "pheno",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_pheno_Gres",
+		"_to": "pheno",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_pheno_Gres_CI95",
+		"_to": "pheno",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_pheno_Cleaf",
+		"_to": "pheno",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_pheno_Cleaf_CI95",
+		"_to": "pheno",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_pheno_HV",
+		"_to": "pheno",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_pheno_HV_CI95",
+		"_to": "pheno",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_pheno_Htot",
+		"_to": "pheno",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_pheno_Htot_CI95",
+		"_to": "pheno",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_pheno_Hcrown",
+		"_to": "pheno",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_pheno_Hcrown_CI95",
+		"_to": "pheno",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_pheno_SLA",
+		"_to": "pheno",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_pheno_SLA_CI95",
+		"_to": "pheno",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_pheno_WCC",
+		"_to": "pheno",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_pheno_WCC_CI95",
+		"_to": "pheno",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_pheno_LNC",
+		"_to": "pheno",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_pheno_LNC_CI95",
+		"_to": "pheno",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_pheno_Leaf-delta13C",
+		"_to": "pheno",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_pheno_Leaf-delta13C_CI95",
+		"_to": "pheno",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_pheno_Wood-delta13C",
+		"_to": "pheno",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_pheno_Wood-delta13C_CI95",
+		"_to": "pheno",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_pheno_Leaf-delta15N",
+		"_to": "pheno",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_pheno_Leaf-delta15N_CI95",
+		"_to": "pheno",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_pheno_Leaf-CN",
+		"_to": "pheno",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_pheno_Leaf-CN_CI95",
+		"_to": "pheno",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_pheno_WD",
+		"_to": "pheno",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_pheno_WD_CI95",
+		"_to": "pheno",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_pheno_BD",
+		"_to": "pheno",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_pheno_BD_CI95",
+		"_to": "pheno",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	
+	{
+		"_from": "model",
+		"_to": "std_descriptor",
+		"_predicate": "_predicate_section-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_model_FD",
+		"_to": "model",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_model_PLC",
+		"_to": "model",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_model_CS",
+		"_to": "model",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	
+	{
+		"_from": "gent",
+		"_to": "std_descriptor",
+		"_predicate": "_predicate_section-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_gent_PropPolyLoci",
+		"_to": "gent",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_gent_ExpHet",
+		"_to": "gent",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_gent_NucDiv",
+		"_to": "gent",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_gent_MolDivPartW",
+		"_to": "gent",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_gent_MolDivPartB",
+		"_to": "gent",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_gent_EffPopSize",
+		"_to": "gent",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_gent_Divergence",
+		"_to": "gent",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_gent_PropClones",
+		"_to": "gent",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_gent_SizeClones",
+		"_to": "gent",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_gent_AdmIndex",
+		"_to": "gent",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_gent_Inbreeding",
+		"_to": "gent",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_gent_PropRepTrees",
+		"_to": "gent",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_gent_GenLoad",
+		"_to": "gent",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_gent_NeutrTest",
+		"_to": "gent",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_gent_SampleSize",
+		"_to": "gent",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_gent_1-Qinter",
+		"_to": "gent",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_gent_1-Qinter_corrected",
+		"_to": "gent",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	
+	{
+		"_from": "genl",
+		"_to": "std_descriptor",
+		"_predicate": "_predicate_section-of",
+		"_path": ["chr"]
+	},
+	
+	{
+		"_from": "envi",
+		"_to": "std_descriptor",
+		"_predicate": "_predicate_section-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_envi_AvElevation",
+		"_to": "envi",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_envi_AvSlope",
+		"_to": "envi",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_envi_AvAspect",
+		"_to": "envi",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_envi_LST",
+		"_to": "envi",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_envi_MaxLST",
+		"_to": "envi",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_envi_AvTreeHeight",
+		"_to": "envi",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_envi_AvBiomass",
+		"_to": "envi",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_envi_AvNDVI",
+		"_to": "envi",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_envi_AvLAI",
+		"_to": "envi",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_envi_MaxLAI",
+		"_to": "envi",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_envi_AvGPP",
+		"_to": "envi",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_envi_SumGPP",
+		"_to": "envi",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_envi_AvNDWI",
+		"_to": "envi",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	},
+	{
+		"_from": "chr_envi_AvCanopyHeight",
+		"_to": "envi",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr"]
+	}
+]

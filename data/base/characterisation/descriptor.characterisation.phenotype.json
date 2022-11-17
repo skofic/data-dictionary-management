@@ -1,8 +1,9 @@
 [
 	{
 		"_code": {
+			"_nid": "chr_pheno",
 			"_lid": "cbh",
-			"_gid": "cbh",
+			"_gid": "chr_pheno_cbh",
 			"_pid": ["cbh"],
 			"_aid": ["cbh"]
 		},
@@ -19,7 +20,7 @@
 			"_scalar": {
 				"_class": "_class_quantity",
 				"_subject": "tree",
-				"_domain": ["phenotypic"],
+				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit": "_unit_length_cm",
 				"_valid-range": {
@@ -31,22 +32,22 @@
 	},
 	{
 		"_code": {
-			"_nid": "cbh",
+			"_nid": "chr_pheno_cbh",
 			"_lid": "CI95",
-			"_gid": "cbh_CI95",
+			"_gid": "chr_pheno_cbh_CI95",
 			"_pid": ["CI.cbh"],
 			"_aid": ["CI95"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Breast height trunk circumference 95% confidence interval"},
 			"_definition": {"iso_639_3_eng": "95% confidence interval for circumference of the trunk at breash height."},
-			"_description": {"iso_639_3_eng": "Difference between [circumference of the trunk at breash height](./cbh.md) mean and the upper or lower bounds of the 95% confidence interval."}
+			"_description": {"iso_639_3_eng": "Difference between [circumference of the trunk at breash height](./chr_pheno_cbh.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
 		"_data": {
 			"_scalar": {
 				"_class": "_class_quantity_averaged",
 				"_subject": "tree",
-				"_domain": ["phenotypic"],
+				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit": "_unit_length_cm"
 			}
@@ -55,8 +56,9 @@
 	
 	{
 		"_code": {
+			"_nid": "chr_pheno",
 			"_lid": "Dsoil",
-			"_gid": "Dsoil",
+			"_gid": "chr_pheno_Dsoil",
 			"_pid": ["Dsoil"],
 			"_aid": ["Dsoil"]
 		},
@@ -72,7 +74,7 @@
 			"_scalar": {
 				"_class": "_class_quantity",
 				"_subject": "stand",
-				"_domain": ["phenotypic"],
+				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit": "_unit_length_cm",
 				"_valid-range": {
@@ -85,8 +87,9 @@
 	
 	{
 		"_code": {
+			"_nid": "chr_pheno",
 			"_lid": "Pi0",
-			"_gid": "Pi0",
+			"_gid": "chr_pheno_Pi0",
 			"_pid": ["Pi0"],
 			"_aid": ["Pi0"]
 		},
@@ -102,7 +105,7 @@
 			"_scalar": {
 				"_class": "_class_quantity",
 				"_subject": "tree",
-				"_domain": ["phenotypic"],
+				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit-name": "MPa",
 				"_valid-range": {
@@ -114,22 +117,22 @@
 	},
 	{
 		"_code": {
-			"_nid": "Pi0",
+			"_nid": "chr_pheno_Pi0",
 			"_lid": "CI95",
-			"_gid": "Pi0_CI95",
+			"_gid": "chr_pheno_Pi0_CI95",
 			"_pid": ["CI.Pi0"],
 			"_aid": ["CI95"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Leaf osmotic potential at saturation 95% confidence interval"},
 			"_definition": {"iso_639_3_eng": "95% confidence interval for leaf osmotic potential at saturation."},
-			"_description": {"iso_639_3_eng": "Difference between [leaf osmotic potential at saturation](./Pi0.md) mean and the upper or lower bounds of the 95% confidence interval."}
+			"_description": {"iso_639_3_eng": "Difference between [leaf osmotic potential at saturation](./chr_pheno_Pi0.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
 		"_data": {
 			"_scalar": {
 				"_class": "_class_quantity_averaged",
 				"_subject": "tree",
-				"_domain": ["phenotypic"],
+				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit-name": "MPa"
 			}
@@ -138,8 +141,9 @@
 	
 	{
 		"_code": {
+			"_nid": "chr_pheno",
 			"_lid": "TLP",
-			"_gid": "TLP",
+			"_gid": "chr_pheno_TLP",
 			"_pid": ["TLP"],
 			"_aid": ["TLP"]
 		},
@@ -156,7 +160,7 @@
 			"_scalar": {
 				"_class": "_class_quantity",
 				"_subject": "tree",
-				"_domain": ["phenotypic"],
+				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit-name": "MPa",
 				"_valid-range": {
@@ -168,22 +172,22 @@
 	},
 	{
 		"_code": {
-			"_nid": "TLP",
+			"_nid": "chr_pheno_TLP",
 			"_lid": "CI95",
-			"_gid": "TLP_CI95",
+			"_gid": "chr_pheno_TLP_CI95",
 			"_pid": ["CI.TLP"],
 			"_aid": ["CI95"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Leaf turgor loss point 95% confidence interval"},
 			"_definition": {"iso_639_3_eng": "95% confidence interval for leaf turgor loss point."},
-			"_description": {"iso_639_3_eng": "Difference between [leaf turgor loss point](./TLP.md) mean and the upper or lower bounds of the 95% confidence interval."}
+			"_description": {"iso_639_3_eng": "Difference between [leaf turgor loss point](./chr_pheno_TLP.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
 		"_data": {
 			"_scalar": {
 				"_class": "_class_quantity_averaged",
 				"_subject": "tree",
-				"_domain": ["phenotypic"],
+				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit-name": "MPa"
 			}
@@ -192,8 +196,9 @@
 	
 	{
 		"_code": {
+			"_nid": "chr_pheno",
 			"_lid": "P50",
-			"_gid": "P50",
+			"_gid": "chr_pheno_P50",
 			"_pid": ["P50"],
 			"_aid": ["P50"]
 		},
@@ -210,7 +215,7 @@
 			"_scalar": {
 				"_class": "_class_quantity",
 				"_subject": "tree",
-				"_domain": ["phenotypic"],
+				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit-name": "MPa",
 				"_valid-range": {
@@ -222,22 +227,22 @@
 	},
 	{
 		"_code": {
-			"_nid": "P50",
+			"_nid": "chr_pheno_P50",
 			"_lid": "CI95",
-			"_gid": "P50_CI95",
+			"_gid": "chr_pheno_P50_CI95",
 			"_pid": ["CI.P50"],
 			"_aid": ["CI95"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Xylem vulnerability to embolism 95% confidence interval"},
 			"_definition": {"iso_639_3_eng": "95% confidence interval for xylem vulnerability to embolism."},
-			"_description": {"iso_639_3_eng": "Difference between [xylem vulnerability to embolism](./P50.md) mean and the upper or lower bounds of the 95% confidence interval."}
+			"_description": {"iso_639_3_eng": "Difference between [xylem vulnerability to embolism](./chr_pheno_P50.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
 		"_data": {
 			"_scalar": {
 				"_class": "_class_quantity_averaged",
 				"_subject": "tree",
-				"_domain": ["phenotypic"],
+				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit-name": "MPa"
 			}
@@ -246,8 +251,9 @@
 	
 	{
 		"_code": {
+			"_nid": "chr_pheno",
 			"_lid": "Gres",
-			"_gid": "Gres",
+			"_gid": "chr_pheno_Gres",
 			"_pid": ["Gres"],
 			"_aid": ["Gres"]
 		},
@@ -264,7 +270,7 @@
 			"_scalar": {
 				"_class": "_class_quantity",
 				"_subject": "tree",
-				"_domain": ["phenotypic"],
+				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit-name": "mmol m-2 s-1",
 				"_valid-range": {
@@ -276,22 +282,22 @@
 	},
 	{
 		"_code": {
-			"_nid": "Gres",
+			"_nid": "chr_pheno_Gres",
 			"_lid": "CI95",
-			"_gid": "Gres_CI95",
+			"_gid": "chr_pheno_Gres_CI95",
 			"_pid": ["CI.Gres"],
 			"_aid": ["CI95"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Leaf residual conductance 95% confidence interval"},
 			"_definition": {"iso_639_3_eng": "95% confidence interval for leaf residual conductance."},
-			"_description": {"iso_639_3_eng": "Difference between [leaf residual conductance](./Gres.md) mean and the upper or lower bounds of the 95% confidence interval."}
+			"_description": {"iso_639_3_eng": "Difference between [leaf residual conductance](./chr_pheno_Gres.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
 		"_data": {
 			"_scalar": {
 				"_class": "_class_quantity_averaged",
 				"_subject": "tree",
-				"_domain": ["phenotypic"],
+				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit-name": "mmol m-2 s-1"
 			}
@@ -300,8 +306,9 @@
 	
 	{
 		"_code": {
+			"_nid": "chr_pheno",
 			"_lid": "Cleaf",
-			"_gid": "Cleaf",
+			"_gid": "chr_pheno_Cleaf",
 			"_pid": ["Cleaf"],
 			"_aid": ["Cleaf"]
 		},
@@ -318,7 +325,7 @@
 			"_scalar": {
 				"_class": "_class_quantity",
 				"_subject": "tree",
-				"_domain": ["phenotypic"],
+				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit-name": "%RWC MPa-1",
 				"_valid-range": {
@@ -330,22 +337,22 @@
 	},
 	{
 		"_code": {
-			"_nid": "Cleaf",
+			"_nid": "chr_pheno_Cleaf",
 			"_lid": "CI95",
-			"_gid": "Cleaf_CI95",
+			"_gid": "chr_pheno_Cleaf_CI95",
 			"_pid": ["CI.Cleaf"],
 			"_aid": ["CI95"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Leaf hydraulic capacitance 95% confidence interval"},
 			"_definition": {"iso_639_3_eng": "95% confidence interval for leaf hydraulic capacitance."},
-			"_description": {"iso_639_3_eng": "Difference between [leaf hydraulic capacitance](./Cleaf.md) mean and the upper or lower bounds of the 95% confidence interval."}
+			"_description": {"iso_639_3_eng": "Difference between [leaf hydraulic capacitance](./chr_pheno_Cleaf.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
 		"_data": {
 			"_scalar": {
 				"_class": "_class_quantity_averaged",
 				"_subject": "tree",
-				"_domain": ["phenotypic"],
+				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit-name": "%RWC MPa-1"
 			}
@@ -354,8 +361,9 @@
 	
 	{
 		"_code": {
+			"_nid": "chr_pheno",
 			"_lid": "HV",
-			"_gid": "HV",
+			"_gid": "chr_pheno_HV",
 			"_pid": ["HV"],
 			"_aid": ["HV"]
 		},
@@ -371,7 +379,7 @@
 			"_scalar": {
 				"_class": "_class_quantity",
 				"_subject": "tree",
-				"_domain": ["phenotypic"],
+				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit-name": "cm2 cm-2",
 				"_valid-range": {
@@ -383,22 +391,22 @@
 	},
 	{
 		"_code": {
-			"_nid": "HV",
+			"_nid": "chr_pheno_HV",
 			"_lid": "CI95",
-			"_gid": "HV_CI95",
+			"_gid": "chr_pheno_HV_CI95",
 			"_pid": ["CI.HV"],
 			"_aid": ["CI95"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Huber value 95% confidence interval"},
 			"_definition": {"iso_639_3_eng": "95% confidence interval for Huber value."},
-			"_description": {"iso_639_3_eng": "Difference between [Huber value](./HV.md) mean and the upper or lower bounds of the 95% confidence interval."}
+			"_description": {"iso_639_3_eng": "Difference between [Huber value](./chr_pheno_HV.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
 		"_data": {
 			"_scalar": {
 				"_class": "_class_quantity_averaged",
 				"_subject": "tree",
-				"_domain": ["phenotypic"],
+				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit-name": "cm2 cm-2"
 			}
@@ -407,8 +415,9 @@
 	
 	{
 		"_code": {
+			"_nid": "chr_pheno",
 			"_lid": "Htot",
-			"_gid": "Htot",
+			"_gid": "chr_pheno_Htot",
 			"_pid": ["Htot"],
 			"_aid": ["Htot"]
 		},
@@ -425,7 +434,7 @@
 			"_scalar": {
 				"_class": "_class_quantity",
 				"_subject": "tree",
-				"_domain": ["phenotypic"],
+				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit": "_unit_length_m",
 				"_valid-range": {
@@ -437,22 +446,22 @@
 	},
 	{
 		"_code": {
-			"_nid": "Htot",
+			"_nid": "chr_pheno_Htot",
 			"_lid": "CI95",
-			"_gid": "Htot_CI95",
+			"_gid": "chr_pheno_Htot_CI95",
 			"_pid": ["CI.Htot"],
 			"_aid": ["CI95"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Total height 95% confidence interval"},
 			"_definition": {"iso_639_3_eng": "95% confidence interval for total height."},
-			"_description": {"iso_639_3_eng": "Difference between [total height](./Htot.md) mean and the upper or lower bounds of the 95% confidence interval."}
+			"_description": {"iso_639_3_eng": "Difference between [total height](./chr_pheno_Htot.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
 		"_data": {
 			"_scalar": {
 				"_class": "_class_quantity_averaged",
 				"_subject": "tree",
-				"_domain": ["phenotypic"],
+				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit": "_unit_length_m"
 			}
@@ -461,8 +470,9 @@
 	
 	{
 		"_code": {
+			"_nid": "chr_pheno",
 			"_lid": "Hcrown",
-			"_gid": "Hcrown",
+			"_gid": "chr_pheno_Hcrown",
 			"_pid": ["Hcrown"],
 			"_aid": ["Hcrown"]
 		},
@@ -479,7 +489,7 @@
 			"_scalar": {
 				"_class": "_class_quantity",
 				"_subject": "tree",
-				"_domain": ["phenotypic"],
+				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit": "_unit_length_m",
 				"_valid-range": {
@@ -491,22 +501,22 @@
 	},
 	{
 		"_code": {
-			"_nid": "Hcrown",
+			"_nid": "chr_pheno_Hcrown",
 			"_lid": "CI95",
-			"_gid": "Hcrown_CI95",
+			"_gid": "chr_pheno_Hcrown_CI95",
 			"_pid": ["CI.Hcrown"],
 			"_aid": ["CI95"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Basal crown height 95% confidence interval"},
 			"_definition": {"iso_639_3_eng": "95% confidence interval for basal crown height."},
-			"_description": {"iso_639_3_eng": "Difference between [basal crown height](./Hcrown.md) mean and the upper or lower bounds of the 95% confidence interval."}
+			"_description": {"iso_639_3_eng": "Difference between [basal crown height](./chr_pheno_Hcrown.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
 		"_data": {
 			"_scalar": {
 				"_class": "_class_quantity_averaged",
 				"_subject": "tree",
-				"_domain": ["phenotypic"],
+				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit": "_unit_length_m"
 			}
@@ -515,8 +525,9 @@
 	
 	{
 		"_code": {
+			"_nid": "chr_pheno",
 			"_lid": "SLA",
-			"_gid": "SLA",
+			"_gid": "chr_pheno_SLA",
 			"_pid": ["SLA"],
 			"_aid": ["SLA"]
 		},
@@ -532,7 +543,7 @@
 			"_scalar": {
 				"_class": "_class_quantity",
 				"_subject": "tree",
-				"_domain": ["phenotypic"],
+				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit_name": "mm2 mg-1",
 				"_valid-range": {
@@ -544,22 +555,22 @@
 	},
 	{
 		"_code": {
-			"_nid": "SLA",
+			"_nid": "chr_pheno_SLA",
 			"_lid": "CI95",
-			"_gid": "SLA_CI95",
+			"_gid": "chr_pheno_SLA_CI95",
 			"_pid": ["CI.SLA"],
 			"_aid": ["CI95"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Specific leaf area 95% confidence interval"},
 			"_definition": {"iso_639_3_eng": "95% confidence interval for specific leaf area."},
-			"_description": {"iso_639_3_eng": "Difference between [specific leaf area](./SLA.md) mean and the upper or lower bounds of the 95% confidence interval."}
+			"_description": {"iso_639_3_eng": "Difference between [specific leaf area](./chr_pheno_SLA.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
 		"_data": {
 			"_scalar": {
 				"_class": "_class_quantity_averaged",
 				"_subject": "tree",
-				"_domain": ["phenotypic"],
+				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit_name": "mm2 mg-1"
 			}
@@ -568,8 +579,9 @@
 	
 	{
 		"_code": {
+			"_nid": "chr_pheno",
 			"_lid": "WCC",
-			"_gid": "WCC",
+			"_gid": "chr_pheno_WCC",
 			"_pid": ["WCC"],
 			"_aid": ["WCC"]
 		},
@@ -585,7 +597,7 @@
 			"_scalar": {
 				"_class": "_class_quantity",
 				"_subject": "tree",
-				"_domain": ["phenotypic"],
+				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit_name": "% or 100*g g-1",
 				"_valid-range": {
@@ -597,22 +609,22 @@
 	},
 	{
 		"_code": {
-			"_nid": "WCC",
+			"_nid": "chr_pheno_WCC",
 			"_lid": "CI95",
-			"_gid": "WCC_CI95",
+			"_gid": "chr_pheno_WCC_CI95",
 			"_pid": ["CI.WCC"],
 			"_aid": ["CI95"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Wood carbon content 95% confidence interval"},
 			"_definition": {"iso_639_3_eng": "95% confidence interval for wood carbon content."},
-			"_description": {"iso_639_3_eng": "Difference between [wood carbon content](./WCC.md) mean and the upper or lower bounds of the 95% confidence interval."}
+			"_description": {"iso_639_3_eng": "Difference between [wood carbon content](./chr_pheno_WCC.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
 		"_data": {
 			"_scalar": {
 				"_class": "_class_quantity_averaged",
 				"_subject": "tree",
-				"_domain": ["phenotypic"],
+				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit_name": "% or 100*g g-1"
 			}
@@ -621,8 +633,9 @@
 	
 	{
 		"_code": {
+			"_nid": "chr_pheno",
 			"_lid": "LNC",
-			"_gid": "LNC",
+			"_gid": "chr_pheno_LNC",
 			"_pid": ["LNC"],
 			"_aid": ["LNC"]
 		},
@@ -638,7 +651,7 @@
 			"_scalar": {
 				"_class": "_class_quantity",
 				"_subject": "tree",
-				"_domain": ["phenotypic"],
+				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit_name": "% or 100*g g-1",
 				"_valid-range": {
@@ -650,22 +663,22 @@
 	},
 	{
 		"_code": {
-			"_nid": "LNC",
+			"_nid": "chr_pheno_LNC",
 			"_lid": "CI95",
-			"_gid": "LNC_CI95",
+			"_gid": "chr_pheno_LNC_CI95",
 			"_pid": ["CI.LNC"],
 			"_aid": ["CI95"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Leaf nitrogen content 95% confidence interval"},
 			"_definition": {"iso_639_3_eng": "95% confidence interval for leaf nitrogen content."},
-			"_description": {"iso_639_3_eng": "Difference between [leaf nitrogen content](./LNC.md) mean and the upper or lower bounds of the 95% confidence interval."}
+			"_description": {"iso_639_3_eng": "Difference between [leaf nitrogen content](./chr_pheno_LNC.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
 		"_data": {
 			"_scalar": {
 				"_class": "_class_quantity_averaged",
 				"_subject": "tree",
-				"_domain": ["phenotypic"],
+				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit_name": "% or 100*g g-1"
 			}
@@ -674,8 +687,9 @@
 	
 	{
 		"_code": {
+			"_nid": "chr_pheno",
 			"_lid": "Leaf-delta13C",
-			"_gid": "Leaf-delta13C",
+			"_gid": "chr_pheno_Leaf-delta13C",
 			"_pid": ["Leaf delta13C"],
 			"_aid": ["Leaf-delta13C"]
 		},
@@ -691,7 +705,7 @@
 			"_scalar": {
 				"_class": "_class_quantity",
 				"_subject": "tree",
-				"_domain": ["phenotypic"],
+				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit_name": "per mil or 1000 g g-1",
 				"_valid-range": {
@@ -703,22 +717,22 @@
 	},
 	{
 		"_code": {
-			"_nid": "Leaf-delta13C",
+			"_nid": "chr_pheno_Leaf-delta13C",
 			"_lid": "CI95",
-			"_gid": "Leaf-delta13C_CI95",
+			"_gid": "chr_pheno_Leaf-delta13C_CI95",
 			"_pid": ["CI.Leaf-delta13C"],
 			"_aid": ["CI95"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Leaf delta 13C 95% confidence interval"},
 			"_definition": {"iso_639_3_eng": "95% confidence interval for leaf delta 13C."},
-			"_description": {"iso_639_3_eng": "Difference between [leaf delta 13C](./Leaf-delta13C.md) mean and the upper or lower bounds of the 95% confidence interval."}
+			"_description": {"iso_639_3_eng": "Difference between [leaf delta 13C](./chr_pheno_Leaf-delta13C.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
 		"_data": {
 			"_scalar": {
 				"_class": "_class_quantity_averaged",
 				"_subject": "tree",
-				"_domain": ["phenotypic"],
+				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit_name": "per mil or 1000 g g-1"
 			}
@@ -727,8 +741,9 @@
 	
 	{
 		"_code": {
+			"_nid": "chr_pheno",
 			"_lid": "Wood-delta13C",
-			"_gid": "Wood-delta13C",
+			"_gid": "chr_pheno_Wood-delta13C",
 			"_pid": ["Wood delta13C"],
 			"_aid": ["Wood-delta13C"]
 		},
@@ -744,7 +759,7 @@
 			"_scalar": {
 				"_class": "_class_quantity",
 				"_subject": "tree",
-				"_domain": ["phenotypic"],
+				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit_name": "per mil or 1000 g g-1",
 				"_valid-range": {
@@ -756,22 +771,22 @@
 	},
 	{
 		"_code": {
-			"_nid": "Wood-delta13C",
+			"_nid": "chr_pheno_Wood-delta13C",
 			"_lid": "CI95",
-			"_gid": "Wood-delta13C_CI95",
+			"_gid": "chr_pheno_Wood-delta13C_CI95",
 			"_pid": ["CI.Wood-delta13C"],
 			"_aid": ["CI95"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Wood delta 13C 95% confidence interval"},
 			"_definition": {"iso_639_3_eng": "95% confidence interval for wood delta 13C."},
-			"_description": {"iso_639_3_eng": "Difference between [wood delta 13C](./Wood-delta13C.md) mean and the upper or lower bounds of the 95% confidence interval."}
+			"_description": {"iso_639_3_eng": "Difference between [wood delta 13C](./chr_pheno_Wood-delta13C.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
 		"_data": {
 			"_scalar": {
 				"_class": "_class_quantity_averaged",
 				"_subject": "tree",
-				"_domain": ["phenotypic"],
+				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit_name": "per mil or 1000 g g-1"
 			}
@@ -780,8 +795,9 @@
 	
 	{
 		"_code": {
+			"_nid": "chr_pheno",
 			"_lid": "Leaf-delta15N",
-			"_gid": "Leaf-delta15N",
+			"_gid": "chr_pheno_Leaf-delta15N",
 			"_pid": ["Leaf delta15N"],
 			"_aid": ["Leaf-delta15N"]
 		},
@@ -797,7 +813,7 @@
 			"_scalar": {
 				"_class": "_class_quantity",
 				"_subject": "tree",
-				"_domain": ["phenotypic"],
+				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit_name": "per mil or 1000 g g-1",
 				"_valid-range": {
@@ -809,22 +825,22 @@
 	},
 	{
 		"_code": {
-			"_nid": "Leaf-delta15N",
+			"_nid": "chr_pheno_Leaf-delta15N",
 			"_lid": "CI95",
-			"_gid": "Leaf-delta15N_CI95",
+			"_gid": "chr_pheno_Leaf-delta15N_CI95",
 			"_pid": ["CI.Leaf-delta15N"],
 			"_aid": ["CI95"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Leaf delta 15N 95% confidence interval"},
 			"_definition": {"iso_639_3_eng": "95% confidence interval for leaf delta 15N."},
-			"_description": {"iso_639_3_eng": "Difference between [leaf delta 15N](./Leaf-delta15N.md) mean and the upper or lower bounds of the 95% confidence interval."}
+			"_description": {"iso_639_3_eng": "Difference between [leaf delta 15N](./chr_pheno_Leaf-delta15N.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
 		"_data": {
 			"_scalar": {
 				"_class": "_class_quantity_averaged",
 				"_subject": "tree",
-				"_domain": ["phenotypic"],
+				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit_name": "per mil or 1000 g g-1"
 			}
@@ -833,8 +849,9 @@
 	
 	{
 		"_code": {
+			"_nid": "chr_pheno",
 			"_lid": "Leaf-CN",
-			"_gid": "Leaf-CN",
+			"_gid": "chr_pheno_Leaf-CN",
 			"_pid": ["Leaf CN"],
 			"_aid": ["Leaf-CN"]
 		},
@@ -850,7 +867,7 @@
 			"_scalar": {
 				"_class": "_class_quantity",
 				"_subject": "tree",
-				"_domain": ["phenotypic"],
+				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit_name": "g g-1",
 				"_valid-range": {
@@ -862,22 +879,22 @@
 	},
 	{
 		"_code": {
-			"_nid": "Leaf-CN",
+			"_nid": "chr_pheno_Leaf-CN",
 			"_lid": "CI95",
-			"_gid": "Leaf-CN_CI95",
+			"_gid": "chr_pheno_Leaf-CN_CI95",
 			"_pid": ["CI.Leaf-CN"],
 			"_aid": ["CI95"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Leaf CN ratio 95% confidence interval"},
 			"_definition": {"iso_639_3_eng": "95% confidence interval for leaf CN ratio."},
-			"_description": {"iso_639_3_eng": "Difference between [leaf CN ratio](./Leaf-CN.md) mean and the upper or lower bounds of the 95% confidence interval."}
+			"_description": {"iso_639_3_eng": "Difference between [leaf CN ratio](./chr_pheno_Leaf-CN.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
 		"_data": {
 			"_scalar": {
 				"_class": "_class_quantity_averaged",
 				"_subject": "tree",
-				"_domain": ["phenotypic"],
+				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit_name": "g g-1"
 			}
@@ -886,8 +903,9 @@
 	
 	{
 		"_code": {
+			"_nid": "chr_pheno",
 			"_lid": "WD",
-			"_gid": "WD",
+			"_gid": "chr_pheno_WD",
 			"_pid": ["WD"],
 			"_aid": ["WD"]
 		},
@@ -903,7 +921,7 @@
 			"_scalar": {
 				"_class": "_class_quantity",
 				"_subject": "tree",
-				"_domain": ["phenotypic"],
+				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit_name": "g cm-3",
 				"_valid-range": {
@@ -915,22 +933,22 @@
 	},
 	{
 		"_code": {
-			"_nid": "WD",
+			"_nid": "chr_pheno_WD",
 			"_lid": "CI95",
-			"_gid": "WD_CI95",
+			"_gid": "chr_pheno_WD_CI95",
 			"_pid": ["CI.WD"],
 			"_aid": ["CI95"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Wood density 95% confidence interval"},
 			"_definition": {"iso_639_3_eng": "95% confidence interval for wood density."},
-			"_description": {"iso_639_3_eng": "Difference between [wood density](./WD.md) mean and the upper or lower bounds of the 95% confidence interval."}
+			"_description": {"iso_639_3_eng": "Difference between [wood density](./chr_pheno_WD.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
 		"_data": {
 			"_scalar": {
 				"_class": "_class_quantity_averaged",
 				"_subject": "tree",
-				"_domain": ["phenotypic"],
+				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit_name": "g cm-3"
 			}
@@ -939,8 +957,9 @@
 	
 	{
 		"_code": {
+			"_nid": "chr_pheno",
 			"_lid": "BD",
-			"_gid": "BD",
+			"_gid": "chr_pheno_BD",
 			"_pid": ["BD"],
 			"_aid": ["BD"]
 		},
@@ -956,7 +975,7 @@
 			"_scalar": {
 				"_class": "_class_quantity",
 				"_subject": "tree",
-				"_domain": ["phenotypic"],
+				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit_name": "g cm-3",
 				"_valid-range": {
@@ -968,22 +987,22 @@
 	},
 	{
 		"_code": {
-			"_nid": "BD",
+			"_nid": "chr_pheno_BD",
 			"_lid": "CI95",
-			"_gid": "BD_CI95",
+			"_gid": "chr_pheno_BD_CI95",
 			"_pid": ["CI.BD"],
 			"_aid": ["CI95"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Bark density 95% confidence interval"},
 			"_definition": {"iso_639_3_eng": "95% confidence interval for bark density."},
-			"_description": {"iso_639_3_eng": "Difference between [bark density](./BD.md) mean and the upper or lower bounds of the 95% confidence interval."}
+			"_description": {"iso_639_3_eng": "Difference between [bark density](./chr_pheno_BD.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
 		"_data": {
 			"_scalar": {
 				"_class": "_class_quantity_averaged",
 				"_subject": "tree",
-				"_domain": ["phenotypic"],
+				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit_name": "g cm-3"
 			}

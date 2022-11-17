@@ -1,8 +1,9 @@
 [
 	{
 		"_code": {
+			"_nid": "chr_gent",
 			"_lid": "PropPolyLoci",
-			"_gid": "PropPolyLoci",
+			"_gid": "chr_gent_PropPolyLoci",
 			"_pid": ["PropPolyLoci", "P"],
 			"_aid": ["PropPolyLoci"]
 		},
@@ -14,7 +15,7 @@
 		"_data": {
 			"_scalar": {
 				"_class": "_class_quantity",
-				"_domain": ["genetic"],
+				"_domain": ["gent"],
 				"_type": "_type_number",
 				"_unit_name": "Percentage",
 				"_valid-range": {
@@ -26,8 +27,9 @@
 	},
 	{
 		"_code": {
+			"_nid": "chr_gent",
 			"_lid": "ExpHet",
-			"_gid": "ExpHet",
+			"_gid": "chr_gent_ExpHet",
 			"_pid": ["ExpHet", "He"],
 			"_aid": ["ExpHet"]
 		},
@@ -39,15 +41,16 @@
 		"_data": {
 			"_scalar": {
 				"_class": "_class_quantity",
-				"_domain": ["genetic"],
+				"_domain": ["gent"],
 				"_type": "_type_number"
 			}
 		}
 	},
 	{
 		"_code": {
+			"_nid": "chr_gent",
 			"_lid": "NucDiv",
-			"_gid": "NucDiv",
+			"_gid": "chr_gent_NucDiv",
 			"_pid": ["NucDiv", "pi"],
 			"_aid": ["NucDiv"]
 		},
@@ -59,15 +62,16 @@
 		"_data": {
 			"_scalar": {
 				"_class": "_class_quantity",
-				"_domain": ["genetic"],
+				"_domain": ["gent"],
 				"_type": "_type_number"
 			}
 		}
 	},
 	{
 		"_code": {
+			"_nid": "chr_gent",
 			"_lid": "MolDivPartW",
-			"_gid": "MolDivPartW",
+			"_gid": "chr_gent_MolDivPartW",
 			"_pid": ["MolDivPartW"],
 			"_aid": ["MolDivPartW"]
 		},
@@ -79,15 +83,16 @@
 		"_data": {
 			"_scalar": {
 				"_class": "_class_quantity",
-				"_domain": ["genetic"],
+				"_domain": ["gent"],
 				"_type": "_type_number"
 			}
 		}
 	},
 	{
 		"_code": {
+			"_nid": "chr_gent",
 			"_lid": "MolDivPartB",
-			"_gid": "MolDivPartB",
+			"_gid": "chr_gent_MolDivPartB",
 			"_pid": ["MolDivPartB"],
 			"_aid": ["MolDivPartB"]
 		},
@@ -99,15 +104,16 @@
 		"_data": {
 			"_scalar": {
 				"_class": "_class_quantity",
-				"_domain": ["genetic"],
+				"_domain": ["gent"],
 				"_type": "_type_number"
 			}
 		}
 	},
 	{
 		"_code": {
+			"_nid": "chr_gent",
 			"_lid": "EffPopSize",
-			"_gid": "EffPopSize",
+			"_gid": "chr_gent_EffPopSize",
 			"_pid": ["EffPopSize", "Ne"],
 			"_aid": ["EffPopSize"]
 		},
@@ -119,15 +125,16 @@
 		"_data": {
 			"_scalar": {
 				"_class": "_class_quantity",
-				"_domain": ["genetic"],
+				"_domain": ["gent"],
 				"_type": "_type_integer"
 			}
 		}
 	},
 	{
 		"_code": {
+			"_nid": "chr_gent",
 			"_lid": "Divergence",
-			"_gid": "Divergence",
+			"_gid": "chr_gent_Divergence",
 			"_pid": ["Divergence", "Fst"],
 			"_aid": ["Divergence"]
 		},
@@ -140,7 +147,7 @@
 			"_array": {
 				"_scalar": {
 					"_class": "_class_quantity",
-					"_domain": ["genetic"],
+					"_domain": ["gent"],
 					"_type": "_type_number"
 				}
 			}
@@ -148,8 +155,9 @@
 	},
 	{
 		"_code": {
+			"_nid": "chr_gent",
 			"_lid": "PropClones",
-			"_gid": "PropClones",
+			"_gid": "chr_gent_PropClones",
 			"_pid": ["PropClones"],
 			"_aid": ["PropClones"]
 		},
@@ -160,15 +168,16 @@
 		"_data": {
 			"_scalar": {
 				"_class": "_class_quantity",
-				"_domain": ["genetic"],
+				"_domain": ["gent"],
 				"_type": "_type_number"
 			}
 		}
 	},
 	{
 		"_code": {
+			"_nid": "chr_gent",
 			"_lid": "SizeClones",
-			"_gid": "SizeClones",
+			"_gid": "chr_gent_SizeClones",
 			"_pid": ["SizeClones"],
 			"_aid": ["SizeClones"]
 		},
@@ -180,7 +189,7 @@
 			"_array": {
 				"_scalar": {
 					"_class": "_class_quantity",
-					"_domain": ["genetic"],
+					"_domain": ["gent"],
 					"_type": "_type_number"
 				}
 			}
@@ -188,8 +197,9 @@
 	},
 	{
 		"_code": {
+			"_nid": "chr_gent",
 			"_lid": "AdmIndex",
-			"_gid": "AdmIndex",
+			"_gid": "chr_gent_AdmIndex",
 			"_pid": ["AdmIndex", "Q"],
 			"_aid": ["AdmIndex"]
 		},
@@ -202,7 +212,7 @@
 			"_array": {
 				"_scalar": {
 					"_class": "_class_quantity",
-					"_domain": ["genetic"],
+					"_domain": ["gent"],
 					"_type": "_type_number"
 				}
 			}
@@ -210,8 +220,9 @@
 	},
 	{
 		"_code": {
+			"_nid": "chr_gent",
 			"_lid": "Inbreeding",
-			"_gid": "Inbreeding",
+			"_gid": "chr_gent_Inbreeding",
 			"_pid": ["Inbreeding", "F", "Fis"],
 			"_aid": ["Inbreeding"]
 		},
@@ -223,15 +234,16 @@
 		"_data": {
 			"_scalar": {
 				"_class": "_class_quantity",
-				"_domain": ["genetic"],
+				"_domain": ["gent"],
 				"_type": "_type_number"
 			}
 		}
 	},
 	{
 		"_code": {
+			"_nid": "chr_gent",
 			"_lid": "PropRepTrees",
-			"_gid": "PropRepTrees",
+			"_gid": "chr_gent_PropRepTrees",
 			"_pid": ["PropRepTrees"],
 			"_aid": ["PropRepTrees"]
 		},
@@ -241,15 +253,16 @@
 		"_data": {
 			"_scalar": {
 				"_class": "_class_quantity",
-				"_domain": ["genetic"],
+				"_domain": ["gent"],
 				"_type": "_type_number"
 			}
 		}
 	},
 	{
 		"_code": {
+			"_nid": "chr_gent",
 			"_lid": "GenLoad",
-			"_gid": "GenLoad",
+			"_gid": "chr_gent_GenLoad",
 			"_pid": ["GenLoad", "L"],
 			"_aid": ["GenLoad"]
 		},
@@ -261,15 +274,16 @@
 		"_data": {
 			"_scalar": {
 				"_class": "_class_quantity",
-				"_domain": ["genetic"],
+				"_domain": ["gent"],
 				"_type": "_type_number"
 			}
 		}
 	},
 	{
 		"_code": {
+			"_nid": "chr_gent",
 			"_lid": "NeutrTest",
-			"_gid": "NeutrTest",
+			"_gid": "chr_gent_NeutrTest",
 			"_pid": ["NeutrTest", "D"],
 			"_aid": ["NeutrTest"]
 		},
@@ -281,15 +295,16 @@
 		"_data": {
 			"_scalar": {
 				"_class": "_class_quantity",
-				"_domain": ["genetic"],
+				"_domain": ["gent"],
 				"_type": "_type_number"
 			}
 		}
 	},
 	{
 		"_code": {
+			"_nid": "chr_gent",
 			"_lid": "SampleSize",
-			"_gid": "SampleSize",
+			"_gid": "chr_gent_SampleSize",
 			"_pid": ["SampleSize", "N"],
 			"_aid": ["SampleSize"]
 		},
@@ -300,15 +315,16 @@
 		"_data": {
 			"_scalar": {
 				"_class": "_class_quantity",
-				"_domain": ["genetic"],
+				"_domain": ["gent"],
 				"_type": "_type_integer"
 			}
 		}
 	},
 	{
 		"_code": {
+			"_nid": "chr_gent",
 			"_lid": "1-Qinter",
-			"_gid": "1-Qinter",
+			"_gid": "chr_gent_1-Qinter",
 			"_pid": ["1-Qinter"],
 			"_aid": ["1-Qinter"]
 		},
@@ -319,16 +335,16 @@
 		"_data": {
 			"_scalar": {
 				"_class": "_class_quantity",
-				"_domain": ["genetic"],
+				"_domain": ["gent"],
 				"_type": "_type_number"
 			}
 		}
 	},
 	{
 		"_code": {
-			"_nid": "1-Qinter",
+			"_nid": "chr_gent_1-Qinter",
 			"_lid": "corrected",
-			"_gid": "1-Qinter_corrected",
+			"_gid": "chr_gent_1-Qinter_corrected",
 			"_pid": ["1-Qinter-corrected"],
 			"_aid": ["corrected"]
 		},
@@ -339,7 +355,7 @@
 		"_data": {
 			"_scalar": {
 				"_class": "_class_quantity",
-				"_domain": ["genetic"],
+				"_domain": ["gent"],
 				"_type": "_type_number"
 			}
 		}

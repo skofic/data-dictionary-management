@@ -13,37 +13,37 @@
 	},
 	
 	{
-		"_from": "phenotypic",
+		"_from": "pheno",
 		"_to": "_domain",
 		"_predicate": "_predicate_enum-of",
 		"_path": ["_domain"]
 	},
 	{
-		"_from": "modelled",
+		"_from": "model",
 		"_to": "_domain",
 		"_predicate": "_predicate_enum-of",
 		"_path": ["_domain"]
 	},
 	{
-		"_from": "genetic",
+		"_from": "gent",
 		"_to": "_domain",
 		"_predicate": "_predicate_enum-of",
 		"_path": ["_domain"]
 	},
 	{
-		"_from": "general",
+		"_from": "genl",
 		"_to": "_domain",
 		"_predicate": "_predicate_enum-of",
 		"_path": ["_domain"]
 	},
 	{
-		"_from": "environmental",
+		"_from": "envi",
 		"_to": "_domain",
 		"_predicate": "_predicate_enum-of",
 		"_path": ["_domain"]
 	},
 	{
-		"_from": "compound",
+		"_from": "comp",
 		"_to": "_domain",
 		"_predicate": "_predicate_enum-of",
 		"_path": ["_domain"]

@@ -1,8 +1,9 @@
 [
 	{
 		"_code": {
+			"_nid": "chr_model",
 			"_lid": "FD",
-			"_gid": "FD",
+			"_gid": "chr_model_FD",
 			"_pid": ["FD"],
 			"_aid": ["FD"]
 		},
@@ -14,15 +15,16 @@
 		"_data": {
 			"_scalar": {
 				"_class": "_class_quantity",
-				"_domain": ["modelled"],
+				"_domain": ["model"],
 				"_type": "_type_number"
 			}
 		}
 	},
 	{
 		"_code": {
+			"_nid": "chr_model",
 			"_lid": "PLC",
-			"_gid": "PLC",
+			"_gid": "chr_model_PLC",
 			"_pid": ["PLC"],
 			"_aid": ["PLC"]
 		},
@@ -34,15 +36,16 @@
 		"_data": {
 			"_scalar": {
 				"_class": "_class_quantity",
-				"_domain": ["modelled"],
+				"_domain": ["model"],
 				"_type": "_type_number"
 			}
 		}
 	},
 	{
 		"_code": {
+			"_nid": "chr_model",
 			"_lid": "CS",
-			"_gid": "CS",
+			"_gid": "chr_model_CS",
 			"_pid": ["CS"],
 			"_aid": ["CS"]
 		},
@@ -54,7 +57,7 @@
 		"_data": {
 			"_scalar": {
 				"_class": "_class_quantity",
-				"_domain": ["modelled"],
+				"_domain": ["model"],
 				"_type": "_type_number"
 			}
 		}
