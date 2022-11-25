@@ -50,34 +50,34 @@ async function InitDatabase(db)
 		}
 
 		//
-		// Drop if relevant.
+		// Truncate if relevant.
 		//
 		else {
 			switch(item.name) {
 
 				// Terms.
 				case kDb.collection_terms:
-					await db.collection(kDb.collection_terms).drop()
+					await db.collection(kDb.collection_terms).truncate()
 					break
 
 				// Schema.
 				case kDb.collection_edges:
-					await db.collection(kDb.collection_edges).drop()
+					await db.collection(kDb.collection_edges).truncate()
 					break
 
 				// Topo.
 				case kDb.collection_topos:
-					await db.collection(kDb.collection_topos).drop()
-					break
-
-				// Errors.
-				case kPriv.user.db.error_col:
-					await db.collection(kPriv.user.db.error_col).drop()
+					await db.collection(kDb.collection_topos).truncate()
 					break
 
 				// Characterisation.
-				case kPriv.user.db.char_col:
-					await db.collection(kPriv.user.db.char_col).drop()
+				case kDb.collection_char:
+					await db.collection(kDb.collection_topos).truncate()
+					break
+
+				// Errors.
+				case kDb.collection_errors:
+					await db.collection(kPriv.user.db.error_col).truncate()
 					break
 			}
 		}
@@ -86,11 +86,13 @@ async function InitDatabase(db)
 	//
 	// Create collections.
 	//
-	await InitTermCollection(db, kDb.collection_terms)
-	await InitEdgeCollection(db, kDb.collection_edges)
-	await InitTopoCollection(db, kDb.collection_topos)
-	await InitErrorCollection(db, kPriv.user.db.error_col)
-	await InitCharCollection(db, kPriv.user.db.char_col)
+	if(kPriv.user.flag.drop_all_collections) {
+		await InitTermCollection(db, kDb.collection_terms)
+		await InitEdgeCollection(db, kDb.collection_edges)
+		await InitTopoCollection(db, kDb.collection_topos)
+		await InitCharCollection(db, kDb.collection_char)
+		await InitErrorCollection(db, kDb.collection_errors)
+	}
 
 	//
 	// Create graphs.
@@ -112,7 +114,10 @@ async function InitTermCollection(db, name)
 	//
 	// Create collection.
 	//
-	const collection = await db.createCollection(name)
+	let collection = db.collection(name)
+	if(!await collection.exists()) {
+		collection = await db.createCollection(name)
+	}
 
 	//
 	// Add indexes.
@@ -155,7 +160,10 @@ async function InitEdgeCollection(db, name)
 	//
 	// Create collection.
 	//
-	const collection = await db.createEdgeCollection(name)
+	let collection = db.collection(name)
+	if(!await collection.exists()) {
+		collection = await db.createEdgeCollection(name)
+	}
 
 	//
 	// Add indexes.
@@ -185,7 +193,10 @@ async function InitTopoCollection(db, name)
 	//
 	// Create collection.
 	//
-	const collection = await db.createEdgeCollection(name)
+	let collection = db.collection(name)
+	if(!await collection.exists()) {
+		collection = await db.createEdgeCollection(name)
+	}
 
 	//
 	// Add indexes.
@@ -215,7 +226,10 @@ async function InitErrorCollection(db, name)
 	//
 	// Create collection.
 	//
-	const collection = await db.createCollection(name)
+	let collection = db.collection(name)
+	if(!await collection.exists()) {
+		collection = await db.createCollection(name)
+	}
 
 	console.log(`Created error collection ${name}`)
 
@@ -252,7 +266,10 @@ async function InitCharCollection(db, name)
 	//
 	// Create collection.
 	//
-	const collection = await db.createCollection(name)
+	let collection = db.collection(name)
+	if(!await collection.exists()) {
+		collection = await db.createCollection(name)
+	}
 
 	//
 	// Add indexes.
