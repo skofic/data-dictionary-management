@@ -72,12 +72,12 @@ async function InitDatabase(db)
 
 				// Characterisation.
 				case kDb.collection_char:
-					await db.collection(kDb.collection_topos).truncate()
+					await db.collection(kDb.collection_char).truncate()
 					break
 
 				// Errors.
 				case kDb.collection_errors:
-					await db.collection(kPriv.user.db.error_col).truncate()
+					await db.collection(kDb.collection_errors).truncate()
 					break
 			}
 		}
@@ -86,13 +86,11 @@ async function InitDatabase(db)
 	//
 	// Create collections.
 	//
-	if(kPriv.user.flag.drop_all_collections) {
-		await InitTermCollection(db, kDb.collection_terms)
-		await InitEdgeCollection(db, kDb.collection_edges)
-		await InitTopoCollection(db, kDb.collection_topos)
-		await InitCharCollection(db, kDb.collection_char)
-		await InitErrorCollection(db, kDb.collection_errors)
-	}
+	await InitTermCollection(db, kDb.collection_terms)
+	await InitEdgeCollection(db, kDb.collection_edges)
+	await InitTopoCollection(db, kDb.collection_topos)
+	await InitCharCollection(db, kDb.collection_char)
+	await InitErrorCollection(db, kDb.collection_errors)
 
 	//
 	// Create graphs.
