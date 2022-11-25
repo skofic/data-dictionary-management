@@ -28,12 +28,5 @@
 		"_to": "_info",
 		"_predicate": "_predicate_property-of",
 		"_path": ["_info"]
-	},
-	
-	{
-		"_from": "_data_provider",
-		"_to": "_info",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_info"]
 	}
 ]
