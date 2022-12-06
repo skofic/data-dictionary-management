@@ -1,0 +1,26 @@
+[
+	{
+		"_from": "_add",
+		"_to": "_restrict",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_restrict"]
+	},
+	{
+		"_from": "_mod",
+		"_to": "_restrict",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_restrict"]
+	},
+	{
+		"_from": "_del",
+		"_to": "_restrict",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_restrict"]
+	},
+	{
+		"_from": "_man",
+		"_to": "_restrict",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_restrict"]
+	}
+]

@@ -37,7 +37,7 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "Required properties"},
 			"_definition": {"iso_639_3_eng": "Selection of required properties."},
-			"_description": {"iso_639_3_eng": "This field contains a *descriptors selection rule* that determines which *set* of *descriptors* must be *included* in the *data structure definition* of the *object* for it to be considered *valid*.\n\nThe *data type* of the selection *values* must be the *global identifier* of the *descriptors* that must be *included* in the *object data structure*.\n\nIn order for the *object data structure* to be *valid*, its *properties* must *include* the *elements* of this *selection*."},
+			"_description": {"iso_639_3_eng": "This field contains a [descriptors selection rule](_selection-descriptors.md) that determines which *set* of *descriptors* must be *included* in the [data structure definition](_type_object.md) of the *object* for it to be considered *valid*.\n\nThe selection *values* must be the [global identifier](_gid.md) of the *descriptors* that are required to be *included* in the *object data structure*.\n\nIn order for the *object data structure* to be *valid*, its *properties* must *include* the *elements* of this *selection*."},
 			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_selection-descriptors_one\": [one, two, three],\n\t\"_selection-descriptors_any\": [red, green, blue],\n\t\"_selection-descriptors_all\": [mon. tue, wed]\n}\n```\n\nThis selection rule implies the following conditions:\n\n- At least *one* of `[red, green, blue]` is required.\n- *One* or *more* of `[odd, even] `are required.\n- *All* of `[mon, tue, wed]` are required.\n  \n\nThe following are valid:\n\n- `[red, even, mon, tue, wed]`  \n- `[green, odd, mon, tue, wed]` \n- `[blue, odd, even, mon, tue, wed]`\n  \n\nThe following are invalid:\n\n- `[even, mon, tue, wed]` \n- `[green, mon, tue, wed]`\n- `[blue, odd, even, tue, wed]`"}
 		},
 		"_data": {
@@ -57,7 +57,7 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "Recommended properties"},
 			"_definition": {"iso_639_3_eng": "Selection of recommended properties."},
-			"_description": {"iso_639_3_eng": "This field contains a *descriptors selection rule* that determines which *set* of *descriptors* are *recommended* to be *included* in the *data structure definition* of the *object*. By recommended it means that you are strongly encouraged to include the selection of properties in the object.\n\nThe *data type* of the selection *values* must be the *global identifier* of the *descriptors* that are *recommended*.\n\nIf these properties are not added to the object this doesn't mean that the object is invalid."},
+			"_description": {"iso_639_3_eng": "This field contains a [descriptors selection rule](_selection-descriptors.md) that determines which *set* of *descriptors* are *recommended* to be *included* in the [data structure definition](_type_object.md) of the *object*. By *recommended* it means that you are *strongly encouraged* to *include* the *selection* of *properties* in the *object*.\n\nThe selection *values* must be the [global identifier](_gid.md) of the *descriptors* that are *recommended*.\n\nIf these properties are not added to the object this doesn't mean that the object is invalid."},
 			"_examples": {"iso_639_3_eng": "```json\n\t\"_selection-descriptors_one\": [one, two, three],\n\t\"_selection-descriptors_any\": [red, green, blue],\n\t\"_selection-descriptors_all\": [mon. tue, wed]\n}\n```\n\nThis selection rule implies the following conditions:\n\n- At least *one* of `[red, green, blue]` is recommended.\n- *One* or *more* of `[odd, even] `are recommended.\n- *All* of `[mon, tue, wed]` are recommended."}
 		},
 		"_data": {
@@ -77,7 +77,7 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "Banned properties"},
 			"_definition": {"iso_639_3_eng": "List of banned properties."},
-			"_description": {"iso_639_3_eng": "This field contains a set of *descriptors* that should *not* be *included* in the *data structure definition* of the *object.\n\nThe *data type* of the set *values* must be the *global identifier* of the *descriptors*.\n\nIn order for the *object data structure* to be *valid*, its *properties* *must not include* the *elements* of this *set*.\n\nThis rule should be evaluated at the *end* of the *validation workflow* and should *not trigger* an *error*: all banned properties should simply be *removed*."}
+			"_description": {"iso_639_3_eng": "This field contains a [descriptors selection rule](_selection-descriptors.md) that determines which *set* of *descriptors* must *not* be *included* in the [data structure definition](_type_object.md) of the *object*.\n\nThe selection *values* must be the [global identifier](_gid.md) of the *descriptors* that are *forbidden* from being *included* in the *object data structure*.\n\nThis rule should be evaluated at the *end* of the *validation workflow* and should *not trigger* an *error*: all banned properties should simply be *removed*."}
 		},
 		"_data": {
 			"_set": {

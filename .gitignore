@@ -120,6 +120,8 @@ dist
 ###
 dbCredentials.oasis.json
 dbCredentials.newtvision.json
+dbCredentials.skobo.json
+dbCredentials.localhost.json
 
 ###
 # EXPORT DIRECTORY

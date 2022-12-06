@@ -134,6 +134,21 @@ async function ValidateDocuments(db)
 	let error_count = 0
 	let page_records = 0
 	const url = `${kPriv.user.db.host}/_db/metadata/dict/check/objects`
+	const auth = `${kPriv.user.db.host}/_db/metadata/dict/auth/login`
+
+	//
+	// Login.
+	//
+	const authenticated =
+		await axios.post(
+			auth,
+			{ username: 'master', password: 'secret' },
+			{ withCredentials: true }
+		)
+
+	if(authenticated.status !== 200) {
+		throw Error(`(${authenticated.status}) - ${authenticated.statusText}`)
+	}
 
 	//
 	// Get cursor.
@@ -158,13 +173,13 @@ async function ValidateDocuments(db)
 		//
 		const postData = {
 			value: records,
-			language: 'iso_639_eng'
+			language: 'iso_639_3_eng'
 		}
 
 		//
 		// Validate.
 		//
-		const response = await axios.post(url, postData)
+		const response = await axios.post(url, postData, {withCredentials: true})
 		if(response.status !== 200) {
 			throw Error(`(${response.status}) - ${response.statusText}`)
 		}
