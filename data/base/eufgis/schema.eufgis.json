@@ -189,6 +189,12 @@
 	},
 	
 	{
+		"_from": "gcu_pop_reproducings_0",
+		"_to": "gcu_pop_reproducings",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["gcu_pop_reproducings"]
+	},
+	{
 		"_from": "gcu_pop_reproducings_1",
 		"_to": "gcu_pop_reproducings",
 		"_predicate": "_predicate_enum-of",

@@ -72,7 +72,9 @@ async function InitDatabase(db)
 
 				// Characterisation.
 				case kDb.collection_char:
-					await db.collection(kDb.collection_char).truncate()
+					if(kPriv.user.flag.drop_characterisation) {
+						await db.collection(kDb.collection_char).truncate()
+					}
 					break
 
 				// Errors.
@@ -89,8 +91,10 @@ async function InitDatabase(db)
 	await InitTermCollection(db, kDb.collection_terms)
 	await InitEdgeCollection(db, kDb.collection_edges)
 	await InitTopoCollection(db, kDb.collection_topos)
-	await InitCharCollection(db, kDb.collection_char)
 	await InitErrorCollection(db, kDb.collection_errors)
+	if(kPriv.user.flag.drop_characterisation) {
+		await InitCharCollection(db, kDb.collection_char)
+	}
 
 	//
 	// Create graphs.

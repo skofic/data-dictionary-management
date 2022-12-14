@@ -459,6 +459,21 @@
 	{
 		"_code": {
 			"_nid": "gcu_pop_reproducings",
+			"_lid": "0",
+			"_gid": "gcu_pop_reproducings_0",
+			"_aid": ["0"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "1 - 14"}
+		},
+		"_range": {
+			"_min-range-inclusive": 1,
+			"_max-range-inclusive": 14
+		}
+	},
+	{
+		"_code": {
+			"_nid": "gcu_pop_reproducings",
 			"_lid": "1",
 			"_gid": "gcu_pop_reproducings_1",
 			"_aid": ["1"]

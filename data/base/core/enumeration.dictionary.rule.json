@@ -49,7 +49,7 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "Managed"},
 			"_definition": {"iso_639_3_eng": "Computed or managed."},
-			"_description": {"iso_639_3_eng": "This term indicates that a *variable* will be *automatically set* in the *record* at *insert time*, that a *property* will be *automatically added* to a *structure* at *creation time*, or that the *elements* of a *list* are *managed externally*.\n\nIf used in *contexts* that *allow* or *deny*, this term only indicates an *attribute*."}
+			"_description": {"iso_639_3_eng": "This term indicates that a *variable* will be *automatically set* in the *record* at *insert time*, that a *property* will be *automatically added* to a *structure* at *creation time*, or that the *elements* of a *list* are *managed externally*.\n\nIf used in *contexts* that *allow* or *deny*, this term only indicates an *attribute*.\n\nWhen a variable is marked as *computed*, it means that the value will be set externally, so the eventual value set by the user will be overwritten."}
 		}
 	}
 ]
