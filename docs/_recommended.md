@@ -13,9 +13,9 @@
 
 
 ------
-This field contains a *descriptors selection rule* that determines which *set* of *descriptors* are *recommended* to be *included* in the *data structure definition* of the *object*. By recommended it means that you are strongly encouraged to include the selection of properties in the object.
+This field contains a [descriptors selection rule](_selection-descriptors.md) that determines which *set* of *descriptors* are *recommended* to be *included* in the [data structure definition](_type_object.md) of the *object*. By *recommended* it means that you are *strongly encouraged* to *include* the *selection* of *properties* in the *object*.
 
-The *data type* of the selection *values* must be the *global identifier* of the *descriptors* that are *recommended*.
+The selection *values* must be the [global identifier](_gid.md) of the *descriptors* that are *recommended*.
 
 If these properties are not added to the object this doesn't mean that the object is invalid.
 

@@ -516,7 +516,7 @@
 			"_set": {
 				"_set_scalar": {
 					"_class": "_class_category",
-					"_type": "_type_string_enum",
+					"_set_type": "_type_string_enum",
 					"_kind": ["_restrict"]
 				}
 			}

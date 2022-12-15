@@ -13,10 +13,8 @@
 
 
 ------
-This field contains a set of *descriptors* that should *not* be *included* in the *data structure definition* of the *object.
+This field contains a [descriptors selection rule](_selection-descriptors.md) that determines which *set* of *descriptors* must *not* be *included* in the [data structure definition](_type_object.md) of the *object*.
 
-The *data type* of the set *values* must be the *global identifier* of the *descriptors*.
-
-In order for the *object data structure* to be *valid*, its *properties* *must not include* the *elements* of this *set*.
+The selection *values* must be the [global identifier](_gid.md) of the *descriptors* that are *forbidden* from being *included* in the *object data structure*.
 
 This rule should be evaluated at the *end* of the *validation workflow* and should *not trigger* an *error*: all banned properties should simply be *removed*.

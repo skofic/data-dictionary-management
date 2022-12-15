@@ -471,14 +471,12 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Target species"},
-			"_definition": {"iso_639_3_eng": "List of target species growing in the unit, give full Latin name (genus, species, sub-species as appropriate). Multiple choice."}
+			"_definition": {"iso_639_3_eng": "Target species growing in the unit, give full Latin name (genus, species, sub-species as appropriate)."}
 		},
 		"_data": {
-			"_set": {
-				"_set_scalar": {
-					"_class": "_class_category",
-					"_set_type": "_type_string"
-				}
+			"_scalar": {
+				"_class": "_class_category",
+				"_type": "_type_string"
 			}
 		}
 	},  

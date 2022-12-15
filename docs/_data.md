@@ -48,13 +48,15 @@ The above example describes a [scalar](_scalar.md) discrete [integer](_type_inte
 {
 	"_data": {
 		"_array": {
-			"_class": "_class_quantity",
-			"_type": "_type_number",
-			"_valid-range": {
-				"_min-range-inclusive": 0.0,
-				"_max-range-exclusive": 100.0,
-			},
-			"_unit": "_data_unit_length_cm"
+      "_scalar": {
+        "_class": "_class_quantity",
+        "_type": "_type_number",
+        "_valid-range": {
+          "_min-range-inclusive": 0.0,
+          "_max-range-exclusive": 100.0,
+        },
+        "_unit": "_data_unit_length_cm"
+      }
 		}
 	}
 }
@@ -68,9 +70,11 @@ The above example describes a [list](_array.md) of [continuous](_type_number.md)
 {
 	"_data": {
 		"_set": {
-			"_class": "_class_category",
-			"_type": "_type_string_enum",
-			"_kind": ["iso_639_3"]
+      "_set_scalar": {
+        "_class": "_class_category",
+        "_type": "_type_string_enum",
+        "_kind": ["iso_639_3"]
+      }
 		}
 	}
 }
@@ -93,18 +97,20 @@ The above example describes *list* of [unique elements](_set.md) belonging to th
 				"_dict": {
 					"_dict_key": {
 						"_class": "_class_category",
-						"_type": "_type_string_enum",
+						"_type_key": "_type_string_enum",
 						"_kind": ["iso_639_3"]
 					},
 					"_dict_value": {
 						"_array": {
-							"_class": "_class_other",
-							"_type": "_type_object",
-							"_kind": ["some_object_definition"],
-							"_elements": {
-								"_min-items": 5,
-								"_max-items": 10
-							}
+              "_scalar": {
+                "_class": "_class_other",
+                "_type": "_type_object",
+                "_kind": ["some_object_definition"],
+                "_elements": {
+                  "_min-items": 5,
+                  "_max-items": 10
+                }
+              }
 						}
 					}
 				}
@@ -125,6 +131,7 @@ The above example describes a [dictionary](_dict.md) whose *keys* are the [globa
 	}
 }
 ```
+
 This example shows the *data definition* for a *descriptor* that can take *only* [scalar](_scalar.md) values of any [type](_type.md).
 
 
@@ -134,4 +141,5 @@ This example shows the *data definition* for a *descriptor* that can take *only*
 	"_data": {}
 }
 ```
+
 This example shows the *data definition* for a *descriptor* that can take *any data shape* or *value*.
