@@ -2812,7 +2812,7 @@ function ProcessEdge(edge) {
 				//
 				// Set path references.
 				//
-				edge['_path'] = edge['_path'].map(item =>MakeHandleReference(item))
+				edge['_path'] = edge['_path'].map(item => MakeHandleReference(item))
 
 				//
 				// Create key string.
