@@ -43,6 +43,69 @@
 	{
 		"_code": {
 			"_nid": "gcu_id",
+			"_lid": "date",
+			"_gid": "gcu_id_date",
+			"_pid": ["UnitDataCollectionDate"],
+			"_aid": ["date"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Date (or partial of date) of collection of the field data entered"},
+			"_definition": {"iso_639_3_eng": "Date or partial of date. Format: YYYY, YYYYmm or YYYYmmdd."},
+			"_description": {"iso_639_3_eng": "Date (or partial of date) of collection of the field data entered*. Date when the data on the unit was collected in the field. This field is needed to link the species table to the unit table, replace of old field No 22."},
+			"_examples": {"iso_639_3_eng": "`20211231 Or 202112 Or 2021`: A finnish unit's number."}
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_time",
+				"_format": "_format_date",
+				"_type": "_type_string_date"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "gcu_id",
+			"_lid": "visit-date",
+			"_gid": "gcu_id_visit-date",
+			"_pid": ["UnitLastVisitDate"],
+			"_aid": ["visit-date"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Date (or partial of date) of the most recent visit."},
+			"_definition": {"iso_639_3_eng": "Date or partial of date. Format: YYYY, YYYYmm or YYYYmmdd."},
+			"_examples": {"iso_639_3_eng": "20211231 Or 202112 Or 2021"}
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_time",
+				"_format": "_format_date",
+				"_type": "_type_string_date"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "gcu_id",
+			"_lid": "unit-id",
+			"_gid": "gcu_id_unit-id",
+			"_pid": ["UnitID"],
+			"_aid": ["unit-id"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Unique identifier of the unit during the time. UnitNumber + UnitDataCollectionDate"},
+			"_definition": {"iso_639_3_eng": "This number is the unique identifier of the unit described + the date of collection of the field data entered."},
+			"_examples": {"iso_639_3_eng": "FIN0000120211231 Or FIN00001202112 Or FIN000012021"}
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_identifier",
+				"_type": "_type_string"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "gcu_id",
 			"_lid": "gene-number",
 			"_gid": "gcu_id_gene-number",
 			"_pid": ["UnitGeneNumber"],
@@ -157,6 +220,25 @@
 	{
 		"_code": {
 			"_nid": "gcu_loc",
+			"_lid": "latitude-d",
+			"_gid": "gcu_loc_latitude-d",
+			"_pid": ["UnitLatitudeD"],
+			"_aid": ["latitude-d"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Latitude decimal"},
+			"_description": {"iso_639_3_eng": "The decimal latitude of the centre of the unit."},
+			"_examples": {"iso_639_3_eng": "38.123333333333"}
+		},
+		"_data": {
+			"_scalar": {
+				"_type": "_type_number"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "gcu_loc",
 			"_lid": "longitude",
 			"_gid": "gcu_loc_longitude",
 			"_pid": ["UnitLongitude"],
@@ -172,6 +254,25 @@
 			"_scalar": {
 				"_type": "_type_string",
 				"_regexp": "^([0-9]|[1-9][0-9]|1[0-7][0-9]|180)°([0-9]|[1-5][0-9]|60)';([0-9]|[0-5][0-9])(.[0-9]+)?\";(E|W)$"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "gcu_loc",
+			"_lid": "longitude-d",
+			"_gid": "gcu_loc_longitude-d",
+			"_pid": ["UnitLongitudeD"],
+			"_aid": ["longitude-d"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Longitude decimal"},
+			"_description": {"iso_639_3_eng": "The decimal longitude of the centre of the unit."},
+			"_examples": {"iso_639_3_eng": "32.266944444444"}
+		},
+		"_data": {
+			"_scalar": {
+				"_type": "_type_number"
 			}
 		}
 	},
@@ -210,6 +311,26 @@
 		"_data": {
 			"_scalar": {
 				"_type": "_type_object_geo-json"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "gcu_loc",
+			"_lid": "polygons",
+			"_gid": "gcu_loc_polygons",
+			"_pid": ["UnitPolygons"],
+			"_aid": ["polygons"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Shapes of the gene conservation unit"},
+			"_definition": {"iso_639_3_eng": "List of keys relative to the collection `geometries`. Each geometry in the collection is a GeoJSON geometry structure that records the shape of the gene conservation unit. The shape is a polygon."},
+			"_examples": {"iso_639_3_eng": "'geometries/f3905f68ec22b982c4d8e3b2530d6bf5','geometries/9a140f41d76e68e68acb889f7354597d','geometries/a9949fb5bba93af6f1b14dce70927bf8'"}
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_identifier",
+				"_set_type": "_type_string_handle"
 			}
 		}
 	},
@@ -319,6 +440,25 @@
 				"_class": "_class_quantity",
 				"_type": "_type_number",
 				"_unit": "_unit_area_ha"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "gcu_loc",
+			"_lid": "climate-id",
+			"_gid": "gcu_loc_climate-id",
+			"_pid": ["UnitClimateID"],
+			"_aid": ["climate-id"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Climate Key relative to the collection `climate` retaled with WorldClim data. Key = md5(UnitLatitudeD:UnitLongitudeD). Old db name ClimateID"},
+			"_examples": {"iso_639_3_eng": "climate/43f221df3a210e1ebd79df6f898ad855"}
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_identifier",
+				"_type": "_type_string_handle"
 			}
 		}
 	},
@@ -449,18 +589,83 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "All tree species growing in the unit"},
-			"_definition": {"iso_639_3_eng": "List of target and non target species growing in the unit, give full Latin name (genus, species, sub-species as appropriate)."}
+			"_definition": {"iso_639_3_eng": "List of target and non target species growing in the unit, give full Latin name (genus, species, sub-species as appropriate) provided by the collection `taxa`."},
+			"_examples": {"iso_639_3_eng": "['taxa/fd7c0227067a98723f453b528ce3f9a6','taxa/9dbb2dfcee106f534baef9cfb5a02fdd','taxa/f4134ca27b68d83c1e123a8c05a75920']"}
 		},
 		"_data": {
 			"_set": {
 				"_set_scalar": {
 					"_class": "_class_category",
-					"_set_type": "_type_string"
+					"_set_type": "_type_string_handle"
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "gcu_pop",
+			"_lid": "all-target-species",
+			"_gid": "gcu_pop_all-target-species",
+			"_pid": ["UnitTargetSpecies"],
+			"_aid": ["all-target-species"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "All target species in the unit"},
+			"_definition": {"iso_639_3_eng": "List of target species growing in the unit. List of keys relative to the collection `populations`."},
+			"_examples": {"iso_639_3_eng": "['populations/fd7c0227067a98723f453b528ce3f9a6','populations/9dbb2dfcee106f534baef9cfb5a02fdd','populations/f4134ca27b68d83c1e123a8c05a75920']"}
+		},
+		"_data": {
+			"_set": {
+				"_set_scalar": {
+					"_class": "_class_category",
+					"_set_type": "_type_string_handle"
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "gcu_pop",
+			"_lid": "all-other-species",
+			"_gid": "gcu_pop_all-other-species",
+			"_pid": ["UnitOtherSpecies"],
+			"_aid": ["all-other-species"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "All tree species growing in the unit not in EUFGIS Taxa"},
+			"_definition": {"iso_639_3_eng": "List of upovcodes relative to the collection `upov`."},
+			"_examples": {"iso_639_3_eng": "['upov/ABIES_FRA',upov/'ACERR_RUB']"}
+		},
+		"_data": {
+			"_set": {
+				"_set_scalar": {
+					"_class": "_class_category",
+					"_set_type": "_type_string_handle"
 				}
 			}
 		}
 	},
 	
+	{
+		"_code": {
+			"_nid": "gcu_pop",
+			"_lid": "population-id",
+			"_gid": "gcu_pop_population-id",
+			"_pid": ["PopulationID"],
+			"_aid": ["population-id"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Unique identifier of the population described."},
+			"_definition": {"iso_639_3_eng": "This key is the unique identifier of the population described. This key should not be duplicated or reassigned to another population (md5 of UnitID+`::`+PopulationTargetSpecies)."},
+			"_examples": {"iso_639_3_eng": "db736a4ce54ffe9fb79cd006bbfebbce"}
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_identifier",
+				"_type": "_type_string"
+			}
+		}
+	},  
 	{
 		"_code": {
 			"_nid": "gcu_pop",
@@ -471,12 +676,13 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Target species"},
-			"_definition": {"iso_639_3_eng": "Target species growing in the unit, give full Latin name (genus, species, sub-species as appropriate)."}
+			"_definition": {"iso_639_3_eng": "Give full Latin name (genus, species, sub species as appropriate) provided by the collection `taxa`"},
+			"_examples": {"iso_639_3_eng": "taxa/fd7c0227067a98723f453b528ce3f9a6"}
 		},
 		"_data": {
 			"_scalar": {
 				"_class": "_class_category",
-				"_type": "_type_string"
+				"_type": "_type_string_handle"
 			}
 		}
 	},  
@@ -541,6 +747,27 @@
 	{
 		"_code": {
 			"_nid": "gcu_pop",
+			"_lid": "last-date",
+			"_gid": "gcu_pop_last-date",
+			"_pid": ["PopulationLastVisitDate"],
+			"_aid": ["last-date"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Date (or partial of date) of the most recent visit"},
+			"_definition": {"iso_639_3_eng": "Date or partial of date. Format: YYYY, YYYYmm or YYYYmmdd."},
+			"_examples": {"iso_639_3_eng": "20211231 Or 202112 Or 2021"}
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_time",
+				"_format": "_format_date",
+				"_type": "_type_string_date"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "gcu_pop",
 			"_lid": "status",
 			"_gid": "gcu_pop_status",
 			"_pid": ["PopulationStatus"],
@@ -555,6 +782,90 @@
 				"_class": "_class_category",
 				"_type": "_type_string_enum",
 				"_kind": ["gcu_pop_statuses"]
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "gcu_pop",
+			"_lid": "distribution-date",
+			"_gid": "gcu_pop_distribution-date",
+			"_pid": ["PopulationDistributionDate"],
+			"_aid": ["distribution-date"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Date (or partial of date) of the last update for the field 42 PopulationDistribution"},
+			"_definition": {"iso_639_3_eng": "Date or partial of date. Format: YYYY, YYYYmm or YYYYmmdd."},
+			"_examples": {"iso_639_3_eng": "20211231 Or 202112 Or 2021"}
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_time",
+				"_format": "_format_date",
+				"_type": "_type_string_date"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "gcu_pop",
+			"_lid": "regeneration-date",
+			"_gid": "gcu_pop_regeneration-date",
+			"_pid": ["PopulationRegenerationDate"],
+			"_aid": ["regeneration-date"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Date (or partial of date) of the last update for the field 41 PopulationRegeneration"},
+			"_definition": {"iso_639_3_eng": "Date or partial of date. Format: YYYY, YYYYmm or YYYYmmdd."},
+			"_examples": {"iso_639_3_eng": "20211231 Or 202112 Or 2021"}
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_time",
+				"_format": "_format_date",
+				"_type": "_type_string_date"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "gcu_pop",
+			"_lid": "reproducing-date",
+			"_gid": "gcu_pop_reproducing-date",
+			"_pid": ["PopulationReproducingTreesDate"],
+			"_aid": ["reproducing-date"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Date (or partial of date) of the last update for the field 39 PopulationReproducingTrees"},
+			"_definition": {"iso_639_3_eng": "Date or partial of date. Format: YYYY, YYYYmm or YYYYmmdd."},
+			"_examples": {"iso_639_3_eng": "20211231 Or 202112 Or 2021"}
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_time",
+				"_format": "_format_date",
+				"_type": "_type_string_date"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "gcu_pop",
+			"_lid": "reproducing-number-date",
+			"_gid": "gcu_pop_reproducing-number-date",
+			"_pid": ["PopulationReproducingTreesNumberDate"],
+			"_aid": ["reproducing-number-date"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Date (or partial of date) of the last update for the field 45 PopulationReproducingTreesNumber"},
+			"_definition": {"iso_639_3_eng": "Date or partial of date. Format: YYYY, YYYYmm or YYYYmmdd."},
+			"_examples": {"iso_639_3_eng": "20211231 Or 202112 Or 2021"}
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_time",
+				"_format": "_format_date",
+				"_type": "_type_string_date"
 			}
 		}
 	},
@@ -680,6 +991,64 @@
 	{
 		"_code": {
 			"_nid": "gcu_pop",
+			"_lid": "reproducing-number",
+			"_gid": "gcu_pop_reproducing-number",
+			"_pid": ["PopulationReproducingTreesNumber"],
+			"_aid": ["reproducing-number"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Number of reproducing trees"}
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_quantity",
+				"_type": "_type_integer"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "gcu_pop",
+			"_lid": "reproducing-status",
+			"_gid": "gcu_pop_reproducing-status",
+			"_pid": ["PopulationReproducingTreesNumberStatus"],
+			"_aid": ["reproducing-status"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Status of reproducing trees number"}
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_category",
+				"_type": "_type_string_enum",
+				"_kind": ["gcu_pop_reproducing-statuses"]
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "gcu_pop",
+			"_lid": "reproducing-status-date",
+			"_gid": "gcu_pop_reproducing-status-date",
+			"_pid": ["PopulationReproducingTreesNumberStatusDate"],
+			"_aid": ["reproducing-status-date"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Date (or partial of date) of the last update for the field 46 PopulationReproducingTreesNumberStatus"},
+			"_definition": {"iso_639_3_eng": "Date or partial of date. Format: YYYY, YYYYmm or YYYYmmdd."},
+			"_examples": {"iso_639_3_eng": "20211231 Or 202112 Or 2021"}
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_time",
+				"_format": "_format_date",
+				"_type": "_type_string_date"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "gcu_pop",
 			"_lid": "sex-ratio",
 			"_gid": "gcu_pop_sex-ratio",
 			"_pid": ["PopulationSexRatio"],
@@ -693,6 +1062,27 @@
 				"_class": "_class_category",
 				"_type": "_type_string_enum",
 				"_kind": ["gcu_pop_sex-ratios"]
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "gcu_pop",
+			"_lid": "sex-ratio-date",
+			"_gid": "gcu_pop_sex-ratio-date",
+			"_aid": ["sex-ratio-date"],
+			"_pid": ["PopulationSexRatioDate"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Date (or partial of date) of the last update for the field 40 PopulationSexRatio"},
+			"_definition": {"iso_639_3_eng": "Date or partial of date. Format: YYYY, YYYYmm or YYYYmmdd."},
+			"_examples": {"iso_639_3_eng": "20211231 Or 202112 Or 2021"}
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_time",
+				"_format": "_format_date",
+				"_type": "_type_string_date"
 			}
 		}
 	},
@@ -756,6 +1146,27 @@
 					"_min-range-inclusive": 0.0,
 					"_max-range-inclusive": 100.0
 				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "gcu_pop",
+			"_lid": "share-date",
+			"_gid": "gcu_pop_share-date",
+			"_aid": ["share-date"],
+			"_pid": ["PopulationShareDate"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Date (or partial of date) of the last update for the field 43 PopulationShare"},
+			"_definition": {"iso_639_3_eng": "Date or partial of date. Format: YYYY, YYYYmm or YYYYmmdd."},
+			"_examples": {"iso_639_3_eng": "20211231 Or 202112 Or 2021"}
+		},
+		"_data": {
+			"_scalar": {
+				"_class": "_class_time",
+				"_format": "_format_date",
+				"_type": "_type_string_date"
 			}
 		}
 	},

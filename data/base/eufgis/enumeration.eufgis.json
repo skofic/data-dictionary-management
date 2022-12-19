@@ -444,6 +444,17 @@
 			"_title": {"iso_639_3_eng": "To conserve rare or endangered tree species with populations consisting of a low number of remaining individuals"}
 		}
 	},
+	{
+		"_code": {
+			"_nid": "gcu_pop_justifications",
+			"_lid": "4",
+			"_gid": "gcu_pop_justifications_4",
+			"_aid": ["4"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "To conserve specific adaptive and/or phenotypic traits in populations/and races of introduced species"}
+		}
+	},
 	
 	{
 		"_code": {
@@ -528,6 +539,51 @@
 		},
 		"_range": {
 			"_min-range-inclusive": 5001
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "gcu_pop",
+			"_lid": "reproducing-statuses",
+			"_gid": "gcu_pop_reproducing-statuses",
+			"_aid": ["reproducing-statuses"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Status of reproducing trees number"}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "gcu_pop_reproducing-statuses",
+			"_lid": "1",
+			"_gid": "gcu_pop_reproducing-statuses_1",
+			"_aid": ["1"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Counted"}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "gcu_pop_reproducing-statuses",
+			"_lid": "2",
+			"_gid": "gcu_pop_reproducing-statuses_2",
+			"_aid": ["2"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Estimated"}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "gcu_pop_reproducing-statuses",
+			"_lid": "3",
+			"_gid": "gcu_pop_reproducing-statuses_3",
+			"_aid": ["3"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Inferred"}
 		}
 	},
 	

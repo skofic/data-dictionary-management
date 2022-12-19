@@ -203,6 +203,20 @@
 	},
 	{
 		"_code": {
+			"_nid": "_type_string",
+			"_lid": "date",
+			"_gid": "_type_string_date",
+			"_aid": ["date"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Date"},
+			"_definition": {"iso_639_3_eng": "Year, year and month or year month and day."},
+			"_description": {"iso_639_3_eng": "This type can be used to indicate a *year*, a *year* and a *month*, or a full date with *year*, *month* and *day*.\n\nThe date is expressed as a [string](_type_string.md) field that can have a length of `4`, `6` or `8` digits in the following formats:\n\n- `YYYY`: *Year*, this date indicates a specific year, but neither the month nor the day is known.\n- `YYYYMM`: *Year* and *month*, this date indicates a year and month, the exact day is not known.\n- `YYYYMMDD`: Full date: *year*, *month* and *day*. The exact day, month and year are known.\n\nThis data type is useful in cases where parts of the date are not known: rather than filling missing values with defaults (making the date effectively invalid), this way it is clear what are the known elements and which are not.\n\nNote that the value can be used in sorting: dates with unknown elements will appear first."},
+			"_examples": {"iso_639_3_eng": "`2007`: The date is sometime in 2007, the month or day are unknown.\n\n`200703`: The date is sometime in march 2007, which day is unknown.\n\n`20070312`: The date is 12th of March 2007."}
+		}
+	},
+	{
+		"_code": {
 			"_nid": "_type",
 			"_lid": "object",
 			"_gid": "_type_object",
