@@ -195,6 +195,25 @@
 	},
 	
 	{
+		"_from": "gcu_pop_reproducing-statuses_1",
+		"_to": "gcu_pop_reproducing-statuses",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["gcu_pop_reproducing-statuses"]
+	},
+	{
+		"_from": "gcu_pop_reproducing-statuses_2",
+		"_to": "gcu_pop_reproducing-statuses",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["gcu_pop_reproducing-statuses"]
+	},
+	{
+		"_from": "gcu_pop_reproducing-statuses_3",
+		"_to": "gcu_pop_reproducing-statuses",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["gcu_pop_reproducing-statuses"]
+	},
+	
+	{
 		"_from": "gcu_pop_reproducings_0",
 		"_to": "gcu_pop_reproducings",
 		"_predicate": "_predicate_enum-of",
