@@ -379,7 +379,7 @@
 			"_scalar": {
 				"_class": "_class_category",
 				"_type": "_type_string",
-				"_regexp": "^[A-Z]{2,4}$"
+				"_regexp": "^[A-Z]{1}[a-z]{3}$"
 			}
 		}
 	},
