@@ -79,8 +79,8 @@ async function main()
 		console.log("Validating dictionary.")
 		console.log("============================")
 		// errors = await process.ValidateTerms(db)
-		errors = await process.ValidateDocuments(db)
-		console.log(`${errors} errors.`)
+		result = await process.ValidateDocuments(db)
+		console.log(result)
 
 	} // TRY BLOCK
 

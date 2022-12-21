@@ -25,6 +25,7 @@ const kDb = require('./db.globals')				// Database globals.
  */
 async function ProcessDictionaryFiles(db) {
 
+
 	//
 	// Select base directory according to flags.
 	//
@@ -122,7 +123,7 @@ async function ProcessIsoStandards(db) {
  * Validate documents
  * This function will iterate all terms and edges and call the validation service.
  * @param db: Database connection.
- * @return {Promise<int>}: Number of errors.
+ * @return {Promise<Object>}: Number of warnings and errors.
  */
 async function ValidateDocuments(db)
 {
@@ -131,24 +132,51 @@ async function ValidateDocuments(db)
 	// Init local storage.
 	//
 	let processed = 0
-	let error_count = 0
 	let page_records = 0
-	const url = `${kPriv.user.db.host}/_db/metadata/dict/check/objects`
-	const auth = `${kPriv.user.db.host}/_db/metadata/dict/auth/login`
+	let result = {
+		processed: 0,
+		valid: 0,
+		warnings: 0,
+		errors: 0
+	}
+
+	const host = kPriv.user.db.host
+	const database = kPriv.user.db.name
+	const url = `${host}/_db/${database}/dict/check/objects`
+
+	//
+	// Create transport.
+	//
+	const transport = axios.create({
+		withCredentials: true
+	})
 
 	//
 	// Login.
 	//
+	console.log(`==> Logging in`)
 	const authenticated =
-		await axios.post(
-			auth,
-			{ username: 'master', password: 'secret' },
-			{ withCredentials: true }
-		)
+		await axios({
+			"method": "POST",
+			"url": `${host}/_db/${database}/dict/auth/login`,
+			"headers": {
+				"Content-Type": "application/json; charset=utf-8"
+			},
+			"data": {
+				"username": kPriv.user.db.services_user,
+				"password": kPriv.user.db.services_pass
+			}
+		})
 
 	if(authenticated.status !== 200) {
 		throw Error(`(${authenticated.status}) - ${authenticated.statusText}`)
 	}
+
+	//
+	// Save cookie.
+	//
+	const parsed = authenticated.headers['set-cookie'].match(/^FOXXSID=([a-z0-9]+);.+,FOXXSID.sig=([a-z0-9]+);/)
+	const cookie = `FOXXSID=${parsed[1]}; FOXXSID.sig=${parsed[2]}`
 
 	//
 	// Get cursor.
@@ -165,7 +193,6 @@ async function ValidateDocuments(db)
 	//
 	console.log(`==> Iterating all terms`)
 	let records = await cursor.all()
-
 	while(records.length > 0) {
 
 		//
@@ -179,51 +206,54 @@ async function ValidateDocuments(db)
 		//
 		// Validate.
 		//
-		const response = await axios.post(url, postData, {withCredentials: true})
+		const response =
+			await transport.post(
+				url,
+				postData,
+				{
+					withCredentials: true,
+					headers: {
+						'Content-Type': 'application/json; charset=utf-8',
+						Cookie: cookie
+					}
+				}
+			)
+
 		if(response.status !== 200) {
 			throw Error(`(${response.status}) - ${response.statusText}`)
 		}
 
 		//
-		// Init response.
+		// Handle valid records.
 		//
-		let report = {
-			value: [],
-			result: []
+		if(response.data.hasOwnProperty('valid')) {
+			result.valid += response.data.valid.length
+			result.processed += response.data.valid.length
 		}
 
 		//
-		// Scan statuses.
+		// Handle warnings.
 		//
-		let errors = 0
-		let signal = {}
-		for(let i = 0; i < response.data.result.length; i++) {
-			let ok = true
-			const status = response.data.result[i]
-			signal = {}
-			for(const property in status) {
-				if(status[property].status.code !== 0) {
-					ok = false
-					console.log(`[${response.data.value[i]._key}] (${status[property].status.code}) ${status[property].status.message}`)
-					signal[property] = JSON.parse(JSON.stringify(status[property]))
-					errors += 1
-				}
+		if(response.data.hasOwnProperty('warnings')) {
+			result.warnings += response.data.warnings.length
+			result.processed += response.data.warnings.length
+			for(const item of response.data.warnings) {
+				db.collection(kDb.collection_errors).save({ warning: item })
 			}
-
-			//
-			// Handle errors.
-			//
-			if(!ok) {
-				error_count += 1
-				report.value.push(response.data.value[i])
-				report.result.push(signal)
-				db.collection(kDb.collection_errors).save(report)
-			}
-
-			processed += 1
 		}
 
-		console.log(processed)
+		//
+		// Handle errors.
+		//
+		if(response.data.hasOwnProperty('errors')) {
+			result.errors += response.data.errors.length
+			result.processed += response.data.errors.length
+			for(const item of response.data.errors) {
+				db.collection(kDb.collection_errors).save({ error: item })
+			}
+		}
+
+		console.log(result)
 
 		//
 		// Get next page.
@@ -240,7 +270,7 @@ async function ValidateDocuments(db)
 
 	console.log(`Processed ${processed} terms.`)
 
-	return error_count															// ==>
+	return result																// ==>
 
 } // ValidateDocuments()
 
