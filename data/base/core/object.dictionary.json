@@ -19,7 +19,15 @@
 					"_code",
 					"_info"
 				]
-			}
+			},
+			"_mod": [
+				"_key",
+				"_code"
+			],
+			"_del": [
+				"_key",
+				"_code"
+			]
 		}
 	},
 	{
@@ -43,7 +51,16 @@
 					"_info",
 					"_data"
 				]
-			}
+			},
+			"_mod": [
+				"_key",
+				"_code"
+			],
+			"_del": [
+				"_key",
+				"_code",
+				"_data"
+			]
 		}
 	},
 	{
@@ -67,7 +84,16 @@
 					"_info",
 					"_rule"
 				]
-			}
+			},
+			"_mod": [
+				"_key",
+				"_code"
+			],
+			"_del": [
+				"_key",
+				"_code",
+				"_rule"
+			]
 		}
 	},
 	
@@ -97,14 +123,18 @@
 			"_computed": [
 				"_key"
 			],
-			"_immutable": [
+			"_mod": [
 				"_key",
 				"_from",
 				"_to",
 				"_predicate"
 			],
-			"_locked": [
-				"_key"
+			"_del": [
+				"_key",
+				"_from",
+				"_to",
+				"_predicate",
+				"_path"
 			]
 		}
 	}

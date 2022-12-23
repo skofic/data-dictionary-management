@@ -20,14 +20,12 @@ In [scalar](_scalar.md) variables, or at the [array](_array.md) and [set](_set.m
 - [Add](_add.md): Cannot add the variable to an existing record.
 - [Modify](_mod.md): Cannot modify the value once set.
 - [Delete](_del.md): Cannot remove the variable from the record.
-- [Computed](_man.md): The value will be automatically set at insert time.
 
 In the *scalar* section for [arrays](_scalar.md) and [sets](_set_scalar.md):
 
 - [Insert](_add.md): Cannot add elements to the list.
 - [Modify](_mod.md): Cannot modify element values.
 - [Delete](_del.md): Cannot remove elements from the list.
-- [Computed](_man.md): Elements are managed externally.
 
 These restrictions apply at the descriptor level, this means that they apply wherever these *properties* are stored. These attributes are also used in [data structure definitions](_rule.md), in that case we use a dictionary in which the *keys* are the *property names* and the *values* are the list of *restrictions*, that way it is possible to select to which properties these rules apply.
 
@@ -77,14 +75,14 @@ The above example describes a [scalar](_scalar.md) variable that cannot be [dele
 {
 	"_data": {
 		"_scalar": {
-			"_restrict": ["_add", "_mod", "_del", "_man"],
+			"_restrict": ["_add", "_mod", "_del"],
 			...
 		}
 	}
 }
 ```
 
-The above example describes a [scalar](_scalar.md) variable that cannot be [added](_add.md), its value cannot be [modified](_mod.md) and it also cannot be [deleted](_del.md). The [computed](_man.md) attribute in the list indicates that the variable is created automatically at insert time.
+The above example describes a [scalar](_scalar.md) variable that cannot be [added](_add.md), its value cannot be [modified](_mod.md) and it also cannot be [deleted](_del.md). Typically, such values are *set* or *computed* at insert time.
 
 ```json
 {

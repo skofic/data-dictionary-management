@@ -27,15 +27,26 @@
 				]
 			},
 			"_computed": [
+				"_key",
 				"_gid"
 			],
-			"_immutable": [
+			"_add": [
+				"_nid",
+				"_regexp"
+			],
+			"_mod": [
+				"_key",
 				"_nid",
 				"_lid",
-				"_gid"
+				"_gid",
+				"_regexp"
 			],
-			"_locked": [
-				"_gid"
+			"_del": [
+				"_key",
+				"_nid",
+				"_lid",
+				"_gid",
+				"_regexp"
 			]
 		}
 	},
@@ -57,7 +68,10 @@
 			"_scalar": {
 				"_class": "_class_reference",
 				"_type": "_type_string_key",
-				"_kind": ["_any-term"]
+				"_kind": ["_any-term"],
+				"_restrict": [
+					"_add", "_mod", "_del"
+				]
 			}
 		}
 	},
@@ -78,7 +92,10 @@
 			"_scalar": {
 				"_class": "_class_identifier",
 				"_type": "_type_string",
-				"_regexp": "^[a-zA-Z0-9-:.@+,=;$!*'%()]{1,254}$"
+				"_regexp": "^[a-zA-Z0-9-:.@+,=;$!*'%()]{1,254}$",
+				"_restrict": [
+					"_add", "_mod", "_del"
+				]
 			}
 		}
 	},
@@ -99,7 +116,10 @@
 			"_scalar": {
 				"_class": "_class_identifier",
 				"_type": "_type_string",
-				"_regexp": "^[a-zA-Z0-9-:.@+,=;$!*'%()_]{1,254}$"
+				"_regexp": "^[a-zA-Z0-9-:.@+,=;$!*'%()_]{1,254}$",
+				"_restrict": [
+					"_add", "_mod", "_del"
+				]
 			}
 		}
 	},
@@ -121,7 +141,10 @@
 				"_set_scalar": {
 					"_class": "_class_identifier",
 					"_set_type": "_type_string"
-				}
+				},
+				"_restrict": [
+					"_add", "_mod", "_del"
+				]
 			}
 		}
 	},
