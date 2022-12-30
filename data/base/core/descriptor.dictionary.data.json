@@ -616,7 +616,10 @@
 		},
 		"_data": {
 			"_scalar": {
-				"_type": "_type_string"
+				"_type": "_type_string",
+				"_restrict": [
+					"_add", "_mod"
+				]
 			}
 		}
 	},
@@ -644,7 +647,7 @@
 					]
 				},
 				"_restrict": [
-					"_add", "_mod", "_del"
+					"_add", "_mod"
 				]
 			}
 		}
@@ -669,7 +672,7 @@
 				"_type": "_type_object",
 				"_kind": ["_elements"],
 				"_restrict": [
-					"_add", "_mod", "_del"
+					"_add", "_mod"
 				]
 			}
 		},
@@ -727,7 +730,7 @@
 				"_type": "_type_object",
 				"_kind": ["_range"],
 				"_restrict": [
-					"_add", "_mod", "_del"
+					"_add", "_mod"
 				]
 			}
 		}

@@ -42,7 +42,10 @@
 					"_restrict": [
 						"_mod"
 					]
-				}
+				},
+				"_restrict": [
+					"_add", "_del"
+				]
 			}
 		}
 	}
