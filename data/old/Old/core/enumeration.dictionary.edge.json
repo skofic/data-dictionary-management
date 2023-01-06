@@ -1,0 +1,69 @@
+[
+	{
+		"_code": {
+			"_nid": "_predicate",
+			"_lid": "enum-of",
+			"_gid": "_predicate_enum-of",
+			"_aid": ["enum-of"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Enumeration of"},
+			"_definition": {"iso_639_3_eng": "The source node is a controlled vocabulary element of the destination node."},
+			"_description": {"iso_639_3_eng": "The value is a *reference* to a *document* in the form of the document's [handle](_id).\n\nThe document must be a *controlled vocabulary type*, this means that it must be a *node* in a graph *related* with the [enumeration](_predicate_enum-of) [predicate](_predicate), whose root must be among the elements of the set.\n\nWhen you select this [type](_type) you are *required* to include, in the descriptor definition, the data type [kind](_kind). This is a set of *controlled vocabulary types* or *term wildcards* to which the current descriptor's value must conform. Values defined by this type must belong to *at least one* element of the data [kind](_kind) set."}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_predicate",
+			"_lid": "property-of",
+			"_gid": "_predicate_property-of",
+			"_aid": ["property-of"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Property of"},
+			"_definition": {"iso_639_3_eng": "The source node is a property of the destination node."},
+			"_description": {"iso_639_3_eng": "This predicate is used in [object](_type_object) graphs. When two nodes are related with this predicate, it means that the *source* node is a *property* of the *destination* node. This means that the source node should be considered a *property* of the *data structure* defined by the *destination* node. This also implies that the source node represents a *descriptor*."}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_predicate",
+			"_lid": "field-of",
+			"_gid": "_predicate_field-of",
+			"_aid": ["field-of"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Field of"},
+			"_definition": {"iso_639_3_eng": "The source node is a field of the destination node."},
+			"_description": {"iso_639_3_eng": "This [predicate](_predicate.md) can be used to create graphs that can be used in *user interfaces* as *forms* or *tables of content*. The *field-of* predicate indicates that the [source](_from.md) node is a *field of*, or an *element* of the [object](_to.md) node. This denomination is *general*, it *does not* indicate a *precise function* such as [enumeration](_predicate_enum-of.md) or [property](_predicate_property-of.md), it indicates a *membership* that is *general* in nature."}
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "_predicate",
+			"_lid": "section-of",
+			"_gid": "_predicate_section-of",
+			"_aid": ["section-of"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Section of"},
+			"_definition": {"iso_639_3_eng": "The source node is a section of the destination node."},
+			"_description": {"iso_639_3_eng": "This predicate involves the concept of *section*, a section is a *category* or *heading* that *groups* a *set* of *choices*. For instance, while the [enumeration](_predicate_enum-of) or [property](_predicate_property-of) predicates indicate that the source node is either a valid *controlled vocabulary choice*, or a *descriptor* belonging to the *destination* node, this predicate would indicate that the source node is to be used as a *container* or *disclosure list*. This predicate is used to *group* controlled vocabulary elements or sets of schema descriptors into sections that will be presented as disclosute lists in the user interface when showing forms or lists."}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_predicate",
+			"_lid": "bridge-of",
+			"_gid": "_predicate_bridge-of",
+			"_aid": ["bridge-of"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Bridge of"},
+			"_definition": {"iso_639_3_eng": "The source node is a bridge to the destination node."},
+			"_description": {"iso_639_3_eng": "This predicate indicates that the *source* node acts as a *bridge* to the *destination* node. This means that the *source* of such relationship should be *hidden* or *skipped* when *traversing* the *path*. Edges with this predicate are found in two scenarios. To allow a *new enumeration root* to *take advantage* of the network belonging to an *existing controlled vocabulary root*, or to *enforce* the *selection* of a *preferred* or *default* element different than the search target."},
+			"_examples": {"iso_639_3_eng": "Suppose you have a controlled vocabulary that is exhaustive and has a large number of elements, you want to create a new controlled vocabulary that shares most, but not all the elements of the first enumeration. You normally would need to duplicate the graph nodes and edges and connect them to the new root. By making the old root a bridge to the new root and by adding the new root to the *path* to all relevant edges, it will appear that all the relevant elements belong directly to the new root.\n\nSuppose you have two controlled vocabularies that classify the same information, but enumeration A is partial, while enumeration B is exhaustive. If you want to enforce the use of enumeration B, even passing through enumeration A, you can connect controlled vocabulary A elements with the bridge predicate and connect the related enumeration B elements wuth the *enumeration* predicate. This way when you search for an element in enumeration A, you will get back the corresponding element of enumeration B."}
+		}
+	}
+]

@@ -15,7 +15,10 @@
 			"_scalar": {
 				"_class": "_class_category",
 				"_type": "_type_string_enum",
-				"_kind": ["_predicate"]
+				"_kind": ["_predicate"],
+				"_restrict": [
+					"_add", "_mod", "_del"
+				]
 			}
 		}
 	},
@@ -35,8 +38,14 @@
 			"_set": {
 				"_set_scalar": {
 					"_class": "_class_reference",
-					"_set_type": "_type_string_handle"
-				}
+					"_set_type": "_type_string_handle",
+					"_restrict": [
+						"_mod"
+					]
+				},
+				"_restrict": [
+					"_add", "_del"
+				]
 			}
 		}
 	}

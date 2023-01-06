@@ -24,6 +24,10 @@
 					"_title",
 					"_definition",
 					"_description"
+				],
+				"_del": [
+					"_title",
+					"_definition"
 				]
 			}
 		}

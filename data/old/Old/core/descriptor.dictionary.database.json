@@ -13,7 +13,10 @@
 		},
 		"_data": {
 			"_scalar": {
-				"_type": "_type_string"
+				"_type": "_type_string",
+				"_restrict": [
+					"_add", "_mod", "_del"
+				]
 			}
 		}
 	},
@@ -31,7 +34,10 @@
 		},
 		"_data": {
 			"_scalar": {
-				"_type": "_type_string"
+				"_type": "_type_string",
+				"_restrict": [
+					"_add", "_mod", "_del"
+				]
 			}
 		}
 	},
@@ -50,7 +56,10 @@
 		"_data": {
 			"_scalar": {
 				"_type": "_type_string",
-				"_regexp": "^[a-zA-Z0-9-:.@+,=;$!*'%()_]{1,254}$"
+				"_regexp": "^[a-zA-Z0-9-:.@+,=;$!*'%()_]{1,254}$",
+				"_restrict": [
+					"_add", "_mod", "_del"
+				]
 			}
 		}
 	},
@@ -70,7 +79,10 @@
 		"_data": {
 			"_scalar": {
 				"_class": "_class_reference",
-				"_type": "_type_string_handle"
+				"_type": "_type_string_handle",
+				"_restrict": [
+					"_add", "_mod", "_del"
+				]
 			}
 		}
 	},
@@ -89,7 +101,10 @@
 		"_data": {
 			"_scalar": {
 				"_class": "_class_reference",
-				"_type": "_type_string_handle"
+				"_type": "_type_string_handle",
+				"_restrict": [
+					"_add", "_mod", "_del"
+				]
 			}
 		}
 	}

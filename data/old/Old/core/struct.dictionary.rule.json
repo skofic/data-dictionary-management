@@ -24,6 +24,24 @@
 		"_path": ["_rule"]
 	},
 	{
+		"_from": "_add",
+		"_to": "_rule",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_rule"]
+	},
+	{
+		"_from": "_mod",
+		"_to": "_rule",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_rule"]
+	},
+	{
+		"_from": "_del",
+		"_to": "_rule",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_rule"]
+	},
+	{
 		"_from": "_default-value",
 		"_to": "_rule",
 		"_predicate": "_predicate_property-of",

@@ -1,0 +1,44 @@
+[
+	{
+		"_from": "_nid",
+		"_to": "_code",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_code"]
+	},
+	{
+		"_from": "_lid",
+		"_to": "_code",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_code"]
+	},
+	{
+		"_from": "_gid",
+		"_to": "_code",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_code"]
+	},
+	{
+		"_from": "_aid",
+		"_to": "_code",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_code"]
+	},
+	{
+		"_from": "_pid",
+		"_to": "_code",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_code"]
+	},
+	{
+		"_from": "_name",
+		"_to": "_code",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_code"]
+	},
+	{
+		"_from": "_regexp",
+		"_to": "_code",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_code"]
+	}
+]

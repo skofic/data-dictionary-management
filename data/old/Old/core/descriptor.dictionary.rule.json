@@ -43,7 +43,10 @@
 		"_data": {
 			"_scalar": {
 				"_type": "_type_object",
-				"_kind": ["_selection-descriptors"]
+				"_kind": ["_selection-descriptors"],
+				"_restrict": [
+					"_add", "_mod"
+				]
 			}
 		}
 	},
@@ -84,7 +87,10 @@
 				"_set_scalar": {
 					"_class": "_class_reference",
 					"_set_type": "_type_string_key",
-					"_kind": ["_any-descriptor"]
+					"_kind": ["_any-descriptor"],
+					"_restrict": [
+						"_add", "_mod"
+					]
 				}
 			}
 		}
@@ -100,6 +106,75 @@
 			"_title": {"iso_639_3_eng": "Computed properties"},
 			"_definition": {"iso_639_3_eng": "List of computed properties."},
 			"_description": {"iso_639_3_eng": "This field contains the list of *properties* that are automatically *computed*, their value is *calculated* before *storing* the *record*."}
+		},
+		"_data": {
+			"_set": {
+				"_set_scalar": {
+					"_class": "_class_reference",
+					"_set_type": "_type_string_key",
+					"_kind": ["_any-descriptor"]
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "",
+			"_lid": "add",
+			"_gid": "_add",
+			"_aid": ["add"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Add"},
+			"_definition": {"iso_639_3_eng": "Add or insert."},
+			"_description": {"iso_639_3_eng": "This term represents both a *controlled vocabulary option* of the [restrict](_restrict.md) property, when used within a [data section](_data.md) of a *descriptor*, or a *property* of a *structure definition*, when used in the [rule](_rule.md) section of an *object structure definition* term.\n\nIn both cases it will *restrict* the *action* of *inserting* a *variable* in a *record*, *adding* a *property* to a *structure*, or *adding* an *element* to a *list*.\n\nWhen used as an *option* of the [restrict](_restrict.md) field in a *descriptor's* [data section](_data.md), it indicates that the *value* of the *property* can only be set at insert time, and cannot be added if the value was missing at insert time.\n\nWhen used as a *field* in the [rule section](_rule.md) of an *object structure definition*, it will contain the *selection* of *properties* that can only be set at insert time, and that cannot be added after.\n\nThis is an example of a term that is used both as an enumeration and as a descriptor."},
+			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_data\": {\n\t\t\"_scalar\": {\n\t\t\t\"_restrict\": [\"_add\"],\n\t\t\t...\n\t\t}\n\t}\n}\n```\n\nThe above example describes a [scalar](_scalar.md) variable that can only be set at insert time, once the record has been stored, it will *not* be *possible* to *add* this *property*. It is, however, *possible* to [modify](_mod.md) its *value*, or [delete](_del.md) the *variable*.\n\n```json\n{\n\t\"_data\": {\n\t\t\"_set\": {\n\t\t\t\"_restrict\": [\"_add\"],\n\t\t\t\"_set_scalar\": {\n\t\t\t\t...\n\t\t\t}\n\t\t}\n\t}\n}\n```\n\nThe example above describes a [set](_set.md) variable that *cannot* be *added* to the *record* once the latter has been inserted. It is *possible*, however, to [replace](_mod.md) its *value* or [delete](_del.md) the *variable*. The list *elements* can be added, modified or deleted.\n\n```json\n{\n\t\"_data\": {\n\t\t\"_set\": {\n\t\t\t\"_set_scalar\": {\n\t\t\t\t\"_restrict\": [\"_add\"],\n\t\t\t\t...\n\t\t\t}\n\t\t}\n\t}\n}\n```\n\nThe example above describes a [set](_set.md) variable to which one *cannot add elements* once it has been inserted. It is possible, however, to [modify](_mod.md) and [delete](_del.md) the list *elements*. The *variable* can be *added* to an existing record, [replaced](_mod.md) with another value and [deleted](_del.md).\n\n```json\n{\n\t\"_rule\": {\n\t\t\"_add\": {\n\t\t\t\"property1\",\n\t\t\t\"property2\",\n\t\t\t\"property3\"\n\t\t},\n\t\t...\n\t}\n}\n```\n\nThe example above describes an *object structure* to which `property1`, `property2`, and `property3` *cannot* be *added* after its record has been *inserted*. The property *values*, however, can be [modified](_mod.md) and [deleted](_del.md)."}
+		},
+		"_data": {
+			"_set": {
+				"_set_scalar": {
+					"_class": "_class_reference",
+					"_set_type": "_type_string_key",
+					"_kind": ["_any-descriptor"]
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "",
+			"_lid": "mod",
+			"_gid": "_mod",
+			"_aid": ["mod"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Modify"},
+			"_definition": {"iso_639_3_eng": "Change or modify."},
+			"_description": {"iso_639_3_eng": "This term represents both a *controlled vocabulary option* of the [restrict](_restrict.md) property, when used within a [data section](_data.md) of a *descriptor*, or a *property* of a *structure definition*, when used in the [rule](_rule.md) section of an *object structure definition* term.\n\nIn both cases it will *restrict* the *action* of *modifying* the *value* of a variable, *modifying* the *contents* of a *structure*, or *modifying* the *elements* of a *list*.\n\nWhen used as an *option* of the [restrict](_restrict.md) field in a *descriptor's* [data section](_data.md), it indicates that the *value* of the *property* cannot be modified once set.\n\nWhen used as a *field* in the [rule section](_rule.md) of an *object structure definition*, it will contain the *selection* of *properties* whose values cannot be modified once set.\n\nThis is an example of a term that is used both as an enumeration and as a descriptor."},
+			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_data\": {\n\t\t\"_scalar\": {\n\t\t\t\"_restrict\": [\"_mod\"],\n\t\t\t...\n\t\t}\n\t}\n}\n```\n\nThe above example describes a [scalar](_scalar.md) variable whose *value*, once set, *cannot* be *modified*. It is, however, *possible* to [add](_add.md) or, or [delete](_del.md) the *property*.\n\n```json\n{\n\t\"_data\": {\n\t\t\"_set\": {\n\t\t\t\"_restrict\": [\"_mod\"],\n\t\t\t\"_set_scalar\": {\n\t\t\t\t...\n\t\t\t}\n\t\t}\n\t}\n}\n```\n\nThe example above describes a [set](_set.md) variable whose *value*, once set, *cannot* be *modified*. It is *possible*, however, to [add](_add.md) or [delete](_del.md) the *variable*. The list *elements* can be added, modified or deleted.\n\n```json\n{\n\t\"_data\": {\n\t\t\"_set\": {\n\t\t\t\"_set_scalar\": {\n\t\t\t\t\"_restrict\": [\"_mod\"],\n\t\t\t\t...\n\t\t\t}\n\t\t}\n\t}\n}\n```\n\nThe example above describes a [set](_set.md) variable whose element values cannot be modified. It is possible, however, to [add](_add.md) and [delete](_del.md) list *elements*. The *variable* can be [added](_add.md) to an existing record, *replaced* with another value and [deleted](_del.md).\n\n```json\n{\n\t\"_rule\": {\n\t\t\"_mod\": {\n\t\t\t\"property1\",\n\t\t\t\"property2\",\n\t\t\t\"property3\"\n\t\t},\n\t\t...\n\t}\n}\n```\n\nThe example above describes an *object structure* in which the value of `property1`, `property2`, and `property3` *cannot* be *modified*. These *properties*, however, can be [added](_add.md) and [deleted](_del.md)."}
+		},
+		"_data": {
+			"_set": {
+				"_set_scalar": {
+					"_class": "_class_reference",
+					"_set_type": "_type_string_key",
+					"_kind": ["_any-descriptor"]
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "",
+			"_lid": "del",
+			"_gid": "_del",
+			"_aid": ["del"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Delete"},
+			"_definition": {"iso_639_3_eng": "Delete or remove."},
+			"_description": {"iso_639_3_eng": "This term represents both a *controlled vocabulary option* of the [restrict](_restrict.md) property, when used within a [data section](_data.md) of a *descriptor*, or a *property* of a *structure definition*, when used in the [rule](_rule.md) section of an *object structure definition* term.\n\nIn both cases it will *restrict* the *action* of *removing* a *variable* from a *record*, *removing* a *property* from a *structure*, or *deleting* an *element* from a *list*.\n\nWhen used as an *option* of the [restrict](_restrict.md) field in a *descriptor's* [data section](_data.md), it indicates that the *value* of the *property* cannot be deleted.\n\nWhen used as a *field* in the [rule section](_rule.md) of an *object structure definition*, it will contain the *selection* of *properties* whose values cannot be deleted.\n\nThis is an example of a term that is used both as an enumeration and as a descriptor."},
+			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_data\": {\n\t\t\"_scalar\": {\n\t\t\t\"_restrict\": [\"_del\"],\n\t\t\t...\n\t\t}\n\t}\n}\n```\n\nThe above example describes a [scalar](_scalar.md) variable that, once set, *cannot* be *deleted*. It is, however, *possible* to [add](_add.md) it or, or [modify](_mod.md) its *value*.\n\n```json\n{\n\t\"_data\": {\n\t\t\"_set\": {\n\t\t\t\"_restrict\": [\"_del\"],\n\t\t\t\"_set_scalar\": {\n\t\t\t\t...\n\t\t\t}\n\t\t}\n\t}\n}\n```\n\nThe example above describes a [set](_set.md) variable that, once set, *cannot* be *deleted*. It is *possible*, however, to [add](_add.md) the *variable* or [replace](_mod.md) its *value*. The list *elements* can be added, modified or deleted.\n\n```json\n{\n\t\"_data\": {\n\t\t\"_set\": {\n\t\t\t\"_set_scalar\": {\n\t\t\t\t\"_restrict\": [\"_del\"],\n\t\t\t\t...\n\t\t\t}\n\t\t}\n\t}\n}\n```\n\nThe example above describes a [set](_set.md) variable whose *elements* cannot be *deleted*. It is possible, however, to [add](_add.md) and [modify](_mod.md) list *elements*. The *variable* can be [added](_add.md) to an existing record, [replaced](_mod.md) with another value and *deleted*.\n\n```json\n{\n\t\"_rule\": {\n\t\t\"_del\": {\n\t\t\t\"property1\",\n\t\t\t\"property2\",\n\t\t\t\"property3\"\n\t\t},\n\t\t...\n\t}\n}\n```\n\nThe example above describes an *object structure* in which the value of `property1`, `property2`, and `property3` *cannot* be *deleted*. These *properties*, however, can be [added](_add.md) and their values [modified](_mod.md)."}
 		},
 		"_data": {
 			"_set": {
