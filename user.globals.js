@@ -17,6 +17,6 @@
  */
 
 const fs = require('fs');
-const user = JSON.parse(fs.readFileSync('dbCredentials.skobo.json'))
+const user = JSON.parse(fs.readFileSync('dbCredentials.localhost.json'))
 
 module.exports = { user }
