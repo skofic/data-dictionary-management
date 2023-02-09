@@ -13,9 +13,9 @@
 			"_description": {"iso_639_3_eng": "A measure used to quantify genetic diversity in a population. Can be used for comparisons of populations when analysisng the same loci across all compared populations."}
 		},
 		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["gent"],
 			"_scalar": {
-				"_class": "_class_quantity",
-				"_domain": ["gent"],
 				"_type": "_type_number",
 				"_unit_name": "Percentage",
 				"_valid-range": {
@@ -39,9 +39,9 @@
 			"_description": {"iso_639_3_eng": "The expected heterozygosity is known also as the gene diversity of a locus. It is a fundamental measure of genetic variation in a population and explains the proportion of heterozygous genotypes expected under Hardy-Weinberg equilibrium."}
 		},
 		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["gent"],
 			"_scalar": {
-				"_class": "_class_quantity",
-				"_domain": ["gent"],
 				"_type": "_type_number"
 			}
 		}
@@ -60,9 +60,9 @@
 			"_description": {"iso_639_3_eng": "Nucleotide diversity measures the degree of polymorphism within a population and is defined as the average number of nucleotide differences per site between any two DNA sequences chosen randomly from the selected population. This parameter is a measure of genetic variation and is similar to expected heterozygosity."}
 		},
 		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["gent"],
 			"_scalar": {
-				"_class": "_class_quantity",
-				"_domain": ["gent"],
 				"_type": "_type_number"
 			}
 		}
@@ -81,9 +81,9 @@
 			"_description": {"iso_639_3_eng": "The molecular diversity partition is defined by using molecular markers. The analysis (AMOVA) detects differentiation and clustering between population."}
 		},
 		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["gent"],
 			"_scalar": {
-				"_class": "_class_quantity",
-				"_domain": ["gent"],
 				"_type": "_type_number"
 			}
 		}
@@ -102,9 +102,9 @@
 			"_description": {"iso_639_3_eng": "The molecular diversity partition is defined by using molecular markers. The analysis (AMOVA) detects differentiation and clustering between population."}
 		},
 		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["gent"],
 			"_scalar": {
-				"_class": "_class_quantity",
-				"_domain": ["gent"],
 				"_type": "_type_number"
 			}
 		}
@@ -123,9 +123,9 @@
 			"_description": {"iso_639_3_eng": "Effective population size (Ne) defines the size of an ideal population that would result in the same level of inbreeding or genetic drift as that of the population under study or, in a simpler manner, it can be viewed as the number of individuals in a population who equally contribute offspring to the next generation. Ne is so important in conservation genetics because it quantifies the rate at which a population loses genetic variation, therefore, such measure is used for evaluating the state and viability of populations, both in the short and long period."}
 		},
 		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["gent"],
 			"_scalar": {
-				"_class": "_class_quantity",
-				"_domain": ["gent"],
 				"_type": "_type_integer"
 			}
 		}
@@ -144,10 +144,10 @@
 			"_description": {"iso_639_3_eng": "Genetic differentiation of a population is determined by the accumulation of independent genetic changes (mutations) through time. For instance a population living in an ecologically distinct environment can exhibit genetic divergence from the other studied populations."}
 		},
 		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["gent"],
 			"_array": {
 				"_scalar": {
-					"_class": "_class_quantity",
-					"_domain": ["gent"],
 					"_type": "_type_number"
 				}
 			}
@@ -166,9 +166,9 @@
 			"_definition": {"iso_639_3_eng": "Number of clonal individuals divided by the total number of individuals of the population."}
 		},
 		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["gent"],
 			"_scalar": {
-				"_class": "_class_quantity",
-				"_domain": ["gent"],
 				"_type": "_type_number"
 			}
 		}
@@ -186,10 +186,10 @@
 			"_definition": {"iso_639_3_eng": "Surface covered by each single clone."}
 		},
 		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["gent"],
 			"_array": {
 				"_scalar": {
-					"_class": "_class_quantity",
-					"_domain": ["gent"],
 					"_type": "_type_number"
 				}
 			}
@@ -209,10 +209,10 @@
 			"_description": {"iso_639_3_eng": "Admixture occurs when individuals from two or more previously isolated populations interbreed. The previously isolated populations are referred to as ancestral or parental and the newly formed population is referred to as admixed."}
 		},
 		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["gent"],
 			"_array": {
 				"_scalar": {
-					"_class": "_class_quantity",
-					"_domain": ["gent"],
 					"_type": "_type_number"
 				}
 			}
@@ -232,9 +232,9 @@
 			"_description": {"iso_639_3_eng": "Inbreeding is the production of offspring from the mating or breeding of individuals or organisms that are closely related genetically."}
 		},
 		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["gent"],
 			"_scalar": {
-				"_class": "_class_quantity",
-				"_domain": ["gent"],
 				"_type": "_type_number"
 			}
 		}
@@ -251,9 +251,9 @@
 			"_title": {"iso_639_3_eng": "Proportion of reproductive trees"}
 		},
 		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["gent"],
 			"_scalar": {
-				"_class": "_class_quantity",
-				"_domain": ["gent"],
 				"_type": "_type_number"
 			}
 		}
@@ -272,9 +272,9 @@
 			"_description": {"iso_639_3_eng": "In population genetics, genetic load or genetic burden is a measure of the cost of lost alleles due to selection (selectional load) or mutation (mutational load). It is a value in the range 0 < L < 1, where 0 represents no load."}
 		},
 		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["gent"],
 			"_scalar": {
-				"_class": "_class_quantity",
-				"_domain": ["gent"],
 				"_type": "_type_number"
 			}
 		}
@@ -293,9 +293,9 @@
 			"_description": {"iso_639_3_eng": "Tajima's D is a statistical test created to distinguish between a DNA sequence evolving randomly (\"neutrally\") versus one evolving under a non-random process, including directional selection or balancing selection, demographic expansion or contraction, genetic hitchhiking, or introgression."}
 		},
 		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["gent"],
 			"_scalar": {
-				"_class": "_class_quantity",
-				"_domain": ["gent"],
 				"_type": "_type_number"
 			}
 		}
@@ -313,9 +313,9 @@
 			"_definition": {"iso_639_3_eng": "Number of individuals used to calculate the measurement."}
 		},
 		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["gent"],
 			"_scalar": {
-				"_class": "_class_quantity",
-				"_domain": ["gent"],
 				"_type": "_type_integer"
 			}
 		}
@@ -333,9 +333,9 @@
 			"_definition": {"iso_639_3_eng": "Inter-individual diversity within populations."}
 		},
 		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["gent"],
 			"_scalar": {
-				"_class": "_class_quantity",
-				"_domain": ["gent"],
 				"_type": "_type_number"
 			}
 		}
@@ -353,9 +353,9 @@
 			"_definition": {"iso_639_3_eng": "Inter-individual diversity within populations corrected by sample size."}
 		},
 		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["gent"],
 			"_scalar": {
-				"_class": "_class_quantity",
-				"_domain": ["gent"],
 				"_type": "_type_number"
 			}
 		}

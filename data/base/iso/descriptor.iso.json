@@ -10,8 +10,8 @@
 			"_title": {"iso_639_3_eng": "Language scope"}
 		},
 		"_data": {
+			"_class": "_class_category",
 			"_scalar": {
-				"_class": "_class_category",
 				"_type": "_type_string_enum",
 				"_kind": ["iso_639_scope"],
 				"_regexp": "^[IMS]$"
@@ -29,8 +29,8 @@
 			"_title": {"iso_639_3_eng": "Language scope"}
 		},
 		"_data": {
+			"_class": "_class_category",
 			"_scalar": {
-				"_class": "_class_category",
 				"_type": "_type_string_enum",
 				"_kind": ["iso_639_type"],
 				"_regexp": "^[ACEHLS]$"
@@ -50,8 +50,8 @@
 			"_description": {"iso_639_3_eng": "*Alpha-2* codes (for codes composed of 2 letters of the [ISO basic Latin alphabet](https://en.wikipedia.org/wiki/ISO_basic_Latin_alphabet \"ISO basic Latin alphabet\")) are used in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1 \"ISO 639-1\"). When codes for a wider range of languages were desired, more than 2 letter combinations could cover (a maximum of 262 = 676), [ISO 639-2](https://en.wikipedia.org/wiki/ISO_639-2 \"ISO 639-2\") was developed using Alpha-3 codes."}
 		},
 		"_data": {
+			"_class": "_class_category",
 			"_scalar": {
-				"_class": "_class_category",
 				"_type": "_type_string",
 				"_regexp": "^[a-z]{2}$"
 			}
@@ -70,8 +70,8 @@
 			"_description": {"iso_639_3_eng": "*Alpha-3* codes (for codes composed of 3 letters of the [ISO basic Latin alphabet](https://en.wikipedia.org/wiki/ISO_basic_Latin_alphabet \"ISO basic Latin alphabet\")) are used in [ISO 639-2](https://en.wikipedia.org/wiki/ISO_639-2 \"ISO 639-2\"), [ISO 639-3](https://en.wikipedia.org/wiki/ISO_639-3 \"ISO 639-3\"), and [ISO 639-5](https://en.wikipedia.org/wiki/ISO_639-5 \"ISO 639-5\"). The number of languages and language groups that can be so represented is 263 = 17,576."}
 		},
 		"_data": {
+			"_class": "_class_category",
 			"_scalar": {
-				"_class": "_class_category",
 				"_type": "_type_string",
 				"_regexp": "^[a-z]{3}$"
 			}
@@ -90,8 +90,8 @@
 			"_description": {"iso_639_3_eng": "Bibliographic codes are *legacy* codes based on language *names in English*, as opposed to *Terminologic* codes which are the *preferred codes* based on *native language names*, romanized if needed."}
 		},
 		"_data": {
+			"_class": "_class_category",
 			"_scalar": {
-				"_class": "_class_category",
 				"_type": "_type_string",
 				"_regexp": "^[a-z]{3}$"
 			}
@@ -163,8 +163,8 @@
 			"_description": {"iso_639_3_eng": "Two-letter country codes which are the most widely used of the three, and used most prominently for the Internet&apos;s country code top-level domains (with a few exceptions)."}
 		},
 		"_data": {
+			"_class": "_class_category",
 			"_scalar": {
-				"_class": "_class_category",
 				"_type": "_type_string",
 				"_regexp": "^[A-Z]{2}$"
 			}
@@ -183,8 +183,8 @@
 			"_description": {"iso_639_3_eng": "Three-letter country codes which allow a better visual association between the codes and the country names than the alpha-2 codes."}
 		},
 		"_data": {
+			"_class": "_class_category",
 			"_scalar": {
-				"_class": "_class_category",
 				"_type": "_type_string",
 				"_regexp": "^[A-Z]{3}$"
 			}
@@ -203,8 +203,8 @@
 			"_description": {"iso_639_3_eng": "Three-digit country codes which are identical to those developed and maintained by the United Nations Statistics Division, with the advantage of script (writing system) independence, and hence useful for people or systems using non-Latin scripts."}
 		},
 		"_data": {
+			"_class": "_class_category",
 			"_scalar": {
-				"_class": "_class_category",
 				"_type": "_type_string",
 				"_regexp": "^[0-9]{3}$"
 			}
@@ -275,8 +275,8 @@
 			"_definition": {"iso_639_3_eng": "Type of subset of the country."}
 		},
 		"_data": {
+			"_class": "_class_category",
 			"_scalar": {
-				"_class": "_class_category",
 				"_type": "_type_string_enum",
 				"_kind": ["iso_3166_2_type"]
 			}
@@ -296,8 +296,8 @@
 			"_description": {"iso_639_3_eng": "Each former country name in ISO 3166-3 is assigned a four-letter alphabetic code. The first two letters are the [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 \"ISO 3166-1 alpha-2\") code of the former country, while the last two letters are allocated according to the following rules:[[2]](https://en.wikipedia.org/wiki/ISO_3166-3#cite_note-2)\n\n- If the country changed its name, the new ISO 3166-1 alpha-2 code is used, or the special code AA is used if its alpha-2 code was not changed.\n- If the country merged into an existing country, the ISO 3166-1 alpha-2 code of this country is used.\n- If the country was divided into several parts, the special code HH is used to indicate that there is no single successor country, with the exception of [Serbia and Montenegro](https://en.wikipedia.org/wiki/Serbia_and_Montenegro \"Serbia and Montenegro\"), for which XX is used to avoid duplicate use of the same ISO 3166-3 code, as the alpha-2 code CS had twice been deleted from ISO 3166-1, the first time due to the split of Czechoslovakia and the second time due to the split of Serbia and Montenegro."}
 		},
 		"_data": {
+			"_class": "_class_category",
 			"_scalar": {
-				"_class": "_class_category",
 				"_type": "_type_string",
 				"_regexp": "^[A-Z]{2,4}$"
 			}
@@ -315,8 +315,8 @@
 			"_definition": {"iso_639_3_eng": "Date of withdrawal from ISO 3166-1."}
 		},
 		"_data": {
+			"_class": "_class_time",
 			"_scalar": {
-				"_class": "_class_time",
 				"_type": "_type_string",
 				"_regexp": "^[0-9]{4}(|-[0-9]{2}){2}$"
 			}
@@ -335,8 +335,8 @@
 			"_definition": {"iso_639_3_eng": "Three letter code of the currency."}
 		},
 		"_data": {
+			"_class": "_class_category",
 			"_scalar": {
-				"_class": "_class_category",
 				"_type": "_type_string",
 				"_regexp": "^[A-Z]{3}$"
 			}
@@ -355,8 +355,8 @@
 			"_description": {"iso_639_3_eng": "[ISO 4217]([ISO 4217 - Wikipedia](https://en.wikipedia.org/wiki/ISO_4217)) also assigns a three-digit numeric code to each currency, much like the three-digit numeric code assigned to each country by [ISO 3166](https://en.wikipedia.org/wiki/ISO_3166 \"ISO 3166\"). The numeric code assigned to a currency by ISO 4217 is usually the same as the numeric code assigned to the corresponding country by [ISO 3166-1](https://en.wikipedia.org/wiki/ISO_3166-1 \"ISO 3166-1\"). For example, USD ([United States dollar](https://en.wikipedia.org/wiki/United_States_dollar \"United States dollar\")) has numeric code 840 which is also the numeric code for the US (United States)."}
 		},
 		"_data": {
+			"_class": "_class_category",
 			"_scalar": {
-				"_class": "_class_category",
 				"_type": "_type_string",
 				"_regexp": "^[0-9]{3}$"
 			}
@@ -376,8 +376,8 @@
 			"_description": {"iso_639_3_eng": "[ISO 15924]([ISO 15924 - Wikipedia](https://en.wikipedia.org/wiki/ISO_15924)), is an [international standard](https://en.wikipedia.org/wiki/ISO_standard \"ISO standard\") defining codes for [writing systems](https://en.wikipedia.org/wiki/Writing_systems \"Writing systems\") or *scripts* (a *set of graphic characters used for the written form of one or more languages*). Each script is given both a four-letter code and a numeric code."}
 		},
 		"_data": {
+			"_class": "_class_category",
 			"_scalar": {
-				"_class": "_class_category",
 				"_type": "_type_string",
 				"_regexp": "^[A-Z]{1}[a-z]{3}$"
 			}
@@ -396,8 +396,8 @@
 			"_description": {"iso_639_3_eng": "[ISO 15924]([ISO 15924 - Wikipedia](https://en.wikipedia.org/wiki/ISO_15924)), is an [international standard](https://en.wikipedia.org/wiki/ISO_standard \"ISO standard\") defining codes for [writing systems](https://en.wikipedia.org/wiki/Writing_systems \"Writing systems\") or *scripts* (a *set of graphic characters used for the written form of one or more languages*). Each script is given both a four-letter code and a three character numeric code."}
 		},
 		"_data": {
+			"_class": "_class_category",
 			"_scalar": {
-				"_class": "_class_category",
 				"_type": "_type_string",
 				"_regexp": "^[0-9]{3}$"
 			}

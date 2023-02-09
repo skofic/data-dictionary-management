@@ -46,8 +46,8 @@
 			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_nid\": \"iso_3166_1\",\n\t\"_lid\": \"ITA\",\n\t\"_gid\": \"iso_3166_1_ITA\",\n\t\"_aid\": [\"ITA\", \"IT\"],\n\t\"_name\": \"Italia\",\n\t\"_regexp\": \"[A-Z]{3,3}\"\n}\n```\n\nThis term, with [global identifier](_gid.md) `iso_3166_1_ITA`, represents the *ISO country code* for *Italy*, it has a [local identifier](_lid.md) `ITA` and a *namespace* `iso_3166_1`. This *namespace* is the concatenation of the following *namespaces*:\n\n- `iso`: A term that represents the \"*International Standards Organisation*\" (ISO) *root namespace*.\n- `3166`: A term, that has the `iso` term as its *namespace*, which represents the \"*codes for the representation of names of countries and their subdivisions*\".\n- `1`: A term, that has the `iso_3166` term as its *namespace*, which represents \"*Part 1: Country codes*\".\n\n\n\n```json\n{\n\t\"_lid\": \"iso\",\n\t\"_gid\": \"iso\",\n\t\"_aid\": [\"iso\"]\n}\n```\n\nThis term has no *namespace*, it represents the *top level namespace*, `iso`, of the previous term."}
 		},
 		"_data": {
+			"_class": "_class_reference",
 			"_scalar": {
-				"_class": "_class_reference",
 				"_type": "_type_string_key",
 				"_kind": ["_any-term"]
 			}
@@ -67,8 +67,8 @@
 			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_nid\": \"iso_3166_1\",\n\t\"_lid\": \"ITA\",\n\t\"_gid\": \"iso_3166_1_ITA\",\n\t\"_aid\": [\"ITA\", \"IT\"],\n\t\"_name\": \"Italia\",\n\t\"_regexp\": \"[A-Z]{3,3}\"\n}\n```\n`ITA` is the *local identifier* of this term, that *concatenated* with `iso_3166_1`, which is the [namespace](_nid.md), constitutes `ita_3166_1_ITA`, which is the [global identifier](_gid.md) of this term.\n\n\n\n```json\n{\n\t\"_lid\": \"iso\",\n\t\"_gid\": \"iso\",\n\t\"_aid\": [\"iso\"]\n}\n```\nThis snippet shows the code definition of the *ISO* namespace. As you can see,there is no [namespace](_nid.md) and the [global identifier](_gid.md) has the same value as the *local identifier*."}
 		},
 		"_data": {
+			"_class": "_class_identifier",
 			"_scalar": {
-				"_class": "_class_identifier",
 				"_type": "_type_string",
 				"_regexp": "^[a-zA-Z0-9-:.@+,=;$!*'%()]{1,254}$"
 			}
@@ -88,8 +88,8 @@
 			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_nid\": \"iso_3166_1\",\n\t\"_lid\": \"ITA\",\n\t\"_gid\": \"iso_3166_1_ITA\",\n\t\"_aid\": [\"ITA\", \"IT\"],\n\t\"_name\": \"Italia\",\n\t\"_regexp\": \"[A-Z]{3,3}\"\n}\n```\n\n`iso_3166_1_ITA` is the *global identifier* of the above term, it is constituted by the *concatenation* of `iso_3166_1` [namespace](_nid.md) and the `ITA` [local identifier](_lid.md), separated bi an underscore (`_`) token.\n\n\n\n```json\n{\n\t\"_lid\": \"iso\",\n\t\"_gid\": \"iso\",\n\t\"_aid\": [\"iso\"]\n}\n```\n\nThis snippet shows the code definition of the *ISO* top level namespace, the term has no [namespace](_nid.md), the [local](_lid.md) and *global* identifiers share the same value, `iso`."}
 		},
 		"_data": {
+			"_class": "_class_identifier",
 			"_scalar": {
-				"_class": "_class_identifier",
 				"_type": "_type_string",
 				"_regexp": "^[a-zA-Z0-9-:.@+,=;$!*'%()_]{1,254}$"
 			}
@@ -109,9 +109,9 @@
 			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_nid\": \"iso_3166_1\",\n\t\"_lid\": \"ITA\",\n\t\"_gid\": \"iso_3166_1_ITA\",\n\t\"_aid\": [\"ITA\", \"IT\"],\n\t\"_name\": \"Italia\",\n\t\"_regexp\": \"[A-Z]{3,3}\"\n}\n```\n\nIn the above term `ITA` is the *official code* for Italy, but `IT` is an alternative code: all elements of the `_aid` list of codes can be used to select this term."}
 		},
 		"_data": {
+			"_class": "_class_identifier",
 			"_set": {
 				"_set_scalar": {
-					"_class": "_class_identifier",
 					"_set_type": "_type_string"
 				}
 			}
@@ -130,9 +130,9 @@
 			"_description": {"iso_639_3_eng": "This corresponds to the list of *identifiers* that the *metadata providers* or *curators* have *assigned* to the *term*.\n\nThis property should *not* be *confused* with the [list of official identifiers](_aid.md), which only includes *official* or *commonly agreed identifiers*."}
 		},
 		"_data": {
+			"_class": "_class_identifier",
 			"_set": {
 				"_set_scalar": {
-					"_class": "_class_identifier",
 					"_set_type": "_type_string"
 				}
 			}
@@ -152,8 +152,8 @@
 			"_examples": {"iso_639_3_eng": "粵語 / 粤语: The *original* name for the *cantonese language* in the *cantonese* language."}
 		},
 		"_data": {
+			"_class": "_class_identifier",
 			"_scalar": {
-				"_class": "_class_identifier",
 				"_type": "_type_string"
 			}
 		}

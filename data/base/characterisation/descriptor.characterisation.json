@@ -12,8 +12,8 @@
 			"_description": {"iso_639_3_eng": "Provide the *species* of the *individual tree* or *population* to which *data* is *referring* to."}
 		},
 		"_data": {
+			"_class": "_class_category",
 			"_scalar": {
-				"_class": "_class_category",
 				"_type": "_type_string"
 			}
 		}
@@ -32,8 +32,8 @@
 			"_description": {"iso_639_3_eng": "Provide the identifier assigned to the specific tree. When you *include* this field, it indicates that the *trait data* refers to a *single tree*. If you *omit* this field it means that the *trait data* refers to a [species](./species.md) in a [unit](./gcu_id_number,md)."}
 		},
 		"_data": {
+			"_class": "_class_identifier",
 			"_scalar": {
-				"_class": "_class_identifier",
 				"_type": "_type_string"
 			}
 		}
@@ -51,8 +51,8 @@
 			"_description": {"iso_639_3_eng": "The field is not coded, provide the acronym of the project."}
 		},
 		"_data": {
+			"_class": "_class_identifier",
 			"_scalar": {
-				"_class": "_class_identifier",
 				"_type": "_type_string"
 			}
 		}

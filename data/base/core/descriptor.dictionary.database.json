@@ -68,8 +68,8 @@
 			"_description": {"iso_639_3_eng": "The value represents the record reference to the node that represents the origin of a relationship in a graph. In [ArangoDB](https://www.arangodb.com) the value is the [_id](https://www.arangodb.com/docs/stable/getting-started-databases-collections-documents.html) of the directed graph relationship source."}
 		},
 		"_data": {
+			"_class": "_class_reference",
 			"_scalar": {
-				"_class": "_class_reference",
 				"_type": "_type_string_handle"
 			}
 		}
@@ -87,8 +87,8 @@
 			"_description": {"iso_639_3_eng": "The value represents the record reference to the node that represents the destination of a relationship in a graph. In [ArangoDB](https://www.arangodb.com) the value is the [_id](https://www.arangodb.com/docs/stable/getting-started-databases-collections-documents.html) of the directed graph relationship target."}
 		},
 		"_data": {
+			"_class": "_class_reference",
 			"_scalar": {
-				"_class": "_class_reference",
 				"_type": "_type_string_handle"
 			}
 		}

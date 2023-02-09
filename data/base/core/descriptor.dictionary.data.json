@@ -275,8 +275,8 @@
 			"_description": {"iso_639_3_eng": "The class can be selected from the following choices:\n\n- [Category](_class_category.md): The value is *categorical*.\n- [Reference](_class_reference.md): The value is a *reference* to another item.\n- [Identifier](_class_identifier.md): The value is an *identifier*.\n- [Quantity](_class_quantity.md): The value represents an *observed quantity*.\n- [Calculated quantity](_class_quantity_calculated.md): The value represents a quantity *calculated* from a *set of observations*.\n- [Averaged quantity](_class_quantity_averaged.md): The value represents a quantity *averaging* a *range* of *observations*.\n- [Time](_class_time.md): The value represents a point in a time series.\n\nThe property can be used to *group descriptors* according to the *function* of the *value*.\n\n*This classification applies to [scalar](_scalar.md) values*."}
 		},
 		"_data": {
+			"_class": "_class_category",
 			"_scalar": {
-				"_class": "_class_category",
 				"_type": "_type_string_enum",
 				"_kind": ["_class"]
 			}
@@ -295,8 +295,8 @@
 			"_description": {"iso_639_3_eng": "The category should indicate to which *subject* the *trait* applies to and not to what the *measurement refers* to. For instance in *plant height*, the subject is the *plant*, although the *value* of the *trait* may refer to a *population*."}
 		},
 		"_data": {
+			"_class": "_class_category",
 			"_scalar": {
-				"_class": "_class_category",
 				"_type": "_type_string_enum",
 				"_kind": ["_subject"]
 			}
@@ -315,9 +315,9 @@
 			"_description": {"iso_639_3_eng": "This category should be used to indicate to which *domains* the value or *trait* refers to. The category should list the *domains* to which the *term* or *descriptor* belongs."}
 		},
 		"_data": {
+			"_class": "_class_category",
 			"_set": {
 				"_set_scalar": {
-					"_class": "_class_category",
 					"_set_type": "_type_string_enum",
 					"_kind": ["_domain"]
 				}
@@ -337,8 +337,8 @@
 			"_description": {"iso_639_3_eng": "The *data type* defines the *type* that the *value* or *values* held by the *descriptor* should have. This type applies to the [scalar](_scalar.md) dimension of the *value*, this means that, in the case of an [array](_array.md) or [set](_set.md), the type *applies* to the list *elements*.\n\nThese are the possible values:\n\n- [Boolean](_type_boolean.md): *True* or *false* value. No other [data section](_data.md) properties are expected.\n- [Integer](_type_integer.md): *Numeric discrete* value. The [data section](_data.md) can include the following properties: [unit](_unit.md), [unit name](_unit-name.md), [range](_range.md), [valid range](_valid-range.md) and [normal range](_normal-range.md).\n- [Numeric](_type_number.md): *Numeric discrete* or *continuous* value; will be considered a *floating point number*. The [data section](_data.md) can include the following properties: [unit](_unit.md), [unit name](_unit-name.md), [range](_range.md), [valid range](_valid-range.md) and [normal range](_normal-range.md).\n- [Time-stamp](_type_number_timestamp.md): A [numeric](_type_number.md) Unix Timestamp, it is used to indicate a *precise moment in time*. The [data section](_data.md) can include the following properties: [range](_range.md), [valid range](_valid-range.md) and [normal range](_normal-range.md).\n- [String](_type_string.md): A *character* or *text* encoded in UTF-8. The [data section](_data.md) can include the following properties: [format](_format.md), [unit](_unit.md), [unit name](_unit-name.md) and [regular expression](_regexp.md).\n- [Key reference](_type_string_key.md): A [string](_type_string.md) representing the [global identifier](_gid.md) of a *document* from the *terms collection*. The [data section](_data.md) is *required* to include the [data kind](_kind.md) field which specifies the *kind of term*, these are the allowed choices:\n    - [Any term](_any-term.md): The value can reference *any term* in the *terms collection*.\n    - [Any enumeration](_any-enum.md): The value can reference *any term* *belonging* to a *controlled vocabulary*, this means that the *term* must be *referenced* in at least one *edge* with the [enumeration](_predicate_enum-of.md) [predicate](_predicate.md).\n    - [Any structure](_any-object.md): The value can reference *any term* that *defines* an *object data structure*: such terms must have the [rules section](_rule.md) property.\n    - [Any descriptor](_any-descriptor.md): The value can reference *any term* that *defines* a *descriptor*: such terms must have the [data section](_data.md) property.\n- [Document handle](_type_string_handle.md): A [string](_type_string.md) representing the [document handle](_id.md) of a *record* belonging to *any collection*. No other [data section](_data.md) properties are expected.\n- [Enumeration](_type_string_enum.md): A [string](_type_string.md) representing the [global identifier](_gid.md) of a *document* belonging to the *terms collection* that is part of a *controlled vocabulary*. The [data section](_data.md) can include the following properties: [format](_format.md), [unit](_unit.md), [unit name](_unit-name.md) and [regular expression](_regexp.md). In addition, the [data section](_data.md) *requires* the [data kind](_kind.md) field, that is *must* *specify* from which *controlled vocabulary* the value must be *chosen*.\n- [Object](_type_object.md): An *object data structure*. The [data section](_data.md) is required to contain the [data kind](_kind.md) field, and these are the allowed choices:\n    - *A [global identifier](_gid.md)*: It must be one or more [key references](_type_string_key.md) to *terms* that define a *data structure type*, the term *must include* the [rules section](_rule.md). This means that the value *must* be an *object* of *that type*.\n    - [Any structure](_any-object.md): The value can be an *object* of *any type*, but its *properties* will be *parsed* and *validated*. This means that only the *constraints* at the *object level* will be *ignored*.\n- [GeoJSON geometry](_type_object_geo-json.md): An *object data structure* representing a *geographic structure* encoded in the [GeoJSON](https://geojson.org) data format. No other [data section](_data.md) properties are expected.\n\nIf *this property* is *omitted*, it means that the *value* can be of *any scalar type*."}
 		},
 		"_data": {
+			"_class": "_class_category",
 			"_scalar": {
-				"_class": "_class_category",
 				"_type": "_type_string_enum",
 				"_kind": ["_type"]
 			}
@@ -357,8 +357,8 @@
 			"_description": {"iso_639_3_eng": "This property is used to define the *data type* of [set](_set.md) *elements*, these are the allowed values:\n\n- [Boolean](_type_boolean.md): *True* or *false* value.\n- [Integer](_type_integer.md): *Numeric discrete* value. The [data section](_set_scalar.md) can include the following properties: [unit](_unit.md), [unit name](_unit-name.md), [range](_range.md), [valid range](_valid-range.md) and [normal range](_normal-range.md).\n- [Numeric](_type_number.md): *Numeric discrete* or *continuous* value; will be considered a *floating point number*. The [data section](_set_scalar.md) can include the following properties: [unit](_unit.md), [unit name](_unit-name.md), [range](_range.md), [valid range](_valid-range.md) and [normal range](_normal-range.md).\n- [Time-stamp](_type_number_timestamp.md): A [numeric](_type_number.md) Unix Timestamp, it is used to indicate a *precise moment in time*. The [data section](_set_scalar.md) can include the following properties: [range](_range.md), [valid range](_valid-range.md) and [normal range](_normal-range.md).\n- [String](_type_string.md): A *character* or *text* encoded in UTF-8. The [data section](_set_scalar.md) can include the following properties: [format](_format.md), [unit](_unit.md), [unit name](_unit-name.md) and [regular expression](_regexp.md).\n- [Key reference](_type_string_key.md): A [string](_type_string.md) representing the [global identifier](_gid.md) of a *document* from the *terms collection*. The [data section](_set_scalar.md) is *required* to include the [data kind](_kind.md) field which specifies the *kind of term*, these are the allowed choices:\n    - [Any term](_any-term.md): The value can reference *any term* in the *terms collection*.\n    - [Any enumeration](_any-enum.md): The value can reference *any term* *belonging* to a *controlled vocabulary*, this means that the *term* must be *referenced* in at least one *edge* with the [enumeration](_predicate_enum-of.md) [predicate](_predicate.md).\n    - [Any structure](_any-object.md): The value can reference *any term* that *defines* an *object data structure*: such terms must have the [rules section](_rule.md) property.\n    - [Any descriptor](_any-descriptor.md): The value can reference *any term* that *defines* a *descriptor*: such terms must have the [data section](_data) property.\n- [Document handle](_type_string_handle.md): A [string](_type_string.md) representing the [document handle](_id.md) of a *record* belonging to *any collection*. No other [data section](_set_scalar.md) properties are expected.\n- [Enumeration](_type_string_enum.md): A [string](_type_string.md) representing the [global identifier](_gid.md) of a *document* belonging to the *terms collection* that is part of a *controlled vocabulary*. The [data section](_set_scalar.md) can include the following properties: [format](_format.md), [unit](_unit.md), [unit name](_unit-name.md) and [regular expression](_regexp.md). In addition, the [data section](_set_scalar.md) *requires* the [data kind](_kind.md) field, that is *must* *specify* from which *controlled vocabulary* the value must be *chosen*.\n\nThe [set](_set.md) container *requires* this property."}
 		},
 		"_data": {
+			"_class": "_class_category",
 			"_scalar": {
-				"_class": "_class_category",
 				"_type": "_type_string_enum",
 				"_kind": ["_set_type"]
 			}
@@ -377,8 +377,8 @@
 			"_description": {"iso_639_3_eng": "This field defines the data type of a *dictionary key*, it is an [enumerated](_type_string_enum.md) choice that can take the following values:\n\n- [String](_type_string.md): A *character* or *text* encoded in UTF-8. The [data section](_data.md) can include the [regular expression](_regexp.md) property.\n- [Key reference](_type_string_key.md): A [string](_type_string.md) representing the [global identifier](_gid.md) of a *term*. The [data section](_data.md) is *required* to include the [data kind](_kind.md) field which specifies the *kind of term*, these are the allowed choices:\n    - [Any term](_any-term.md): The value can reference *any document* in the *terms collection*.\n    - [Any enumeration](_any-enum.md): The value can reference *any term* *belonging* to a *controlled vocabulary*, this means that the *term* must be *referenced* in at least one *edge* with the [enumeration](_predicate_enum-of.md) [predicate](_predicate.md).\n    - [Any structure](_any-object.md): The value can reference *any term* that *defines* an *object data structure*: such terms must include the [rules section](_rule.md) property.\n    - [Any descriptor](_any-descriptor.md): The value can reference *any term* that *defines* a *descriptor*: such terms must have the [data section](_data.md) property.\n- [Enumeration](_type_string_enum.md): A [string](_type_string.md) representing the [global identifier](_gid.md) of a *document* belonging to the *terms collection* that is a member of a *controlled vocabulary*. The [data section](_data.md) can include the following properties: [format](_format.md), [unit](_unit.md), [unit name](_unit-name.md) and [regular expression](_regex-mdp). In addition, the [data section](_data.md) *requires* the [data kind](_kind.md) field, that is *must* *specify* from which *controlled vocabulary* the value must be *chosen*.\n\nWhen validating dictionary types, the *key* and *value* parts are *parsed* and *validated independently*, dictionary keys are not considered descriptors."}
 		},
 		"_data": {
+			"_class": "_class_category",
 			"_scalar": {
-				"_class": "_class_category",
 				"_type": "_type_string_enum",
 				"_kind": ["_type_key"]
 			}
@@ -397,9 +397,9 @@
 			"_description": {"iso_639_3_eng": "This field is a [set](_set.md) of [global identifiers](_gid.md) which reference terms that represent *root elements* of [controlled vocabularies](_type_string_enum.md), [object data structures](_type_object.md) and other kind of *graphs*. The field is relevant to the [data type](_type.md) of the current descriptor and is *required* and *restricted* to the following [data type](_type.md) values:\n\n- [Key reference](_type_string_key.md): the *data kind* is required and can take the following values:\n    - [Any term](_any-term.md): The value can reference *any term* in the *terms collection*.\n    - [Any enumeration](_any-enum.md): The value can reference *any term* *belonging* to a *controlled vocabulary*, this means that the *term* must be *referenced* in at least one *edge* with the [enumeration](_predicate_enum-of.md) [predicate](_predicate.md).\n    - [Any structure](_any-object.md): The value can reference *any term* that *defines* an *object data structure*: such terms must have the [rules section](_rule.md) property.\n    - [Any descriptor](_any-descriptor.md): The value can reference *any term* that *defines* a *descriptor*: such terms must have the [data section](_data.md) property.\n- [Enumeration](_type_string_enum.md): the *data kind* is *required* to indicate the *list* of *controlled vocabularies* to which the *value* must *belong*:\n    - [Global identifier](_gid.md): It must be one or more [key references](_type_string_key.md) to *terms* that define a *controlled vocabulary type*, these are terms that are at the root of an emumeration graph connecting terms with the [enumeration](_predicate_enum-of.md) [predicate](_predicate.md). In this case the value must belong to at leas one of the listed enumerations.\n    - [Any term](_any-term.md): The value can reference *any term* in the *terms collection*.\n- [Object](_type_object.md): the *data kind* is *required*, it must contain [key references](_type_string_key.md) to *term*s that define *data structure types*, the referenced terms *must include* the [rules section](_rule.md). This means that the value *must* *conform* to *at least one* of the referenced *structure definitions*. This field can contain the following values:\n    - [Global identifier](_gid.md): It must be one or more [key references](_type_string_key.md) to *terms* that define a *data structure type*, the term *must include* the [rules section](_rule.md). This means that the value *must* be an *object* of *that type*.\n    - [Any structure](_any-object.md): The value can be an *object* of *any type*, but its *properties* will be *parsed* and *validated*. This means that only the *constraints* at the *object level* will be *ignored*.\n\nThis property contains a [set](_set.md) of choices, this means that a *value* is *valid* if it belongs to *at leas one* of the listed choices. \n\nThis property can only appear in the [scalar](_scalar.md) container definition."}
 		},
 		"_data": {
+			"_class": "_class_category",
 			"_set": {
 				"_set_scalar": {
-					"_class": "_class_category",
 					"_set_type": "_type_string_key",
 					"_kind": ["_any-term"]
 				}
@@ -420,8 +420,8 @@
 			"_examples": {"iso_639_3_eng": "This field can be used to indicate in which standard the *value* is *formatted* or *encoded*. The idea is to implement backend functions for validating or processing data provided in the format and handle appropriately the format when returning the data to the user, such as displaying styled text when handling *markdown* or *html*.\n\nThe [data type](_type.md) of the value will be [string](_type_string.md), these are the currently codified formats:\n\n- [Markdown](_format_markdown.md) [formatted](https://en.wikipedia.org/wiki/Markdown) string.\n- [HTML](_format_html.md) [HyperText](https://en.wikipedia.org/wiki/HTML) markdown formatted string.\n- [URI](_format_uri.md), [Uniform Resource Identifier](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier).\n- [HEX](_format_hex,md): This option indicates that the string should be treated as a [hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal) value.\n- [SVG](_format_svg.md), [Scalable Vector Graphics (SVG)]([Scalable Vector Graphics - Wikipedia](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics)) image as string.\n- [E-mail](_format_email.md), an [electronic mail]([Email - Wikipedia](https://en.wikipedia.org/wiki/Email)) address.\n- [YMD](_format_ymd.md), a string representing a date in `YYYYMMDD` format, where day, or day and month may be omitted.\n- [Date](_format_date.md), a date expressed in [RFC 3339, section 5.6](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6).\n- [Time](_format_time.md), a time expressed in [RFC 3339, section 5.6](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6).\n- [Date-time](_format_date-time.md), a date and time expressed in [RFC 3339, section 5.6](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6).\n- [Hostname](_format_hostname.md), an Internet host name, see [RFC5890, section 2.3.2.3](https://datatracker.ietf.org/doc/html/rfc1123#section-2.1).\n- [IPV4](_format_ipv4.md), an IPv4 Internet address as defined in [RFC 2673, section 3.2](https://tools.ietf.org/html/rfc2673#section-3.2).\n- [IPV6](_format_ipv6.md), an IPv6 Internet address as defined in [RFC 2373, section 2.2](http://tools.ietf.org/html/rfc2373#section-2.2)."}
 		},
 		"_data": {
+			"_class": "_class_category",
 			"_scalar": {
-				"_class": "_class_category",
 				"_type": "_type_string_enum",
 				"_kind": ["_format"]
 			}
@@ -440,8 +440,8 @@
 			"_description": {"iso_639_3_eng": "The field represents the *default unit* for the *values* of the descriptor. This means that when storing values, these should be *converted* to this *default unit*. The field is a controlled vocabulary that has the following values:\n\n- Length:\n    - [Kilometres](_unit_length_km.md).\n    - [Meters](_unit_length_m.md).\n    - [Centimetres](_unit_length_cm.md).\n    - [Millimeters](_unit_length_mm.md).\n\n- Area:\n    - [Square kilometres](_unit_area_km.md).\n    - [Square meters](_unit_area_m.md).\n    - [Square centimetres](_unit_area_cm.md).\n    - [Square millimeters](_unit_area_mm.md).\n\n- Weight:\n    - [Kilograms](_unit_weight_kg.md).\n    - [Grams](_unit_weight_g.md).\n    - [Centigrams](_unit_weight_cg.md).\n    - [Milligrams](_unit_weight_mg.md).\n\n- Time:\n    - [Hours](_unit_time_h.md).\n    - [Minutes](_unit_time_m.md).\n    - [Seconds](_unit_time_s.md).\n\n- Age:\n    - [Years](_unit_age_y.md).\n    - [Months](_unit_age_m.md).\n    - [Weeks](_unit_age_w.md).\n    - [Days](_unit_age_d)."}
 		},
 		"_data": {
+			"_class": "_class_category",
 			"_scalar": {
-				"_class": "_class_category",
 				"_type": "_type_string_enum",
 				"_kind": ["_unit"]
 			}
@@ -460,8 +460,8 @@
 			"_description": {"iso_639_3_eng": "This field can be used to indicate the *data unit* of the *value* in the event the [units controlled vocabulary](_unit.md) does not feature it."}
 		},
 		"_data": {
+			"_class": "_class_identifier",
 			"_scalar": {
-				"_class": "_class_identifier",
 				"_type": "_type_string"
 			}
 		}
@@ -500,8 +500,8 @@
 			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_elements\": {\n\t\t\"_min-items\": 1,\n\t\t\"_max-items\": 8\n\t}\n}\n```\nThe [array](_array.md) or [set](_set.md) can have between `1` and `8` elements.\n\n\n\n```json\n{\n\t\"_elements\": {\n\t\t\"_min-items\": 0\n\t}\n}\n```\nThe [array](_array.md) or [set](_set.md) must have at least *one* element.\n\n\n\n```json\n{\n\t\"_elements\": {\n\t\t\"_max-items\": 10\n\t}\n}\n```\nThe [array](_array.md) or [set](_set.md) must have *less* than 10 items."}
 		},
 		"_data": {
+			"_class": "_class_quantity",
 			"_scalar": {
-				"_class": "_class_quantity",
 				"_type": "_type_object",
 				"_kind": ["_elements"]
 			}
@@ -526,8 +526,8 @@
 			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_range\": {\n\t\t\"_min-range-inclusive\": 0.0,\n\t\t\"_max-range-inclusive\": 100.0\n\t}\n}\n```\nThis represents a *percentage range*, values are *greater* than or *equal* to `0` and smaller or equal to `100`. Fractional values are allowed.\n\n\n\n```json\n{\n\t\"_range\": {\n\t\t\"_min-range-inclusive\": 0,\n\t\t\"_max-range-inclusive\": 100\n\t}\n}\n```\nSame as above, except that we use integers. Fractional values are allowed.\n\n\n\n```json\n{\n\t\"_range\": {\n\t\t\"_min-range-exclusive\": 0\n\t}\n}\n```\nValues are greater than `0`. Fractional values are allowed."}
 		},
 		"_data": {
+			"_class": "_class_quantity_averaged",
 			"_scalar": {
-				"_class": "_class_quantity_averaged",
 				"_type": "_type_object",
 				"_kind": ["_range"]
 			}
@@ -555,8 +555,8 @@
 			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_valid-range\": {\n\t\t\"_min-range-inclusive\": 0.0,\n\t\t\"_max-range-inclusive\": 100.0\n\t}\n}\n```\nThis *range* considers all values greater than `100.0` and smaller than `0.0` to be errors.\n\n\n\n```json\n{\n\t\"_valid-range\": {\n\t\t\"_min-range-inclusive\": 0,\n\t\t\"_max-range-inclusive\": 100\n\t}\n}\n```\nThis *range* is equivalent to the first one, except that in this case we don't add decimals to the bounds.\n\n\n\n```json\n{\n\t\"_valid-range\": {\n\t\t\"_min-range-exclusive\": 0\n\t}\n}\n```\nThis *range* considers all positive values greater than 0 to be correct."}
 		},
 		"_data": {
+			"_class": "_class_quantity_averaged",
 			"_scalar": {
-				"_class": "_class_quantity_averaged",
 				"_type": "_type_object",
 				"_kind": ["_range"]
 			}
@@ -576,8 +576,8 @@
 			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_normal-range\": {\n\t\t\"_min-range-inclusive\": 0.0,\n\t\t\"_max-range-inclusive\": 100.0\n\t}\n}\n```\nThis *range* considers all values greater than `100.0` or smaller than `0.0` to be outliers.\n\n\n\n```json\n{\n\t\"_normal-range\": {\n\t\t\"_min-range-inclusive\": 0,\n\t\t\"_max-range-inclusive\": 100\n\t}\n}\n```\nThis *range* is equivalent to the first one, except that in this case we don't add decimals to the bounds.\n\n\n\n```json\n{\n\t\"_normal-range\": {\n\t\t\"_min-range-exclusive\": 0\n\t}\n}\n```\nThis *range* considers all positive values greater than 0 to be normal, and all others to be outliers.\n\n"}
 		},
 		"_data": {
+			"_class": "_class_quantity_averaged",
 			"_scalar": {
-				"_class": "_class_quantity_averaged",
 				"_type": "_type_object",
 				"_kind": ["_range"]
 			}
@@ -597,8 +597,8 @@
 			"_description": {"iso_639_3_eng": "This field can be used to indicate the *minimum number* of *elements* an item may contain. The property is used by the elements range [descriptor](_elements.md) to indicate the minimum bound for [array](_array.md) and [set](_set.md) data [container](_data.md) [elements](_elements.md).\n\nThe value is an *integer* and the *bound* is *inclusive*, the item to which the property refers to cannot have *less* elements than the value held by this field."}
 		},
 		"_data": {
+			"_class": "_class_quantity",
 			"_scalar": {
-				"_class": "_class_quantity",
 				"_type": "_type_integer",
 				"_valid-range": {
 					"_min-range-inclusive": 0
@@ -619,8 +619,8 @@
 			"_description": {"iso_639_3_eng": "This field can be used to indicate the *maximum number* of *elements* an item may contain. The property is used by the elements range [descriptor](_elements.md) to indicate the maximum bound for [array](_array.md) and [set](_set.md) data [container](_data.md) [elements](_elements.md).\n\nThe value is an *integer* and the *bound* is *inclusive*, the item to which the property refers to cannot have *more* elements than the value held by this field."}
 		},
 		"_data": {
+			"_class": "_class_quantity",
 			"_scalar": {
-				"_class": "_class_quantity",
 				"_type": "_type_integer"
 			}
 		}
@@ -638,8 +638,8 @@
 			"_description": {"iso_639_3_eng": "This field is relevant only for *numeric* [discrete](_type_integer) or [continuous](_type_number) data, it indicates the *minimum bound* of a [range](_range.md), *including* the *bound* value. Only numbers *greater or equal* to this field's value belong to the [range](_range.md)."}
 		},
 		"_data": {
+			"_class": "_class_quantity_averaged",
 			"_scalar": {
-				"_class": "_class_quantity_averaged",
 				"_type": "_type_number"
 			}
 		}
@@ -657,8 +657,8 @@
 			"_description": {"iso_639_3_eng": "This field is relevant only for *numeric* [discrete](_type_integer) or [continuous](_type_number) data, it indicates the *maximum bound* of a [range](_range.md), *including* the *bound* value. Only numbers *smaller or equal* to this field's value belong to the [range](_range.md)."}
 		},
 		"_data": {
+			"_class": "_class_quantity_averaged",
 			"_scalar": {
-				"_class": "_class_quantity_averaged",
 				"_type": "_type_number"
 			}
 		}
@@ -676,8 +676,8 @@
 			"_description": {"iso_639_3_eng": "This field is relevant only for *numeric* [discrete](_type_integer) or [continuous](_type_number) data, it indicates the *minimum bound* of a [range](_range.md), *excluding* the *bound* value. Only numbers *greater* than this field's value belong to the [range](_range.md)."}
 		},
 		"_data": {
+			"_class": "_class_quantity_averaged",
 			"_scalar": {
-				"_class": "_class_quantity_averaged",
 				"_type": "_type_number"
 			}
 		}
@@ -695,8 +695,8 @@
 			"_description": {"iso_639_3_eng": "This field is relevant only for *numeric* [discrete](_type_integer) or [continuous](_type_number) data, it indicates the *maximum bound* of a [range](_range.md), *excluding* the *bound* value. Only numbers *smaller* than this field's value belong to the [range](_range.md)."}
 		},
 		"_data": {
+			"_class": "_class_quantity_averaged",
 			"_scalar": {
-				"_class": "_class_quantity_averaged",
 				"_type": "_type_number"
 			}
 		}

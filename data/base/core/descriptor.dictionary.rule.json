@@ -80,9 +80,9 @@
 			"_description": {"iso_639_3_eng": "This field contains a [descriptors selection rule](_selection-descriptors.md) that determines which *set* of *descriptors* must *not* be *included* in the [data structure definition](_type_object.md) of the *object*.\n\nThe selection *values* must be the [global identifier](_gid.md) of the *descriptors* that are *forbidden* from being *included* in the *object data structure*.\n\nThis rule should be evaluated at the *end* of the *validation workflow* and should *not trigger* an *error*: all banned properties should simply be *removed*."}
 		},
 		"_data": {
+			"_class": "_class_reference",
 			"_set": {
 				"_set_scalar": {
-					"_class": "_class_reference",
 					"_set_type": "_type_string_key",
 					"_kind": ["_any-descriptor"]
 				}
@@ -102,9 +102,9 @@
 			"_description": {"iso_639_3_eng": "This field contains the list of *properties* that are automatically *computed*, their value is *calculated* before *storing* the *record*."}
 		},
 		"_data": {
+			"_class": "_class_reference",
 			"_set": {
 				"_set_scalar": {
-					"_class": "_class_reference",
 					"_set_type": "_type_string_key",
 					"_kind": ["_any-descriptor"]
 				}
@@ -145,9 +145,9 @@
 			"_description": {"iso_639_3_eng": "The rule determines that *one* of the terms in the *array* should be part of the *selection*.\n\nThe *terms* of the *set* are represented by their *global identifiers*."}
 		},
 		"_data": {
+			"_class": "_class_reference",
 			"_set": {
 				"_set_scalar": {
-					"_class": "_class_reference",
 					"_set_type": "_type_string_key",
 					"_kind": ["_any-term"]
 				}
@@ -167,9 +167,9 @@
 			"_description": {"iso_639_3_eng": "The rule determines that either *one* of the terms in the *set* should be part of the *selection*, or the selection should be empty.\n\nThe *terms* of the *set* are represented by their *global identifiers*."}
 		},
 		"_data": {
+			"_class": "_class_reference",
 			"_set": {
 				"_set_scalar": {
-					"_class": "_class_reference",
 					"_set_type": "_type_string_key",
 					"_kind": ["_any-term"]
 				}
@@ -189,9 +189,9 @@
 			"_description": {"iso_639_3_eng": "The rule determines that *one* or *more* of the terms in the *set* should be part of the *selection*.\n\nThe *terms* of the *set* are represented by their *global identifiers*."}
 		},
 		"_data": {
+			"_class": "_class_reference",
 			"_set": {
 				"_set_scalar": {
-					"_class": "_class_reference",
 					"_set_type": "_type_string_key",
 					"_kind": ["_any-term"]
 				}
@@ -212,10 +212,10 @@
 			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_selection-terms_any-one\": [\n\t\t[\"red\", \"green\", \"blue\"],\n\t\t[\"Monday\", \"Tuesday\"]\n\t]\n}\n```\n\nThis example implements a selection of colours for Monday or Tuesday:\n\n- In the *child sets* selection you choose *one* from each, that is: `red`, `green` or `blue` from the *first* set of colours and `Monday` or `Tuesday` fron the `second` weekdays set.\n  \n- Once the selection of elements in the *child sets* has been done, the result will become *one* or *more* elements of the *child sets selection*.\n  \n\nSo some possible results could be:\n\n- `[\"red\", \"Monday\"]`\n- `[\"green\"]`\n- `[Tuesday\"]`\n- `[\"blue\", \"Tuesday\"]`"}
 		},
 		"_data": {
+			"_class": "_class_reference",
 			"_array": {
 				"_set": {
 					"_set_scalar": {
-						"_class": "_class_reference",
 						"_set_type": "_type_string_key",
 						"_kind": ["_any-term"]
 					}
@@ -236,9 +236,9 @@
 			"_description": {"iso_639_3_eng": "The rule determines that *all* of the terms in the *set* should be part of the *selection*.\n\nTThe *terms* of the *set* are represented by their *global identifiers*."}
 		},
 		"_data": {
+			"_class": "_class_reference",
 			"_set": {
 				"_set_scalar": {
-					"_class": "_class_reference",
 					"_set_type": "_type_string_key",
 					"_kind": ["_any-term"]
 				}
@@ -259,9 +259,9 @@
 			"_description": {"iso_639_3_eng": "The rule determines that *one* of the descriptors in the *set* should be part of the *selection*.\n\nThe *descriptors* of the *set* are represented by their *global identifiers*."}
 		},
 		"_data": {
+			"_class": "_class_reference",
 			"_set": {
 				"_set_scalar": {
-					"_class": "_class_reference",
 					"_set_type": "_type_string_key",
 					"_kind": ["_any-descriptor"]
 				}
@@ -281,9 +281,9 @@
 			"_description": {"iso_639_3_eng": "The rule determines that either *one* of the descriptors in the *set* should be part of the *selection*, or the selection should be empty.\n\nThe *descriptors* of the *set* are represented by their *global identifiers*."}
 		},
 		"_data": {
+			"_class": "_class_reference",
 			"_set": {
 				"_set_scalar": {
-					"_class": "_class_reference",
 					"_set_type": "_type_string_key",
 					"_kind": ["_any-descriptor"]
 				}
@@ -303,9 +303,9 @@
 			"_description": {"iso_639_3_eng": "The rule determines that *one* or *more* of the descriptors in the *set* should be part of the *selection*.\n\nThe *descriptors* of the *set* are represented by their *global identifiers*."}
 		},
 		"_data": {
+			"_class": "_class_reference",
 			"_set": {
 				"_set_scalar": {
-					"_class": "_class_reference",
 					"_set_type": "_type_string_key",
 					"_kind": ["_any-descriptor"]
 				}
@@ -326,10 +326,10 @@
 			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_selection-descriptors_any-one\": [\n\t\t[\"minimum_inclusive\", \"minimum_exclusive\"],\n\t\t[\"maximum_inclusive\", \"maximum_exclusive\"]\n\t]\n}\n```\n\nThis example implements a selection for a range:\n\n- In the *child sets* selection you choose *one* from each, that is: `minimum_inclusive` or `minimum_exclusive` from the *first* set and `maximum_inclusive` or `maximum_exclusive` fron the `second` set.\n- Once the selection of elements in the *child sets* has been done, the result will become *one* or *more* elements of the *child sets selection*.\n\nSo the possible results could be:\n\n- `[\"minimum_inclusive\"]`\n- `[\"minimum_exclusive\"]`\n- `[\"maximum_inclusive\"]`\n- `[\"maximum_exclusive\"]`\n- `[\"minimum_inclusive\", \"maximum_inclusive\"]`\n- `[\"minimum_inclusive\", \"maximum_exclusive\"]`\n- `[\"minimum_exclusive\", \"maximum_inclusive\"]`\n- `[\"minimum_exclusive\", \"maximum_exclusive\"]`"}
 		},
 		"_data": {
+			"_class": "_class_reference",
 			"_array": {
 				"_set": {
 					"_set_scalar": {
-						"_class": "_class_reference",
 						"_set_type": "_type_string_key",
 						"_kind": ["_any-descriptor"]
 					}
@@ -350,9 +350,9 @@
 			"_description": {"iso_639_3_eng": "The rule determines that *all* of the descriptors in the *set* should be part of the *selection*.\n\nTThe *descriptors* of the *set* are represented by their *global identifiers*."}
 		},
 		"_data": {
+			"_class": "_class_reference",
 			"_set": {
 				"_set_scalar": {
-					"_class": "_class_reference",
 					"_set_type": "_type_string_key",
 					"_kind": ["_any-descriptor"]
 				}

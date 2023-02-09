@@ -182,9 +182,9 @@
 			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_data_provider\": [\n\t\t\"John Smith <j.smith@someinstitute.edu>\",\n\t\t\"Robert Frost <enquiries@knoweverything.com> Just for very difficult questions.\",\n\t\t\"Tree Institute - 5, Oak Drive, Massachussets,USA\"\n\t]\n}\n```\nThe above example contains a list of three contacts. The first one contains a valid e-mail format string, the second adds a comment at the end, and the last one includes a mailing address."}
 		},
 		"_data": {
+			"_class": "_class_category",
 			"_set": {
 				"_set_scalar": {
-					"_class": "_class_category",
 					"_set_type": "_type_string"
 				}
 			}

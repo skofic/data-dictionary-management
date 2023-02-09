@@ -17,10 +17,10 @@
 			]
 		},
 		"_data": {
+			"_class": "_class_quantity",
+			"_subject": "tree",
+			"_domain": ["pheno"],
 			"_scalar": {
-				"_class": "_class_quantity",
-				"_subject": "tree",
-				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit": "_unit_length_cm",
 				"_valid-range": {
@@ -44,10 +44,10 @@
 			"_description": {"iso_639_3_eng": "Difference between [circumference of the trunk at breash height](./chr_pheno_cbh.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
 		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_subject": "tree",
+			"_domain": ["pheno"],
 			"_scalar": {
-				"_class": "_class_quantity_averaged",
-				"_subject": "tree",
-				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit": "_unit_length_cm"
 			}
@@ -71,10 +71,10 @@
 			]
 		},
 		"_data": {
+			"_class": "_class_quantity",
+			"_subject": "stand",
+			"_domain": ["pheno"],
 			"_scalar": {
-				"_class": "_class_quantity",
-				"_subject": "stand",
-				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit": "_unit_length_cm",
 				"_valid-range": {
@@ -102,10 +102,10 @@
 			]
 		},
 		"_data": {
+			"_class": "_class_quantity",
+			"_subject": "tree",
+			"_domain": ["pheno"],
 			"_scalar": {
-				"_class": "_class_quantity",
-				"_subject": "tree",
-				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit-name": "MPa",
 				"_valid-range": {
@@ -129,10 +129,10 @@
 			"_description": {"iso_639_3_eng": "Difference between [leaf osmotic potential at saturation](./chr_pheno_Pi0.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
 		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_subject": "tree",
+			"_domain": ["pheno"],
 			"_scalar": {
-				"_class": "_class_quantity_averaged",
-				"_subject": "tree",
-				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit-name": "MPa"
 			}
@@ -157,10 +157,10 @@
 			]
 		},
 		"_data": {
+			"_class": "_class_quantity",
+			"_subject": "tree",
+			"_domain": ["pheno"],
 			"_scalar": {
-				"_class": "_class_quantity",
-				"_subject": "tree",
-				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit-name": "MPa",
 				"_valid-range": {
@@ -184,10 +184,10 @@
 			"_description": {"iso_639_3_eng": "Difference between [leaf turgor loss point](./chr_pheno_TLP.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
 		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_subject": "tree",
+			"_domain": ["pheno"],
 			"_scalar": {
-				"_class": "_class_quantity_averaged",
-				"_subject": "tree",
-				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit-name": "MPa"
 			}
@@ -212,10 +212,10 @@
 			]
 		},
 		"_data": {
+			"_class": "_class_quantity",
+			"_subject": "tree",
+			"_domain": ["pheno"],
 			"_scalar": {
-				"_class": "_class_quantity",
-				"_subject": "tree",
-				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit-name": "MPa",
 				"_valid-range": {
@@ -239,10 +239,10 @@
 			"_description": {"iso_639_3_eng": "Difference between [xylem vulnerability to embolism](./chr_pheno_P50.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
 		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_subject": "tree",
+			"_domain": ["pheno"],
 			"_scalar": {
-				"_class": "_class_quantity_averaged",
-				"_subject": "tree",
-				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit-name": "MPa"
 			}
@@ -267,10 +267,10 @@
 			]
 		},
 		"_data": {
+			"_class": "_class_quantity",
+			"_subject": "tree",
+			"_domain": ["pheno"],
 			"_scalar": {
-				"_class": "_class_quantity",
-				"_subject": "tree",
-				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit-name": "mmol m-2 s-1",
 				"_valid-range": {
@@ -294,10 +294,10 @@
 			"_description": {"iso_639_3_eng": "Difference between [leaf residual conductance](./chr_pheno_Gres.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
 		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_subject": "tree",
+			"_domain": ["pheno"],
 			"_scalar": {
-				"_class": "_class_quantity_averaged",
-				"_subject": "tree",
-				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit-name": "mmol m-2 s-1"
 			}
@@ -322,10 +322,10 @@
 			]
 		},
 		"_data": {
+			"_class": "_class_quantity",
+			"_subject": "tree",
+			"_domain": ["pheno"],
 			"_scalar": {
-				"_class": "_class_quantity",
-				"_subject": "tree",
-				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit-name": "%RWC MPa-1",
 				"_valid-range": {
@@ -349,10 +349,10 @@
 			"_description": {"iso_639_3_eng": "Difference between [leaf hydraulic capacitance](./chr_pheno_Cleaf.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
 		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_subject": "tree",
+			"_domain": ["pheno"],
 			"_scalar": {
-				"_class": "_class_quantity_averaged",
-				"_subject": "tree",
-				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit-name": "%RWC MPa-1"
 			}
@@ -376,10 +376,10 @@
 			]
 		},
 		"_data": {
+			"_class": "_class_quantity",
+			"_subject": "tree",
+			"_domain": ["pheno"],
 			"_scalar": {
-				"_class": "_class_quantity",
-				"_subject": "tree",
-				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit-name": "cm2 cm-2",
 				"_valid-range": {
@@ -403,10 +403,10 @@
 			"_description": {"iso_639_3_eng": "Difference between [Huber value](./chr_pheno_HV.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
 		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_subject": "tree",
+			"_domain": ["pheno"],
 			"_scalar": {
-				"_class": "_class_quantity_averaged",
-				"_subject": "tree",
-				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit-name": "cm2 cm-2"
 			}
@@ -431,10 +431,10 @@
 			]
 		},
 		"_data": {
+			"_class": "_class_quantity",
+			"_subject": "tree",
+			"_domain": ["pheno"],
 			"_scalar": {
-				"_class": "_class_quantity",
-				"_subject": "tree",
-				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit": "_unit_length_m",
 				"_valid-range": {
@@ -458,10 +458,10 @@
 			"_description": {"iso_639_3_eng": "Difference between [total height](./chr_pheno_Htot.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
 		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_subject": "tree",
+			"_domain": ["pheno"],
 			"_scalar": {
-				"_class": "_class_quantity_averaged",
-				"_subject": "tree",
-				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit": "_unit_length_m"
 			}
@@ -486,10 +486,10 @@
 			]
 		},
 		"_data": {
+			"_class": "_class_quantity",
+			"_subject": "tree",
+			"_domain": ["pheno"],
 			"_scalar": {
-				"_class": "_class_quantity",
-				"_subject": "tree",
-				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit": "_unit_length_m",
 				"_valid-range": {
@@ -513,10 +513,10 @@
 			"_description": {"iso_639_3_eng": "Difference between [basal crown height](./chr_pheno_Hcrown.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
 		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_subject": "tree",
+			"_domain": ["pheno"],
 			"_scalar": {
-				"_class": "_class_quantity_averaged",
-				"_subject": "tree",
-				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit": "_unit_length_m"
 			}
@@ -540,10 +540,10 @@
 			]
 		},
 		"_data": {
+			"_class": "_class_quantity",
+			"_subject": "tree",
+			"_domain": ["pheno"],
 			"_scalar": {
-				"_class": "_class_quantity",
-				"_subject": "tree",
-				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit_name": "mm2 mg-1",
 				"_valid-range": {
@@ -567,10 +567,10 @@
 			"_description": {"iso_639_3_eng": "Difference between [specific leaf area](./chr_pheno_SLA.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
 		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_subject": "tree",
+			"_domain": ["pheno"],
 			"_scalar": {
-				"_class": "_class_quantity_averaged",
-				"_subject": "tree",
-				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit_name": "mm2 mg-1"
 			}
@@ -594,10 +594,10 @@
 			]
 		},
 		"_data": {
+			"_class": "_class_quantity",
+			"_subject": "tree",
+			"_domain": ["pheno"],
 			"_scalar": {
-				"_class": "_class_quantity",
-				"_subject": "tree",
-				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit_name": "% or 100*g g-1",
 				"_valid-range": {
@@ -621,10 +621,10 @@
 			"_description": {"iso_639_3_eng": "Difference between [wood carbon content](./chr_pheno_WCC.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
 		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_subject": "tree",
+			"_domain": ["pheno"],
 			"_scalar": {
-				"_class": "_class_quantity_averaged",
-				"_subject": "tree",
-				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit_name": "% or 100*g g-1"
 			}
@@ -648,10 +648,10 @@
 			]
 		},
 		"_data": {
+			"_class": "_class_quantity",
+			"_subject": "tree",
+			"_domain": ["pheno"],
 			"_scalar": {
-				"_class": "_class_quantity",
-				"_subject": "tree",
-				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit_name": "% or 100*g g-1",
 				"_valid-range": {
@@ -675,10 +675,10 @@
 			"_description": {"iso_639_3_eng": "Difference between [leaf nitrogen content](./chr_pheno_LNC.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
 		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_subject": "tree",
+			"_domain": ["pheno"],
 			"_scalar": {
-				"_class": "_class_quantity_averaged",
-				"_subject": "tree",
-				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit_name": "% or 100*g g-1"
 			}
@@ -702,10 +702,10 @@
 			]
 		},
 		"_data": {
+			"_class": "_class_quantity",
+			"_subject": "tree",
+			"_domain": ["pheno"],
 			"_scalar": {
-				"_class": "_class_quantity",
-				"_subject": "tree",
-				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit_name": "per mil or 1000 g g-1",
 				"_valid-range": {
@@ -729,10 +729,10 @@
 			"_description": {"iso_639_3_eng": "Difference between [leaf delta 13C](./chr_pheno_Leaf-delta13C.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
 		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_subject": "tree",
+			"_domain": ["pheno"],
 			"_scalar": {
-				"_class": "_class_quantity_averaged",
-				"_subject": "tree",
-				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit_name": "per mil or 1000 g g-1"
 			}
@@ -756,10 +756,10 @@
 			]
 		},
 		"_data": {
+			"_class": "_class_quantity",
+			"_subject": "tree",
+			"_domain": ["pheno"],
 			"_scalar": {
-				"_class": "_class_quantity",
-				"_subject": "tree",
-				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit_name": "per mil or 1000 g g-1",
 				"_valid-range": {
@@ -783,10 +783,10 @@
 			"_description": {"iso_639_3_eng": "Difference between [wood delta 13C](./chr_pheno_Wood-delta13C.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
 		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_subject": "tree",
+			"_domain": ["pheno"],
 			"_scalar": {
-				"_class": "_class_quantity_averaged",
-				"_subject": "tree",
-				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit_name": "per mil or 1000 g g-1"
 			}
@@ -810,10 +810,10 @@
 			]
 		},
 		"_data": {
+			"_class": "_class_quantity",
+			"_subject": "tree",
+			"_domain": ["pheno"],
 			"_scalar": {
-				"_class": "_class_quantity",
-				"_subject": "tree",
-				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit_name": "per mil or 1000 g g-1",
 				"_valid-range": {
@@ -837,10 +837,10 @@
 			"_description": {"iso_639_3_eng": "Difference between [leaf delta 15N](./chr_pheno_Leaf-delta15N.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
 		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_subject": "tree",
+			"_domain": ["pheno"],
 			"_scalar": {
-				"_class": "_class_quantity_averaged",
-				"_subject": "tree",
-				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit_name": "per mil or 1000 g g-1"
 			}
@@ -864,10 +864,10 @@
 			]
 		},
 		"_data": {
+			"_class": "_class_quantity",
+			"_subject": "tree",
+			"_domain": ["pheno"],
 			"_scalar": {
-				"_class": "_class_quantity",
-				"_subject": "tree",
-				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit_name": "g g-1",
 				"_valid-range": {
@@ -891,10 +891,10 @@
 			"_description": {"iso_639_3_eng": "Difference between [leaf CN ratio](./chr_pheno_Leaf-CN.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
 		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_subject": "tree",
+			"_domain": ["pheno"],
 			"_scalar": {
-				"_class": "_class_quantity_averaged",
-				"_subject": "tree",
-				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit_name": "g g-1"
 			}
@@ -918,10 +918,10 @@
 			]
 		},
 		"_data": {
+			"_class": "_class_quantity",
+			"_subject": "tree",
+			"_domain": ["pheno"],
 			"_scalar": {
-				"_class": "_class_quantity",
-				"_subject": "tree",
-				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit_name": "g cm-3",
 				"_valid-range": {
@@ -945,10 +945,10 @@
 			"_description": {"iso_639_3_eng": "Difference between [wood density](./chr_pheno_WD.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
 		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_subject": "tree",
+			"_domain": ["pheno"],
 			"_scalar": {
-				"_class": "_class_quantity_averaged",
-				"_subject": "tree",
-				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit_name": "g cm-3"
 			}
@@ -972,10 +972,10 @@
 			]
 		},
 		"_data": {
+			"_class": "_class_quantity",
+			"_subject": "tree",
+			"_domain": ["pheno"],
 			"_scalar": {
-				"_class": "_class_quantity",
-				"_subject": "tree",
-				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit_name": "g cm-3",
 				"_valid-range": {
@@ -999,10 +999,10 @@
 			"_description": {"iso_639_3_eng": "Difference between [bark density](./chr_pheno_BD.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
 		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_subject": "tree",
+			"_domain": ["pheno"],
 			"_scalar": {
-				"_class": "_class_quantity_averaged",
-				"_subject": "tree",
-				"_domain": ["pheno"],
 				"_type": "_type_number",
 				"_unit_name": "g cm-3"
 			}

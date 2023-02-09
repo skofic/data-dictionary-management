@@ -13,10 +13,10 @@
 			"_description": {"iso_639_3_eng": "Height above sea level in meters extracted from the Digital Elevation Model. The average is calculated for the GCU area defined with the polygon of GCU boundaries."}
 		},
 		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_domain": ["envi"],
+			"_subject": "stand",
 			"_scalar": {
-				"_class": "_class_quantity_averaged",
-				"_domain": ["envi"],
-				"_subject": "stand",
 				"_type": "_type_number",
 				"_unit": "_unit_length_m",
 				"_valid-range": {
@@ -40,10 +40,10 @@
 			"_description": {"iso_639_3_eng": "Slope generated using the elevation dataset. The average is calculated for the GCU area defined with the polygon of GCU boundaries."}
 		},
 		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_domain": ["envi"],
+			"_subject": "stand",
 			"_scalar": {
-				"_class": "_class_quantity_averaged",
-				"_domain": ["envi"],
-				"_subject": "stand",
 				"_type": "_type_number",
 				"_unit_name": "degrees DMS",
 				"_valid-range": {
@@ -67,10 +67,10 @@
 			"_description": {"iso_639_3_eng": "Aspect generated using the elevation dataset. The average is calculated for the GCU area defined with the polygon of GCU boundaries."}
 		},
 		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_domain": ["envi"],
+			"_subject": "stand",
 			"_scalar": {
-				"_class": "_class_quantity_averaged",
-				"_domain": ["envi"],
-				"_subject": "stand",
 				"_type": "_type_number",
 				"_unit_name": "degrees DMS",
 				"_valid-range": {
@@ -94,11 +94,11 @@
 			"_description": {"iso_639_3_eng": "Monthly average land surface temperature in Kelvin. The monthly average is calculated for the GCU area defined with the polygon of GCU boundaries."}
 		},
 		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_domain": ["envi"],
+			"_subject": "stand",
 			"_array": {
 				"_scalar": {
-					"_class": "_class_quantity_averaged",
-					"_domain": ["envi"],
-					"_subject": "stand",
 					"_type": "_type_number",
 					"_unit_name": "Kelvin"
 				}
@@ -119,10 +119,10 @@
 			"_description": {"iso_639_3_eng": "Maximum monthly land surface temperature in °C. The average of the maximum values of the GCU area is computed for the polygon foot print of GCU boundaries."}
 		},
 		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_domain": ["envi"],
+			"_subject": "stand",
 			"_scalar": {
-				"_class": "_class_quantity_averaged",
-				"_domain": ["envi"],
-				"_subject": "stand",
 				"_type": "_type_number",
 				"_unit_name": "°C"
 			}
@@ -142,10 +142,10 @@
 			"_description": {"iso_639_3_eng": "Average tree height of the GCU in meters. The average is calculated for the GCU area defined with the polygon of GCU boundaries."}
 		},
 		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_domain": ["envi"],
+			"_subject": "stand",
 			"_scalar": {
-				"_class": "_class_quantity_averaged",
-				"_domain": ["envi"],
-				"_subject": "stand",
 				"_type": "_type_number",
 				"_unit": "_unit_length_m"
 			}
@@ -165,10 +165,10 @@
 			"_description": {"iso_639_3_eng": "Average GCU above-ground biomass in t/ha. The average is calculated for the GCU area defined with the polygon of GCU boundaries."}
 		},
 		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_domain": ["envi"],
+			"_subject": "stand",
 			"_scalar": {
-				"_class": "_class_quantity_averaged",
-				"_domain": ["envi"],
-				"_subject": "stand",
 				"_type": "_type_number",
 				"_unit_name": "t/ha"
 			}
@@ -188,10 +188,10 @@
 			"_description": {"iso_639_3_eng": "Monthly average GCU Normalized Difference Vegetation Index. The average is calculated for the GCU area defined with the polygon of GCU boundaries."}
 		},
 		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_domain": ["envi"],
 			"_array": {
 				"_scalar": {
-					"_class": "_class_quantity_averaged",
-					"_domain": ["envi"],
 					"_type": "_type_number"
 				}
 			}
@@ -211,10 +211,10 @@
 			"_description": {"iso_639_3_eng": "Monthly average GCU Leaf Area Index. The average is calculated for the GCU area defined with the polygon of GCU boundaries."}
 		},
 		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_domain": ["envi"],
 			"_array": {
 				"_scalar": {
-					"_class": "_class_quantity_averaged",
-					"_domain": ["envi"],
 					"_type": "_type_number"
 				}
 			}
@@ -234,9 +234,9 @@
 			"_description": {"iso_639_3_eng": "Quantile 90% of the monthly average GCU Leaf Area Index over the GCU Polygon when the polygon is available. If the polygon is not available methods is still to be defined."}
 		},
 		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_domain": ["envi"],
 			"_scalar": {
-				"_class": "_class_quantity_averaged",
-				"_domain": ["envi"],
 				"_type": "_type_number"
 			}
 		}
@@ -255,10 +255,10 @@
 			"_description": {"iso_639_3_eng": "Monthly average GCU Gross Primary Productivity in kg/m2.The average is calculated for the GCU area defined with the polygon of GCU boundaries."}
 		},
 		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_domain": ["envi"],
 			"_array": {
 				"_scalar": {
-					"_class": "_class_quantity_averaged",
-					"_domain": ["envi"],
 					"_type": "_type_number",
 					"_unit_name": "kg/m2"
 				}
@@ -279,9 +279,9 @@
 			"_description": {"iso_639_3_eng": "Average of the annual sum of GCU Gross Primary Productivity in kg/m2.The monthly average is first calculated for the GCU area defined with the polygon of GCU boundaries. Then the sum is realised for all month of a year and divided by the number of year in the time series (2003-2021 here)."}
 		},
 		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_domain": ["envi"],
 			"_scalar": {
-				"_class": "_class_quantity_averaged",
-				"_domain": ["envi"],
 				"_type": "_type_number"
 			}
 		}
@@ -300,10 +300,10 @@
 			"_description": {"iso_639_3_eng": "Monthly average GCU Normalized Difference Water Index. The average is calculated for the GCU area defined with the polygon of GCU boundaries."}
 		},
 		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_domain": ["envi"],
 			"_array": {
 				"_scalar": {
-					"_class": "_class_quantity_averaged",
-					"_domain": ["envi"],
 					"_type": "_type_number"
 				}
 			}
@@ -322,9 +322,9 @@
 			"_definition": {"iso_639_3_eng": "Averaged canopy height iver the polygon in meters."}
 		},
 		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_domain": ["envi"],
 			"_scalar": {
-				"_class": "_class_quantity_averaged",
-				"_domain": ["envi"],
 				"_type": "_type_number",
 				"_unit": "_unit_length_m"
 			}
