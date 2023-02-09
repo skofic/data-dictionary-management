@@ -1,0 +1,587 @@
+[
+	{
+		"service": "TermsInsert",
+		"data": {
+			"_code": {"_lid": "test"},
+			"_info": {
+				"_title": {"iso_639_3_eng": "Test namespace"},
+				"_definition": {"iso_639_3_eng": "This namespace is used for test purposes."}
+			}
+		}
+	},
+	
+	{
+		"service": "TermsInsertMany",
+		"data": [
+			{
+				"_code": {
+					"_nid": "test",
+					"_lid": "enum"
+				},
+				"_info": {
+					"_title": {"iso_639_3_eng": "Test enumeration namespace"},
+					"_definition": {"iso_639_3_eng": "This namespace is used for testing enumerations."}
+				}
+			},
+			{
+				"_code": {
+					"_nid": "test",
+					"_lid": "struct"
+				},
+				"_info": {
+					"_title": {"iso_639_3_eng": "Test structure namespace"},
+					"_definition": {"iso_639_3_eng": "This namespace is used for testing structures."}
+				}
+			},
+			{
+				"_code": {
+					"_nid": "test",
+					"_lid": "property"
+				},
+				"_info": {
+					"_title": {"iso_639_3_eng": "Test property namespace"},
+					"_definition": {"iso_639_3_eng": "This namespace is used for testing descriptors."}
+				}
+			},
+			{
+				"_code": {
+					"_nid": "test",
+					"_lid": "form"
+				},
+				"_info": {
+					"_title": {"iso_639_3_eng": "Test form namespace"},
+					"_definition": {"iso_639_3_eng": "This namespace is used for testing forms."}
+				}
+			},
+			{
+				"_code": {
+					"_nid": "test",
+					"_lid": "section"
+				},
+				"_info": {
+					"_title": {"iso_639_3_eng": "Test section namespace"},
+					"_definition": {"iso_639_3_eng": "This namespace is used for testing sections."}
+				}
+			}
+		]
+	},
+	
+	{
+		"service": "TermsInsertMany",
+		"data": [
+			{
+				"_code": {
+					"_nid": "test_enum",
+					"_lid": "countries"
+				},
+				"_info": {
+					"_title": {"iso_639_3_eng": "Test countries enumeration"},
+					"_definition": {"iso_639_3_eng": "Controlled vocabulary of countries."}
+				}
+			},
+			{
+				"_code": {
+					"_nid": "test_enum",
+					"_lid": "Europe"
+				},
+				"_info": {
+					"_title": {"iso_639_3_eng": "Test european countries enumeration"},
+					"_definition": {"iso_639_3_eng": "Controlled vocabulary of european countries."}
+				}
+			},
+			{
+				"_code": {
+					"_nid": "test_enum",
+					"_lid": "Italy"
+				},
+				"_info": {
+					"_title": {"iso_639_3_eng": "Italy"},
+					"_definition": {"iso_639_3_eng": "This term represents Italy."}
+				}
+			},
+			{
+				"_code": {
+					"_nid": "test_enum",
+					"_lid": "France"
+				},
+				"_info": {
+					"_title": {"iso_639_3_eng": "France"},
+					"_definition": {"iso_639_3_eng": "This term represents France."}
+				}
+			},
+			{
+				"_code": {
+					"_nid": "test_enum",
+					"_lid": "Canada"
+				},
+				"_info": {
+					"_title": {"iso_639_3_eng": "Canada"},
+					"_definition": {"iso_639_3_eng": "This term represents Canada."}
+				}
+			},
+			{
+				"_code": {
+					"_nid": "test_enum",
+					"_lid": "Zaire"
+				},
+				"_info": {
+					"_title": {"iso_639_3_eng": "Zaire"},
+					"_definition": {"iso_639_3_eng": "This term represents Zaire (obsolete)."}
+				}
+			},
+			{
+				"_code": {
+					"_nid": "test_enum",
+					"_lid": "Congo"
+				},
+				"_info": {
+					"_title": {"iso_639_3_eng": "Congo"},
+					"_definition": {"iso_639_3_eng": "This term represents Congo (was Zaire)."}
+				}
+			},
+			{
+				"_code": {
+					"_nid": "test_form",
+					"_lid": "user"
+				},
+				"_info": {
+					"_title": {"iso_639_3_eng": "User form"},
+					"_definition": {"iso_639_3_eng": "Form for filling user information."}
+				}
+			},
+			{
+				"_code": {
+					"_nid": "test_section",
+					"_lid": "identifiers"
+				},
+				"_info": {
+					"_title": {"iso_639_3_eng": "IDENTIFIERS"},
+					"_definition": {"iso_639_3_eng": "This section contains user identifiers."}
+				}
+			},
+			{
+				"_code": {
+					"_nid": "test_section",
+					"_lid": "names"
+				},
+				"_info": {
+					"_title": {"iso_639_3_eng": "NAMES"},
+					"_definition": {"iso_639_3_eng": "This section contains user names."}
+				}
+			},
+			{
+				"_code": {
+					"_nid": "test_section",
+					"_lid": "countries"
+				},
+				"_info": {
+					"_title": {"iso_639_3_eng": "COUNTRIES"},
+					"_definition": {"iso_639_3_eng": "This section contains user countries."}
+				}
+			},
+			{
+				"_code": {
+					"_nid": "test_property",
+					"_lid": "id"
+				},
+				"_info": {
+					"_title": {"iso_639_3_eng": "Id"},
+					"_definition": {"iso_639_3_eng": "User ID."}
+				},
+				"_data": {
+					"_scalar": {"_type": "_type_string"}
+				}
+			},
+			{
+				"_code": {
+					"_nid": "test_property",
+					"_lid": "ssn"
+				},
+				"_info": {
+					"_title": {"iso_639_3_eng": "SSN"},
+					"_definition": {"iso_639_3_eng": "Social Security Number."}
+				},
+				"_data": {
+					"_scalar": {"_type": "_type_string"}
+				}
+			},
+			{
+				"_code": {
+					"_nid": "test_property",
+					"_lid": "first-name"
+				},
+				"_info": {
+					"_title": {"iso_639_3_eng": "Name"},
+					"_definition": {"iso_639_3_eng": "Given name."}
+				},
+				"_data": {
+					"_scalar": {"_type": "_type_string"}
+				}
+			},
+			{
+				"_code": {
+					"_nid": "test_property",
+					"_lid": "last-name"
+				},
+				"_info": {
+					"_title": {"iso_639_3_eng": "Surname"},
+					"_definition": {"iso_639_3_eng": "Family name."}
+				},
+				"_data": {
+					"_scalar": {"_type": "_type_string"}
+				}
+			},
+			{
+				"_code": {
+					"_nid": "test_property",
+					"_lid": "since"
+				},
+				"_info": {
+					"_title": {"iso_639_3_eng": "Date of establishment"},
+					"_definition": {"iso_639_3_eng": "Since when has nationality."}
+				},
+				"_data": {
+					"_scalar": {"_type": "_type_string_date"}
+				}
+			},
+			{
+				"_code": {
+					"_nid": "test_struct",
+					"_lid": "country"
+				},
+				"_info": {
+					"_title": {"iso_639_3_eng": "Country structure"},
+					"_definition": {"iso_639_3_eng": "Structure type for country object."}
+				}
+			},
+			{
+				"_code": {
+					"_nid": "test_struct",
+					"_lid": "european"
+				},
+				"_info": {
+					"_title": {"iso_639_3_eng": "European country structure"},
+					"_definition": {"iso_639_3_eng": "Structure type for european country object."}
+				}
+			},
+			{
+				"_code": {
+					"_nid": "test_struct",
+					"_lid": "countries"
+				},
+				"_info": {
+					"_title": {"iso_639_3_eng": "Countries structure"},
+					"_definition": {"iso_639_3_eng": "Structure type for countries object."}
+				}
+			}
+		]
+	},
+	
+	{
+		"service": "TermsInsertMany",
+		"data": [
+			{
+				"_code": {
+					"_nid": "test_property",
+					"_lid": "nationality"
+				},
+				"_info": {
+					"_title": {"iso_639_3_eng": "Test nationality structure"},
+					"_definition": {"iso_639_3_eng": "Nationality object descriptor."}
+				},
+				"_data": {
+					"_scalar": {
+						"_type": "_type_object",
+						"_kind": ["test_struct_countries"]
+					}
+				}
+			},
+			{
+				"_code": {
+					"_nid": "test_property",
+					"_lid": "european"
+				},
+				"_info": {
+					"_title": {"iso_639_3_eng": "Test european structure"},
+					"_definition": {"iso_639_3_eng": "European object descriptor."}
+				},
+				"_data": {
+					"_scalar": {
+						"_type": "_type_object",
+						"_kind": ["test_struct_european"]
+					}
+				}
+			},
+			{
+				"_code": {
+					"_nid": "test_property",
+					"_lid": "country"
+				},
+				"_info": {
+					"_title": {"iso_639_3_eng": "Country"},
+					"_definition": {"iso_639_3_eng": "Country."}
+				},
+				"_data": {
+					"_scalar": {
+						"_type": "_type_string_enum",
+						"_kind": ["test_enum_countries"]
+					}
+				}
+			},
+			{
+				"_code": {
+					"_nid": "test_property",
+					"_lid": "european-country"
+				},
+				"_info": {
+					"_title": {"iso_639_3_eng": "European"},
+					"_definition": {"iso_639_3_eng": "European country."}
+				},
+				"_data": {
+					"_scalar": {
+						"_type": "_type_string_enum",
+						"_kind": ["test_enum_Europe"]
+					}
+				}
+			},
+			{
+				"_code": {
+					"_nid": "test_property",
+					"_lid": "nested-data-section-array"
+				},
+				"_info": {
+					"_title": {"iso_639_3_eng": "Nested array data section"},
+					"_definition": {"iso_639_3_eng": "Descriptor featuring a deeply nested array data section."}
+				},
+				"_data": {
+					"_array": {
+						"_array": {
+							"_scalar": {
+								"_type": "_type_string_enum",
+								"_kind": ["test_enum_Europe"]
+							}
+						}
+					}
+				}
+			},
+			{
+				"_code": {
+					"_nid": "test_property",
+					"_lid": "nested-data-section-set"
+				},
+				"_info": {
+					"_title": {"iso_639_3_eng": "Nested set data section"},
+					"_definition": {"iso_639_3_eng": "Descriptor featuring a deeply nested set data section."}
+				},
+				"_data": {
+					"_array": {
+						"_set": {
+							"_set_scalar": {
+								"_set_type": "_type_string_enum",
+								"_kind": ["test_enum_Europe"]
+							}
+						}
+					}
+				}
+			},
+			{
+				"_code": {
+					"_nid": "test_property",
+					"_lid": "nested-data-section-dict"
+				},
+				"_info": {
+					"_title": {"iso_639_3_eng": "Nested dictionary data section"},
+					"_definition": {"iso_639_3_eng": "Descriptor featuring a deeply nested dictionary data section."}
+				},
+				"_data": {
+					"_dict": {
+						"_dict_key": {
+							"_class": "_class_category",
+							"_type_key": "_type_string_enum",
+							"_kind": [
+								"iso_3166_1",
+								"iso_3166_3"
+							]
+						},
+						"_dict_value": {
+							"_dict": {
+								"_dict_key": {
+									"_class": "_class_category",
+									"_type_key": "_type_string_enum",
+									"_kind": ["iso_639_3"]
+								},
+								"_dict_value": {
+									"_class": "_class_category",
+									"_array": {
+										"_scalar": {
+											"_type": "_type_string_enum",
+											"_kind": ["iso_3166_1"]
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		]
+	},
+	
+	{
+		"service": "GraphAddEnum",
+		"data": {
+			"root": "test_enum_countries",
+			"parent": "test_enum_countries",
+			"items": [
+				"test_enum_Italy",
+				"test_enum_France",
+				"test_enum_Canada"
+			]
+		}
+	},
+	
+	{
+		"service": "GraphAddBridge",
+		"data": {
+			"root": "test_enum_countries",
+			"parent": "test_enum_countries",
+			"items": ["test_enum_Zaire"]
+		}
+	},
+	
+	{
+		"service": "GraphAddEnum",
+		"data": {
+			"root": "test_enum_countries",
+			"parent": "test_enum_Zaire",
+			"items": ["test_enum_Congo"]
+		}
+	},
+	
+	{
+		"service": "GraphAddBridge",
+		"data": {
+			"root": "test_enum_Europe",
+			"parent": "test_enum_Europe",
+			"items": ["test_enum_countries"]
+		}
+	},
+	
+	{
+		"service": "GraphAddEnum",
+		"data": {
+			"root": "test_enum_Europe",
+			"parent": "test_enum_countries",
+			"items": [
+				"test_enum_Italy",
+				"test_enum_France"
+			]
+		}
+	},
+	
+	{
+		"service": "GraphAddSection",
+		"data": {
+			"root": "test_form_user",
+			"parent": "test_form_user",
+			"items": [
+				"test_section_identifiers",
+				"test_section_names",
+				"test_section_countries"
+			]
+		}
+	},
+	
+	{
+		"service": "GraphAddField",
+		"data": {
+			"root": "test_form_user",
+			"parent": "test_section_identifiers",
+			"items": [
+				"test_property_id",
+				"test_property_ssn"
+			]
+		}
+	},
+	
+	{
+		"service": "GraphAddField",
+		"data": {
+			"root": "test_form_user",
+			"parent": "test_section_names",
+			"items": [
+				"test_property_first-name",
+				"test_property_last-name"
+			]
+		}
+	},
+	
+	{
+		"service": "GraphAddField",
+		"data": {
+			"root": "test_form_user",
+			"parent": "test_property_nationality",
+			"items": [
+				"test_property_country",
+				"test_property_since"
+			]
+		}
+	},
+	
+	{
+		"service": "GraphAddField",
+		"data": {
+			"root": "test_form_user",
+			"parent": "test_property_european",
+			"items": [
+				"test_property_european-country",
+				"test_property_since"
+			]
+		}
+	},
+	
+	{
+		"service": "GraphAddSection",
+		"data": {
+			"root": "test_form_user",
+			"parent": "test_section_countries",
+			"items": [
+				"test_property_nationality",
+				"test_property_european"
+			]
+		}
+	},
+	
+	{
+		"service": "GraphAddProperty",
+		"data": {
+			"parent": "test_struct_countries",
+			"items": [
+				"test_property_nationality",
+				"test_property_european"
+			]
+		}
+	},
+	
+	{
+		"service": "GraphAddProperty",
+		"data": {
+			"parent": "test_struct_country",
+			"items": [
+				"test_property_country",
+				"test_property_since"
+			]
+		}
+	},
+	
+	{
+		"service": "GraphAddProperty",
+		"data": {
+			"parent": "test_property_european",
+			"items": [
+				"test_property_european-country",
+				"test_property_since"
+			]
+		}
+	}
+]

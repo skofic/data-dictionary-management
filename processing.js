@@ -120,6 +120,80 @@ async function ProcessIsoStandards(db) {
 } // ProcessIsoStandards()
 
 /**
+ * Process test data
+ * This function will add test data to the database using services.
+ * @param db: Database connection.
+ * @return {Promise<String>}: Success or failure message.
+ */
+async function ProcessTestData(db)
+{
+	//
+	// Check if we want to insert test data.
+	//
+	if(kPriv.user.flag.do_test_data)
+	{
+		//
+		// Login.
+		//
+		const cookie =
+			await ServiceLogin(
+				db,
+				kPriv.user.db.services_user,
+				kPriv.user.db.services_pass
+			)
+
+		//
+		// Iterate test data.
+		//
+		console.log(`==> Processing test data`)
+		for(const block of JSON.parse(fs.readFileSync('test_data.json')))
+		{
+			//
+			// Parse by service.
+			//
+			switch(block.service)
+			{
+				case "TermsInsert":			// Insert single term.
+					console.log('  • /terms/insert')
+					await ServiceInsertTerm(cookie, block.data)
+					break
+
+				case "TermsInsertMany":		// Insert multiple terms.
+					console.log('  • /terms/insert/many')
+					await ServiceInsertTerms(cookie, block.data)
+					break
+
+				case "GraphAddEnum":		// Add enumerations.
+					console.log('  • /graph/add/enum')
+					await ServiceInsertEnum(cookie,block.data)
+					break
+
+				case "GraphAddField":		// Add fields.
+					console.log('  • /graph/add/field')
+					await ServiceInsertField(cookie,block.data)
+					break
+
+				case "GraphAddProperty":	// Add properties.
+					console.log('  • /graph/add/property')
+					await ServiceInsertProperty(cookie,block.data)
+					break
+
+				case "GraphAddSection":		// Add sections.
+					console.log('  • /graph/add/section')
+					await ServiceInsertSection(cookie,block.data)
+					break
+
+				case "GraphAddBridge":		// Add bridges.
+					console.log('  • /graph/add/bridge')
+					await ServiceInsertBridge(cookie,block.data)
+					break
+			}
+		}
+	}
+
+} // ProcessTestData()
+
+/**
  * Validate documents
  * This function will iterate all terms and edges and call the validation service.
  * @param db: Database connection.
@@ -145,38 +219,14 @@ async function ValidateDocuments(db)
 	const url = `${host}/_db/${database}/dict/check/objects`
 
 	//
-	// Create transport.
-	//
-	const transport = axios.create({
-		withCredentials: true
-	})
-
-	//
 	// Login.
 	//
-	console.log(`==> Logging in`)
-	const authenticated =
-		await axios({
-			"method": "POST",
-			"url": `${host}/_db/${database}/dict/auth/login`,
-			"headers": {
-				"Content-Type": "application/json; charset=utf-8"
-			},
-			"data": {
-				"username": kPriv.user.db.services_user,
-				"password": kPriv.user.db.services_pass
-			}
-		})
-
-	if(authenticated.status !== 200) {
-		throw Error(`(${authenticated.status}) - ${authenticated.statusText}`)
-	}
-
-	//
-	// Save cookie.
-	//
-	const parsed = authenticated.headers['set-cookie'].match(/^FOXXSID=([a-z0-9]+);.+,FOXXSID.sig=([a-z0-9]+);/)
-	const cookie = `FOXXSID=${parsed[1]}; FOXXSID.sig=${parsed[2]}`
+	const cookie =
+		await ServiceLogin(
+			db,
+			kPriv.user.db.services_user,
+			kPriv.user.db.services_pass
+		)
 
 	//
 	// Get cursor.
@@ -187,6 +237,13 @@ async function ValidateDocuments(db)
 		LIMIT ${page_records}, ${kPriv.user.db.page_records}
 		RETURN term
 	`)
+
+	//
+	// Create transport.
+	//
+	const transport = axios.create({
+		withCredentials: true
+	})
 
 	//
 	// Turn pages.
@@ -3260,9 +3317,397 @@ function MakeHandleReference(theKey, theCollection = null)
 
 } // MakeHandleReference()
 
+/**
+ * Login
+ *
+ * This function will validate the provided credentials,
+ * it will return the cookie on success,
+ * or throw an exception on eror.
+ *
+ * @param db: Database connection.
+ * @param theUser: Username.
+ * @param thePass: User password.
+ * @return {Promise<String>}: Cookie.
+ */
+async function ServiceLogin(db, theUser, thePass)
+{
+
+	//
+	// Init local storage.
+	//
+	const host = kPriv.user.db.host
+	const database = kPriv.user.db.name
+	const url = `${host}/_db/${database}/dict/auth/login`
+
+	//
+	// Login.
+	//
+	console.log(`==> Logging in`)
+	const authenticated =
+		await axios({
+			"method": "POST",
+			"url": url,
+			"headers": {
+				"Content-Type": "application/json; charset=utf-8"
+			},
+			"data": {
+				"username": theUser,
+				"password": thePass
+			}
+		})
+
+	if(authenticated.status !== 200) {
+		throw Error(`(${authenticated.status}) - ${authenticated.statusText}`)
+	}
+
+	//
+	// Save cookie.
+	//
+	const parsed = authenticated.headers['set-cookie'].match(/^FOXXSID=([a-z0-9]+);.+,FOXXSID.sig=([a-z0-9]+);/)
+	const cookie = `FOXXSID=${parsed[1]}; FOXXSID.sig=${parsed[2]}`
+
+	return cookie																// ==>
+
+} // ServiceLogin()
+
+/**
+ * Insert term
+ *
+ * This function will insert the provided term
+ * using the provided authentication cookie.
+ *
+ * @param theCookie {String}: Cookie.
+ * @param theData {Object}: Service payload.
+ */
+async function ServiceInsertTerm(theCookie, theData)
+{
+
+	//
+	// Init local storage.
+	//
+	const host = kPriv.user.db.host
+	const database = kPriv.user.db.name
+	const url = `${host}/_db/${database}/dict/terms/insert`
+
+	//
+	// Create transport.
+	//
+	const transport = axios.create({
+		withCredentials: true
+	})
+
+	//
+	// Validate.
+	//
+	const response =
+		await transport.post(
+			url,
+			theData,
+			{
+				withCredentials: true,
+				headers: {
+					'Content-Type': 'application/json; charset=utf-8',
+					Cookie: theCookie
+				}
+			}
+		)
+
+	if(response.status !== 200) {
+		throw Error(`(${response.status}) - ${response.statusText}`)
+	}
+
+} // ServiceInsertTerm()
+
+/**
+ * Insert terms
+ *
+ * This function will insert the provided list of terms
+ * using the provided authentication cookie.
+ *
+ * @param theCookie {String}: Cookie.
+ * @param theData {Object}: Service payload.
+ */
+async function ServiceInsertTerms(theCookie, theData)
+{
+
+	//
+	// Init local storage.
+	//
+	const host = kPriv.user.db.host
+	const database = kPriv.user.db.name
+	const url = `${host}/_db/${database}/dict/terms/insert/many`
+
+	//
+	// Create transport.
+	//
+	const transport = axios.create({
+		withCredentials: true
+	})
+
+	//
+	// Validate.
+	//
+	const response =
+		await transport.post(
+			url,
+			theData,
+			{
+				withCredentials: true,
+				headers: {
+					'Content-Type': 'application/json; charset=utf-8',
+					Cookie: theCookie
+				}
+			}
+		)
+
+	if(response.status !== 200) {
+		throw Error(`(${response.status}) - ${response.statusText}`)
+	}
+
+} // ServiceInsertTerms()
+
+/**
+ * Insert enumerations
+ *
+ * This function will insert the provided list of enumerations
+ * using the provided authentication cookie.
+ *
+ * @param theCookie {String}: Cookie.
+ * @param theData {Object}: Service payload.
+ */
+async function ServiceInsertEnum(theCookie, theData)
+{
+
+	//
+	// Init local storage.
+	//
+	const host = kPriv.user.db.host
+	const database = kPriv.user.db.name
+	const url = `${host}/_db/${database}/dict/graph/add/enum`
+
+	//
+	// Create transport.
+	//
+	const transport = axios.create({
+		withCredentials: true
+	})
+
+	//
+	// Validate.
+	//
+	const response =
+		await transport.post(
+			url,
+			theData,
+			{
+				withCredentials: true,
+				headers: {
+					'Content-Type': 'application/json; charset=utf-8',
+					Cookie: theCookie
+				}
+			}
+		)
+
+	if(response.status !== 200) {
+		throw Error(`(${response.status}) - ${response.statusText}`)
+	}
+
+} // ServiceInsertEnum()
+
+/**
+ * Insert fields
+ *
+ * This function will insert the provided list of fields
+ * using the provided authentication cookie.
+ *
+ * @param theCookie {String}: Cookie.
+ * @param theData {Object}: Service payload.
+ */
+async function ServiceInsertField(theCookie, theData)
+{
+
+	//
+	// Init local storage.
+	//
+	const host = kPriv.user.db.host
+	const database = kPriv.user.db.name
+	const url = `${host}/_db/${database}/dict/graph/add/field`
+
+	//
+	// Create transport.
+	//
+	const transport = axios.create({
+		withCredentials: true
+	})
+
+	//
+	// Validate.
+	//
+	const response =
+		await transport.post(
+			url,
+			theData,
+			{
+				withCredentials: true,
+				headers: {
+					'Content-Type': 'application/json; charset=utf-8',
+					Cookie: theCookie
+				}
+			}
+		)
+
+	if(response.status !== 200) {
+		throw Error(`(${response.status}) - ${response.statusText}`)
+	}
+
+} // ServiceInsertField()
+
+/**
+ * Insert properties
+ *
+ * This function will insert the provided list of properties
+ * using the provided authentication cookie.
+ *
+ * @param theCookie {String}: Cookie.
+ * @param theData {Object}: Service payload.
+ */
+async function ServiceInsertProperty(theCookie, theData)
+{
+
+	//
+	// Init local storage.
+	//
+	const host = kPriv.user.db.host
+	const database = kPriv.user.db.name
+	const url = `${host}/_db/${database}/dict/graph/add/property`
+
+	//
+	// Create transport.
+	//
+	const transport = axios.create({
+		withCredentials: true
+	})
+
+	//
+	// Validate.
+	//
+	const response =
+		await transport.post(
+			url,
+			theData,
+			{
+				withCredentials: true,
+				headers: {
+					'Content-Type': 'application/json; charset=utf-8',
+					Cookie: theCookie
+				}
+			}
+		)
+
+	if(response.status !== 200) {
+		throw Error(`(${response.status}) - ${response.statusText}`)
+	}
+
+} // ServiceInsertProperty()
+
+/**
+ * Insert sections
+ *
+ * This function will insert the provided list of sections
+ * using the provided authentication cookie.
+ *
+ * @param theCookie {String}: Cookie.
+ * @param theData {Object}: Service payload.
+ */
+async function ServiceInsertSection(theCookie, theData)
+{
+
+	//
+	// Init local storage.
+	//
+	const host = kPriv.user.db.host
+	const database = kPriv.user.db.name
+	const url = `${host}/_db/${database}/dict/graph/add/section`
+
+	//
+	// Create transport.
+	//
+	const transport = axios.create({
+		withCredentials: true
+	})
+
+	//
+	// Validate.
+	//
+	const response =
+		await transport.post(
+			url,
+			theData,
+			{
+				withCredentials: true,
+				headers: {
+					'Content-Type': 'application/json; charset=utf-8',
+					Cookie: theCookie
+				}
+			}
+		)
+
+	if(response.status !== 200) {
+		throw Error(`(${response.status}) - ${response.statusText}`)
+	}
+
+} // ServiceInsertSection()
+
+/**
+ * Insert bridges
+ *
+ * This function will insert the provided list of bridges
+ * using the provided authentication cookie.
+ *
+ * @param theCookie {String}: Cookie.
+ * @param theData {Object}: Service payload.
+ */
+async function ServiceInsertBridge(theCookie, theData)
+{
+
+	//
+	// Init local storage.
+	//
+	const host = kPriv.user.db.host
+	const database = kPriv.user.db.name
+	const url = `${host}/_db/${database}/dict/graph/add/bridge`
+
+	//
+	// Create transport.
+	//
+	const transport = axios.create({
+		withCredentials: true
+	})
+
+	//
+	// Validate.
+	//
+	const response =
+		await transport.post(
+			url,
+			theData,
+			{
+				withCredentials: true,
+				headers: {
+					'Content-Type': 'application/json; charset=utf-8',
+					Cookie: theCookie
+				}
+			}
+		)
+
+	if(response.status !== 200) {
+		throw Error(`(${response.status}) - ${response.statusText}`)
+	}
+
+} // ServiceInsertBridge()
+
 
 module.exports = {
-	ProcessDictionaryFiles, ProcessIsoStandards,
-	ValidateTerms, ValidateEdges, ValidateTopos,
+	ProcessDictionaryFiles, ProcessIsoStandards, ProcessTestData,
 	ValidateDocuments
 }
