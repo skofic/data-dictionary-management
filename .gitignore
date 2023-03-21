@@ -122,6 +122,7 @@ dbCredentials.oasis.json
 dbCredentials.newtvision.json
 dbCredentials.skobo.json
 dbCredentials.localhost.json
+dbCredentials.local.json
 
 ###
 # EXPORT DIRECTORY
