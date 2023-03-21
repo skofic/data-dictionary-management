@@ -332,6 +332,26 @@
 	{
 		"_code": {
 			"_nid": "std",
+			"_lid": "time",
+			"_gid": "std_timestamp",
+			"_pid": ["TimeMeasure"],
+			"_aid": ["timestamp"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Timestamp"},
+			"_definition": {"iso_639_3_eng": "Date and precise time of event, observation, measurement or sampling."},
+			"_description": {"iso_639_3_eng": "The timestamp is expressed as an integer value representing the standard UNIX timestamp. This value is required only if the time of day or a very precise moment in time is required to be recorded."}
+		},
+		"_data": {
+			"_class": "_class_time",
+			"_scalar": {
+				"_type": "_type_number_timestamp"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "std",
 			"_lid": "date",
 			"_gid": "std_date",
 			"_pid": ["DateMeasure"],
@@ -354,6 +374,7 @@
 			"_nid": "std_date",
 			"_lid": "submission",
 			"_gid": "std_date_submission",
+			"_pid": ["DateSubmission"],
 			"_aid": ["submission"]
 		},
 		"_info": {
