@@ -333,9 +333,9 @@
 		"_code": {
 			"_nid": "std",
 			"_lid": "time",
-			"_gid": "std_timestamp",
+			"_gid": "std_time",
 			"_pid": ["TimeMeasure"],
-			"_aid": ["timestamp"]
+			"_aid": ["time"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Timestamp"},
@@ -365,7 +365,7 @@
 		"_data": {
 			"_class": "_class_time",
 			"_scalar": {
-				"_type": "_type_string"
+				"_type": "_type_string_date"
 			}
 		}
 	},
