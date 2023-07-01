@@ -1,0 +1,29 @@
+resolution				==>	std_span
+"day"					==> "std_date_span_day"
+"month"					==> "std_date_span_month"
+"year"					==> "std_date_span_year"
+descriptors				==> std_terms
+GeometryID				==> geo_shape_id
+bounds					==> geo_shape_bounds
+area					==> geo_shape_area
+elevation				==> geo_shape_elevation			<== chr_envi_AvElevation
+slope					==> geo_shape_slope				<== chr_envi_AvSlope
+aspect					==> geo_shape_aspect			<== chr_envi_AvAspect
+
+
+{
+  "geo_shape": {
+    "coordinates": [],
+    "type": "Polygon"
+  },
+  "geo_shape_bounds": {
+    "coordinates": [],
+    "geodesic": false,
+    "type": "Polygon"
+  },
+  "geo_shape_area": 780598.1984649139,
+  "geo_shape_elevation": 539.1946309886245,
+  "geo_shape_elevation_sd": 43.787356461448134,
+  "geo_shape_slope": 8.732145340627802,
+  "geo_shape_aspect": 150.08365459592025
+}

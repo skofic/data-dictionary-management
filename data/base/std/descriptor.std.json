@@ -371,6 +371,30 @@
 	},
 	{
 		"_code": {
+			"_nid": "std",
+			"_lid": "month",
+			"_gid": "std_month",
+			"_pid": ["month"],
+			"_aid": ["month"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Month"},
+			"_definition": {"iso_639_3_eng": "Month as month number: 1 to 12."},
+			"_description": {"iso_639_3_eng": "This value indicates a specific month, it is aìn integer value with a range from 1, January, to 12, December."}
+		},
+		"_data": {
+			"_class": "_class_time",
+			"_scalar": {
+				"_type": "_type_integer",
+				"_valid-range": {
+					"_min-range-inclusive": 1,
+					"_max-range-inclusive": 12
+				}
+			}
+		}
+	},
+	{
+		"_code": {
 			"_nid": "std_date",
 			"_lid": "submission",
 			"_gid": "std_date_submission",
@@ -386,6 +410,47 @@
 			"_class": "_class_time",
 			"_scalar": {
 				"_type": "_type_string"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "std_date",
+			"_lid": "span",
+			"_gid": "std_date_span",
+			"_aid": ["span"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Span"},
+			"_definition": {"iso_639_3_eng": "Time span of event, observation, measurement or sampling."},
+			"_description": {"iso_639_3_eng": "This categorical descriptor is used to indicate a standard time interval, such as a day, month or year. It is paired with aggregated values, such as averages, to indicate the time interval of the aggregation."}
+		},
+		"_data": {
+			"_class": "_class_time",
+			"_scalar": {
+				"_type": "_type_string_enum",
+				"_kind": ["std_date_span"]
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "std",
+			"_lid": "terms",
+			"_gid": "std_terms",
+			"_aid": ["terms"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Terms"},
+			"_definition": {"iso_639_3_eng": "List of related terms."},
+			"_description": {"iso_639_3_eng": "This is a collection of references to term objects, which may be terms of any kind."}
+		},
+		"_data": {
+			"_class": "_class_identifier",
+			"_set": {
+				"_set_scalar": {
+					"_set_type": "_type_string_key"
+				}
 			}
 		}
 	}

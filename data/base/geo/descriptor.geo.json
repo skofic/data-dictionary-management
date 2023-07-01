@@ -36,7 +36,9 @@
 			"_class": "_class_category",
 			"_scalar": {
 				"_type": "_type_string_enum",
-				"_kind": ["geo_ellipsoids"]
+				"_kind": [
+					"geo_ellipsoids"
+				]
 			}
 		}
 	},
@@ -130,6 +132,179 @@
 			"_class": "_class_quantity",
 			"_scalar": {
 				"_type": "_type_integer"
+			}
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "geo",
+			"_lid": "shape",
+			"_gid": "geo_shape",
+			"_aid": ["shape"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Geographic shape"},
+			"_definition": {"iso_639_3_eng": "GeoJSON geometry describing a geographic feature."},
+			"_description": {"iso_639_3_eng": "This descriptor can be used to define the geometry of a geographic feature. The value must be a [GeoJSON](https://geojson.org) `geometry` structure."}
+		},
+		"_data": {
+			"_scalar": {
+				"_type": "_type_object_geo-json"
+			}
+		}
+	},	
+	{
+		"_code": {
+			"_nid": "geo_shape",
+			"_lid": "id",
+			"_gid": "geo_shape_id",
+			"_pid": ["GeometryID"]
+			"_aid": ["id"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Geometry identifier"},
+			"_definition": {"iso_639_3_eng": "Unique identifier of a shape or geometry."},
+			"_description": {"iso_639_3_eng": "This descriptor should be the unique reference of a geometry. The value must be the *unique key*, [_key](_key.md), of a document holding a `geometry` property which is a [GeoJSON](https://geojson.org) `geometry` property."}
+		},
+		"_data": {
+			"_class": "_class_identifier",
+			"_scalar": {
+				"_type": "_type_string_key"
+			}
+		}
+	},	
+	{
+		"_code": {
+			"_nid": "geo_shape",
+			"_lid": "area",
+			"_gid": "geo_shape_area",
+			"_pid": ["area"]
+			"_aid": ["area"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Geometry area"},
+			"_definition": {"iso_639_3_eng": "Total area of shape or geometry."},
+			"_description": {"iso_639_3_eng": "This descriptor represents the total area of a geographic feature, the value is represented in square meters."}
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit": "_unit_area_m"
+			}
+		}
+	},	
+	{
+		"_code": {
+			"_nid": "geo_shape",
+			"_lid": "elevation",
+			"_gid": "geo_shape_elevation",
+			"_pid": ["elevation"]
+			"_aid": ["elevation"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Geometry average elevation"},
+			"_definition": {"iso_639_3_eng": "Mean height above sea level of shape or geometry."},
+			"_description": {"iso_639_3_eng": "Elevation represents the height above sea level of a geographic feature, it is represented in meters and indicates the average for the whole geographic feature."}
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit": "_unit_length_m",
+				"_valid-range": {
+					"_min-range-inclusive": -420.0,
+					"_max-range-inclusive": 8848.0
+				}
+			}
+		}
+	},	
+	{
+		"_code": {
+			"_nid": "geo_shape_elevation",
+			"_lid": "sd",
+			"_gid": "geo_shape_elevation_sd",
+			"_aid": ["sd"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Geometry elevation standard deviation"},
+			"_definition": {"iso_639_3_eng": "Standard deviation of height above sea level for the whole shape or geometry."}
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit": "_unit_length_m"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "geo_shape",
+			"_lid": "slope",
+			"_gid": "geo_shape_slope",
+			"_pid": ["slope"]
+			"_aid": ["slope"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Geometry average slope"},
+			"_definition": {"iso_639_3_eng": "Slope generated using the elevation dataset. The average is calculated for the shape or geometry."},
+			"_description": {"iso_639_3_eng": "The slope represents the rate of change of elevation for each digital elevation model (DEM) pixel, measured in degrees of a geographic feature, this descriptor indicates the average for the whole geographic feature."}
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit_name": "degrees",
+				"_valid-range": {
+					"_min-range-inclusive": 0.0,
+					"_max-range-inclusive": 90.0
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "geo_shape",
+			"_lid": "aspect",
+			"_gid": "geo_shape_aspect",
+			"_pid": ["aspect"]
+			"_aid": ["aspect"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Geometry average aspect"},
+			"_definition": {"iso_639_3_eng": "Aspect generated using the elevation dataset. The average is calculated for the shape or geometry."},
+			"_description": {"iso_639_3_eng": "Aspect identifies the downslope direction of the maximum rate of change in value from each pixel to its neighbors, it can be thought of as the slope direction. The value represents the average for the whole geographic feature"}
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit_name": "degrees",
+				"_valid-range": {
+					"_min-range-inclusive": 0.0,
+					"_max-range-inclusive": 360.0
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "geo_shape",
+			"_lid": "bounds",
+			"_gid": "geo_shape_bounds",
+			"_pid": ["bounds"]
+			"_aid": ["bounds"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Geometry bounds"},
+			"_definition": {"iso_639_3_eng": "A GeoJSON geometry enclosing a shape."},
+			"_description": {"iso_639_3_eng": "This descriptor can be used to provide a frame for another shape, it will generally be a polygon that encloses one or more shapes including an optional buffer, these shapes will typically be the [geo_shape](geo_shape.md) property of the current object. The value must be a [GeoJSON](https://geojson.org) `geometry` structure."}
+		},
+		"_data": {
+			"_scalar": {
+				"_type": "_type_object_geo-json"
 			}
 		}
 	}

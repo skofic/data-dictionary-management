@@ -1,0 +1,290 @@
+[
+	{
+		"_code": {
+			"_nid": "std_date",
+			"_lid": "span",
+			"_gid": "std_date_span",
+			"_aid": ["span"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Span"},
+			"_definition": {"iso_639_3_eng": "Time span of event, observation, measurement or sampling."},
+			"_description": {"iso_639_3_eng": "This categorical descriptor is used to indicate a standard time interval, such as a day, month or year. It is paired with aggregated values, such as averages, to indicate the time interval of the aggregation."}
+		},
+		"_data": {
+			"_class": "_class_time",
+			"_scalar": {
+				"_type": "_type_string_enum",
+				"_kind": ["std_date_span"]
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "std",
+			"_lid": "terms",
+			"_gid": "std_terms",
+			"_aid": ["terms"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Terms"},
+			"_definition": {"iso_639_3_eng": "List of related terms."},
+			"_description": {"iso_639_3_eng": "This is a collection of references to term objects, which may be terms of any kind."}
+		},
+		"_data": {
+			"_class": "_class_identifier",
+			"_set": {
+				"_set_scalar": {
+					"_set_type": "_type_string_key"
+				}
+			}
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "std_date_span",
+			"_lid": "day",
+			"_gid": "std_date_span_day",
+			"_aid": ["day"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Day"},
+			"_definition": {"iso_639_3_eng": "The time span of a day."},
+			"_description": {"iso_639_3_eng": "The category describes a specific day time span. It may be also used as a container for day data."}
+		},
+		"_data": {
+			"_array": {}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "std_date_span",
+			"_lid": "week",
+			"_gid": "std_date_span_week",
+			"_aid": ["week"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Week"},
+			"_definition": {"iso_639_3_eng": "The time span of a week."},
+			"_description": {"iso_639_3_eng": "The category describes a specific week time span. It may be also used as a container for week data."}
+		},
+		"_data": {
+			"_array": {}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "std_date_span",
+			"_lid": "month",
+			"_gid": "std_date_span_month",
+			"_aid": ["month"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Month"},
+			"_definition": {"iso_639_3_eng": "The time span of a month."},
+			"_description": {"iso_639_3_eng": "The category describes a specific month time span. It may be also used as a container for month data."}
+		},
+		"_data": {
+			"_array": {}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "std_date_span",
+			"_lid": "year",
+			"_gid": "std_date_span_year",
+			"_aid": ["year"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "year"},
+			"_definition": {"iso_639_3_eng": "The time span of a year."},
+			"_description": {"iso_639_3_eng": "The category describes a specific year time span. It may be also used as a container for year data."}
+		},
+		"_data": {
+			"_array": {}
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "geo",
+			"_lid": "shape",
+			"_gid": "geo_shape",
+			"_aid": ["shape"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Geographic shape"},
+			"_definition": {"iso_639_3_eng": "GeoJSON geometry describing a geographic feature."},
+			"_description": {"iso_639_3_eng": "This descriptor can be used to define the geometry of a geographic feature. The value must be a [GeoJSON](https://geojson.org) `geometry` structure."}
+		},
+		"_data": {
+			"_scalar": {
+				"_type": "_type_object_geo-json"
+			}
+		}
+	},	
+	{
+		"_code": {
+			"_nid": "geo_shape",
+			"_lid": "id",
+			"_gid": "geo_shape_id",
+			"_pid": ["GeometryID"]
+			"_aid": ["id"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Geometry identifier"},
+			"_definition": {"iso_639_3_eng": "Unique identifier of a shape or geometry."},
+			"_description": {"iso_639_3_eng": "This descriptor should be the unique reference of a geometry. The value must be the *unique key*, [_key](_key.md), of a document holding a `geometry` property which is a [GeoJSON](https://geojson.org) `geometry` property."}
+		},
+		"_data": {
+			"_class": "_class_identifier",
+			"_scalar": {
+				"_type": "_type_string_key"
+			}
+		}
+	},	
+	{
+		"_code": {
+			"_nid": "geo_shape",
+			"_lid": "area",
+			"_gid": "geo_shape_area",
+			"_pid": ["area"]
+			"_aid": ["area"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Geometry area"},
+			"_definition": {"iso_639_3_eng": "Total area of shape or geometry."},
+			"_description": {"iso_639_3_eng": "This descriptor represents the total area of a geographic feature, the value is represented in square meters."}
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit": "_unit_area_m"
+			}
+		}
+	},	
+	{
+		"_code": {
+			"_nid": "geo_shape",
+			"_lid": "elevation",
+			"_gid": "geo_shape_elevation",
+			"_pid": ["elevation"]
+			"_aid": ["elevation"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Geometry average elevation"},
+			"_definition": {"iso_639_3_eng": "Mean height above sea level of shape or geometry."},
+			"_description": {"iso_639_3_eng": "Elevation represents the height above sea level of a geographic feature, it is represented in meters and indicates the average for the whole geographic feature."}
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit": "_unit_length_m",
+				"_valid-range": {
+					"_min-range-inclusive": 0.0,
+					"_max-range-inclusive": 8848.0
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "geo_shape",
+			"_lid": "slope",
+			"_gid": "geo_shape_slope",
+			"_pid": ["slope"]
+			"_aid": ["slope"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Geometry average slope"},
+			"_definition": {"iso_639_3_eng": "Slope generated using the elevation dataset. The average is calculated for the shape or geometry."},
+			"_description": {"iso_639_3_eng": "The slope represents the rate of change of elevation for each digital elevation model (DEM) pixel, measured in degrees of a geographic feature, this descriptor indicates the average for the whole geographic feature."}
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit_name": "degrees",
+				"_valid-range": {
+					"_min-range-exclusive": 0.0,
+					"_max-range-exclusive": 90.0
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "geo_shape",
+			"_lid": "aspect",
+			"_gid": "geo_shape_aspect",
+			"_pid": ["aspect"]
+			"_aid": ["aspect"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Geometry average aspect"},
+			"_definition": {"iso_639_3_eng": "Aspect generated using the elevation dataset. The average is calculated for the shape or geometry."},
+			"_description": {"iso_639_3_eng": "Aspect identifies the downslope direction of the maximum rate of change in value from each pixel to its neighbors, it can be thought of as the slope direction. The value represents the average for the whole geographic feature"}
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit_name": "degrees",
+				"_valid-range": {
+					"_min-range-exclusive": 0.0,
+					"_max-range-exclusive": 360.0
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "geo_shape",
+			"_lid": "bounds",
+			"_gid": "geo_shape_bounds",
+			"_pid": ["bounds"]
+			"_aid": ["bounds"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Geometry bounds"},
+			"_definition": {"iso_639_3_eng": "A GeoJSON geometry enclosing a shape."},
+			"_description": {"iso_639_3_eng": "This descriptor can be used to provide a frame for another shape, it will generally be a polygon that encloses one or more shapes including an optional buffer, these shapes will typically be the [geo_shape](geo_shape.md) property of the current object. The value must be a [GeoJSON](https://geojson.org) `geometry` structure."}
+		},
+		"_data": {
+			"_scalar": {
+				"_type": "_type_object_geo-json"
+			}
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "chr_envi",
+			"_lid": "AvElevation",
+			"_gid": "chr_envi_AvElevation",
+			"_pid": ["AvElevation"],
+			"_aid": ["AvElevation"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Average elevation"},
+			"_definition": {"iso_639_3_eng": "Average height above sea level of the GCU or GCU polygon."},
+			"_description": {"iso_639_3_eng": "Height above sea level in meters extracted from the Copernicus Land Monitoring Service - EU-DEM. The average is calculated for the area defined by the polygon."}
+		},
+		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_domain": ["envi"],
+			"_subject": "stand",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit": "_unit_length_m",
+				"_valid-range": {
+					"_min-range-exclusive": 0.0,
+					"_max-range-exclusive": 3000.0
+				}
+			}
+		}
+	},
+]
