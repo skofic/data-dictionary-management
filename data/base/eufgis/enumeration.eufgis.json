@@ -53,9 +53,9 @@
 	{
 		"_code": {
 			"_nid": "gcu_ownerships",
-			"_lid": "joint",
-			"_gid": "gcu_ownerships_joint",
-			"_aid": ["joint"]
+			"_lid": "both",
+			"_gid": "gcu_ownerships_both",
+			"_aid": ["both"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Public and private ownership"},

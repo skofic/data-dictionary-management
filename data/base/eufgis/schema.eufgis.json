@@ -19,7 +19,7 @@
 		"_path": ["gcu_ownerships"]
 	},
 	{
-		"_from": "gcu_ownerships_joint",
+		"_from": "gcu_ownerships_both",
 		"_to": "gcu_ownerships",
 		"_predicate": "_predicate_enum-of",
 		"_path": ["gcu_ownerships"]
