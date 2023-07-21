@@ -49,11 +49,11 @@ const globals = {
 
 	"eufgis": {
 		"countries": new Set([
-			"AUT", "BLR", "BEL", "BIH", "BGR", "HRV",
-			"CZE", "DNK", "EST", "FIN", "FRA", "DEU",
-			"GRC", "HUN", "ISL", "IRL", "ITA", "LVA",
-			"LTU", "LUX", "MLT", "MDA", "NLD", "MKD",
-			"NOR", "POL", "ROU", "SRB", "SVK", "SVN",
+			"ALB", "ARM", "AUT", "AZE", "BLR", "BEL", "BIH", "BGR",
+			"HRV", "CYP", "CZE", "DNK", "EST", "FIN", "FRA", "DEU",
+			"GEO", "GRC", "HUN", "ISL", "IRL", "ISR", "ITA", "LVA",
+			"LIE", "LTU", "LUX", "MLT", "MDA", "MNE", "NLD", "MKD",
+			"NOR", "POL", "PRT", "ROU", "RUS", "SRB", "SVK", "SVN",
 			"ESP", "SWE", "CHE", "TUR", "UKR", "GBR"
 		])
 	},
