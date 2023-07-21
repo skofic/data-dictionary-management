@@ -78,14 +78,14 @@ async function main()
 		console.log("\n============================")
 		console.log("Loading test data.")
 		console.log("============================")
-		await process.ProcessTestData(db)
+//		await process.ProcessTestData(db)
 
 		console.log("\n============================")
 		console.log("Validating dictionary.")
 		console.log("============================")
 		// errors = await process.ValidateTerms(db)
-		result = await process.ValidateDocuments(db)
-		console.log(result)
+//		result = await process.ValidateDocuments(db)
+//		console.log(result)
 
 	} // TRY BLOCK
 

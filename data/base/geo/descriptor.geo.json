@@ -159,7 +159,7 @@
 			"_nid": "geo_shape",
 			"_lid": "id",
 			"_gid": "geo_shape_id",
-			"_pid": ["GeometryID"]
+			"_pid": ["GeometryID"],
 			"_aid": ["id"]
 		},
 		"_info": {
@@ -179,7 +179,7 @@
 			"_nid": "geo_shape",
 			"_lid": "area",
 			"_gid": "geo_shape_area",
-			"_pid": ["area"]
+			"_pid": ["area"],
 			"_aid": ["area"]
 		},
 		"_info": {
@@ -200,7 +200,7 @@
 			"_nid": "geo_shape",
 			"_lid": "elevation",
 			"_gid": "geo_shape_elevation",
-			"_pid": ["elevation"]
+			"_pid": ["elevation"],
 			"_aid": ["elevation"]
 		},
 		"_info": {
@@ -244,7 +244,7 @@
 			"_nid": "geo_shape",
 			"_lid": "slope",
 			"_gid": "geo_shape_slope",
-			"_pid": ["slope"]
+			"_pid": ["slope"],
 			"_aid": ["slope"]
 		},
 		"_info": {
@@ -269,7 +269,7 @@
 			"_nid": "geo_shape",
 			"_lid": "aspect",
 			"_gid": "geo_shape_aspect",
-			"_pid": ["aspect"]
+			"_pid": ["aspect"],
 			"_aid": ["aspect"]
 		},
 		"_info": {
@@ -294,7 +294,7 @@
 			"_nid": "geo_shape",
 			"_lid": "bounds",
 			"_gid": "geo_shape_bounds",
-			"_pid": ["bounds"]
+			"_pid": ["bounds"],
 			"_aid": ["bounds"]
 		},
 		"_info": {
