@@ -719,5 +719,29 @@
 				"_type": "_type_number"
 			}
 		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "",
+			"_lid": "decimals",
+			"_gid": "_decimals",
+			"_aid": ["decimals"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Decimals"},
+			"_definition": {"iso_639_3_eng": "Number of decimals to display"},
+			"_description": {"iso_639_3_eng": "This value determines the maximum number of decimals to display."}
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_scalar": {
+				"_type": "_type_integer"
+				"_valid-range": {
+					"_min-range-inclusive": 0,
+					"_max-range-inclusive": 12
+				}
+			}
+		}
 	}
 ]
