@@ -33,6 +33,7 @@ async function ProcessDictionaryFiles(db) {
 	if(!kPriv.user.flag.only_core) {
 		paths.push(kGlob.globals.path.std)
 		paths.push(kGlob.globals.path.geo)
+		paths.push(kGlob.globals.path.env)
 		paths.push(kGlob.globals.path.iso)
 		if(kPriv.user.flag.do_eufgis) {
 			paths.push(kGlob.globals.path.eufgis)

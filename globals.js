@@ -12,6 +12,7 @@ const globals = {
 		"core": "./data/base/core",
 		"std": "./data/base/std",
 		"geo": "./data/base/geo",
+		"env": "./data/base/env",
 		"iso": "./data/base/iso",
 		"eufgis": "./data/base/eufgis",
 		"characterisation": "./data/base/characterisation",
