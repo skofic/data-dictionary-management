@@ -256,7 +256,8 @@
 			"_class": "_class_quantity",
 			"_scalar": {
 				"_type": "_type_number",
-				"_unit_name": "degrees",
+				"_unit_name": "Decimal degrees",
+				"_unit_symbol": "DD",
 				"_valid-range": {
 					"_min-range-inclusive": 0.0,
 					"_max-range-inclusive": 90.0
@@ -281,7 +282,8 @@
 			"_class": "_class_quantity",
 			"_scalar": {
 				"_type": "_type_number",
-				"_unit_name": "degrees",
+				"_unit_name": "Decimal degrees",
+				"_unit_symbol": "DD",
 				"_valid-range": {
 					"_min-range-inclusive": 0.0,
 					"_max-range-inclusive": 360.0

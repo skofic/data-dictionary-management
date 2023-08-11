@@ -18,6 +18,7 @@
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit_name": "Percentage",
+				"_unit_symbol": "%",
 				"_valid-range": {
 					"_min-range-exclusive": 0.0,
 					"_max-range-exclusive": 100.0

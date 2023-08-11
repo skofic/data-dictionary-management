@@ -599,7 +599,6 @@
 			"_domain": ["pheno"],
 			"_scalar": {
 				"_type": "_type_number",
-				"_unit_name": "% or 100*g g-1",
 				"_valid-range": {
 					"_min-range-exclusive": 30.0,
 					"_max-range-exclusive": 70.0

@@ -469,6 +469,25 @@
 	{
 		"_code": {
 			"_nid": "",
+			"_lid": "unit-symbol",
+			"_gid": "_unit-symbol",
+			"_aid": ["unit-symbol"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Data unit symbol"},
+			"_definition": {"iso_639_3_eng": "Symbol of the measurement unit in which the value is expressed."},
+			"_description": {"iso_639_3_eng": "This field can be used to indicate the *symbol* of the *data unit*, in the event the [units controlled vocabulary](_unit.md) does not feature the unit."}
+		},
+		"_data": {
+			"_class": "_class_identifier",
+			"_scalar": {
+				"_type": "_type_string"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "",
 			"_lid": "regexp",
 			"_gid": "_regexp",
 			"_aid": ["regexp"]
