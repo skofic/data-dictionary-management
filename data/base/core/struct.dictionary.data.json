@@ -74,7 +74,19 @@
 		"_path": ["_scalar"]
 	},
 	{
+		"_from": "_unit-symbol",
+		"_to": "_scalar",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_scalar"]
+	},
+	{
 		"_from": "_regexp",
+		"_to": "_scalar",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_scalar"]
+	},
+	{
+		"_from": "_decimals",
 		"_to": "_scalar",
 		"_predicate": "_predicate_property-of",
 		"_path": ["_scalar"]
