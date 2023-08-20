@@ -204,13 +204,13 @@
 	{
 		"_code": {
 			"_nid": "chr_envi",
-			"_lid": "AvLAI",
-			"_gid": "chr_envi_AvLAI",
-			"_pid": ["AvLAI"],
-			"_aid": ["AvLAI"]
+			"_lid": "AvLai",
+			"_gid": "chr_envi_AvLai",
+			"_pid": ["AvLai"],
+			"_aid": ["AvLai"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Average GCU LAI"},
+			"_title": {"iso_639_3_eng": "Average GCU Lai"},
 			"_definition": {"iso_639_3_eng": "Average GCU Leaf Area Index."},
 			"_description": {"iso_639_3_eng": "Monthly average GCU Leaf Area Index. The average is calculated for the GCU area defined with the polygon of GCU boundaries."}
 		},
@@ -227,13 +227,13 @@
 	{
 		"_code": {
 			"_nid": "chr_envi",
-			"_lid": "MaxLAI",
-			"_gid": "chr_envi_MaxLAI",
-			"_pid": ["MaxLAI"],
-			"_aid": ["MaxLAI"]
+			"_lid": "MaxLai",
+			"_gid": "chr_envi_MaxLai",
+			"_pid": ["MaxLai"],
+			"_aid": ["MaxLai"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Maximum GCU LAI"},
+			"_title": {"iso_639_3_eng": "Maximum GCU Lai"},
 			"_definition": {"iso_639_3_eng": "Maximum GCU Leaf Area Index."},
 			"_description": {"iso_639_3_eng": "Quantile 90% of the monthly average GCU Leaf Area Index over the GCU Polygon when the polygon is available. If the polygon is not available methods is still to be defined."}
 		},
@@ -248,13 +248,13 @@
 	{
 		"_code": {
 			"_nid": "chr_envi",
-			"_lid": "AvGPP",
-			"_gid": "chr_envi_AvGPP",
-			"_pid": ["AvGPP"],
-			"_aid": ["AvGPP"]
+			"_lid": "AvGpp",
+			"_gid": "chr_envi_AvGpp",
+			"_pid": ["AvGpp"],
+			"_aid": ["AvGpp"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Average GCU GPP"},
+			"_title": {"iso_639_3_eng": "Average GCU Gpp"},
 			"_definition": {"iso_639_3_eng": "Average GCU Gross Primary Productivity."},
 			"_description": {"iso_639_3_eng": "Monthly average GCU Gross Primary Productivity in kg/m2.The average is calculated for the GCU area defined with the polygon of GCU boundaries."}
 		},
@@ -273,13 +273,13 @@
 	{
 		"_code": {
 			"_nid": "chr_envi",
-			"_lid": "SumGPP",
-			"_gid": "chr_envi_SumGPP",
-			"_pid": ["SumGPP"],
-			"_aid": ["SumGPP"]
+			"_lid": "SumGpp",
+			"_gid": "chr_envi_SumGpp",
+			"_pid": ["SumGpp"],
+			"_aid": ["SumGpp"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Average Annual GCU GPP"},
+			"_title": {"iso_639_3_eng": "Average Annual GCU Gpp"},
 			"_definition": {"iso_639_3_eng": "Average of the Annual Sum of Gross Primary Productivity."},
 			"_description": {"iso_639_3_eng": "Average of the annual sum of GCU Gross Primary Productivity in kg/m2.The monthly average is first calculated for the GCU area defined with the polygon of GCU boundaries. Then the sum is realised for all month of a year and divided by the number of year in the time series (2003-2021 here)."}
 		},

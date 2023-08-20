@@ -431,25 +431,25 @@
 		"_path": ["chr"]
 	},
 	{
-		"_from": "chr_envi_AvLAI",
+		"_from": "chr_envi_AvLai",
 		"_to": "envi",
 		"_predicate": "_predicate_enum-of",
 		"_path": ["chr"]
 	},
 	{
-		"_from": "chr_envi_MaxLAI",
+		"_from": "chr_envi_MaxLai",
 		"_to": "envi",
 		"_predicate": "_predicate_enum-of",
 		"_path": ["chr"]
 	},
 	{
-		"_from": "chr_envi_AvGPP",
+		"_from": "chr_envi_AvGpp",
 		"_to": "envi",
 		"_predicate": "_predicate_enum-of",
 		"_path": ["chr"]
 	},
 	{
-		"_from": "chr_envi_SumGPP",
+		"_from": "chr_envi_SumGpp",
 		"_to": "envi",
 		"_predicate": "_predicate_enum-of",
 		"_path": ["chr"]
