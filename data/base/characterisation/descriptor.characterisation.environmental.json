@@ -82,6 +82,33 @@
 			}
 		}
 	},
+	
+	{
+		"_code": {
+			"_nid": "chr_envi",
+			"_lid": "DLT",
+			"_gid": "chr_envi_DLT",
+			"_pid": ["DLT", "dominant_leaf_type"],
+			"_aid": ["DLT"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Dominant leaf type"},
+			"_definition": {"iso_639_3_eng": "Land cover classification with 2 thematic classes (Broadleaved / Coniferous)."},
+			"_description": {"iso_639_3_eng": "The [Copernicus DLT](https://land.copernicus.eu/pan-european/high-resolution-layers/forests/dominant-leaf-type/status-maps/dominant-leaf-type-2018?tab=mapview) raster product provides a basic land cover classification with 3 thematic classes (All *non-tree covered areas* / *Broadleaved* / *Coniferous*) at 10m spatial resolution and covers the full of EEA39 area. The data refers to the unit polygons and the value is obtained by a mode reducer.\n\nIn this dataset we only track *Broadleaved* (`1`) and *Coniferous* (`2`), *non-tree covered* areas are not tracked."}
+		},
+		"_data": {
+			"_class": "_class_category",
+			"_domain": ["envi"],
+			"_subject": "stand",
+			"_array": {
+				"_scalar": {
+					"_type": "_type_string_enum",
+					"_kind": "[chr_envi_DLT]"
+				}
+			}
+		}
+	},
+	
 	{
 		"_code": {
 			"_nid": "chr_envi",
@@ -131,6 +158,35 @@
 			}
 		}
 	},
+	
+	{
+		"_code": {
+			"_nid": "chr_envi",
+			"_lid": "RH",
+			"_gid": "chr_envi_RH",
+			"_pid": ["relative_humidity"],
+			"_aid": ["RH"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Relative humidity"},
+			"_definition": {"iso_639_3_eng": "Relative humidity (RH) refers to the moisture content (i.e., water vapor) of the atmosphere, expressed as a percentage of the amount of moisture that can be retained by the atmosphere (moisture-holding capacity) at a given temperature and pressure without condensation."},
+			"_description": {"iso_639_3_eng": "Relative humidity is [calculated](https://en.wikipedia.org/wiki/Dew_point) using the temperature and the dewpoint temperature at 2 meters above surface."}
+		},
+		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_domain": ["envi"],
+			"_subject": "stand",
+			"_scalar": {
+				"_unit_name": "Percentage",
+				"_unit_symbol": "%",
+				"_valid-range": {
+					"_min-range-exclusive": 0.0,
+					"_max-range-exclusive": 100.0
+				}
+			}
+		}
+	},
+	
 	{
 		"_code": {
 			"_nid": "chr_envi",
