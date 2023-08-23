@@ -435,6 +435,26 @@
 	},
 	{
 		"_code": {
+			"_nid": "std_date",
+			"_lid": "series",
+			"_gid": "std_date_series",
+			"_aid": ["series"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Time series"},
+			"_definition": {"iso_639_3_eng": "Time series data."},
+			"_description": {"iso_639_3_eng": "This property is an *array* containing *time series data*. Each *element* is an *object* that should contain *one property* describing the *time or date* and a [properties](properties.md) object element containing the *data* features *related* to that *date*.\n\nThe elements are assumed to be sorted by date in ascending order and no two elements should share the same date or time."}
+		},
+		"_data": {
+			"_class": "_class_time",
+			"_scalar": {
+				"_type": "_type_string_date"
+			}
+		}
+	},
+	
+	{
+		"_code": {
 			"_nid": "std",
 			"_lid": "terms",
 			"_gid": "std_terms",
