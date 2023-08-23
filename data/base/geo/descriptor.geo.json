@@ -138,24 +138,6 @@
 	
 	{
 		"_code": {
-			"_nid": "geo",
-			"_lid": "shape",
-			"_gid": "geo_shape",
-			"_aid": ["shape"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Geographic shape"},
-			"_definition": {"iso_639_3_eng": "GeoJSON geometry describing a geographic feature."},
-			"_description": {"iso_639_3_eng": "This descriptor can be used to define the geometry of a geographic feature. The value must be a [GeoJSON](https://geojson.org) `geometry` structure."}
-		},
-		"_data": {
-			"_scalar": {
-				"_type": "_type_object_geo-json"
-			}
-		}
-	},	
-	{
-		"_code": {
 			"_nid": "geo_shape",
 			"_lid": "id",
 			"_gid": "geo_shape_id",
@@ -164,13 +146,13 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Geometry identifier"},
-			"_definition": {"iso_639_3_eng": "Unique identifier of a shape or geometry."},
-			"_description": {"iso_639_3_eng": "This descriptor should be the unique reference of a geometry. The value must be the *unique key*, [_key](_key.md), of a document holding a `geometry` property which is a [GeoJSON](https://geojson.org) `geometry` property."}
+			"_definition": {"iso_639_3_eng": "Shape or geometry identifier."},
+			"_description": {"iso_639_3_eng": "This descriptor can be used to store the identifier of a geometry or shape. The value is a string that represents an *attributed* identifier, as opposed to [hashed](geometry_hash.md) identifiers that *uniquely discriminate* the *shape* itself."}
 		},
 		"_data": {
 			"_class": "_class_identifier",
 			"_scalar": {
-				"_type": "_type_string_key"
+				"_type": "_type_string"
 			}
 		}
 	},	
@@ -288,25 +270,6 @@
 					"_min-range-inclusive": 0.0,
 					"_max-range-inclusive": 360.0
 				}
-			}
-		}
-	},
-	{
-		"_code": {
-			"_nid": "geo_shape",
-			"_lid": "bounds",
-			"_gid": "geo_shape_bounds",
-			"_pid": ["bounds"],
-			"_aid": ["bounds"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Geometry bounds"},
-			"_definition": {"iso_639_3_eng": "A GeoJSON geometry enclosing a shape."},
-			"_description": {"iso_639_3_eng": "This descriptor can be used to provide a frame for another shape, it will generally be a polygon that encloses one or more shapes including an optional buffer, these shapes will typically be the [geo_shape](geo_shape.md) property of the current object. The value must be a [GeoJSON](https://geojson.org) `geometry` structure."}
-		},
-		"_data": {
-			"_scalar": {
-				"_type": "_type_object_geo-json"
 			}
 		}
 	}

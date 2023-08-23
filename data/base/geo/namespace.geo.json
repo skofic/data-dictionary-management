@@ -10,5 +10,19 @@
 			"_definition": {"iso_639_3_eng": "Standards regarding geographic locations, measurements and methods."},
 			"_description": {"iso_639_3_eng": "This namespace groups all terms and descriptors that represent standards in the geodesic domain."}
 		}
-	}
+	},
+	
+	{
+		"_code": {
+			"_nid": "geo",
+			"_lid": "shape",
+			"_gid": "geo_shape",
+			"_aid": ["shape"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Geographic shape"},
+			"_definition": {"iso_639_3_eng": "A shape or geometry asspciated with one or more geographic features."},
+			"_description": {"iso_639_3_eng": "This *namespace* can be used to group terms defining geographic features associated with a geographic region, shape or geometry."}
+		}
+	}	
 ]
