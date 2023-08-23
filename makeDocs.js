@@ -19,6 +19,7 @@ async function main()
 	//
 	const namespaceFiles = [
 		"namespace.dictionary.json",
+		"namespace.env.json",
 		"namespace.geo.json",
 		"namespace.iso.json",
 		"namespace.std.json",

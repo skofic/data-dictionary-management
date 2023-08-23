@@ -33,8 +33,7 @@
 				"_type": "_type_object_geo-json"
 			}
 		}
-	},
-	
+	},	
 	{
 		"_code": {
 			"_nid": "geometry",
@@ -52,6 +51,24 @@
 			"_class": "_class_identifier",
 			"_scalar": {
 				"_type": "_type_string_key"
+			}
+		}
+	},
+	
+	{
+		"_code": {
+			"_lid": "properties",
+			"_gid": "properties",
+			"_aid": ["properties"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Properties"},
+			"_definition": {"iso_639_3_eng": "Features or properties."},
+			"_description": {"iso_639_3_eng": "This descriptor is generally used to *group* properties or features in a [GeoJSON](https://geojson.org) record. The goal is to *prevent* having *feature properties* at the *top level* of the *record* and, instead, have a *property* that will *only* contain *feature data*.\n\nThis is not reserved only to geographic records."}
+		},
+		"_data": {
+			"_scalar": {
+				"_type": "_type_object"
 			}
 		}
 	}
