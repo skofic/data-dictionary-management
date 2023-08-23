@@ -3,14 +3,14 @@
 
 
 ------
-#### Average GCU elevation
+#### Average elevation
 
 
 
 ------
-###### Average height above sea level of the GCU.
+###### Average height above sea level of the GCU or GCU polygon.
 
 
 
 ------
-Height above sea level in meters extracted from the Digital Elevation Model. The average is calculated for the GCU area defined with the polygon of GCU boundaries.
+Height above sea level in meters extracted from the Copernicus Land Monitoring Service - EU-DEM. The average is calculated for the area defined by the polygon.

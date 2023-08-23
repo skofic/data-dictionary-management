@@ -1,9 +1,9 @@
-### chr_envi_MaxLAI
+### chr_envi_MaxLai
 
 
 
 ------
-#### Maximum GCU LAI
+#### Maximum GCU Lai
 
 
 

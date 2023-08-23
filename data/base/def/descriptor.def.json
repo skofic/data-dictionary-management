@@ -33,7 +33,8 @@
 				"_type": "_type_object_geo-json"
 			}
 		}
-	}
+	},
+	
 	{
 		"_code": {
 			"_nid": "geometry",

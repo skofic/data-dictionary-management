@@ -36,7 +36,9 @@ async function main()
 		"descriptor.dictionary.edge.json",
 		"descriptor.dictionary.info.json",
 		"descriptor.dictionary.rule.json",
+		"descriptor.def.json",
 		"descriptor.geo.json",
+		"descriptor.env.json",
 		"descriptor.iso.json",
 		"descriptor.std.json",
 		"descriptor.eufgis.json",
@@ -54,7 +56,9 @@ async function main()
 		"enumeration.dictionary.data.json",
 		"enumeration.dictionary.edge.json",
 		"enumeration.dictionary.unit.json",
+		"enumeration.std.json",
 		"enumeration.geo.json",
+		"enumeration.env.json",
 		"enumeration.eufgis.json"
 	]
 

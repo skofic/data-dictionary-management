@@ -1,9 +1,9 @@
-### chr_envi_AvGPP
+### chr_envi_AvGpp
 
 
 
 ------
-#### Average GCU GPP
+#### Average GCU Gpp
 
 
 

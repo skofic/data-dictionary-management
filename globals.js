@@ -10,6 +10,7 @@ const globals = {
 
 	"path": {
 		"core": "./data/base/core",
+		"def": "./data/base/def",
 		"std": "./data/base/std",
 		"geo": "./data/base/geo",
 		"env": "./data/base/env",

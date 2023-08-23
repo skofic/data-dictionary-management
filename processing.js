@@ -31,6 +31,7 @@ async function ProcessDictionaryFiles(db) {
 	//
 	let paths = [kGlob.globals.path.core]
 	if(!kPriv.user.flag.only_core) {
+		paths.push(kGlob.globals.path.def)
 		paths.push(kGlob.globals.path.std)
 		paths.push(kGlob.globals.path.geo)
 		paths.push(kGlob.globals.path.env)

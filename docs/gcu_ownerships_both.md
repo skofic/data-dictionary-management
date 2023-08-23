@@ -1,4 +1,4 @@
-### gcu_ownerships_joint
+### gcu_ownerships_both
 
 
 

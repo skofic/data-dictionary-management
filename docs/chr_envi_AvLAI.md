@@ -1,9 +1,9 @@
-### chr_envi_AvLAI
+### chr_envi_AvLai
 
 
 
 ------
-#### Average GCU LAI
+#### Average GCU Lai
 
 
 
