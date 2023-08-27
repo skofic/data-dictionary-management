@@ -47,5 +47,18 @@
 		"_to": "_domain",
 		"_predicate": "_predicate_enum-of",
 		"_path": ["_domain"]
+	},
+	
+	{
+		"_from": "chr_envi_DLT_broadleaved",
+		"_to": "chr_envi_DLT",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr_envi_DLT"]
+	},
+	{
+		"_from": "chr_envi_DLT_coniferous",
+		"_to": "chr_envi_DLT",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr_envi_DLT"]
 	}
 ]
