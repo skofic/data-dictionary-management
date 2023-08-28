@@ -44,6 +44,46 @@
 	{
 		"_code": {
 			"_nid": "gcu_id",
+			"_lid": "unit-id",
+			"_gid": "gcu_id_unit-id",
+			"_pid": ["UnitID"],
+			"_aid": ["unit-id"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Unique identifier of the unit during the time. UnitNumber + UnitDataCollectionDate"},
+			"_definition": {"iso_639_3_eng": "This number is the unique identifier of the unit described + the date of collection of the field data entered."},
+			"_examples": {"iso_639_3_eng": "FIN0000120211231 Or FIN00001202112 Or FIN000012021"}
+		},
+		"_data": {
+			"_class": "_class_identifier",
+			"_scalar": {
+				"_type": "_type_string"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "gcu_id_unit-id",
+			"_lid": "list",
+			"_gid": "gcu_id_unit-id_list",
+			"_aid": ["list"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "List of unique identifiers of the unit during the time. UnitNumber + UnitDataCollectionDate"},
+			"_definition": {"iso_639_3_eng": "The list contains the unique identifiers of the unit described + the date of collection of the field data entered."}
+		},
+		"_data": {
+			"_class": "_class_identifier",
+			"_set": {
+				"_set_scalar": {
+					"_set_type": "_type_string"
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "gcu_id",
 			"_lid": "date",
 			"_gid": "gcu_id_date",
 			"_pid": ["UnitDataCollectionDate"],
@@ -81,26 +121,6 @@
 			"_scalar": {
 				"_format": "_format_date",
 				"_type": "_type_string_date"
-			}
-		}
-	},
-	{
-		"_code": {
-			"_nid": "gcu_id",
-			"_lid": "unit-id",
-			"_gid": "gcu_id_unit-id",
-			"_pid": ["UnitID"],
-			"_aid": ["unit-id"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Unique identifier of the unit during the time. UnitNumber + UnitDataCollectionDate"},
-			"_definition": {"iso_639_3_eng": "This number is the unique identifier of the unit described + the date of collection of the field data entered."},
-			"_examples": {"iso_639_3_eng": "FIN0000120211231 Or FIN00001202112 Or FIN000012021"}
-		},
-		"_data": {
-			"_class": "_class_identifier",
-			"_scalar": {
-				"_type": "_type_string"
 			}
 		}
 	},

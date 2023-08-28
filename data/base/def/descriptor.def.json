@@ -39,7 +39,6 @@
 			"_nid": "geometry",
 			"_lid": "hash",
 			"_gid": "geometry_hash",
-			"_pid": ["geometry_hash"],
 			"_aid": ["hash"]
 		},
 		"_info": {
@@ -51,6 +50,27 @@
 			"_class": "_class_identifier",
 			"_scalar": {
 				"_type": "_type_string_key"
+			}
+		}
+	},	
+	{
+		"_code": {
+			"_nid": "geometry_hash",
+			"_lid": "list",
+			"_gid": "geometry_hash_list",
+			"_aid": ["list"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "List of geometry hashes"},
+			"_definition": {"iso_639_3_eng": "List of shape or geometry unique identifiers."},
+			"_description": {"iso_639_3_eng": "This descriptor contains a list of [unique references](geometry_hash.md) to a [geometry](geometry.md) record belonging to another *collection*."}
+		},
+		"_data": {
+			"_class": "_class_identifier",
+			"_set": {
+				"_set_scalar": {
+					"_set_type": "_type_string_key"
+				}
 			}
 		}
 	},
