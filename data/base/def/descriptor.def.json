@@ -19,6 +19,24 @@
 	{
 		"_code": {
 			"_nid": "geometry",
+			"_lid": "point",
+			"_gid": "geometry_point",
+			"_aid": ["point"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Geometry point"},
+			"_definition": {"iso_639_3_eng": "A GeoJSON Point geometry."},
+			"_description": {"iso_639_3_eng": "This descriptor can be used to indicate a precise point in space or the centroid of a complex shape. The value must be a [GeoJSON](https://geojson.org) `Point` geometry."}
+		},
+		"_data": {
+			"_scalar": {
+				"_type": "_type_object_geo-json"
+			}
+		}
+	},	
+	{
+		"_code": {
+			"_nid": "geometry",
 			"_lid": "bounds",
 			"_gid": "geometry_bounds",
 			"_aid": ["bounds"]
