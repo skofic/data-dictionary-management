@@ -36,6 +36,24 @@
 	},	
 	{
 		"_code": {
+			"_nid": "geometry_point",
+			"_lid": "radius",
+			"_gid": "geometry_point_radius",
+			"_aid": ["radius"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Geometry point radius"},
+			"_definition": {"iso_639_3_eng": "The radius from a point or centroid that determines the geometry area."},
+			"_description": {"iso_639_3_eng": "This descriptor can be used, in conjunction with a *centroid* or *point* to determine the area of the current geometry."}
+		},
+		"_data": {
+			"_scalar": {
+				"_type": "_type_object_geo-json"
+			}
+		}
+	},	
+	{
+		"_code": {
 			"_nid": "geometry",
 			"_lid": "bounds",
 			"_gid": "geometry_bounds",

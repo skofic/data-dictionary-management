@@ -2306,5 +2306,102 @@
 		"geo_datum_delta-x": -265,
 		"geo_datum_delta-y": 120,
 		"geo_datum_delta-z": -358
+	},
+	
+	{
+		"_code": {
+			"_nid": "env_climate_cdi",
+			"_lid": "0",
+			"_gid": "env_climate_cdi_0",
+			"_aid": ["0"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "No drought"},
+			"_definition": {"iso_639_3_eng": "Normal conditions"}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "env_climate_cdi",
+			"_lid": "1",
+			"_gid": "env_climate_cdi_1",
+			"_aid": ["1"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Watch"},
+			"_definition": {"iso_639_3_eng": "Precipitation deficit"}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "env_climate_cdi",
+			"_lid": "2",
+			"_gid": "env_climate_cdi_2",
+			"_aid": ["2"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Warning"},
+			"_definition": {"iso_639_3_eng": "Negative soil moisture anomaly, usually linked with precipitation deficit"}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "env_climate_cdi",
+			"_lid": "3",
+			"_gid": "env_climate_cdi_3",
+			"_aid": ["3"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Alert"},
+			"_definition": {"iso_639_3_eng": "Negative anomaly of vegetation growth, usually linked with precipitation deficit and negative soil moisture anomaly"}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "env_climate_cdi",
+			"_lid": "4",
+			"_gid": "env_climate_cdi_4",
+			"_aid": ["4"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Recovery"},
+			"_definition": {"iso_639_3_eng": "After a drought episode, both meteorological conditions and vegetation growth return to normal"}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "env_climate_cdi",
+			"_lid": "5",
+			"_gid": "env_climate_cdi_5",
+			"_aid": ["5"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Temporary Soil Moisture recovery"},
+			"_definition": {"iso_639_3_eng": "After a drought episode, soil moisture conditions are above the drought threshold but not enough to consider the episode closed"}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "env_climate_cdi",
+			"_lid": "6",
+			"_gid": "env_climate_cdi_6",
+			"_aid": ["6"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Temporary vegetation recovery"},
+			"_definition": {"iso_639_3_eng": "After a drought episode, vegetation conditions are above the drought threshold but not enough to consider the episode closed"}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "env_climate_cdi",
+			"_lid": "7",
+			"_gid": "env_climate_cdi_7",
+			"_aid": ["7"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "No data"},
+			"_definition": {"iso_639_3_eng": "No data available"}
+		}
 	}
 ]

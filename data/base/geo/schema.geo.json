@@ -839,5 +839,54 @@
 		"_to": "geo_datum",
 		"_predicate": "_predicate_enum-of",
 		"_path": ["geo_datum"]
+	},
+	
+	{
+		"_from": "env_climate_cdi_0",
+		"_to": "env_climate_cdi",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["env_climate_cdi"]
+	},
+	{
+		"_from": "env_climate_cdi_1",
+		"_to": "env_climate_cdi",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["env_climate_cdi"]
+	},
+	{
+		"_from": "env_climate_cdi_2",
+		"_to": "env_climate_cdi",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["env_climate_cdi"]
+	},
+	{
+		"_from": "env_climate_cdi_3",
+		"_to": "env_climate_cdi",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["env_climate_cdi"]
+	},
+	{
+		"_from": "env_climate_cdi_4",
+		"_to": "env_climate_cdi",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["env_climate_cdi"]
+	},
+	{
+		"_from": "env_climate_cdi_5",
+		"_to": "env_climate_cdi",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["env_climate_cdi"]
+	},
+	{
+		"_from": "env_climate_cdi_6",
+		"_to": "env_climate_cdi",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["env_climate_cdi"]
+	},
+	{
+		"_from": "env_climate_cdi_7",
+		"_to": "env_climate_cdi",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["env_climate_cdi"]
 	}
 ]
