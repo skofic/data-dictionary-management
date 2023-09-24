@@ -396,6 +396,44 @@
 	{
 		"_code": {
 			"_nid": "std_date",
+			"_lid": "start",
+			"_gid": "std_date_start",
+			"_aid": ["start"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Start date"},
+			"_definition": {"iso_639_3_eng": "Date range start, inclusive."},
+			"_description": {"iso_639_3_eng": "This property represents the *lower limit* of a *date range* of *time series data*. The value is a *numeric string* that can be expressed as a *year* (`YYYY`), *year* and *month* (`YYYYMM`) or *full date* (`YYYYMMDD`). The date range *includes this value*."}
+		},
+		"_data": {
+			"_class": "_class_time",
+			"_scalar": {
+				"_type": "_type_string_date"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "std_date",
+			"_lid": "end",
+			"_gid": "std_date_end",
+			"_aid": ["end"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "End date"},
+			"_definition": {"iso_639_3_eng": "Date range end, inclusive."},
+			"_description": {"iso_639_3_eng": "This property represents the *upper limit* of a *date range* of *time series data*. The value is a *numeric string* that can be expressed as a *year* (`YYYY`), *year* and *month* (`YYYYMM`) or *full date* (`YYYYMMDD`). The date range *includes this value*."}
+		},
+		"_data": {
+			"_class": "_class_time",
+			"_scalar": {
+				"_type": "_type_string_date"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "std_date",
 			"_lid": "submission",
 			"_gid": "std_date_submission",
 			"_pid": ["DateSubmission"],

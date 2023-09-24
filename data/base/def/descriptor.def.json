@@ -134,5 +134,21 @@
 				"_type": "_type_object"
 			}
 		}
+	},
+	{
+		"_code": {
+			"_lid": "count",
+			"_gid": "count",
+			"_aid": ["count"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Count"},
+			"_definition": {"iso_639_3_eng": "Number of items."}
+		},
+		"_data": {
+			"_scalar": {
+				"_type": "_type_integer"
+			}
+		}
 	}
 ]
