@@ -13,6 +13,7 @@
 		},
 		"_data": {
 			"_class": "_class_category",
+			"_subject": "stand",
 			"_scalar": {
 				"_type": "_type_string"
 			}
@@ -27,11 +28,12 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Species list"},
-			"_definition": {"iso_639_3_eng": "Tree or population list of species."},
-			"_description": {"iso_639_3_eng": "Provide the *list of species* of the *individual tree* or *population* to which *data* is *referring* to."}
+			"_definition": {"iso_639_3_eng": "Trees or population list of species."},
+			"_description": {"iso_639_3_eng": "Provide the *list of species* of the *individual trees* or *population* to which *data* is *referring* to."}
 		},
 		"_data": {
 			"_class": "_class_category",
+			"_subject": "stand",
 			"_set": {
 				"_set_scalar": {
 					"_set_type": "_type_string"
@@ -54,6 +56,7 @@
 		},
 		"_data": {
 			"_class": "_class_identifier",
+			"_subject": "tree",
 			"_scalar": {
 				"_type": "_type_string"
 			}

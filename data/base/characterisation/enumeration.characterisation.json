@@ -22,5 +22,96 @@
 			"_title": {"iso_639_3_eng": "Coniferous"},
 			"_definition": {"iso_639_3_eng": "Coniferous dominant forest type."}
 		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "chr_envi_MicroTopography",
+			"_lid": "1",
+			"_gid": "chr_envi_MicroTopography_1",
+			"_aid": ["1"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Convex situation"}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_envi_MicroTopography",
+			"_lid": "2",
+			"_gid": "chr_envi_MicroTopography_2",
+			"_aid": ["2"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Neutral"}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_envi_MicroTopography",
+			"_lid": "3",
+			"_gid": "chr_envi_MicroTopography_3",
+			"_aid": ["3"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Concav situation"}
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "chr_envi_ForestStructure",
+			"_lid": "1",
+			"_gid": "chr_envi_ForestStructure_1",
+			"_aid": ["1"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Single layer"}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_envi_ForestStructure",
+			"_lid": "2",
+			"_gid": "chr_envi_ForestStructure_2",
+			"_aid": ["2"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Multiple layered"}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_envi_ForestStructure",
+			"_lid": "3",
+			"_gid": "chr_envi_ForestStructure_3",
+			"_aid": ["3"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Sparsed forest stand"}
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "chr_envi_ForestComposition",
+			"_lid": "1",
+			"_gid": "chr_envi_ForestComposition_1",
+			"_aid": ["1"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Silgle species"}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_envi_ForestComposition",
+			"_lid": "2",
+			"_gid": "chr_envi_ForestComposition_2",
+			"_aid": ["2"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Mixed forest"}
+		}
 	}
 ]

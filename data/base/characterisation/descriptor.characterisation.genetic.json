@@ -311,7 +311,8 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Sample size"},
-			"_definition": {"iso_639_3_eng": "Number of individuals used to calculate the measurement."}
+			"_definition": {"iso_639_3_eng": "Number of individuals used to calculate the measurement."},
+			"_description": {"iso_639_3_eng": "Number of trees measured for a single trait or descriptor."}
 		},
 		"_data": {
 			"_class": "_class_quantity",

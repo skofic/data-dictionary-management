@@ -485,8 +485,10 @@
 		},
 		"_data": {
 			"_class": "_class_time",
-			"_scalar": {
-				"_type": "_type_string_date"
+			"_array": {
+				"_scalar": {
+					"_type": "_type_object"
+				}
 			}
 		}
 	},

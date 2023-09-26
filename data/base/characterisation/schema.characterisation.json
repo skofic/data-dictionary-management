@@ -60,5 +60,56 @@
 		"_to": "chr_envi_DLT",
 		"_predicate": "_predicate_enum-of",
 		"_path": ["chr_envi_DLT"]
+	},
+	
+	{
+		"_from": "chr_envi_MicroTopography_1",
+		"_to": "chr_envi_MicroTopography",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr_envi_MicroTopography"]
+	},
+	{
+		"_from": "chr_envi_MicroTopography_2",
+		"_to": "chr_envi_MicroTopography",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr_envi_MicroTopography"]
+	},
+	{
+		"_from": "chr_envi_MicroTopography_3",
+		"_to": "chr_envi_MicroTopography",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr_envi_MicroTopography"]
+	},
+	
+	{
+		"_from": "chr_envi_ForestStructure_1",
+		"_to": "chr_envi_ForestStructure",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr_envi_ForestStructure"]
+	},
+	{
+		"_from": "chr_envi_ForestStructure_2",
+		"_to": "chr_envi_ForestStructure",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr_envi_ForestStructure"]
+	},
+	{
+		"_from": "chr_envi_ForestStructure_3",
+		"_to": "chr_envi_ForestStructure",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr_envi_ForestStructure"]
+	},
+	
+	{
+		"_from": "chr_envi_ForestComposition_1",
+		"_to": "chr_envi_ForestComposition",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr_envi_ForestComposition"]
+	},
+	{
+		"_from": "chr_envi_ForestComposition_2",
+		"_to": "chr_envi_ForestComposition",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr_envi_ForestComposition"]
 	}
 ]

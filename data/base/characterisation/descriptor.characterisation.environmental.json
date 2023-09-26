@@ -260,6 +260,29 @@
 	{
 		"_code": {
 			"_nid": "chr_envi",
+			"_lid": "MaxNDVI",
+			"_gid": "chr_envi_MaxNDVI",
+			"_pid": ["MaxNDVI"],
+			"_aid": ["MaxNDVI"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Maximum GCU NDVI"},
+			"_definition": {"iso_639_3_eng": "Maximum GCU Normalized Difference Vegetation Index."},
+			"_description": {"iso_639_3_eng": "Remotely sensed monthly maximum GCU Normalized Difference Vegetation Index. The average of the maximum values is calculated for the GCU area defined with the polygon of GCU boundaries. Beware that for some GCU (i) there are no shapefile available so that the average Land surface temperature over a 5km buffer around the GCU coordinate is taken."}
+		},
+		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_domain": ["envi"],
+			"_array": {
+				"_scalar": {
+					"_type": "_type_number"
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_envi",
 			"_lid": "AvLai",
 			"_gid": "chr_envi_AvLai",
 			"_pid": ["AvLai"],
@@ -388,6 +411,321 @@
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit": "_unit_length_m"
+			}
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "chr_envi",
+			"_lid": "GCUFootprintArea",
+			"_gid": "chr_envi_GCUFootprintArea",
+			"_pid": ["GCUFootprintArea"],
+			"_aid": ["GCUFootprintArea"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Area of the GCU foot print"},
+			"_definition": {"iso_639_3_eng": "Area of the GCU foot print computed from the shapefile."},
+			"_description": {"iso_639_3_eng": "Beware that for some GCU there are no shapefile available in which case NA is reported here."}
+		},
+		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_domain": ["envi"],
+			"_subject": "stand",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit": "_unit_area_m"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_envi_trend",
+			"_lid": "Lai",
+			"_gid": "chr_envi_trend_Lai",
+			"_pid": ["TrendLai"],
+			"_aid": ["Lai"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Trend (temporal dynamics) in GCU's LAI"},
+			"_definition": {"iso_639_3_eng": "Temporal trends of the remotely sensed LAI."},
+			"_description": {"iso_639_3_eng": "Slope the relationship between remotely sensed LAI over the GCU and time (LAI/month)."}
+		},
+		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_domain": ["envi"],
+			"_subject": "stand",
+			"_scalar": {
+				"_type": "_type_number"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_envi_trend",
+			"_lid": "NDVI",
+			"_gid": "chr_envi_trend_NDVI",
+			"_pid": ["TrendNDVI"],
+			"_aid": ["NDVI"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Trend (temporal dynamics) in GCU's NDVI"},
+			"_definition": {"iso_639_3_eng": "Temporal trends of the remotely sensed NDVI."},
+			"_description": {"iso_639_3_eng": "Slope the relationship between remotely sensed NDVI over the GCU and time (NDVI/month)."}
+		},
+		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_domain": ["envi"],
+			"_subject": "stand",
+			"_scalar": {
+				"_type": "_type_number"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_envi_trend",
+			"_lid": "NDWI",
+			"_gid": "chr_envi_trend_NDWI",
+			"_pid": ["TrendNDWI"],
+			"_aid": ["NDWI"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Trend (temporal dynamics) in GCU's NDWI"},
+			"_definition": {"iso_639_3_eng": "Temporal trends of the remotely sensed NDWI."},
+			"_description": {"iso_639_3_eng": "Slope the relationship between remotely sensed LAI over the GCU and time (NDWI/month)."}
+		},
+		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_domain": ["envi"],
+			"_subject": "stand",
+			"_scalar": {
+				"_type": "_type_number"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_envi_trend",
+			"_lid": "MaxLST",
+			"_gid": "chr_envi_trend_MaxLST",
+			"_pid": ["TrendMaxLST"],
+			"_aid": ["MaxLST"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Trend (temporal dynamics) in GCU Max Land surface temperature"},
+			"_definition": {"iso_639_3_eng": "Temporal trends of the remotely sensed max land surface temperature."},
+			"_description": {"iso_639_3_eng": "Slope the relationship between remotely sensed maximum land surface temperature of the GCU and time (K/month)."}
+		},
+		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_domain": ["envi"],
+			"_subject": "stand",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit_name": "Kelvin/month",
+				"_unit_symbol": "K"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_envi_trend",
+			"_lid": "AvBiomass",
+			"_gid": "chr_envi_trend_AvBiomass",
+			"_pid": ["TrendAvBiomassc"],
+			"_aid": ["AvBiomass"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Trend (temporal dynamics) in Average GCU Biomass"},
+			"_definition": {"iso_639_3_eng": "Temporal trends of the remotely sensed average biomass."},
+			"_description": {"iso_639_3_eng": "Slope the relationship between remotely sensed biomass of the GCU and time (t/ha/year)."}
+		},
+		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_domain": ["envi"],
+			"_subject": "stand",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit_name": "t/ha/year",
+				"_unit_symbol": "t/ha"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_envi_trend",
+			"_lid": "GPP",
+			"_gid": "chr_envi_trend_GPP",
+			"_pid": ["TrendGPP"],
+			"_aid": ["GPP"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Trend (temporal dynamics) in GCU's GPP"},
+			"_definition": {"iso_639_3_eng": "Temporal trends of the remotely sensed GPP."},
+			"_description": {"iso_639_3_eng": "Slope the relationship between remotely sensed biomass of the GCU and time (Kg C/m2/month)."}
+		},
+		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_domain": ["envi"],
+			"_subject": "stand",
+			"_scalar": {
+					"_type": "_type_number",
+					"_unit_name": "kg/m2/month",
+					"_unit_symbol": "kg/m^2"
+			}
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "chr_envi_measured",
+			"_lid": "Elevation",
+			"_gid": "chr_envi_measured_Elevation",
+			"_pid": ["ElevationMeasured"],
+			"_aid": ["Elevation"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "GCU elevation - measured"},
+			"_definition": {"iso_639_3_eng": "Elevation assessed in the circular plot with the GPS Garmin 64s."},
+			"_description": {"iso_639_3_eng": "See the WP2 protocol for more information."}
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["envi"],
+			"_subject": "stand",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit": "_unit_length_m",
+				"_valid-range": {
+					"_min-range-exclusive": 0.0,
+					"_max-range-exclusive": 3000.0
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_envi_measured",
+			"_lid": "Slope",
+			"_gid": "chr_envi_measured_Slope",
+			"_pid": ["SlopeMeasured"],
+			"_aid": ["Slope"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "GCU slope - measured"},
+			"_definition": {"iso_639_3_eng": "Slope assessed in the circular plot with the clinometer, see the WP2 protocol for more information."},
+			"_description": {"iso_639_3_eng": "The slope is measured in the plot area defined with the circular boundaries (15m of radiius)."}
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["envi"],
+			"_subject": "stand",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit_name": "degrees DMS",
+				"_unit_symbol": "DMS",
+				"_valid-range": {
+					"_min-range-exclusive": 0.0,
+					"_max-range-exclusive": 45.0
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_envi_measured",
+			"_lid": "Aspect",
+			"_gid": "chr_envi_measured_Aspect",
+			"_pid": ["AspectMeasured"],
+			"_aid": ["Aspect"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "GCU aspect - measured"},
+			"_definition": {"iso_639_3_eng": "Aspect assessed in the circular plot with the clinometer, see the WP2 protocol for more information."},
+			"_description": {"iso_639_3_eng": "The aspect is measured in the plot area defined with the circular boundaries (15m of radiius)."}
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["envi"],
+			"_subject": "stand",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit_name": "Grade",
+				"_valid-range": {
+					"_min-range-exclusive": 0.0,
+					"_max-range-exclusive": 400.0
+				}
+			}
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "chr_envi",
+			"_lid": "MicroTopography",
+			"_gid": "chr_envi_MicroTopography",
+			"_pid": ["MicroTopography"],
+			"_aid": ["MicroTopography"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "GCU topography"},
+			"_definition": {"iso_639_3_eng": "Micro-topography is assessed at the scale of the plot according to an index ranging from 1 to 3."},
+			"_description": {"iso_639_3_eng": "The index allows to determine whether there is more in- or outflow of water. See the WP2 protocol for more information."}
+		},
+		"_data": {
+			"_class": "_class_category",
+			"_domain": ["envi"],
+			"_subject": "stand",
+			"_scalar": {
+				"_type": "_type_string_enum",
+				"_kind": ["chr_envi_MicroTopography"]
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_envi",
+			"_lid": "ForestStructure",
+			"_gid": "chr_envi_ForestStructure",
+			"_pid": ["ForestStructure"],
+			"_aid": ["ForestStructure"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "GCU forest structure"},
+			"_definition": {"iso_639_3_eng": "Forest stand structure assessed (by eye) at forest stand level (in the functional subset area)."},
+			"_description": {"iso_639_3_eng": "See the WP2 protocol for more information."}
+		},
+		"_data": {
+			"_class": "_class_category",
+			"_domain": ["envi"],
+			"_subject": "stand",
+			"_scalar": {
+				"_type": "_type_string_enum",
+				"_kind": ["chr_envi_ForestStructure"]
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_envi",
+			"_lid": "ForestComposition",
+			"_gid": "chr_envi_ForestComposition",
+			"_pid": ["ForestComposition"],
+			"_aid": ["ForestComposition"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "GCU forest composition"},
+			"_definition": {"iso_639_3_eng": "Composition of the forest stand assessed  (by eye) at forest stand lavel in the functional subset area."},
+			"_description": {"iso_639_3_eng": "See the WP2 protocol for more information."}
+		},
+		"_data": {
+			"_class": "_class_category",
+			"_domain": ["envi"],
+			"_subject": "stand",
+			"_scalar": {
+				"_type": "_type_string_enum",
+				"_kind": ["chr_envi_ForestStructure"]
 			}
 		}
 	}
