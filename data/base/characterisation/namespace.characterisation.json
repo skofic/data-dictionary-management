@@ -103,6 +103,17 @@
 			"_definition": {"iso_639_3_eng": "Compound data"}
 		}
 	},
+	{
+		"_code": {
+			"_lid": "fore",
+			"_gid": "fore",
+			"_aid": ["fore"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Forest"},
+			"_definition": {"iso_639_3_eng": "Forest data"}
+		}
+	},
 	
 	{
 		"_code": {
@@ -198,6 +209,18 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "Compound"},
 			"_definition": {"iso_639_3_eng": "Compound characterisation data"}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr",
+			"_lid": "fore",
+			"_gid": "chr_fore",
+			"_aid": ["fore"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Forest"},
+			"_definition": {"iso_639_3_eng": "Forest characterisation data"}
 		}
 	}
 ]

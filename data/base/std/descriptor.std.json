@@ -340,12 +340,15 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "Timestamp"},
 			"_definition": {"iso_639_3_eng": "Date and precise time of event, observation, measurement or sampling."},
-			"_description": {"iso_639_3_eng": "The timestamp is expressed as an integer value representing the standard UNIX timestamp. This value is required only if the time of day or a very precise moment in time is required to be recorded."}
+			"_description": {"iso_639_3_eng": "The *timestamp* is expressed as an *integer* value representing the [standard UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time). This value is required only if the *time of day* or a *very precise moment* in time is required to be recorded."}
 		},
 		"_data": {
 			"_class": "_class_time",
 			"_scalar": {
-				"_type": "_type_number_timestamp"
+				"_type": "_type_number_timestamp",
+				"_valid-range": {
+					"_min-range-inclusive": 0
+				}
 			}
 		}
 	},
@@ -380,7 +383,8 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "Month"},
 			"_definition": {"iso_639_3_eng": "Month as month number: 1 to 12."},
-			"_description": {"iso_639_3_eng": "This value indicates a specific month, it is aìn integer value with a range from 1, January, to 12, December."}
+			"_description": {"iso_639_3_eng": "This value indicates a *month*, it is an *integer* value with a range from 1, *January*, to 12, *December*. This descriptor's value does not reference a specific point in time, it will most likely be a multi-year average for the referenced month."},
+			"_examples": {"iso_639_3_eng": "`1` for *January*, `12` for *December*."}
 		},
 		"_data": {
 			"_class": "_class_time",
@@ -447,7 +451,7 @@
 		"_data": {
 			"_class": "_class_time",
 			"_scalar": {
-				"_type": "_type_string"
+				"_type": "_type_string_date"
 			}
 		}
 	},
@@ -461,7 +465,8 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "Span"},
 			"_definition": {"iso_639_3_eng": "Time span of event, observation, measurement or sampling."},
-			"_description": {"iso_639_3_eng": "This categorical descriptor is used to indicate a standard time interval, such as a day, month or year. It is paired with aggregated values, such as averages, to indicate the time interval of the aggregation."}
+			"_description": {"iso_639_3_eng": "This categorical descriptor is used to indicate a standard time interval, such as a day, month or year. It is paired with aggregated values, such as averages, to indicate the time interval of the aggregation."},
+			"_examples": {"iso_639_3_eng": "`std_date_span_day` for *daily data*; `std_date_span_week` for *weekly data*; `std_date_span_month` for *monthly data* and `std_date_span_year` for *yearly data*."},
 		},
 		"_data": {
 			"_class": "_class_time",

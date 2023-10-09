@@ -1,9 +1,9 @@
 [
 	{
 		"_code": {
-			"_nid": "chr_envi_DLT",
+			"_nid": "chr_DomLeafType",
 			"_lid": "broadleaved",
-			"_gid": "chr_envi_DLT_broadleaved",
+			"_gid": "chr_DomLeafType_broadleaved",
 			"_aid": ["broadleaved"]
 		},
 		"_info": {
@@ -13,9 +13,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "chr_envi_DLT",
+			"_nid": "chr_DomLeafType",
 			"_lid": "coniferous",
-			"_gid": "chr_envi_DLT_coniferous",
+			"_gid": "chr_DomLeafType_coniferous",
 			"_aid": ["coniferous"]
 		},
 		"_info": {
@@ -26,9 +26,9 @@
 	
 	{
 		"_code": {
-			"_nid": "chr_envi_MicroTopography",
+			"_nid": "chr_MicroTopography",
 			"_lid": "1",
-			"_gid": "chr_envi_MicroTopography_1",
+			"_gid": "chr_MicroTopography_1",
 			"_aid": ["1"]
 		},
 		"_info": {
@@ -37,9 +37,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "chr_envi_MicroTopography",
+			"_nid": "chr_MicroTopography",
 			"_lid": "2",
-			"_gid": "chr_envi_MicroTopography_2",
+			"_gid": "chr_MicroTopography_2",
 			"_aid": ["2"]
 		},
 		"_info": {
@@ -48,9 +48,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "chr_envi_MicroTopography",
+			"_nid": "chr_MicroTopography",
 			"_lid": "3",
-			"_gid": "chr_envi_MicroTopography_3",
+			"_gid": "chr_MicroTopography_3",
 			"_aid": ["3"]
 		},
 		"_info": {
@@ -60,9 +60,9 @@
 	
 	{
 		"_code": {
-			"_nid": "chr_envi_ForestStructure",
+			"_nid": "chr_ForestStructure",
 			"_lid": "1",
-			"_gid": "chr_envi_ForestStructure_1",
+			"_gid": "chr_ForestStructure_1",
 			"_aid": ["1"]
 		},
 		"_info": {
@@ -71,9 +71,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "chr_envi_ForestStructure",
+			"_nid": "chr_ForestStructure",
 			"_lid": "2",
-			"_gid": "chr_envi_ForestStructure_2",
+			"_gid": "chr_ForestStructure_2",
 			"_aid": ["2"]
 		},
 		"_info": {
@@ -82,9 +82,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "chr_envi_ForestStructure",
+			"_nid": "chr_ForestStructure",
 			"_lid": "3",
-			"_gid": "chr_envi_ForestStructure_3",
+			"_gid": "chr_ForestStructure_3",
 			"_aid": ["3"]
 		},
 		"_info": {
@@ -94,24 +94,183 @@
 	
 	{
 		"_code": {
-			"_nid": "chr_envi_ForestComposition",
+			"_nid": "chr_ForestComposition",
 			"_lid": "1",
-			"_gid": "chr_envi_ForestComposition_1",
+			"_gid": "chr_ForestComposition_1",
 			"_aid": ["1"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Silgle species"}
+			"_title": {"iso_639_3_eng": "Single species"}
 		}
 	},
 	{
 		"_code": {
-			"_nid": "chr_envi_ForestComposition",
+			"_nid": "chr_ForestComposition",
 			"_lid": "2",
-			"_gid": "chr_envi_ForestComposition_2",
+			"_gid": "chr_ForestComposition_2",
 			"_aid": ["2"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Mixed forest"}
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "chr_DeadTrees",
+			"_lid": "0",
+			"_gid": "chr_DeadTrees_0",
+			"_aid": ["0"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "no"},
+			"_definition": {"iso_639_3_eng": "No dead trees"},
+			"_description": {"iso_639_3_eng": "See the WP2 protocol for more information."}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_DeadTrees",
+			"_lid": "1",
+			"_gid": "chr_DeadTrees_1",
+			"_aid": ["1"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "yes"},
+			"_definition": {"iso_639_3_eng": "Presence of dead trees"},
+			"_description": {"iso_639_3_eng": "See the WP2 protocol for more information."}
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "chr_NaturalRegeneration",
+			"_lid": "0",
+			"_gid": "chr_NaturalRegeneration_0",
+			"_aid": ["0"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Absence"},
+			"_description": {"iso_639_3_eng": "See the WP2 protocol for more information."}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_NaturalRegeneration",
+			"_lid": "1",
+			"_gid": "chr_NaturalRegeneration_1",
+			"_aid": ["1"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Scattered"},
+			"_description": {"iso_639_3_eng": "See the WP2 protocol for more information."}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_NaturalRegeneration",
+			"_lid": "2",
+			"_gid": "chr_NaturalRegeneration_2",
+			"_aid": ["2"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Groups"},
+			"_description": {"iso_639_3_eng": "See the WP2 protocol for more information."}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_NaturalRegeneration",
+			"_lid": "3",
+			"_gid": "chr_NaturalRegeneration_3",
+			"_aid": ["3"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Abundant"},
+			"_description": {"iso_639_3_eng": "See the WP2 protocol for more information."}
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "chr_Dieback",
+			"_lid": "0",
+			"_gid": "chr_Dieback_0",
+			"_aid": ["0"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "0 to 25% of defoliation"},
+			"_description": {"iso_639_3_eng": "See the WP2 protocol for more information."}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_Dieback",
+			"_lid": "1",
+			"_gid": "chr_Dieback_1",
+			"_aid": ["1"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "25 to 50%of defoliation"},
+			"_description": {"iso_639_3_eng": "See the WP2 protocol for more information."}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_Dieback",
+			"_lid": "2",
+			"_gid": "chr_Dieback_2",
+			"_aid": ["2"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "50 to 75 % of defoliation"},
+			"_description": {"iso_639_3_eng": "See the WP2 protocol for more information."}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_Dieback",
+			"_lid": "3",
+			"_gid": "chr_Dieback_3",
+			"_aid": ["3"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "75% to 99% of defoliation"},
+			"_description": {"iso_639_3_eng": "See the WP2 protocol for more information."}
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "chr_TreeSocialStatus",
+			"_lid": "Do",
+			"_gid": "chr_TreeSocialStatus_Do",
+			"_aid": ["Do"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Dominant tree"}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_TreeSocialStatus",
+			"_lid": "Co",
+			"_gid": "chr_TreeSocialStatus_Co",
+			"_aid": ["Co"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Co-dominant tree"}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_TreeSocialStatus",
+			"_lid": "de",
+			"_gid": "chr_TreeSocialStatus_de",
+			"_aid": ["de"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Dominated tree"}
 		}
 	}
 ]

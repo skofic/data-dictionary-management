@@ -1,0 +1,517 @@
+[
+
+	{
+		"_code": {
+			"_nid": "chr_pheno",
+			"_lid": "Pi0",
+			"_gid": "chr_pheno_Pi0",
+			"_pid": ["Pi0"],
+			"_aid": ["Pi0"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Leaf osmotic potential at saturation"},
+			"_definition": {"iso_639_3_eng": "The osmotic potential when leaves are fully turgid."},
+			"_description": {"iso_639_3_eng": "The osmotic potential at saturation is an index of investment of solutes by turgid leaves to maintain turgpr. It is measured by osmometry on extracted sap. Tree level data."},
+			"_provider": [
+				"Maurizio Mencuccini <m.mencuccini@creaf.uab.cat>"
+			]
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["pheno"],
+			"_subject": "tree",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit-name": "MPa",
+				"_valid-range": {
+					"_min-range-exclusive": -5.0,
+					"_max-range-exclusive": 0.0
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_pheno_Pi0",
+			"_lid": "CI95",
+			"_gid": "chr_pheno_Pi0_CI95",
+			"_pid": ["CI.Pi0"],
+			"_aid": ["CI95"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Leaf osmotic potential at saturation 95% confidence interval"},
+			"_definition": {"iso_639_3_eng": "95% confidence interval for leaf osmotic potential at saturation."},
+			"_description": {"iso_639_3_eng": "Difference between [leaf osmotic potential at saturation](./chr_pheno_Pi0.md) mean and the upper or lower bounds of the 95% confidence interval."}
+		},
+		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_domain": ["pheno"],
+			"_subject": "tree",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit-name": "MPa"
+			}
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "chr_pheno",
+			"_lid": "Cleaf",
+			"_gid": "chr_pheno_Cleaf",
+			"_pid": ["Cleaf"],
+			"_aid": ["Cleaf"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Leaf hydraulic capacitance"},
+			"_definition": {"iso_639_3_eng": "The change in leaf relative water content RWC per unit change in water potential."},
+			"_description": {"iso_639_3_eng": "Hydraulic capacitance is an index of drought resistance and it is measured by weight loss under standard conditions. Tree level data."},
+			"_notes": {"iso_639_3_eng": "This tree level property can also be averaged across trees to provide an equivalent GCU-level estimate (with associated variance)."},
+			"_provider": [
+				"Maurizio Mencuccini <m.mencuccini@creaf.uab.cat>"
+			]
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["pheno"],
+			"_subject": "tree",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit-name": "%RWC MPa-1",
+				"_valid-range": {
+					"_min-range-exclusive": 0.0,
+					"_max-range-exclusive": 50.0
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_pheno_Cleaf",
+			"_lid": "CI95",
+			"_gid": "chr_pheno_Cleaf_CI95",
+			"_pid": ["CI.Cleaf"],
+			"_aid": ["CI95"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Leaf hydraulic capacitance 95% confidence interval"},
+			"_definition": {"iso_639_3_eng": "95% confidence interval for leaf hydraulic capacitance."},
+			"_description": {"iso_639_3_eng": "Difference between [leaf hydraulic capacitance](./chr_pheno_Cleaf.md) mean and the upper or lower bounds of the 95% confidence interval."}
+		},
+		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_domain": ["pheno"],
+			"_subject": "tree",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit-name": "%RWC MPa-1"
+			}
+		}
+	},
+	
+	
+	{
+		"_code": {
+			"_nid": "chr_pheno",
+			"_lid": "CrownFootprint",
+			"_gid": "chr_pheno_CrownFootprint",
+			"_pid": ["CrownFootprint"],
+			"_aid": ["CrownFootprint"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Crown footprint (Crown projection)"},
+			"_definition": {"iso_639_3_eng": "The footprint of the tree crown area estimated by 4 length projected in the 4 directions: North-East-South and West for each Functional Subset tree."},
+			"_description": {"iso_639_3_eng": "The crown projection is an index of tree vitality to be related to tree size measures. See the WP2 protocol for more information."}
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["pheno"],
+			"_subject": "tree",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit": "_unit_area_m",
+				"_valid-range": {
+					"_min-range-exclusive": 5,
+					"_max-range-exclusive": 200
+				}
+			}
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "chr_pheno",
+			"_lid": "WCC",
+			"_gid": "chr_pheno_WCC",
+			"_pid": ["WCC"],
+			"_aid": ["WCC"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Wood carbon content"},
+			"_definition": {"iso_639_3_eng": "The percentage of wood dry mass that is composed of carbon atoms."},
+			"_description": {"iso_639_3_eng": "WCC is obtained by mass spectrometry of dried and ground wood samples."},
+			"_provider": [
+				"Maurizio Mencuccini <m.mencuccini@creaf.uab.cat>"
+			]
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["pheno"],
+			"_subject": "tree",
+			"_scalar": {
+				"_type": "_type_number",
+				"_valid-range": {
+					"_min-range-exclusive": 30.0,
+					"_max-range-exclusive": 70.0
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_pheno_WCC",
+			"_lid": "CI95",
+			"_gid": "chr_pheno_WCC_CI95",
+			"_pid": ["CI.WCC"],
+			"_aid": ["CI95"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Wood carbon content 95% confidence interval"},
+			"_definition": {"iso_639_3_eng": "95% confidence interval for wood carbon content."},
+			"_description": {"iso_639_3_eng": "Difference between [wood carbon content](./chr_pheno_WCC.md) mean and the upper or lower bounds of the 95% confidence interval."}
+		},
+		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_domain": ["pheno"],
+			"_subject": "tree",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit_name": "% or 100*g g-1"
+			}
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "chr_pheno",
+			"_lid": "LNC",
+			"_gid": "chr_pheno_LNC",
+			"_pid": ["LNC"],
+			"_aid": ["LNC"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Leaf nitrogen content"},
+			"_definition": {"iso_639_3_eng": "The percentage of leaf dry mass that is composed of nitrogen atoms."},
+			"_description": {"iso_639_3_eng": "LNC is obtained by mass spectrometry of dried and ground leaf samples."},
+			"_provider": [
+				"Maurizio Mencuccini <m.mencuccini@creaf.uab.cat>"
+			]
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["pheno"],
+			"_subject": "tree",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit_name": "% or 100*g g-1",
+				"_valid-range": {
+					"_min-range-exclusive": 0.0,
+					"_max-range-exclusive": 5.0
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_pheno_LNC",
+			"_lid": "CI95",
+			"_gid": "chr_pheno_LNC_CI95",
+			"_pid": ["CI.LNC"],
+			"_aid": ["CI95"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Leaf nitrogen content 95% confidence interval"},
+			"_definition": {"iso_639_3_eng": "95% confidence interval for leaf nitrogen content."},
+			"_description": {"iso_639_3_eng": "Difference between [leaf nitrogen content](./chr_pheno_LNC.md) mean and the upper or lower bounds of the 95% confidence interval."}
+		},
+		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_domain": ["pheno"],
+			"_subject": "tree",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit_name": "% or 100*g g-1"
+			}
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "chr_pheno",
+			"_lid": "Leaf-delta13C",
+			"_gid": "chr_pheno_Leaf-delta13C",
+			"_pid": ["Leaf delta13C"],
+			"_aid": ["Leaf-delta13C"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Leaf delta 13C"},
+			"_definition": {"iso_639_3_eng": "The isotopic ratio of 13C to the more abundant 12C carbon atoms relative to a standard reference material in per mils in leaf samples."},
+			"_description": {"iso_639_3_eng": "Leaf delta13C is obtained by mass spectrometry of dried and ground leaf samples. Being relative to a standard reference material, it is always negative."},
+			"_provider": [
+				"Maurizio Mencuccini <m.mencuccini@creaf.uab.cat>"
+			]
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["pheno"],
+			"_subject": "tree",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit_name": "per mil or 1000 g g-1",
+				"_valid-range": {
+					"_min-range-exclusive": -40.0,
+					"_max-range-exclusive": 0.0
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_pheno_Leaf-delta13C",
+			"_lid": "CI95",
+			"_gid": "chr_pheno_Leaf-delta13C_CI95",
+			"_pid": ["CI.Leaf-delta13C"],
+			"_aid": ["CI95"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Leaf delta 13C 95% confidence interval"},
+			"_definition": {"iso_639_3_eng": "95% confidence interval for leaf delta 13C."},
+			"_description": {"iso_639_3_eng": "Difference between [leaf delta 13C](./chr_pheno_Leaf-delta13C.md) mean and the upper or lower bounds of the 95% confidence interval."}
+		},
+		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_domain": ["pheno"],
+			"_subject": "tree",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit_name": "per mil or 1000 g g-1"
+			}
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "chr_pheno",
+			"_lid": "Wood-delta13C",
+			"_gid": "chr_pheno_Wood-delta13C",
+			"_pid": ["Wood delta13C"],
+			"_aid": ["Wood-delta13C"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Wood delta 13C"},
+			"_definition": {"iso_639_3_eng": "The isotopic ratio of 13C to the more abundant 12C carbon atoms relative to a standard reference material in per mils in wood samples."},
+			"_description": {"iso_639_3_eng": "Wood delta13C is obtained by mass spectrometry of dried and ground leaf samples. Being relative to a standard reference material, it is always negative."},
+			"_provider": [
+				"Maurizio Mencuccini <m.mencuccini@creaf.uab.cat>"
+			]
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["pheno"],
+			"_subject": "tree",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit_name": "per mil or 1000 g g-1",
+				"_valid-range": {
+					"_min-range-exclusive": -40.0,
+					"_max-range-exclusive": 0.0
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_pheno_Wood-delta13C",
+			"_lid": "CI95",
+			"_gid": "chr_pheno_Wood-delta13C_CI95",
+			"_pid": ["CI.Wood-delta13C"],
+			"_aid": ["CI95"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Wood delta 13C 95% confidence interval"},
+			"_definition": {"iso_639_3_eng": "95% confidence interval for wood delta 13C."},
+			"_description": {"iso_639_3_eng": "Difference between [wood delta 13C](./chr_pheno_Wood-delta13C.md) mean and the upper or lower bounds of the 95% confidence interval."}
+		},
+		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_domain": ["pheno"],
+			"_subject": "tree",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit_name": "per mil or 1000 g g-1"
+			}
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "chr_pheno",
+			"_lid": "Leaf-delta15N",
+			"_gid": "chr_pheno_Leaf-delta15N",
+			"_pid": ["Leaf delta15N"],
+			"_aid": ["Leaf-delta15N"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Leaf delta 15N"},
+			"_definition": {"iso_639_3_eng": "The isotopic ratio of 15N to the more abundant 14N nitrogen atoms relative to a standard reference material in per mils in leaf samples."},
+			"_description": {"iso_639_3_eng": "Leaf delta15N is obtained by mass spectrometry of dried and ground leaf samples. Being relative to a standard reference material, it is always negative."},
+			"_provider": [
+				"Maurizio Mencuccini <m.mencuccini@creaf.uab.cat>"
+			]
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["pheno"],
+			"_subject": "tree",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit_name": "per mil or 1000 g g-1",
+				"_valid-range": {
+					"_min-range-exclusive": -20.0,
+					"_max-range-exclusive": 20.0
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_pheno_Leaf-delta15N",
+			"_lid": "CI95",
+			"_gid": "chr_pheno_Leaf-delta15N_CI95",
+			"_pid": ["CI.Leaf-delta15N"],
+			"_aid": ["CI95"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Leaf delta 15N 95% confidence interval"},
+			"_definition": {"iso_639_3_eng": "95% confidence interval for leaf delta 15N."},
+			"_description": {"iso_639_3_eng": "Difference between [leaf delta 15N](./chr_pheno_Leaf-delta15N.md) mean and the upper or lower bounds of the 95% confidence interval."}
+		},
+		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_domain": ["pheno"],
+			"_subject": "tree",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit_name": "per mil or 1000 g g-1"
+			}
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "chr_pheno",
+			"_lid": "Leaf-CN",
+			"_gid": "chr_pheno_Leaf-CN",
+			"_pid": ["Leaf CN"],
+			"_aid": ["Leaf-CN"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Leaf CN ratio"},
+			"_definition": {"iso_639_3_eng": "The ratio of carbon to nitrogen atoms in leaf dry tissues."},
+			"_description": {"iso_639_3_eng": "Leaf C/N ratio is obtained by mass spectrometry of dried and ground leaf samples."},
+			"_provider": [
+				"Maurizio Mencuccini <m.mencuccini@creaf.uab.cat>"
+			]
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["pheno"],
+			"_subject": "tree",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit_name": "g g-1",
+				"_valid-range": {
+					"_min-range-exclusive": 0.0,
+					"_max-range-exclusive": 1000.0
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_pheno_Leaf-CN",
+			"_lid": "CI95",
+			"_gid": "chr_pheno_Leaf-CN_CI95",
+			"_pid": ["CI.Leaf-CN"],
+			"_aid": ["CI95"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Leaf CN ratio 95% confidence interval"},
+			"_definition": {"iso_639_3_eng": "95% confidence interval for leaf CN ratio."},
+			"_description": {"iso_639_3_eng": "Difference between [leaf CN ratio](./chr_pheno_Leaf-CN.md) mean and the upper or lower bounds of the 95% confidence interval."}
+		},
+		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_domain": ["pheno"],
+			"_subject": "tree",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit_name": "g g-1"
+			}
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "chr_pheno",
+			"_lid": "BD",
+			"_gid": "chr_pheno_BD",
+			"_pid": ["BD"],
+			"_aid": ["BD"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Bark density"},
+			"_definition": {"iso_639_3_eng": "The ratio of bark dry mass divided by its fresh volume."},
+			"_description": {"iso_639_3_eng": "Bark density is the ratio of biomass invested in bark per unit of volume. It is obtained by weighing and following determination of volume."},
+			"_provider": [
+				"Maurizio Mencuccini <m.mencuccini@creaf.uab.cat>"
+			]
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["pheno"],
+			"_subject": "tree",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit_name": "g cm-3",
+				"_valid-range": {
+					"_min-range-exclusive": 0.1,
+					"_max-range-exclusive": 1.0
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_pheno_BD",
+			"_lid": "CI95",
+			"_gid": "chr_pheno_BD_CI95",
+			"_pid": ["CI.BD"],
+			"_aid": ["CI95"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Bark density 95% confidence interval"},
+			"_definition": {"iso_639_3_eng": "95% confidence interval for bark density."},
+			"_description": {"iso_639_3_eng": "Difference between [bark density](./chr_pheno_BD.md) mean and the upper or lower bounds of the 95% confidence interval."}
+		},
+		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_domain": ["pheno"],
+			"_subject": "tree",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit_name": "g cm-3"
+			}
+		}
+	},
+]

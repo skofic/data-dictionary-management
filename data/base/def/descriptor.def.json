@@ -87,12 +87,13 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "Geometry hash"},
 			"_definition": {"iso_639_3_eng": "Unique identifier of a shape or geometry."},
-			"_description": {"iso_639_3_eng": "This descriptor should be the *unique reference* of a [geometry](geometry.md) in a *collection* containing only *distinct geometries*.\n\nThe value is obtained by *hashing* the [geometry](geometry.md) [GeoJSON](https://geojson.org) structure: the result is a *string* that *uniquely identifies* the *shape*. This string *will* then *become* the [unique ID](_key.md) of the *record containing the shape*.\n\nHashing the shape structure allows mixing different geometry types and guarantees that each shape will have a different identifier. Currently we use the [MD5](https://en.wikipedia.org/wiki/MD5) hash function on the string representation of the [geometry](geometry.md)."}
+			"_description": {"iso_639_3_eng": "This descriptor should be the *unique reference* of a [geometry](geometry.md) in a *collection* containing only *distinct geometries*.\n\nThe value is obtained by *hashing* the [geometry](geometry.md) [GeoJSON](https://geojson.org) structure: the result is a *string* that *uniquely identifies* the *shape*. This string *will* then *become* the [unique ID](_key.md) of the *record containing the shape*.\n\nHashing the shape structure allows mixing different geometry types and guarantees that each shape will have a different identifier. Currently we use the [MD5](https://en.wikipedia.org/wiki/MD5) hash function on the string representation of the [geometry](geometry.md).\n\nThe hashing means that if you *change* the *shape* of the polygon, it becomes a *new polygon*. This means that remote sensing data will have to be extracted for that new shape."}
 		},
 		"_data": {
 			"_class": "_class_identifier",
 			"_scalar": {
-				"_type": "_type_string_key"
+				"_type": "_type_string_key",
+				"_regexp": "^[0-9a-f]{32}$"
 			}
 		}
 	},	
@@ -112,7 +113,8 @@
 			"_class": "_class_identifier",
 			"_set": {
 				"_set_scalar": {
-					"_set_type": "_type_string_key"
+					"_set_type": "_type_string_key",
+					"_regexp": "^[0-9a-f]{32}$"
 				}
 			}
 		}
@@ -148,6 +150,89 @@
 		"_data": {
 			"_scalar": {
 				"_type": "_type_integer"
+			}
+		}
+	},
+	
+	{
+		"_code": {
+			"_lid": "species",
+			"_gid": "species",
+			"_pid": ["Species"],
+			"_aid": ["species"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Species"},
+			"_definition": {"iso_639_3_eng": "Tree or population species."},
+			"_description": {"iso_639_3_eng": "Provide the *species* of the *individual tree* or *population* to which *data* is *referring* to."},
+			"_examples": {"iso_639_3_eng": "Pinus sylvestris, Abies alba, Delonix regia var. genuina"}
+		},
+		"_data": {
+			"_class": "_class_category",
+			"_scalar": {
+				"_type": "_type_string"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "species",
+			"_lid": "list",
+			"_gid": "species_list",
+			"_aid": ["list"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Species list"},
+			"_definition": {"iso_639_3_eng": "Trees or population list of species."},
+			"_description": {"iso_639_3_eng": "Provide the *list of species* of the *individual trees* or *population* to which *data* is *referring* to. See the [species](species.md) descriptor for more information and examples."}
+		},
+		"_data": {
+			"_class": "_class_category",
+			"_set": {
+				"_set_scalar": {
+					"_set_type": "_type_string"
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "tree",
+			"_lid": "code",
+			"_gid": "tree_code",
+			"_pid": ["TreeCode"],
+			"_aid": ["code"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Tree identifier"},
+			"_definition": {"iso_639_3_eng": "Identifier code assigned to the tree."},
+			"_description": {"iso_639_3_eng": "Provide the identifier assigned to the specific tree. When you *include* this field, it indicates that the *trait data* refers to a *single tree*. If you *omit* this field it means that the *trait data* refers to a [species](./species.md) in a [unit](./gcu_id_number,md)."}
+		},
+		"_data": {
+			"_class": "_class_identifier",
+			"_subject": "tree",
+			"_scalar": {
+				"_type": "_type_string"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_lid": "project",
+			"_gid": "project",
+			"_pid": ["Project"],
+			"_aid": ["project"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Project"},
+			"_definition": {"iso_639_3_eng": "Project to which the experiment, dataset or measurement belongs."},
+			"_description": {"iso_639_3_eng": "The field is not coded, provide the acronym of the project."},
+			"_examples": {"iso_639_3_eng": "GenTree"}
+		},
+		"_data": {
+			"_class": "_class_identifier",
+			"_scalar": {
+				"_type": "_type_string"
 			}
 		}
 	}

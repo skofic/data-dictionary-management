@@ -50,66 +50,123 @@
 	},
 	
 	{
-		"_from": "chr_envi_DLT_broadleaved",
-		"_to": "chr_envi_DLT",
+		"_from": "chr_DomLeafType_broadleaved",
+		"_to": "chr_DomLeafType",
 		"_predicate": "_predicate_enum-of",
-		"_path": ["chr_envi_DLT"]
+		"_path": ["chr_DomLeafType"]
 	},
 	{
-		"_from": "chr_envi_DLT_coniferous",
-		"_to": "chr_envi_DLT",
+		"_from": "chr_DomLeafType_coniferous",
+		"_to": "chr_DomLeafType",
 		"_predicate": "_predicate_enum-of",
-		"_path": ["chr_envi_DLT"]
-	},
-	
-	{
-		"_from": "chr_envi_MicroTopography_1",
-		"_to": "chr_envi_MicroTopography",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["chr_envi_MicroTopography"]
-	},
-	{
-		"_from": "chr_envi_MicroTopography_2",
-		"_to": "chr_envi_MicroTopography",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["chr_envi_MicroTopography"]
-	},
-	{
-		"_from": "chr_envi_MicroTopography_3",
-		"_to": "chr_envi_MicroTopography",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["chr_envi_MicroTopography"]
+		"_path": ["chr_DomLeafType"]
 	},
 	
 	{
-		"_from": "chr_envi_ForestStructure_1",
-		"_to": "chr_envi_ForestStructure",
+		"_from": "chr_MicroTopography_1",
+		"_to": "chr_MicroTopography",
 		"_predicate": "_predicate_enum-of",
-		"_path": ["chr_envi_ForestStructure"]
+		"_path": ["chr_MicroTopography"]
 	},
 	{
-		"_from": "chr_envi_ForestStructure_2",
-		"_to": "chr_envi_ForestStructure",
+		"_from": "chr_MicroTopography_2",
+		"_to": "chr_MicroTopography",
 		"_predicate": "_predicate_enum-of",
-		"_path": ["chr_envi_ForestStructure"]
+		"_path": ["chr_MicroTopography"]
 	},
 	{
-		"_from": "chr_envi_ForestStructure_3",
-		"_to": "chr_envi_ForestStructure",
+		"_from": "chr_MicroTopography_3",
+		"_to": "chr_MicroTopography",
 		"_predicate": "_predicate_enum-of",
-		"_path": ["chr_envi_ForestStructure"]
+		"_path": ["chr_MicroTopography"]
 	},
 	
 	{
-		"_from": "chr_envi_ForestComposition_1",
-		"_to": "chr_envi_ForestComposition",
+		"_from": "chr_ForestStructure_1",
+		"_to": "chr_ForestStructure",
 		"_predicate": "_predicate_enum-of",
-		"_path": ["chr_envi_ForestComposition"]
+		"_path": ["chr_ForestStructure"]
 	},
 	{
-		"_from": "chr_envi_ForestComposition_2",
-		"_to": "chr_envi_ForestComposition",
+		"_from": "chr_ForestStructure_2",
+		"_to": "chr_ForestStructure",
 		"_predicate": "_predicate_enum-of",
-		"_path": ["chr_envi_ForestComposition"]
+		"_path": ["chr_ForestStructure"]
+	},
+	{
+		"_from": "chr_ForestStructure_3",
+		"_to": "chr_ForestStructure",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr_ForestStructure"]
+	},
+	
+	{
+		"_from": "chr_ForestComposition_1",
+		"_to": "chr_ForestComposition",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr_ForestComposition"]
+	},
+	{
+		"_from": "chr_ForestComposition_2",
+		"_to": "chr_ForestComposition",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr_ForestComposition"]
+	},
+	
+	{
+		"_from": "chr_DeadTrees_0",
+		"_to": "chr_DeadTrees",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr_DeadTrees"]
+	},
+	{
+		"_from": "chr_DeadTrees_1",
+		"_to": "chr_DeadTrees",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr_DeadTrees"]
+	},
+	
+	{
+		"_from": "chr_Dieback_0",
+		"_to": "chr_Dieback",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr_Dieback"]
+	},
+	{
+		"_from": "chr_Dieback_1",
+		"_to": "chr_Dieback",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr_Dieback"]
+	},
+	{
+		"_from": "chr_Dieback_2",
+		"_to": "chr_Dieback",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr_Dieback"]
+	},
+	{
+		"_from": "chr_Dieback_3",
+		"_to": "chr_Dieback",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr_Dieback"]
+	},
+	
+	{
+		"_from": "TreeSocialStatus_Do",
+		"_to": "TreeSocialStatus",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["TreeSocialStatus"]
+	},
+	{
+		"_from": "TreeSocialStatus_Co",
+		"_to": "TreeSocialStatus",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["TreeSocialStatus"]
+	},
+	{
+		"_from": "TreeSocialStatus_de",
+		"_to": "TreeSocialStatus",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["TreeSocialStatus"]
 	}
 ]

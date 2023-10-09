@@ -35,6 +35,7 @@
 		},
 		"_data": {
 			"_class": "_class_identifier",
+			"_subject": "stand",
 			"_scalar": {
 				"_type": "_type_string",
 				"_regexp": "^[A-Z]{3}[0-9]{4,5}$"
@@ -56,6 +57,7 @@
 		},
 		"_data": {
 			"_class": "_class_identifier",
+			"_subject": "stand",
 			"_scalar": {
 				"_type": "_type_string"
 			}
