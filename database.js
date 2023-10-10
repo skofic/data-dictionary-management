@@ -65,6 +65,11 @@ async function InitDatabase(db)
 					await db.collection(kDb.collection_edges).truncate()
 					break
 
+				// Links.
+				case kDb.collection_links:
+					await db.collection(kDb.collection_links).truncate()
+					break
+
 				// Topo.
 				case kDb.collection_topos:
 					await db.collection(kDb.collection_topos).truncate()
@@ -90,6 +95,7 @@ async function InitDatabase(db)
 	//
 	await InitTermCollection(db, kDb.collection_terms)
 	await InitEdgeCollection(db, kDb.collection_edges)
+	await InitLinksCollection(db, kDb.collection_links)
 	await InitTopoCollection(db, kDb.collection_topos)
 	await InitErrorCollection(db, kDb.collection_errors)
 	if(kPriv.user.flag.drop_characterisation) {
@@ -182,6 +188,39 @@ async function InitEdgeCollection(db, name)
 	console.log(`Created edge collection ${name}`)
 
 } // InitEdgeCollection()
+
+/**
+ * Initialise links collection.
+ * It expects the collection to have been previously dropped.
+ * @param {Database} db - Database connection.
+ * @param {string} name - Collection name.
+ * @returns {Promise<void>}
+ */
+async function InitLinksCollection(db, name)
+{
+	//
+	// Create collection.
+	//
+	let collection = db.collection(name)
+	if(!await collection.exists()) {
+		collection = await db.createEdgeCollection(name)
+	}
+
+	//
+	// Add indexes.
+	//
+	await collection.ensureIndex({
+		type: 'persistent',
+		fields: ['_predicate'],
+		deduplicate: true,
+		estimates: true,
+		name: "idx-schema-path-predicate",
+		unique: false
+	})
+
+	console.log(`Created links collection ${name}`)
+
+} // InitLinksCollection()
 
 /**
  * Initialise topos collection.
@@ -325,6 +364,11 @@ async function InitSchemaGraph(db)
 	const info = await graph.create([
 		{
 			collection: kDb.collection_edges,
+			from: [kDb.collection_terms],
+			to: [kDb.collection_terms],
+		},
+		{
+			collection: kDb.collection_links,
 			from: [kDb.collection_terms],
 			to: [kDb.collection_terms],
 		}

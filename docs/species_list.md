@@ -8,9 +8,9 @@
 
 
 ------
-###### Tree or population list of species.
+###### Trees or population list of species.
 
 
 
 ------
-Provide the *list of species* of the *individual tree* or *population* to which *data* is *referring* to.
+Provide the *list of species* of the *individual trees* or *population* to which *data* is *referring* to. See the [species](species.md) descriptor for more information and examples.

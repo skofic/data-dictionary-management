@@ -43,7 +43,6 @@ async function main()
 		"descriptor.iso.json",
 		"descriptor.std.json",
 		"descriptor.eufgis.json",
-		"descriptor.characterisation.json",
 		"descriptor.characterisation.phenotype.json",
 		"descriptor.characterisation.genetic.json",
 		"descriptor.characterisation.environmental.json",

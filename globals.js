@@ -70,6 +70,9 @@ const globals = {
 		"edge": [
 			"schema",
 			"struct"
+		],
+		"link": [
+			"links"
 		]
 	},
 

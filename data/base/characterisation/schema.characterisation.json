@@ -152,21 +152,21 @@
 	},
 	
 	{
-		"_from": "TreeSocialStatus_Do",
-		"_to": "TreeSocialStatus",
+		"_from": "chr_TreeSocialStatus_Do",
+		"_to": "chr_TreeSocialStatus",
 		"_predicate": "_predicate_enum-of",
-		"_path": ["TreeSocialStatus"]
+		"_path": ["chr_TreeSocialStatus"]
 	},
 	{
-		"_from": "TreeSocialStatus_Co",
-		"_to": "TreeSocialStatus",
+		"_from": "chr_TreeSocialStatus_Co",
+		"_to": "chr_TreeSocialStatus",
 		"_predicate": "_predicate_enum-of",
-		"_path": ["TreeSocialStatus"]
+		"_path": ["chr_TreeSocialStatus"]
 	},
 	{
-		"_from": "TreeSocialStatus_de",
-		"_to": "TreeSocialStatus",
+		"_from": "chr_TreeSocialStatus_de",
+		"_to": "chr_TreeSocialStatus",
 		"_predicate": "_predicate_enum-of",
-		"_path": ["TreeSocialStatus"]
+		"_path": ["chr_TreeSocialStatus"]
 	}
 ]

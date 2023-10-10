@@ -292,10 +292,10 @@
 	{
 		"_code": {
 			"_nid": "chr_trend",
-			"_lid": "MaxLST",
-			"_gid": "chr_trend_MaxLST",
+			"_lid": "MaxLandSurfTemp",
+			"_gid": "chr_trend_MaxLandSurfTemp",
 			"_pid": ["TrendMaxLST"],
-			"_aid": ["MaxLST"]
+			"_aid": ["MaxLandSurfTemp"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Trend (temporal dynamics) in GCU Max Land surface temperature"},

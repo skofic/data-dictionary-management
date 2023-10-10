@@ -76,6 +76,20 @@ async function ProcessDictionaryFiles(db) {
 			),
 			ProcessEdge								// Object processing callback.
 		)
+
+		//
+		// Process links files.
+		//
+		await ProcessFiles(
+			db,										// Database connection.
+			kDb.collection_links,					// Database collection name.
+			GetFilesList(
+				path,								// Source data files directory.
+				'.json', 					// File extension.
+				kGlob.globals.file_prefixes.link	// Selection name prefixes.
+			),
+			ProcessLink								// Object processing callback.
+		)
 	}
 
 } // ProcessDictionaryFiles()
@@ -2907,10 +2921,10 @@ function ProcessEdge(edge) {
 				// Create key string.
 				//
 				const index = srcRef
-							+ kGlob.globals.token.tok
-							+ edge._predicate
-							+ kGlob.globals.token.tok
-							+ dstRef
+					+ kGlob.globals.token.tok
+					+ edge._predicate
+					+ kGlob.globals.token.tok
+					+ dstRef
 
 				//
 				// Init new term with _key.
@@ -2962,6 +2976,91 @@ function ProcessEdge(edge) {
 	}
 
 } // ProcessEdge()
+
+/**
+ * Process provided link.
+ * - This function will create the _key property of the link according to the user settings:
+ * it will join _from, predicate and _to separating them with a token, the resulting string
+ * will be MD5 hashed in the _key; the user settings have no effect here.
+ * - The function expects the _from and _to properties to hold the global identifiers of the
+ * related terms, the function will take care of converting them to record references according
+ * to the settings in user globals.
+ * - The function will ensure the edge features the predicate field.
+ * @param {object} edge - Original edge, with _key set.
+ */
+function ProcessLink(edge) {
+
+	//
+	// Assert the edge has its references.
+	//
+	if('_from' in edge && '_to' in edge) {
+
+		//
+		// Check predicate.
+		//
+		if('_predicate' in edge) {
+
+			//
+			// Set term record references.
+			//
+			const srcRef = MakeHandleReference(ProcessGlobalIdentifier(edge._from))
+			const dstRef = MakeHandleReference(ProcessGlobalIdentifier(edge._to))
+
+			//
+			// Create key string.
+			//
+			const index = srcRef
+				+ kGlob.globals.token.tok
+				+ edge._predicate
+				+ kGlob.globals.token.tok
+				+ dstRef
+
+			//
+			// Init new term with _key.
+			//
+			let newEdge = {
+				"_key": md5(index)
+			}
+
+			//
+			// Load existing properties.
+			//
+			for(const key in edge) {
+
+				//
+				// Parse property.
+				//
+				switch(key) {
+
+					case '_from':
+						newEdge._from = srcRef
+						break
+
+					case '_to':
+						newEdge._to = dstRef
+						break
+
+					case '_key':
+						break
+
+					default:
+						newEdge[key] = edge[key]
+						break;
+				}
+
+			} // Loaded processed properties.
+
+			return newEdge															// ==>
+
+		} else {
+			throw(Error(`Missing predicate in edge`))
+		}
+
+	} else {
+		throw(Error(`Missing _from or _to in edge`))
+	}
+
+} // ProcessLink()
 
 /**
  * Process global identifier.
