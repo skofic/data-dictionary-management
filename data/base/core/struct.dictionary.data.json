@@ -345,5 +345,18 @@
 		"_to": "_elements",
 		"_predicate": "_predicate_property-of",
 		"_path": ["_elements"]
+	},
+	
+	{
+		"_from": "_range",
+		"_to": "_valid-range",
+		"_predicate": "_predicate_bridge-of",
+		"_path": ["_range"]
+	},
+	{
+		"_from": "_range",
+		"_to": "_normal-range",
+		"_predicate": "_predicate_bridge-of",
+		"_path": ["_range"]
 	}
 ]
