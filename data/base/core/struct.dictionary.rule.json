@@ -31,14 +31,14 @@
 	},
 	
 	{
-		"_from": "_required",
-		"_to": "_selection-descriptors",
+		"_from": "_selection-descriptors",
+		"_to": "_required",
 		"_predicate": "_predicate_bridge-of",
 		"_path": ["_required"]
 	},
 	{
-		"_from": "_required",
-		"_to": "_selection-descriptors",
+		"_from": "_selection-descriptors",
+		"_to": "_recommended",
 		"_predicate": "_predicate_bridge-of",
 		"_path": ["_recommended"]
 	},

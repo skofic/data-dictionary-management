@@ -313,25 +313,25 @@
 		"_from": "_min-range-inclusive",
 		"_to": "_range",
 		"_predicate": "_predicate_property-of",
-		"_path": ["_range"]
+		"_path": ["_range", "_normal-range", "_valid-range"]
 	},
 	{
 		"_from": "_max-range-inclusive",
 		"_to": "_range",
 		"_predicate": "_predicate_property-of",
-		"_path": ["_range"]
+		"_path": ["_range", "_normal-range", "_valid-range"]
 	},
 	{
 		"_from": "_min-range-exclusive",
 		"_to": "_range",
 		"_predicate": "_predicate_property-of",
-		"_path": ["_range"]
+		"_path": ["_range", "_normal-range", "_valid-range"]
 	},
 	{
 		"_from": "_max-range-exclusive",
 		"_to": "_range",
 		"_predicate": "_predicate_property-of",
-		"_path": ["_range"]
+		"_path": ["_range", "_normal-range", "_valid-range"]
 	},
 	
 	{
@@ -351,12 +351,12 @@
 		"_from": "_range",
 		"_to": "_valid-range",
 		"_predicate": "_predicate_bridge-of",
-		"_path": ["_range"]
+		"_path": ["_valid-range"]
 	},
 	{
 		"_from": "_range",
 		"_to": "_normal-range",
 		"_predicate": "_predicate_bridge-of",
-		"_path": ["_range"]
+		"_path": ["_normal-range"]
 	}
 ]
