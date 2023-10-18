@@ -6,13 +6,19 @@
 		"_path": ["_data"]
 	},
 	{
+		"_from": "_domain",
+		"_to": "_data",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_data"]
+	},
+	{
 		"_from": "_subject",
 		"_to": "_data",
 		"_predicate": "_predicate_property-of",
 		"_path": ["_data"]
 	},
 	{
-		"_from": "_domain",
+		"_from": "_tags",
 		"_to": "_data",
 		"_predicate": "_predicate_property-of",
 		"_path": ["_data"]

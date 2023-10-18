@@ -229,6 +229,50 @@
             }
         }
     },
+
+    {
+        "_code": {
+            "_nid": "std_country",
+            "_lid": "name",
+            "_gid": "std_country_name",
+            "_aid": ["name"]
+        },
+        "_info": {
+            "_title": {"iso_639_3_eng": "Country name"}
+        },
+        "_data": {
+            "_scalar": {"_type": "_type_string"}
+        }
+    },
+    {
+        "_code": {
+            "_nid": "std_country",
+            "_lid": "province",
+            "_gid": "std_country_province",
+            "_aid": ["province"]
+        },
+        "_info": {
+            "_title": {"iso_639_3_eng": "Province name"}
+        },
+        "_data": {
+            "_scalar": {"_type": "_type_string"}
+        }
+    },
+    {
+        "_code": {
+            "_nid": "std_country",
+            "_lid": "commune",
+            "_gid": "std_country_commune",
+            "_aid": ["commune"]
+        },
+        "_info": {
+            "_title": {"iso_639_3_eng": "Commune name"}
+        },
+        "_data": {
+            "_scalar": {"_type": "_type_string"}
+        }
+    },
+
     {
         "_code": {
             "_nid": "std",
@@ -336,6 +380,70 @@
             }
         }
     },
+    {
+        "_code": {
+            "_nid": "std_time",
+            "_lid": "update",
+            "_gid": "std_time_update",
+            "_pid": ["lastupdate"],
+            "_aid": ["update"]
+        },
+        "_info": {
+            "_title": {"iso_639_3_eng": "Last Update"},
+            "_definition": {"iso_639_3_eng": "Date and precise time of last update."},
+            "_description": {"iso_639_3_eng": "The *timestamp* is expressed as an *integer* value representing the [standard UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time). This value is required only if the *time of day* or a *very precise moment* in time is required to be recorded."}
+        },
+        "_data": {
+            "_class": "_class_time",
+            "_scalar": {
+                "_type": "_type_number_timestamp",
+                "_valid-range": {"_min-range-inclusive": 0}
+            }
+        }
+    },
+    {
+        "_code": {
+            "_nid": "std_time",
+            "_lid": "fire",
+            "_gid": "std_time_fire",
+            "_pid": ["lastfiredate"],
+            "_aid": ["fire"]
+        },
+        "_info": {
+            "_title": {"iso_639_3_eng": "Fire Date"},
+            "_definition": {"iso_639_3_eng": "Date and precise time of fire."},
+            "_description": {"iso_639_3_eng": "The *timestamp* is expressed as an *integer* value representing the [standard UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time). This value is required only if the *time of day* or a *very precise moment* in time is required to be recorded."}
+        },
+        "_data": {
+            "_class": "_class_time",
+            "_scalar": {
+                "_type": "_type_number_timestamp",
+                "_valid-range": {"_min-range-inclusive": 0}
+            }
+        }
+    },
+    {
+        "_code": {
+            "_nid": "std_time",
+            "_lid": "last-fire",
+            "_gid": "std_time_last-fire",
+            "_pid": ["lastfiredate"],
+            "_aid": ["last-fire"]
+        },
+        "_info": {
+            "_title": {"iso_639_3_eng": "Last Fire Date"},
+            "_definition": {"iso_639_3_eng": "Date and precise time of last fire."},
+            "_description": {"iso_639_3_eng": "The *timestamp* is expressed as an *integer* value representing the [standard UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time). This value is required only if the *time of day* or a *very precise moment* in time is required to be recorded."}
+        },
+        "_data": {
+            "_class": "_class_time",
+            "_scalar": {
+                "_type": "_type_number_timestamp",
+                "_valid-range": {"_min-range-inclusive": 0}
+            }
+        }
+    },
+    
     {
         "_code": {
             "_nid": "std",
@@ -448,7 +556,7 @@
             "_class": "_class_time",
             "_scalar": {
                 "_type": "_type_string_enum",
-                "_kind": "std_date_span"
+                "_kind": ["std_date_span"]
             }
         }
     },

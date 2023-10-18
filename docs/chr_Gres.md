@@ -3,7 +3,7 @@
 
 
 ------
-#### Leaf residual conductance
+#### Residual conductance
 
 
 

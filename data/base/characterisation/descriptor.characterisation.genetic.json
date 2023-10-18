@@ -89,7 +89,7 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_domain": ["gent"],
-			"_subject": ["stand"],
+			"_subject": "stand",
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit_name": "Percentage",
@@ -121,7 +121,7 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_domain": ["gent"],
-			"_subject": ["stand"],
+			"_subject": "stand",
 			"_scalar": {
 				"_type": "_type_number"
 			}
@@ -147,7 +147,7 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_domain": ["gent"],
-			"_subject": ["stand"],
+			"_subject": "stand",
 			"_scalar": {
 				"_type": "_type_number"
 			}
@@ -173,7 +173,7 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_domain": ["gent"],
-			"_subject": ["stand"],
+			"_subject": "stand",
 			"_scalar": {
 				"_type": "_type_number"
 			}
@@ -198,7 +198,7 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_domain": ["gent"],
-			"_subject": ["stand"],
+			"_subject": "stand",
 			"_scalar": {
 				"_type": "_type_number"
 			}
@@ -224,7 +224,7 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_domain": ["gent"],
-			"_subject": ["stand"],
+			"_subject": "stand",
 			"_scalar": {
 				"_type": "_type_integer"
 			}
@@ -250,7 +250,7 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_domain": ["gent"],
-			"_subject": ["stand"],
+			"_subject": "stand",
 			"_array": {
 				"_scalar": {
 					"_type": "_type_number"
@@ -278,7 +278,7 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_domain": ["gent"],
-			"_subject": ["stand"],
+			"_subject": "stand",
 			"_scalar": {
 				"_type": "_type_number"
 			}
@@ -303,7 +303,7 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_domain": ["gent"],
-			"_subject": ["stand"],
+			"_subject": "stand",
 			"_array": {
 				"_scalar": {
 					"_type": "_type_number"

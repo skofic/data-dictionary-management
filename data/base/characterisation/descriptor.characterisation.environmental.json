@@ -743,7 +743,7 @@
 			"_array": {
 				"_scalar": {
 					"_type": "_type_string_enum",
-					"_kind": "[chr_DomLeafType]"
+					"_kind": ["chr_DomLeafType"]
 				}
 			}
 		}
@@ -767,6 +767,7 @@
 			"_domain": ["envi"],
 			"_subject": "stand",
 			"_scalar": {
+				"_type": "_type_number",
 				"_unit_name": "Percentage",
 				"_unit_symbol": "%",
 				"_valid-range": {

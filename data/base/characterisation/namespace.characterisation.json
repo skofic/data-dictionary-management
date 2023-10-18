@@ -177,30 +177,6 @@
 	},
 	{
 		"_code": {
-			"_nid": "chr_envi",
-			"_lid": "trend",
-			"_gid": "chr_envi_trend",
-			"_aid": ["trend"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Trend"},
-			"_definition": {"iso_639_3_eng": "Temporal dynamics trend."}
-		}
-	},
-	{
-		"_code": {
-			"_nid": "chr_envi",
-			"_lid": "measured",
-			"_gid": "chr_envi_measured",
-			"_aid": ["measured"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Measured"},
-			"_definition": {"iso_639_3_eng": "Directly measured observation, not derived from remote sensing."}
-		}
-	},
-	{
-		"_code": {
 			"_nid": "chr",
 			"_lid": "comp",
 			"_gid": "chr_comp",
@@ -221,6 +197,31 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "Forest"},
 			"_definition": {"iso_639_3_eng": "Forest characterisation data"}
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "chr",
+			"_lid": "measured",
+			"_gid": "chr_measured",
+			"_aid": ["measured"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Measured"},
+			"_definition": {"iso_639_3_eng": "Directly measured observation, not derived from remote sensing."}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr",
+			"_lid": "trend",
+			"_gid": "chr_trend",
+			"_aid": ["trend"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Trend"},
+			"_definition": {"iso_639_3_eng": "Temporal dynamics trend."}
 		}
 	}
 ]

@@ -19,6 +19,12 @@
 		"_path": ["_domain"]
 	},
 	{
+		"_from": "fore",
+		"_to": "_domain",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_domain"]
+	},
+	{
 		"_from": "model",
 		"_to": "_domain",
 		"_predicate": "_predicate_enum-of",
@@ -47,6 +53,25 @@
 		"_to": "_domain",
 		"_predicate": "_predicate_enum-of",
 		"_path": ["_domain"]
+	},
+	
+	{
+		"_from": "_tags_diversity",
+		"_to": "_tags",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_tags"]
+	},
+	{
+		"_from": "_tags_distinct-pop",
+		"_to": "_tags",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_tags"]
+	},
+	{
+		"_from": "_tags_vulnerability",
+		"_to": "_tags",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_tags"]
 	},
 	
 	{

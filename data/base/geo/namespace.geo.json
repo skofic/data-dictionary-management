@@ -24,5 +24,19 @@
 			"_definition": {"iso_639_3_eng": "A shape or geometry asspciated with one or more geographic features."},
 			"_description": {"iso_639_3_eng": "This *namespace* can be used to group terms defining geographic features associated with a geographic region, shape or geometry."}
 		}
-	}	
+	},
+	
+	{
+		"_code": {
+			"_nid": "geo_shape",
+			"_lid": "rate",
+			"_gid": "geo_shape_rate",
+			"_aid": ["rate"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Geographic shape coverage rate"},
+			"_definition": {"iso_639_3_eng": "Coverage percentage or ratio of the geographic shape."},
+			"_description": {"iso_639_3_eng": "This *namespace* can be used to group terms defining *coverage percentages* of *geographic shapes*."}
+		}
+	}
 ]

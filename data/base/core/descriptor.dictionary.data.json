@@ -327,6 +327,28 @@
 	{
 		"_code": {
 			"_nid": "",
+			"_lid": "tags",
+			"_gid": "_tags",
+			"_aid": ["tags"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Tags"},
+			"_definition": {"iso_639_3_eng": "Tags to which the term refers to."},
+			"_description": {"iso_639_3_eng": "This category should be used to attach tags to a term."}
+		},
+		"_data": {
+			"_class": "_class_category",
+			"_set": {
+				"_set_scalar": {
+					"_set_type": "_type_string_enum",
+					"_kind": ["_tags"]
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "",
 			"_lid": "type",
 			"_gid": "_type",
 			"_aid": ["type"]
