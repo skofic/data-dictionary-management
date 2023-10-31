@@ -2,6 +2,27 @@
 	{
 		"_code": {
 			"_nid": "chr",
+			"_lid": "GenIndex",
+			"_gid": "chr_GenIndex",
+			"_aid": ["GenIndex"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Genetic index"},
+			"_definition": {"iso_639_3_eng": "Genetic index global identifier."},
+			"_description": {"iso_639_3_eng": "Unique identifier of the genetic index descriptor. This field is used to indicate which descriptors represent genetic indexes."}
+		},
+		"_data": {
+			"_class": "_class_identifier",
+			"_domain": ["gent"],
+			"_scalar": {
+				"_type": "_type_string_key"
+			}
+		}
+	},
+
+	{
+		"_code": {
+			"_nid": "chr",
 			"_lid": "SampleSize",
 			"_gid": "chr_SampleSize",
 			"_pid": ["SampleSize", "N"],
@@ -38,7 +59,8 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Number of loci"},
-			"_definition": {"iso_639_3_eng": "Number of loci used in genetic analysis to calculate genetic indices."}
+			"_definition": {"iso_639_3_eng": "Number of loci used in genetic analysis to calculate genetic indices."},
+			"_description": {"iso_639_3_eng": "Number of loci used in genetic analysis to calculate genetic indices."}
 		},
 		"_data": {
 			"_class": "_class_quantity",
@@ -58,10 +80,30 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Type of Marker"},
-			"_definition": {"iso_639_3_eng": "Type of marker (SNP, SSR) used for calculation of genetic indices."}
+			"_definition": {"iso_639_3_eng": "Type of marker (SNP, SSR) used for calculation of genetic indices."},
+			"_description": {"iso_639_3_eng": "Type of marker used for calculation of genetic indices."}
 		},
 		"_data": {
 			"_class": "_class_identifier",
+			"_domain": ["gent"],
+			"_scalar": {
+				"_type": "_type_string"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr",
+			"_lid": "GenoTech",
+			"_gid": "chr_GenoTech",
+			"_pid": ["GenoTech"],
+			"_aid": ["GenoTech"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Method"},
+			"_definition": {"iso_639_3_eng": "Method and technology used to determine the genetic index."}
+		},
+		"_data": {
 			"_domain": ["gent"],
 			"_scalar": {
 				"_type": "_type_string"
@@ -126,6 +168,35 @@
 				"_type": "_type_number"
 			}
 		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_ExpHet",
+			"_lid": "marker",
+			"_gid": "chr_ExpHet_marker",
+			"_aid": ["marker"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Marker expected heterozygosity"}
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["gent"],
+			"_subject": "stand",
+			"_scalar": {
+				"_type": "_type_object",
+				"_kind": ["chr_ExpHet_marker"]
+			}
+		},
+		"_rule": {
+			"_required": {
+				"_selection-descriptors_all": [
+					"chr_ExpHet",
+					"chr_MarkerType"
+				]
+			}
+		}
+
 	},
 
 	{
@@ -258,6 +329,34 @@
 			}
 		}
 	},
+	{
+		"_code": {
+			"_nid": "chr_Divergence",
+			"_lid": "marker",
+			"_gid": "chr_Divergence_marker",
+			"_aid": ["marker"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Marker population specific Fst"}
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["gent"],
+			"_subject": "stand",
+			"_scalar": {
+				"_type": "_type_object",
+				"_kind": ["chr_Divergence_marker"]
+			}
+		},
+		"_rule": {
+			"_required": {
+				"_selection-descriptors_all": [
+					"chr_Divergence",
+					"chr_MarkerType"
+				]
+			}
+		}
+	},
 
 	{
 		"_code": {
@@ -284,6 +383,35 @@
 			}
 		}
 	},
+	{
+		"_code": {
+			"_nid": "chr_PropClones",
+			"_lid": "marker",
+			"_gid": "chr_PropClones_marker",
+			"_aid": ["marker"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Marker population specific Fst"}
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["gent"],
+			"_subject": "stand",
+			"_scalar": {
+				"_type": "_type_object",
+				"_kind": ["chr_PropClones_marker"]
+			}
+		},
+		"_rule": {
+			"_required": {
+				"_selection-descriptors_all": [
+					"chr_PropClones",
+					"chr_MarkerType"
+				]
+			}
+		}
+	},
+
 	{
 		"_code": {
 			"_nid": "chr",
@@ -392,6 +520,34 @@
 			}
 		}
 	},
+	{
+		"_code": {
+			"_nid": "chr_Inbreeding",
+			"_lid": "marker",
+			"_gid": "chr_Inbreeding_marker",
+			"_aid": ["marker"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Marker inbreeding"}
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["gent"],
+			"_subject": "stand",
+			"_scalar": {
+				"_type": "_type_object",
+				"_kind": ["chr_Inbreeding_marker"]
+			}
+		},
+		"_rule": {
+			"_required": {
+				"_selection-descriptors_all": [
+					"chr_Inbreeding",
+					"chr_MarkerType"
+				]
+			}
+		}
+	},
 
 	{
 		"_code": {
@@ -415,6 +571,34 @@
 			"_subject": "stand",
 			"_scalar": {
 				"_type": "_type_number"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_GenLoad",
+			"_lid": "marker",
+			"_gid": "chr_GenLoad_marker",
+			"_aid": ["marker"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Marker recessive genetic load"}
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["gent"],
+			"_subject": "stand",
+			"_scalar": {
+				"_type": "_type_object",
+				"_kind": ["chr_GenLoad_marker"]
+			}
+		},
+		"_rule": {
+			"_required": {
+				"_selection-descriptors_all": [
+					"chr_GenLoad",
+					"chr_MarkerType"
+				]
 			}
 		}
 	},
@@ -443,6 +627,34 @@
 				"_scalar": {
 					"_type": "_type_number"
 				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_GenomicOffset",
+			"_lid": "marker",
+			"_gid": "chr_GenomicOffset_marker",
+			"_aid": ["marker"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Marker genomic offset"}
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["gent"],
+			"_subject": "stand",
+			"_scalar": {
+				"_type": "_type_object",
+				"_kind": ["chr_GenomicOffset_marker"]
+			}
+		},
+		"_rule": {
+			"_required": {
+				"_selection-descriptors_all": [
+					"chr_GenomicOffset",
+					"chr_MarkerType"
+				]
 			}
 		}
 	},

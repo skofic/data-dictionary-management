@@ -1,0 +1,148 @@
+[
+	{
+		"std_dataset_id": "8194f5d7-b446-4dbc-b218-98fd2cb61092",
+		"species": "Pinus pinaster",
+		"chr_GenIndex": "chr_ExpHet",
+		"chr_MarkerType": "SNP-chip",
+		"chr_NumberOfLoci": 10185,
+		"chr_GenoTech": "Only SNPs with high-quality scoring following the Best Practices Workflow implemented in the Axiom™ Analysis Suite v5.2 were selected and filtered by missing data (<30%).  Index estimated with GenePop v. 4.7.5 ."
+	},
+	{
+		"std_dataset_id": "8194f5d7-b446-4dbc-b218-98fd2cb61092",
+		"species": "Pinus pinaster",
+		"chr_GenIndex": "chr_Divergence",
+		"chr_MarkerType": "SNP-chip",
+		"chr_NumberOfLoci": 10185,
+		"chr_GenoTech": "Only SNPs with high-quality scoring following the Best Practices Workflow implemented in the Axiom™ Analysis Suite v5.2 were selected and filtered by missing data (<30%).  Index estimated with BayeScan v. 2.1"
+	},
+	{
+		"std_dataset_id": "8194f5d7-b446-4dbc-b218-98fd2cb61092",
+		"species": "Pinus pinaster",
+		"chr_GenIndex": "chr_PropClones",
+		"chr_MarkerType": "SNP-chip",
+		"chr_NumberOfLoci": 10185,
+		"chr_GenoTech": "Only SNPs with high-quality scoring following the Best Practices Workflow implemented in the Axiom™ Analysis Suite v5.2 were selected and filtered by missing data (<30%)."
+	},
+	{
+		"std_dataset_id": "8194f5d7-b446-4dbc-b218-98fd2cb61092",
+		"species": "Pinus pinaster",
+		"chr_GenIndex": "chr_SizeClones",
+		"chr_MarkerType": "SNP-chip",
+		"chr_NumberOfLoci": 10185,
+		"chr_GenoTech": "Only SNPs with high-quality scoring following the Best Practices Workflow implemented in the Axiom™ Analysis Suite v5.2 were selected and filtered by missing data (<30%)."
+	},
+	{
+		"std_dataset_id": "8194f5d7-b446-4dbc-b218-98fd2cb61092",
+		"species": "Pinus pinaster",
+		"chr_GenIndex": "chr_Inbreeding",
+		"chr_MarkerType": "SNP-chip",
+		"chr_NumberOfLoci": 10185,
+		"chr_GenoTech": "Only SNPs with high-quality scoring following the Best Practices Workflow implemented in the Axiom™ Analysis Suite v5.2 were selected and filtered by missing data (<30%). Index estimated with GenePop v. 4.7.5 ."
+	},
+	{
+		"std_dataset_id": "8194f5d7-b446-4dbc-b218-98fd2cb61092",
+		"species": "Pinus pinaster",
+		"chr_GenIndex": "chr_GenLoad",
+		"chr_MarkerType": "SNP-chip",
+		"chr_NumberOfLoci": 1325,
+		"chr_GenoTech": "Only SNPs with high-quality scoring following the Best Practices Workflow implemented in the Axiom™ Analysis Suite v5.2 were selected and filtered by missing data (<30%). SNP annotation based on SnpEff v5.1 was retrieved from Piñeiro et al. (2023)."
+	},
+	{
+		"std_dataset_id": "8194f5d7-b446-4dbc-b218-98fd2cb61092",
+		"species": "Pinus pinaster",
+		"chr_GenIndex": "chr_GenomicOffset",
+		"chr_MarkerType": "SNP-chip",
+		"chr_NumberOfLoci": 10185,
+		"chr_GenoTech": "Only SNPs with high-quality scoring following the Best Practices Workflow implemented in the Axiom™ Analysis Suite v5.2 were selected and filtered by missing data (<30%). Alculated following Archambeau (2022), PhD thesis."
+	},
+	{
+		"std_dataset_id": "8194f5d7-b446-4dbc-b218-98fd2cb61092",
+		"species": "Abies alba",
+		"chr_GenIndex": "chr_ExpHet",
+		"chr_MarkerType": "SPET-sequence-random",
+		"chr_NumberOfLoci": 11252,
+		"chr_SequenceLength": 256,
+		"chr_GenoTech": "SPET array. Index estimated as pairwise nucleotide diversity (π) for total sites using VCFtools software and correcting by the average length of sequence covered by the SPET assay."
+	},
+	{
+		"std_dataset_id": "8194f5d7-b446-4dbc-b218-98fd2cb61092",
+		"species": "Abies alba",
+		"chr_GenIndex": "chr_Divergence",
+		"chr_MarkerType": "SPET-SNP-targeted",
+		"chr_NumberOfLoci": 6523,
+		"chr_SequenceLength": 158,
+		"chr_GenoTech": "SPET array. Index estimated with BayeScan v. 2.1"
+	},
+	{
+		"std_dataset_id": "8194f5d7-b446-4dbc-b218-98fd2cb61092",
+		"species": "Abies alba",
+		"chr_GenIndex": "chr_PropClones",
+		"chr_MarkerType": "SPET-SNP-targeted",
+		"chr_NumberOfLoci": 6523,
+		"chr_SequenceLength": 158,
+		"chr_GenoTech": "SPET array. Index estimated with vcftools."
+	},
+	{
+		"std_dataset_id": "8194f5d7-b446-4dbc-b218-98fd2cb61092",
+		"species": "Abies alba",
+		"chr_GenIndex": "chr_SizeClones",
+		"chr_MarkerType": "SPET-SNP-targeted",
+		"chr_NumberOfLoci": 6523,
+		"chr_SequenceLength": 158,
+		"chr_GenoTech": "SPET array. Index estimated with vcftools."
+	},
+	{
+		"std_dataset_id": "8194f5d7-b446-4dbc-b218-98fd2cb61092",
+		"species": "Abies alba",
+		"chr_GenIndex": "chr_Inbreeding",
+		"chr_MarkerType": "SPET-SNP-targeted",
+		"chr_NumberOfLoci": 6523,
+		"chr_SequenceLength": 158,
+		"chr_GenoTech": "SPET array. Index estimated with GenePop v. 4.7.5 ."
+	},
+	{
+		"std_dataset_id": "8194f5d7-b446-4dbc-b218-98fd2cb61092",
+		"species": "Pinus halepensis",
+		"chr_GenIndex": "chr_ExpHet",
+		"chr_MarkerType": "SPET-SNP-targeted",
+		"chr_NumberOfLoci": 8967,
+		"chr_SequenceLength": 211,
+		"chr_GenoTech": "SPET array. Index estimated with GenePop v. 4.7.5 ."
+	},
+	{
+		"std_dataset_id": "8194f5d7-b446-4dbc-b218-98fd2cb61092",
+		"species": "Pinus halepensis",
+		"chr_GenIndex": "chr_Divergence",
+		"chr_MarkerType": "SPET-SNP-targeted",
+		"chr_NumberOfLoci": 8967,
+		"chr_SequenceLength": 211,
+		"chr_GenoTech": "SPET array. Index estimated with BayeScan v. 2.1"
+	},
+	{
+		"std_dataset_id": "8194f5d7-b446-4dbc-b218-98fd2cb61092",
+		"species": "Pinus halepensis",
+		"chr_GenIndex": "chr_PropClones",
+		"chr_MarkerType": "SPET-SNP-targeted",
+		"chr_NumberOfLoci": 8967,
+		"chr_SequenceLength": 211,
+		"chr_GenoTech": "SPET array. Index estimated with vcftools."
+	},
+	{
+		"std_dataset_id": "8194f5d7-b446-4dbc-b218-98fd2cb61092",
+		"species": "Pinus halepensis",
+		"chr_GenIndex": "chr_SizeClones",
+		"chr_MarkerType": "SPET-SNP-targeted",
+		"chr_NumberOfLoci": 8967,
+		"chr_SequenceLength": 211,
+		"chr_GenoTech": "SPET array. Index estimated with vcftools."
+	},
+	{
+		"std_dataset_id": "8194f5d7-b446-4dbc-b218-98fd2cb61092",
+		"species": "Pinus halepensis",
+		"chr_GenIndex": "chr_Inbreeding",
+		"chr_MarkerType": "SPET-SNP-targeted",
+		"chr_NumberOfLoci": 8967,
+		"chr_SequenceLength": 211,
+		"chr_GenoTech": "SPET array. Index estimated with GenePop v. 4.7.5 ."
+	}
+]

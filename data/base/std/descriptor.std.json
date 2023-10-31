@@ -326,6 +326,52 @@
     {
         "_code": {
             "_nid": "std_dataset",
+            "_lid": "id",
+            "_gid": "std_dataset_id",
+            "_aid": ["id"]
+        },
+        "_info": {
+            "_title": {"iso_639_3_eng": "Dataset ID"},
+            "_definition": {"iso_639_3_eng": "Dataset unique identifier."},
+            "_description": {"iso_639_3_eng": "This field represents the `_id` of the dataset record, it is the record handle of the dataset."}
+        },
+        "_data": {
+            "_class": "_class_identifier",
+            "_scalar": {"_type": "_type_string_key"}
+        }
+    },
+    {
+        "_code": {
+            "_nid": "std_dataset",
+            "_lid": "markers",
+            "_gid": "std_dataset_markers",
+            "_aid": ["markers"]
+        },
+        "_info": {
+            "_title": {"iso_639_3_eng": "Dataset markers"},
+            "_definition": {"iso_639_3_eng": "List of species, genetic index and marker type combinations."},
+            "_description": {"iso_639_3_eng": "This field holds a table that contains the list of combinations between species and genetic indexes, in which the marker type, number of loci, sequence length and technology used are provided."}
+        },
+        "_data": {
+            "_scalar": {
+            	"_type": "_type_object",
+            	"_kind": ["std_dataset_markers"]
+            }
+        },
+		"_rule": {
+			"_required": {
+				"_selection-descriptors_all": [
+					"species",
+					"chr_GenIndex",
+					"chr_MarkerType",
+					"chr_GenoTech"
+				]
+			}
+		}
+    },
+    {
+        "_code": {
+            "_nid": "std_dataset",
             "_lid": "local",
             "_gid": "std_dataset_local",
             "_aid": ["local"],

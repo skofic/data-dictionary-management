@@ -1,0 +1,38 @@
+[
+	{
+		"_from": "species",
+		"_to": "std_dataset_markers",
+		"_predicate": "_predicate_property-of",
+		"_path": ["std_dataset_markers"]
+	},
+	{
+		"_from": "chr_GenIndex",
+		"_to": "std_dataset_markers",
+		"_predicate": "_predicate_property-of",
+		"_path": ["std_dataset_markers"]
+	},
+	{
+		"_from": "chr_MarkerType",
+		"_to": "std_dataset_markers",
+		"_predicate": "_predicate_property-of",
+		"_path": ["std_dataset_markers"]
+	},
+	{
+		"_from": "chr_NumberOfLoci",
+		"_to": "std_dataset_markers",
+		"_predicate": "_predicate_property-of",
+		"_path": ["std_dataset_markers"]
+	},
+	{
+		"_from": "chr_SequenceLength",
+		"_to": "std_dataset_markers",
+		"_predicate": "_predicate_property-of",
+		"_path": ["std_dataset_markers"]
+	},
+	{
+		"_from": "chr_GenoTech",
+		"_to": "std_dataset_markers",
+		"_predicate": "_predicate_property-of",
+		"_path": ["std_dataset_markers"]
+	}
+]

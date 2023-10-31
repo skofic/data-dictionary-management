@@ -167,6 +167,34 @@
 			}
 		}
 	},
+	{
+		"_code": {
+			"_nid": "",
+			"_lid": "citation",
+			"_gid": "_citation",
+			"_aid": ["citation"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Citations"},
+			"_definition": {"iso_639_3_eng": "Citations and references."},
+			"_description": {"iso_639_3_eng": "Use this field to provide text that can/must be used as citation when citing resources."}
+		},
+		"_data": {
+			"_dict": {
+				"_dict_key": {
+					"_class": "_class_category",
+					"_type_key": "_type_string_enum",
+					"_kind": ["iso_639_3"]
+				},
+				"_dict_value": {
+					"_scalar": {
+						"_type": "_type_string",
+						"_format": "_format_markdown"
+					}
+				}
+			}
+		}
+	},
 
 	{
 		"_code": {
