@@ -192,7 +192,9 @@
 			"_required": {
 				"_selection-descriptors_all": [
 					"chr_ExpHet",
-					"chr_MarkerType"
+					"chr_MarkerType",
+					"chr_NumberOfLoci",
+					"chr_GenoTech"
 				]
 			}
 		}
@@ -352,7 +354,9 @@
 			"_required": {
 				"_selection-descriptors_all": [
 					"chr_Divergence",
-					"chr_MarkerType"
+					"chr_MarkerType",
+					"chr_NumberOfLoci",
+					"chr_GenoTech"
 				]
 			}
 		}
@@ -406,7 +410,9 @@
 			"_required": {
 				"_selection-descriptors_all": [
 					"chr_PropClones",
-					"chr_MarkerType"
+					"chr_MarkerType",
+					"chr_NumberOfLoci",
+					"chr_GenoTech"
 				]
 			}
 		}
@@ -543,7 +549,9 @@
 			"_required": {
 				"_selection-descriptors_all": [
 					"chr_Inbreeding",
-					"chr_MarkerType"
+					"chr_MarkerType",
+					"chr_NumberOfLoci",
+					"chr_GenoTech"
 				]
 			}
 		}
@@ -597,7 +605,9 @@
 			"_required": {
 				"_selection-descriptors_all": [
 					"chr_GenLoad",
-					"chr_MarkerType"
+					"chr_MarkerType",
+					"chr_NumberOfLoci",
+					"chr_GenoTech"
 				]
 			}
 		}
@@ -653,7 +663,9 @@
 			"_required": {
 				"_selection-descriptors_all": [
 					"chr_GenomicOffset",
-					"chr_MarkerType"
+					"chr_MarkerType",
+					"chr_NumberOfLoci",
+					"chr_GenoTech"
 				]
 			}
 		}

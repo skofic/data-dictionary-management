@@ -11,6 +11,18 @@
 		"_predicate": "_predicate_property-of",
 		"_path": ["chr_ExpHet_marker"]
 	},
+	{
+		"_from": "chr_NumberOfLoci",
+		"_to": "chr_ExpHet_marker",
+		"_predicate": "_predicate_property-of",
+		"_path": ["chr_ExpHet_marker"]
+	},
+	{
+		"_from": "chr_GenoTech",
+		"_to": "chr_ExpHet_marker",
+		"_predicate": "_predicate_property-of",
+		"_path": ["chr_ExpHet_marker"]
+	},
 	
 	{
 		"_from": "chr_Divergence",
@@ -20,6 +32,18 @@
 	},
 	{
 		"_from": "chr_MarkerType",
+		"_to": "chr_Divergence_marker",
+		"_predicate": "_predicate_property-of",
+		"_path": ["chr_Divergence_marker"]
+	},
+	{
+		"_from": "chr_NumberOfLoci",
+		"_to": "chr_Divergence_marker",
+		"_predicate": "_predicate_property-of",
+		"_path": ["chr_Divergence_marker"]
+	},
+	{
+		"_from": "chr_GenoTech",
 		"_to": "chr_Divergence_marker",
 		"_predicate": "_predicate_property-of",
 		"_path": ["chr_Divergence_marker"]
@@ -37,6 +61,18 @@
 		"_predicate": "_predicate_property-of",
 		"_path": ["chr_PropClones_marker"]
 	},
+	{
+		"_from": "chr_NumberOfLoci",
+		"_to": "chr_PropClones_marker",
+		"_predicate": "_predicate_property-of",
+		"_path": ["chr_PropClones_marker"]
+	},
+	{
+		"_from": "chr_GenoTech",
+		"_to": "chr_PropClones_marker",
+		"_predicate": "_predicate_property-of",
+		"_path": ["chr_PropClones_marker"]
+	},
 	
 	{
 		"_from": "chr_Inbreeding",
@@ -46,6 +82,18 @@
 	},
 	{
 		"_from": "chr_MarkerType",
+		"_to": "chr_Inbreeding_marker",
+		"_predicate": "_predicate_property-of",
+		"_path": ["chr_Inbreeding_marker"]
+	},
+	{
+		"_from": "chr_NumberOfLoci",
+		"_to": "chr_Inbreeding_marker",
+		"_predicate": "_predicate_property-of",
+		"_path": ["chr_Inbreeding_marker"]
+	},
+	{
+		"_from": "chr_GenoTech",
 		"_to": "chr_Inbreeding_marker",
 		"_predicate": "_predicate_property-of",
 		"_path": ["chr_Inbreeding_marker"]
@@ -63,6 +111,18 @@
 		"_predicate": "_predicate_property-of",
 		"_path": ["chr_GenLoad_marker"]
 	},
+	{
+		"_from": "chr_NumberOfLoci",
+		"_to": "chr_GenLoad_marker",
+		"_predicate": "_predicate_property-of",
+		"_path": ["chr_GenLoad_marker"]
+	},
+	{
+		"_from": "chr_GenoTech",
+		"_to": "chr_GenLoad_marker",
+		"_predicate": "_predicate_property-of",
+		"_path": ["chr_GenLoad_marker"]
+	},
 	
 	{
 		"_from": "chr_GenomicOffset",
@@ -72,6 +132,18 @@
 	},
 	{
 		"_from": "chr_MarkerType",
+		"_to": "chr_GenomicOffset_marker",
+		"_predicate": "_predicate_property-of",
+		"_path": ["chr_GenomicOffset_marker"]
+	},
+	{
+		"_from": "chr_NumberOfLoci",
+		"_to": "chr_GenomicOffset_marker",
+		"_predicate": "_predicate_property-of",
+		"_path": ["chr_GenomicOffset_marker"]
+	},
+	{
+		"_from": "chr_GenoTech",
 		"_to": "chr_GenomicOffset_marker",
 		"_predicate": "_predicate_property-of",
 		"_path": ["chr_GenomicOffset_marker"]
