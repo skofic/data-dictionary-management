@@ -56,22 +56,22 @@
 	},
 	
 	{
-		"_from": "_tags_diversity",
-		"_to": "_tags",
+		"_from": "chr_tags_diversity",
+		"_to": "chr_tags",
 		"_predicate": "_predicate_enum-of",
-		"_path": ["_tags"]
+		"_path": ["chr_tags"]
 	},
 	{
-		"_from": "_tags_distinct-pop",
-		"_to": "_tags",
+		"_from": "chr_tags_distinct-pop",
+		"_to": "chr_tags",
 		"_predicate": "_predicate_enum-of",
-		"_path": ["_tags"]
+		"_path": ["chr_tags"]
 	},
 	{
-		"_from": "_tags_vulnerability",
-		"_to": "_tags",
+		"_from": "chr_tags_vulnerability",
+		"_to": "chr_tags",
 		"_predicate": "_predicate_enum-of",
-		"_path": ["_tags"]
+		"_path": ["chr_tags"]
 	},
 	
 	{

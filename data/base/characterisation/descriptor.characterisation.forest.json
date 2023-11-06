@@ -290,7 +290,7 @@
 			"_class": "_class_quantity_averaged",
 			"_domain": ["fore"],
 			"_subject": "stand",
-			"_tags": ["_tags_diversity"],
+			"_tags": ["chr_tags_diversity"],
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit": "_unit_length_m"
@@ -408,7 +408,7 @@
 			"_class": "_class_quantity",
 			"_domain": ["fore"],
 			"_subject": "stand",
-			"_tags": ["_tags_vulnerability"],
+			"_tags": ["chr_tags_vulnerability"],
 			"_scalar": {
 				"_type": "_type_string_enum",
 				"_kind": ["chr_DeadTrees"]
@@ -436,7 +436,7 @@
 			"_class": "_class_quantity",
 			"_domain": ["fore"],
 			"_subject": "stand",
-			"_tags": ["_tags_vulnerability"],
+			"_tags": ["chr_tags_vulnerability"],
 			"_scalar": {
 				"_type": "_type_string_enum",
 				"_kind": ["chr_NaturalRegeneration"]

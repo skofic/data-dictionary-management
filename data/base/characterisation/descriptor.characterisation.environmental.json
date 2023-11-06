@@ -710,8 +710,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity",
-			"_subject": "stand",
 			"_domain": ["envi"],
+			"_subject": "stand",
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit": "_unit_length_cm",

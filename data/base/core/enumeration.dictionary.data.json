@@ -399,39 +399,5 @@
 			"_title": {"iso_639_3_eng": "IPv6 address"},
 			"_definition": {"iso_639_3_eng": "A *string* representing an *IPv6* internet *address*, as defined in RFC 2373, section 2.2.\n\nEquivalent to the `ipv6` format in JSON Schema."}
 		}
-	},
-	
-	{
-	 	"_code": {
-		   "_nid": "_tags",
-			"_lid": "diversity",
-			"_gid": "_tags_diversity",
-			"_aid": ["diversity"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Diversity"}
-		}
-	},
-	{
-	 	"_code": {
-		   "_nid": "_tags",
-			"_lid": "distinct-pop",
-			"_gid": "_tags_distinct-pop",
-			"_aid": ["distinct-pop"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Distinctiveness of target population"}
-		}
-	},
-	{
-	 	"_code": {
-		   "_nid": "_tags",
-			"_lid": "vulnerability",
-			"_gid": "_tags_vulnerability",
-			"_aid": ["vulnerability"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Vulnerability"}
-		}
 	}
 ]

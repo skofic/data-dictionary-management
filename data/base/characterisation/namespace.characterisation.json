@@ -223,5 +223,18 @@
 			"_title": {"iso_639_3_eng": "Trend"},
 			"_definition": {"iso_639_3_eng": "Temporal dynamics trend."}
 		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "chr",
+			"_lid": "tags",
+			"_gid": "chr_tags",
+			"_aid": ["tags"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Characterisation tags"},
+			"_definition": {"iso_639_3_eng": "Tags that apply to characterisation terms."}
+		}
 	}
 ]

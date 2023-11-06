@@ -272,5 +272,39 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "Dominated tree"}
 		}
+	},
+	
+	{
+	 	"_code": {
+		   "_nid": "chr_tags",
+			"_lid": "diversity",
+			"_gid": "chr_tags_diversity",
+			"_aid": ["diversity"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Diversity"}
+		}
+	},
+	{
+	 	"_code": {
+		   "_nid": "chr_tags",
+			"_lid": "distinct-pop",
+			"_gid": "chr_tags_distinct-pop",
+			"_aid": ["distinct-pop"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Distinctiveness of target population"}
+		}
+	},
+	{
+	 	"_code": {
+		   "_nid": "chr_tags",
+			"_lid": "vulnerability",
+			"_gid": "chr_tags_vulnerability",
+			"_aid": ["vulnerability"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Vulnerability"}
+		}
 	}
 ]

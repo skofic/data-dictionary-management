@@ -341,7 +341,7 @@
 			"_set": {
 				"_set_scalar": {
 					"_set_type": "_type_string_enum",
-					"_kind": ["_tags"]
+					"_kind": ["chr_tags"]
 				}
 			}
 		}
