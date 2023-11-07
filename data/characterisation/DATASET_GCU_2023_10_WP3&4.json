@@ -1,9 +1,8 @@
 [
 	{
 		"_key": "8194f5d7-b446-4dbc-b218-98fd2cb61092",
-		"project": "FORGENIUS",
-		"dataset": "FORGENIUS_WP4_2022",
-		"_subject": "stand",
+		"std_project": "FORGENIUS",
+		"std_dataset": "FORGENIUS_WP4_2022",
 		"std_date": "2022",
 		"std_date_submission": "20231013",
 		"_title": {
@@ -20,6 +19,7 @@
 			"chr_tag_diversity",
 			"chr_tag_vulnerability"
 		],
+		"_subject": "stand",
 		"std_terms": [
 			"chr_Inbreeding",
 			"chr_GenomicOffset",

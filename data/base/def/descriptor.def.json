@@ -194,47 +194,5 @@
 				}
 			}
 		}
-	},
-	{
-		"_code": {
-			"_lid": "project",
-			"_gid": "project",
-			"_pid": ["Project"],
-			"_aid": ["project"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Project"},
-			"_definition": {"iso_639_3_eng": "Project to which the experiment, dataset or measurement belongs."},
-			"_description": {"iso_639_3_eng": "The field is not coded, provide the acronym of the project."},
-			"_examples": {"iso_639_3_eng": "GenTree"}
-		},
-		"_data": {
-			"_class": "_class_identifier",
-			"_scalar": {
-				"_type": "_type_string"
-			}
-		}
-	},
-	
-	{
-		"_code": {
-			"_nid": "chr_tree",
-			"_lid": "code",
-			"_gid": "chr_tree_code",
-			"_pid": ["TreeCode"],
-			"_aid": ["code"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Tree identifier"},
-			"_definition": {"iso_639_3_eng": "Identifier code assigned to the tree."},
-			"_description": {"iso_639_3_eng": "Provide the identifier assigned to the specific tree. When you *include* this field, it indicates that the *trait data* refers to a *single tree*. If you *omit* this field it means that the *trait data* refers to a [species](./species.md) in a [unit](./gcu_id_number,md)."}
-		},
-		"_data": {
-			"_class": "_class_identifier",
-			"_subject": "chr_subject_tree",
-			"_scalar": {
-				"_type": "_type_string"
-			}
-		}
 	}
 ]

@@ -272,23 +272,7 @@
             "_scalar": {"_type": "_type_string"}
         }
     },
-
-    {
-        "_code": {
-            "_nid": "std",
-            "_lid": "comments",
-            "_gid": "std_comments",
-            "_aid": ["comments"]
-        },
-        "_info": {
-            "_title": {"iso_639_3_eng": "Comments and notes"},
-            "_definition": {"iso_639_3_eng": "Notes, comments and other additional information."},
-            "_description": {"iso_639_3_eng": "Use this field as a pasteboard to add relevant information that does not belong to existing descriptors. This field can be associated to any level, from the observation to the GCU. The field does not hold any indication to the language of the comments."}
-        },
-        "_data": {
-            "_scalar": {"_type": "_type_string"}
-        }
-    },
+    
     {
         "_code": {
             "_nid": "std",
@@ -305,6 +289,29 @@
             "_scalar": {"_type": "_type_object_geo-json"}
         }
     },
+    
+    {
+		"_code": {
+            "_nid": "std",
+			"_lid": "project",
+			"_gid": "std_project",
+			"_pid": ["Project"],
+			"_aid": ["project"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Project"},
+			"_definition": {"iso_639_3_eng": "Project to which the experiment, dataset or measurement belongs."},
+			"_description": {"iso_639_3_eng": "The field is not coded, provide the acronym of the project."},
+			"_examples": {"iso_639_3_eng": "GenTree"}
+		},
+		"_data": {
+			"_class": "_class_identifier",
+			"_scalar": {
+				"_type": "_type_string"
+			}
+		}
+    },
+    
     {
         "_code": {
             "_nid": "std",
@@ -642,6 +649,23 @@
             "_set": {
                 "_set_scalar": {"_set_type": "_type_string_key"}
             }
+        }
+    },
+
+    {
+        "_code": {
+            "_nid": "std",
+            "_lid": "comments",
+            "_gid": "std_comments",
+            "_aid": ["comments"]
+        },
+        "_info": {
+            "_title": {"iso_639_3_eng": "Comments and notes"},
+            "_definition": {"iso_639_3_eng": "Notes, comments and other additional information."},
+            "_description": {"iso_639_3_eng": "Use this field as a pasteboard to add relevant information that does not belong to existing descriptors. This field can be associated to any level, from the observation to the GCU. The field does not hold any indication to the language of the comments."}
+        },
+        "_data": {
+            "_scalar": {"_type": "_type_string"}
         }
     }
 ]

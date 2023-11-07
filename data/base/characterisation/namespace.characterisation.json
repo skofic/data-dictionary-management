@@ -15,19 +15,6 @@
 	{
 		"_code": {
 			"_nid": "chr",
-			"_lid": "tree",
-			"_gid": "chr_tree",
-			"_aid": ["tree"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Tree"},
-			"_definition": {"iso_639_3_eng": "Individual tree."}
-		}
-	},
-
-	{
-		"_code": {
-			"_nid": "chr",
 			"_lid": "domain",
 			"_gid": "chr_domain",
 			"_aid": ["domain"]
@@ -62,6 +49,19 @@
 		}
 	},
 	
+	{
+		"_code": {
+			"_nid": "chr",
+			"_lid": "tree",
+			"_gid": "chr_tree",
+			"_aid": ["tree"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Tree"},
+			"_definition": {"iso_639_3_eng": "Individual tree."}
+		}
+	},
+
 	{
 		"_code": {
 			"_nid": "chr",
