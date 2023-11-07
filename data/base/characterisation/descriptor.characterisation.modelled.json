@@ -17,8 +17,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity",
-			"_domain": ["model"],
-			"_subject": "stand",
+			"_domain": ["chr_model"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number"
 			}
@@ -43,8 +43,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity",
-			"_domain": ["model"],
-			"_subject": "stand",
+			"_domain": ["chr_model"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number"
 			}
@@ -69,8 +69,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity",
-			"_domain": ["model"],
-			"_subject": "stand",
+			"_domain": ["chr_model"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number"
 			}
@@ -95,8 +95,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity",
-			"_domain": ["model"],
-			"_subject": "stand",
+			"_domain": ["chr_model"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number"
 			}
@@ -121,7 +121,7 @@
 		},
 		"_data": {
 			"_class": "_class_quantity",
-			"_domain": ["model"],
+			"_domain": ["chr_model"],
 			"_scalar": {
 				"_type": "_type_number"
 			}

@@ -17,8 +17,8 @@
 		},
 		"_data": {
 			"_class": "_class_category",
-			"_domain": ["envi"],
-			"_subject": "stand",
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_string_enum",
 				"_kind": ["chr_ForestStructure"]
@@ -44,8 +44,8 @@
 		},
 		"_data": {
 			"_class": "_class_category",
-			"_domain": ["envi"],
-			"_subject": "stand",
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_string_enum",
 				"_kind": ["chr_ForestComposition"]
@@ -71,8 +71,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["fore"],
-			"_subject": "stand",
+			"_domain": ["chr_fore"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit": "_unit_length_m"
@@ -98,8 +98,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["fore"],
-			"_subject": "stand",
+			"_domain": ["chr_fore"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit": "_unit_length_m"
@@ -126,8 +126,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity",
-			"_domain": ["fore"],
-			"_subject": "tree",
+			"_domain": ["chr_fore"],
+			"_subject": "chr_subject_tree",
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit": "_unit_length_cm",
@@ -156,8 +156,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["fore"],
-			"_subject": "tree",
+			"_domain": ["chr_fore"],
+			"_subject": "chr_subject_tree",
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit": "_unit_length_cm"
@@ -182,8 +182,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["fore"],
-			"_subject": "tree",
+			"_domain": ["chr_fore"],
+			"_subject": "chr_subject_tree",
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit": "_unit_length_cm"
@@ -205,8 +205,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["fore"],
-			"_subject": "tree",
+			"_domain": ["chr_fore"],
+			"_subject": "chr_subject_tree",
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit": "_unit_length_cm"
@@ -232,8 +232,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity",
-			"_domain": ["fore"],
-			"_subject": "tree",
+			"_domain": ["chr_fore"],
+			"_subject": "chr_subject_tree",
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit": "_unit_length_m",
@@ -262,8 +262,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["fore"],
-			"_subject": "stand",
+			"_domain": ["chr_fore"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit": "_unit_length_m"
@@ -288,9 +288,9 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["fore"],
-			"_subject": "stand",
-			"_tags": ["chr_tags_diversity"],
+			"_domain": ["chr_fore"],
+			"_subject": "chr_subject_stand",
+			"_tag": ["chr_tag_diversity"],
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit": "_unit_length_m"
@@ -316,8 +316,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["fore"],
-			"_subject": "stand",
+			"_domain": ["chr_fore"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit_name": "m2/ha",
@@ -347,8 +347,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["fore"],
-			"_subject": "stand",
+			"_domain": ["chr_fore"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit_name": "m2/ha",
@@ -374,8 +374,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["fore"],
-			"_subject": "stand",
+			"_domain": ["chr_fore"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit_name": "m2/ha",
@@ -406,9 +406,9 @@
 		},
 		"_data": {
 			"_class": "_class_quantity",
-			"_domain": ["fore"],
-			"_subject": "stand",
-			"_tags": ["chr_tags_vulnerability"],
+			"_domain": ["chr_fore"],
+			"_subject": "chr_subject_stand",
+			"_tag": ["chr_tag_vulnerability"],
 			"_scalar": {
 				"_type": "_type_string_enum",
 				"_kind": ["chr_DeadTrees"]
@@ -434,9 +434,9 @@
 		},
 		"_data": {
 			"_class": "_class_quantity",
-			"_domain": ["fore"],
-			"_subject": "stand",
-			"_tags": ["chr_tags_vulnerability"],
+			"_domain": ["chr_fore"],
+			"_subject": "chr_subject_stand",
+			"_tag": ["chr_tag_vulnerability"],
 			"_scalar": {
 				"_type": "_type_string_enum",
 				"_kind": ["chr_NaturalRegeneration"]
@@ -457,7 +457,14 @@
 		},
 		"_data": {
 			"_class": "_class_quantity",
-			"_domain": ["fore", "gent"],
+			"_domain": [
+				"chr_fore",
+				"chr_gent"
+			],
+			"_tag": [
+				"chr_tag_diversity",
+				"chr_tag_vulnerability"
+			],
 			"_scalar": {
 				"_type": "_type_number"
 			}
@@ -482,8 +489,8 @@
 		},
 		"_data": {
 			"_class": "_class_category",
-			"_domain": ["fore"],
-			"_subject": "tree",
+			"_domain": ["chr_fore"],
+			"_subject": "chr_subject_tree",
 			"_scalar": {
 				"_type": "_type_string_enum",
 				"_kind": ["chr_TreeSocialStatus"]

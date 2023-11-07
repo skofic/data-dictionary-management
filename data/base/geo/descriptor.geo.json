@@ -288,8 +288,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["fore"],
-			"_subject": "stand",
+			"_domain": ["chr_fore"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit_name": "Percentage",
@@ -315,8 +315,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["fore"],
-			"_subject": "stand",
+			"_domain": ["chr_fore"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit_name": "Percentage",
@@ -342,8 +342,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["fore"],
-			"_subject": "stand",
+			"_domain": ["chr_fore"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit_name": "Percentage",
@@ -369,8 +369,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["fore"],
-			"_subject": "stand",
+			"_domain": ["chr_fore"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit_name": "Percentage",
@@ -396,8 +396,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["fore"],
-			"_subject": "stand",
+			"_domain": ["chr_fore"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit_name": "Percentage",
@@ -423,8 +423,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["fore"],
-			"_subject": "stand",
+			"_domain": ["chr_fore"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit_name": "Percentage",
@@ -450,8 +450,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["fore"],
-			"_subject": "stand",
+			"_domain": ["chr_fore"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit_name": "Percentage",
@@ -477,8 +477,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["fore"],
-			"_subject": "stand",
+			"_domain": ["chr_fore"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit_name": "Percentage",
@@ -504,8 +504,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["fore"],
-			"_subject": "stand",
+			"_domain": ["chr_fore"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit_name": "Percentage",
@@ -531,8 +531,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["fore"],
-			"_subject": "stand",
+			"_domain": ["chr_fore"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit_name": "Percentage",

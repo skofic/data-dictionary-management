@@ -12,7 +12,9 @@
 		"_description": {
 			"iso_639_3_eng": "Genetic indices for 3 species calculated from SPET genotype data (Abies alba, Pinus halepensis) and 4TREE Axiom assay (Thermo Fisher Scientific, USA, Pinus pinaster), calculated in December 2021 and submitted as FORGENIUS deliverable D4.3. Various programmes were used to calculate the indices: GenePop v. 4.7.5, BayeScan v. 2.1, and methods described in Archambeau (2022), PhD thesis, and González-Martínez et al. (2017), Current Biology."
 		},
-		"_domain": ["gent"],
+		"_domain": [
+			"gent"
+		],
 		"std_terms": [
 			"chr_Inbreeding",
 			"chr_GenomicOffset",

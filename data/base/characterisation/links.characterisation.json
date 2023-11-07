@@ -1,11 +1,11 @@
 [
 	{
-		"_from": "tree_code",
+		"_from": "chr_tree_code",
 		"_to": "gcu_id_number",
 		"_predicate": "_predicate_requires"
 	},
 	{
-		"_from": "tree_code",
+		"_from": "chr_tree_code",
 		"_to": "species",
 		"_predicate": "_predicate_requires"
 	},
@@ -346,7 +346,7 @@
 	
 	{
 		"_from": "chr_CircBreastHeight",
-		"_to": "tree_code",
+		"_to": "chr_tree_code",
 		"_predicate": "_predicate_requires"
 	},
 	{
@@ -464,7 +464,7 @@
 	
 	{
 		"_from": "chr_NaturalRegeneration",
-		"_to": "tree_code",
+		"_to": "chr_tree_code",
 		"_predicate": "_predicate_requires"
 	},
 	{
@@ -891,7 +891,7 @@
 	
 	{
 		"_from": "chr_Htot",
-		"_to": "tree_code",
+		"_to": "chr_tree_code",
 		"_predicate": "_predicate_requires"
 	},
 	{
@@ -934,7 +934,7 @@
 	
 	{
 		"_from": "chr_TurgorLossPoint",
-		"_to": "tree_code",
+		"_to": "chr_tree_code",
 		"_predicate": "_predicate_requires"
 	},
 	{
@@ -977,7 +977,7 @@
 	
 	{
 		"_from": "chr_P50",
-		"_to": "tree_code",
+		"_to": "chr_tree_code",
 		"_predicate": "_predicate_requires"
 	},
 	{
@@ -1020,7 +1020,7 @@
 	
 	{
 		"_from": "chr_Gres",
-		"_to": "tree_code",
+		"_to": "chr_tree_code",
 		"_predicate": "_predicate_requires"
 	},
 	{
@@ -1063,7 +1063,7 @@
 	
 	{
 		"_from": "chr_Cbranch",
-		"_to": "tree_code",
+		"_to": "chr_tree_code",
 		"_predicate": "_predicate_requires"
 	},
 	{
@@ -1122,7 +1122,7 @@
 	
 	{
 		"_from": "chr_HuberValue",
-		"_to": "tree_code",
+		"_to": "chr_tree_code",
 		"_predicate": "_predicate_requires"
 	},
 	{
@@ -1165,7 +1165,7 @@
 	
 	{
 		"_from": "chr_CrownLength",
-		"_to": "tree_code",
+		"_to": "chr_tree_code",
 		"_predicate": "_predicate_requires"
 	},
 	{
@@ -1208,7 +1208,7 @@
 	
 	{
 		"_from": "chr_BasalCrownHeight",
-		"_to": "tree_code",
+		"_to": "chr_tree_code",
 		"_predicate": "_predicate_requires"
 	},
 	{
@@ -1219,7 +1219,7 @@
 	
 	{
 		"_from": "chr_SpecLeafArea",
-		"_to": "tree_code",
+		"_to": "chr_tree_code",
 		"_predicate": "_predicate_requires"
 	},
 	{
@@ -1262,7 +1262,7 @@
 	
 	{
 		"_from": "chr_WoodDensity",
-		"_to": "tree_code",
+		"_to": "chr_tree_code",
 		"_predicate": "_predicate_requires"
 	},
 	{
@@ -1305,7 +1305,7 @@
 	
 	{
 		"_from": "chr_Dieback",
-		"_to": "tree_code",
+		"_to": "chr_tree_code",
 		"_predicate": "_predicate_requires"
 	},
 	{
@@ -1348,7 +1348,7 @@
 	
 	{
 		"_from": "chr_SapWoodAreaTrunk",
-		"_to": "tree_code",
+		"_to": "chr_tree_code",
 		"_predicate": "_predicate_requires"
 	},
 	{

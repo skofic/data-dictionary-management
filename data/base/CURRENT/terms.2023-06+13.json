@@ -277,8 +277,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["envi"],
-			"_subject": "stand",
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit": "_unit_length_m",

@@ -298,7 +298,7 @@
 			"_class": "_class_category",
 			"_scalar": {
 				"_type": "_type_string_enum",
-				"_kind": ["_subject"]
+				"_kind": ["chr_subject"]
 			}
 		}
 	},
@@ -319,7 +319,7 @@
 			"_set": {
 				"_set_scalar": {
 					"_set_type": "_type_string_enum",
-					"_kind": ["_domain"]
+					"_kind": ["chr_domain"]
 				}
 			}
 		}
@@ -327,9 +327,9 @@
 	{
 		"_code": {
 			"_nid": "",
-			"_lid": "tags",
-			"_gid": "_tags",
-			"_aid": ["tags"]
+			"_lid": "tag",
+			"_gid": "_tag",
+			"_aid": ["tag"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Tags"},
@@ -341,7 +341,7 @@
 			"_set": {
 				"_set_scalar": {
 					"_set_type": "_type_string_enum",
-					"_kind": ["chr_tags"]
+					"_kind": ["chr_tag"]
 				}
 			}
 		}

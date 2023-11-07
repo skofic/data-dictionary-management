@@ -17,8 +17,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["envi"],
-			"_subject": "stand",
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit": "_unit_length_m",
@@ -44,8 +44,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["envi"],
-			"_subject": "stand",
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit": "_unit_length_m"
@@ -70,8 +70,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["envi"],
-			"_subject": "stand",
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit_name": "degrees DMS",
@@ -101,8 +101,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["envi"],
-			"_subject": "stand",
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit_name": "Degrees DMS",
@@ -133,8 +133,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity",
-			"_domain": ["envi"],
-			"_subject": "stand",
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit": "_unit_length_m",
@@ -163,8 +163,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity",
-			"_domain": ["envi"],
-			"_subject": "stand",
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit_name": "degrees DMS",
@@ -194,8 +194,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity",
-			"_domain": ["envi"],
-			"_subject": "stand",
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit_name": "Grade",
@@ -225,8 +225,8 @@
 		},
 		"_data": {
 			"_class": "_class_category",
-			"_domain": ["envi"],
-			"_subject": "stand",
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_string_enum",
 				"_kind": ["chr_MicroTopography"]
@@ -252,8 +252,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["envi"],
-			"_subject": "stand",
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
 			"_array": {
 				"_scalar": {
 					"_type": "_type_number",
@@ -281,8 +281,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["envi"],
-			"_subject": "stand",
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit_name": "°C"
@@ -307,8 +307,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["envi"],
-			"_subject": "stand",
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit_name": "Kelvin/month",
@@ -335,8 +335,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["envi"],
-			"_subject": "stand",
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
 			"_array": {
 				"_scalar": {
 					"_type": "_type_number"
@@ -362,8 +362,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["envi"],
-			"_subject": "stand",
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
 			"_array": {
 				"_scalar": {
 					"_type": "_type_number"
@@ -389,8 +389,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["envi"],
-			"_subject": "stand",
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number"
 			}
@@ -415,8 +415,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["envi"],
-			"_subject": "stand",
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
 			"_array": {
 				"_scalar": {
 					"_type": "_type_number"
@@ -442,8 +442,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["envi"],
-			"_subject": "stand",
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number"
 			}
@@ -467,8 +467,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["envi"],
-			"_subject": "stand",
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number"
 			}
@@ -493,8 +493,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["envi"],
-			"_subject": "stand",
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
 			"_array": {
 				"_scalar": {
 					"_type": "_type_number",
@@ -522,8 +522,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["envi"],
-			"_subject": "stand",
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number"
 			}
@@ -547,8 +547,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["envi"],
-			"_subject": "stand",
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit_name": "kg/m2/month",
@@ -575,8 +575,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["envi"],
-			"_subject": "stand",
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
 			"_array": {
 				"_scalar": {
 					"_type": "_type_number"
@@ -602,8 +602,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["envi"],
-			"_subject": "stand",
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number"
 			}
@@ -628,8 +628,11 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["envi", "fore"],
-			"_subject": "stand",
+			"_domain": [
+				"chr_envi",
+				"chr_fore"
+			],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit_name": "t/ha",
@@ -655,8 +658,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["envi"],
-			"_subject": "stand",
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit_name": "t/ha/year",
@@ -683,8 +686,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["envi"],
-			"_subject": "stand",
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit": "_unit_area_m"
@@ -710,8 +713,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity",
-			"_domain": ["envi"],
-			"_subject": "stand",
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit": "_unit_length_cm",
@@ -738,8 +741,8 @@
 		},
 		"_data": {
 			"_class": "_class_category",
-			"_domain": ["envi"],
-			"_subject": "stand",
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
 			"_array": {
 				"_scalar": {
 					"_type": "_type_string_enum",
@@ -764,8 +767,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["envi"],
-			"_subject": "stand",
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit_name": "Percentage",

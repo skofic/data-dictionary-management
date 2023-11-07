@@ -1,77 +1,71 @@
 [
 	{
-		"_from": "tree",
-		"_to": "_subject",
+		"_from": "chr_subject_tree",
+		"_to": "chr_subject",
 		"_predicate": "_predicate_enum-of",
-		"_path": ["_subject"]
+		"_path": ["chr_subject"]
 	},
 	{
-		"_from": "stand",
-		"_to": "_subject",
+		"_from": "chr_subject_stand",
+		"_to": "chr_subject",
 		"_predicate": "_predicate_enum-of",
-		"_path": ["_subject"]
-	},
-	
-	{
-		"_from": "pheno",
-		"_to": "_domain",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_domain"]
-	},
-	{
-		"_from": "fore",
-		"_to": "_domain",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_domain"]
-	},
-	{
-		"_from": "model",
-		"_to": "_domain",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_domain"]
-	},
-	{
-		"_from": "gent",
-		"_to": "_domain",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_domain"]
-	},
-	{
-		"_from": "genl",
-		"_to": "_domain",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_domain"]
-	},
-	{
-		"_from": "envi",
-		"_to": "_domain",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_domain"]
-	},
-	{
-		"_from": "comp",
-		"_to": "_domain",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["_domain"]
+		"_path": ["chr_subject"]
 	},
 	
 	{
-		"_from": "chr_tags_diversity",
-		"_to": "chr_tags",
+		"_from": "chr_pheno",
+		"_to": "chr_domain",
 		"_predicate": "_predicate_enum-of",
-		"_path": ["chr_tags"]
+		"_path": ["chr_domain"]
 	},
 	{
-		"_from": "chr_tags_distinct-pop",
-		"_to": "chr_tags",
+		"_from": "chr_fore",
+		"_to": "chr_domain",
 		"_predicate": "_predicate_enum-of",
-		"_path": ["chr_tags"]
+		"_path": ["chr_domain"]
 	},
 	{
-		"_from": "chr_tags_vulnerability",
-		"_to": "chr_tags",
+		"_from": "chr_model",
+		"_to": "chr_domain",
 		"_predicate": "_predicate_enum-of",
-		"_path": ["chr_tags"]
+		"_path": ["chr_domain"]
+	},
+	{
+		"_from": "chr_gent",
+		"_to": "chr_domain",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr_domain"]
+	},
+	{
+		"_from": "chr_envi",
+		"_to": "chr_domain",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr_domain"]
+	},
+	{
+		"_from": "chr_comp",
+		"_to": "chr_domain",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr_domain"]
+	},
+	
+	{
+		"_from": "chr_tag_diversity",
+		"_to": "chr_tag",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr_tag"]
+	},
+	{
+		"_from": "chr_tag_distinct-pop",
+		"_to": "chr_tag",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr_tag"]
+	},
+	{
+		"_from": "chr_tag_vulnerability",
+		"_to": "chr_tag",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr_tag"]
 	},
 	
 	{

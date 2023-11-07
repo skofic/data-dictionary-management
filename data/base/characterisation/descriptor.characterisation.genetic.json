@@ -13,7 +13,7 @@
 		},
 		"_data": {
 			"_class": "_class_identifier",
-			"_domain": ["gent"],
+			"_domain": ["chr_gent"],
 			"_scalar": {
 				"_type": "_type_string_key"
 			}
@@ -39,7 +39,7 @@
 		},
 		"_data": {
 			"_class": "_class_quantity",
-			"_domain": ["gent"],
+			"_domain": ["chr_gent"],
 			"_scalar": {
 				"_type": "_type_integer",
 				"_valid-range": {
@@ -64,7 +64,7 @@
 		},
 		"_data": {
 			"_class": "_class_quantity",
-			"_domain": ["gent"],
+			"_domain": ["chr_gent"],
 			"_scalar": {
 				"_type": "_type_integer"
 			}
@@ -85,7 +85,7 @@
 		},
 		"_data": {
 			"_class": "_class_identifier",
-			"_domain": ["gent"],
+			"_domain": ["chr_gent"],
 			"_scalar": {
 				"_type": "_type_string"
 			}
@@ -104,7 +104,7 @@
 			"_definition": {"iso_639_3_eng": "Method and technology used to determine the genetic index."}
 		},
 		"_data": {
-			"_domain": ["gent"],
+			"_domain": ["chr_gent"],
 			"_scalar": {
 				"_type": "_type_string"
 			}
@@ -130,8 +130,11 @@
 		},
 		"_data": {
 			"_class": "_class_quantity",
-			"_domain": ["gent"],
-			"_subject": "stand",
+			"_domain": ["chr_gent"],
+			"_tag": [
+				"chr_tag_diversity"
+			],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit_name": "Percentage",
@@ -162,8 +165,11 @@
 		},
 		"_data": {
 			"_class": "_class_quantity",
-			"_domain": ["gent"],
-			"_subject": "stand",
+			"_domain": ["chr_gent"],
+			"_tag": [
+				"chr_tag_diversity"
+			],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number"
 			}
@@ -181,8 +187,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity",
-			"_domain": ["gent"],
-			"_subject": "stand",
+			"_domain": ["chr_gent"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_object",
 				"_kind": ["chr_ExpHet_marker"]
@@ -219,8 +225,11 @@
 		},
 		"_data": {
 			"_class": "_class_quantity",
-			"_domain": ["gent"],
-			"_subject": "stand",
+			"_domain": ["chr_gent"],
+			"_tag": [
+				"chr_tag_diversity"
+			],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number"
 			}
@@ -245,8 +254,11 @@
 		},
 		"_data": {
 			"_class": "_class_quantity",
-			"_domain": ["gent"],
-			"_subject": "stand",
+			"_domain": ["chr_gent"],
+			"_tag": [
+				"chr_tag_diversity"
+			],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number"
 			}
@@ -270,8 +282,12 @@
 		},
 		"_data": {
 			"_class": "_class_quantity",
-			"_domain": ["gent"],
-			"_subject": "stand",
+			"_domain": ["chr_gent"],
+			"_tag": [
+				"chr_tag_diversity",
+				"chr_tag_distinct-pop"
+			],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number"
 			}
@@ -296,8 +312,12 @@
 		},
 		"_data": {
 			"_class": "_class_quantity",
-			"_domain": ["gent"],
-			"_subject": "stand",
+			"_domain": ["chr_gent"],
+			"_tag": [
+				"chr_tag_diversity",
+				"chr_tag_vulnerability"
+			],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_integer"
 			}
@@ -322,8 +342,11 @@
 		},
 		"_data": {
 			"_class": "_class_quantity",
-			"_domain": ["gent"],
-			"_subject": "stand",
+			"_domain": ["chr_gent"],
+			"_tag": [
+				"chr_tag_distinct-pop"
+			],
+			"_subject": "chr_subject_stand",
 			"_array": {
 				"_scalar": {
 					"_type": "_type_number"
@@ -343,8 +366,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity",
-			"_domain": ["gent"],
-			"_subject": "stand",
+			"_domain": ["chr_gent"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_object",
 				"_kind": ["chr_Divergence_marker"]
@@ -380,8 +403,11 @@
 		},
 		"_data": {
 			"_class": "_class_quantity",
-			"_domain": ["gent"],
-			"_subject": "stand",
+			"_domain": ["chr_gent"],
+			"_tag": [
+				"chr_tag_diversity"
+			],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number"
 			}
@@ -399,8 +425,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity",
-			"_domain": ["gent"],
-			"_subject": "stand",
+			"_domain": ["chr_gent"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_object",
 				"_kind": ["chr_PropClones_marker"]
@@ -436,8 +462,11 @@
 		},
 		"_data": {
 			"_class": "_class_quantity",
-			"_domain": ["gent"],
-			"_subject": "stand",
+			"_domain": ["chr_gent"],
+			"_tag": [
+				"chr_tag_diversity"
+			],
+			"_subject": "chr_subject_stand",
 			"_array": {
 				"_scalar": {
 					"_type": "_type_number"
@@ -464,8 +493,12 @@
 		},
 		"_data": {
 			"_class": "_class_quantity",
-			"_domain": ["gent"],
-			"_subject": "stand",
+			"_domain": ["chr_gent"],
+			"_tag": [
+				"chr_tag_diversity",
+				"chr_tag_distinct-pop"
+			],
+			"_subject": "chr_subject_stand",
 			"_array": {
 				"_scalar": {
 					"_type": "_type_number"
@@ -491,8 +524,12 @@
 		},
 		"_data": {
 			"_class": "_class_quantity",
-			"_domain": ["gent"],
-			"_subject": "stand",
+			"_domain": ["chr_gent"],
+			"_tag": [
+				"chr_tag_diversity",
+				"chr_tag_distinct-pop"
+			],
+			"_subject": "chr_subject_stand",
 			"_array": {
 				"_scalar": {
 					"_type": "_type_number"
@@ -519,8 +556,12 @@
 		},
 		"_data": {
 			"_class": "_class_quantity",
-			"_domain": ["gent"],
-			"_subject": "stand",
+			"_domain": ["chr_gent"],
+			"_tag": [
+				"chr_tag_diversity",
+				"chr_tag_vulnerability"
+			],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number"
 			}
@@ -538,8 +579,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity",
-			"_domain": ["gent"],
-			"_subject": "stand",
+			"_domain": ["chr_gent"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_object",
 				"_kind": ["chr_Inbreeding_marker"]
@@ -575,8 +616,13 @@
 		},
 		"_data": {
 			"_class": "_class_quantity",
-			"_domain": ["gent"],
-			"_subject": "stand",
+			"_domain": ["chr_gent"],
+			"_tag": [
+				"chr_tag_diversity",
+				"chr_tag_distinct-pop",
+				"chr_tag_vulnerability"
+			],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number"
 			}
@@ -594,8 +640,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity",
-			"_domain": ["gent"],
-			"_subject": "stand",
+			"_domain": ["chr_gent"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_object",
 				"_kind": ["chr_GenLoad_marker"]
@@ -631,8 +677,12 @@
 		},
 		"_data": {
 			"_class": "_class_quantity",
-			"_domain": ["gent"],
-			"_subject": "stand",
+			"_domain": ["chr_gent"],
+			"_tag": [
+				"chr_tag_distinct-pop",
+				"chr_tag_vulnerability"
+			],
+			"_subject": "chr_subject_stand",
 			"_array": {
 				"_scalar": {
 					"_type": "_type_number"
@@ -652,8 +702,8 @@
 		},
 		"_data": {
 			"_class": "_class_quantity",
-			"_domain": ["gent"],
-			"_subject": "stand",
+			"_domain": ["chr_gent"],
+			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_object",
 				"_kind": ["chr_GenomicOffset_marker"]
@@ -689,8 +739,12 @@
 		},
 		"_data": {
 			"_class": "_class_quantity",
-			"_domain": ["gent"],
-			"_subject": "stand",
+			"_domain": ["chr_gent"],
+			"_tag": [
+				"chr_tag_diversity",
+				"chr_tag_vulnerability"
+			],
+			"_subject": "chr_subject_stand",
 			"_array": {
 				"_scalar": {
 					"_type": "_type_number"
