@@ -15,6 +15,11 @@
 		"_domain": [
 			"gent"
 		],
+		"_tag": [
+			"chr_tag_distinct-pop",
+			"chr_tag_diversity",
+			"chr_tag_vulnerability"
+		],
 		"std_terms": [
 			"chr_Inbreeding",
 			"chr_GenomicOffset",

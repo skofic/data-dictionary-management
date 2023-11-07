@@ -8,7 +8,7 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Phenotypic"},
-			"_definition": {"iso_639_3_eng": "Phenotypic characterisation data"}
+			"_definition": {"iso_639_3_eng": "Phenotypic indicator"}
 		}
 	},
 	{
@@ -20,7 +20,7 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Modelled"},
-			"_definition": {"iso_639_3_eng": "Modelled characterisation data"}
+			"_definition": {"iso_639_3_eng": "Modelled indicator"}
 		}
 	},
 	{
@@ -32,7 +32,7 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Genetic"},
-			"_definition": {"iso_639_3_eng": "Genetic characterisation data"}
+			"_definition": {"iso_639_3_eng": "Genetic indicator"}
 		}
 	},
 	{
@@ -44,19 +44,19 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Environmental"},
-			"_definition": {"iso_639_3_eng": "Environmental characterisation data"}
+			"_definition": {"iso_639_3_eng": "Environmental indicator"}
 		}
 	},
 	{
 		"_code": {
 			"_nid": "chr",
-			"_lid": "comp",
-			"_gid": "chr_comp",
-			"_aid": ["comp"]
+			"_lid": "multi",
+			"_gid": "chr_multi",
+			"_aid": ["multi"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Compound"},
-			"_definition": {"iso_639_3_eng": "Compound characterisation data"}
+			"_title": {"iso_639_3_eng": "Multivariate"},
+			"_definition": {"iso_639_3_eng": "Multivariate indicator"}
 		}
 	},
 	{
@@ -68,7 +68,7 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Forest"},
-			"_definition": {"iso_639_3_eng": "Forest characterisation data"}
+			"_definition": {"iso_639_3_eng": "Forest indicator"}
 		}
 	},
 	

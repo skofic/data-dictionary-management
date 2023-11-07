@@ -43,7 +43,7 @@
 		"_path": ["chr_domain"]
 	},
 	{
-		"_from": "chr_comp",
+		"_from": "chr_multi",
 		"_to": "chr_domain",
 		"_predicate": "_predicate_enum-of",
 		"_path": ["chr_domain"]
