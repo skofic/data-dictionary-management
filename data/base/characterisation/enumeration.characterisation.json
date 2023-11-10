@@ -91,7 +91,8 @@
 			"_aid": ["distinct-pop"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Distinctiveness of target population"}
+			"_title": {"iso_639_3_eng": "Distinctiveness"},
+			"_definition": {"iso_639_3_eng": "Distinctiveness of target population"}
 		}
 	},
 	{
@@ -114,8 +115,8 @@
 			"_aid": ["tree"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Tree level trait"},
-			"_definition": {"iso_639_3_eng": "The data or term refers to tree domain information."},
+			"_title": {"iso_639_3_eng": "Tree"},
+			"_definition": {"iso_639_3_eng": "The data or term refers to tree level trait information."},
 			"_description": {"iso_639_3_eng": "This category indicates that the *descriptor* or *term* describes a *trait* belonging to *the tree*. This, however, does *not necessarily mean* that the associated data *refers* to a *single tree*, it *may* be the *average* or *statistical calculation* applied to a *tree population*. Data of this category should either *include* a specific *reference* to a *tree* or a *reference* to a specific *stand*."}
 		}
 	},
@@ -127,8 +128,8 @@
 			"_aid": ["stand"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Stand level trait"},
-			"_definition": {"iso_639_3_eng": "The data or term refers to stand domain information."},
+			"_title": {"iso_639_3_eng": "Stand"},
+			"_definition": {"iso_639_3_eng": "The data or term refers to stand level trait information."},
 			"_description": {"iso_639_3_eng": "This category indicates that the *descriptor* or *term* describes a *trait* belonging to a *stand* or *unit* containing tree populations. This category *excludes traits associated to the tree*, the *trait* must *characterise* the *stand* or *unit*."}
 		}
 	},

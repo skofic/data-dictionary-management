@@ -7,7 +7,7 @@
 			"_aid": ["category"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Categorical value"},
+			"_title": {"iso_639_3_eng": "Categorical"},
 			"_definition": {"iso_639_3_eng": "Categorical, non quantitative value."},
 			"_description": {"iso_639_3_eng": "This term represents a *category*, does *not represent* a [quantity](_class_quantity) and takes a *finite number of values*, can be *nominal* or *ordinal*."},
 			"_examples": {"iso_639_3_eng": "Categorical example data could be *months*, *sex*, *countries*. By definition, any value that must be taken from a *controlled vocabulary* is a *categorical value*."}
@@ -21,7 +21,7 @@
 			"_aid": ["reference"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Reference value"},
+			"_title": {"iso_639_3_eng": "Reference"},
 			"_definition": {"iso_639_3_eng": "Reference to another value."},
 			"_description": {"iso_639_3_eng": "The value itself is a [string](_type_string), but this string is a *reference* to another item that *holds* a *value* of *indetermined category*."},
 			"_examples": {"iso_639_3_eng": "Reference example data could be the *identifier* of a *value* stored in *another document*."}
@@ -35,7 +35,7 @@
 			"_aid": ["identifier"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Identifier value"},
+			"_title": {"iso_639_3_eng": "Identifier"},
 			"_definition": {"iso_639_3_eng": "A value that represents an identifier."},
 			"_description": {"iso_639_3_eng": "The value is used to *identify* and *select* an *item* in a *collection* of *elements* of the *same type*."},
 			"_examples": {"iso_639_3_eng": "Identifier example data could be the *code* assigned to a *country*, or the *social security number* for a *person*."}
@@ -49,7 +49,7 @@
 			"_aid": ["quantity"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Quantitative value"},
+			"_title": {"iso_639_3_eng": "Quantitative"},
 			"_definition": {"iso_639_3_eng": "Discrete or continuous quantitative value."},
 			"_description": {"iso_639_3_eng": "This term represents a *quantity*, a *discrete* or *continuous* value, it does not represent a [category](_class_category) and can take an *infinite number of values*, it is by definition *numeric*.\n\nThis specific data type identifies a *single data point*, not a [calculated](_class_quantity_calculated) coefficient or [average](_class_quantity_averaged) value."},
 			"_examples": {"iso_639_3_eng": "Quantitative example data could be *height*, *weight*, *number of inhabitants*. In general, any value that represents *amounts* or *actual measurements*, would be considered a *quantitative value*."}
@@ -63,7 +63,7 @@
 			"_aid": ["calculated"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Calculated quantitative value"},
+			"_title": {"iso_639_3_eng": "Calculated"},
 			"_definition": {"iso_639_3_eng": "Discrete or continuous quantitative value that is obtained through the processing of a series of other values."},
 			"_description": {"iso_639_3_eng": "This term represents a *quantity*, a *discrete* or *continuous* value that has been *obtained* by *processing* a set of *other values*.\n\nThis specific data type identifies a coefficient or index, not a [single](_class_quantity) data point, or an [average](_class_quantity_averaged) or mean of data points."},
 			"_examples": {"iso_639_3_eng": "Calculated quantitative data could be a *number* calculated by *aggregating* several *traits* *weighted* by *coefficients* to result in a *single score*."}
@@ -77,7 +77,7 @@
 			"_aid": ["averaged"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Averaged quantitative value"},
+			"_title": {"iso_639_3_eng": "Averaged"},
 			"_definition": {"iso_639_3_eng": "Discrete or continuous quantitative value that is obtained by averaging of a series of data points."},
 			"_description": {"iso_639_3_eng": "This term represents a *quantity*, a *discrete* or *continuous* value that indicates an *average* of a *series* of *data points*.\n\nThis specific data type identifies an average or mean, not a [single](_class_quantity) data point, or a [processed](_class_quantity_calculated) or calculated value."},
 			"_examples": {"iso_639_3_eng": "Averaged quantitative value could be the *average* or *mean* of a time period or other range of single data points."}
@@ -91,7 +91,7 @@
 			"_aid": ["time"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Temporal value"},
+			"_title": {"iso_639_3_eng": "Temporal"},
 			"_definition": {"iso_639_3_eng": "A value that indicates a moment in time."},
 			"_description": {"iso_639_3_eng": "This term represents a *date* or *time*, a value that could be used in a *time series* to indicate the *when*."},
 			"_examples": {"iso_639_3_eng": "Time example data could be a *date*, a *date and time*, a *day* of the *week*."}
