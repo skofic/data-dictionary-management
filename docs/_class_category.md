@@ -3,7 +3,7 @@
 
 
 ------
-#### Categorical value
+#### Categorical
 
 
 

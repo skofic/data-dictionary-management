@@ -3,7 +3,7 @@
 
 
 ------
-#### Calculated quantitative value
+#### Calculated
 
 
 

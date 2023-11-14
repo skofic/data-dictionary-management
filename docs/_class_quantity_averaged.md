@@ -3,7 +3,7 @@
 
 
 ------
-#### Averaged quantitative value
+#### Averaged
 
 
 

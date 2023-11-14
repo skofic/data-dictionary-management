@@ -3,7 +3,7 @@
 
 
 ------
-#### Quantitative value
+#### Quantitative
 
 
 

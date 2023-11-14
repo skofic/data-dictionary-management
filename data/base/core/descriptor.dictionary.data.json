@@ -285,6 +285,28 @@
 	{
 		"_code": {
 			"_nid": "",
+			"_lid": "classes",
+			"_gid": "_classes",
+			"_aid": ["classes"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Data classifications"},
+			"_definition": {"iso_639_3_eng": "This list of enumerated values indicate to which classes or categories a collection of descriptor values belong."},
+			"_description": {"iso_639_3_eng": "See the [data classification](_domain.md) descriptor for information on the list values."}
+		},
+		"_data": {
+			"_class": "_class_category",
+			"_set": {
+				"_set_scalar": {
+					"_set_type": "_type_string_enum",
+					"_kind": ["_class"]
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "",
 			"_lid": "subject",
 			"_gid": "_subject",
 			"_aid": ["subject"]
@@ -299,6 +321,28 @@
 			"_scalar": {
 				"_type": "_type_string_enum",
 				"_kind": ["chr_subject"]
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "",
+			"_lid": "subjects",
+			"_gid": "_subjects",
+			"_aid": ["subjects"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Trait subjects"},
+			"_definition": {"iso_639_3_eng": "Subjects to which a collection of traits refer to."},
+			"_description": {"iso_639_3_eng": "See the [Trait subject](_subject.md) descriptor for information on the list values."}
+		},
+		"_data": {
+			"_class": "_class_category",
+			"_set": {
+				"_set_scalar": {
+					"_set_type": "_type_string_enum",
+					"_kind": ["chr_subject"]
+				}
 			}
 		}
 	},

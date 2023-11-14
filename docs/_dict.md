@@ -3,7 +3,7 @@
 
 
 ------
-#### Dictionary data container
+#### Dictionary
 
 
 
