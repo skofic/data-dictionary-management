@@ -651,6 +651,44 @@
             }
         }
     },
+    {
+        "_code": {
+            "_nid": "std_terms",
+            "_lid": "key",
+            "_gid": "std_terms_key",
+            "_aid": ["key"]
+        },
+        "_info": {
+            "_title": {"iso_639_3_eng": "Key descriptors"},
+            "_definition": {"iso_639_3_eng": "List of descriptors whose combination represents the unique key of a record."},
+            "_description": {"iso_639_3_eng": "When considering a list of data records there should be a combination of fields whose combined value will be unique among all elements of the dataset. This field should contain the global identifiers of these fields. Note that this does not include fields such as the reference to the dataset."}
+        },
+        "_data": {
+            "_class": "_class_identifier",
+            "_set": {
+                "_set_scalar": {"_set_type": "_type_string_key"}
+            }
+        }
+    },
+    {
+        "_code": {
+            "_nid": "std_terms",
+            "_lid": "quant",
+            "_gid": "std_terms_quant",
+            "_aid": ["quant"]
+        },
+        "_info": {
+            "_title": {"iso_639_3_eng": "Quantitative value descriptors"},
+            "_definition": {"iso_639_3_eng": "List of descriptors holding quantitative values."},
+            "_description": {"iso_639_3_eng": "This is a collection of references to term objects which represent quantitative values."}
+        },
+        "_data": {
+            "_class": "_class_identifier",
+            "_set": {
+                "_set_scalar": {"_set_type": "_type_string_key"}
+            }
+        }
+    },
 
     {
         "_code": {

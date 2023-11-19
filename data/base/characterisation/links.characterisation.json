@@ -114,6 +114,17 @@
 	},
 	
 	{
+		"_from": "chr_trend_AvLandSurfTemp",
+		"_to": "geometry_hash",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_trend_AvLandSurfTemp",
+		"_to": "std_date",
+		"_predicate": "_predicate_requires"
+	},
+	
+	{
 		"_from": "chr_MaxLandSurfTemp",
 		"_to": "geometry_hash",
 		"_predicate": "_predicate_requires"
@@ -147,6 +158,17 @@
 	},
 	
 	{
+		"_from": "chr_trend_AvNormDiffVegIdx",
+		"_to": "gcu_id_number",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_trend_AvNormDiffVegIdx",
+		"_to": "std_date",
+		"_predicate": "_predicate_requires"
+	},
+	
+	{
 		"_from": "chr_MaxNormDiffVegIdx",
 		"_to": "geometry_hash",
 		"_predicate": "_predicate_requires"
@@ -158,12 +180,12 @@
 	},
 	
 	{
-		"_from": "chr_trend_NormDiffVegIdx",
+		"_from": "chr_trend_MaxNormDiffVegIdx",
 		"_to": "gcu_id_number",
 		"_predicate": "_predicate_requires"
 	},
 	{
-		"_from": "chr_trend_NormDiffVegIdx",
+		"_from": "chr_trend_MaxNormDiffVegIdx",
 		"_to": "std_date",
 		"_predicate": "_predicate_requires"
 	},
@@ -180,6 +202,17 @@
 	},
 	
 	{
+		"_from": "chr_trend_AvLeafAreaIdx",
+		"_to": "gcu_id_number",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_trend_AvLeafAreaIdx",
+		"_to": "std_date",
+		"_predicate": "_predicate_requires"
+	},
+	
+	{
 		"_from": "chr_MaxLeafAreaIdx",
 		"_to": "geometry_hash",
 		"_predicate": "_predicate_requires"
@@ -191,12 +224,12 @@
 	},
 	
 	{
-		"_from": "chr_trend_LeafAreaIdx",
+		"_from": "chr_trend_MaxLeafAreaIdx",
 		"_to": "gcu_id_number",
 		"_predicate": "_predicate_requires"
 	},
 	{
-		"_from": "chr_trend_LeafAreaIdx",
+		"_from": "chr_trend_MaxLeafAreaIdx",
 		"_to": "std_date",
 		"_predicate": "_predicate_requires"
 	},
@@ -213,6 +246,17 @@
 	},
 	
 	{
+		"_from": "chr_trend_AvGrossPrimProd",
+		"_to": "gcu_id_number",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_trend_AvGrossPrimProd",
+		"_to": "std_date",
+		"_predicate": "_predicate_requires"
+	},
+	
+	{
 		"_from": "chr_SumGrossPrimProd",
 		"_to": "geometry_hash",
 		"_predicate": "_predicate_requires"
@@ -224,12 +268,23 @@
 	},
 	
 	{
-		"_from": "chr_trend_GrossPrimProd",
+		"_from": "chr_trend_SumGrossPrimProd",
 		"_to": "gcu_id_number",
 		"_predicate": "_predicate_requires"
 	},
 	{
-		"_from": "chr_trend_GrossPrimProd",
+		"_from": "chr_trend_SumGrossPrimProd",
+		"_to": "std_date",
+		"_predicate": "_predicate_requires"
+	},
+	
+	{
+		"_from": "chr_trend_MaxGrossPrimProd",
+		"_to": "gcu_id_number",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_trend_MaxGrossPrimProd",
 		"_to": "std_date",
 		"_predicate": "_predicate_requires"
 	},
@@ -246,12 +301,23 @@
 	},
 	
 	{
-		"_from": "chr_trend_NormDiffWaterIdx",
+		"_from": "chr_trend_AvNormDiffWaterIdx",
 		"_to": "gcu_id_number",
 		"_predicate": "_predicate_requires"
 	},
 	{
-		"_from": "chr_trend_NormDiffWaterIdx",
+		"_from": "chr_trend_AvNormDiffWaterIdx",
+		"_to": "std_date",
+		"_predicate": "_predicate_requires"
+	},
+	
+	{
+		"_from": "chr_trend_MaxNormDiffWaterIdx",
+		"_to": "gcu_id_number",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_trend_MaxNormDiffWaterIdx",
 		"_to": "std_date",
 		"_predicate": "_predicate_requires"
 	},

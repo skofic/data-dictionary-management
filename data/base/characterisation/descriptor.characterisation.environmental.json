@@ -265,6 +265,33 @@
 	},
 	{
 		"_code": {
+			"_nid": "chr_trend",
+			"_lid": "AvLandSurfTemp",
+			"_gid": "chr_trend_AvLandSurfTemp",
+			"_pid": ["TrendAvLST"],
+			"_aid": ["AvLandSurfTemp"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Trend (temporal dynamics) in annual mean of GCU averaged Land surface temperature"},
+			"_definition": {"iso_639_3_eng": "Temporal trends of the remotely sensed annual mean land surface temperature."},
+			"_description": {"iso_639_3_eng": "Slope of the relationship between remotely sensed annual mean land surface temperature of the GCU and time (°C/year).\n\nBeware that for some GCUs there are no shapefile available so that the average Land surface temperature over a 5 km buffer around the GCU coordinate is taken."},
+			"_provider": [
+				"Nicolas Martin <nicolas.martin@inrae.fr>"
+			]
+		},
+		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit_name": "Degrees Centigrades/year",
+				"_unit_symbol": "°C/year"
+			}
+		}
+	},
+	{
+		"_code": {
 			"_nid": "chr",
 			"_lid": "MaxLandSurfTemp",
 			"_gid": "chr_MaxLandSurfTemp",
@@ -312,7 +339,8 @@
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit_name": "Kelvin/month",
-				"_unit_symbol": "K"
+				"_unit_name": "Degrees Centigrades/year",
+				"_unit_symbol": "°C/year"
 			}
 		}
 	},
@@ -346,6 +374,31 @@
 	},
 	{
 		"_code": {
+			"_nid": "chr_trend",
+			"_lid": "AvNormDiffVegIdx",
+			"_gid": "chr_trend_AvNormDiffVegIdx",
+			"_pid": ["TrendAvNDVI"],
+			"_aid": ["AvNormDiffVegIdx"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Trend (temporal dynamics) in annual mean of GCU averaged NDVI"},
+			"_definition": {"iso_639_3_eng": "Temporal trends of the annual mean remotely sensed NDVI."},
+			"_description": {"iso_639_3_eng": "Slope of the relationship between yearly mean remotely sensed NDVI over the GCU and time (NDVI/year).\n\nBeware that for some GCUs there are no shapefile available so that the average Land surface temperature over a 5 km buffer around the GCU coordinate is taken."},
+			"_provider": [
+				"Nicolas Martin <nicolas.martin@inrae.fr>"
+			]
+		},
+		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
+			"_scalar": {
+				"_type": "_type_number"
+			}
+		}
+	},
+	{
+		"_code": {
 			"_nid": "chr",
 			"_lid": "MaxNormDiffVegIdx",
 			"_gid": "chr_MaxNormDiffVegIdx",
@@ -374,15 +427,15 @@
 	{
 		"_code": {
 			"_nid": "chr_trend",
-			"_lid": "NormDiffVegIdx",
-			"_gid": "chr_trend_NormDiffVegIdx",
-			"_pid": ["TrendNDVI"],
-			"_aid": ["NormDiffVegIdx"]
+			"_lid": "MaxNormDiffVegIdx",
+			"_gid": "chr_trend_MaxNormDiffVegIdx",
+			"_pid": ["TrendMaxNDVI"],
+			"_aid": ["MaxNormDiffVegIdx"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Trend (temporal dynamics) in GCU's NDVI"},
-			"_definition": {"iso_639_3_eng": "Temporal trends of the remotely sensed NDVI."},
-			"_description": {"iso_639_3_eng": "Slope the relationship between remotely sensed NDVI over the GCU and time (NDVI/month)."},
+			"_title": {"iso_639_3_eng": "Trend (temporal dynamics) in annual max of monthly GCU averaged NDVI"},
+			"_definition": {"iso_639_3_eng": "Temporal trends of the annual maximal of monthly remotely sensed NDVI"},
+			"_description": {"iso_639_3_eng": "Slope of the relationship between yearly maximum of monthly remotely sensed NDVI over the GCU and time (NDVI/year).\n\nBeware that for some GCUs there are no shapefile available so that the average Land surface temperature over a 5 km buffer around the GCU coordinate is taken."},
 			"_provider": [
 				"Nicolas Martin <nicolas.martin@inrae.fr>"
 			]
@@ -417,10 +470,37 @@
 			"_class": "_class_quantity_averaged",
 			"_domain": ["chr_envi"],
 			"_subject": "chr_subject_stand",
-			"_array": {
-				"_scalar": {
-					"_type": "_type_number"
-				}
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit_name": "m^2 Leaf/m^2 soil",
+				"_unit_symbol": "m2 Leaf/m2 soil"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_trend",
+			"_lid": "AvLeafAreaIdx",
+			"_gid": "chr_trend_AvLeafAreaIdx",
+			"_pid": ["TrendLai"],
+			"_aid": ["AvLeafAreaIdx"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Trend (temporal dynamics) in annual mean of GCU averaged LAI"},
+			"_definition": {"iso_639_3_eng": "Temporal trends of the annual mean remotely sensed LAI"},
+			"_description": {"iso_639_3_eng": "Slope of the relationship between yearly mean remotely sensed LAI over the GCU and time  (LAI/year).\n\nBeware that  for some GCUs there are no shapefile available so that the average Land  surface temperature over a 5 km buffer around the GCU coordinate is taken."},
+			"_provider": [
+				"Nicolas Martin <nicolas.martin@inrae.fr>"
+			]
+		},
+		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit_name": "m^2 Leaf/m^2 soil/year",
+				"_unit_symbol": "m2 Leaf/m2 soil/year"
 			}
 		}
 	},
@@ -433,9 +513,9 @@
 			"_aid": ["MaxLeafAreaIdx"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Maximum GCU Lai"},
-			"_definition": {"iso_639_3_eng": "Maximum GCU Leaf Area Index."},
-			"_description": {"iso_639_3_eng": "Remotely sensed quantile 90% of the monthly average GCU Leaf Area Index over the GCU Polygon when the polygon is available. Beware that for some GCU there are no shapefile available so that the average Land surface temperature over a 5km buffer around the GCU coordinate is taken."},
+			"_title": {"iso_639_3_eng": "Annual maximum of monthly GCU averaged LAI"},
+			"_definition": {"iso_639_3_eng": "Annual maximum of monthly GCU averaged Leaf Area Index."},
+			"_description": {"iso_639_3_eng": "Remotely sensed annual maximum of the monthly GCU averaged Leaf Area Index over the GCU Polygon when the polygon is available.\n\nBeware that for some GCUs there are no shapefiles available so that the maximum Leaf Area Index over a 5 km buffer around the GCU coordinate is callculated."},
 			"_provider": [
 				"Nicolas Martin <nicolas.martin@inrae.fr>"
 			]
@@ -445,22 +525,24 @@
 			"_domain": ["chr_envi"],
 			"_subject": "chr_subject_stand",
 			"_scalar": {
-				"_type": "_type_number"
+				"_type": "_type_number",
+				"_unit_name": "m^2 Leaf/m^2 soil",
+				"_unit_symbol": "m2 Leaf/m2 soil"
 			}
 		}
 	},
 	{
 		"_code": {
 			"_nid": "chr_trend",
-			"_lid": "LeafAreaIdx",
-			"_gid": "chr_trend_LeafAreaIdx",
-			"_pid": ["TrendLai"],
-			"_aid": ["LeafAreaIdx"]
+			"_lid": "MaxLeafAreaIdx",
+			"_gid": "chr_trend_MaxLeafAreaIdx",
+			"_pid": ["TrendMaxLai"],
+			"_aid": ["MaxLeafAreaIdx"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Trend (temporal dynamics) in GCU's LAI"},
-			"_definition": {"iso_639_3_eng": "Temporal trends of the remotely sensed LAI."},
-			"_description": {"iso_639_3_eng": "Slope the relationship between remotely sensed LAI over the GCU and time (LAI/month)."},
+			"_title": {"iso_639_3_eng": "Trend (temporal dynamics) in annual maximum of monthly GCU averaged LAI"},
+			"_definition": {"iso_639_3_eng": "Temporal trends of the annual max of monthly remotely sensed LAI."},
+			"_description": {"iso_639_3_eng": "Slope of the relationship between yearly maximum of monthly remotely sensed LAI over the GCU and time (LAI/year).\n\nBeware that for some GCUs there are no shapefile available so that the average Land surface temperature over a 5 km buffer around the GCU coordinate is taken."},
 			"_provider": [
 				"Nicolas Martin <nicolas.martin@inrae.fr>"
 			]
@@ -470,7 +552,9 @@
 			"_domain": ["chr_envi"],
 			"_subject": "chr_subject_stand",
 			"_scalar": {
-				"_type": "_type_number"
+				"_type": "_type_number",
+				"_unit_name": "m^2 Leaf/m^2 soil/year",
+				"_unit_symbol": "m2 Leaf/m2 soil/year"
 			}
 		}
 	},
@@ -506,6 +590,33 @@
 	},
 	{
 		"_code": {
+			"_nid": "chr_trend",
+			"_lid": "AvGrossPrimProd",
+			"_gid": "chr_trend_AvGrossPrimProd",
+			"_pid": ["TrendGPP"],
+			"_aid": ["AvGrossPrimProd"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Trend (temporal dynamics) in GCU's GPP"},
+			"_definition": {"iso_639_3_eng": "Temporal trends of the remotely sensed GPP."},
+			"_description": {"iso_639_3_eng": "Slope the relationship between remotely sensed biomass of the GCU and time (Kg C/m2/month)."},
+			"_provider": [
+				"Nicolas Martin <nicolas.martin@inrae.fr>"
+			]
+		},
+		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit_name": "kg/m2/month",
+				"_unit_symbol": "kg/m^2"
+			}
+		}
+	},
+	{
+		"_code": {
 			"_nid": "chr",
 			"_lid": "SumGrossPrimProd",
 			"_gid": "chr_SumGrossPrimProd",
@@ -532,15 +643,15 @@
 	{
 		"_code": {
 			"_nid": "chr_trend",
-			"_lid": "GrossPrimProd",
-			"_gid": "chr_trend_GrossPrimProd",
-			"_pid": ["TrendGPP"],
-			"_aid": ["GrossPrimProd"]
+			"_lid": "SumGrossPrimProd",
+			"_gid": "chr_trend_SumGrossPrimProd",
+			"_pid": ["TrendSumGPP"],
+			"_aid": ["SumGrossPrimProd"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Trend (temporal dynamics) in GCU's GPP"},
-			"_definition": {"iso_639_3_eng": "Temporal trends of the remotely sensed GPP."},
-			"_description": {"iso_639_3_eng": "Slope the relationship between remotely sensed biomass of the GCU and time (Kg C/m2/month)."},
+			"_title": {"iso_639_3_eng": "Trend (temporal dynamics) in annual sum of GCU averaged GPP"},
+			"_definition": {"iso_639_3_eng": "Temporal trends of the annual sum remotely sensed GPP."},
+			"_description": {"iso_639_3_eng": "Slope of the relationship between yearly sum remotely sensed biomass of the GCU and time (Kg C/m2/year).\n\nBeware that for some GCUs there are no shapefile available so that the average Land surface temperature over a 5 km buffer around the GCU coordinate is taken."},
 			"_provider": [
 				"Nicolas Martin <nicolas.martin@inrae.fr>"
 			]
@@ -551,7 +662,34 @@
 			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
-				"_unit_name": "kg/m2/month",
+				"_unit_name": "kg/m2/year",
+				"_unit_symbol": "kg/m^2"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_trend",
+			"_lid": "MaxGrossPrimProd",
+			"_gid": "chr_trend_MaxGrossPrimProd",
+			"_pid": ["TrendMaxGPP"],
+			"_aid": ["MaxGrossPrimProd"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Trend (temporal dynamics) in annual max of monthly GCU averaged GPP"},
+			"_definition": {"iso_639_3_eng": "Temporal trends of the annual max of monthly remotely sensed GPP."},
+			"_description": {"iso_639_3_eng": "Slope of the relationship between yearly max of monthly remotely sensed biomass of the GCU and time (Kg C/m2/year).\n\nBeware that for some GCUs there are no shapefile available so that the average Land surface temperature over a 5 km buffer around the GCU coordinate is taken."},
+			"_provider": [
+				"Nicolas Martin <nicolas.martin@inrae.fr>"
+			]
+		},
+		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit_name": "kg/m2/year",
 				"_unit_symbol": "kg/m^2"
 			}
 		}
@@ -587,15 +725,40 @@
 	{
 		"_code": {
 			"_nid": "chr_trend",
-			"_lid": "NormDiffWaterIdx",
-			"_gid": "chr_trend_NormDiffWaterIdx",
-			"_pid": ["TrendNDWI"],
-			"_aid": ["NormDiffWaterIdx"]
+			"_lid": "AvNormDiffWaterIdx",
+			"_gid": "chr_trend_AvNormDiffWaterIdx",
+			"_pid": ["TrendAvNDWI"],
+			"_aid": ["AvNormDiffWaterIdx"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Trend (temporal dynamics) in GCU's NDWI"},
-			"_definition": {"iso_639_3_eng": "Temporal trends of the remotely sensed NDWI."},
-			"_description": {"iso_639_3_eng": "Slope the relationship between remotely sensed LAI over the GCU and time (NDWI/month)."},
+			"_title": {"iso_639_3_eng": "Trend (temporal dynamics) in annual mean of GCU averaged NDWI"},
+			"_definition": {"iso_639_3_eng": "Temporal trends of the annual mean remotely sensed NDWI."},
+			"_description": {"iso_639_3_eng": "Slope of the relationship between yearly mean remotely sensed NDWI over the GCU and time (NDWI/year).\n\nBeware that for some GCUs there are no shapefile available so that the average Land surface temperature over a 5 km buffer around the GCU coordinate is taken."},
+			"_provider": [
+				"Nicolas Martin <nicolas.martin@inrae.fr>"
+			]
+		},
+		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
+			"_scalar": {
+				"_type": "_type_number"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_trend",
+			"_lid": "MaxNormDiffWaterIdx",
+			"_gid": "chr_trend_MaxNormDiffWaterIdx",
+			"_pid": ["TrendMaxNDWI"],
+			"_aid": ["MaxNormDiffWaterIdx"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Trend (temporal dynamics) in annual maximum of monthly GCU averaged NDWI"},
+			"_definition": {"iso_639_3_eng": "Temporal trends of the annual max of monthly remotely sensed NDWI."},
+			"_description": {"iso_639_3_eng": "Slope of the relationship between yearly maximum of monthly remotely sensed NDWI over the GCU and time (NDWI/year).\n\nBeware that for some GCUs there are no shapefile available so that the average Land surface temperature over a 5 km buffer around the GCU coordinate is taken."},
 			"_provider": [
 				"Nicolas Martin <nicolas.martin@inrae.fr>"
 			]

@@ -1,0 +1,45 @@
+[
+	{
+		"_key": "8194f5d7-b446-4dbc-b218-98fd2cb61093",
+		"std_project": "FORGENIUS",
+		"std_dataset": "FORGENIUS_WP1_MODEL",
+		"std_date_submission": "20231111",
+		"_title": {
+			"iso_639_3_eng": "Modelled vulnerability and risk indices for FORGENIUS"
+		},
+		"_description": {
+			"iso_639_3_eng": "Modelled vulnerability and risk indices at the level of each GCU and for each of the populations (species) studied, with one value is available per year from 1950. The models used are SurEau (Ruffault et al., 2022) and Castanea (Dufrêne et al, 2005). Climatic data were obtained from ERA5-land, soil data from soilgrids250 and LAI from MODIS."
+		},
+		"_subject": "chr_subject_stand",
+		"std_terms_key": [
+			"gcu_id_number",
+			"species"
+		],
+		"_domain": [
+			"chr_model"
+		],
+		"_classes": [
+			"_class_quantity",
+			"_class_identifier",
+			"_class_category",
+			"_class_time"
+		],
+		"std_terms": [
+			"chr_AvYearDroughtIdx",
+			"chr_CarbonStarvation",
+			"std_date",
+			"chr_FrostDamage",
+			"gcu_id_number",
+			"species",
+			"chr_VulWildFire",
+			"chr_DessiccationTolerance"
+		],
+		"std_terms_quant": [
+			"chr_AvYearDroughtIdx",
+			"chr_CarbonStarvation",
+			"chr_FrostDamage",
+			"chr_VulWildFire",
+			"chr_DessiccationTolerance"
+		]
+	}
+]

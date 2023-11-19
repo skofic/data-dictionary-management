@@ -52,6 +52,26 @@
 	{
 		"_code": {
 			"_nid": "chr",
+			"_lid": "SequenceLength",
+			"_gid": "chr_SequenceLength",
+			"_aid": ["SequenceLength"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Sequence length"},
+			"_definition": {"iso_639_3_eng": "Number of base pairs sequenced from a DNA fragment."}
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["chr_gent"],
+			"_scalar": {
+				"_type": "_type_integer"
+			}
+		}
+	},
+
+	{
+		"_code": {
+			"_nid": "chr",
 			"_lid": "NumberOfLoci",
 			"_gid": "chr_NumberOfLoci",
 			"_pid": ["NumberOfLoci"],
