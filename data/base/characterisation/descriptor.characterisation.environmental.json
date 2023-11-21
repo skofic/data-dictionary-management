@@ -749,6 +749,33 @@
 	},
 	{
 		"_code": {
+			"_nid": "chr",
+			"_lid": "MaxNormDiffWaterIdx",
+			"_gid": "chr_MaxNormDiffWaterIdx",
+			"_pid": ["MaxNDWI"],
+			"_aid": ["MaxNormDiffWaterIdx"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Annual maximum of monthly GCU averaged NDWI"},
+			"_definition": {"iso_639_3_eng": "Annual maximum of monthly GCU averaged Normalized Difference Water Index. GCU Normalized Difference Water Index."},
+			"_description": {"iso_639_3_eng": "Remotely sensed annual maximum of the monthly GCU averaged Normalized Difference Water Index. The average is calculated for the GCU area defined with the polygon of GCU boundaries. Beware that for some GCUs there are no shapefiles available so that the average Normalised Difference Water Index over a 5 km buffer around the GCU coordinate is callculated."},
+			"_provider": [
+				"Nicolas Martin <nicolas.martin@inrae.fr>"
+			]
+		},
+		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
+			"_array": {
+				"_scalar": {
+					"_type": "_type_number"
+				}
+			}
+		}
+	},
+	{
+		"_code": {
 			"_nid": "chr_trend",
 			"_lid": "MaxNormDiffWaterIdx",
 			"_gid": "chr_trend_MaxNormDiffWaterIdx",
