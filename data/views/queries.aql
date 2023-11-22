@@ -1,0 +1,106 @@
+///
+// Trova i dati del dataset "8194f5d7-b446-4dbc-b218-98fd2cb61093", che hanno:
+// specie che contengono i token "abies" e "pinus",
+// con la GCU in Svezia o Italia,
+// con data dal 2000 al 2001 compresi.
+///
+FOR doc IN VIEW_DATA
+    SEARCH doc.std_dataset_id == "8194f5d7-b446-4dbc-b218-98fd2cb61093" AND
+           ANALYZER(doc.species IN TOKENS("abies pinus", "text_en"), "text_en") AND
+           STARTS_WITH(doc.gcu_id_number, ["SWE", "ITA"]) AND
+           IN_RANGE(doc.std_date, "2000", "2001", true, true)
+    SORT doc.species, doc.gcu_id_number ASC
+RETURN UNSET(doc, "_id", "_key", "_rev")
+
+
+///
+// Trova i term con namespace "iso".
+///
+FOR doc IN VIEW_TERM
+    SEARCH doc._code._nid == "iso"
+RETURN {
+    gid: doc._code._gid,
+    title: doc._info._title.iso_639_3_eng,
+    definition: doc._info._definition.iso_639_3_eng
+}
+
+
+///
+// Trova i term con codice "iso".
+///
+FOR doc IN VIEW_TERM
+    SEARCH doc._code._lid == "iso"
+RETURN {
+    gid: doc._code._gid,
+    title: doc._info._title.iso_639_3_eng,
+    definition: doc._info._definition.iso_639_3_eng
+}
+
+
+///
+// Trova i term con definizione che iniziano almeno due tra "islamic", "republic", e "united".
+///
+LET prefixes = TOKENS("islamic republic united", "text_en")
+FOR doc IN VIEW_TERM
+    SEARCH ANALYZER(STARTS_WITH(doc._info._title.iso_639_3_eng, prefixes, 2), "text_en")
+RETURN {
+    gid: doc._code._gid,
+    title: doc._info._title.iso_639_3_eng,
+    definition: doc._info._definition.iso_639_3_eng
+}
+
+
+///
+// Trova i term con definizione che contiene " genetic ".
+///
+FOR doc IN VIEW_TERM
+    SEARCH LIKE(doc._info._definition.iso_639_3_eng, "% genetic %")
+RETURN {
+    gid: doc._code._gid,
+    title: doc._info._title.iso_639_3_eng,
+    definition: doc._info._definition.iso_639_3_eng
+}
+
+
+///
+// Trova i term con definizione che contiene le parole "average" e "point",
+// si intende qualsiasi declinazione di queste parole.
+///
+FOR doc IN VIEW_TERM
+    SEARCH ANALYZER(doc._info._definition.iso_639_3_eng IN TOKENS("average point", "text_en"), "text_en")
+RETURN {
+    gid: doc._code._gid,
+    title: doc._info._title.iso_639_3_eng,
+    definition: doc._info._definition.iso_639_3_eng
+}
+
+
+///
+// Trova i term con una frase che contiene "month", una parola e "average",
+// si intende qualsiasi declinazione di queste parole.
+///
+FOR doc IN VIEW_TERM
+    SEARCH PHRASE(doc._info._definition.iso_639_3_eng, "month", 1, "average", "text_en")
+RETURN {
+    gid: doc._code._gid,
+    title: doc._info._title.iso_639_3_eng,
+    definition: doc._info._definition.iso_639_3_eng
+}
+
+
+///
+// Trova i term con la definisione che contiene "trend loci genetic climate population",
+// si intende qualsiasi declinazione di queste parole,
+// ordina i risultati per rilevanza.
+///
+FOR doc IN VIEW_TERM
+    SEARCH ANALYZER(doc._info._definition.iso_639_3_eng IN TOKENS("trend loci genetic climate population", "text_en"), "text_en")
+    SORT TFIDF(doc) DESC
+    LIMIT 15
+RETURN {
+    gid: doc._code._gid,
+    title: doc._info._title.iso_639_3_eng,
+    definition: doc._info._definition.iso_639_3_eng,
+    bm25: BM25(doc),
+    tfidf: TFIDF(doc)
+}

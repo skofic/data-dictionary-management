@@ -1,0 +1,152 @@
+{
+  "writebufferSizeMax": 33554432,
+  "id": "279479995529",
+  "storedValues": [],
+  "name": "VIEW_TERM",
+  "type": "arangosearch",
+  "consolidationPolicy": {
+    "type": "tier",
+    "segmentsBytesFloor": 2097152,
+    "segmentsBytesMax": 5368709120,
+    "segmentsMax": 10,
+    "segmentsMin": 1,
+    "minScore": 0
+  },
+  "writebufferActive": 0,
+  "links": {
+    "terms": {
+      "analyzers": [
+        "identity"
+      ],
+      "fields": {
+        "_code": {
+          "fields": {
+            "_name": {
+              "analyzers": [
+                "identity",
+                "text_en"
+              ]
+            },
+            "_aid": {},
+            "_nid": {},
+            "_gid": {
+              "analyzers": [
+                "identity",
+                "text_en"
+              ]
+            },
+            "_lid": {
+              "analyzers": [
+                "identity",
+                "text_en"
+              ]
+            },
+            "_pid": {
+              "analyzers": [
+                "identity",
+                "text_en"
+              ]
+            }
+          }
+        },
+        "_data": {
+          "fields": {
+            "_class": {},
+            "_domain": {},
+            "_tag": {
+              "analyzers": [
+                "identity",
+                "text_en"
+              ]
+            },
+            "_subject": {},
+            "_dict": {
+              "fields": {
+                "_dict_key": {
+                  "fields": {
+                    "_class": {}
+                  }
+                },
+                "_dict_value": {
+                  "fields": {
+                    "_class": {}
+                  }
+                }
+              }
+            }
+          }
+        },
+        "_info": {
+          "fields": {
+            "_examples": {
+              "fields": {
+                "iso_639_3_eng": {
+                  "analyzers": [
+                    "text_en",
+                    "identity"
+                  ]
+                }
+              }
+            },
+            "_provider": {
+              "analyzers": [
+                "text_en",
+                "identity"
+              ]
+            },
+            "_description": {
+              "fields": {
+                "iso_639_3_eng": {
+                  "analyzers": [
+                    "text_en",
+                    "identity"
+                  ]
+                }
+              }
+            },
+            "_notes": {
+              "fields": {
+                "iso_639_3_eng": {
+                  "analyzers": [
+                    "text_en",
+                    "identity"
+                  ]
+                }
+              }
+            },
+            "_definition": {
+              "fields": {
+                "iso_639_3_eng": {
+                  "analyzers": [
+                    "text_en",
+                    "identity"
+                  ]
+                }
+              }
+            },
+            "_title": {
+              "fields": {
+                "iso_639_3_eng": {
+                  "analyzers": [
+                    "text_en",
+                    "identity"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "includeAllFields": false,
+      "storeValues": "id",
+      "trackListPositions": false
+    }
+  },
+  "commitIntervalMsec": 1000,
+  "consolidationIntervalMsec": 1000,
+  "globallyUniqueId": "h151C1D49588D/279479995529",
+  "cleanupIntervalStep": 2,
+  "primarySort": [],
+  "primarySortCompression": "lz4",
+  "writebufferIdle": 64
+}

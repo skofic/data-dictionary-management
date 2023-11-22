@@ -1,5 +1,11 @@
 [
 	{
+		"_from": "_subject",
+		"_to": "_data",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_data"]
+	},
+	{
 		"_from": "_class",
 		"_to": "_data",
 		"_predicate": "_predicate_property-of",
@@ -12,13 +18,7 @@
 		"_path": ["_data"]
 	},
 	{
-		"_from": "_subject",
-		"_to": "_data",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_data"]
-	},
-	{
-		"_from": "_tags",
+		"_from": "_tag",
 		"_to": "_data",
 		"_predicate": "_predicate_property-of",
 		"_path": ["_data"]

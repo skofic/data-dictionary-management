@@ -1,0 +1,65 @@
+{
+  "writebufferSizeMax": 33554432,
+  "id": "279465406563",
+  "storedValues": [],
+  "name": "VIEW_DATASET",
+  "type": "arangosearch",
+  "consolidationPolicy": {
+    "type": "tier",
+    "segmentsBytesFloor": 2097152,
+    "segmentsBytesMax": 5368709120,
+    "segmentsMax": 10,
+    "segmentsMin": 1,
+    "minScore": 0
+  },
+  "writebufferActive": 0,
+  "links": {
+    "dataset": {
+      "analyzers": [
+        "identity"
+      ],
+      "fields": {
+        "std_project": {},
+        "_key": {},
+        "std_date": {},
+        "_domain": {},
+        "_description": {
+          "fields": {
+            "iso_639_3_eng": {
+              "analyzers": [
+                "text_en",
+                "identity"
+              ]
+            }
+          }
+        },
+        "_classes": {},
+        "_tag": {},
+        "std_terms": {},
+        "_subjects": {},
+        "std_dataset": {},
+        "_title": {
+          "fields": {
+            "iso_639_3_eng": {
+              "analyzers": [
+                "text_en",
+                "identity"
+              ]
+            }
+          }
+        },
+        "std_date_submission": {}
+      },
+      "includeAllFields": false,
+      "storeValues": "id",
+      "trackListPositions": false
+    }
+  },
+  "commitIntervalMsec": 1000,
+  "consolidationIntervalMsec": 1000,
+  "globallyUniqueId": "h151C1D49588D/279465406563",
+  "cleanupIntervalStep": 2,
+  "primarySort": [],
+  "primarySortCompression": "lz4",
+  "writebufferIdle": 64
+}
