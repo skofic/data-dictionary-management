@@ -3,7 +3,7 @@
 
 
 ------
-#### Type of Marker
+#### Type of Marker/Trait
 
 
 

@@ -64,7 +64,9 @@
 			"_class": "_class_quantity",
 			"_domain": ["chr_gent"],
 			"_scalar": {
-				"_type": "_type_integer"
+				"_type": "_type_integer",
+				"_unit_name": "bp",
+				"_unit_symbol": "bp"
 			}
 		}
 	},
@@ -99,7 +101,7 @@
 			"_aid": ["MarkerType"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Type of Marker"},
+			"_title": {"iso_639_3_eng": "Type of Marker/Trait"},
 			"_definition": {"iso_639_3_eng": "Type of marker (SNP, SSR) used for calculation of genetic indices."},
 			"_description": {"iso_639_3_eng": "Type of marker used for calculation of genetic indices."}
 		},

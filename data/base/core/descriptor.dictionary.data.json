@@ -2,37 +2,6 @@
 	{
 		"_code": {
 			"_nid": "",
-			"_lid": "data",
-			"_gid": "_data",
-			"_aid": ["data"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Data section"},
-			"_definition": {"iso_639_3_eng": "This property groups all properties whose function is to define the shape and type of data, terms that represent descriptors must contain this property."},
-			"_description": {"iso_639_3_eng": "All terms that feature this property are [descriptors](_term_descriptor.md), all *other* term types *should not* have it. This object requires *one* of the following properties:\n\n- [Scalar data container](_scalar.md): This property contains the *data type* definitions and *constraints* for *scalar data values*.\n- [Array data container](_array.md): This property contains the *data type* definitions and *constraints* for *array data values*, which represent a *list* of *data values* of the *same type*.\n- [Set data container](_set.md): This property contains the *data type* definitions and *constraints* for *set data values*, which represent a *list* of *data values* of the *same type* whose values are *unique*.\n- [Key/value dictionary data container](_dict.md): This property contains the *key* and *value* definitions and *constraints* for *key/value dictionary values*.\n\nYou can set this property to an *empty object*, in that case it means that the *descriptor* can have *any container* of *any value*."},
-			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_data\": {\n\t\t\"_scalar\": {\n\t\t\t\"_class\": \"_class_quantity\",\n\t\t\t\"_type\": \"_type_integer\",\n\t\t\t\"_valid-range\": {\n\t\t\t\t\"_min-range-inclusive\": 5,\n\t\t\t\t\"_max-range-inclusive\": 10\n\t\t\t}\n\t\t}\n\t}\n}\n```\n\nThe above example describes a [scalar](_scalar.md) discrete [integer](_type_integer.md) [quantitative](_class_quantity.md) value in the range from `5` to `10` inclusive.\n\n\n\n```json\n{\n\t\"_data\": {\n\t\t\"_array\": {\n      \"_scalar\": {\n        \"_class\": \"_class_quantity\",\n        \"_type\": \"_type_number\",\n        \"_valid-range\": {\n          \"_min-range-inclusive\": 0.0,\n          \"_max-range-exclusive\": 100.0,\n        },\n        \"_unit\": \"_data_unit_length_cm\"\n      }\n\t\t}\n\t}\n}\n```\n\nThe above example describes a [list](_array.md) of [continuous](_type_number.md) [quantitative](_class_quantity.md) values *greater or equal* to `0.0` and *less than* `100.0` representing a *length* in *centimetres*.\n\n\n\n```json\n{\n\t\"_data\": {\n\t\t\"_set\": {\n      \"_set_scalar\": {\n        \"_class\": \"_class_category\",\n        \"_type\": \"_type_string_enum\",\n        \"_kind\": [\"iso_639_3\"]\n      }\n\t\t}\n\t}\n}\n```\n\nThe above example describes *list* of [unique elements](_set.md) belonging to the `iso_639_3` controlled vocabulary.\n\n\n\n```json\n{\n\t\"_data\": {\n\t\t\"_dict\": {\n\t\t\t\"_dict_key\": {\n\t\t\t\t\"_class\": \"_class_category\",\n\t\t\t\t\"_type\": \"_type_string_enum\",\n\t\t\t\t\"_kind\": [\"iso_3166_1\", \"iso_3166_3\"]\n\t\t\t},\n\t\t\t\"_dict_value\": {\n\t\t\t\t\"_dict\": {\n\t\t\t\t\t\"_dict_key\": {\n\t\t\t\t\t\t\"_class\": \"_class_category\",\n\t\t\t\t\t\t\"_type_key\": \"_type_string_enum\",\n\t\t\t\t\t\t\"_kind\": [\"iso_639_3\"]\n\t\t\t\t\t},\n\t\t\t\t\t\"_dict_value\": {\n\t\t\t\t\t\t\"_array\": {\n              \"_scalar\": {\n                \"_class\": \"_class_other\",\n                \"_type\": \"_type_object\",\n                \"_kind\": [\"some_object_definition\"],\n                \"_elements\": {\n                  \"_min-items\": 5,\n                  \"_max-items\": 10\n                }\n              }\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}\n```\n\nThe above example describes a [dictionary](_dict.md) whose *keys* are the [global identifiers](_gid.md) of the ISO 3166 part 1 or part 3 country *controlled vocabulary elements*, and the values are *another dictionary* whose keys are ISO 639 languages and whose *values* are *arrays* that correspond to the `some_object_definition` *data structure type*; these *array* values must have a *minimum* of `5` elements and a *maximum* of `10` elements. This is an example of a recursive dictionary definition.\n\n\n\n```json\n{\n\t\"_data\": {\n\t\t\"_scalar\": {}\n\t}\n}\n```\n\nThis example shows the *data definition* for a *descriptor* that can take *only* [scalar](_scalar.md) values of any [type](_type.md).\n\n\n\n```json\n{\n\t\"_data\": {}\n}\n```\n\nThis example shows the *data definition* for a *descriptor* that can take *any data shape* or *value*."}
-		},
-		"_data": {
-			"_scalar": {
-				"_type": "_type_object",
-				"_kind": ["_data"]
-			}
-		},
-		"_rule": {
-			"_required": {
-				"_selection-descriptors_one-none": [
-					"_scalar",
-					"_array",
-					"_set",
-					"_dict"
-				]
-			}
-		}
-	},
-
-	{
-		"_code": {
-			"_nid": "",
 			"_lid": "scalar",
 			"_gid": "_scalar",
 			"_aid": ["scalar"]

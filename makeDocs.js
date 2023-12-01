@@ -31,21 +31,31 @@ async function main()
 	// Descriptors.
 	//
 	const descriptorFiles = [
+		"descriptor.dictionary.json",
 		"descriptor.dictionary.code.json",
 		"descriptor.dictionary.data.json",
 		"descriptor.dictionary.database.json",
 		"descriptor.dictionary.edge.json",
 		"descriptor.dictionary.info.json",
 		"descriptor.dictionary.rule.json",
+
 		"descriptor.def.json",
+
 		"descriptor.geo.json",
+
 		"descriptor.env.json",
+
 		"descriptor.iso.json",
+
 		"descriptor.std.json",
+
 		"descriptor.eufgis.json",
-		"descriptor.characterisation.phenotype.json",
-		"descriptor.characterisation.genetic.json",
+
+		"descriptor.characterisation.json",
 		"descriptor.characterisation.environmental.json",
+		"descriptor.characterisation.forest.json",
+		"descriptor.characterisation.genetic.json",
+		"descriptor.characterisation.phenotype.json",
 		"descriptor.characterisation.modelled.json"
 	]
 

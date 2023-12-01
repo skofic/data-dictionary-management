@@ -2,39 +2,6 @@
 	{
 		"_code": {
 			"_nid": "",
-			"_lid": "code",
-			"_gid": "_code",
-			"_aid": ["code"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Identification section"},
-			"_definition": {"iso_639_3_eng": "This object groups all properties whose function is to identify terms in the data dictionary."},
-			"_description": {"iso_639_3_eng": "All terms *require* this object property which features the following identifiers:\n\n- [Namespace](_nid.md): The namespace is the [global identifier](_gid.md) of a *term* that is used to *disambiguate* [local identifiers](_lid.md). This can be used to allow several terms to share the same [code](_lid.md). This property is *optional*.\n- [Local identifier](_lid.md): A *code* that *uniquely identifies* the *term* within its [namespace](_nid.md). This property is *required*.\n- [Global identifier](_gid.md): The *concatenation* of [namespace](_nid.md) and [local](_lid.md) identifiers, joined by a *separator token*, this *constitutes* the *unique identifier* of the *term*. This property is *required* and its value will be copied to the [document key](_key.md).\n- [Identifier codes](_aid.md): List of all relevant *identifier codes* related to the term *including* the [local identifier](_lid.md).\n- [Provider identifiers](_pid.md): List of *identifier codes* assigned to the *term* by *data providers*.\n- [Name](_name.md): *Local*, *native* or *original name* assigned to the term. This property is *optional* and should be *only* used if such information is *relevant*.\n- [Regular expression](_regexp.md): This property can be used to *apply* a *validation pattern* to the [local identifier](_lid.md), it is an *optional* property.\n\nThis object section groups all the relevant information needed to *identify* *terms* using *codes*."},
-			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_code\": {\n\t\t\"_nid\": \"iso_3166_1\",\n\t\t\"_lid\": \"ITA\",\n\t\t\"_gid\": \"iso_3166_1_ITA\",\n\t\t\"_aid\": [\"ITA\", \"IT\"],\n\t\t\"_name\": \"Italia\",\n    \"_regexp\": \"[A-Z]{3,3}\"\n\t}\n}\n```\nThis snippet holds the following information:\n\n- [Namespace](_nid.md): `iso_3166_1` represents the [ISO](https://www.iso.org/home.html) [countries](https://www.iso.org/iso-3166-country-codes.html) standard, this means that all the [local identifiers](_lid.md) of terms which feature this namespace are assumed to *belong* to [that](https://en.wikipedia.org/wiki/ISO_3166-1) standard and must be *unique* *within* that *namespace*.\n- [Local identifier](_lid.md): `ITA` is the term *local identifier* or *code*. Within the `iso_3166_1` [namespace](_nid.md), only *this* term can have this local identifier *code*.\n- [Global identifier](_gid.md): `iso_3166_1_ITA` is the *combination* of the [namespace](_nid.md), `iso_3166_1`, and the [local identifier](_lid.md), `ITA`, *joined* by the *underscore*, `_`, token. This represents the *unique identifier* of the *term*, meaning that there can *only be one term* featuring this [unique identifier](_gid.md). Note that this value will be copied in the document [key](_key.md).\n- [All identifiers](_aid.md): this *set* of *codes* collects all *identifiers* that *can be used* to *refer to* the *current term*. This is a *list* of *acronyms* that can safely be *associated* with the *term*. The [local identifier](_lid.md) *must* also be *included*. This means that `Italy` can be identified both with the *2-character* code `IT`, or with the *3-character* code `ITA`, which is the [local identifier](_lid.md) of the term.\n- [Name](_name.md): In *this case* it *makes sense* to include the *original name* of the term, which, is `Italia`, *Italy* in *Italian*. *This information should only be included if relevant*.\n- [Regular expression](_regexp.md): This represents a *pattern* to which the [local identifier](_lid.md) *must conform*. There is already a *regular expression* that *restricts all local identifiers*, the current [field](_regexp.md) can be used to *further restrict* the *pattern*. In this case the code must be composed of *three uppercase letters*.\n\n\n```json\n{\n\t\"_code\": {\n\t\t\"_lid\": \"iso\",\n\t\t\"_gid\": \"iso\",\n\t\t\"_aid\": [\"iso\"]\n\t}\n}\n```\nThis snippet shows the code definition of the *ISO* namespace. As you can see,there is no [namespace](_nid.md) and the [global identifier](_gid.md) has the same value as the [local identifier](_lid.md). The list of [alternative codes](_aid.md) only includes the required *local identifier*."}
-		},
-		"_data": {
-			"_scalar": {
-				"_type": "_type_object",
-				"_kind": ["_code"]
-			}
-		},
-		"_rule": {
-			"_required": {
-				"_selection-descriptors_all": [
-					"_lid",
-					"_gid",
-					"_aid"
-				]
-			},
-			"_computed": [
-				"_gid"
-			]
-		}
-	},
-
-	{
-		"_code": {
-			"_nid": "",
 			"_lid": "nid",
 			"_gid": "_nid",
 			"_aid": ["nid"]
