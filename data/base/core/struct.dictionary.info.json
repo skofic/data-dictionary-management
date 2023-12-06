@@ -29,6 +29,20 @@
 		"_predicate": "_predicate_property-of",
 		"_path": ["_info"]
 	},
+	
+	{
+		"_from": "_url",
+		"_to": "_info",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_info"]
+	},
+	{
+		"_from": "_citation",
+		"_to": "_info",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_info"]
+	},
+	
 	{
 		"_from": "_provider",
 		"_to": "_info",

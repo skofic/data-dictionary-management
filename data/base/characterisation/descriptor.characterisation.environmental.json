@@ -354,8 +354,8 @@
 			"_aid": ["AvNormDiffVegIdx"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Average GCU NDVI"},
-			"_definition": {"iso_639_3_eng": "Average GCU Normalized Difference Vegetation Index."},
+			"_title": {"iso_639_3_eng": "Average GCU Normalized Difference Vegetation Index"},
+			"_definition": {"iso_639_3_eng": "Average GCU Normalized Difference Vegetation Index (NDVI)."},
 			"_description": {"iso_639_3_eng": "Remotely sensed monthly average GCU Normalized Difference Vegetation Index. The average is calculated for the GCU area defined with the polygon of GCU boundaries. Beware that for some GCU (i) there are no shapefile available so that the average Land surface temperature over a 5km buffer around the GCU coordinate is taken."},
 			"_provider": [
 				"Nicolas Martin <nicolas.martin@inrae.fr>"
@@ -382,7 +382,7 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Trend (temporal dynamics) in annual mean of GCU averaged NDVI"},
-			"_definition": {"iso_639_3_eng": "Temporal trends of the annual mean remotely sensed NDVI."},
+			"_definition": {"iso_639_3_eng": "Temporal trends of the annual mean remotely sensed Normalized Difference Vegetation Index."},
 			"_description": {"iso_639_3_eng": "Slope of the relationship between yearly mean remotely sensed NDVI over the GCU and time (NDVI/year).\n\nBeware that for some GCUs there are no shapefile available so that the average Land surface temperature over a 5 km buffer around the GCU coordinate is taken."},
 			"_provider": [
 				"Nicolas Martin <nicolas.martin@inrae.fr>"
@@ -406,8 +406,8 @@
 			"_aid": ["MaxNormDiffVegIdx"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Maximum GCU NDVI"},
-			"_definition": {"iso_639_3_eng": "Maximum GCU Normalized Difference Vegetation Index."},
+			"_title": {"iso_639_3_eng": "Maximum GCU Normalized Difference Vegetation Index"},
+			"_definition": {"iso_639_3_eng": "Maximum GCU Normalized Difference Vegetation Index (NDVI)."},
 			"_description": {"iso_639_3_eng": "Remotely sensed monthly maximum GCU Normalized Difference Vegetation Index. The average of the maximum values is calculated for the GCU area defined with the polygon of GCU boundaries. Beware that for some GCU (i) there are no shapefile available so that the average Land surface temperature over a 5km buffer around the GCU coordinate is taken."},
 			"_provider": [
 				"Nicolas Martin <nicolas.martin@inrae.fr>"
@@ -434,7 +434,7 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Trend (temporal dynamics) in annual max of monthly GCU averaged NDVI"},
-			"_definition": {"iso_639_3_eng": "Temporal trends of the annual maximal of monthly remotely sensed NDVI"},
+			"_definition": {"iso_639_3_eng": "Temporal trends of the annual maximal of monthly remotely sensed Normalized Difference Vegetation Index (NDVI)"},
 			"_description": {"iso_639_3_eng": "Slope of the relationship between yearly maximum of monthly remotely sensed NDVI over the GCU and time (NDVI/year).\n\nBeware that for some GCUs there are no shapefile available so that the average Land surface temperature over a 5 km buffer around the GCU coordinate is taken."},
 			"_provider": [
 				"Nicolas Martin <nicolas.martin@inrae.fr>"
@@ -704,8 +704,8 @@
 			"_aid": ["AvNormDiffWaterIdx"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Average GCU NDWI"},
-			"_definition": {"iso_639_3_eng": "Average GCU Normalized Difference Water Index."},
+			"_title": {"iso_639_3_eng": "Average GCU Normalized Difference Water Index"},
+			"_definition": {"iso_639_3_eng": "Average GCU Normalized Difference Water Index (NDWI)."},
 			"_description": {"iso_639_3_eng": "Remotely sensed monthly average GCU Normalized Difference Water Index. The average is calculated for the GCU area defined with the polygon of GCU boundaries. Beware that for some GCU there are no shapefile available so that the average Land surface temperature over a 5km buffer around the GCU coordinate is taken."},
 			"_provider": [
 				"Nicolas Martin <nicolas.martin@inrae.fr>"
@@ -732,7 +732,7 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Trend (temporal dynamics) in annual mean of GCU averaged NDWI"},
-			"_definition": {"iso_639_3_eng": "Temporal trends of the annual mean remotely sensed NDWI."},
+			"_definition": {"iso_639_3_eng": "Temporal trends of the annual mean remotely sensed Normalized Difference Water Index (NDWI)."},
 			"_description": {"iso_639_3_eng": "Slope of the relationship between yearly mean remotely sensed NDWI over the GCU and time (NDWI/year).\n\nBeware that for some GCUs there are no shapefile available so that the average Land surface temperature over a 5 km buffer around the GCU coordinate is taken."},
 			"_provider": [
 				"Nicolas Martin <nicolas.martin@inrae.fr>"
@@ -784,7 +784,7 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Trend (temporal dynamics) in annual maximum of monthly GCU averaged NDWI"},
-			"_definition": {"iso_639_3_eng": "Temporal trends of the annual max of monthly remotely sensed NDWI."},
+			"_definition": {"iso_639_3_eng": "Temporal trends of the annual max of monthly remotely sensed Normalized Difference Water Index (NDWI)."},
 			"_description": {"iso_639_3_eng": "Slope of the relationship between yearly maximum of monthly remotely sensed NDWI over the GCU and time (NDWI/year).\n\nBeware that for some GCUs there are no shapefile available so that the average Land surface temperature over a 5 km buffer around the GCU coordinate is taken."},
 			"_provider": [
 				"Nicolas Martin <nicolas.martin@inrae.fr>"

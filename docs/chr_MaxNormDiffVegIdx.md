@@ -3,12 +3,12 @@
 
 
 ------
-#### Maximum GCU NDVI
+#### Maximum GCU Normalized Difference Vegetation Index
 
 
 
 ------
-###### Maximum GCU Normalized Difference Vegetation Index.
+###### Maximum GCU Normalized Difference Vegetation Index (NDVI).
 
 
 

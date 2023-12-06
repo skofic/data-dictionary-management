@@ -8,7 +8,7 @@
 
 
 ------
-###### Temporal trends of the annual max of monthly remotely sensed NDWI.
+###### Temporal trends of the annual max of monthly remotely sensed Normalized Difference Water Index (NDWI).
 
 
 

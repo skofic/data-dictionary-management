@@ -3,12 +3,12 @@
 
 
 ------
-#### Average GCU NDVI
+#### Average GCU Normalized Difference Vegetation Index
 
 
 
 ------
-###### Average GCU Normalized Difference Vegetation Index.
+###### Average GCU Normalized Difference Vegetation Index (NDVI).
 
 
 

@@ -8,7 +8,7 @@
 
 
 ------
-###### Temporal trends of the annual mean remotely sensed NDVI.
+###### Temporal trends of the annual mean remotely sensed Normalized Difference Vegetation Index.
 
 
 

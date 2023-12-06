@@ -8,7 +8,7 @@
 
 
 ------
-###### Temporal trends of the annual mean remotely sensed NDWI.
+###### Temporal trends of the annual mean remotely sensed Normalized Difference Water Index (NDWI).
 
 
 

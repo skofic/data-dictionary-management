@@ -350,6 +350,23 @@
     {
         "_code": {
             "_nid": "std_dataset",
+            "_lid": "group",
+            "_gid": "std_dataset_group",
+            "_aid": ["group"]
+        },
+        "_info": {
+            "_title": {"iso_639_3_eng": "Dataset group"},
+            "_definition": {"iso_639_3_eng": "A group of related datasets."},
+            "_description": {"iso_639_3_eng": "This field represents an identifier for a group of related datasets, use it to refer to datasets as a group for datasets that do not belong to a specific project."}
+        },
+        "_data": {
+            "_class": "_class_identifier",
+            "_scalar": {"_type": "_type_string"}
+        }
+    },
+    {
+        "_code": {
+            "_nid": "std_dataset",
             "_lid": "markers",
             "_gid": "std_dataset_markers",
             "_aid": ["markers"]

@@ -8,7 +8,7 @@
 
 
 ------
-###### Temporal trends of the annual maximal of monthly remotely sensed NDVI
+###### Temporal trends of the annual maximal of monthly remotely sensed Normalized Difference Vegetation Index (NDVI)
 
 
 

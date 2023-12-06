@@ -3,12 +3,12 @@
 
 
 ------
-#### Average GCU NDWI
+#### Average GCU Normalized Difference Water Index
 
 
 
 ------
-###### Average GCU Normalized Difference Water Index.
+###### Average GCU Normalized Difference Water Index (NDWI).
 
 
 

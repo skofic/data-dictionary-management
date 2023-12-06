@@ -8,7 +8,7 @@
 
 
 ------
-###### Max Planck Institute for Meteorology Earth System Model, version MPI-ESM1-2-HR, part of the internationally-coordinated Coupled Model Intercomparison Project Phase 6.
+###### Max Planck Institute for Meteorology Earth System Model, version MPI-ESM1-2-HR.
 
 
 

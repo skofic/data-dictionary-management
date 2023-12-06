@@ -150,17 +150,10 @@
 			"_description": {"iso_639_3_eng": "Use this field to provide text that can/must be used as citation when citing resources."}
 		},
 		"_data": {
-			"_dict": {
-				"_dict_key": {
-					"_class": "_class_category",
-					"_type_key": "_type_string_enum",
-					"_kind": ["iso_639_3"]
-				},
-				"_dict_value": {
-					"_scalar": {
-						"_type": "_type_string",
-						"_format": "_format_markdown"
-					}
+			"_set": {
+				"_set_scalar": {
+					"_set_type": "_type_string",
+					"_format": "_format_markdown"
 				}
 			}
 		}
@@ -183,7 +176,32 @@
 			"_class": "_class_category",
 			"_set": {
 				"_set_scalar": {
-					"_set_type": "_type_string"
+					"_set_type": "_type_string",
+					"_format": "_format_markdown"
+				}
+			}
+		}
+	},
+
+	{
+		"_code": {
+			"_nid": "",
+			"_lid": "url",
+			"_gid": "_url",
+			"_aid": ["url"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "URLs"},
+			"_definition": {"iso_639_3_eng": "List of internet references."},
+			"_description": {"iso_639_3_eng": "A list of descriptions containing internet uniform resource locators that provide further information on the subject."},
+			"_examples": {"iso_639_3_eng": "[Chelsa](https://chelsa-climate.org) version 2.1"}
+		},
+		"_data": {
+			"_class": "_class_identifier",
+			"_set": {
+				"_set_scalar": {
+					"_set_type": "_type_string",
+					"_format": "_format_markdown"
 				}
 			}
 		}

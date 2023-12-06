@@ -124,6 +124,43 @@
 	{
 		"_code": {
 			"_nid": "",
+			"_lid": "database",
+			"_gid": "_database",
+			"_aid": ["database"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Database"},
+			"_definition": {"iso_639_3_eng": "Database name, acronym or code."},
+			"_description": {"iso_639_3_eng": "This value should identify a specific database, the value should not necessarily match the actual database name, but it must match a specific database."}
+		},
+		"_data": {
+			"_scalar": {
+				"_type": "_type_string"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "",
+			"_lid": "collection",
+			"_gid": "_collection",
+			"_aid": ["collection"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Collection"},
+			"_definition": {"iso_639_3_eng": "Database collection name, acronym or code."},
+			"_description": {"iso_639_3_eng": "This value should identify a specific database collection, the value should not necessarily match the actual collection name, but it must match a specific collection."}
+		},
+		"_data": {
+			"_scalar": {
+				"_type": "_type_string"
+			}
+		}
+	},
+
+	{
+		"_code": {
+			"_nid": "",
 			"_lid": "private",
 			"_gid": "_private",
 			"_aid": ["private"]
