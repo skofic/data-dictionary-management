@@ -171,7 +171,7 @@
 		"_code": {
 			"_nid": "chr",
 			"_lid": "VarCircBreastHeight",
-			"_gid": "chr_CircBreastHeight",
+			"_gid": "chr_VarCircBreastHeight",
 			"_pid": ["VarCBH"],
 			"_aid": ["VarCircBreastHeight"]
 		},
@@ -439,7 +439,7 @@
 			]
 		},
 		"_data": {
-			"_class": "_class_quantity",
+			"_class": "_class_category",
 			"_domain": ["chr_fore"],
 			"_subject": "chr_subject_stand",
 			"_tag": ["chr_tag_vulnerability"],
