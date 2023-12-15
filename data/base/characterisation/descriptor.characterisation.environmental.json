@@ -118,6 +118,88 @@
 	{
 		"_code": {
 			"_nid": "chr_measured",
+			"_lid": "LatPlot",
+			"_gid": "chr_measured_LatPlot",
+			"_pid": ["LatPlot"],
+			"_aid": ["LatPlot"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Latitude measured in the field"},
+			"_definition": {"iso_639_3_eng": "Latitude measured in the circular plot around a FS tree with the GPS Garmin 64s."},
+			"_description": {"iso_639_3_eng": "See the WP2 protocol for more information."},
+			"_provider": [
+				"Maurizio Mencuccini <m.mencuccini@creaf.uab.cat>"
+			]
+		},
+		"_data": {
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
+			"_scalar": {
+				"_type": "_type_number",
+				"_decimals": 6,
+				"_unit_name": "Decimal degrees",
+				"_unit_symbol": "DD",
+				"_valid-range": {
+					"_min-range-inclusive": -90.0,
+					"_max-range-inclusive": 90.0
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_measured",
+			"_lid": "LonPlot",
+			"_gid": "chr_measured_LonPlot",
+			"_pid": ["LongPlot"],
+			"_aid": ["LonPlot"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Longitude measured in the field"},
+			"_definition": {"iso_639_3_eng": "Longitude measured in the circular plot around a FS tree with the GPS Garmin 64s."},
+			"_description": {"iso_639_3_eng": "See the WP2 protocol for more information."},
+			"_provider": [
+				"Maurizio Mencuccini <m.mencuccini@creaf.uab.cat>"
+			]
+		},
+		"_data": {
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
+			"_scalar": {
+				"_type": "_type_number",
+				"_decimals": 6,
+				"_unit_name": "Decimal degrees",
+				"_unit_symbol": "DD",
+				"_valid-range": {
+					"_min-range-inclusive": -180.0,
+					"_max-range-inclusive": 180.0
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_measured",
+			"_lid": "plot",
+			"_gid": "chr_measured_plot",
+			"_aid": ["plot"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Coordinates measured in the field"},
+			"_definition": {"iso_639_3_eng": "Coordinates measured in the circular plot around a FS tree with the GPS Garmin 64s."},
+			"_description": {"iso_639_3_eng": "See the WP2 protocol for more information."}
+		},
+		"_data": {
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
+			"_scalar": {
+				"_type": "_type_object_geo-json"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_measured",
 			"_lid": "Elevation",
 			"_gid": "chr_measured_Elevation",
 			"_pid": ["ElevationMeasured"],
@@ -967,6 +1049,57 @@
 					"_min-range-exclusive": 0.0,
 					"_max-range-exclusive": 100.0
 				}
+			}
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "chr",
+			"_lid": "PercentCoarseElement",
+			"_gid": "chr_PercentCoarseElement",
+			"_pid": ["coarse_element"],
+			"_aid": ["PercentCoarseElement"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Percentage of the soil coarse elements"},
+			"_definition": {"iso_639_3_eng": "Average of the percentage of coarse elements assessed in the soil pit inside the plot. Percentage in volume of soil."}
+		},
+		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit_name": "Percentage",
+				"_unit_symbol": "%",
+				"_valid-range": {
+					"_min-range-exclusive": 0.0,
+					"_max-range-exclusive": 100.0
+				}
+			}
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "chr",
+			"_lid": "SoilMethod",
+			"_gid": "chr_SoilMethod",
+			"_pid": ["coarse_element"],
+			"_aid": ["method"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Method used for the soil description : pit or auger"},
+			"_definition": {"iso_639_3_eng": "Method used for the description of the soil characteristics either by excavating a pit (pit) or by extrating a soil core using an auger down to the depth where rocks are found (auger)."}
+		},
+		"_data": {
+			"_class": "_class_category",
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
+			"_scalar": {
+				"_type": "_type_string_enum",
+				"_kind": ["chr_SoilMethod"]
 			}
 		}
 	}

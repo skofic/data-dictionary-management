@@ -304,6 +304,37 @@
 	{
 		"_code": {
 			"_nid": "chr",
+			"_lid": "CrownHeight",
+			"_gid": "chr_CrownHeight",
+			"_pid": ["hbc"],
+			"_aid": ["CrownHeight"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Basal crown height"},
+			"_definition": {"iso_639_3_eng": "The vertical tree height from ground level to the lowermost live branches on the main stem across all measured trees."},
+			"_provider": [
+				"Maurizio Mencuccini, Florence JEAN"
+			]
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["chr_fore"],
+			"_subject": "chr_subject_stand",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit": "_unit_length_m",
+				"_unit_symbol": "m.",
+				"_valid-range": {
+					"_min-range-exclusive": 0,
+					"_max-range-exclusive": 50
+				}
+			}
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "chr",
 			"_lid": "AvBasalArea",
 			"_gid": "chr_AvBasalArea",
 			"_pid": ["AvBasalArea"],

@@ -407,5 +407,28 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "Dominated tree"}
 		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "chr_SoilMethod",
+			"_lid": "auger",
+			"_gid": "chr_SoilMethod_auger",
+			"_aid": ["auger"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Auger"}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_SoilMethod",
+			"_lid": "pit",
+			"_gid": "chr_SoilMethod_pit",
+			"_aid": ["pit"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Pit"}
+		}
 	}
 ]

@@ -286,7 +286,9 @@
             "_description": {"iso_639_3_eng": "This field contains the [GeoJSON](https://geojson.org) geometry corresponding to the *geographic location* or *area* related to the information record which contains it. Use it to indicate the location of a tree or the area in which samples have been collected."}
         },
         "_data": {
-            "_scalar": {"_type": "_type_object_geo-json"}
+            "_scalar": {
+            	"_type": "_type_object_geo-json"
+            }
         }
     },
     
@@ -327,7 +329,9 @@
         },
         "_data": {
             "_class": "_class_identifier",
-            "_scalar": {"_type": "_type_string"}
+            "_scalar": {
+            	"_type": "_type_string"
+            }
         }
     },
     {
@@ -340,11 +344,34 @@
         "_info": {
             "_title": {"iso_639_3_eng": "Dataset ID"},
             "_definition": {"iso_639_3_eng": "Dataset unique identifier."},
-            "_description": {"iso_639_3_eng": "This field represents the `_id` of the dataset record, it is the record handle of the dataset."}
+            "_description": {"iso_639_3_eng": "This field represents the `_key` of the dataset record."}
         },
         "_data": {
             "_class": "_class_identifier",
-            "_scalar": {"_type": "_type_string_key"}
+            "_scalar": {
+            	"_type": "_type_string_key"
+            }
+        }
+    },
+    {
+        "_code": {
+            "_nid": "std_dataset",
+            "_lid": "ids",
+            "_gid": "std_dataset_ids",
+            "_aid": ["ids"]
+        },
+        "_info": {
+            "_title": {"iso_639_3_eng": "Dataset IDs"},
+            "_definition": {"iso_639_3_eng": "List of dataset unique identifiers."},
+            "_description": {"iso_639_3_eng": "This field represents the list of datasets, represented by their `_key` field, use this field to indicate to which datasets the current record belongs."}
+        },
+        "_data": {
+            "_class": "_class_identifier",
+            "_set": {
+                "_set_scalar": {
+                	"_set_type": "_type_string_key"
+                }
+            }
         }
     },
     {
@@ -664,7 +691,9 @@
         "_data": {
             "_class": "_class_identifier",
             "_set": {
-                "_set_scalar": {"_set_type": "_type_string_key"}
+                "_set_scalar": {
+                	"_set_type": "_type_string_key"
+                }
             }
         }
     },

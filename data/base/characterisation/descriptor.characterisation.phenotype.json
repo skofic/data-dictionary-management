@@ -1163,5 +1163,58 @@
 				}
 			}
 		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "chr",
+			"_lid": "CrownArea",
+			"_gid": "chr_CrownArea",
+			"_pid": ["CrownArea"],
+			"_aid": ["CrownArea"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Crown area"},
+			"_definition": {"iso_639_3_eng": "Area of the tree crown area estimated by 4 length projected in the 4 directions: North-East-South and West for each Functional Subset tree."},
+			"_provider": [
+				"Maurizio Mencuccini",
+				"Florence JEAN"
+			]
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["chr_pheno"],
+			"_subject": "chr_subject_tree",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit": "_unit_area_m"
+			}
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "chr",
+			"_lid": "CoreYear",
+			"_gid": "chr_CoreYear",
+			"_pid": ["CoreYear"],
+			"_aid": ["CoreYear"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Core year"},
+			"_definition": {"iso_639_3_eng": "Year of birth of the tree estimated from the tree core collected at breast height on each FS tree."},
+			"_description": {"iso_639_3_eng": "year of birth of the tree estimated from the tree core collected at breast height on each FS tree by PHENOBOIS platform (INRAE, Frédéric LAGANE, Bordeaux)."},
+			"_provider": [
+				"Maurizio Mencuccini"
+			]
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["chr_pheno"],
+			"_subject": "chr_subject_tree",
+			"_scalar": {
+				"_type": "_type_integer"
+			}
+		}
 	}
 ]

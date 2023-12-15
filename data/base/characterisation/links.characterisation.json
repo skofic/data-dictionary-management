@@ -59,6 +59,28 @@
 	},
 	
 	{
+		"_from": "chr_measured_LatPlot",
+		"_to": "gcu_id_number",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_measured_LatPlot",
+		"_to": "species",
+		"_predicate": "_predicate_requires"
+	},
+	
+	{
+		"_from": "chr_measured_LonPlot",
+		"_to": "gcu_id_number",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_measured_LonPlot",
+		"_to": "species",
+		"_predicate": "_predicate_requires"
+	},
+	
+	{
 		"_from": "chr_measured_Elevation",
 		"_to": "gcu_id_number",
 		"_predicate": "_predicate_requires"
@@ -1467,6 +1489,86 @@
 	},
 	{
 		"_from": "chr_LeafAreaIndex",
+		"_to": "std_date",
+		"_predicate": "_predicate_requires"
+	},
+	
+	{
+		"_from": "chr_PercentCoarseElement",
+		"_to": "gcu_id_number",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_PercentCoarseElement",
+		"_to": "species",
+		"_predicate": "_predicate_requires"
+	},
+	
+	{
+		"_from": "chr_SoilMethod",
+		"_to": "gcu_id_number",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_SoilMethod",
+		"_to": "species",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_SoilMethod",
+		"_to": "std_date",
+		"_predicate": "_predicate_requires"
+	},
+	
+	{
+		"_from": "chr_CrownHeight",
+		"_to": "chr_tree_code",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_CrownHeight",
+		"_to": "species",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_CrownHeight",
+		"_to": "std_date",
+		"_predicate": "_predicate_requires"
+	},
+	
+	{
+		"_from": "chr_CrownArea",
+		"_to": "chr_tree_code",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_CrownArea",
+		"_to": "species",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_CrownArea",
+		"_to": "std_date",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_CrownArea",
+		"_to": "gcu_id_number",
+		"_predicate": "_predicate_requires"
+	},
+	
+	{
+		"_from": "chr_CoreYear",
+		"_to": "chr_tree_code",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_CoreYear",
+		"_to": "species",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_CoreYear",
 		"_to": "std_date",
 		"_predicate": "_predicate_requires"
 	}

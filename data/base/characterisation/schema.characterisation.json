@@ -187,5 +187,18 @@
 		"_to": "chr_TreeSocialStatus",
 		"_predicate": "_predicate_enum-of",
 		"_path": ["chr_TreeSocialStatus"]
+	},
+	
+	{
+		"_from": "chr_SoilMethod_auger",
+		"_to": "chr_SoilMethod",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr_SoilMethod"]
+	},
+	{
+		"_from": "chr_SoilMethod_pit",
+		"_to": "chr_SoilMethod",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr_SoilMethod"]
 	}
 ]
