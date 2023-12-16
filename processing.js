@@ -2755,7 +2755,7 @@ async function ProcessItems(db, colname, items, callback, filename) {
 /**
  * Process term identifier.
  * The function expects a term, it will compute its global identifier
- * according to its namespace and local identrifier,
+ * according to its namespace and local identifier,
  * set its global identifier and return the value.
  * The function also throws an exception if either the global or local identifiers are missing.
  * @param {object} term - Term to process.
@@ -2763,11 +2763,18 @@ async function ProcessItems(db, colname, items, callback, filename) {
  */
 function ProcessIdentifier(term) {
 
+	///
+	// Globals.
+	///
+	let gid = null
+
 	//
 	// Check global and local identifiers.
 	//
 	if(term?._code?._gid === undefined) {
 		throw( Error( `Missing global identifier in term [${term._code._lid}]` ) )	// ==>
+	} else {
+		gid = term._code._gid
 	}
 
 	//
@@ -2800,6 +2807,12 @@ function ProcessIdentifier(term) {
 	// Is namespace.
 	//
 	else {
+		///
+		// Check whether gid corresponds to identifier.
+		///
+		if(gid !== term._code._lid) {
+			throw(Error(`Inconsistent gid in term [${gid}] [${term._code._lid}]`))	// ==>
+		}
 
 		term._code._gid = term._code._lid
 		return term._code._lid 														// ==>
@@ -2810,7 +2823,15 @@ function ProcessIdentifier(term) {
 	// Handle local identifier.
 	//
 	term._code._gid = identifier + kGlob.globals.token.ns + term._code._lid
-	return term._code._gid 													// ==>
+
+	///
+	// Check whether gid corresponds to identifier.
+	///
+	if(gid !== term._code._gid) {
+		throw(Error(`Inconsistent gid in term [${gid}] [${term._code._gid}]`))		// ==>
+	}
+
+	return term._code._gid 															// ==>
 
 } // ProcessIdentifier()
 

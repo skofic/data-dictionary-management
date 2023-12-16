@@ -356,7 +356,7 @@
 	},
 	{
 		"_code": {
-			"_nid": "chr_Gres",
+			"_nid": "chr",
 			"_lid": "AvGres",
 			"_gid": "chr_AvGres",
 			"_pid": ["Mean.Gres"],
@@ -466,7 +466,7 @@
 	},
 	{
 		"_code": {
-			"_nid": "chr_Cbranch",
+			"_nid": "chr",
 			"_lid": "AvCbranch",
 			"_gid": "chr_AvCbranch",
 			"_pid": ["Mean.Cbranch"],
@@ -493,7 +493,7 @@
 	},
 	{
 		"_code": {
-			"_nid": "chr_Cbranch",
+			"_nid": "chr",
 			"_lid": "VarCbranch",
 			"_gid": "chr_VarCbranch",
 			"_pid": ["Var.Cbranch"],
