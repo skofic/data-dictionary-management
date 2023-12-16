@@ -389,6 +389,17 @@
 	},
 	
 	{
+		"_from": "chr_RootingDepth",
+		"_to": "gcu_id_number",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_RootingDepth",
+		"_to": "std_date",
+		"_predicate": "_predicate_requires"
+	},
+	
+	{
 		"_from": "chr_ForestStructure",
 		"_to": "gcu_id_number",
 		"_predicate": "_predicate_requires"
@@ -1188,22 +1199,6 @@
 	},
 	{
 		"_from": "chr_VarCbranch",
-		"_to": "std_date",
-		"_predicate": "_predicate_requires"
-	},
-	
-	{
-		"_from": "chr_RootingDepth",
-		"_to": "gcu_id_number",
-		"_predicate": "_predicate_requires"
-	},
-	{
-		"_from": "chr_RootingDepth",
-		"_to": "species",
-		"_predicate": "_predicate_requires"
-	},
-	{
-		"_from": "chr_RootingDepth",
 		"_to": "std_date",
 		"_predicate": "_predicate_requires"
 	},

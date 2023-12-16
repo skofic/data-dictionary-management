@@ -992,7 +992,38 @@
 				"_unit": "_unit_length_cm",
 				"_valid-range": {
 					"_min-range-exclusive": 0.0,
-					"_max-range-exclusive": 1.0
+					"_max-range-exclusive": 150.0
+				}
+			}
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "chr",
+			"_lid": "RootingDepth",
+			"_gid": "chr_RootingDepth",
+			"_pid": ["rooting_depth"],
+			"_aid": ["RootingDepth"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Rooting depth"},
+			"_definition": {"iso_639_3_eng": "Vertical distance from soil surface to the bottom at which the deepest roots are found in a soil pit."},
+			"_description": {"iso_639_3_eng": "Rooting depth is determined by excavating a pit.\nData not available with soil core using an auger."},
+			"_provider": [
+				"Maurizio Mencuccini <m.mencuccini@creaf.uab.cat>"
+			]
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit": "_unit_length_cm",
+				"_valid-range": {
+					"_min-range-exclusive": 0.0,
+					"_max-range-exclusive": 150.0
 				}
 			}
 		}
