@@ -29,7 +29,7 @@
 					"title": "Namespace",
 					"description": "Namespace identification code, it is the global identifier of another term.",
 					"type": "string",
-					"pattern": "^[a-zA-Z0-9-:.@+,=;$!*'%()_]{1,254}$"
+					"pattern": "^[a-zA-Z0-9-:.@+,=;$!*'%()_]{0,254}$"
 				},
 				"_lid": {
 					"title": "Local identifier",
