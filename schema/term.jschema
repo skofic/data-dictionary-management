@@ -35,13 +35,15 @@
 					"title": "Local identifier",
 					"description": "Local identifier code, it is the term unique identifier within its namespace.",
 					"type": "string",
-					"pattern": "^[a-zA-Z0-9-:.@+,=;$!*'%()]{1,254}$"
+					"pattern": "^[a-zA-Z0-9-:.@+,=;$!*'%()]{1,254}$",
+					"readOnly": true
 				},
 				"_gid": {
 					"title": "Global identifier",
 					"description": "Namespace identification code, it is the unique identifier within all namespaces.",
 					"type": "string",
-					"pattern": "^[a-zA-Z0-9-:.@+,=;$!*'%()_]{1,254}$"
+					"pattern": "^[a-zA-Z0-9-:.@+,=;$!*'%()_]{1,254}$",
+					"readOnly": true
 				},
 				"_pid": {
 					"title": "Provider identifiers",
