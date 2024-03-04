@@ -1,5 +1,4 @@
 {
-	"$schema": "http://json-schema.org/draft-07/schema#",
 	"title": "Term schema",
 	"description": "Schema for the generic term instance.",
 	"type": "object",
@@ -7,31 +6,147 @@
 		"_code": {
 			"title": "Term identification section",
 			"description": "Identification codes for the current term.",
-			"type": "object"
+			"$ref": "#/definitions/identification"
 		},
 		"_info": {
 			"title": "Term information section",
 			"description": "Definitions and descriptions of the current term.",
-			"type": "object"
-		},
-		"_data": {
-			"title": "Term data section",
-			"description": "Data definition section of the term.",
-			"type": "object"
-		},
-		"_rule": {
-			"title": "Term schema section",
-			"description": "Schema definition section of the term.",
-			"type": "object"
-		},
-		"_private": {
-			"title": "Term private section",
-			"description": "Section used to store private free data.",
-			"type": "object"
+			"$ref": "#/definitions/information"
 		}
 	},
 	"required": [
 		"_code",
 		"_info"
-	]
+	],
+	
+	"definitions": {
+		"identification": {
+			"title": "Identification section",
+			"description": "Identification codes section.",
+			"type": "object",
+			"properties": {
+				"_nid": {
+					"title": "Namespace",
+					"description": "Namespace identification code, it is the global identifier of another term.",
+					"type": "string",
+					"pattern": "^[a-zA-Z0-9-:.@+,=;$!*'%()]{1,254}$"
+				},
+				"_lid": {
+					"title": "Local identifier",
+					"description": "Local identifier code, it is the term unique identifier within its namespace.",
+					"type": "string",
+					"pattern": "^[a-zA-Z0-9-:.@+,=;$!*'%()]{1,254}$"
+				},
+				"_gid": {
+					"title": "Global identifier",
+					"description": "Namespace identification code, it is the unique identifier within all namespaces.",
+					"type": "string",
+					"pattern": "^[a-zA-Z0-9-:.@+,=;$!*'%()]{1,254}$"
+				},
+				"_pid": {
+					"title": "Provider identifiers",
+					"description": "List of identifiers used by data providers to reference the term.",
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"_aid": {
+					"title": "All identifiers",
+					"description": "List of all identifiers commonly used to reference the term, including the local identifier.",
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
+			},
+			"required": [
+				"_lid"
+			]
+		},
+		
+		"information": {
+			"title": "Information section",
+			"description": "Definitions and descriptions section.",
+			"type": "object",
+			"properties": {
+				"_title": {
+					"title": "Title",
+					"description": "Title or label.",
+					"$ref": "#/definitions/multilingual_string"
+				},
+				"_definition": {
+					"title": "Definition",
+					"description": "Definition or concise explanation.",
+					"$ref": "#/definitions/multilingual_string"
+				},
+				"_description": {
+					"title": "Description",
+					"description": "Expanded and complete explanations and links.",
+					"$ref": "#/definitions/multilingual_markdown"
+				},
+				"_examples": {
+					"title": "Examples",
+					"description": "Examples and usage samples.",
+					"$ref": "#/definitions/multilingual_markdown"
+				},
+				"_notes": {
+					"title": "Notes",
+					"description": "Comments and notes.",
+					"$ref": "#/definitions/multilingual_markdown"
+				},
+				"_citation": {
+					"title": "Citations",
+					"description": "List of eventual required citations.",
+					"type": "array",
+					"items": {
+						"type": "string",
+						"contentMediaType": "text/markdown"
+					}
+				},
+				"_provider": {
+					"title": "Providers",
+					"description": "List of providers.",
+					"type": "array",
+					"items": {
+						"type": "string",
+						"contentMediaType": "text/markdown"
+					}
+				},
+				"_url": {
+					"title": "Links",
+					"description": "URLs and links to external information.",
+					"type": "array",
+					"items": {
+						"type": "string",
+						"contentMediaType": "text/markdown"
+					}
+				}
+			},
+			"required": [
+				"_title"
+			]
+		},
+		
+		"multilingual_string": {
+			"title": "International strings structure",
+			"description": "Structure used to represent multilingual strings: it is a dictionary whose keys are language enumerations and the value is the string in that language.",
+			"type": "object",
+			"minProperties": 1,
+			"additionalProperties": {
+				"type": "string"
+			}
+		},
+		
+		"multilingual_markdown": {
+			"title": "International markup structure",
+			"description": "Structure used to represent multilingual markup: it is a dictionary whose keys are language enumerations and the value is a markup text in that language.",
+			"type": "object",
+			"minProperties": 1,
+			"additionalProperties": {
+				"type": "string",
+				"contentMediaType": "text/markdown"
+			}
+		}
+	}
 }
