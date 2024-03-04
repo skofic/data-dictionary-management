@@ -1,0 +1,37 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Term schema",
+	"description": "Schema for the generic term instance.",
+	"type": "object",
+	"properties": {
+		"_code": {
+			"title": "Term identification section",
+			"description": "Identification codes for the current term.",
+			"type": "object"
+		},
+		"_info": {
+			"title": "Term information section",
+			"description": "Definitions and descriptions of the current term.",
+			"type": "object"
+		},
+		"_data": {
+			"title": "Term data section",
+			"description": "Data definition section of the term.",
+			"type": "object"
+		},
+		"_rule": {
+			"title": "Term schema section",
+			"description": "Schema definition section of the term.",
+			"type": "object"
+		},
+		"_private": {
+			"title": "Term private section",
+			"description": "Section used to store private free data.",
+			"type": "object"
+		}
+	},
+	"required": [
+		"_code",
+		"_info"
+	]
+}
