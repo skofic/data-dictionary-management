@@ -4,13 +4,13 @@
  * Initialise database and load ancillary data.
  */
 
-const { Database } = require("arangojs")	// ArangoDB driver.
+const { Database } = require("arangojs")			// ArangoDB driver.
 
-const kGlob = require('./globals')			// Generic globals.
-const kPriv = require('./user.globals')		// User-provided globals.
+const kGlob = require('./globals')				// Generic globals.
+const kPriv = require('./user.globals')	// User-provided globals.
 
 const dbutils = require('./database')		// Database utilities.
-const process = require('./processing')		// Processing utilities.
+const process = require('./processing')	// Processing utilities.
 
 //
 // Connect to local database.
