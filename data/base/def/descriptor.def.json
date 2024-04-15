@@ -19,6 +19,25 @@
 	{
 		"_code": {
 			"_nid": "geometry",
+			"_lid": "area",
+			"_gid": "geometry_area",
+			"_aid": ["area"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Geographic shape area"},
+			"_definition": {"iso_639_3_eng": "Area of the GeoJSON geometry in square meters."}
+		},
+		"_data": {
+			"_scalar": {
+				"_type": "_type_number",
+				"_decimals": 1,
+				"_unit": "_unit_area_m"
+			}
+		}
+	},	
+	{
+		"_code": {
+			"_nid": "geometry",
 			"_lid": "point",
 			"_gid": "geometry_point",
 			"_aid": ["point"]

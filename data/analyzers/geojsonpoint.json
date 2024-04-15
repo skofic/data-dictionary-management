@@ -1,0 +1,14 @@
+{
+    "name": "GeoService::geojsonpoint",
+    "type": "geojson",
+    "features": [],
+    "properties": {
+        "options": {
+            "maxCells": 20,
+            "minLevel": 4,
+            "maxLevel": 23
+        },
+        "type": "point",
+        "legacy": false
+    }
+}

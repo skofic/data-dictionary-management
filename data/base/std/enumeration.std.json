@@ -62,5 +62,21 @@
 		"_data": {
 			"_array": {}
 		}
+	},
+	{
+		"_code": {
+			"_nid": "std_date_span",
+			"_lid": "range",
+			"_gid": "std_date_span_range",
+			"_aid": ["range"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Range"},
+			"_definition": {"iso_639_3_eng": "A range time span."},
+			"_description": {"iso_639_3_eng": "The category describes a time span that represents a range, you should expect both the [start](std_date_start.md) and [end](std_date_end) date of the range."}
+		},
+		"_data": {
+			"_array": {}
+		}
 	}
 ]

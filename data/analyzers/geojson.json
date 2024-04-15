@@ -1,0 +1,14 @@
+{
+    "name": "GeoService::geojson",
+    "type": "geojson",
+    "features": [],
+    "properties": {
+        "options": {
+            "maxCells": 20,
+            "minLevel": 4,
+            "maxLevel": 23
+        },
+        "type": "shape",
+        "legacy": false
+    }
+}

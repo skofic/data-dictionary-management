@@ -647,13 +647,36 @@
             "_title": {"iso_639_3_eng": "Date span"},
             "_definition": {"iso_639_3_eng": "Time span of event, observation, measurement or sampling."},
             "_description": {"iso_639_3_eng": "This categorical descriptor is used to indicate a standard time interval, such as a day, month or year. It is paired with aggregated values, such as averages, to indicate the time interval of the aggregation."},
-            "_examples": {"iso_639_3_eng": "`std_date_span_day` for *daily data*; `std_date_span_week` for *weekly data*; `std_date_span_month` for *monthly data* and `std_date_span_year` for *yearly data*."}
+            "_examples": {"iso_639_3_eng": "`std_date_span_day` for *daily data*; `std_date_span_week` for *weekly data*; `std_date_span_month` for *monthly data*, `std_date_span_year` for *yearly data* and `std_date_span_range` for *time range data*."}
         },
         "_data": {
             "_class": "_class_time",
             "_scalar": {
                 "_type": "_type_string_enum",
                 "_kind": ["std_date_span"]
+            }
+        }
+    },
+    {
+        "_code": {
+            "_nid": "std_date",
+            "_lid": "spans",
+            "_gid": "std_date_spans",
+            "_aid": ["spans"]
+        },
+        "_info": {
+            "_title": {"iso_639_3_eng": "Date spans"},
+            "_definition": {"iso_639_3_eng": "List of time spans for event, observation, measurement or sampling."},
+            "_description": {"iso_639_3_eng": "This categorical descriptor is used to indicate a set of standard time intervals, such as a day, month or year. It is used to record a set of different time ranges."},
+            "_examples": {"iso_639_3_eng": "An array containing `std_date_span_day` for *daily data*; `std_date_span_week` for *weekly data*; `std_date_span_month` for *monthly data*, `std_date_span_year` for *yearly data* and `std_date_span_range` for *time range data*."}
+        },
+        "_data": {
+            "_class": "_class_time",
+            "_set": {
+				"_set_scalar": {
+					"_set_type": "_type_string_enum",
+					"_kind": ["std_date_span"]
+				}
             }
         }
     },

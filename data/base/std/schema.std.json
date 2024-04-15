@@ -22,5 +22,11 @@
 		"_to": "std_date_span",
 		"_predicate": "_predicate_enum-of",
 		"_path": ["std_date_span"]
+	},
+	{
+		"_from": "std_date_span_range",
+		"_to": "std_date_span",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["std_date_span"]
 	}
 ]

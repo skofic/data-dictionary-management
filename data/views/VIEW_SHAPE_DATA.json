@@ -1,0 +1,40 @@
+{
+  "writebufferSizeMax": 33554432,
+  "id": "278440839372",
+  "storedValues": [],
+  "name": "VIEW_SHAPE_DATA",
+  "type": "arangosearch",
+  "consolidationPolicy": {
+    "type": "tier",
+    "segmentsBytesFloor": 2097152,
+    "segmentsBytesMax": 5368709120,
+    "segmentsMax": 10,
+    "segmentsMin": 1,
+    "minScore": 0
+  },
+  "writebufferActive": 0,
+  "links": {
+    "ShapeData": {
+      "analyzers": [
+        "identity"
+      ],
+      "fields": {
+        "std_dataset_ids": {},
+        "geometry_hash": {},
+        "std_date": {},
+        "std_date_span": {},
+        "std_terms": {}
+      },
+      "includeAllFields": false,
+      "storeValues": "none",
+      "trackListPositions": false
+    }
+  },
+  "commitIntervalMsec": 1000,
+  "consolidationIntervalMsec": 1000,
+  "globallyUniqueId": "h7C89CBF4587E/278440839372",
+  "cleanupIntervalStep": 2,
+  "primarySort": [],
+  "primarySortCompression": "lz4",
+  "writebufferIdle": 64
+}

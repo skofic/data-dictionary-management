@@ -1,0 +1,50 @@
+{
+  "writebufferSizeMax": 33554432,
+  "id": "278441341361",
+  "storedValues": [],
+  "name": "VIEW_SHAPE",
+  "type": "arangosearch",
+  "consolidationPolicy": {
+    "type": "tier",
+    "segmentsBytesFloor": 2097152,
+    "segmentsBytesMax": 5368709120,
+    "segmentsMax": 10,
+    "segmentsMin": 1,
+    "minScore": 0
+  },
+  "writebufferActive": 0,
+  "links": {
+    "Shapes": {
+      "analyzers": [
+        "identity"
+      ],
+      "fields": {
+        "geometry": {
+          "analyzers": [
+            "geojson"
+          ]
+        },
+        "properties": {
+          "fields": {
+            "chr_StdElevation": {},
+            "chr_AvElevation": {},
+            "geo_shape_area": {},
+            "chr_AvSlope": {},
+            "chr_AvAspect": {}
+          }
+        },
+        "std_dataset_ids": {}
+      },
+      "includeAllFields": false,
+      "storeValues": "none",
+      "trackListPositions": false
+    }
+  },
+  "commitIntervalMsec": 1000,
+  "consolidationIntervalMsec": 1000,
+  "globallyUniqueId": "h7C89CBF4587E/278441341361",
+  "cleanupIntervalStep": 2,
+  "primarySort": [],
+  "primarySortCompression": "lz4",
+  "writebufferIdle": 64
+}
