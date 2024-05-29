@@ -19,14 +19,60 @@ const db = new Database(
 		}
 	}
 )
+const collection_name = "french_gcu"
 
 
 async function main()
 {
 // Using async/await
 	try {
-		const info = await db.createDatabase("WorkDB")
-		// database created
+		// Check french_gcu
+		const collections = await db.listCollections(true)
+		if(collections.map( collection => collection.name).includes(collection_name)) {
+			console.log("Collection found.")
+			let error = false
+			const cursor = await db.query(aql`FOR doc IN french_gcu RETURN doc`)
+			for(const doc of await cursor.all()) {
+				console.log(doc._key)
+				let dummy
+				switch(doc.geometry.type) {
+					case "Polygon":
+						console.log("Found Polygon")
+						dummy = await db.query(aql`UPDATE ${doc._key} WITH { geometry_hash: MD5(TO_STRING(GEO_POLYGON(${doc.geometry.coordinates}))) } IN french_gcu`)
+						break
+					case "MultiPolygon":
+						console.log("Found MultiPolygon")
+						dummy = await db.query(aql`UPDATE ${doc._key} WITH { geometry_hash: MD5(TO_STRING(GEO_MULTIPOLYGON(${doc.geometry.coordinates}))) } IN french_gcu`)
+						break
+					default:
+						console.log("Found other!!!")
+						error = true
+						break
+				}
+
+				console.log("\n")
+				if(error) {
+					break
+				}
+			}
+		} else {
+			console.log("Collection not found.")
+		}
+
+		// collections.forEach( collection => {
+		// 	console.log(collection.name)
+		// })
+
+		// for (const collection of collections) {
+		// 	if (collection.name === "french_gcu") {
+		// 		const cursor = await db.query(aql`FOR doc IN ${collection.name} RETURN doc`)
+		// 		const docs = await cursor.all()
+		// 		for (const doc of docs) {
+		// 			console.log(doc)
+		// 		}
+		// 	}
+		// }
+
 	} catch (err) {
 		console.error(err.stack)
 	}

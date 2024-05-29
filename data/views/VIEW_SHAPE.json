@@ -19,6 +19,7 @@
         "identity"
       ],
       "fields": {
+        "_key": {},
         "geometry": {
           "analyzers": [
             "geojson"
