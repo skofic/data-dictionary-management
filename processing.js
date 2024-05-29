@@ -3598,7 +3598,7 @@ async function ServiceLogin(db, theUser, thePass)
 	//
 	const host = kPriv.user.db.host
 	const database = kPriv.user.db.name
-	const url = `${host}/_db/${database}/dict/auth/login`
+	const url = `${host}/_db/${database}/auth/auth/login`
 
 	//
 	// Login.
