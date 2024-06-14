@@ -11,6 +11,18 @@
 		"_predicate": "_predicate_enum-of",
 		"_path": ["chr_subject"]
 	},
+	{
+		"_from": "chr_subject_GCU",
+		"_to": "chr_subject",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr_subject"]
+	},
+	{
+		"_from": "chr_subject_target",
+		"_to": "chr_subject",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr_subject"]
+	},
 	
 	{
 		"_from": "chr_pheno",

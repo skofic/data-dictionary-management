@@ -399,5 +399,91 @@
 			"_title": {"iso_639_3_eng": "IPv6 address"},
 			"_definition": {"iso_639_3_eng": "A *string* representing an *IPv6* internet *address*, as defined in RFC 2373, section 2.2.\n\nEquivalent to the `ipv6` format in JSON Schema."}
 		}
+	},
+
+	{
+		"_code": {
+			"_nid": "_usage",
+			"_lid": "indicator",
+			"_gid": "_usage_indicator",
+			"_aid": ["indicator"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Indicator"},
+			"_definition": {"iso_639_3_eng": "The descriptor represents an indicator"}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_usage",
+			"_lid": "metadata",
+			"_gid": "_usage_metadata",
+			"_aid": ["indicator"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Metadata"},
+			"_definition": {"iso_639_3_eng": "The descriptor represents metadata"}
+		}
+	},
+
+	{
+		"_code": {
+			"_nid": "_options",
+			"_lid": "level-1",
+			"_gid": "_options_level-1",
+			"_aid": ["level-1"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Level 1 display"},
+			"_definition": {"iso_639_3_eng": "This category indicates that the term belongs to level 1 display items."}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_options",
+			"_lid": "level-2",
+			"_gid": "_options_level-2",
+			"_aid": ["level-1"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Level 2 display"},
+			"_definition": {"iso_639_3_eng": "This category indicates that the term belongs to level 2 display items."}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_options",
+			"_lid": "graph",
+			"_gid": "_options_graph",
+			"_aid": ["graph"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Graph display"},
+			"_definition": {"iso_639_3_eng": "This category indicates that the descriptor term should be displayed as a graph."}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_options_graph",
+			"_lid": "line",
+			"_gid": "_options_graph_line",
+			"_aid": ["line"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Line graph display"},
+			"_definition": {"iso_639_3_eng": "This category indicates that the descriptor term should be displayed preferably as a line graph."}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_options_graph",
+			"_lid": "bar",
+			"_gid": "_options_graph_bar",
+			"_aid": ["bar"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Bar graph display"},
+			"_definition": {"iso_639_3_eng": "This category indicates that the descriptor term should be displayed preferably as a bar graph."}
+		}
 	}
 ]

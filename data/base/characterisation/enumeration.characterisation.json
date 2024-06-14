@@ -133,6 +133,32 @@
 			"_description": {"iso_639_3_eng": "This category indicates that the *descriptor* or *term* describes a *trait* belonging to a *stand* or *unit* containing tree populations. This category *excludes traits associated to the tree*, the *trait* must *characterise* the *stand* or *unit*."}
 		}
 	},
+	{
+		"_code": {
+			"_nid": "chr_subject",
+			"_lid": "GCU",
+			"_gid": "chr_subject_GCU",
+			"_aid": ["GCU"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "GCU"},
+			"_definition": {"iso_639_3_eng": "Entire GCU"},
+			"_description": {"iso_639_3_eng": "This category indicates that the *descriptor* or *term* describes a *trait* belonging to the entire *conservation unit*. This category *excludes traits associated to the tree*, the *trait* must *characterise* *all species residing in the conservation unit*."}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_subject",
+			"_lid": "target",
+			"_gid": "chr_subject_target",
+			"_aid": ["target"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Target"},
+			"_definition": {"iso_639_3_eng": "Target species"},
+			"_description": {"iso_639_3_eng": "This category indicates that the *descriptor* or *term* describes a *trait* belonging to the *target species* residing in the *conservation unit*. This category *excludes traits associated to the tree*, the *trait* must *characterise* *only target species residing in the conservation unit*."}
+		}
+	},
 	
 	{
 		"_code": {

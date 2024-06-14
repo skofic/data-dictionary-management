@@ -381,6 +381,50 @@
 	},
 	{
 		"_code": {
+			"_nid": "",
+			"_lid": "usage",
+			"_gid": "_usage",
+			"_aid": ["usage"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Usage"},
+			"_definition": {"iso_639_3_eng": "The usage classes of the term."},
+			"_description": {"iso_639_3_eng": "This value identifies the different *classes* and *functions* the current *term* can *represent*.\n\nFor instance, a descriptor can be an *indicator* when used in a specific context, or it can represent *metadata* in another context. This field contains *all usages* the current term can take in *all contexts*."}
+		},
+		"_data": {
+			"_class": "_class_category",
+			"_set": {
+				"_set_scalar": {
+					"_set_type": "_type_string_enum",
+					"_kind": ["_usage"]
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "",
+			"_lid": "options",
+			"_gid": "_options",
+			"_aid": ["options"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Options"},
+			"_definition": {"iso_639_3_eng": "The options available for the term."},
+			"_description": {"iso_639_3_eng": "This value identifies the different *options* available to the term."}
+		},
+		"_data": {
+			"_class": "_class_category",
+			"_set": {
+				"_set_scalar": {
+					"_set_type": "_type_string_enum",
+					"_kind": ["_options"]
+				}
+			}
+		}
+	},
+	{
+		"_code": {
 			"_nid": "_set",
 			"_lid": "type",
 			"_gid": "_set_type",

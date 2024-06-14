@@ -408,8 +408,8 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Trend (temporal dynamics) in GCU Max Land surface temperature"},
-			"_definition": {"iso_639_3_eng": "Temporal trends of the remotely sensed max land surface temperature."},
-			"_description": {"iso_639_3_eng": "Slope the relationship between remotely sensed maximum land surface temperature of the GCU and time (K/month)."},
+			"_definition": {"iso_639_3_eng": "Temporal changes of the maximum canopy surface temperature in degree and per month."},
+			"_description": {"iso_639_3_eng": "The changes in land surface temperature per month are given in degrees and indicate whether the canopy tends to warm up or cool down over time. If the value is positive, the canopy tends to warm up. If the sign is negative, the canopy tends to cool down. The surface temperature of the tree canopy is estimated by a sensor on the MODIS satellite, which measures the thermal infrared emissions of the vegetation. The maximum canopy surface temperature can serve as an indicator of drought and heat stress in a forest, as the canopy heats up when the water supply to the trees is insufficient to cool the leaves."},
 			"_provider": [
 				"Nicolas Martin <nicolas.martin@inrae.fr>"
 			]
@@ -418,11 +418,17 @@
 			"_class": "_class_quantity_averaged",
 			"_domain": ["chr_envi"],
 			"_subject": "chr_subject_stand",
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-2"],
+			"_decimals": 2,
 			"_scalar": {
 				"_type": "_type_number",
-				"_unit_name": "Kelvin/month",
 				"_unit_name": "Degrees Centigrades/year",
-				"_unit_symbol": "°C/year"
+				"_unit_symbol": "°C/year",
+				"_valid-range": {
+					"_min-range-inclusive": -1.0,
+					"_max-range-inclusive": 1.0
+				}
 			}
 		}
 	},
@@ -436,20 +442,25 @@
 			"_aid": ["AvNormDiffVegIdx"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Average GCU Normalized Difference Vegetation Index"},
-			"_definition": {"iso_639_3_eng": "Average GCU Normalized Difference Vegetation Index (NDVI)."},
-			"_description": {"iso_639_3_eng": "Remotely sensed monthly average GCU Normalized Difference Vegetation Index. The average is calculated for the GCU area defined with the polygon of GCU boundaries. Beware that for some GCU (i) there are no shapefile available so that the average Land surface temperature over a 5km buffer around the GCU coordinate is taken."},
+			"_title": {"iso_639_3_eng": "Average GCU NDVI"},
+			"_definition": {"iso_639_3_eng": "Monthly average of the Normalized Difference Vegetation Index"},
+			"_description": {"iso_639_3_eng": "Monthly average value for the whole GCU, to quantify the seasonal variation in the health and density of the vegetation. The normalised difference vegetation index (NDVI) is a widely used metric based on remote sensing and is calculated as the normalised difference of spectrometric reflectance measurements in two specific bands: one in which the leaf absorbs light (red) and one in which the leaf absorbs little light (near infrared). The spectrometric data comes from MODIS satellites. The NDVI value varies between -1 (for water) and 1 for dense vegetation. A value close to 0 indicates rocks or poorly vegetated areas."},
 			"_provider": [
-				"Nicolas Martin <nicolas.martin@inrae.fr>"
+				"JRC"
 			]
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
 			"_domain": ["chr_envi"],
 			"_subject": "chr_subject_stand",
-			"_array": {
-				"_scalar": {
-					"_type": "_type_number"
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-1", "_options_graph_line"],
+			"_decimals": 2,
+			"_scalar": {
+				"_type": "_type_number",
+				"_valid-range": {
+					"_min-range-inclusive": -1.0,
+					"_max-range-inclusive": 1.0
 				}
 			}
 		}
@@ -488,20 +499,25 @@
 			"_aid": ["MaxNormDiffVegIdx"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Maximum GCU Normalized Difference Vegetation Index"},
-			"_definition": {"iso_639_3_eng": "Maximum GCU Normalized Difference Vegetation Index (NDVI)."},
-			"_description": {"iso_639_3_eng": "Remotely sensed monthly maximum GCU Normalized Difference Vegetation Index. The average of the maximum values is calculated for the GCU area defined with the polygon of GCU boundaries. Beware that for some GCU (i) there are no shapefile available so that the average Land surface temperature over a 5km buffer around the GCU coordinate is taken."},
+			"_title": {"iso_639_3_eng": "Max GCU  NDVI"},
+			"_definition": {"iso_639_3_eng": "Maximum of the Normalized Difference Vegetation Index"},
+			"_description": {"iso_639_3_eng": "Monthly maximum value for the whole GCU, to quantify the seasonal variation in the health and density of the vegetation. The normalised difference vegetation index (NDVI) is a widely used metric based on remote sensing and is calculated as the normalised difference of spectrometric reflectance measurements in two specific bands: one in which the leaf absorbs light (red) and one in which the leaf absorbs little light (near infrared). The spectrometric data comes from MODIS satellites. The NDVI value varies between -1 (for water) and 1 for dense vegetation. A value close to 0 indicates rocks or poorly vegetated areas."},
 			"_provider": [
-				"Nicolas Martin <nicolas.martin@inrae.fr>"
+				"JRC"
 			]
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
 			"_domain": ["chr_envi"],
 			"_subject": "chr_subject_stand",
-			"_array": {
-				"_scalar": {
-					"_type": "_type_number"
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-1", "_options_graph_line"],
+			"_decimals": 2,
+			"_scalar": {
+				"_type": "_type_number",
+				"_valid-range": {
+					"_min-range-inclusive": -1.0,
+					"_max-range-inclusive": 1.0
 				}
 			}
 		}
@@ -541,21 +557,27 @@
 			"_aid": ["AvLeafAreaIdx"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Average GCU Lai"},
-			"_definition": {"iso_639_3_eng": "Average GCU Leaf Area Index."},
-			"_description": {"iso_639_3_eng": "Remotely sensed monthly average GCU Leaf Area Index. The average is calculated for the GCU area defined with the shapefile of GCU boundaries. Beware that for some GCU there are no shapefile available so that the average Land surface temperature over a 5km buffer around the GCU coordinate is taken."},
+			"_title": {"iso_639_3_eng": "Average GCU LAI"},
+			"_definition": {"iso_639_3_eng": "Monthly average of the Leaf Area Index"},
+			"_description": {"iso_639_3_eng": "Monthly average value of the leaf area index (LAI) for the whole GCU, giving an idea of the seasonal dynamics of the vegetation. The LAI is an indicator of leaf area (one side) relative to the soil surface. I.e., a LAI of 2 represents a leaf area of 2 m2 for 1 m2 of soil. This gives an overview of the density of the plant cover and therefore the extent of energy and gas exchange between the plant and its environment. The data come from the reflectance of the top of the canopy measured with satellite data at 0.5km resolution (from MODIS)."},
 			"_provider": [
-				"Nicolas Martin <nicolas.martin@inrae.fr>"
+				"JRC"
 			]
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
 			"_domain": ["chr_envi"],
 			"_subject": "chr_subject_stand",
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-1"],
+			"_decimals": 2,
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit_name": "m^2 Leaf/m^2 soil",
-				"_unit_symbol": "m2 Leaf/m2 soil"
+				"_unit_symbol": "m2 Leaf/m2 soil",
+				"_valid-range": {
+					"_min-range-inclusive": 0
+				}
 			}
 		}
 	},
@@ -568,9 +590,9 @@
 			"_aid": ["AvLeafAreaIdx"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Trend (temporal dynamics) in annual mean of GCU averaged LAI"},
-			"_definition": {"iso_639_3_eng": "Temporal trends of the annual mean remotely sensed LAI"},
-			"_description": {"iso_639_3_eng": "Slope of the relationship between yearly mean remotely sensed LAI over the GCU and time  (LAI/year).\n\nBeware that  for some GCUs there are no shapefile available so that the average Land  surface temperature over a 5 km buffer around the GCU coordinate is taken."},
+			"_title": {"iso_639_3_eng": "Trend (temporal dynamics) in GCU's LAI"},
+			"_definition": {"iso_639_3_eng": "Temporal trends of the Leaf Area Index"},
+			"_description": {"iso_639_3_eng": "Average variation in leaf area, giving an idea of the annual dynamics of the vegetation. If the value is positive, then there is a tendency for leaf area to increase, often a sign of improved environmental conditions. If the value is negative, this indicates a decrease in leaf area, often implying greater stress. The leaf area index (LAI) is an indicator of leaf area (one side) relative to the soil surface. I.e., a LAI of 2 represents a leaf area of 2 m2 for 1 m2 of soil. This gives an overview of the density of the plant cover and therefore the extent of energy and gas exchange between the plant and its environment.These data come from the reflectance of the top of the canopy measured with satellite data at 0.5km resolution (from MODIS)."},
 			"_provider": [
 				"Nicolas Martin <nicolas.martin@inrae.fr>"
 			]
@@ -579,10 +601,13 @@
 			"_class": "_class_quantity_averaged",
 			"_domain": ["chr_envi"],
 			"_subject": "chr_subject_stand",
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-1"],
+			"_decimals": 2,
 			"_scalar": {
 				"_type": "_type_number",
-				"_unit_name": "m^2 Leaf/m^2 soil/year",
-				"_unit_symbol": "m2 Leaf/m2 soil/year"
+				"_unit_name": "m^2 Leaf/m^2 soil/month",
+				"_unit_symbol": "m2 Leaf/m2 soil/month"
 			}
 		}
 	},
@@ -595,11 +620,11 @@
 			"_aid": ["MaxLeafAreaIdx"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Annual maximum of monthly GCU averaged LAI"},
-			"_definition": {"iso_639_3_eng": "Annual maximum of monthly GCU averaged Leaf Area Index."},
-			"_description": {"iso_639_3_eng": "Remotely sensed annual maximum of the monthly GCU averaged Leaf Area Index over the GCU Polygon when the polygon is available.\n\nBeware that for some GCUs there are no shapefiles available so that the maximum Leaf Area Index over a 5 km buffer around the GCU coordinate is callculated."},
+			"_title": {"iso_639_3_eng": "Maximum GCU LAI"},
+			"_definition": {"iso_639_3_eng": "Maximum of the Leaf Area Index"},
+			"_description": {"iso_639_3_eng": "Average maximum leaf area index (LAI) for the whole GCU (exactly the quantile 90 of yearly maximum to avoid outlier data), is a very good indicator of the state of the forest studied, mainly in terms of leaf density and forest development conditions.  The LAI is an indicator of leaf area (one side) relative to the soil surface. I.e., a LAI of 2 represents a leaf area of 2 m2 for 1 m2 of soil. This gives an overview of the density of the plant cover and therefore the extent of energy and gas exchange between the plant and its environment.These data come from the reflectance of the top of the canopy measured with satellite data at 0.5km resolution (from MODIS)."},
 			"_provider": [
-				"Nicolas Martin <nicolas.martin@inrae.fr>"
+				"JRC"
 			]
 		},
 		"_data": {
@@ -626,17 +651,23 @@
 			"_definition": {"iso_639_3_eng": "Temporal trends of the annual max of monthly remotely sensed LAI."},
 			"_description": {"iso_639_3_eng": "Slope of the relationship between yearly maximum of monthly remotely sensed LAI over the GCU and time (LAI/year).\n\nBeware that for some GCUs there are no shapefile available so that the average Land surface temperature over a 5 km buffer around the GCU coordinate is taken."},
 			"_provider": [
-				"Nicolas Martin <nicolas.martin@inrae.fr>"
+				"JRC"
 			]
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
 			"_domain": ["chr_envi"],
 			"_subject": "chr_subject_stand",
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-1"],
+			"_decimals": 2,
 			"_scalar": {
 				"_type": "_type_number",
-				"_unit_name": "m^2 Leaf/m^2 soil/year",
-				"_unit_symbol": "m2 Leaf/m2 soil/year"
+				"_unit_name": "m^2 Leaf/m^2 soil",
+				"_unit_symbol": "m2 Leaf/m2 soil",
+				"_valid-range": {
+					"_min-range-inclusive": 0
+				}
 			}
 		}
 	},
@@ -650,22 +681,26 @@
 			"_aid": ["AvGrossPrimProd"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Average GCU Gpp"},
-			"_definition": {"iso_639_3_eng": "Average GCU Gross Primary Productivity."},
-			"_description": {"iso_639_3_eng": "Remotely sensed monthly average GCU Gross Primary Productivity in kg of C/m2.The average is calculated for the GCU area defined with the polygon of GCU boundaries. Beware that for some GCU there are no shapefile available so that the average Land surface temperature over a 5km buffer around the GCU coordinate is taken."},
+			"_title": {"iso_639_3_eng": "Average GCU GPP"},
+			"_definition": {"iso_639_3_eng": "Monthly average of the Gross Primary Productivity"},
+			"_description": {"iso_639_3_eng": "Monthly average gross primary productivity (GPP) for the whole GCU, to establish the seasonal variation in photosynthesis. The GPP (kg of C/m2/day) corresponds to the amount of carbon that enters the ecosystem per unit surface and time. This value is derived from the sattelite MODIS at 1 km resolution that provides the fraction of light intercepted by the canopy and a model of photosynthesis that converts the intercepted light into carbon assimilation. This makes it possible to define the amount of energy available for the plant to function (respiration) and the amount available for growth (net primary productivity). Beware that this value is known to be incorrect during drought stress periods."},
 			"_provider": [
-				"Nicolas Martin <nicolas.martin@inrae.fr>"
+				"JRC"
 			]
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
 			"_domain": ["chr_envi"],
 			"_subject": "chr_subject_stand",
-			"_array": {
-				"_scalar": {
-					"_type": "_type_number",
-					"_unit_name": "kg/m2",
-					"_unit_symbol": "kg/m^2"
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-1", "_options_graph_bar"],
+			"_decimals": 2,
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit_name": "kg of C/m2/day",
+				"_unit_symbol": "kg of C/m2/day",
+				"_valid-range": {
+					"_min-range-inclusive": 0
 				}
 			}
 		}
@@ -680,8 +715,8 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Trend (temporal dynamics) in GCU's GPP"},
-			"_definition": {"iso_639_3_eng": "Temporal trends of the remotely sensed GPP."},
-			"_description": {"iso_639_3_eng": "Slope the relationship between remotely sensed biomass of the GCU and time (Kg C/m2/month)."},
+			"_definition": {"iso_639_3_eng": "Temporal trends of the  Gross Primary Productivity"},
+			"_description": {"iso_639_3_eng": "Average variation of gross primary productivity (GPP)in time for the whole GCU, to establish the trend of the fixation of carbon trought the photosynthesis, which is a key indicator of whether or not the forest is growing and storing carbon. The Gross Primary Productivity (kg of C/m2/day) corresponds to the amount of carbon that enters the ecosystem per unit surface and time. This value is derived from the sattelite MODIS at 1 km resolution that provides the fraction of light intercepted by the canopy and a model of photosynthesis that converts the intercepted light in to a carbon assimilation. This makes it possible to define the amount of energy available for the plant to function (respiration) and the amount available for growth (net primary productivity)."},
 			"_provider": [
 				"Nicolas Martin <nicolas.martin@inrae.fr>"
 			]
@@ -690,10 +725,13 @@
 			"_class": "_class_quantity_averaged",
 			"_domain": ["chr_envi"],
 			"_subject": "chr_subject_stand",
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-1", "_options_graph_bar"],
+			"_decimals": 2,
 			"_scalar": {
 				"_type": "_type_number",
-				"_unit_name": "kg/m2/month",
-				"_unit_symbol": "kg/m^2"
+				"_unit_name": "kg of C/m2/day/month",
+				"_unit_symbol": "kg of C/m2/day/month"
 			}
 		}
 	},
@@ -702,23 +740,31 @@
 			"_nid": "chr",
 			"_lid": "SumGrossPrimProd",
 			"_gid": "chr_SumGrossPrimProd",
-			"_pid": ["SumGpp"],
+			"_pid": ["SumGPP"],
 			"_aid": ["SumGrossPrimProd"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Average Annual GCU Gpp"},
-			"_definition": {"iso_639_3_eng": "Average of the Annual Sum of Gross Primary Productivity."},
-			"_description": {"iso_639_3_eng": "Remotely sensed average of the annual sum of GCU Gross Primary Productivity in kg of C/m2.The monthly average is first calculated for the GCU area defined with the polygon of GCU boundaries. Then the sum is realised for all month of a year and divided by the number of year in the time series (2003-2021 here). Beware that for some GCU there are no shapefile available so that the average Land surface temperature over a 5km buffer around the GCU coordinate is taken."},
+			"_title": {"iso_639_3_eng": "Average Annual GCU GPP"},
+			"_definition": {"iso_639_3_eng": "Average of yearly Gross Primary Productivity"},
+			"_description": {"iso_639_3_eng": "Average annual sum of gross primary productivity (GPP) for the whole GCU, to establish the typical photosynthetic activity of vegetation. This value is obtained by summing all months and divided by the number of years in the time series (2003-2021 here). The GPP (kg of C/m2/day) corresponds to the amount of carbon that enters the ecosystem per unit surface and time. This value is derived from the sattelite MODIS at 1 km resolution that provides the fraction of light intercepted by the canopy and a model of photosynthesis that converts the intercepted light in to a carbon assimilation. This makes it possible to define the amount of energy available for the plant to function (respiration) and the amount available for growth (net primary productivity)."},
 			"_provider": [
-				"Nicolas Martin <nicolas.martin@inrae.fr>"
+				"JRC"
 			]
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
 			"_domain": ["chr_envi"],
 			"_subject": "chr_subject_stand",
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-1", "_options_graph_bar"],
+			"_decimals": 2,
 			"_scalar": {
-				"_type": "_type_number"
+				"_type": "_type_number",
+				"_unit_name": "kg of C/m2/year",
+				"_unit_symbol": "kg of C/m2/year",
+				"_valid-range": {
+					"_min-range-inclusive": 0
+				}
 			}
 		}
 	},
@@ -786,20 +832,25 @@
 			"_aid": ["AvNormDiffWaterIdx"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Average GCU Normalized Difference Water Index"},
-			"_definition": {"iso_639_3_eng": "Average GCU Normalized Difference Water Index (NDWI)."},
-			"_description": {"iso_639_3_eng": "Remotely sensed monthly average GCU Normalized Difference Water Index. The average is calculated for the GCU area defined with the polygon of GCU boundaries. Beware that for some GCU there are no shapefile available so that the average Land surface temperature over a 5km buffer around the GCU coordinate is taken."},
+			"_title": {"iso_639_3_eng": "Average GCU NDWI"},
+			"_definition": {"iso_639_3_eng": "Average Normalized Difference Water Index."},
+			"_description": {"iso_639_3_eng": "Monthly average of normalised difference water index (NDWI) for the whole GCU, to observe seasonal variations in water stress through plant water content. NDWI provides an effective measure of moisture content. This index is calculated on the basis of the GREEN-NIR combination (visible green and near infrared spectrum) and enables the detection of water pools as well as subtle changes in the water content of vegetation. These values (from MODIS at 1 km resolution) range from -1 (no water) to 1 (water surface), and their variation is a very good indicator of plant water stress."},
 			"_provider": [
-				"Nicolas Martin <nicolas.martin@inrae.fr>"
+				"JRC"
 			]
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
 			"_domain": ["chr_envi"],
 			"_subject": "chr_subject_stand",
-			"_array": {
-				"_scalar": {
-					"_type": "_type_number"
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-1", "_options_graph_line"],
+			"_decimals": 2,
+			"_scalar": {
+				"_type": "_type_number",
+				"_valid-range": {
+					"_min-range-inclusive": -1.0,
+					"_max-range-inclusive": 1.0
 				}
 			}
 		}
@@ -809,13 +860,13 @@
 			"_nid": "chr_trend",
 			"_lid": "AvNormDiffWaterIdx",
 			"_gid": "chr_trend_AvNormDiffWaterIdx",
-			"_pid": ["TrendAvNDWI"],
+			"_pid": ["TrendNDWI"],
 			"_aid": ["AvNormDiffWaterIdx"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Trend (temporal dynamics) in annual mean of GCU averaged NDWI"},
-			"_definition": {"iso_639_3_eng": "Temporal trends of the annual mean remotely sensed Normalized Difference Water Index (NDWI)."},
-			"_description": {"iso_639_3_eng": "Slope of the relationship between yearly mean remotely sensed NDWI over the GCU and time (NDWI/year).\n\nBeware that for some GCUs there are no shapefile available so that the average Land surface temperature over a 5 km buffer around the GCU coordinate is taken."},
+			"_title": {"iso_639_3_eng": "Trend (temporal dynamics) in GCU's NDWI"},
+			"_definition": {"iso_639_3_eng": "Temporal trends of the remotely sensed Normalized Difference Water Index."},
+			"_description": {"iso_639_3_eng": "Global variation in normalized difference water index (NDWI) for the whole GCU, to observe long-terme trends of vegetation water content. NDWI provides an effective measure of moisture content. This index is calculated on the basis of the GREEN-NIR combination (visible green and near infrared spectrum) and enables the detection of water pools as well as subtle changes in the water content of vegetation. These values (from MODIS at 1km resolution) range from -1 (no water) to 1 (water surface), and their variation is a very good indicator of plant water stress."},
 			"_provider": [
 				"Nicolas Martin <nicolas.martin@inrae.fr>"
 			]
@@ -824,8 +875,15 @@
 			"_class": "_class_quantity_averaged",
 			"_domain": ["chr_envi"],
 			"_subject": "chr_subject_stand",
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-1", "_options_graph_line"],
+			"_decimals": 2,
 			"_scalar": {
-				"_type": "_type_number"
+				"_type": "_type_number",
+				"_valid-range": {
+					"_min-range-inclusive": -1.0,
+					"_max-range-inclusive": 1.0
+				}
 			}
 		}
 	},
@@ -892,10 +950,10 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Average GCU Biomass"},
-			"_definition": {"iso_639_3_eng": "Average GCU above-ground biomass."},
-			"_description": {"iso_639_3_eng": "Remotely sensed average GCU above-ground biomass in t/ha. The average is calculated for the GCU area defined with the polygon (shapefile) of GCU boundaries. If the polygon is not available, the beam falling if a 5km buffer around the coordinate of the GCU is taken."},
+			"_definition": {"iso_639_3_eng": "Above-ground biomass af all species (tree, shrubs, annuals)"},
+			"_description": {"iso_639_3_eng": "Above ground biomass for the whole GCU, to describe the state of the vegetation. The above ground biomasse (in t/ha) includes all of the vegetation present and in forest and makes it possible to quantitatively consider the importance of wood in forests."},
 			"_provider": [
-				"Nicolas Martin <nicolas.martin@inrae.fr>"
+				"JRC"
 			]
 		},
 		"_data": {
@@ -905,10 +963,16 @@
 				"chr_fore"
 			],
 			"_subject": "chr_subject_stand",
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-2"],
+			"_decimals": 2,
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit_name": "t/ha",
-				"_unit_symbol": "t/ha"
+				"_unit_symbol": "t/ha",
+				"_valid-range": {
+					"_min-range-inclusive": 0
+				}
 			}
 		}
 	},
@@ -917,13 +981,13 @@
 			"_nid": "chr_trend",
 			"_lid": "AvBiomass",
 			"_gid": "chr_trend_AvBiomass",
-			"_pid": ["TrendAvBiomassc"],
+			"_pid": ["TrendAvBiomass"],
 			"_aid": ["AvBiomass"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Trend (temporal dynamics) in Average GCU Biomass"},
-			"_definition": {"iso_639_3_eng": "Temporal trends of the remotely sensed average biomass."},
-			"_description": {"iso_639_3_eng": "Slope the relationship between remotely sensed biomass of the GCU and time (t/ha/year)."},
+			"_definition": {"iso_639_3_eng": "Temporal trends of the above-ground biomass of all species"},
+			"_description": {"iso_639_3_eng": "Biomass annual trends in above ground biomass for the whole GCU, to define and quantify whether the forest can be considered a carbon sink (increase in biomass) or a carbon source (decrease in biomass). The above ground biomasse (in t/ha) includes all of the vegetation present and in forest makes it possible to quantitatively consider the importance of wood."},
 			"_provider": [
 				"Nicolas Martin <nicolas.martin@inrae.fr>"
 			]
@@ -932,10 +996,13 @@
 			"_class": "_class_quantity_averaged",
 			"_domain": ["chr_envi"],
 			"_subject": "chr_subject_stand",
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-2"],
+			"_decimals": 2,
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit_name": "t/ha/year",
-				"_unit_symbol": "t/ha"
+				"_unit_symbol": "t/ha/year"
 			}
 		}
 	},

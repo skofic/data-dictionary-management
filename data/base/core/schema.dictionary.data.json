@@ -227,5 +227,51 @@
 		"_to": "_kind",
 		"_predicate": "_predicate_enum-of",
 		"_path": ["_kind"]
+	},
+
+
+	{
+		"_from": "_usage_indicator",
+		"_to": "_usage",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_usage"]
+	},
+	{
+		"_from": "_usage_metadata",
+		"_to": "_usage",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_usage"]
+	},
+
+
+	{
+		"_from": "_options_level-1",
+		"_to": "_options",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_options"]
+	},
+	{
+		"_from": "_options_level-2",
+		"_to": "_options",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_options"]
+	},
+	{
+		"_from": "_options_graph",
+		"_to": "_options",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_options"]
+	},
+	{
+		"_from": "_options_graph_line",
+		"_to": "_options",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_options"]
+	},
+	{
+		"_from": "_options_graph_bar",
+		"_to": "_options",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_options"]
 	}
 ]

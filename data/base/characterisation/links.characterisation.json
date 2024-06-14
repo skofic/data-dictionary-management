@@ -469,6 +469,11 @@
 		"_to": "std_date",
 		"_predicate": "_predicate_requires"
 	},
+	{
+		"_from": "chr_AvCircBreastHeight",
+		"_to": "chr_SampleSize",
+		"_predicate": "_predicate_requires"
+	},
 	
 	{
 		"_from": "chr_VarCircBreastHeight",
@@ -485,20 +490,30 @@
 		"_to": "std_date",
 		"_predicate": "_predicate_requires"
 	},
+	{
+		"_from": "chr_VarCircBreastHeight",
+		"_to": "chr_SampleSize",
+		"_predicate": "_predicate_requires"
+	},
 	
 	{
-		"_from": "chr_AvCrownLength",
+		"_from": "chr_AvCrownHeight",
 		"_to": "gcu_id_number",
 		"_predicate": "_predicate_requires"
 	},
 	{
-		"_from": "chr_AvCrownLength",
+		"_from": "chr_AvCrownHeight",
 		"_to": "species",
 		"_predicate": "_predicate_requires"
 	},
 	{
-		"_from": "chr_AvCrownLength",
+		"_from": "chr_AvCrownHeight",
 		"_to": "std_date",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_AvCrownHeight",
+		"_to": "chr_SampleSize",
 		"_predicate": "_predicate_requires"
 	},
 	
