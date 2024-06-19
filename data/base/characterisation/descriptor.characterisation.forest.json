@@ -167,9 +167,9 @@
 			"_subject": "chr_subject_target",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
-			"_decimals": 1,
 			"_scalar": {
 				"_type": "_type_number",
+				"_decimals": 1,
 				"_unit": "_unit_length_cm",
 				"_valid-range": {
 					"_min-range-inclusive": 0
@@ -199,9 +199,9 @@
 			"_subject": "chr_subject_target",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
-			"_decimals": 1,
 			"_scalar": {
 				"_type": "_type_number",
+				"_decimals": 1,
 				"_unit": "_unit_length_cm",
 				"_valid-range": {
 					"_min-range-inclusive": 0
@@ -285,9 +285,9 @@
 			"_subject": "chr_subject_target",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
-			"_decimals": 1,
 			"_scalar": {
 				"_type": "_type_number",
+				"_decimals": 1,
 				"_unit": "_unit_length_m",
 				"_valid-range": {
 					"_min-range-inclusive": 0.0,
@@ -319,9 +319,9 @@
 			"_tag": ["chr_tag_diversity"],
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
-			"_decimals": 1,
 			"_scalar": {
 				"_type": "_type_number",
+				"_decimals": 1,
 				"_unit": "_unit_length_m",
 				"_valid-range": {
 					"_min-range-inclusive": 0.0
@@ -383,9 +383,9 @@
 			"_subject": "chr_subject_GCU",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
-			"_decimals": 1,
 			"_scalar": {
 				"_type": "_type_number",
+				"_decimals": 1,
 				"_unit_name": "m2/ha",
 				"_unit_symbol": "m^2/ha",
 				"_valid-range": {
@@ -416,9 +416,9 @@
 			"_subject": "chr_subject_GCU",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
-			"_decimals": 1,
 			"_scalar": {
 				"_type": "_type_number",
+				"_decimals": 1,
 				"_unit_name": "m2/ha",
 				"_unit_symbol": "m^2/ha",
 				"_valid-range": {
@@ -449,9 +449,9 @@
 			"_subject": "chr_subject_GCU",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
-			"_decimals": 1,
 			"_scalar": {
 				"_type": "_type_number",
+				"_decimals": 1,
 				"_unit_name": "m2/ha",
 				"_unit_symbol": "m^2/ha",
 				"_valid-range": {
@@ -530,7 +530,9 @@
 			"_aid": ["PropRepTrees"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Proportion of reproductive trees"}
+			"_title": {"iso_639_3_eng": "Proportion of reproductive trees"},
+			"_definition": {"iso_639_3_eng": "Proportion of trees with reproductive structures"},
+			"_description": {"iso_639_3_eng": "Proportion of trees with reproductive structures (cones, flowers, fruits...) inferred either by total visual counts, estimated based on incomplete counts (e.g. counting of reproductive trees in transects) or remote sensing (e.g. drones, LIDAR)."}
 		},
 		"_data": {
 			"_class": "_class_quantity",
@@ -538,12 +540,20 @@
 				"chr_fore",
 				"chr_gent"
 			],
+			"_subject": "chr_subject_target",
 			"_tag": [
 				"chr_tag_diversity",
 				"chr_tag_vulnerability"
 			],
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-1"],
 			"_scalar": {
-				"_type": "_type_number"
+				"_type": "_type_number",
+				"_decimals": 2,
+				"_valid-range": {
+					"_min-range-inclusive": 0.0,
+					"_max-range-inclusive": 1.0
+				}
 			}
 		}
 	},

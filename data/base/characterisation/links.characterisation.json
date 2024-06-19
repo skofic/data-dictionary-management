@@ -389,6 +389,17 @@
 	},
 	
 	{
+		"_from": "chr_Esoil",
+		"_to": "gcu_id_number",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_Esoil",
+		"_to": "std_date",
+		"_predicate": "_predicate_requires"
+	},
+	
+	{
 		"_from": "chr_RootingDepth",
 		"_to": "gcu_id_number",
 		"_predicate": "_predicate_requires"
@@ -628,6 +639,11 @@
 		"_to": "std_date",
 		"_predicate": "_predicate_requires"
 	},
+	{
+		"_from": "chr_PropRepTrees",
+		"_to": "chr_SampleSize",
+		"_predicate": "_predicate_requires"
+	},
 	
 	{
 		"_from": "chr_PropPolyLoci",
@@ -756,7 +772,12 @@
 	},
 	{
 		"_from": "chr_EffPopSize",
-		"_to": "chr_PropRepTrees",
+		"_to": "chr_NumberOfLoci",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_EffPopSize",
+		"_to": "chr_MarkerType",
 		"_predicate": "_predicate_requires"
 	},
 	
@@ -778,6 +799,47 @@
 	{
 		"_from": "chr_Divergence",
 		"_to": "chr_SampleSize",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_Divergence",
+		"_to": "chr_NumberOfLoci",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_Divergence",
+		"_to": "chr_MarkerType",
+		"_predicate": "_predicate_requires"
+	},
+	
+	{
+		"_from": "chr_Divergence_Pairwise",
+		"_to": "gcu_id_number",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_Divergence_Pairwise",
+		"_to": "species",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_Divergence_Pairwise",
+		"_to": "std_date",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_Divergence_Pairwise",
+		"_to": "chr_SampleSize",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_Divergence_Pairwise",
+		"_to": "chr_NumberOfLoci",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_Divergence_Pairwise",
+		"_to": "chr_MarkerType",
 		"_predicate": "_predicate_requires"
 	},
 	
@@ -843,6 +905,16 @@
 		"_to": "chr_SampleSize",
 		"_predicate": "_predicate_requires"
 	},
+	{
+		"_from": "chr_AdmIndexMain",
+		"_to": "chr_NumberOfLoci",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_AdmIndexMain",
+		"_to": "chr_MarkerType",
+		"_predicate": "_predicate_requires"
+	},
 	
 	{
 		"_from": "chr_AdmIndexOther",
@@ -862,6 +934,16 @@
 	{
 		"_from": "chr_AdmIndexOther",
 		"_to": "chr_SampleSize",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_AdmIndexOther",
+		"_to": "chr_NumberOfLoci",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_AdmIndexOther",
+		"_to": "chr_MarkerType",
 		"_predicate": "_predicate_requires"
 	},
 	

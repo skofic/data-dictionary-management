@@ -207,8 +207,7 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "GCU elevation - measured"},
-			"_definition": {"iso_639_3_eng": "Elevation assessed in the circular plot with the GPS Garmin 64s."},
-			"_description": {"iso_639_3_eng": "See the WP2 protocol for more information."},
+			"_definition": {"iso_639_3_eng": "Local elevation measured in the representative circular plot with a radius of 15 m."},
 			"_provider": [
 				"Florence Jean <florence.jean@inrae.fr>"
 			]
@@ -216,13 +215,16 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_domain": ["chr_envi"],
-			"_subject": "chr_subject_stand",
+			"_subject": "chr_subject_GCU",
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-2"],
 			"_scalar": {
-				"_type": "_type_number",
+				"_type": "_type_integer",
+				"_decimals": 0,
 				"_unit": "_unit_length_m",
 				"_valid-range": {
-					"_min-range-exclusive": 0.0,
-					"_max-range-exclusive": 3000.0
+					"_min-range-exclusive": 0,
+					"_max-range-exclusive": 5000
 				}
 			}
 		}
@@ -237,8 +239,7 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "GCU slope - measured"},
-			"_definition": {"iso_639_3_eng": "Slope assessed in the circular plot with the clinometer, see the WP2 protocol for more information."},
-			"_description": {"iso_639_3_eng": "The slope is measured in the plot area defined with the circular boundaries (15m of radiius)."},
+			"_definition": {"iso_639_3_eng": "Local slope measured in the representative circular plot with a radius of 15 m."},
 			"_provider": [
 				"Florence Jean <florence.jean@inrae.fr>"
 			]
@@ -246,14 +247,17 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_domain": ["chr_envi"],
-			"_subject": "chr_subject_stand",
+			"_subject": "chr_subject_GCU",
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-2"],
 			"_scalar": {
 				"_type": "_type_number",
+				"_decimals": 2,
 				"_unit_name": "degrees DMS",
 				"_unit_symbol": "DMS",
 				"_valid-range": {
 					"_min-range-exclusive": 0.0,
-					"_max-range-exclusive": 45.0
+					"_max-range-exclusive": 90.0
 				}
 			}
 		}
@@ -268,8 +272,7 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "GCU aspect - measured"},
-			"_definition": {"iso_639_3_eng": "Aspect assessed in the circular plot with the clinometer, see the WP2 protocol for more information."},
-			"_description": {"iso_639_3_eng": "The aspect is measured in the plot area defined with the circular boundaries (15m of radiius)."},
+			"_definition": {"iso_639_3_eng": "Local aspect measured in the representative circular plot with a radius of 15 m."},
 			"_provider": [
 				"Florence Jean <florence.jean@inrae.fr>"
 			]
@@ -277,9 +280,12 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_domain": ["chr_envi"],
-			"_subject": "chr_subject_stand",
+			"_subject": "chr_subject_GCU",
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-2"],
 			"_scalar": {
 				"_type": "_type_number",
+				"_decimals": 2,
 				"_unit_name": "Grade",
 				"_valid-range": {
 					"_min-range-exclusive": 0.0,
@@ -299,8 +305,8 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "GCU topography"},
-			"_definition": {"iso_639_3_eng": "Micro-topography is assessed at the scale of the plot according to an index ranging from 1 to 3."},
-			"_description": {"iso_639_3_eng": "The index allows to determine whether there is more in- or outflow of water. See the WP2 protocol for more information."},
+			"_definition": {"iso_639_3_eng": "Micro-topography assessed in the representative circular plot within the GCU"},
+			"_description": {"iso_639_3_eng": "Micro-topography is assessed at the scale of the representative circular plot with a radius of 15 m according to an index ranging from 1 to 3:\n\n1 = convex\n2 = neutral\n3 = concave\n\nThe index allows to determine whether there is more in- or outflow of water which has an influence on the soil available water capacity. For example, there is more water inflow if the topography is concave but there is more outflow if the topography is convex."},
 			"_provider": [
 				"Florence Jean <florence.jean@inrae.fr>"
 			]
@@ -309,6 +315,9 @@
 			"_class": "_class_category",
 			"_domain": ["chr_envi"],
 			"_subject": "chr_subject_stand",
+			"_subject": "chr_subject_GCU",
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-2"],
 			"_scalar": {
 				"_type": "_type_string_enum",
 				"_kind": ["chr_MicroTopography"]
@@ -420,9 +429,9 @@
 			"_subject": "chr_subject_stand",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
-			"_decimals": 2,
 			"_scalar": {
 				"_type": "_type_number",
+				"_decimals": 2,
 				"_unit_name": "Degrees Centigrades/year",
 				"_unit_symbol": "°C/year",
 				"_valid-range": {
@@ -455,9 +464,9 @@
 			"_subject": "chr_subject_stand",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1", "_options_graph_line"],
-			"_decimals": 2,
 			"_scalar": {
 				"_type": "_type_number",
+				"_decimals": 2,
 				"_valid-range": {
 					"_min-range-inclusive": -1.0,
 					"_max-range-inclusive": 1.0
@@ -512,9 +521,9 @@
 			"_subject": "chr_subject_stand",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1", "_options_graph_line"],
-			"_decimals": 2,
 			"_scalar": {
 				"_type": "_type_number",
+				"_decimals": 2,
 				"_valid-range": {
 					"_min-range-inclusive": -1.0,
 					"_max-range-inclusive": 1.0
@@ -570,9 +579,9 @@
 			"_subject": "chr_subject_stand",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1"],
-			"_decimals": 2,
 			"_scalar": {
 				"_type": "_type_number",
+				"_decimals": 2,
 				"_unit_name": "m^2 Leaf/m^2 soil",
 				"_unit_symbol": "m2 Leaf/m2 soil",
 				"_valid-range": {
@@ -603,9 +612,9 @@
 			"_subject": "chr_subject_stand",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1"],
-			"_decimals": 2,
 			"_scalar": {
 				"_type": "_type_number",
+				"_decimals": 2,
 				"_unit_name": "m^2 Leaf/m^2 soil/month",
 				"_unit_symbol": "m2 Leaf/m2 soil/month"
 			}
@@ -660,9 +669,9 @@
 			"_subject": "chr_subject_stand",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1"],
-			"_decimals": 2,
 			"_scalar": {
 				"_type": "_type_number",
+				"_decimals": 2,
 				"_unit_name": "m^2 Leaf/m^2 soil",
 				"_unit_symbol": "m2 Leaf/m2 soil",
 				"_valid-range": {
@@ -694,9 +703,9 @@
 			"_subject": "chr_subject_stand",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1", "_options_graph_bar"],
-			"_decimals": 2,
 			"_scalar": {
 				"_type": "_type_number",
+				"_decimals": 2,
 				"_unit_name": "kg of C/m2/day",
 				"_unit_symbol": "kg of C/m2/day",
 				"_valid-range": {
@@ -727,9 +736,9 @@
 			"_subject": "chr_subject_stand",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1", "_options_graph_bar"],
-			"_decimals": 2,
 			"_scalar": {
 				"_type": "_type_number",
+				"_decimals": 2,
 				"_unit_name": "kg of C/m2/day/month",
 				"_unit_symbol": "kg of C/m2/day/month"
 			}
@@ -757,9 +766,9 @@
 			"_subject": "chr_subject_stand",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1", "_options_graph_bar"],
-			"_decimals": 2,
 			"_scalar": {
 				"_type": "_type_number",
+				"_decimals": 2,
 				"_unit_name": "kg of C/m2/year",
 				"_unit_symbol": "kg of C/m2/year",
 				"_valid-range": {
@@ -845,9 +854,9 @@
 			"_subject": "chr_subject_stand",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1", "_options_graph_line"],
-			"_decimals": 2,
 			"_scalar": {
 				"_type": "_type_number",
+				"_decimals": 2,
 				"_valid-range": {
 					"_min-range-inclusive": -1.0,
 					"_max-range-inclusive": 1.0
@@ -877,9 +886,9 @@
 			"_subject": "chr_subject_stand",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1", "_options_graph_line"],
-			"_decimals": 2,
 			"_scalar": {
 				"_type": "_type_number",
+				"_decimals": 2,
 				"_valid-range": {
 					"_min-range-inclusive": -1.0,
 					"_max-range-inclusive": 1.0
@@ -965,9 +974,9 @@
 			"_subject": "chr_subject_stand",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
-			"_decimals": 2,
 			"_scalar": {
 				"_type": "_type_number",
+				"_decimals": 2,
 				"_unit_name": "t/ha",
 				"_unit_symbol": "t/ha",
 				"_valid-range": {
@@ -998,9 +1007,9 @@
 			"_subject": "chr_subject_stand",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
-			"_decimals": 2,
 			"_scalar": {
 				"_type": "_type_number",
+				"_decimals": 2,
 				"_unit_name": "t/ha/year",
 				"_unit_symbol": "t/ha/year"
 			}
@@ -1043,9 +1052,9 @@
 			"_aid": ["Dsoil"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Soil depth"},
-			"_definition": {"iso_639_3_eng": "Vertical distance from soil surface to the bottom of the excavated pit or of the auger core."},
-			"_description": {"iso_639_3_eng": "Soil depth is determined either by excavating a pit or by extrating a soil core using an auger down to the depth where rocks are found and extracting further soil is impossible - Stand level data."},
+			"_title": {"iso_639_3_eng": "GCU soil depth"},
+			"_definition": {"iso_639_3_eng": "Vertical distance from soil surface to the bottom of the excavated pit or of the soil auger core"},
+			"_description": {"iso_639_3_eng": "The soil depth is determined either by excavating a pit or by extracting a soil core with a soil auger to the depth at which rocks are found or the extraction of further soil is impossible.\n\nIt can be used together with soil texture to calculate the amount of water stored in the soil that can be utilised by trees."},
 			"_provider": [
 				"Maurizio Mencuccini <m.mencuccini@creaf.uab.cat>"
 			]
@@ -1053,13 +1062,48 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_domain": ["chr_envi"],
-			"_subject": "chr_subject_stand",
+			"_subject": "chr_subject_GCU",
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-2"],
 			"_scalar": {
-				"_type": "_type_number",
+				"_type": "_type_integer",
+				"_decimals": 0,
 				"_unit": "_unit_length_cm",
 				"_valid-range": {
+					"_min-range-exclusive": 0,
+					"_max-range-exclusive": 200
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr",
+			"_lid": "Esoil",
+			"_gid": "chr_Esoil",
+			"_pid": ["Esoil"],
+			"_aid": ["Esoil"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "GCU soil coarse elements"},
+			"_definition": {"iso_639_3_eng": "Average percentage of soil coarse elements in the soil of the GCU"},
+			"_description": {"iso_639_3_eng": "The soil coarse elements are the individual mineral constituents greater than 2 mm and include gravel, pebbles, stones and blocks. The values are estimated in horisons of 20 cm in the soil pit inside the representative circular plot and then averaged across all horisons. It gives average share of soil corse elements in the soil of the GCU."},
+			"_provider": [
+				"Florence Jeanflorence.jean@inrae.fr"
+			]
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_GCU",
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-2"],
+			"_scalar": {
+				"_type": "_type_number",
+				"_decimals": 2,
+				"_valid-range": {
 					"_min-range-exclusive": 0.0,
-					"_max-range-exclusive": 150.0
+					"_max-range-exclusive": 1.0
 				}
 			}
 		}

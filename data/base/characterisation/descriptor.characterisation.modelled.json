@@ -22,9 +22,9 @@
 			"_tag": ["chr_tag_vulnerability"],
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1", "_options_graph"],
-			"_decimals": 3,
 			"_scalar": {
-				"_type": "_type_number"
+				"_type": "_type_number",
+				"_decimals": 3
 			}
 		}
 	},
@@ -52,9 +52,9 @@
 			"_tag": ["chr_tag_vulnerability"],
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1"],
-			"_decimals": 3,
 			"_scalar": {
-				"_type": "_type_number"
+				"_type": "_type_number",
+				"_decimals": 3
 			}
 		}
 	},
@@ -81,9 +81,9 @@
 			"_subject": "chr_subject_stand",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
-			"_decimals": 3,
 			"_scalar": {
-				"_type": "_type_number"
+				"_type": "_type_number",
+				"_decimals": 3
 			}
 		}
 	},
@@ -111,9 +111,9 @@
 			"_tag": ["chr_tag_vulnerability"],
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1"],
-			"_decimals": 3,
 			"_scalar": {
-				"_type": "_type_number"
+				"_type": "_type_number",
+				"_decimals": 3
 			}
 		}
 	},
@@ -140,9 +140,9 @@
 			"_tag": ["chr_tag_vulnerability"],
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1", "_options_graph_line"],
-			"_decimals": 3,
 			"_scalar": {
-				"_type": "_type_number"
+				"_type": "_type_number",
+				"_decimals": 3
 			}
 		}
 	}

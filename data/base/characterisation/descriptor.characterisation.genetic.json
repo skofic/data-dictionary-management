@@ -326,8 +326,8 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Effective population size"},
-			"_definition": {"iso_639_3_eng": "The size of an ideal population that would result in the same level of inbreeding or genetic drift as that of the population under study."},
-			"_description": {"iso_639_3_eng": "Effective population size (Ne) defines the size of an ideal population that would result in the same level of inbreeding or genetic drift as that of the population under study or, in a simpler manner, it can be viewed as the number of individuals in a population who equally contribute offspring to the next generation. Ne is so important in conservation genetics because it quantifies the rate at which a population loses genetic variation, therefore, such measure is used for evaluating the state and viability of populations, both in the short and long period."},
+			"_definition": {"iso_639_3_eng": "The size of an ideal population that would result in the same level of inbreeding, genetic drift aor other genetic property as that observed in the population under study"},
+			"_description": {"iso_639_3_eng": "Effective population size (Ne) defines the size of an ideal population that would result in the same level of inbreeding, genetic drift or additive variance as that of the population under study, or more simply, it can be thought of as the number of individuals in a population that contribute equally to the next generation of offspring. Ne is important in conservation genetics because it quantifies the rate at which a population is losing genetic variation and is therefore used to assess the health and viability of populations in both the short and long term. Different approaches for Ne calculation will be used, representing the kind of evolution (polymorphism or inbreeding) and the term of evolution (long-term or current). Generally, the effective size of a population is considerably less than the census size. It is not straightforward to compute Ne in forest tree and most estimates are not reliable, except for small, isolated populations, for example GCUs with less than 1000 reproducing trees (this number should include the reproducing trees outside the GCU if there is gene flow)."},
 			"_provider": [
 				"Santiago C. Gonzalez Martinez"
 			]
@@ -335,13 +335,19 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_domain": ["chr_gent"],
+			"_subject": "chr_subject_target",
 			"_tag": [
 				"chr_tag_diversity",
 				"chr_tag_vulnerability"
 			],
-			"_subject": "chr_subject_stand",
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-2"],
 			"_scalar": {
-				"_type": "_type_integer"
+				"_type": "_type_integer",
+				"_decimals": 0,
+				"_valid-range": {
+					"_min-range-inclusive": 0
+				}
 			}
 		}
 	},
@@ -356,8 +362,8 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "GCU originality - population specific Fst"},
-			"_definition": {"iso_639_3_eng": "Level of genetic differentiation of the target population from an ideal ancestral population from which all populations in the species diverged."},
-			"_description": {"iso_639_3_eng": "Genetic differentiation of a population is determined by the accumulation of independent genetic changes (mutations) or maintenance of unique variants through time. For instance a population living in an ecologically distinct environment can exhibit genetic divergence from the other studied populations. The measure is relative to the dataset analysed simultaneously and changes when new GCUs are added to the dataset."},
+			"_definition": {"iso_639_3_eng": "Level of genetic differentiation of the target population from an ideal ancestral population from which all populations in the species diverged"},
+			"_description": {"iso_639_3_eng": "Genetic differentiation of a population is determined by the accumulation of independent genetic changes (mutations) or maintenance of unique variants through time. For instance a population living in an ecologically distinct environment can exhibit genetic divergence from the other studied populations. Fst ranges from 0 (complete similarity of alleles/variants) to 1 (no overalp of alleles/variants). Population-specific Fst values can identify the source/ancestral population and trace the evolutionary history of its derived populations. The measure is relative to the dataset analysed simultaneously and changes when new GCUs are added to the dataset. Population specific Fst was calculated with BayeScan (Foll & Gagiotti 2008) in R."},
 			"_provider": [
 				"Santiago C. Gonzalez Martinez"
 			]
@@ -365,13 +371,49 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_domain": ["chr_gent"],
-			"_tag": [
-				"chr_tag_distinct-pop"
-			],
-			"_subject": "chr_subject_stand",
-			"_array": {
-				"_scalar": {
-					"_type": "_type_number"
+			"_subject": "chr_subject_target",
+			"_tag": ["chr_tag_distinct-pop"],
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-1"],
+			"_scalar": {
+				"_type": "_type_number",
+				"_decimals": 3,
+				"_valid-range": {
+					"_min-range-inclusive": 0.0,
+					"_max-range-inclusive": 1.0
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_Divergence",
+			"_lid": "Pairwise",
+			"_gid": "chr_Divergence_Pairwise",
+			"_pid": ["Divergence", "Fst"],
+			"_aid": ["Pairwise"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "GCU originality - pairwise Fst"},
+			"_definition": {"iso_639_3_eng": "The current level of genetic differentiation whithin a species"},
+			"_description": {"iso_639_3_eng": "Genetic differentiation of a population is determined by the accumulation of independent genetic changes (mutations) or maintenance of unique variants through time. For instance a population living in an ecologically distinct environment can exhibit genetic divergence from the other studied populations. Fst ranges from 0 (complete similarity of alleles/variants) to 1 (no overalp of alleles/variants). Pairwise Fst provides insight into the current population genetic structure. The measure is relative to the dataset analysed simultaneously and changes when new GCUs are added to the dataset. Pairwise Fst was calculated with package hierfstat in R."},
+			"_provider": [
+				"Santiago C. Gonzalez Martinez"
+			]
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["chr_gent"],
+			"_subject": "chr_subject_target",
+			"_tag": ["chr_tag_distinct-pop"],
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-2"],
+			"_scalar": {
+				"_type": "_type_number",
+				"_decimals": 3,
+				"_valid-range": {
+					"_min-range-inclusive": 0.0,
+					"_max-range-inclusive": 1.0
 				}
 			}
 		}
@@ -485,10 +527,10 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_domain": ["chr_gent"],
+			"_subject": "chr_subject_stand",
 			"_tag": [
 				"chr_tag_diversity"
 			],
-			"_subject": "chr_subject_stand",
 			"_array": {
 				"_scalar": {
 					"_type": "_type_number"
@@ -506,9 +548,9 @@
 			"_aid": ["AdmIndexMain"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Admixture/hybridisation index - proportion of ancestry of main gene pool/species"},
-			"_definition": {"iso_639_3_eng": "Probability of each individual/population to be assigned to the main gene pool identified."},
-			"_description": {"iso_639_3_eng": "Admixture occurs when individuals from two or more previously isolated populations interbreed. The previously isolated populations are referred to as ancestral or parental and the newly formed population is referred to as admixed."},
+			"_title": {"iso_639_3_eng": "Admixture index - proportion of ancestry of detected gene pools"},
+			"_definition": {"iso_639_3_eng": "Proportion of population's ancestry in each gene pool of the target species"},
+			"_description": {"iso_639_3_eng": "Measurement of the extent of admixture of individuals in a population belonging to different gene pools when individuals from two or more parental (ancestral) populations interbreed. The gene pool is the set of all genes, or genetic information in a group of individuals. The value given is the average population ancestry in each of the gene pools detected in the target tree species and is calculated with the R package LEA using the function sNMF. Depending on the number and distribution of populations in the analysis, the proportion of population's ancestry in each of the detected gene pools may change. The number of gene pools detected may also change."},
 			"_provider": [
 				"Santiago C. Gonzalez Martinez"
 			]
@@ -516,14 +558,21 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_domain": ["chr_gent"],
+			"_subject": "chr_subject_target",
 			"_tag": [
 				"chr_tag_diversity",
 				"chr_tag_distinct-pop"
 			],
-			"_subject": "chr_subject_stand",
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-1"],
 			"_array": {
 				"_scalar": {
-					"_type": "_type_number"
+					"_type": "_type_number",
+					"_decimals": 4,
+					"_valid-range": {
+						"_min-range-inclusive": 0.0,
+						"_max-range-inclusive": 1.0
+					}
 				}
 			}
 		}
@@ -537,9 +586,9 @@
 			"_aid": ["AdmIndexOther"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Admixture/hybridisation index - proportion of ancestry of other gene pool/species"},
-			"_definition": {"iso_639_3_eng": "Probability of each individual/population to be assigned to each of the gene pool identified."},
-			"_description": {"iso_639_3_eng": "Admixture occurs when individuals from two or more previously isolated populations interbreed. The previously isolated populations are referred to as ancestral or parental and the newly formed population is referred to as admixed."},
+			"_title": {"iso_639_3_eng": "Hybridisation index - proportion of ancestry of detected species"},
+			"_definition": {"iso_639_3_eng": "Proportion of population's ancestry in each of the two hybridising species"},
+			"_description": {"iso_639_3_eng": "Measurement of the extent of hybridisation between two species in a population. The value given is the average population ancestry in each of the two hybridising species and is calculated with the R package LEA using the function sNMF."},
 			"_provider": [
 				"Santiago C. Gonzalez Martinez"
 			]
@@ -547,14 +596,21 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_domain": ["chr_gent"],
+			"_subject": "chr_subject_target",
 			"_tag": [
 				"chr_tag_diversity",
 				"chr_tag_distinct-pop"
 			],
-			"_subject": "chr_subject_stand",
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-2"],
 			"_array": {
 				"_scalar": {
-					"_type": "_type_number"
+					"_type": "_type_number",
+					"_decimals": 3,
+					"_valid-range": {
+						"_min-range-inclusive": 0.0,
+						"_max-range-inclusive": 1.0
+					}
 				}
 			}
 		}
