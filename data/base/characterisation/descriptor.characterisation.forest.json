@@ -299,27 +299,33 @@
 	{
 		"_code": {
 			"_nid": "chr",
-			"_lid": "VarCrownLength",
-			"_gid": "chr_VarCrownLength",
-			"_pid": ["VarCrownLength"],
-			"_aid": ["VarCrownLength"]
+			"_lid": "VarCrownHeight",
+			"_gid": "chr_VarCrownHeight",
+			"_pid": ["Var.Hcrown"],
+			"_aid": ["VarCrownHeight"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Crown length variance"},
-			"_definition": {"iso_639_3_eng": "The lenght of the crown is calculated by substracting basal crown height from total height of the tree."},
-			"_description": {"iso_639_3_eng": "Together with crown projection, crown length can be used to calculate crown volume, and index of the photosynthetic leaf area of the tree."},
+			"_title": {"iso_639_3_eng": "Basal crown height variance"},
+			"_definition": {"iso_639_3_eng": "The variance of the vertical distance from ground level to the lowermost point on the main stem where the tree crown starts across all measured trees."},
+			"_description": {"iso_639_3_eng": "The variance of the values of height of the base of the tree crown across 10 individual adult dominant/co-dominant trees sampled either inside or in the vicinity of the circular plot with a radius of 15 m, which is representative of the GCU.\n\nThe tree crown corresponds to the healthy and functional green crown envelope. Different criteria have to be taken into account: sanitary and continuity between the lower and upper branches. So that, the base of the tree crown could correspond to the first living branch or could start upper of the first living branch."},
 			"_provider": [
-				"Florence Jean <florence.jean@inrae.fr>"
+				"Maurizio Mencuccini <m.mencuccini@creaf.uab.cat>"
 			]
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
 			"_domain": ["chr_fore"],
-			"_subject": "chr_subject_stand",
+			"_subject": "chr_subject_target",
 			"_tag": ["chr_tag_diversity"],
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-2"],
+			"_decimals": 1,
 			"_scalar": {
 				"_type": "_type_number",
-				"_unit": "_unit_length_m"
+				"_unit": "_unit_length_m",
+				"_valid-range": {
+					"_min-range-inclusive": 0.0
+				}
 			}
 		}
 	},
@@ -365,8 +371,8 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Basal area mean"},
-			"_definition": {"iso_639_3_eng": "The mean of the total basal area of living or dead trees across all measured trees."},
-			"_description": {"iso_639_3_eng": "Mean across all the values of the 10 Functional Subset trees. Stand level data."},
+			"_definition": {"iso_639_3_eng": "The mean of the basal area per ha across all measured trees, whether living or dead."},
+			"_description": {"iso_639_3_eng": "The mean of the trunk cross-sectional area per hectar (10000 m2) of all living and dead trees measured at breast height (1.3 m). All tree species in the GCU confunded."},
 			"_provider": [
 				"Florence Jeanflorence.jean@inrae.fr"
 			]
@@ -374,14 +380,16 @@
 		"_data": {
 			"_class": "_class_quantity_averaged",
 			"_domain": ["chr_fore"],
-			"_subject": "chr_subject_stand",
+			"_subject": "chr_subject_GCU",
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-2"],
+			"_decimals": 1,
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit_name": "m2/ha",
 				"_unit_symbol": "m^2/ha",
 				"_valid-range": {
-					"_min-range-exclusive": 1,
-					"_max-range-exclusive": 90
+					"_min-range-inclusive": 0.0
 				}
 			}
 		}
@@ -396,8 +404,8 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Basal area variance"},
-			"_definition": {"iso_639_3_eng": "The variance of the total basal area of living or dead trees across all measured trees."},
-			"_description": {"iso_639_3_eng": "Squared standard deviation across all the values of the 10 Functional Subset trees. Stand level data."},
+			"_definition": {"iso_639_3_eng": "The variance of the basal area across all measured trees, whether living or dead"},
+			"_description": {"iso_639_3_eng": "Variance of the trunk cross-sectional area per hectar (10000 m2) of all living and dead trees measured at breast height (1.3 m). All tree species in the GCU confunded."},
 			"_provider": [
 				"Florence Jeanflorence.jean@inrae.fr"
 			]
@@ -405,11 +413,17 @@
 		"_data": {
 			"_class": "_class_quantity_averaged",
 			"_domain": ["chr_fore"],
-			"_subject": "chr_subject_stand",
+			"_subject": "chr_subject_GCU",
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-2"],
+			"_decimals": 1,
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit_name": "m2/ha",
-				"_unit_symbol": "m^2/ha"
+				"_unit_symbol": "m^2/ha",
+				"_valid-range": {
+					"_min-range-inclusive": 0.0
+				}
 			}
 		}
 	},
@@ -422,9 +436,9 @@
 			"_aid": ["PlotBasalArea"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Basal area plot"},
-			"_definition": {"iso_639_3_eng": "Total basal area of living or dead trees inside the circular plot, per species."},
-			"_description": {"iso_639_3_eng": "Total basal area of trees assessed by a plot inventory of the trunk circumference at breast height [Breast height trunk circumference] inside the circular plot of 15m radius (for all individual trees of circumference > 23.6 cm). This measurement is carried out by distinguishing the dead from the living trees and the different species. So, it's possible to estimate the basal area per species. The plot is placed around the tree having the reading from the Bitterlisch relascope closest to the mean.\n\nStand level data.\nSee the WP2 protocol for more information."},
+			"_title": {"iso_639_3_eng": "Total basal area"},
+			"_definition": {"iso_639_3_eng": "Total basal area of living or dead trees inside the representative circular plot, for all species in the plot"},
+			"_description": {"iso_639_3_eng": "The sum of the cross-sectional areas measured at breast height of all trees, all species combined, inside a circular plot of 15 m radius, which is representative of the GCU (for all individual trees with circumference > 23.6 cm). The plot is placed around the tree having the reading from the Bitterlisch relascope closest to the mean."},
 			"_provider": [
 				"Florence Jeanflorence.jean@inrae.fr"
 			]
@@ -432,14 +446,16 @@
 		"_data": {
 			"_class": "_class_quantity_averaged",
 			"_domain": ["chr_fore"],
-			"_subject": "chr_subject_stand",
+			"_subject": "chr_subject_GCU",
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-2"],
+			"_decimals": 1,
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit_name": "m2/ha",
 				"_unit_symbol": "m^2/ha",
 				"_valid-range": {
-					"_min-range-exclusive": 1,
-					"_max-range-exclusive": 90
+					"_min-range-inclusive": 0.0
 				}
 			}
 		}
@@ -455,8 +471,8 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Presence of dead trees"},
-			"_definition": {"iso_639_3_eng": "Note for the presence or absence of dead trees (for all species and not only for the target species) around each FS tree."},
-			"_description": {"iso_639_3_eng": "0 = no\n1 = yes\n\nSee the WP2 protocol for more informations"},
+			"_definition": {"iso_639_3_eng": "Presence of dead trees in the GCU"},
+			"_description": {"iso_639_3_eng": "Presence of dead trees inside and around the circular plot with a radius of 15 m, which is representative of the GCU, where 0 means that there are no dead trees and 1 that there are dead trees for the target species."},
 			"_provider": [
 				"Florence Jeanflorence.jean@inrae.fr"
 			]
@@ -464,8 +480,10 @@
 		"_data": {
 			"_class": "_class_category",
 			"_domain": ["chr_fore"],
-			"_subject": "chr_subject_stand",
+			"_subject": "chr_subject_target",
 			"_tag": ["chr_tag_vulnerability"],
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-1"],
 			"_scalar": {
 				"_type": "_type_string_enum",
 				"_kind": ["chr_DeadTrees"]
@@ -482,9 +500,9 @@
 			"_aid": ["NaturalRegeneration"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Presence of natural regeneration around a sampled tree"},
-			"_definition": {"iso_639_3_eng": "The presence and abundance of natural regeneration assessed around each of the 1o Functional Subset trees for the target species of the GCU."},
-			"_description": {"iso_639_3_eng": "0 - Absence\n1 - Scattered\n2 - Groups\n3 - Abundant\n\nSee the WP2 protocol for more information."},
+			"_title": {"iso_639_3_eng": "Abundance of natural regeneration"},
+			"_definition": {"iso_639_3_eng": "Abundance of natural regeneration for the target species of the GCU assessed around all measured trees."},
+			"_description": {"iso_639_3_eng": "Abundance of natural regeneration assessed around 10 trees inside or around the circular plot with a radius of 15 m, which is representative of the GCU, where 0 means absence of natural regeneration, 1 means scattered regeneration, 2 regeneration in groups and 3 abundant regeneration."},
 			"_provider": [
 				"Florence Jeanflorence.jean@inrae.fr"
 			]
@@ -492,8 +510,10 @@
 		"_data": {
 			"_class": "_class_category",
 			"_domain": ["chr_fore"],
-			"_subject": "chr_subject_stand",
+			"_subject": "chr_subject_target",
 			"_tag": ["chr_tag_vulnerability"],
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-1"],
 			"_scalar": {
 				"_type": "_type_string_enum",
 				"_kind": ["chr_NaturalRegeneration"]

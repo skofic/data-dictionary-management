@@ -395,7 +395,17 @@
 	},
 	{
 		"_from": "chr_RootingDepth",
+		"_to": "species",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_RootingDepth",
 		"_to": "std_date",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_RootingDepth",
+		"_to": "chr_SampleSize",
 		"_predicate": "_predicate_requires"
 	},
 	
@@ -518,18 +528,23 @@
 	},
 	
 	{
-		"_from": "chr_VarCrownLength",
+		"_from": "chr_VarCrownHeight",
 		"_to": "gcu_id_number",
 		"_predicate": "_predicate_requires"
 	},
 	{
-		"_from": "chr_VarCrownLength",
+		"_from": "chr_VarCrownHeight",
 		"_to": "species",
 		"_predicate": "_predicate_requires"
 	},
 	{
-		"_from": "chr_VarCrownLength",
+		"_from": "chr_VarCrownHeight",
 		"_to": "std_date",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_VarCrownHeight",
+		"_to": "chr_SampleSize",
 		"_predicate": "_predicate_requires"
 	},
 	
@@ -540,11 +555,6 @@
 	},
 	{
 		"_from": "chr_AvBasalArea",
-		"_to": "species",
-		"_predicate": "_predicate_requires"
-	},
-	{
-		"_from": "chr_AvBasalArea",
 		"_to": "std_date",
 		"_predicate": "_predicate_requires"
 	},
@@ -556,11 +566,17 @@
 	},
 	{
 		"_from": "chr_VarBasalArea",
-		"_to": "species",
+		"_to": "std_date",
+		"_predicate": "_predicate_requires"
+	},
+	
+	{
+		"_from": "chr_PlotBasalArea",
+		"_to": "gcu_id_number",
 		"_predicate": "_predicate_requires"
 	},
 	{
-		"_from": "chr_VarBasalArea",
+		"_from": "chr_PlotBasalArea",
 		"_to": "std_date",
 		"_predicate": "_predicate_requires"
 	},
@@ -568,6 +584,11 @@
 	{
 		"_from": "chr_DeadTrees",
 		"_to": "gcu_id_number",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_DeadTrees",
+		"_to": "species",
 		"_predicate": "_predicate_requires"
 	},
 	{
@@ -579,6 +600,11 @@
 	{
 		"_from": "chr_NaturalRegeneration",
 		"_to": "chr_tree_code",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_NaturalRegeneration",
+		"_to": "species",
 		"_predicate": "_predicate_requires"
 	},
 	{
@@ -1029,6 +1055,11 @@
 		"_to": "std_date",
 		"_predicate": "_predicate_requires"
 	},
+	{
+		"_from": "chr_AvHtot",
+		"_to": "chr_SampleSize",
+		"_predicate": "_predicate_requires"
+	},
 	
 	{
 		"_from": "chr_VarHtot",
@@ -1043,6 +1074,11 @@
 	{
 		"_from": "chr_VarHtot",
 		"_to": "std_date",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_VarHtot",
+		"_to": "chr_SampleSize",
 		"_predicate": "_predicate_requires"
 	},
 	
@@ -1072,6 +1108,11 @@
 		"_to": "std_date",
 		"_predicate": "_predicate_requires"
 	},
+	{
+		"_from": "chr_AvTurgorLossPoint",
+		"_to": "chr_SampleSize",
+		"_predicate": "_predicate_requires"
+	},
 	
 	{
 		"_from": "chr_VarTurgorLossPoint",
@@ -1086,6 +1127,11 @@
 	{
 		"_from": "chr_VarTurgorLossPoint",
 		"_to": "std_date",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_VarTurgorLossPoint",
+		"_to": "chr_SampleSize",
 		"_predicate": "_predicate_requires"
 	},
 	
@@ -1115,6 +1161,11 @@
 		"_to": "std_date",
 		"_predicate": "_predicate_requires"
 	},
+	{
+		"_from": "chr_AvP50",
+		"_to": "chr_SampleSize",
+		"_predicate": "_predicate_requires"
+	},
 	
 	{
 		"_from": "chr_VarP50",
@@ -1129,6 +1180,11 @@
 	{
 		"_from": "chr_VarP50",
 		"_to": "std_date",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_VarP50",
+		"_to": "chr_SampleSize",
 		"_predicate": "_predicate_requires"
 	},
 	
@@ -1158,6 +1214,11 @@
 		"_to": "std_date",
 		"_predicate": "_predicate_requires"
 	},
+	{
+		"_from": "chr_AvGres",
+		"_to": "chr_SampleSize",
+		"_predicate": "_predicate_requires"
+	},
 	
 	{
 		"_from": "chr_VarGres",
@@ -1172,6 +1233,11 @@
 	{
 		"_from": "chr_VarGres",
 		"_to": "std_date",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_VarGres",
+		"_to": "chr_SampleSize",
 		"_predicate": "_predicate_requires"
 	},
 	
@@ -1201,6 +1267,11 @@
 		"_to": "std_date",
 		"_predicate": "_predicate_requires"
 	},
+	{
+		"_from": "chr_AvCbranch",
+		"_to": "chr_SampleSize",
+		"_predicate": "_predicate_requires"
+	},
 	
 	{
 		"_from": "chr_VarCbranch",
@@ -1215,6 +1286,11 @@
 	{
 		"_from": "chr_VarCbranch",
 		"_to": "std_date",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_VarCbranch",
+		"_to": "chr_SampleSize",
 		"_predicate": "_predicate_requires"
 	},
 	
@@ -1244,6 +1320,11 @@
 		"_to": "std_date",
 		"_predicate": "_predicate_requires"
 	},
+	{
+		"_from": "chr_AvHuberValue",
+		"_to": "chr_SampleSize",
+		"_predicate": "_predicate_requires"
+	},
 	
 	{
 		"_from": "chr_VarHuberValue",
@@ -1258,6 +1339,11 @@
 	{
 		"_from": "chr_VarHuberValue",
 		"_to": "std_date",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_VarHuberValue",
+		"_to": "chr_SampleSize",
 		"_predicate": "_predicate_requires"
 	},
 	
@@ -1268,38 +1354,6 @@
 	},
 	{
 		"_from": "chr_CrownLength",
-		"_to": "std_date",
-		"_predicate": "_predicate_requires"
-	},
-	
-	{
-		"_from": "chr_AvCrownLength",
-		"_to": "gcu_id_number",
-		"_predicate": "_predicate_requires"
-	},
-	{
-		"_from": "chr_AvCrownLength",
-		"_to": "species",
-		"_predicate": "_predicate_requires"
-	},
-	{
-		"_from": "chr_AvCrownLength",
-		"_to": "std_date",
-		"_predicate": "_predicate_requires"
-	},
-	
-	{
-		"_from": "chr_VarCrownLength",
-		"_to": "gcu_id_number",
-		"_predicate": "_predicate_requires"
-	},
-	{
-		"_from": "chr_VarCrownLength",
-		"_to": "species",
-		"_predicate": "_predicate_requires"
-	},
-	{
-		"_from": "chr_VarCrownLength",
 		"_to": "std_date",
 		"_predicate": "_predicate_requires"
 	},
@@ -1341,6 +1395,11 @@
 		"_to": "std_date",
 		"_predicate": "_predicate_requires"
 	},
+	{
+		"_from": "chr_AvSpecLeafArea",
+		"_to": "chr_SampleSize",
+		"_predicate": "_predicate_requires"
+	},
 	
 	{
 		"_from": "chr_VarSpecLeafArea",
@@ -1355,6 +1414,11 @@
 	{
 		"_from": "chr_VarSpecLeafArea",
 		"_to": "std_date",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_VarSpecLeafArea",
+		"_to": "chr_SampleSize",
 		"_predicate": "_predicate_requires"
 	},
 	
@@ -1384,6 +1448,11 @@
 		"_to": "std_date",
 		"_predicate": "_predicate_requires"
 	},
+	{
+		"_from": "chr_AvWoodDensity",
+		"_to": "chr_SampleSize",
+		"_predicate": "_predicate_requires"
+	},
 	
 	{
 		"_from": "chr_VarWoodDensity",
@@ -1398,6 +1467,11 @@
 	{
 		"_from": "chr_VarWoodDensity",
 		"_to": "std_date",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_VarWoodDensity",
+		"_to": "chr_SampleSize",
 		"_predicate": "_predicate_requires"
 	},
 	
@@ -1427,6 +1501,11 @@
 		"_to": "std_date",
 		"_predicate": "_predicate_requires"
 	},
+	{
+		"_from": "chr_AvDieback",
+		"_to": "chr_SampleSize",
+		"_predicate": "_predicate_requires"
+	},
 	
 	{
 		"_from": "chr_VarDieback",
@@ -1441,6 +1520,11 @@
 	{
 		"_from": "chr_VarDieback",
 		"_to": "std_date",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_VarDieback",
+		"_to": "chr_SampleSize",
 		"_predicate": "_predicate_requires"
 	},
 	
@@ -1470,6 +1554,11 @@
 		"_to": "std_date",
 		"_predicate": "_predicate_requires"
 	},
+	{
+		"_from": "chr_AvSapWoodAreaTrunk",
+		"_to": "chr_SampleSize",
+		"_predicate": "_predicate_requires"
+	},
 	
 	{
 		"_from": "chr_VarSapWoodAreaTrunk",
@@ -1486,6 +1575,11 @@
 		"_to": "std_date",
 		"_predicate": "_predicate_requires"
 	},
+	{
+		"_from": "chr_VarSapWoodAreaTrunk",
+		"_to": "chr_SampleSize",
+		"_predicate": "_predicate_requires"
+	},
 	
 	{
 		"_from": "chr_LeafAreaIndex",
@@ -1500,6 +1594,11 @@
 	{
 		"_from": "chr_LeafAreaIndex",
 		"_to": "std_date",
+		"_predicate": "_predicate_requires"
+	},
+	{
+		"_from": "chr_LeafAreaIndex",
+		"_to": "chr_SampleSize",
 		"_predicate": "_predicate_requires"
 	},
 	

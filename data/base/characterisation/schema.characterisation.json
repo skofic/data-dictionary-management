@@ -158,6 +158,31 @@
 	},
 	
 	{
+		"_from": "chr_NaturalRegeneration_0",
+		"_to": "chr_NaturalRegeneration",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr_NaturalRegeneration"]
+	},
+	{
+		"_from": "chr_NaturalRegeneration_1",
+		"_to": "chr_NaturalRegeneration",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr_NaturalRegeneration"]
+	},
+	{
+		"_from": "chr_NaturalRegeneration_2",
+		"_to": "chr_NaturalRegeneration",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr_NaturalRegeneration"]
+	},
+	{
+		"_from": "chr_NaturalRegeneration_3",
+		"_to": "chr_NaturalRegeneration",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr_NaturalRegeneration"]
+	},
+	
+	{
 		"_from": "chr_Dieback_0",
 		"_to": "chr_Dieback",
 		"_predicate": "_predicate_enum-of",
