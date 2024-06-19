@@ -65,8 +65,8 @@
 			"_domain": ["chr_gent"],
 			"_scalar": {
 				"_type": "_type_integer",
-				"_unit_name": "bp",
-				"_unit_symbol": "bp"
+				"_unit-name": "bp",
+				"_unit-symbol": "bp"
 			}
 		}
 	},
@@ -159,8 +159,8 @@
 			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
-				"_unit_name": "Percentage",
-				"_unit_symbol": "%",
+				"_unit-name": "Percentage",
+				"_unit-symbol": "%",
 				"_valid-range": {
 					"_min-range-exclusive": 0.0,
 					"_max-range-exclusive": 100.0

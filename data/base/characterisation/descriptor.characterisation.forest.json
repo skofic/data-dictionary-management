@@ -352,7 +352,7 @@
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit": "_unit_length_m",
-				"_unit_symbol": "m.",
+				"_unit-symbol": "m.",
 				"_valid-range": {
 					"_min-range-exclusive": 0,
 					"_max-range-exclusive": 50
@@ -386,8 +386,8 @@
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 1,
-				"_unit_name": "m2/ha",
-				"_unit_symbol": "m^2/ha",
+				"_unit-name": "m2/ha",
+				"_unit-symbol": "m^2/ha",
 				"_valid-range": {
 					"_min-range-inclusive": 0.0
 				}
@@ -419,8 +419,8 @@
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 1,
-				"_unit_name": "m2/ha",
-				"_unit_symbol": "m^2/ha",
+				"_unit-name": "m2/ha",
+				"_unit-symbol": "m^2/ha",
 				"_valid-range": {
 					"_min-range-inclusive": 0.0
 				}
@@ -452,8 +452,8 @@
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 1,
-				"_unit_name": "m2/ha",
-				"_unit_symbol": "m^2/ha",
+				"_unit-name": "m2/ha",
+				"_unit-symbol": "m^2/ha",
 				"_valid-range": {
 					"_min-range-inclusive": 0.0
 				}

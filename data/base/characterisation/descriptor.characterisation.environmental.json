@@ -74,8 +74,8 @@
 			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
-				"_unit_name": "degrees DMS",
-				"_unit_symbol": "DMS",
+				"_unit-name": "degrees DMS",
+				"_unit-symbol": "DMS",
 				"_valid-range": {
 					"_min-range-exclusive": 0.0,
 					"_max-range-exclusive": 90.0
@@ -105,8 +105,8 @@
 			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
-				"_unit_name": "Degrees DMS",
-				"_unit_symbol": "DMS",
+				"_unit-name": "Degrees DMS",
+				"_unit-symbol": "DMS",
 				"_valid-range": {
 					"_min-range-exclusive": 0.0,
 					"_max-range-exclusive": 360.0
@@ -137,8 +137,8 @@
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 6,
-				"_unit_name": "Decimal degrees",
-				"_unit_symbol": "DD",
+				"_unit-name": "Decimal degrees",
+				"_unit-symbol": "DD",
 				"_valid-range": {
 					"_min-range-inclusive": -90.0,
 					"_max-range-inclusive": 90.0
@@ -168,8 +168,8 @@
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 6,
-				"_unit_name": "Decimal degrees",
-				"_unit_symbol": "DD",
+				"_unit-name": "Decimal degrees",
+				"_unit-symbol": "DD",
 				"_valid-range": {
 					"_min-range-inclusive": -180.0,
 					"_max-range-inclusive": 180.0
@@ -253,8 +253,8 @@
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
-				"_unit_name": "degrees DMS",
-				"_unit_symbol": "DMS",
+				"_unit-name": "degrees DMS",
+				"_unit-symbol": "DMS",
 				"_valid-range": {
 					"_min-range-exclusive": 0.0,
 					"_max-range-exclusive": 90.0
@@ -286,7 +286,7 @@
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
-				"_unit_name": "Grade",
+				"_unit-name": "Grade",
 				"_valid-range": {
 					"_min-range-exclusive": 0.0,
 					"_max-range-exclusive": 400.0
@@ -348,8 +348,8 @@
 			"_array": {
 				"_scalar": {
 					"_type": "_type_number",
-					"_unit_name": "Kelvin",
-					"_unit_symbol": "K"
+					"_unit-name": "Kelvin",
+					"_unit-symbol": "K"
 				}
 			}
 		}
@@ -376,8 +376,8 @@
 			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
-				"_unit_name": "Degrees Centigrades/year",
-				"_unit_symbol": "°C/year"
+				"_unit-name": "Degrees Centigrades/year",
+				"_unit-symbol": "°C/year"
 			}
 		}
 	},
@@ -403,7 +403,7 @@
 			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
-				"_unit_name": "°C"
+				"_unit-name": "°C"
 			}
 		}
 	},
@@ -432,8 +432,8 @@
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
-				"_unit_name": "Degrees Centigrades/year",
-				"_unit_symbol": "°C/year",
+				"_unit-name": "Degrees Centigrades/year",
+				"_unit-symbol": "°C/year",
 				"_valid-range": {
 					"_min-range-inclusive": -1.0,
 					"_max-range-inclusive": 1.0
@@ -582,8 +582,8 @@
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
-				"_unit_name": "m^2 Leaf/m^2 soil",
-				"_unit_symbol": "m2 Leaf/m2 soil",
+				"_unit-name": "m^2 Leaf/m^2 soil",
+				"_unit-symbol": "m2 Leaf/m2 soil",
 				"_valid-range": {
 					"_min-range-inclusive": 0
 				}
@@ -615,8 +615,8 @@
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
-				"_unit_name": "m^2 Leaf/m^2 soil/month",
-				"_unit_symbol": "m2 Leaf/m2 soil/month"
+				"_unit-name": "m^2 Leaf/m^2 soil/month",
+				"_unit-symbol": "m2 Leaf/m2 soil/month"
 			}
 		}
 	},
@@ -642,8 +642,8 @@
 			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
-				"_unit_name": "m^2 Leaf/m^2 soil",
-				"_unit_symbol": "m2 Leaf/m2 soil"
+				"_unit-name": "m^2 Leaf/m^2 soil",
+				"_unit-symbol": "m2 Leaf/m2 soil"
 			}
 		}
 	},
@@ -672,8 +672,8 @@
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
-				"_unit_name": "m^2 Leaf/m^2 soil",
-				"_unit_symbol": "m2 Leaf/m2 soil",
+				"_unit-name": "m^2 Leaf/m^2 soil",
+				"_unit-symbol": "m2 Leaf/m2 soil",
 				"_valid-range": {
 					"_min-range-inclusive": 0
 				}
@@ -706,8 +706,8 @@
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
-				"_unit_name": "kg of C/m2/day",
-				"_unit_symbol": "kg of C/m2/day",
+				"_unit-name": "kg of C/m2/day",
+				"_unit-symbol": "kg of C/m2/day",
 				"_valid-range": {
 					"_min-range-inclusive": 0
 				}
@@ -739,8 +739,8 @@
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
-				"_unit_name": "kg of C/m2/day/month",
-				"_unit_symbol": "kg of C/m2/day/month"
+				"_unit-name": "kg of C/m2/day/month",
+				"_unit-symbol": "kg of C/m2/day/month"
 			}
 		}
 	},
@@ -769,8 +769,8 @@
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
-				"_unit_name": "kg of C/m2/year",
-				"_unit_symbol": "kg of C/m2/year",
+				"_unit-name": "kg of C/m2/year",
+				"_unit-symbol": "kg of C/m2/year",
 				"_valid-range": {
 					"_min-range-inclusive": 0
 				}
@@ -799,8 +799,8 @@
 			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
-				"_unit_name": "kg/m2/year",
-				"_unit_symbol": "kg/m^2"
+				"_unit-name": "kg/m2/year",
+				"_unit-symbol": "kg/m^2"
 			}
 		}
 	},
@@ -826,8 +826,8 @@
 			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
-				"_unit_name": "kg/m2/year",
-				"_unit_symbol": "kg/m^2"
+				"_unit-name": "kg/m2/year",
+				"_unit-symbol": "kg/m^2"
 			}
 		}
 	},
@@ -977,8 +977,8 @@
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
-				"_unit_name": "t/ha",
-				"_unit_symbol": "t/ha",
+				"_unit-name": "t/ha",
+				"_unit-symbol": "t/ha",
 				"_valid-range": {
 					"_min-range-inclusive": 0
 				}
@@ -1010,8 +1010,8 @@
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
-				"_unit_name": "t/ha/year",
-				"_unit_symbol": "t/ha/year"
+				"_unit-name": "t/ha/year",
+				"_unit-symbol": "t/ha/year"
 			}
 		}
 	},
@@ -1154,8 +1154,8 @@
 			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
-				"_unit_name": "Percentage",
-				"_unit_symbol": "%",
+				"_unit-name": "Percentage",
+				"_unit-symbol": "%",
 				"_valid-range": {
 					"_min-range-exclusive": 0.0,
 					"_max-range-exclusive": 100.0
@@ -1182,8 +1182,8 @@
 			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
-				"_unit_name": "Percentage",
-				"_unit_symbol": "%",
+				"_unit-name": "Percentage",
+				"_unit-symbol": "%",
 				"_valid-range": {
 					"_min-range-exclusive": 0.0,
 					"_max-range-exclusive": 100.0

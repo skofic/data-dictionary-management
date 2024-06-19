@@ -69,8 +69,8 @@
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 6,
-				"_unit_name": "Decimal degrees",
-				"_unit_symbol": "DD",
+				"_unit-name": "Decimal degrees",
+				"_unit-symbol": "DD",
 				"_valid-range": {
 					"_min-range-inclusive": 0.0,
 					"_max-range-inclusive": 90.0

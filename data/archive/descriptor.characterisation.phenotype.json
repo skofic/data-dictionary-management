@@ -186,7 +186,7 @@
 			"_subject": "tree",
 			"_scalar": {
 				"_type": "_type_number",
-				"_unit_name": "% or 100*g g-1"
+				"_unit-name": "% or 100*g g-1"
 			}
 		}
 	},
@@ -213,7 +213,7 @@
 			"_subject": "tree",
 			"_scalar": {
 				"_type": "_type_number",
-				"_unit_name": "% or 100*g g-1",
+				"_unit-name": "% or 100*g g-1",
 				"_valid-range": {
 					"_min-range-exclusive": 0.0,
 					"_max-range-exclusive": 5.0
@@ -240,7 +240,7 @@
 			"_subject": "tree",
 			"_scalar": {
 				"_type": "_type_number",
-				"_unit_name": "% or 100*g g-1"
+				"_unit-name": "% or 100*g g-1"
 			}
 		}
 	},
@@ -267,7 +267,7 @@
 			"_subject": "tree",
 			"_scalar": {
 				"_type": "_type_number",
-				"_unit_name": "per mil or 1000 g g-1",
+				"_unit-name": "per mil or 1000 g g-1",
 				"_valid-range": {
 					"_min-range-exclusive": -40.0,
 					"_max-range-exclusive": 0.0
@@ -294,7 +294,7 @@
 			"_subject": "tree",
 			"_scalar": {
 				"_type": "_type_number",
-				"_unit_name": "per mil or 1000 g g-1"
+				"_unit-name": "per mil or 1000 g g-1"
 			}
 		}
 	},
@@ -321,7 +321,7 @@
 			"_subject": "tree",
 			"_scalar": {
 				"_type": "_type_number",
-				"_unit_name": "per mil or 1000 g g-1",
+				"_unit-name": "per mil or 1000 g g-1",
 				"_valid-range": {
 					"_min-range-exclusive": -40.0,
 					"_max-range-exclusive": 0.0
@@ -348,7 +348,7 @@
 			"_subject": "tree",
 			"_scalar": {
 				"_type": "_type_number",
-				"_unit_name": "per mil or 1000 g g-1"
+				"_unit-name": "per mil or 1000 g g-1"
 			}
 		}
 	},
@@ -375,7 +375,7 @@
 			"_subject": "tree",
 			"_scalar": {
 				"_type": "_type_number",
-				"_unit_name": "per mil or 1000 g g-1",
+				"_unit-name": "per mil or 1000 g g-1",
 				"_valid-range": {
 					"_min-range-exclusive": -20.0,
 					"_max-range-exclusive": 20.0
@@ -402,7 +402,7 @@
 			"_subject": "tree",
 			"_scalar": {
 				"_type": "_type_number",
-				"_unit_name": "per mil or 1000 g g-1"
+				"_unit-name": "per mil or 1000 g g-1"
 			}
 		}
 	},
@@ -429,7 +429,7 @@
 			"_subject": "tree",
 			"_scalar": {
 				"_type": "_type_number",
-				"_unit_name": "g g-1",
+				"_unit-name": "g g-1",
 				"_valid-range": {
 					"_min-range-exclusive": 0.0,
 					"_max-range-exclusive": 1000.0
@@ -456,7 +456,7 @@
 			"_subject": "tree",
 			"_scalar": {
 				"_type": "_type_number",
-				"_unit_name": "g g-1"
+				"_unit-name": "g g-1"
 			}
 		}
 	},
@@ -483,7 +483,7 @@
 			"_subject": "tree",
 			"_scalar": {
 				"_type": "_type_number",
-				"_unit_name": "g cm-3",
+				"_unit-name": "g cm-3",
 				"_valid-range": {
 					"_min-range-exclusive": 0.1,
 					"_max-range-exclusive": 1.0
@@ -510,7 +510,7 @@
 			"_subject": "tree",
 			"_scalar": {
 				"_type": "_type_number",
-				"_unit_name": "g cm-3"
+				"_unit-name": "g cm-3"
 			}
 		}
 	},
