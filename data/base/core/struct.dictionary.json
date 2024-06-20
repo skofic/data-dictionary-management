@@ -70,6 +70,37 @@
 	
 	{
 		"_from": "_key",
+		"_to": "_term_descriptor-object",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_term_object"]
+	},
+	{
+		"_from": "_code",
+		"_to": "_term_descriptor-object",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_term_object"]
+	},
+	{
+		"_from": "_info",
+		"_to": "_term_descriptor-object",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_term_object"]
+	},
+	{
+		"_from": "_data",
+		"_to": "_term_descriptor-object",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_term_object"]
+	},
+	{
+		"_from": "_rule",
+		"_to": "_term_descriptor-object",
+		"_predicate": "_predicate_property-of",
+		"_path": ["_term_object"]
+	},
+	
+	{
+		"_from": "_key",
 		"_to": "_edge",
 		"_predicate": "_predicate_property-of",
 		"_path": ["_edge"]
