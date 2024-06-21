@@ -232,7 +232,7 @@
 		"_code": {
 			"_nid": "_type_object",
 			"_lid": "geo-json",
-			"_gid": "_type_object_geo-json",
+			"_gid": "_type_object_geojson",
 			"_aid": ["geo-json"]
 		},
 		"_info": {

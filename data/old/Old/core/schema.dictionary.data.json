@@ -117,7 +117,7 @@
 		"_path": ["_type"]
 	},
 	{
-		"_from": "_type_object_geo-json",
+		"_from": "_type_object_geojson",
 		"_to": "_type_object",
 		"_predicate": "_predicate_enum-of",
 		"_path": ["_type"]

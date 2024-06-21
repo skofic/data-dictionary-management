@@ -21,14 +21,6 @@
       "fields": {
         "_code": {
           "fields": {
-            "_name": {
-              "analyzers": [
-                "identity",
-                "text_en"
-              ]
-            },
-            "_aid": {},
-            "_nid": {},
             "_gid": {
               "analyzers": [
                 "identity",
@@ -41,44 +33,45 @@
                 "text_en"
               ]
             },
-            "_pid": {
-              "analyzers": [
-                "identity",
-                "text_en"
-              ]
-            }
-          }
-        },
-        "_data": {
-          "fields": {
-            "_class": {},
-            "_domain": {},
-            "_tag": {
+            "_name": {
               "analyzers": [
                 "identity",
                 "text_en"
               ]
             },
-            "_subject": {},
-            "_dict": {
-              "fields": {
-                "_dict_key": {
-                  "fields": {
-                    "_class": {}
-                  }
-                },
-                "_dict_value": {
-                  "fields": {
-                    "_class": {}
-                  }
-                }
-              }
-            }
+            "_nid": {},
+            "_pid": {
+              "analyzers": [
+                "identity",
+                "text_en"
+              ]
+            },
+            "_aid": {}
           }
         },
         "_info": {
           "fields": {
+            "_notes": {
+              "fields": {
+                "iso_639_3_eng": {
+                  "analyzers": [
+                    "text_en",
+                    "identity"
+                  ]
+                }
+              }
+            },
             "_examples": {
+              "fields": {
+                "iso_639_3_eng": {
+                  "analyzers": [
+                    "text_en",
+                    "identity"
+                  ]
+                }
+              }
+            },
+            "_definition": {
               "fields": {
                 "iso_639_3_eng": {
                   "analyzers": [
@@ -104,26 +97,6 @@
                 }
               }
             },
-            "_notes": {
-              "fields": {
-                "iso_639_3_eng": {
-                  "analyzers": [
-                    "text_en",
-                    "identity"
-                  ]
-                }
-              }
-            },
-            "_definition": {
-              "fields": {
-                "iso_639_3_eng": {
-                  "analyzers": [
-                    "text_en",
-                    "identity"
-                  ]
-                }
-              }
-            },
             "_title": {
               "fields": {
                 "iso_639_3_eng": {
@@ -132,6 +105,53 @@
                     "identity"
                   ]
                 }
+              }
+            }
+          }
+        },
+        "_data": {
+          "fields": {
+            "_class": {},
+            "_dict": {
+              "fields": {
+                "_dict_key": {
+                  "fields": {
+                    "_class": {}
+                  }
+                },
+                "_dict_value": {
+                  "fields": {
+                    "_class": {}
+                  }
+                }
+              }
+            },
+            "_subject": {},
+            "_domain": {},
+            "_tag": {
+              "analyzers": [
+                "identity",
+                "text_en"
+              ]
+            }
+          }
+        },
+        "_rule": {
+          "fields": {
+            "_required": {
+              "fields": {
+                "_selection-descriptors_any": {},
+                "_selection-descriptors_one": {},
+                "_selection-descriptors_all": {}
+              }
+            },
+            "_banned": {},
+            "_computed": {},
+            "_recomended": {
+              "fields": {
+                "_selection-descriptors_any": {},
+                "_selection-descriptors_one": {},
+                "_selection-descriptors_all": {}
               }
             }
           }

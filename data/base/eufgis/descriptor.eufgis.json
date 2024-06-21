@@ -315,7 +315,7 @@
 		},
 		"_data": {
 			"_scalar": {
-				"_type": "_type_object_geo-json"
+				"_type": "_type_object_geojson"
 			}
 		}
 	},
@@ -334,7 +334,7 @@
 		},
 		"_data": {
 			"_scalar": {
-				"_type": "_type_object_geo-json"
+				"_type": "_type_object_geojson"
 			}
 		}
 	},

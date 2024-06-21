@@ -193,7 +193,7 @@
 			"_domain": ["chr_envi"],
 			"_subject": "chr_subject_stand",
 			"_scalar": {
-				"_type": "_type_object_geo-json"
+				"_type": "_type_object_geojson"
 			}
 		}
 	},

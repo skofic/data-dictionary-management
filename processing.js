@@ -383,6 +383,13 @@ async function ValidateDescriptors(db)
 		)
 
 	//
+	// Create transport.
+	//
+	const transport = axios.create({
+		withCredentials: true
+	})
+
+	//
 	// Get cursor.
 	//
 	console.log(`==> Querying all descriptors`)
@@ -392,13 +399,6 @@ async function ValidateDescriptors(db)
 			LIMIT ${page_records}, ${kPriv.user.db.page_records}
 		RETURN term
 	`)
-
-	//
-	// Create transport.
-	//
-	const transport = axios.create({
-		withCredentials: true
-	})
 
 	//
 	// Turn pages.
