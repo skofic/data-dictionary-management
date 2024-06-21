@@ -85,6 +85,7 @@ async function main()
 		console.log("============================")
 		// result = await process.ValidateDocuments(db)
 		result = await process.ValidateDescriptors(db)
+		console.log("==> TOTAL:")
 		console.log(result)
 
 	} // TRY BLOCK

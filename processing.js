@@ -355,7 +355,6 @@ async function ValidateDocuments(db)
  */
 async function ValidateDescriptors(db)
 {
-
 	//
 	// Init local storage.
 	//
@@ -371,6 +370,8 @@ async function ValidateDescriptors(db)
 	const host = kPriv.user.db.host
 	const database = kPriv.user.db.name
 	const url = `${host}/_db/${database}/dict/check/objects`
+	let current = {}
+	let query
 
 	//
 	// Login.
@@ -388,6 +389,48 @@ async function ValidateDescriptors(db)
 	const transport = axios.create({
 		withCredentials: true
 	})
+
+	///
+	// Get descriptors and objects.
+	///
+	console.log(`==> Querying all descriptors and object types`)
+	current = await ValidationQuery(db,transport, cookie, aql`FOR term IN VIEW_TERM SEARCH EXISTS(term._data) AND EXISTS(term._rule)`)
+	result.processed += current.processed
+	result.valid += current.valid
+	result.errors += current.errors
+	result.warnings += current.warnings
+
+	///
+	// Get descriptors.
+	///
+	console.log(`==> Querying all descriptors`)
+	current = await ValidationQuery(db,transport, cookie, aql`FOR term IN VIEW_TERM SEARCH EXISTS(term._data) AND NOT(EXISTS(term._rule))`)
+	result.processed += current.processed
+	result.valid += current.valid
+	result.errors += current.errors
+	result.warnings += current.warnings
+
+	///
+	// Get objects.
+	///
+	console.log(`==> Querying all object types`)
+	current = await ValidationQuery(db,transport, cookie, aql`FOR term IN VIEW_TERM SEARCH EXISTS(term._rule) AND NOT(EXISTS(term._data))`)
+	result.processed += current.processed
+	result.valid += current.valid
+	result.errors += current.errors
+	result.warnings += current.warnings
+
+	///
+	// Get terms.
+	///
+	console.log(`==> Querying all terms`)
+	current = await ValidationQuery(db,transport, cookie, aql`FOR term IN VIEW_TERM SEARCH NOT(EXISTS(term._rule) OR EXISTS(term._data))`)
+	result.processed += current.processed
+	result.valid += current.valid
+	result.errors += current.errors
+	result.warnings += current.warnings
+
+	return result
 
 	//
 	// Get cursor.
@@ -623,6 +666,136 @@ async function ValidateTopos(db) {
 /********************************************************************************/
 /* FUNCTIONS AND UTILITIES SECTION												*/
 /********************************************************************************/
+
+/**
+ * Perform validation queries
+ * This function will accept a query that retrieves a set of terms and will
+ * perform repeated paged queries validating all retrieved records.
+ * It is assumed that the queries return a set of terms.
+ *
+ * @param db: Database connection.
+ * @param theTransport: Axios transport.
+ * @param theCookie: Session cookie.
+ * @param theQuery: AQL start fragment.
+ *
+ * @return {Promise<{valid: number, processed: number, warnings: number, errors: number}>}
+ * @constructor
+ */
+async function ValidationQuery(db, theTransport, theCookie, theQuery)
+{
+	//
+	// Init local storage.
+	//
+	let processed = 0
+	let page_records = 0
+	let result = {
+		processed: 0,
+		valid: 0,
+		warnings: 0,
+		errors: 0
+	}
+
+	const host = kPriv.user.db.host
+	const database = kPriv.user.db.name
+	const url = `${host}/_db/${database}/dict/check/objects`
+
+	//
+	// Get cursor.
+	//
+	const cursor =
+			await db.query(
+				aql.join([
+					theQuery,
+					aql`LIMIT ${page_records}, ${kPriv.user.db.page_records} RETURN term`
+				])
+			)
+	let records = await cursor.all()
+
+	//
+	// Turn pages.
+	//
+	while(records.length > 0) {
+
+		//
+		// Create data payload.
+		//
+		const postData = {
+			value: records,
+			language: 'iso_639_3_eng'
+		}
+
+		//
+		// Validate.
+		//
+		const response =
+			await theTransport.post(
+				url,
+				postData,
+				{
+					withCredentials: true,
+					headers: {
+						'Content-Type': 'application/json; charset=utf-8',
+						Cookie: theCookie
+					}
+				}
+			)
+
+		if(response.status !== 200) {
+			throw Error(`(${response.status}) - ${response.statusText}`)
+		}
+
+		//
+		// Handle valid records.
+		//
+		if(response.data.hasOwnProperty('valid')) {
+			result.valid += response.data.valid.length
+			result.processed += response.data.valid.length
+		}
+
+		//
+		// Handle warnings.
+		//
+		if(response.data.hasOwnProperty('warnings')) {
+			result.warnings += response.data.warnings.length
+			result.processed += response.data.warnings.length
+			for(const item of response.data.warnings) {
+				db.collection(kDb.collection_errors).save({ warning: item })
+			}
+		}
+
+		//
+		// Handle errors.
+		//
+		if(response.data.hasOwnProperty('errors')) {
+			result.errors += response.data.errors.length
+			result.processed += response.data.errors.length
+			for(const item of response.data.errors) {
+				db.collection(kDb.collection_errors).save({ error: item })
+			}
+		}
+
+		console.log(result)
+
+		//
+		// Get next page.
+		//
+		page_records += kPriv.user.db.page_records
+		const cursor =
+			await db.query(
+				aql.join([
+					theQuery,
+					aql`LIMIT ${page_records}, ${kPriv.user.db.page_records} RETURN term `
+				])
+			)
+		records = await cursor.all()
+
+	} // Page not empty.
+
+	// console.log(`Processed ${processed} terms.`)
+
+	return result																// ==>
+
+} // ValidationQuery()
 
 /**
  * Load ISO 639-1 standard.
