@@ -358,8 +358,8 @@ async function ValidateDescriptors(db)
 	//
 	// Init local storage.
 	//
-	let processed = 0
-	let page_records = 0
+	// let processed = 0
+	// let page_records = 0
 	let result = {
 		processed: 0,
 		valid: 0,
@@ -367,11 +367,10 @@ async function ValidateDescriptors(db)
 		errors: 0
 	}
 
-	const host = kPriv.user.db.host
-	const database = kPriv.user.db.name
-	const url = `${host}/_db/${database}/dict/check/objects`
+	// const host = kPriv.user.db.host
+	// const database = kPriv.user.db.name
+	// const url = `${host}/_db/${database}/dict/check/objects`
 	let current = {}
-	let query
 
 	//
 	// Login.
@@ -430,100 +429,98 @@ async function ValidateDescriptors(db)
 	result.errors += current.errors
 	result.warnings += current.warnings
 
-	return result
-
+	// //
+	// // Get cursor.
+	// //
+	// console.log(`==> Querying all descriptors`)
+	// const cursor = await db.query(aql`
+	// 	FOR term IN ${db.collection(kDb.collection_terms)}
+	// 		FILTER HAS(term, "_data")
+	// 		LIMIT ${page_records}, ${kPriv.user.db.page_records}
+	// 	RETURN term
+	// `)
 	//
-	// Get cursor.
+	// //
+	// // Turn pages.
+	// //
+	// console.log(`==> Iterating all descriptors`)
+	// let records = await cursor.all()
+	// while(records.length > 0) {
 	//
-	console.log(`==> Querying all descriptors`)
-	const cursor = await db.query(aql`
-		FOR term IN ${db.collection(kDb.collection_terms)}
-			FILTER HAS(term, "_data")
-			LIMIT ${page_records}, ${kPriv.user.db.page_records}
-		RETURN term
-	`)
-
+	// 	//
+	// 	// Create data payload.
+	// 	//
+	// 	const postData = {
+	// 		value: records,
+	// 		language: 'iso_639_3_eng'
+	// 	}
 	//
-	// Turn pages.
+	// 	//
+	// 	// Validate.
+	// 	//
+	// 	const response =
+	// 		await transport.post(
+	// 			url,
+	// 			postData,
+	// 			{
+	// 				withCredentials: true,
+	// 				headers: {
+	// 					'Content-Type': 'application/json; charset=utf-8',
+	// 					Cookie: cookie
+	// 				}
+	// 			}
+	// 		)
 	//
-	console.log(`==> Iterating all descriptors`)
-	let records = await cursor.all()
-	while(records.length > 0) {
-
-		//
-		// Create data payload.
-		//
-		const postData = {
-			value: records,
-			language: 'iso_639_3_eng'
-		}
-
-		//
-		// Validate.
-		//
-		const response =
-			await transport.post(
-				url,
-				postData,
-				{
-					withCredentials: true,
-					headers: {
-						'Content-Type': 'application/json; charset=utf-8',
-						Cookie: cookie
-					}
-				}
-			)
-
-		if(response.status !== 200) {
-			throw Error(`(${response.status}) - ${response.statusText}`)
-		}
-
-		//
-		// Handle valid records.
-		//
-		if(response.data.hasOwnProperty('valid')) {
-			result.valid += response.data.valid.length
-			result.processed += response.data.valid.length
-		}
-
-		//
-		// Handle warnings.
-		//
-		if(response.data.hasOwnProperty('warnings')) {
-			result.warnings += response.data.warnings.length
-			result.processed += response.data.warnings.length
-			for(const item of response.data.warnings) {
-				db.collection(kDb.collection_errors).save({ warning: item })
-			}
-		}
-
-		//
-		// Handle errors.
-		//
-		if(response.data.hasOwnProperty('errors')) {
-			result.errors += response.data.errors.length
-			result.processed += response.data.errors.length
-			for(const item of response.data.errors) {
-				db.collection(kDb.collection_errors).save({ error: item })
-			}
-		}
-
-		console.log(result)
-
-		//
-		// Get next page.
-		//
-		page_records += kPriv.user.db.page_records
-		const cursor = await db.query(aql`
-			FOR term IN ${db.collection(kDb.collection_terms)}
-			LIMIT ${page_records}, ${kPriv.user.db.page_records}
-			RETURN term
-		`)
-		records = await cursor.all()
-
-	} // Page not empty.
-
-	console.log(`Processed ${processed} terms.`)
+	// 	if(response.status !== 200) {
+	// 		throw Error(`(${response.status}) - ${response.statusText}`)
+	// 	}
+	//
+	// 	//
+	// 	// Handle valid records.
+	// 	//
+	// 	if(response.data.hasOwnProperty('valid')) {
+	// 		result.valid += response.data.valid.length
+	// 		result.processed += response.data.valid.length
+	// 	}
+	//
+	// 	//
+	// 	// Handle warnings.
+	// 	//
+	// 	if(response.data.hasOwnProperty('warnings')) {
+	// 		result.warnings += response.data.warnings.length
+	// 		result.processed += response.data.warnings.length
+	// 		for(const item of response.data.warnings) {
+	// 			db.collection(kDb.collection_errors).save({ warning: item })
+	// 		}
+	// 	}
+	//
+	// 	//
+	// 	// Handle errors.
+	// 	//
+	// 	if(response.data.hasOwnProperty('errors')) {
+	// 		result.errors += response.data.errors.length
+	// 		result.processed += response.data.errors.length
+	// 		for(const item of response.data.errors) {
+	// 			db.collection(kDb.collection_errors).save({ error: item })
+	// 		}
+	// 	}
+	//
+	// 	console.log(result)
+	//
+	// 	//
+	// 	// Get next page.
+	// 	//
+	// 	page_records += kPriv.user.db.page_records
+	// 	const cursor = await db.query(aql`
+	// 		FOR term IN ${db.collection(kDb.collection_terms)}
+	// 		LIMIT ${page_records}, ${kPriv.user.db.page_records}
+	// 		RETURN term
+	// 	`)
+	// 	records = await cursor.all()
+	//
+	// } // Page not empty.
+	//
+	// console.log(`Processed ${processed} terms.`)
 
 	return result																// ==>
 
