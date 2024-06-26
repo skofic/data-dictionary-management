@@ -19,6 +19,12 @@
 					"_code",
 					"_info"
 				]
+			},
+			"_recommended": {
+				"_selection-descriptors_any": [
+					"_data",
+					"_rule"
+				]
 			}
 		}
 	},
@@ -43,6 +49,11 @@
 					"_info",
 					"_data"
 				]
+			},
+			"_recommended": {
+				"_selection-descriptors_any": [
+					"_rule"
+				]
 			}
 		}
 	},
@@ -66,6 +77,11 @@
 					"_code",
 					"_info",
 					"_rule"
+				]
+			},
+			"_recommended": {
+				"_selection-descriptors_any": [
+					"_data"
 				]
 			}
 		}

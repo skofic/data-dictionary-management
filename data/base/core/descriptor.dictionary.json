@@ -26,6 +26,14 @@
 					"_aid"
 				]
 			},
+			"_recommended": {
+				"_selection-descriptors_any": [
+					"_nid",
+					"_pid",
+					"_name",
+					"_regexp"
+				]
+			},
 			"_computed": [
 				"_gid"
 			]
@@ -52,11 +60,20 @@
 			}
 		},
 		"_rule": {
-			"_recommended": {
+			"_required": {
 				"_selection-descriptors_all": [
-					"_title",
+					"_title"
+				]
+			},
+			"_recommended": {
+				"_selection-descriptors_any": [
 					"_definition",
-					"_description"
+					"_description",
+					"_examples",
+					"_notes",
+					"_url",
+					"_citation",
+					"_provider"
 				]
 			}
 		}
@@ -89,6 +106,14 @@
 					"_set",
 					"_dict"
 				]
+			},
+			"_recommended": {
+				"_selection-descriptors_any": [
+					"_subject",
+					"_class",
+					"_domain",
+					"_tag"
+				]
 			}
 		}
 	},
@@ -115,7 +140,11 @@
 		"_rule": {
 			"_recommended": {
 				"_selection-descriptors_any": [
-					"_recommended"
+					"_required",
+					"_recommended",
+					"_banned",
+					"_computed",
+					"_default-value"
 				]
 			}
 		}

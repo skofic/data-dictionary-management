@@ -20,8 +20,22 @@
 		},
 		"_rule": {
 			"_required": {
-				"_selection-descriptors_all": [
+				"_selection-descriptors_one-none": [
 					"_type"
+				]
+			},
+			"_recommended": {
+				"_selection-descriptors_any": [
+					"_kind",
+					"_format",
+					"_unit",
+					"_unit-name",
+					"_unit-symbol",
+					"_regexp",
+					"_decimals",
+					"_range",
+					"_valid-range",
+					"_normal-range"
 				]
 			},
 			"_banned": [
@@ -29,12 +43,7 @@
 				"_array",
 				"_set",
 				"_dict"
-			],
-			"_recommended": {
-				"_selection-descriptors_all": [
-					"_class"
-				]
-			}
+			]
 		}
 	},
 	{
@@ -64,6 +73,11 @@
 					"_set",
 					"_dict"
 				]
+			},
+			"_recommended": {
+				"_selection-descriptors_any": [
+					"_elements"
+				]
 			}
 		}
 	},
@@ -90,6 +104,11 @@
 			"_required": {
 				"_selection-descriptors_one-none": [
 					"_set_scalar"
+				]
+			},
+			"_recommended": {
+				"_selection-descriptors_any": [
+					"_elements"
 				]
 			},
 			"_banned": [
@@ -160,18 +179,25 @@
 					"_set_type"
 				]
 			},
+			"_recommended": {
+				"_selection-descriptors_any": [
+					"_kind",
+					"_format",
+					"_unit",
+					"_unit-name",
+					"_regexp",
+					"_range",
+					"_valid-range",
+					"_normal-range"
+				]
+			},
 			"_banned": [
 				"_type",
 				"_scalar",
 				"_array",
 				"_set",
 				"_dict"
-			],
-			"_recommended": {
-				"_selection-descriptors_all": [
-					"_class"
-				]
-			}
+			]
 		}
 	},
 
@@ -200,14 +226,18 @@
 					"_type_key"
 				]
 			},
+			"_recommended": {
+				"_selection-descriptors_any": [
+					"_kind",
+					"_format",
+					"_unit",
+					"_unit-name",
+					"_regexp"
+				]
+			},
 			"_banned": [
 				"_type"
-			],
-			"_recommended": {
-				"_selection-descriptors_all": [
-					"_class"
-				]
-			}
+			]
 		}
 	},
 	{

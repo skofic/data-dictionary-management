@@ -48,8 +48,7 @@
         "_data": {
             "_class": "_class_identifier",
             "_scalar": {
-                "_type": "_type_string",
-                "_regexp": "^[🇦-🇿]{2}$"
+                "_type": "_type_string"
             }
         }
     },
@@ -417,6 +416,14 @@
 					"chr_MarkerType",
 					"chr_GenoTech"
 				]
+			},
+			"_recommended": {
+				"_selection-descriptors_all": [
+					"species",
+					"chr_GenIndex",
+					"chr_MarkerType",
+					"chr_GenoTech"
+				]
 			}
 		}
     },
@@ -695,7 +702,9 @@
         "_data": {
             "_class": "_class_time",
             "_array": {
-                "_scalar": {"_type": "_type_object"}
+                "_scalar": {
+                	"_type": "_type_object"
+                }
             }
         }
     },

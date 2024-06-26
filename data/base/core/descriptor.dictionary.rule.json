@@ -97,10 +97,7 @@
 			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"my_number\": 12,\n\t\"my_label\": \"default label\",\n\t\"my_list\": [1, 2, 3]\n}\n```\n\nThis will set:\n\n- `my_number` to 12.\n- `my_label` to `\"default label\"`.\n- `my_list` to `1`, `2` and `3`."}
 		},
 		"_data": {
-			"_scalar": {
-				"_type": "_type_object",
-				"_kind": ["_any-object"]
-			}
+			"_scalar": {}
 		}
 	},
 	
