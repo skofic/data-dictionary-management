@@ -2354,11 +2354,11 @@ function CreateIso3166_2_edges(items) {
 		//
 		// Check if buffered.
 		//
-		if(kGlob.globals.res.terms.hasOwnProperty(item['code'])) {
-
+		if(kGlob.globals.res.terms.hasOwnProperty(item['code']))
+		{
 			//
 			// Init local storage.
-			//\
+			//
 			const code = item['code'].slice(0, 2)
 			const term = kGlob.globals.res.terms[item['code']]
 
@@ -2378,14 +2378,17 @@ function CreateIso3166_2_edges(items) {
 			//
 			// Handle connection to other subdivision.
 			//
-			if(item.hasOwnProperty('parent') && (item['parent'].length > 0)) {
-
+			if(item.hasOwnProperty('parent') && (item['parent'].length > 0))
+			{
 				//
 				// Check parent.
 				//
-				const plid = code + '-' + item['parent']
-				if(kGlob.globals.res.terms.hasOwnProperty(plid)) {
-
+				const plid = (item['parent'].slice(0, 3) == `${code}-`)
+						   ? item['parent']
+						   : code + '-' + item['parent']
+				// const plid = code + '-' + item['parent']
+				if(kGlob.globals.res.terms.hasOwnProperty(plid))
+				{
 					//
 					// Get parent.
 					//
@@ -2418,8 +2421,8 @@ function CreateIso3166_2_edges(items) {
 					// for path 'iso_3166_2_type' and 'enum' predicate.
 					//
 					const hash = term.iso_3166_2_type + ',' + parent.iso_3166_2_type
-					if(! dict.has(hash)) {
-
+					if(! dict.has(hash))
+					{
 						dict.add(hash)
 
 						kGlob.globals.res.edges.push({
@@ -2438,8 +2441,8 @@ function CreateIso3166_2_edges(items) {
 			//
 			// Handle connection to country.
 			//
-			else {
-
+			else
+			{
 				//
 				// Get country.
 				// We check this when we add terms.
@@ -2475,8 +2478,8 @@ function CreateIso3166_2_edges(items) {
 				// for path 'iso_3166_2_type' and 'enum' predicate.
 				//
 				const hash = term.iso_3166_2_type + ',' + 'iso_3166_2_type'
-				if(! dict.has(hash)) {
-
+				if(! dict.has(hash))
+				{
 					dict.add(hash)
 
 					kGlob.globals.res.edges.push({
@@ -2491,8 +2494,8 @@ function CreateIso3166_2_edges(items) {
 				//
 				// Connect country to enumeration root.
 				//
-				if(! countries.has(country)) {
-
+				if(! countries.has(country))
+				{
 					countries.add(country)
 
 					kGlob.globals.res.edges.push({
@@ -3455,7 +3458,7 @@ function ProcessCountrySubdivisionType(name) {
 
 		return processed															// ==>
 
-	} // Npt empty.
+	} // Not empty.
 
 	return name																		// ==>
 
