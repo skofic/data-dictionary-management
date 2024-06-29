@@ -314,7 +314,6 @@
 		"_data": {
 			"_class": "_class_category",
 			"_domain": ["chr_envi"],
-			"_subject": "chr_subject_stand",
 			"_subject": "chr_subject_GCU",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
