@@ -19,10 +19,20 @@
         "identity"
       ],
       "fields": {
-        "gcu_id_number": {},
-        "chr_tree_code": {},
         "std_date": {},
         "std_dataset_id": {},
+        "gcu_id_number": {
+          "analyzers": [
+            "text_en",
+            "identity"
+          ]
+        },
+        "chr_tree_code": {},
+        "geometry": {
+          "analyzers": [
+            "geojson"
+          ]
+        },
         "species": {
           "analyzers": [
             "text_en",

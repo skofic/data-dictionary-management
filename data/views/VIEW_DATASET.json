@@ -19,9 +19,41 @@
         "identity"
       ],
       "fields": {
+        "_key": {},
+        "std_project": {},
+        "std_dataset": {},
+        "std_dataset_group": {},
+        "std_date_end": {},
+        "std_date_start": {},
+        "std_date_submission": {},
         "count": {},
-        "std_terms_quant": {},
+        "_collection": {},
+        "_subject": {},
+        "_subjects": {},
+        "_classes": {},
+        "_domain": {},
+        "_tag": {},
+        "_title": {
+          "fields": {
+            "iso_639_3_eng": {
+              "analyzers": [
+                "text_en",
+                "identity"
+              ]
+            }
+          }
+        },
         "_description": {
+          "fields": {
+            "iso_639_3_eng": {
+              "analyzers": [
+                "text_en",
+                "identity"
+              ]
+            }
+          }
+        },
+        "_citation": {
           "fields": {
             "iso_639_3_eng": {
               "analyzers": [
@@ -37,44 +69,10 @@
             "identity"
           ]
         },
-        "_domain": {},
         "std_terms": {},
-        "_title": {
-          "fields": {
-            "iso_639_3_eng": {
-              "analyzers": [
-                "text_en",
-                "identity"
-              ]
-            }
-          }
-        },
-        "std_project": {},
         "std_terms_key": {},
-        "std_terms_summary": {},
-        "_subject": {},
-        "std_date": {},
-        "std_dataset": {},
-        "_subjects": {},
-        "std_dataset_group": {},
-        "_collection": {},
-        "_key": {},
-        "_classes": {},
-        "_citation": {
-          "fields": {
-            "iso_639_3_eng": {
-              "analyzers": [
-                "text_en",
-                "identity"
-              ]
-            }
-          }
-        },
-        "std_date_end": {},
-        "std_date_start": {},
-        "std_date_submission": {},
-        "_tag": {},
-        "subjects": {}
+        "std_terms_quant": {},
+        "std_terms_summary": {}
       },
       "includeAllFields": false,
       "storeValues": "id",
