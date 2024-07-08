@@ -30,7 +30,7 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Sample size"},
-			"_definition": {"iso_639_3_eng": "Number of individuals used to calculate the measurement."},
+			"_definition": {"iso_639_3_eng": "Number of individuals used to calculate the measurement"},
 			"_description": {"iso_639_3_eng": "Number of trees measured for a single trait or descriptor."},
 			"_provider": [
 				"Florence Jean <florence.jean@inrae.fr>",
@@ -87,8 +87,12 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_domain": ["chr_gent"],
+			"_usage": ["_usage_metadata"],
 			"_scalar": {
-				"_type": "_type_integer"
+				"_type": "_type_integer",
+				"_valid-range": {
+					"_min-range-inclusive": 0
+				}
 			}
 		}
 	},
@@ -144,9 +148,8 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Proportion polymorphic loci"},
-			"_definition": {"iso_639_3_eng": "Number of polymorphic loci divided by the total number of loci examined."},
+			"_definition": {"iso_639_3_eng": "Number of polymorphic loci divided by the total number of loci examined"},
 			"_description": {"iso_639_3_eng": "A measure used to quantify genetic diversity in a population. It can be used for comparisons of populations when analysing the same loci across all compared populations."},
-			"_notes": {"iso_639_3_eng": "We need to specify, at least, the type and nb of markers. It this information included in id:project? If not, why not including informaiton of the genetic analisis as other field? (RA)"},
 			"_provider": [
 				"Santiago C. Gonzalez Martinez"
 			]
@@ -157,14 +160,14 @@
 			"_tag": [
 				"chr_tag_diversity"
 			],
-			"_subject": "chr_subject_stand",
+			"_subject": "chr_subject_target",
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-2"],
 			"_scalar": {
 				"_type": "_type_number",
-				"_unit-name": "Percentage",
-				"_unit-symbol": "%",
 				"_valid-range": {
 					"_min-range-exclusive": 0.0,
-					"_max-range-exclusive": 100.0
+					"_max-range-exclusive": 1
 				}
 			}
 		}
@@ -246,8 +249,8 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Nucleotide diversity - π"},
-			"_definition": {"iso_639_3_eng": "Mean number of nucleotide substitutions per site between any two randomly selected orthologous DNA sequences (of the same loci) in a population (π)."},
-			"_description": {"iso_639_3_eng": "Nucleotide diversity (π) measures the degree of polymorphism within a population and is defined as the average number of nucleotide differences per site between any two DNA sequences of the same genomic region, chosen randomly from the selected population. This parameter is a measure of genetic variation, in a similar way to expected heterozygosity."},
+			"_definition": {"iso_639_3_eng": "Mean number of nucleotide substitutions per site between any two randomly selected orthologous DNA sequences (of the same loci) in a population (π)"},
+			"_description": {"iso_639_3_eng": "Nucleotide diversity (π) measures the degree of polymorphism within a population and is defined as the average number of nucleotide differences per site between any two DNA sequences of the same genomic region, chosen randomly from the selected population. This parameter is a measure of genetic variation, in a similar way to Hs. One commonly used measure of nucleotide diversity was first introduced by: Nei M, Li WH. (1979). Mathematical model for studying genetic variation in terms of restriction endonucleases. Proc. Natl. Acad. Sci. U.S.A.76:5269–5273."},
 			"_provider": [
 				"Santiago C. Gonzalez Martinez"
 			]
@@ -258,9 +261,16 @@
 			"_tag": [
 				"chr_tag_diversity"
 			],
-			"_subject": "chr_subject_stand",
+			"_subject": "chr_subject_target",
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-2"],
 			"_scalar": {
-				"_type": "_type_number"
+				"_type": "_type_number",
+				"_decimals": 5,
+				"_valid-range": {
+					"_min-range-inclusive": 0.0,
+					"_max-range-inclusive": 1.0
+				}
 			}
 		}
 	},
@@ -274,9 +284,9 @@
 			"_aid": ["MolDivPartW"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Population contribution to molecular diversity within-component"},
-			"_definition": {"iso_639_3_eng": "Contribution of target population to global molecular diversity per se."},
-			"_description": {"iso_639_3_eng": "A molecular diversity partition into diversity per se and distinctivness is defined by using molecular markers. Then the contribution of each population to the global diversity is computed by removing one population at a time. This statistics refers to the population diversity per se. The measure is relative to the dataset analysed simultaneously and changes when new GCUs are added to the dataset."},
+			"_title": {"iso_639_3_eng": "Population's contribution to molecular diversity within populations"},
+			"_definition": {"iso_639_3_eng": "Contribution of one population to the total diversity due to its own diversity"},
+			"_description": {"iso_639_3_eng": "A molecular diversity partition of total gene diversity into diversity per se and distinctivness using molecular markers. Then the contribution of each population to the total (global) diversity is computed by removing one population at a time. This index refers to the population diversity per se (variation within populations). The measure is relative to the dataset analysed simultaneously and changes when new GCUs are added to the dataset. The index was calculated with metapop2 (https://onlinelibrary.wiley.com/doi/abs/10.1111/1755-0998.13015). Reference: Petit et al. 1998 (https://doi.org/10.1111/j.1523-1739.1998.96489.x)."},
 			"_provider": [
 				"Santiago C. Gonzalez Martinez"
 			]
@@ -287,9 +297,16 @@
 			"_tag": [
 				"chr_tag_diversity"
 			],
-			"_subject": "chr_subject_stand",
+			"_subject": "chr_subject_target",
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-1"],
 			"_scalar": {
-				"_type": "_type_number"
+				"_type": "_type_number",
+				"_decimals": 3,
+				"_valid-range": {
+					"_min-range-inclusive": 0.0,
+					"_max-range-inclusive": 1.0
+				}
 			}
 		}
 	},
@@ -302,9 +319,9 @@
 			"_aid": ["MolDivPartB"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Population contribution to molecular diversity between-component"},
-			"_definition": {"iso_639_3_eng": "Contribution of target population to global molecular diversity based on the distinctiveness component."},
-			"_description": {"iso_639_3_eng": "A molecular diversity partition into diversity per se and distinctiness is defined by using molecular markers. Then the contribution of each population to the global diversity is computed by removing one population at a time. This statistics refers to the population distinctiveness. The measure is relative to the dataset analysed simultaneously and changes when new GCUs are added to the dataset."},
+			"_title": {"iso_639_3_eng": "Population's contribution to molecular diversity between populations"},
+			"_definition": {"iso_639_3_eng": "Contribution of one population to the total diversity due to its divergence/distinctiveness"},
+			"_description": {"iso_639_3_eng": "A molecular diversity partition into diversity per se and distinctiness is defined by using molecular markers. Then the contribution of each population to the total (global) diversity is computed by removing one population at a time. This statistics refers to the population distinctiveness (variation between populations). The measure is relative to the dataset analysed simultaneously and changes when new GCUs are added to the dataset. The index was calculated with metapop2 (https://onlinelibrary.wiley.com/doi/abs/10.1111/1755-0998.13015). Reference: Petit et al. 1998 (https://doi.org/10.1111/j.1523-1739.1998.96489.x)."},
 			"_provider": [
 				"Santiago C. Gonzalez Martinez"
 			]
@@ -316,9 +333,16 @@
 				"chr_tag_diversity",
 				"chr_tag_distinct-pop"
 			],
-			"_subject": "chr_subject_stand",
+			"_subject": "chr_subject_target",
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-1"],
 			"_scalar": {
-				"_type": "_type_number"
+				"_type": "_type_number",
+				"_decimals": 3,
+				"_valid-range": {
+					"_min-range-inclusive": 0.0,
+					"_max-range-inclusive": 1.0
+				}
 			}
 		}
 	},
@@ -466,7 +490,7 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Clonality - proportion of clones"},
-			"_definition": {"iso_639_3_eng": "Number of clonal individuals divided by the total number of individuals of the population."},
+			"_definition": {"iso_639_3_eng": "Number of clonal individuals divided by the total number of individuals of the population"},
 			"_description": {"iso_639_3_eng": "Number of genetically identical individuals, reproducing asexually, divided by the total number of individuals of a specific population."},
 			"_provider": [
 				"Santiago C. Gonzalez Martinez"
@@ -478,9 +502,16 @@
 			"_tag": [
 				"chr_tag_diversity"
 			],
-			"_subject": "chr_subject_stand",
+			"_subject": "chr_subject_target",
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-2"],
 			"_scalar": {
-				"_type": "_type_number"
+				"_type": "_type_number",
+				"_decimals": 2,
+				"_valid-range": {
+					"_min-range-inclusive": 0.0,
+					"_max-range-inclusive": 1.0
+				}
 			}
 		}
 	},
@@ -525,8 +556,8 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Clonality - size of clones"},
-			"_definition": {"iso_639_3_eng": "Surface covered by each single clone."},
-			"_description": {"iso_639_3_eng": "Area occupied by genetically identical individuals which reproduce asexually by means of vegetative offspring."},
+			"_definition": {"iso_639_3_eng": "Surface covered by each single clone"},
+			"_description": {"iso_639_3_eng": "Area occupied by genetically identical individuals which reproduce asexually by means of vegetative propagation."},
 			"_provider": [
 				"Santiago C. Gonzalez Martinez"
 			]
@@ -534,13 +565,18 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_domain": ["chr_gent"],
-			"_subject": "chr_subject_stand",
+			"_subject": "chr_subject_target",
 			"_tag": [
 				"chr_tag_diversity"
 			],
-			"_array": {
-				"_scalar": {
-					"_type": "_type_number"
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-2"],
+			"scalar": {
+				"_type": "_type_integer",
+				"_unit": "_unit_area_m",
+				"_decimals": 0,
+				"_valid-range": {
+					"_min-range-exclusive": 0
 				}
 			}
 		}
@@ -783,13 +819,11 @@
 			"_subject": "chr_subject_target",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1"],
-			"_array": {
-				"_scalar": {
-					"_type": "_type_number",
-					"_decimals": 3,
-					"_valid-range": {
-						"_min-range-inclusive": 0.0
-					}
+			"_scalar": {
+				"_type": "_type_number",
+				"_decimals": 3,
+				"_valid-range": {
+					"_min-range-inclusive": 0.0
 				}
 			}
 		}

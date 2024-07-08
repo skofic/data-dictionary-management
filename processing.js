@@ -3038,7 +3038,10 @@ function ProcessCountryReferences(item) {
 		// Set calling codes.
 		//
 		if(item.hasOwnProperty('callingCodes') && (item['callingCodes'].length > 0)) {
-			kGlob.globals.res.terms[key].std_country_tel = item['callingCodes']
+			const items = item['callingCodes'].filter((element) => element.length > 0)
+			if(items.length > 0) {
+				kGlob.globals.res.terms[key].std_country_tel = items
+			}
 		}
 
 		//

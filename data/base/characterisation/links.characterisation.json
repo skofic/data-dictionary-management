@@ -17,18 +17,6 @@
 	},
 	
 	{
-		"_from": "chr_NumberOfLoci",
-		"_to": "species",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	
-	{
-		"_from": "chr_MarkerType",
-		"_to": "species",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	
-	{
 		"_from": "geometry_hash",
 		"_to": "gcu_id_number",
 		"_predicate": "_predicate_requires_indicator"
@@ -657,13 +645,18 @@
 	},
 	{
 		"_from": "chr_PropPolyLoci",
-		"_to": "std_date",
-		"_predicate": "_predicate_requires_indicator"
+		"_to": "chr_SampleSize",
+		"_predicate": "_predicate_requires_metadata"
 	},
 	{
 		"_from": "chr_PropPolyLoci",
-		"_to": "chr_SampleSize",
-		"_predicate": "_predicate_requires_indicator"
+		"_to": "chr_NumberOfLoci",
+		"_predicate": "_predicate_requires_metadata"
+	},
+	{
+		"_from": "chr_PropPolyLoci",
+		"_to": "chr_MarkerType",
+		"_predicate": "_predicate_requires_metadata"
 	},
 	
 	{
@@ -709,34 +702,23 @@
 	},
 	{
 		"_from": "chr_NucDiv",
-		"_to": "std_date",
-		"_predicate": "_predicate_requires_indicator"
+		"_to": "chr_SampleSize",
+		"_predicate": "_predicate_requires_metadata"
 	},
 	{
 		"_from": "chr_NucDiv",
-		"_to": "chr_SampleSize",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	
-	{
-		"_from": "chr_MolDivPartW",
-		"_to": "gcu_id_number",
-		"_predicate": "_predicate_requires_indicator"
+		"_to": "chr_NumberOfLoci",
+		"_predicate": "_predicate_requires_metadata"
 	},
 	{
-		"_from": "chr_MolDivPartW",
-		"_to": "species",
-		"_predicate": "_predicate_requires_indicator"
+		"_from": "chr_NucDiv",
+		"_to": "chr_MarkerType",
+		"_predicate": "_predicate_requires_metadata"
 	},
 	{
-		"_from": "chr_MolDivPartW",
-		"_to": "std_date",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	{
-		"_from": "chr_MolDivPartW",
-		"_to": "chr_SampleSize",
-		"_predicate": "_predicate_requires_indicator"
+		"_from": "chr_NucDiv",
+		"_to": "chr_GenoTech",
+		"_predicate": "_predicate_requires_metadata"
 	},
 	
 	{
@@ -751,13 +733,44 @@
 	},
 	{
 		"_from": "chr_MolDivPartB",
-		"_to": "std_date",
-		"_predicate": "_predicate_requires_indicator"
+		"_to": "chr_SampleSize",
+		"_predicate": "_predicate_requires_metadata"
 	},
 	{
 		"_from": "chr_MolDivPartB",
-		"_to": "chr_SampleSize",
+		"_to": "chr_NumberOfLoci",
+		"_predicate": "_predicate_requires_metadata"
+	},
+	{
+		"_from": "chr_MolDivPartB",
+		"_to": "chr_MarkerType",
+		"_predicate": "_predicate_requires_metadata"
+	},
+	
+	{
+		"_from": "chr_MolDivPartW",
+		"_to": "gcu_id_number",
 		"_predicate": "_predicate_requires_indicator"
+	},
+	{
+		"_from": "chr_MolDivPartW",
+		"_to": "species",
+		"_predicate": "_predicate_requires_indicator"
+	},
+	{
+		"_from": "chr_MolDivPartW",
+		"_to": "chr_SampleSize",
+		"_predicate": "_predicate_requires_metadata"
+	},
+	{
+		"_from": "chr_MolDivPartW",
+		"_to": "chr_NumberOfLoci",
+		"_predicate": "_predicate_requires_metadata"
+	},
+	{
+		"_from": "chr_MolDivPartW",
+		"_to": "chr_MarkerType",
+		"_predicate": "_predicate_requires_metadata"
 	},
 	
 	{
@@ -855,13 +868,18 @@
 	},
 	{
 		"_from": "chr_PropClones",
-		"_to": "std_date",
-		"_predicate": "_predicate_requires_indicator"
+		"_to": "chr_SampleSize",
+		"_predicate": "_predicate_requires_metadata"
 	},
 	{
 		"_from": "chr_PropClones",
-		"_to": "chr_SampleSize",
-		"_predicate": "_predicate_requires_indicator"
+		"_to": "chr_NumberOfLoci",
+		"_predicate": "_predicate_requires_metadata"
+	},
+	{
+		"_from": "chr_PropClones",
+		"_to": "chr_MarkerType",
+		"_predicate": "_predicate_requires_metadata"
 	},
 	
 	{
@@ -876,13 +894,18 @@
 	},
 	{
 		"_from": "chr_SizeClones",
-		"_to": "std_date",
-		"_predicate": "_predicate_requires_indicator"
+		"_to": "chr_SampleSize",
+		"_predicate": "_predicate_requires_metadata"
 	},
 	{
 		"_from": "chr_SizeClones",
-		"_to": "chr_SampleSize",
-		"_predicate": "_predicate_requires_indicator"
+		"_to": "chr_NumberOfLoci",
+		"_predicate": "_predicate_requires_metadata"
+	},
+	{
+		"_from": "chr_SizeClones",
+		"_to": "chr_MarkerType",
+		"_predicate": "_predicate_requires_metadata"
 	},
 	
 	{
