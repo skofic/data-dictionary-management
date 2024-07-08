@@ -77,7 +77,33 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "Requires"},
 			"_definition": {"iso_639_3_eng": "The source node requires the destination node."},
-			"_description": {"iso_639_3_eng": "This predicate indicates that the *source* node *requires* the *destination* node. This means that in order to operate the source node, it is necessary to have access to destination node. This predicate is used to signal that one descriptor requires another descriptor. For instance *temperature* might require *date* in order for the measurement to be put into context."}
+			"_description": {"iso_639_3_eng": "This predicate indicates that the *source* node *requires* the *destination* node. This means that whenever we have the *source* node, we must also have the *destination* node."}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_predicate_requires",
+			"_lid": "indicator",
+			"_gid": "_predicate_requires_indicator",
+			"_aid": ["indicator"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Requires indicator"},
+			"_definition": {"iso_639_3_eng": "The source node requires the destination node indicator."},
+			"_description": {"iso_639_3_eng": "This predicate indicates that the *source* node *requires* the *destination* node, and that the destination node is an *indicator*. This means that whenever we have the *source* node, we must also have the *destination* node.\n\nThis predicate is used to make sure dependent indicators are grouped together and required in a dataset. For instance we could link temperature to precipitation, ensuring that whenever we have temperature we will also include precipitation. In this case precipitation is considered as an indicator."}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_predicate_requires",
+			"_lid": "metadata",
+			"_gid": "_predicate_requires_metadata",
+			"_aid": ["metadata"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Requires metadata"},
+			"_definition": {"iso_639_3_eng": "The source node requires the destination node metadata."},
+			"_description": {"iso_639_3_eng": "This predicate indicates that the *source* node *requires* the *destination* node, and that the destination node is *metadata*. This means that whenever we have the *source* node, we must also have the *destination* node, and that the *destination* node is to be considered *metadata* of the source node.\n\nThis predicate is used to make sure the source node includes the required metadata.  For instance we could link temperature to measurement type, ensuring that whenever we have temperature we will also include the method used to measure it. In this case the method is considered metadata."}
 		}
 	}
 ]

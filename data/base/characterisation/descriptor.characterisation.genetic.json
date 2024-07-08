@@ -101,9 +101,9 @@
 			"_aid": ["MarkerType"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Type of Marker/Trait"},
-			"_definition": {"iso_639_3_eng": "Type of marker (SNP, SSR) used for calculation of genetic indices."},
-			"_description": {"iso_639_3_eng": "Type of marker used for calculation of genetic indices."}
+			"_title": {"iso_639_3_eng": "Type of Marker"},
+			"_definition": {"iso_639_3_eng": "Type of marker (SNP, SSR) used for calculation of genetic indices"},
+			"_description": {"iso_639_3_eng": "Type of molecular markers used for calculation of genetic indices."}
 		},
 		"_data": {
 			"_class": "_class_identifier",
@@ -123,10 +123,11 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Method"},
-			"_definition": {"iso_639_3_eng": "Method and technology used to determine the genetic index."}
+			"_definition": {"iso_639_3_eng": "Method and technology used to determine the genetic index"}
 		},
 		"_data": {
 			"_domain": ["chr_gent"],
+			"_usage": ["_usage_metadata"],
 			"_scalar": {
 				"_type": "_type_string"
 			}
@@ -174,13 +175,13 @@
 			"_nid": "chr",
 			"_lid": "ExpHet",
 			"_gid": "chr_ExpHet",
-			"_pid": ["ExpHet", "He"],
+			"_pid": ["Hs"],
 			"_aid": ["ExpHet"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Genetic diversity - expected heterozygosity"},
-			"_definition": {"iso_639_3_eng": "Proportion of heterozygous genotypes expected under Hardy-Weinberg equilibrium corrected by sample size"},
-			"_description": {"iso_639_3_eng": "The expected heterozygosity is known also as the gene diversity of a locus. It is a fundamental measure of genetic variation in a population and explains the proportion of heterozygous genotypes expected under random mating. The value is corrected for sample size."},
+			"_title": {"iso_639_3_eng": "Genetic diversity - Hs"},
+			"_definition": {"iso_639_3_eng": "Genetic diversity (Hs) measures genetic variation within a single subpopulation. It quantifies the probability that two randomly selected alleles from the subpopulation are different under Hardy-Weinberg equilibrium"},
+			"_description": {"iso_639_3_eng": "Genetic diversity (Hs) is a measure of the genetic variation within a single subpopulation under random mating. It quantifies the probability that two randomly selected alleles from the subpopulation are different. The value ranges from 0 (no  genetic variability) to 1 (high genetic variability). Hs was calculated in R packege hierfstat."},
 			"_provider": [
 				"Santiago C. Gonzalez Martinez"
 			]
@@ -191,9 +192,16 @@
 			"_tag": [
 				"chr_tag_diversity"
 			],
-			"_subject": "chr_subject_stand",
+			"_subject": "chr_subject_target",
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-1"],
 			"_scalar": {
-				"_type": "_type_number"
+				"_type": "_type_number",
+				"_decimals": 3,
+				"_valid-range": {
+					"_min-range-inclusive": 0.0,
+					"_max-range-inclusive": 1.0
+				}
 			}
 		}
 	},
@@ -625,8 +633,8 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Inbreeding"},
-			"_definition": {"iso_639_3_eng": "Probability of two alleles in an individual being identical by descent."},
-			"_description": {"iso_639_3_eng": "Inbreeding is the production of offspring from the mating or breeding of individuals or organisms that are closely related genetically."},
+			"_definition": {"iso_639_3_eng": "Probability of two alleles in an individual being identical by descent"},
+			"_description": {"iso_639_3_eng": "Inbreeding is the production of offspring from the mating or breeding of individuals that are closely related genetically. The degree of inbreeding can be measured using a calculation called the inbreeding coefficient. This calculates the probability that two copies of a gene variant have been inherited from an ancestor common to both the mother and the father. The lower the degree of inbreeding, the lower the inbreeding coefficient. Negative values indicate no inbreeding. Reference: Wright (1921) Systems of Mating. II. the Effects of Inbreeding on the Genetic Composition of a Population. Genetics, 6: 124-143."},
 			"_provider": [
 				"Santiago C. Gonzalez Martinez"
 			]
@@ -638,9 +646,16 @@
 				"chr_tag_diversity",
 				"chr_tag_vulnerability"
 			],
-			"_subject": "chr_subject_stand",
+			"_subject": "chr_subject_target",
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-2"],
 			"_scalar": {
-				"_type": "_type_number"
+				"_type": "_type_number",
+				"_decimals": 3,
+				"_valid-range": {
+					"_min-range-inclusive": 0.0,
+					"_max-range-inclusive": 1.0
+				}
 			}
 		}
 	},
@@ -685,8 +700,8 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Recessive genetic load"},
-			"_definition": {"iso_639_3_eng": "The loss of mean fitness in a population due to accumulation of deletereous alleles in homozygosis."},
-			"_description": {"iso_639_3_eng": "Genetic load or genetic burden is a measure of the loss of fitness following the erosion of genetic diversity. Genetic load is predicted here by counting deleterious mutations  identified by computational methods."},
+			"_definition": {"iso_639_3_eng": "The reduction of fitness in a population due to the accumulation of deleterious alleles"},
+			"_description": {"iso_639_3_eng": "Genetic load is a measure of the reduction of fitness caused by genetic erosion. It can be due to the increase in frequency of deleterious mutations due to random genetic drift and/or inbreeding. It is calculated by first identifying deleterious mutations via prediction of their effects, and then deriving deleterious scores that can be summarized to produce a load index, in this case the counts of derived deleterious mutations in homozygosis corrected by the number of synonymous ones.  Reference: Bertorelle, G., Raffini, F., Bosse, M. et al. Genetic load: genomic estimates and applications in non-model animals. Nat Rev Genet 23, 492–503 (2022). https://doi.org/10.1038/s41576-022-00448-x."},
 			"_provider": [
 				"Santiago C. Gonzalez Martinez"
 			]
@@ -699,9 +714,15 @@
 				"chr_tag_distinct-pop",
 				"chr_tag_vulnerability"
 			],
-			"_subject": "chr_subject_stand",
+			"_subject": "chr_subject_target",
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-2"],
 			"_scalar": {
-				"_type": "_type_number"
+				"_type": "_type_number",
+				"_decimals": 3,
+				"_valid-range": {
+					"_min-range-inclusive": 0.0
+				}
 			}
 		}
 	},
@@ -746,8 +767,8 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Genomic offset"},
-			"_definition": {"iso_639_3_eng": "The distance between the current and predicted optimal genomic composition in a set of putatively adaptive loci under a future/changed environment. A measure of the mismatch in genotype-climate association between current and potential future climates."},
-			"_description": {"iso_639_3_eng": "Genomic offset is related to population vulnerability to new environmental conditions. However it does not account for adaptation capacity of populations, and is therefore appropriate to assess short-term vulnerability only (valid only if the correlation between allele frequencies and environment does not change)."},
+			"_definition": {"iso_639_3_eng": "A population measure of maladaptation under future environmental conditions"},
+			"_description": {"iso_639_3_eng": "Genomic offset measures population vulnerability to new environmental conditions. It refers to the expected change in allele frequencies that would be required to mantain optimal fitness under future conditions (e.g. changing climate). It assumes equilibrium between current conditions and allele frequencies and it is usually calculated based on a set of genetic markers under natural selection. It is sensitive to the environmental variables used in the analysis. Reference: Capblancq, T., Fitzpatrick, M. C., Bay, R. A., Exposito-Alonso, M., & Keller, S. R. (2020). Genomic prediction of (mal) adaptation across current and future climatic landscapes. Annual Review of Ecology, Evolution, and Systematics, 51, 245-269."},
 			"_provider": [
 				"Santiago C. Gonzalez Martinez"
 			]
@@ -759,10 +780,16 @@
 				"chr_tag_distinct-pop",
 				"chr_tag_vulnerability"
 			],
-			"_subject": "chr_subject_stand",
+			"_subject": "chr_subject_target",
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-1"],
 			"_array": {
 				"_scalar": {
-					"_type": "_type_number"
+					"_type": "_type_number",
+					"_decimals": 3,
+					"_valid-range": {
+						"_min-range-inclusive": 0.0
+					}
 				}
 			}
 		}
@@ -808,23 +835,29 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Evolvability"},
-			"_definition": {"iso_639_3_eng": "Evolvability is the expected percent change in a trait under a unit strength of selection."},
-			"_description": {"iso_639_3_eng": "Evolvability is related to the ability of a population to evolve, generating adaptive genetic diversity for natural selection to act upon."},
+			"_definition": {"iso_639_3_eng": "The ability of a population to respond to directional selection"},
+			"_description": {"iso_639_3_eng": "Evolvability is the ability of a population to produce phenotypic variation that is both heritable and adaptive. References: Houle, 1992. Comparing evolvability and variability of quantitative traits. Genetics. 130(1):195-204. doi: 10.1093/genetics/130.1.195; Payne, J.L., Wagner, A. The causes of evolvability and their evolution. Nat Rev Genet 20, 24–38 (2019). https://doi.org/10.1038/s41576-018-0069-z."},
 			"_provider": [
 				"Santiago C. Gonzalez Martinez"
 			]
 		},
 		"_data": {
+			"_subject": "chr_subject_target",
 			"_class": "_class_quantity",
 			"_domain": ["chr_gent"],
 			"_tag": [
 				"chr_tag_diversity",
 				"chr_tag_vulnerability"
 			],
-			"_subject": "chr_subject_stand",
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-1"],
 			"_array": {
 				"_scalar": {
-					"_type": "_type_number"
+					"_type": "_type_number",
+					"_decimals": 4,
+					"_valid-range": {
+						"_min-range-inclusive": 0.0
+					}
 				}
 			}
 		}
