@@ -536,10 +536,7 @@
 		},
 		"_data": {
 			"_class": "_class_quantity",
-			"_domain": [
-				"chr_fore",
-				"chr_gent"
-			],
+			"_domain": ["chr_gent"],
 			"_subject": "chr_subject_target",
 			"_tag": [
 				"chr_tag_diversity",
