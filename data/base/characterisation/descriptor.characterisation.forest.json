@@ -266,6 +266,73 @@
 	{
 		"_code": {
 			"_nid": "chr",
+			"_lid": "AvCrownLength",
+			"_gid": "chr_AvCrownLength",
+			"_pid": ["AvCrownLength"],
+			"_aid": ["AvCrownLength"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Crown length mean"},
+			"_definition": {"iso_639_3_eng": "The mean of the crown lenght across all measured trees"},
+			"_description": {"iso_639_3_eng": "The mean of the values of  the crown lenght across 10 measured adult dominant or co-dominant trees sampled either inside or in the vicinity of the representative circular plot with a radius of 15 m. The crown lenght is calculated from the [total height] value subtracted from the [Basal crown height] value. It corresponds to the healthy and functional green crown envelope lenght."},
+			"_provider": [
+				"Florence Jean <florence.jean@inrae.fr>"
+			]
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["chr_fore"],
+			"_subject": "chr_subject_target",
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-2"],
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit": "_unit_length_m",
+				"_decimals": 1,
+				"_valid-range": {
+					"_min-range-inclusive": 0.0,
+					"_max-range-inclusive": 100.0
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr",
+			"_lid": "VarCrownLength",
+			"_gid": "chr_VarCrownLength",
+			"_pid": ["VarCrownLength"],
+			"_aid": ["VarCrownLength"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Crown length variance"},
+			"_definition": {"iso_639_3_eng": "The variance of the crown lenght across all measured trees"},
+			"_description": {"iso_639_3_eng": "The variance of the values of  the crown lenght across 10 measured adult dominant or co-dominant trees sampled either inside or in the vicinity of the representative circular plot with a radius of 15 m. The crown lenght is calculated from the [total height] value subtracted from the [Basal crown height] value. It corresponds to the healthy and functional green crown envelope lenght."},
+			"_provider": [
+				"Florence Jean <florence.jean@inrae.fr>"
+			]
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["chr_fore"],
+			"_subject": "chr_subject_target",
+			"_tag": ["chr_tag_diversity"],
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-2"],
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit": "_unit_length_m",
+				"_decimals": 1,
+				"_valid-range": {
+					"_min-range-inclusive": 0.0
+				}
+			}
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "chr",
 			"_lid": "AvCrownHeight",
 			"_gid": "chr_AvCrownHeight",
 			"_pid": ["Mean.Hcrown"],

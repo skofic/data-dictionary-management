@@ -966,10 +966,7 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": [
-				"chr_envi",
-				"chr_fore"
-			],
+			"_domain": ["chr_fore"],
 			"_subject": "chr_subject_stand",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],

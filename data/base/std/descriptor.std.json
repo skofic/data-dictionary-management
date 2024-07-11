@@ -563,7 +563,13 @@
         },
         "_data": {
             "_class": "_class_time",
-            "_scalar": {"_type": "_type_string_date"}
+            "_scalar": {
+            	"_type": "_type_string_date",
+                "_valid-range": {
+                    "_min-range-inclusive": "1950",
+                    "_max-range-inclusive": "20501231"
+                }
+            }
         }
     },
     {
@@ -640,7 +646,13 @@
         },
         "_data": {
             "_class": "_class_time",
-            "_scalar": {"_type": "_type_string_date"}
+            "_scalar": {
+            	"_type": "_type_string_date",
+                "_valid-range": {
+                    "_min-range-inclusive": "1950",
+                    "_max-range-inclusive": "20501231"
+                }
+            }
         }
     },
     {
