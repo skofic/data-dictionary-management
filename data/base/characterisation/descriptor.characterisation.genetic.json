@@ -609,6 +609,7 @@
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1"],
 			"_array": {
+				"_array_prefix": "Q",
 				"_scalar": {
 					"_type": "_type_number",
 					"_decimals": 4,
@@ -647,6 +648,7 @@
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
 			"_array": {
+				"_array_prefix": "Q",
 				"_scalar": {
 					"_type": "_type_number",
 					"_decimals": 3,

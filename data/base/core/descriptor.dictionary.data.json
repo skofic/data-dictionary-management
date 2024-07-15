@@ -76,7 +76,8 @@
 			},
 			"_recommended": {
 				"_selection-descriptors_any": [
-					"_elements"
+					"_elements",
+					"_array_prefix"
 				]
 			}
 		}
@@ -108,7 +109,8 @@
 			},
 			"_recommended": {
 				"_selection-descriptors_any": [
-					"_elements"
+					"_elements",
+					"_array_prefix"
 				]
 			},
 			"_banned": [
@@ -850,6 +852,26 @@
 					"_min-range-inclusive": 0,
 					"_max-range-inclusive": 12
 				}
+			}
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "_array",
+			"_lid": "prefix",
+			"_gid": "_array_prefix",
+			"_aid": ["prefix"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Array prefix"},
+			"_definition": {"iso_639_3_eng": "Prefix used when distributin the array elements into their individual columns"},
+			"_description": {"iso_639_3_eng": "This field is used when exploding the values of an array in a table. Rather than displaying a list of comma delimited values in a single column, the values will all have their own column with a header containing the string set in this variable followed by the index number of the array element (base 1).\n\nThis also means that the table needs to accomodate header rows that can merge cells together, since we need two header rows: one for the scalar indicators and one for the elements of the array values.\n\nThis field should be used at the top level `_array` or `_set` instance in the data section. The data section must either be an array or set which contains scalar elements. Nested arrays will not be considered.\n\nThis value is only considered when generating table data, it has no other function."},
+			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_code\": {\n\t\t\"_gid\": \"chr_AdmIndexMain\",\n\t\t...\n\t},\n\t\"_info\": {\n\t\t...\n\t},\n\t\"_data\": {\n\t\t\"_array\": {\n\t\t\t\"_array_prefix\": \"Q\",\n\t\t\t\"_scalar\": {\n\t\t\t\t\"_type\": \"_type_number\",\n\t\t\t\t\"_decimals\": 4,\n\t\t\t\t\"_valid-range\": {\n\t\t\t\t\t\"_min-range-inclusive\": 0.0,\n\t\t\t\t\t\"_max-range-inclusive\": 1.0\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}\n\n```\n\nAbove is the partial *definition* of the \"Admixture index\" indicator in the data dictionary. In the [data section](_data.md) you see that this variable is defined as an [array](_array.md), below this array section you see that the array prefix is set to the letter \"Q\".\n\n```json\n{\n\t\"gcu_id_number\": \"ALB00001\",\n\t\"species\": \"Abies alba\",\n\t\"chr_AdmIndexMain\": [ 0.8554, 0.1000, 0.0446 ],\n\t...\n},\n  ...\n```\n\nAbove is an *example* of a *data record*: we have GCU and species, that are required by the indicator, and the value of admixture index which is an array of three elements.\n\n|                   |             | *Admixture* | *index* | *main* |\n| ----------------- | ----------- | ----------- | ------- | ------ |\n| **gcu_id_number** | **species** | **Q1**      | **Q3**  | **Q2** |\n| ALB00001          | Abies alba  | 0.8554      | 0.0446  | 0.1000 |\n\nAbove is a table example of the resulting data. You will see that the first two columns are scalar columns, while the three last columns all belong to the admixture index indicator. Setting array prefix to \"Q\" will split the elements of the array into three separate columns which all belong to the admixture indicator and feature a header prefixed with the \"Q\" character.\n\nAs you may have realised, looking at this example, you will need two header rows with the first row grouping together the last three columns, a thing that I don't know how to do in pure Markdown..."}
+		},
+		"_data": {
+			"_scalar": {
+				"_type": "_type_string"
 			}
 		}
 	}
