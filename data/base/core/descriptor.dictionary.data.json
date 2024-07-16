@@ -642,6 +642,7 @@
 			}
 		}
 	},
+	
 	{
 		"_code": {
 			"_nid": "",
@@ -650,8 +651,8 @@
 			"_aid": ["range"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Range of values"},
-			"_definition": {"iso_639_3_eng": "This property indicates a generic range of values."},
+			"_title": {"iso_639_3_eng": "Range of numbers"},
+			"_definition": {"iso_639_3_eng": "This property indicates a generic range of numbers."},
 			"_description": {"iso_639_3_eng": "This property can be used to indicate a [continuous](_type_number.md) numeric *range*, this range may *ignore* the *lower* or *upper* bound, and it allows specifying whether the *bounds* are *included* in the range, or not. The property is an object that may contain the following combination of elements:\n\n- [Minimum range inclusive](_min-range-inclusive.md): The value must be greater than or equal to the bound.\n- [Minimum range exclusive](_min-range-exclusive.md): The value must be greater than the bound.\n- [Maximum range inclusive](_max-range-inclusive.md): The value must be less than or equal to the bound.\n- [Maximum range exclusive](_max-range-exclusive.md): The value must be less than the bound.\n\nIt is possible to omit the minimum or maximum bound.\n\nThe *range* defined by this property is *generic*, this means that values out of the range are not necessarily expected to be incorrect."},
 			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_range\": {\n\t\t\"_min-range-inclusive\": 0.0,\n\t\t\"_max-range-inclusive\": 100.0\n\t}\n}\n```\nThis represents a *percentage range*, values are *greater* than or *equal* to `0` and smaller or equal to `100`. Fractional values are allowed.\n\n\n\n```json\n{\n\t\"_range\": {\n\t\t\"_min-range-inclusive\": 0,\n\t\t\"_max-range-inclusive\": 100\n\t}\n}\n```\nSame as above, except that we use integers. Fractional values are allowed.\n\n\n\n```json\n{\n\t\"_range\": {\n\t\t\"_min-range-exclusive\": 0\n\t}\n}\n```\nValues are greater than `0`. Fractional values are allowed."}
 		},
@@ -673,14 +674,71 @@
 	},
 	{
 		"_code": {
+			"_nid": "_range",
+			"_lid": "string",
+			"_gid": "_range_string",
+			"_aid": ["string"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Range of strings"},
+			"_definition": {"iso_639_3_eng": "This property indicates a generic range of strings."},
+			"_description": {"iso_639_3_eng": "This property can be used to indicate a string *range*, this range may *ignore* the *lower* or *upper* bound, and it allows specifying whether the *bounds* are *included* in the range, or not. The property is an object that may contain the following combination of elements:\n\n- [Minimum range inclusive](_min-range-inclusive_string.md): The value must be greater than or equal to the bound.\n- [Minimum range exclusive](_min-range-exclusive_string.md): The value must be greater than the bound.\n- [Maximum range inclusive](_max-range-inclusive_string.md): The value must be less than or equal to the bound.\n- [Maximum range exclusive](_max-range-exclusive_string.md): The value must be less than the bound.\n\nIt is possible to omit the minimum or maximum bound.\n\nThe *range* defined by this property is *generic*, this means that values out of the range are not necessarily expected to be incorrect."},
+			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_range\": {\n\t\t\"_min-range-inclusive_string\": \"1950\",\n\t\t\"_max-range-inclusive_string\": \"19991231\"\n\t}\n}\n```\n\nThis represents a *date range*, values are *greater* than or *equal* to `1950` and smaller or equal to `19991231`. This interval includes year, month and day dates starting from 1950 and includes year, month and day dates including all 1999.\n\n\n\n```json\n{\n\t\"_range\": {\n\t\t\"_min-range-exclusive_string\": \"195001\"\n\t}\n}\n```\n\nValues are greater than `January 1950`.\nThis includes all dates greater or equal to february 1950."}
+		},
+		"_data": {
+			"_scalar": {
+				"_type": "_type_object",
+				"_kind": ["_range_string"]
+			}
+		},
+		"_rule": {
+			"_required": {
+				"_selection-descriptors_any-one": [
+					["_min-range-inclusive_string", "_min-range-exclusive_string"],
+					["_max-range-inclusive_string", "_max-range-exclusive_string"]
+				]
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_range",
+			"_lid": "date",
+			"_gid": "_range_date",
+			"_aid": ["date"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Range of dates"},
+			"_definition": {"iso_639_3_eng": "This property indicates a generic range of dates"},
+			"_description": {"iso_639_3_eng": "This property can be used to indicate a (date)[_type_string_date.md] *range*, this range may *ignore* the *lower* or *upper* bound, and it allows specifying whether the *bounds* are *included* in the range, or not. The property is an object that may contain the following combination of elements:\n\n- [Minimum range inclusive](_min-range-inclusive_date.md): The value must be greater than or equal to the bound.\n- [Minimum range exclusive](_min-range-exclusive_date.md): The value must be greater than the bound.\n- [Maximum range inclusive](_max-range-inclusive_date.md): The value must be less than or equal to the bound.\n- [Maximum range exclusive](_max-range-exclusive_date.md): The value must be less than the bound.\n\nIt is possible to omit the minimum or maximum bound.\n\nThe *range* defined by this property is *generic*, this means that values out of the range are not necessarily expected to be incorrect."},
+			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_range\": {\n\t\t\"_min-range-inclusive_date\": \"1950\",\n\t\t\"_max-range-inclusive_date\": \"19991231\"\n\t}\n}\n```\n\nThis represents a *date range*, values are *greater* than or *equal* to `1950` and smaller or equal to `19991231`. This interval includes year, month and day dates starting from 1950 and includes year, month and day dates including all 1999.\n\n\n\n```json\n{\n\t\"_range\": {\n\t\t\"_min-range-exclusive_date\": \"195001\"\n\t}\n}\n```\n\nValues are greater than `January 1950`.\nThis includes all dates greater or equal to february 1950."}
+		},
+		"_data": {
+			"_scalar": {
+				"_type": "_type_object",
+				"_kind": ["_range_date"]
+			}
+		},
+		"_rule": {
+			"_required": {
+				"_selection-descriptors_any-one": [
+					["_min-range-inclusive_date", "_min-range-exclusive_date"],
+					["_max-range-inclusive_date", "_max-range-exclusive_date"]
+				]
+			}
+		}
+	},
+	
+	{
+		"_code": {
 			"_nid": "",
 			"_lid": "valid-range",
 			"_gid": "_valid-range",
 			"_aid": ["valid-range"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Valid range of values"},
-			"_definition": {"iso_639_3_eng": "This field indicates the allowed range for values, values that are out of range are considered invalid."},
+			"_title": {"iso_639_3_eng": "Valid number range"},
+			"_definition": {"iso_639_3_eng": "This field indicates the allowed range for numbers, values that are out of range are considered invalid."},
 			"_description": {"iso_639_3_eng": "This property defines the range within which a value can be considered correct. Values that out of this range are considered errors. This [continuous](_type_number.md) numeric *range* may *ignore* the *lower* or *upper* bound, and it allows specifying whether the *bounds* are *included* in the range, or not. The property is an object that may contain the following combination of elements:\n\n- [Minimum range inclusive](_min-range-inclusive.md): The value must be greater than or equal to the bound.\n- [Minimum range exclusive](_min-range-exclusive.md): The value must be greater than the bound.\n- [Maximum range inclusive](_max-range-inclusive.md): The value must be less than or equal to the bound.\n- [Maximum range exclusive](_max-range-exclusive.md): The value must be less than the bound.\n\nIt is possible to omit the minimum or maximum bound.\n\nValues that *do not belong* in the *range* interval are considered *incorrect*."},
 			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_valid-range\": {\n\t\t\"_min-range-inclusive\": 0.0,\n\t\t\"_max-range-inclusive\": 100.0\n\t}\n}\n```\nThis *range* considers all values greater than `100.0` and smaller than `0.0` to be errors.\n\n\n\n```json\n{\n\t\"_valid-range\": {\n\t\t\"_min-range-inclusive\": 0,\n\t\t\"_max-range-inclusive\": 100\n\t}\n}\n```\nThis *range* is equivalent to the first one, except that in this case we don't add decimals to the bounds.\n\n\n\n```json\n{\n\t\"_valid-range\": {\n\t\t\"_min-range-exclusive\": 0\n\t}\n}\n```\nThis *range* considers all positive values greater than 0 to be correct."}
 		},
@@ -694,14 +752,55 @@
 	},
 	{
 		"_code": {
+			"_nid": "_valid-range",
+			"_lid": "string",
+			"_gid": "_valid-range_string",
+			"_aid": ["string"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Valid string range"},
+			"_definition": {"iso_639_3_eng": "This field indicates the allowed range for strings, values that are out of range are considered invalid."},
+			"_description": {"iso_639_3_eng": "This property defines the range within which a value can be considered correct. Values that out of this range are considered errors. This string *range* may *ignore* the *lower* or *upper* bound, and it allows specifying whether the *bounds* are *included* in the range, or not. The property is an object that may contain the following combination of elements:\n\n- [Minimum range inclusive](_min-range-inclusive_string.md): The value must be greater than or equal to the bound.\n- [Minimum range exclusive](_min-range-exclusive_string.md): The value must be greater than the bound.\n- [Maximum range inclusive](_max-range-inclusive_string.md): The value must be less than or equal to the bound.\n- [Maximum range exclusive](_max-range-exclusive_string.md): The value must be less than the bound.\n\nIt is possible to omit the minimum or maximum bound.\n\nValues that *do not belong* in the *range* interval are considered *incorrect*."},
+			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_valid-range_string\": {\n\t\t\"_min-range-inclusive_string\": \"1950\",\n\t\t\"_max-range-inclusive_string\": \"19591231\"\n\t}\n}\n```\n\nThis *range* considers all values greater than `1950` and smaller than `19591231` to be errors.\nThe range includes all strings that are between 1950 and 19591231.\n\n\n\n```json\n{\n\t\"_valid-range_string\": {\n\t\t\"_min-range-exclusive_string\": \"19491231\"\n\t}\n}\n```\n\nThis *range* considers all strings starting from 1950 to be correct."}
+		},
+		"_data": {
+			"_scalar": {
+				"_type": "_type_object",
+				"_kind": ["_range_string"]
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_valid-range",
+			"_lid": "date",
+			"_gid": "_valid-range_date",
+			"_aid": ["date"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Valid date range"},
+			"_definition": {"iso_639_3_eng": "This field indicates the allowed range for dates, values that are out of range are considered invalid."},
+			"_description": {"iso_639_3_eng": "This property defines the range within which a (date)[_type_string_date.md] can be considered correct. Values that out of this range are considered errors. This date *range* may *ignore* the *lower* or *upper* bound, and it allows specifying whether the *bounds* are *included* in the range, or not. The property is an object that may contain the following combination of elements:\n\n- [Minimum range inclusive](_min-range-inclusive_date.md): The value must be greater than or equal to the bound.\n- [Minimum range exclusive](_min-range-exclusive_date.md): The value must be greater than the bound.\n- [Maximum range inclusive](_max-range-inclusive_date.md): The value must be less than or equal to the bound.\n- [Maximum range exclusive](_max-range-exclusive_date.md): The value must be less than the bound.\n\nIt is possible to omit the minimum or maximum bound.\n\nValues that *do not belong* in the *range* interval are considered *incorrect*."},
+			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_valid-range_date\": {\n\t\t\"_min-range-inclusive_date\": \"1950\",\n\t\t\"_max-range-inclusive_date\": \"19591231\"\n\t}\n}\n```\n\nThis *range* considers all values greater than `1950` and smaller than `19591231` to be errors.\nThe range includes all dates, year, month or day, that are between 1950 and december 31st 1959.\n\n\n\n```json\n{\n\t\"_valid-range_date\": {\n\t\t\"_min-range-exclusive_date\": \"19491231\"\n\t}\n}\n```\n\nThis *range* considers all dates, year, month or day, starting from 1950 to be correct."}
+		},
+		"_data": {
+			"_scalar": {
+				"_type": "_type_object",
+				"_kind": ["_range_date"]
+			}
+		}
+	},
+
+	{
+		"_code": {
 			"_nid": "",
 			"_lid": "normal-range",
 			"_gid": "_normal-range",
 			"_aid": ["normal-range"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Normal range of values"},
-			"_definition": {"iso_639_3_eng": "This field indicates the normal range for values, values that are out of range are considered outliers, not errors."},
+			"_title": {"iso_639_3_eng": "Normal range of numbers"},
+			"_definition": {"iso_639_3_eng": "This field indicates the normal range for numbers, values that are out of range are considered outliers, not errors."},
 			"_description": {"iso_639_3_eng": "This property defines the range in which values are considered *normal*, values out of this range are considered *outliers*. This [continuous](_type_number.md) numeric *range* may *ignore* the *lower* or *upper* bound, and it allows specifying whether the *bounds* are *included* in the range, or not. The property is an object that may contain the following combination of elements:\n\n- [Minimum range inclusive](_min-range-inclusive.md): The value must be greater than or equal to the bound.\n- [Minimum range exclusive](_min-range-exclusive.md): The value must be greater than the bound.\n- [Maximum range inclusive](_max-range-inclusive.md): The value must be less than or equal to the bound.\n- [Maximum range exclusive](_max-range-exclusive.md): The value must be less than the bound.\n\nIt is possible to omit the minimum or maximum bound.\n\nOut of range values are considered outliers."},
 			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_normal-range\": {\n\t\t\"_min-range-inclusive\": 0.0,\n\t\t\"_max-range-inclusive\": 100.0\n\t}\n}\n```\nThis *range* considers all values greater than `100.0` or smaller than `0.0` to be outliers.\n\n\n\n```json\n{\n\t\"_normal-range\": {\n\t\t\"_min-range-inclusive\": 0,\n\t\t\"_max-range-inclusive\": 100\n\t}\n}\n```\nThis *range* is equivalent to the first one, except that in this case we don't add decimals to the bounds.\n\n\n\n```json\n{\n\t\"_normal-range\": {\n\t\t\"_min-range-exclusive\": 0\n\t}\n}\n```\nThis *range* considers all positive values greater than 0 to be normal, and all others to be outliers.\n\n"}
 		},
@@ -710,6 +809,26 @@
 			"_scalar": {
 				"_type": "_type_object",
 				"_kind": ["_range"]
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_normal-range",
+			"_lid": "string",
+			"_gid": "_normal-range_string",
+			"_aid": ["string"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Normal range of strings"},
+			"_definition": {"iso_639_3_eng": "This field indicates the normal range for strings, values that are out of range are considered outliers, not errors."},
+			"_description": {"iso_639_3_eng": "This property defines the range in which values are considered *normal*, values out of this range are considered *outliers*. This string *range* may *ignore* the *lower* or *upper* bound, and it allows specifying whether the *bounds* are *included* in the range, or not. The property is an object that may contain the following combination of elements:\n\n- [Minimum range inclusive](_min-range-inclusive_string.md): The value must be greater than or equal to the bound.\n- [Minimum range exclusive](_min-range-exclusive_string.md): The value must be greater than the bound.\n- [Maximum range inclusive](_max-range-inclusive_string.md): The value must be less than or equal to the bound.\n- [Maximum range exclusive](_max-range-exclusive_string.md): The value must be less than the bound.\n\nIt is possible to omit the minimum or maximum bound.\n\nOut of range values are considered outliers."},
+			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_normal-range_string\": {\n\t\t\"_min-range-inclusive_string\": \"1950\",\n\t\t\"_max-range-inclusive_string\": \"19591231\"\n\t}\n}\n```\n\nThis *range* considers all values greater than `1950` and smaller than `19591231` to be errors.\nThe range includes all dates, tear, month or day, that are between 1950 and december 31st 1959, values out of this range are considered *outliers*.\n\n\n\n```json\n{\n\t\"_normal-range_string\": {\n\t\t\"_min-range-exclusive_string\": \"19491231\"\n\t}\n}\n```\n\nThis *range* considers all dates, year, month or day, starting from 1950 to be correct.\nValues out of thus range are considered *outliers*."}
+		},
+		"_data": {
+			"_scalar": {
+				"_type": "_type_object",
+				"_kind": ["_range_string"]
 			}
 		}
 	},
@@ -755,6 +874,7 @@
 			}
 		}
 	},
+	
 	{
 		"_code": {
 			"_nid": "",
@@ -776,6 +896,43 @@
 	},
 	{
 		"_code": {
+			"_nid": "_min-range-inclusive",
+			"_lid": "string",
+			"_gid": "_min-range-inclusive_string",
+			"_aid": ["string"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "String range minimum inclusive"},
+			"_definition": {"iso_639_3_eng": "This field indicates the minimum value in a range, including the bound value."},
+			"_description": {"iso_639_3_eng": "This field is relevant only for *string* data, it indicates the *minimum bound* of a [range](_range_string.md), *including* the *bound* value. Only strings *greater or equal* to this field's value belong to the [range](_range_string.md)."}
+		},
+		"_data": {
+			"_scalar": {
+				"_type": "_type_string"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_min-range-inclusive",
+			"_lid": "date",
+			"_gid": "_min-range-inclusive_date",
+			"_aid": ["date"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Date range minimum inclusive"},
+			"_definition": {"iso_639_3_eng": "This field indicates the minimum value in a range, including the bound value."},
+			"_description": {"iso_639_3_eng": "This field is relevant only for (dates)[_type_string_date.md], it indicates the *minimum bound* of a [range](_range_date.md), *including* the *bound* value. Only dates *greater or equal* to this field's value belong to the [range](_range_string.md)."}
+		},
+		"_data": {
+			"_scalar": {
+				"_type": "_type_string_date"
+			}
+		}
+	},
+
+	{
+		"_code": {
 			"_nid": "",
 			"_lid": "max-range-inclusive",
 			"_gid": "_max-range-inclusive",
@@ -793,6 +950,43 @@
 			}
 		}
 	},
+	{
+		"_code": {
+			"_nid": "_max-range-inclusive",
+			"_lid": "string",
+			"_gid": "_max-range-inclusive_string",
+			"_aid": ["string"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "String range maximum inclusive"},
+			"_definition": {"iso_639_3_eng": "This field indicates the maximum value in a range, including the bound value."},
+			"_description": {"iso_639_3_eng": "This field is relevant only for *string* data, it indicates the *maximum bound* of a [range](_range_string.md), *including* the *bound* value. Only strings *smaller or equal* to this field's value belong to the [range](_range_string.md)."}
+		},
+		"_data": {
+			"_scalar": {
+				"_type": "_type_string"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_max-range-inclusive",
+			"_lid": "date",
+			"_gid": "_max-range-inclusive_date",
+			"_aid": ["date"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Date range maximum inclusive"},
+			"_definition": {"iso_639_3_eng": "This field indicates the maximum value in a range, including the bound value."},
+			"_description": {"iso_639_3_eng": "This field is relevant only for (date)[_tupe_string_date.md] data, it indicates the *maximum bound* of a [range](_range_date.md), *including* the *bound* value. Only strings *smaller or equal* to this field's value belong to the [range](_range_date.md)."}
+		},
+		"_data": {
+			"_scalar": {
+				"_type": "_type_string_date"
+			}
+		}
+	},
+
 	{
 		"_code": {
 			"_nid": "",
@@ -814,6 +1008,43 @@
 	},
 	{
 		"_code": {
+			"_nid": "_min-range-exclusive",
+			"_lid": "string",
+			"_gid": "_min-range-exclusive_string",
+			"_aid": ["string"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "String range minimum exclusive"},
+			"_definition": {"iso_639_3_eng": "This field indicates the minimum value in a range, excluding the bound value."},
+			"_description": {"iso_639_3_eng": "This field is relevant only for *string* data, it indicates the *minimum bound* of a [range](_range_string.md), *excluding* the *bound* value. Only strings *greater* than this field's value belong to the [range](_range_string.md)."}
+		},
+		"_data": {
+			"_scalar": {
+				"_type": "_type_string"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_min-range-exclusive",
+			"_lid": "date",
+			"_gid": "_min-range-exclusive_date",
+			"_aid": ["date"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Date range minimum exclusive"},
+			"_definition": {"iso_639_3_eng": "This field indicates the minimum value in a range, excluding the bound value."},
+			"_description": {"iso_639_3_eng": "This field is relevant only for (date)[_type_string_date.md] data, it indicates the *minimum bound* of a [range](_range_date.md), *excluding* the *bound* value. Only strings *greater* than this field's value belong to the [range](_range_date.md)."}
+		},
+		"_data": {
+			"_scalar": {
+				"_type": "_type_string_date"
+			}
+		}
+	},
+
+	{
+		"_code": {
 			"_nid": "",
 			"_lid": "max-range-exclusive",
 			"_gid": "_max-range-exclusive",
@@ -828,6 +1059,42 @@
 			"_class": "_class_quantity_averaged",
 			"_scalar": {
 				"_type": "_type_number"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_max-range-exclusive",
+			"_lid": "string",
+			"_gid": "_max-range-exclusive_string",
+			"_aid": ["string"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "String range maximum exclusive"},
+			"_definition": {"iso_639_3_eng": "This field indicates the maximum value in a range, excluding the bound value."},
+			"_description": {"iso_639_3_eng": "This field is relevant only for *string* data, it indicates the *maximum bound* of a [range](_range_string.md), *excluding* the *bound* value. Only strings *smaller* than this field's value belong to the [range](_range_string.md)."}
+		},
+		"_data": {
+			"_scalar": {
+				"_type": "_type_string"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_max-range-exclusive",
+			"_lid": "date",
+			"_gid": "_max-range-exclusive_date",
+			"_aid": ["date"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Date range maximum exclusive"},
+			"_definition": {"iso_639_3_eng": "This field indicates the maximum value in a range, excluding the bound value."},
+			"_description": {"iso_639_3_eng": "This field is relevant only for (date)[_type_string_date.md] data, it indicates the *maximum bound* of a [range](_range_date.md), *excluding* the *bound* value. Only strings *smaller* than this field's value belong to the [range](_range_date.md)."}
+		},
+		"_data": {
+			"_scalar": {
+				"_type": "_type_string_date"
 			}
 		}
 	},

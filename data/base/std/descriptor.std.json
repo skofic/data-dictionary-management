@@ -643,7 +643,11 @@
         "_data": {
             "_class": "_class_time",
             "_scalar": {
-            	"_type": "_type_string_date"
+            	"_type": "_type_string_date",
+            	"_valid-range_date": {
+                    "_min-range-inclusive_date": "1950",
+                    "_max-range-inclusive_date": "20501231"
+            	}
             }
         }
     },
