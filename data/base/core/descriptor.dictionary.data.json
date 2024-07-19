@@ -823,12 +823,32 @@
 			"_title": {"iso_639_3_eng": "Normal range of strings"},
 			"_definition": {"iso_639_3_eng": "This field indicates the normal range for strings, values that are out of range are considered outliers, not errors."},
 			"_description": {"iso_639_3_eng": "This property defines the range in which values are considered *normal*, values out of this range are considered *outliers*. This string *range* may *ignore* the *lower* or *upper* bound, and it allows specifying whether the *bounds* are *included* in the range, or not. The property is an object that may contain the following combination of elements:\n\n- [Minimum range inclusive](_min-range-inclusive_string.md): The value must be greater than or equal to the bound.\n- [Minimum range exclusive](_min-range-exclusive_string.md): The value must be greater than the bound.\n- [Maximum range inclusive](_max-range-inclusive_string.md): The value must be less than or equal to the bound.\n- [Maximum range exclusive](_max-range-exclusive_string.md): The value must be less than the bound.\n\nIt is possible to omit the minimum or maximum bound.\n\nOut of range values are considered outliers."},
-			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_normal-range_string\": {\n\t\t\"_min-range-inclusive_string\": \"1950\",\n\t\t\"_max-range-inclusive_string\": \"19591231\"\n\t}\n}\n```\n\nThis *range* considers all values greater than `1950` and smaller than `19591231` to be errors.\nThe range includes all dates, tear, month or day, that are between 1950 and december 31st 1959, values out of this range are considered *outliers*.\n\n\n\n```json\n{\n\t\"_normal-range_string\": {\n\t\t\"_min-range-exclusive_string\": \"19491231\"\n\t}\n}\n```\n\nThis *range* considers all dates, year, month or day, starting from 1950 to be correct.\nValues out of thus range are considered *outliers*."}
+			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_normal-range_string\": {\n\t\t\"_min-range-inclusive_string\": \"1950\",\n\t\t\"_max-range-inclusive_string\": \"19591231\"\n\t}\n}\n```\n\nThis *range* considers all values greater than `1950` and smaller than `19591231` to be errors.\nThe range includes all dates, year, month or day, that are between 1950 and december 31st 1959, values out of this range are considered *outliers*.\n\n\n\n```json\n{\n\t\"_normal-range_string\": {\n\t\t\"_min-range-exclusive_string\": \"19491231\"\n\t}\n}\n```\n\nThis *range* considers all dates, year, month or day, starting from 1950 to be correct.\nValues out of thus range are considered *outliers*."}
 		},
 		"_data": {
 			"_scalar": {
 				"_type": "_type_object",
 				"_kind": ["_range_string"]
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_normal-range",
+			"_lid": "date",
+			"_gid": "_normal-range_date",
+			"_aid": ["date"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Normal range of dates"},
+			"_definition": {"iso_639_3_eng": "This field indicates the normal range for dates, values that are out of range are considered outliers, not errors."},
+			"_description": {"iso_639_3_eng": "This property defines the range in which values are considered *normal*, values out of this range are considered *outliers*. This date *range* may *ignore* the *lower* or *upper* bound, and it allows specifying whether the *bounds* are *included* in the range, or not. The property is an object that may contain the following combination of elements:\n\n- [Minimum range inclusive](_min-range-inclusive_date.md): The value must be greater than or equal to the bound.\n- [Minimum range exclusive](_min-range-exclusive_date.md): The value must be greater than the bound.\n- [Maximum range inclusive](_max-range-inclusive_date.md): The value must be less than or equal to the bound.\n- [Maximum range exclusive](_max-range-exclusive_date.md): The value must be less than the bound.\n\nIt is possible to omit the minimum or maximum bound.\n\nOut of range values are considered outliers."},
+			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_normal-range_date\": {\n\t\t\"_min-range-inclusive_date\": \"1950\",\n\t\t\"_max-range-inclusive_date\": \"19591231\"\n\t}\n}\n```\n\nThis *range* considers all dates greater than `1950` and smaller than `19591231` to be errors.\nThe range includes all dates, year, month or day, that are between 1950 and december 31st 1959, values out of this range are considered *outliers*.\n\n\n\n```json\n{\n\t\"_normal-range_sdate\": {\n\t\t\"_min-range-exclusive_date\": \"19491231\"\n\t}\n}\n```\n\nThis *range* considers all dates, year, month or day, starting from 1950 to be correct.\nValues out of thus range are considered *outliers*."}
+		},
+		"_data": {
+			"_scalar": {
+				"_type": "_type_object",
+				"_kind": ["_range_date"]
 			}
 		}
 	},
