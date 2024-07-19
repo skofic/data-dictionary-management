@@ -201,7 +201,7 @@
 		},
 		"_data": {
 			"_scalar": {
-				"_type": "_type_object"
+				"_type": "_type_struct"
 			}
 		}
 	}

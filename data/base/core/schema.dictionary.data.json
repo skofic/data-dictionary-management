@@ -112,6 +112,12 @@
 		"_path": ["_type", "_type_key", "_set_type"]
 	},
 	{
+		"_from": "_type_struct",
+		"_to": "_type",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_type"]
+	},
+	{
 		"_from": "_type_object",
 		"_to": "_type",
 		"_predicate": "_predicate_enum-of",

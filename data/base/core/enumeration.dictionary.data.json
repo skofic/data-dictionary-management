@@ -218,13 +218,26 @@
 	{
 		"_code": {
 			"_nid": "_type",
+			"_lid": "struct",
+			"_gid": "_type_struct",
+			"_aid": ["struct"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Data structure"},
+			"_definition": {"iso_639_3_eng": "Free data structure."},
+			"_description": {"iso_639_3_eng": "The descriptor value *must* be an *object* or *data structure*. *No rules* or *data types* are *enforced*. When validating such values we only check that it is a *data structure* and its *properties* are *not parsed*."}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_type",
 			"_lid": "object",
 			"_gid": "_type_object",
 			"_aid": ["object"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Data structure"},
-			"_definition": {"iso_639_3_eng": "Data structure or object."},
+			"_title": {"iso_639_3_eng": "Object structure"},
+			"_definition": {"iso_639_3_eng": "Object data structure."},
 			"_description": {"iso_639_3_eng": "The descriptor value *must* be an *object* or *data structure*. The [data kind](_kind) can be used to *specify* the *structure type* or to specify a [wildcard](_any-object) to consider the value as *any valid object*."}
 		}
 	},

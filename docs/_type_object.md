@@ -3,12 +3,12 @@
 
 
 ------
-#### Data structure
+#### Object structure
 
 
 
 ------
-###### Data structure or object.
+###### Object data structure.
 
 
 
