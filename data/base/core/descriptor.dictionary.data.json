@@ -21,7 +21,7 @@
 		"_rule": {
 			"_recommended": {
 				"_selection-descriptors_any": [
-					"_type"
+					"_type",
 					"_kind",
 					"_format",
 					"_unit",
