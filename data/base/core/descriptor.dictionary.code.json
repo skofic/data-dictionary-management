@@ -15,8 +15,7 @@
 		"_data": {
 			"_class": "_class_reference",
 			"_scalar": {
-				"_type": "_type_string_key",
-				"_kind": ["_any-term"]
+				"_type": "_type_string_key"
 			}
 		}
 	},

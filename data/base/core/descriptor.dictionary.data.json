@@ -19,13 +19,9 @@
 			}
 		},
 		"_rule": {
-			"_required": {
-				"_selection-descriptors_one-none": [
-					"_type"
-				]
-			},
 			"_recommended": {
 				"_selection-descriptors_any": [
+					"_type"
 					"_kind",
 					"_format",
 					"_unit",
@@ -523,8 +519,7 @@
 			"_class": "_class_category",
 			"_set": {
 				"_set_scalar": {
-					"_set_type": "_type_string_key",
-					"_kind": ["_any-term"]
+					"_set_type": "_type_string_key"
 				}
 			}
 		}

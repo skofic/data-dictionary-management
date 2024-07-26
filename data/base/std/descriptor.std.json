@@ -348,7 +348,8 @@
         "_data": {
             "_class": "_class_identifier",
             "_scalar": {
-            	"_type": "_type_string_key"
+				"_type": "_type_string",
+				"_regexp": "^[a-zA-Z0-9-:.@+,=;$!*'%()_]{1,254}$"
             }
         }
     },
@@ -368,7 +369,8 @@
             "_class": "_class_identifier",
             "_set": {
                 "_set_scalar": {
-                	"_set_type": "_type_string_key"
+					"_type": "_type_string",
+					"_regexp": "^[a-zA-Z0-9-:.@+,=;$!*'%()_]{1,254}$"
                 }
             }
         }
@@ -753,7 +755,10 @@
         "_data": {
             "_class": "_class_identifier",
             "_set": {
-                "_set_scalar": {"_set_type": "_type_string_key"}
+                "_set_scalar": {
+                	"_set_type": "_type_string_key",
+                	"_kind": ["_any-descriptor"]
+                }
             }
         }
     },
@@ -772,7 +777,10 @@
         "_data": {
             "_class": "_class_identifier",
             "_set": {
-                "_set_scalar": {"_set_type": "_type_string_key"}
+                "_set_scalar": {
+                	"_set_type": "_type_string_key",
+                	"_kind": ["_any-descriptor"]
+                }
             }
         }
     },
@@ -791,7 +799,10 @@
         "_data": {
             "_class": "_class_identifier",
             "_set": {
-                "_set_scalar": {"_set_type": "_type_string_key"}
+                "_set_scalar": {
+                	"_set_type": "_type_string_key",
+                	"_kind": ["_any-descriptor"]
+                }
             }
         }
     },

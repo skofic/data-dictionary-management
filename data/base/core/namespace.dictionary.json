@@ -22,7 +22,7 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "Any term"},
 			"_definition": {"iso_639_3_eng": "This wildcard represents any term."},
-			"_description": {"iso_639_3_eng": "When defining a [descriptor](_term_descriptor), if the [data type](_type) is [enumeration](_type_string_enum) and you set the [type reference](_kind_) to this *value*, it means that the descriptor's value can be the [global identifier](_gid) of any *term*. This *includes* terms representing [object definitions](_term_object) and [descriptors](_term_descriptor)."}
+			"_description": {"iso_639_3_eng": "When defining a [descriptor](_term_descriptor), if the [data type](_type) is [enumeration](_type_string_enum) and you set the [type reference](_kind.md) to this *value*, it means that the descriptor's value can be the [global identifier](_gid) of any *term*. This *includes* terms representing [object definitions](_term_object) and [descriptors](_term_descriptor)."}
 		}
 	},
 	{
@@ -35,7 +35,7 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "Any enumeration"},
 			"_definition": {"iso_639_3_eng": "This wildcard represents any enumerated term."},
-			"_description": {"iso_639_3_eng": "When defining a [descriptor](_term_descriptor), if the [data type](_type) is [enumeration](_type_string_enum) and you set the [type reference](_kind_) to this *value*, it means that the descriptor's value can be the [global identifier](_gid) of any *term* that is used as an *element* of a *controlled vocabulary*."}
+			"_description": {"iso_639_3_eng": "When defining a [descriptor](_term_descriptor), if the [data type](_type) is [enumeration](_type_string_enum) and you set the [type reference](_kind.md) to this *value*, it means that the descriptor's value can be the [global identifier](_gid) of any *term* that is used as an *element* of a *controlled vocabulary*.\n\nWhen defining a [key reference](_type_string_key.md) type, you can add the [type reference](_kind.md) to the [data definition section](_data.md): if you set this value as one of the elements of the [data definition section](_data.md), you are signalling that the value, besides being a term reference, it has to be a reference to a term belonging to an [enumeration](_type_string_enum.md) graph."}
 		}
 	},
 	{
@@ -48,7 +48,7 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "Any descriptor"},
 			"_definition": {"iso_639_3_eng": "This wildcard represents any descriptor."},
-			"_description": {"iso_639_3_eng": "When defining a [descriptor](_term_descriptor), if the [data type](_type) is [enumeration](_type_string_enum) and you set the [type reference](_kind_) to this *value*, it means that the descriptor's value can be the [global identifier](_gid) of any *term* that represents a [descriptor](_term_descriptor).\n\nTerms that represent *descriptors* must *include* the [data](_data) property section."}
+			"_description": {"iso_639_3_eng": "When defining a [descriptor](_term_descriptor), if the [data type](_type) is [enumeration](_type_string_enum) and you set the [type reference](_kind.md) to this *value*, it means that the descriptor's value can be the [global identifier](_gid) of any *term* that represents a [descriptor](_term_descriptor.md). Terms that represent *descriptors* must *include* the [data](_data) property section.\n\nWhen defining a [key reference](_type_string_key.md) type, you can add the [type reference](_kind.md) to the [data definition section](_data.md): if you set this value as one of the elements of the [data definition section](_data.md), you are signalling that the value, besides being a term reference, it has to be a reference to a term representing a [descriptor](_term_descriptor.md)."}
 		}
 	},
 	{
@@ -61,7 +61,7 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "Any object"},
 			"_definition": {"iso_639_3_eng": "This wildcard represents any object type."},
-			"_description": {"iso_639_3_eng": "When defining a [descriptor](_term_descriptor), if the [data type](_type) is [object](_type_object) and you set the [type reference](_kind_) to this *value*, it means that the descriptor's *value* can be *any object structure*.\n\nThis means that the *object* can have *any property* and there are *no restrictions* or *constraints*, however, when *validating* the value, the object *will be parsed* and its *properties* will be *matched* to existing *descriptors*."}
+			"_description": {"iso_639_3_eng": "When defining a [descriptor](_term_descriptor), if the [data type](_type) is [object](_type_object) and you set the [type reference](_kind.md) to this *value*, it means that the descriptor's *value* can be *any object structure*. This means that the *object* can have *any property* and there are *no restrictions* or *constraints*, however, when *validating* the value, the object *will be parsed* and its *properties* will be *matched* to existing *descriptors*.\n\nWhen defining a [key reference](_type_string_key.md) type, you can add the [type reference](_kind.md) to the [data definition section](_data.md): if you set this value as one of the elements of the [data definition section](_data.md), you are signalling that the value, besides being a term reference, it has to be a reference to a term representing an [object structure](_term_object.md)."}
 		}
 	}
 ]

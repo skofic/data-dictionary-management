@@ -172,7 +172,7 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "Key reference"},
 			"_definition": {"iso_639_3_eng": "Reference to a term's global identifier."},
-			"_description": {"iso_639_3_eng": "It is a [string](_type_string) representing the [global identifier](_gid) of a *document* from the *terms collection*."}
+			"_description": {"iso_639_3_eng": "It is a [string](_type_string) representing the [global identifier](_gid) of a *document* from the *terms collection*. It is possible to associate a [data kind](_kind.md), to this data type, in order to filter specific kinds of terms:\n\n- [Any enumeration](_any-enum.md): The term must be an [enumeration](_type_string_enum.md) element.\n- [Any descriptor](_any-descriptor): The term must be a descriptor, it must feature a [data section](_data.md).\n- [Any object:](_any-object.md) The term must be an object definition, it must feature a [rule section](_rule.md)."}
 		}
 	},
 	{
