@@ -4,7 +4,7 @@
  * This structure contains user dependent and defined globals.
  * - **host**: Provide the database host and port.
  * - **name**: Provide the database name.
- * - **user**: Provide the database user name.
+ * - **user**: Provide the database username.
  * - **pass**: Provide the database user password.
  * - **mount**: Provide the Foxx service mount path; the actual collection names
  * 				use this name as a prefix and the following names separated by
