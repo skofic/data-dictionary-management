@@ -117,7 +117,8 @@
 			"_class": "_class_reference",
 			"_set": {
 				"_set_scalar": {
-					"_set_type": "_type_string_key"
+					"_set_type": "_type_string_key",
+					"_kind": ["_any-term"]
 				}
 			}
 		}
@@ -138,7 +139,8 @@
 			"_class": "_class_reference",
 			"_set": {
 				"_set_scalar": {
-					"_set_type": "_type_string_key"
+					"_set_type": "_type_string_key",
+					"_kind": ["_any-term"]
 				}
 			}
 		}
@@ -159,7 +161,8 @@
 			"_class": "_class_reference",
 			"_set": {
 				"_set_scalar": {
-					"_set_type": "_type_string_key"
+					"_set_type": "_type_string_key",
+					"_kind": ["_any-term"]
 				}
 			}
 		}
@@ -182,7 +185,8 @@
 			"_array": {
 				"_set": {
 					"_set_scalar": {
-						"_set_type": "_type_string_key"
+						"_set_type": "_type_string_key",
+						"_kind": ["_any-term"]
 					}
 				}
 			}
@@ -204,7 +208,8 @@
 			"_class": "_class_reference",
 			"_set": {
 				"_set_scalar": {
-					"_set_type": "_type_string_key"
+					"_set_type": "_type_string_key",
+					"_kind": ["_any-term"]
 				}
 			}
 		}

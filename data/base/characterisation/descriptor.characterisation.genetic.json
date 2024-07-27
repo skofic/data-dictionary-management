@@ -15,7 +15,8 @@
 			"_class": "_class_identifier",
 			"_domain": ["chr_gent"],
 			"_scalar": {
-				"_type": "_type_string_key"
+				"_type": "_type_string_key",
+				"_kind": ["_any-descriptor"]
 			}
 		}
 	},

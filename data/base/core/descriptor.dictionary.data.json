@@ -519,7 +519,8 @@
 			"_class": "_class_category",
 			"_set": {
 				"_set_scalar": {
-					"_set_type": "_type_string_key"
+					"_set_type": "_type_string_key",
+					"_kind": ["_any-term"]
 				}
 			}
 		}
