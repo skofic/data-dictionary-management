@@ -13,7 +13,7 @@
 
 
 ------
-It is a [string](_type_string) representing the [global identifier](_gid) of a *document* from the *any collection*. It is possible to associate a [data kind](_kind.md), to this data type, in order to filter specific kinds of terms:
+It is a [string](_type_string) representing the [global identifier](_gid) of a *document* from *any collection*. It is possible to associate a [data kind](_kind.md), to this data type, in order to filter specific kinds of terms:
 
 - [Any term](_any-term.md): The string must *reference* a *document* of the *terms collection*.
 - [Any enumeration](_any-enum.md): The string must *reference* a *document* of the *terms collection*, and the referenced term must be an [enumeration](_type_string_enum.md) element.

@@ -3408,7 +3408,7 @@ function ProcessLink(edge) {
  * @returns {string} - _key value
  */
 function ProcessGlobalIdentifier(identifier) {
-	return (identifier.length > 0) ? identifier : ':'								// ==>
+	return (identifier.length > 0) ? identifier : ';'								// ==>
 
 	//
 	// Parse settings.
@@ -3419,7 +3419,7 @@ function ProcessGlobalIdentifier(identifier) {
 	// 		return md5(identifier)													// ==>
 	//
 	// 	case 'GID':
-	// 		return (identifier.length > 0) ? identifier : ':'						// ==>
+	// 		return (identifier.length > 0) ? identifier : ';'						// ==>
 	//
 	// 	default:
 	// 		throw(Error(`Invalid user globals key_encode flag value, found [${kPriv.user.flag}]`))

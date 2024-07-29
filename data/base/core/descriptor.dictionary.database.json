@@ -49,8 +49,7 @@
 		},
 		"_data": {
 			"_scalar": {
-				"_type": "_type_string_key",
-				"_regexp": "^[a-zA-Z0-9-:.@+,=;$!*'%()_]{1,254}$"
+				"_type": "_type_string_key"
 			}
 		}
 	},
