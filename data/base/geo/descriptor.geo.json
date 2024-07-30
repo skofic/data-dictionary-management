@@ -36,9 +36,7 @@
 			"_class": "_class_category",
 			"_scalar": {
 				"_type": "_type_string_enum",
-				"_kind": [
-					"geo_ellipsoids"
-				]
+				"_kind": ["geo_ellipsoids"]
 			}
 		}
 	},
