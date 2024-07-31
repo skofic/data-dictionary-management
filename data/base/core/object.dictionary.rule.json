@@ -18,7 +18,7 @@
 					"_selection-terms_one",
 					"_selection-terms_one-none",
 					"_selection-terms_any",
-					"_selection-terms_any-one",
+					"_selection-terms_one-none-of",
 					"_selection-terms_all"
 				]
 			}
@@ -43,7 +43,7 @@
 					"_selection-descriptors_one",
 					"_selection-descriptors_one-none",
 					"_selection-descriptors_any",
-					"_selection-descriptors_any-one",
+					"_selection-descriptors_one-none-of",
 					"_selection-descriptors_all"
 				]
 			}
@@ -68,7 +68,7 @@
 					"_selection-values_one",
 					"_selection-values_one-none",
 					"_selection-values_any",
-					"_selection-values_any-one",
+					"_selection-values_one-none-of",
 					"_selection-values_all"
 				]
 			}

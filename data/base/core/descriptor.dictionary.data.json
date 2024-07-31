@@ -673,7 +673,7 @@
 		},
 		"_rule": {
 			"_required": {
-				"_selection-descriptors_any-one": [
+				"_selection-descriptors_one-none-of": [
 					["_min-range-inclusive", "_min-range-exclusive"],
 					["_max-range-inclusive", "_max-range-exclusive"]
 				]
@@ -701,7 +701,7 @@
 		},
 		"_rule": {
 			"_required": {
-				"_selection-descriptors_any-one": [
+				"_selection-descriptors_one-none-of": [
 					["_min-range-inclusive_string", "_min-range-exclusive_string"],
 					["_max-range-inclusive_string", "_max-range-exclusive_string"]
 				]
@@ -729,7 +729,7 @@
 		},
 		"_rule": {
 			"_required": {
-				"_selection-descriptors_any-one": [
+				"_selection-descriptors_one-none-of": [
 					["_min-range-inclusive_date", "_min-range-exclusive_date"],
 					["_max-range-inclusive_date", "_max-range-exclusive_date"]
 				]

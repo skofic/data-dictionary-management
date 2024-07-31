@@ -1,4 +1,4 @@
-### _selection-terms_any-one
+### _selection-values_one-none-of
 
 
 
@@ -13,16 +13,16 @@
 
 
 ------
-This descriptor contains a *parent array* that contains a *list* of *sets*: the rule determines that at most *one element* should be selected from *each* of the *child sets* and *one* or *more* elements of that selection will become the *result*. It is like combining an [any](_selection-terms_any) selection with a [one](_selection-terms_one) selection.
+This descriptor contains a *parent array* that contains a *list* of *sets*: the rule determines that at most *one element* should be selected from *each* of the *child sets* and *one* or *more* elements of that selection will become the *result*. It is like combining an [any](_selection-valuesany) selection with a [one](_selection-values_one) selection.
 
-The *terms* in the *child sets* are represented by their [global identifiers](_gid).
+The *values* in the *child sets* can be any value.
 
 
 
 ------
 ```json
 {
-	"_selection-terms_any-one": [
+	"_selection-terms_one-none-of": [
 		["red", "green", "blue"],
 		["Monday", "Tuesday"]
 	]
