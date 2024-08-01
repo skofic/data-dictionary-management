@@ -57,8 +57,7 @@
 		"_data": {
 			"_class": "_class_identifier",
 			"_scalar": {
-				"_type": "_type_string_key",
-				"_kind": ["_any-term"]
+				"_type": "_type_string_key"
 			}
 		}
 	},
