@@ -23,12 +23,6 @@
 		"_predicate": "_predicate_property-of",
 		"_path": ["_rule"]
 	},
-	{
-		"_from": "_default-value",
-		"_to": "_rule",
-		"_predicate": "_predicate_property-of",
-		"_path": ["_rule"]
-	},
 	
 	{
 		"_from": "_selection-descriptors",

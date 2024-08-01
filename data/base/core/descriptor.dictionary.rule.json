@@ -83,23 +83,6 @@
 			}
 		}
 	},	
-	{
-		"_code": {
-			"_nid": "",
-			"_lid": "default-value",
-			"_gid": "_default-value",
-			"_aid": ["default-value"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Default value"},
-			"_definition": {"iso_639_3_eng": "List of property default values."},
-			"_description": {"iso_639_3_eng": "This field is a *key/value dictionary* in which the *key* is the *property name*, which is the *global identifier* of the *descriptor*, and the *value* represents the *default value* for that *property*.\n\nThe data is defined as an object that can have any property or value: default values are added before validation, so values and descriptors will follow standard rules."},
-			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"my_number\": 12,\n\t\"my_label\": \"default label\",\n\t\"my_list\": [1, 2, 3]\n}\n```\n\nThis will set:\n\n- `my_number` to 12.\n- `my_label` to `\"default label\"`.\n- `my_list` to `1`, `2` and `3`."}
-		},
-		"_data": {
-			"_scalar": {}
-		}
-	},
 	
 	{
 		"_code": {
