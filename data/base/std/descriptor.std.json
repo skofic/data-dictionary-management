@@ -713,8 +713,7 @@
             "_class": "_class_time",
             "_array": {
                 "_scalar": {
-                	"_type": "_type_object",
-					"_kind": ["_any-object"]
+                	"_type": "_type_object"
                 }
             }
         }

@@ -232,7 +232,7 @@
 		},
 		"_rule": {
 			"_required": {
-				"_selection-descriptors_all": [
+				"_selection-descriptors_one-none": [
 					"_type_key"
 				]
 			},
