@@ -572,7 +572,7 @@
 			],
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
-			"scalar": {
+			"_scalar": {
 				"_type": "_type_integer",
 				"_unit": "_unit_area_m",
 				"_decimals": 0,

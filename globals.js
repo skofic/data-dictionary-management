@@ -30,7 +30,8 @@ const globals = {
 
 	"token": {
 		"ns": "_",
-		"tok": "/"
+		"tok": "/",
+		"def_ns_key": ";"
 	},
 
 	"dec": {

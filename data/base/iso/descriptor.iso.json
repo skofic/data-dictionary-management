@@ -14,7 +14,7 @@
 			"_scalar": {
 				"_type": "_type_string_enum",
 				"_kind": ["iso_639_scope"],
-				"_regexp": "^[IMS]$"
+				"_regexp": "^iso_639_scope_[IMS]$"
 			}
 		}
 	},
@@ -33,7 +33,7 @@
 			"_scalar": {
 				"_type": "_type_string_enum",
 				"_kind": ["iso_639_type"],
-				"_regexp": "^[ACEHLS]$"
+				"_regexp": "^iso_639_type_[ACEHLS]$"
 			}
 		}
 	},

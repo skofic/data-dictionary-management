@@ -393,7 +393,15 @@ async function ValidateDescriptors(db)
 	// Get descriptors and objects.
 	///
 	console.log(`==> Querying all descriptors and object types`)
-	current = await ValidationQuery(db,transport, cookie, aql`FOR term IN VIEW_TERM SEARCH EXISTS(term._data) AND EXISTS(term._rule)`)
+	current =
+		await ValidationQuery(
+			db, transport, cookie,
+			aql`
+				FOR term IN VIEW_TERM
+					SEARCH EXISTS(term._data) AND
+						EXISTS(term._rule) AND
+						term._key != ${kGlob.globals.token.def_ns_key}
+			`)
 	result.processed += current.processed
 	result.valid += current.valid
 	result.errors += current.errors
@@ -403,7 +411,15 @@ async function ValidateDescriptors(db)
 	// Get descriptors.
 	///
 	console.log(`==> Querying all descriptors`)
-	current = await ValidationQuery(db,transport, cookie, aql`FOR term IN VIEW_TERM SEARCH EXISTS(term._data) AND NOT(EXISTS(term._rule))`)
+	current =
+		await ValidationQuery(
+			db, transport, cookie,
+			aql`
+				FOR term IN VIEW_TERM
+					SEARCH EXISTS(term._data) AND
+						NOT(EXISTS(term._rule)) AND
+						term._key != ${kGlob.globals.token.def_ns_key}
+			`)
 	result.processed += current.processed
 	result.valid += current.valid
 	result.errors += current.errors
@@ -413,7 +429,15 @@ async function ValidateDescriptors(db)
 	// Get objects.
 	///
 	console.log(`==> Querying all object types`)
-	current = await ValidationQuery(db,transport, cookie, aql`FOR term IN VIEW_TERM SEARCH EXISTS(term._rule) AND NOT(EXISTS(term._data))`)
+	current =
+		await ValidationQuery(
+			db, transport, cookie,
+			aql`
+				FOR term IN VIEW_TERM
+					SEARCH EXISTS(term._rule) AND
+						NOT(EXISTS(term._data)) AND
+						term._key != ${kGlob.globals.token.def_ns_key}
+			`)
 	result.processed += current.processed
 	result.valid += current.valid
 	result.errors += current.errors
@@ -423,106 +447,20 @@ async function ValidateDescriptors(db)
 	// Get terms.
 	///
 	console.log(`==> Querying all terms`)
-	current = await ValidationQuery(db,transport, cookie, aql`FOR term IN VIEW_TERM SEARCH NOT(EXISTS(term._rule) OR EXISTS(term._data))`)
+	current =
+		await ValidationQuery(
+			db, transport, cookie,
+			aql`
+				FOR term IN VIEW_TERM
+					SEARCH NOT(EXISTS(term._rule) OR EXISTS(term._data)) AND
+					term._key != ${kGlob.globals.token.def_ns_key}
+			`)
 	result.processed += current.processed
 	result.valid += current.valid
 	result.errors += current.errors
 	result.warnings += current.warnings
 
-	// //
-	// // Get cursor.
-	// //
-	// console.log(`==> Querying all descriptors`)
-	// const cursor = await db.query(aql`
-	// 	FOR term IN ${db.collection(kDb.collection_terms)}
-	// 		FILTER HAS(term, "_data")
-	// 		LIMIT ${page_records}, ${kPriv.user.db.page_records}
-	// 	RETURN term
-	// `)
-	//
-	// //
-	// // Turn pages.
-	// //
-	// console.log(`==> Iterating all descriptors`)
-	// let records = await cursor.all()
-	// while(records.length > 0) {
-	//
-	// 	//
-	// 	// Create data payload.
-	// 	//
-	// 	const postData = {
-	// 		value: records,
-	// 		language: 'iso_639_3_eng'
-	// 	}
-	//
-	// 	//
-	// 	// Validate.
-	// 	//
-	// 	const response =
-	// 		await transport.post(
-	// 			url,
-	// 			postData,
-	// 			{
-	// 				withCredentials: true,
-	// 				headers: {
-	// 					'Content-Type': 'application/json; charset=utf-8',
-	// 					Cookie: cookie
-	// 				}
-	// 			}
-	// 		)
-	//
-	// 	if(response.status !== 200) {
-	// 		throw Error(`(${response.status}) - ${response.statusText}`)
-	// 	}
-	//
-	// 	//
-	// 	// Handle valid records.
-	// 	//
-	// 	if(response.data.hasOwnProperty('valid')) {
-	// 		result.valid += response.data.valid.length
-	// 		result.processed += response.data.valid.length
-	// 	}
-	//
-	// 	//
-	// 	// Handle warnings.
-	// 	//
-	// 	if(response.data.hasOwnProperty('warnings')) {
-	// 		result.warnings += response.data.warnings.length
-	// 		result.processed += response.data.warnings.length
-	// 		for(const item of response.data.warnings) {
-	// 			db.collection(kDb.collection_errors).save({ warning: item })
-	// 		}
-	// 	}
-	//
-	// 	//
-	// 	// Handle errors.
-	// 	//
-	// 	if(response.data.hasOwnProperty('errors')) {
-	// 		result.errors += response.data.errors.length
-	// 		result.processed += response.data.errors.length
-	// 		for(const item of response.data.errors) {
-	// 			db.collection(kDb.collection_errors).save({ error: item })
-	// 		}
-	// 	}
-	//
-	// 	console.log(result)
-	//
-	// 	//
-	// 	// Get next page.
-	// 	//
-	// 	page_records += kPriv.user.db.page_records
-	// 	const cursor = await db.query(aql`
-	// 		FOR term IN ${db.collection(kDb.collection_terms)}
-	// 		LIMIT ${page_records}, ${kPriv.user.db.page_records}
-	// 		RETURN term
-	// 	`)
-	// 	records = await cursor.all()
-	//
-	// } // Page not empty.
-	//
-	// console.log(`Processed ${processed} terms.`)
-
-	return result																// ==>
+	return result														// ==>
 
 } // ValidateDescriptors()
 
@@ -714,22 +652,23 @@ async function ValidationQuery(db, theTransport, theCookie, theQuery)
 	while(records.length > 0) {
 
 		//
-		// Create data payload.
-		//
-		const postData = {
-			value: records,
-			language: 'iso_639_3_eng'
-		}
-
-		//
 		// Validate.
 		//
 		const response =
 			await theTransport.post(
 				url,
-				postData,
+				records,
 				{
 					withCredentials: true,
+					params: {
+						cache: true,
+						miss: true,
+						terms: true,
+						types: false,
+						resolve: false,
+						defns: true,
+						resfld: '_lid'
+					},
 					headers: {
 						'Content-Type': 'application/json; charset=utf-8',
 						Cookie: theCookie
@@ -742,33 +681,28 @@ async function ValidationQuery(db, theTransport, theCookie, theQuery)
 		}
 
 		//
-		// Handle valid records.
+		// Handle counters.
 		//
 		if(response.data.hasOwnProperty('valid')) {
-			result.valid += response.data.valid.length
-			result.processed += response.data.valid.length
+			result.valid += response.data.valid
+			result.processed += response.data.valid
 		}
-
-		//
-		// Handle warnings.
-		//
 		if(response.data.hasOwnProperty('warnings')) {
-			result.warnings += response.data.warnings.length
-			result.processed += response.data.warnings.length
-			for(const item of response.data.warnings) {
-				db.collection(kDb.collection_errors).save({ warning: item })
-			}
+			result.warnings += response.data.warnings
+			result.processed += response.data.warnings
+		}
+		if(response.data.hasOwnProperty('errors')) {
+			result.errors += response.data.errors
+			result.processed += response.data.errors
 		}
 
-		//
-		// Handle errors.
-		//
-		if(response.data.hasOwnProperty('errors')) {
-			result.errors += response.data.errors.length
-			result.processed += response.data.errors.length
-			for(const item of response.data.errors) {
-				db.collection(kDb.collection_errors).save({ error: item })
-			}
+		///
+		// Log reports.
+		///
+		if(response.data.hasOwnProperty('reports')) {
+			response.data.reports.forEach( (report) => {
+				db.collection(kDb.collection_errors).save(report)
+			})
 		}
 
 		console.log(result)
