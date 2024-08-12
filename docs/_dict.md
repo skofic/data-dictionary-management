@@ -13,7 +13,7 @@
 
 
 ------
-This property defines the *shape* and *type* of a *key/value dictionary*. *Keys* are *strings* that *may* be *bound* to a *controlled vocabulary*, while *values* may be of *any type*. Once defined the *value type*, this must apply to *all values* in the *dictionary*.
+This property defines the *shape* and *type* of a *key/value dictionary*. *Keys* are *strings* that *may* be *bound* to a *controlled vocabulary*, while *values* may be of *any type*. The [key](_dict_key.md) and [value](_dict_value.md) definitions apply to all object keys and values.
 
 
 
