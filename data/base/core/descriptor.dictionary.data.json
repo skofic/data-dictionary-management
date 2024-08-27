@@ -231,13 +231,9 @@
 			}
 		},
 		"_rule": {
-			"_required": {
-				"_selection-descriptors_one-none": [
-					"_type_key"
-				]
-			},
 			"_recommended": {
 				"_selection-descriptors_any": [
+					"_type_key",
 					"_kind",
 					"_format",
 					"_unit",

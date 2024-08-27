@@ -267,6 +267,28 @@
 	{
 		"_code": {
 			"_nid": "_selection-descriptors",
+			"_lid": "all",
+			"_gid": "_selection-descriptors_all",
+			"_aid": ["all"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "All of"},
+			"_definition": {"iso_639_3_eng": "Selection should contain all descriptors from the set."},
+			"_description": {"iso_639_3_eng": "The rule determines that *all* of the descriptors in the *set* should be part of the *selection*.\n\nTThe *descriptors* of the *set* are represented by their *global identifiers*."}
+		},
+		"_data": {
+			"_class": "_class_reference",
+			"_set": {
+				"_set_scalar": {
+					"_set_type": "_type_string_key",
+					"_kind": ["_any-descriptor"]
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_selection-descriptors",
 			"_lid": "one-none-of",
 			"_gid": "_selection-descriptors_one-none-of",
 			"_aid": ["one-none-of"]
@@ -285,28 +307,6 @@
 						"_set_type": "_type_string_key",
 						"_kind": ["_any-descriptor"]
 					}
-				}
-			}
-		}
-	},
-	{
-		"_code": {
-			"_nid": "_selection-descriptors",
-			"_lid": "all",
-			"_gid": "_selection-descriptors_all",
-			"_aid": ["all"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "All of"},
-			"_definition": {"iso_639_3_eng": "Selection should contain all descriptors from the set."},
-			"_description": {"iso_639_3_eng": "The rule determines that *all* of the descriptors in the *set* should be part of the *selection*.\n\nTThe *descriptors* of the *set* are represented by their *global identifiers*."}
-		},
-		"_data": {
-			"_class": "_class_reference",
-			"_set": {
-				"_set_scalar": {
-					"_set_type": "_type_string_key",
-					"_kind": ["_any-descriptor"]
 				}
 			}
 		}
