@@ -69,10 +69,10 @@ const globals = {
 			"object"
 		],
 		"edge": [
-			"schema",
-			"struct"
+			"schema"
 		],
 		"link": [
+			"struct",
 			"links"
 		]
 	},
