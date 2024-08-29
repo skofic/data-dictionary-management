@@ -91,7 +91,7 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_scalar": {
-				"_type": "_type_integer"
+				"_type": "_type_number_integer"
 			}
 		}
 	},
@@ -110,7 +110,7 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_scalar": {
-				"_type": "_type_integer"
+				"_type": "_type_number_integer"
 			}
 		}
 	},
@@ -129,7 +129,7 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_scalar": {
-				"_type": "_type_integer"
+				"_type": "_type_number_integer"
 			}
 		}
 	},

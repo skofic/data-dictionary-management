@@ -113,19 +113,6 @@
 	{
 		"_code": {
 			"_nid": "_type",
-			"_lid": "integer",
-			"_gid": "_type_integer",
-			"_aid": ["integer"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Integer"},
-			"_definition": {"iso_639_3_eng": "Discrete value."},
-			"_description": {"iso_639_3_eng": "Integer numeric value."}
-		}
-	},
-	{
-		"_code": {
-			"_nid": "_type",
 			"_lid": "number",
 			"_gid": "_type_number",
 			"_aid": ["number"]
@@ -134,6 +121,19 @@
 			"_title": {"iso_639_3_eng": "Number"},
 			"_definition": {"iso_639_3_eng": "Numeric value that can be continuous or discrete."},
 			"_description": {"iso_639_3_eng": "Floating point or integer numeric value. *Note that by definition the value will be treated as floating point*."}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_type_number",
+			"_lid": "integer",
+			"_gid": "_type_number_integer",
+			"_aid": ["integer"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Integer"},
+			"_definition": {"iso_639_3_eng": "Discrete value."},
+			"_description": {"iso_639_3_eng": "Integer numeric value."}
 		}
 	},
 	{

@@ -219,7 +219,7 @@
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
 			"_scalar": {
-				"_type": "_type_integer",
+				"_type": "_type_number_integer",
 				"_decimals": 0,
 				"_unit": "_unit_length_m",
 				"_valid-range": {
@@ -1062,7 +1062,7 @@
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
 			"_scalar": {
-				"_type": "_type_integer",
+				"_type": "_type_number_integer",
 				"_decimals": 0,
 				"_unit": "_unit_length_cm",
 				"_valid-range": {

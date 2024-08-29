@@ -64,14 +64,14 @@
 		"_path": ["_type", "_set_type"]
 	},
 	{
-		"_from": "_type_integer",
+		"_from": "_type_number",
 		"_to": "_type",
 		"_predicate": "_predicate_enum-of",
 		"_path": ["_type", "_set_type"]
 	},
 	{
-		"_from": "_type_number",
-		"_to": "_type",
+		"_from": "_type_number_integer",
+		"_to": "_type_number",
 		"_predicate": "_predicate_enum-of",
 		"_path": ["_type", "_set_type"]
 	},

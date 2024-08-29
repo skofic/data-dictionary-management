@@ -42,7 +42,7 @@
 			"_class": "_class_quantity",
 			"_domain": ["chr_gent"],
 			"_scalar": {
-				"_type": "_type_integer",
+				"_type": "_type_number_integer",
 				"_valid-range": {
 					"_min-range-exclusive": 0
 				}
@@ -65,7 +65,7 @@
 			"_class": "_class_quantity",
 			"_domain": ["chr_gent"],
 			"_scalar": {
-				"_type": "_type_integer",
+				"_type": "_type_number_integer",
 				"_unit-name": "bp",
 				"_unit-symbol": "bp"
 			}
@@ -90,7 +90,7 @@
 			"_domain": ["chr_gent"],
 			"_usage": ["_usage_metadata"],
 			"_scalar": {
-				"_type": "_type_integer",
+				"_type": "_type_number_integer",
 				"_valid-range": {
 					"_min-range-inclusive": 0
 				}
@@ -375,7 +375,7 @@
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
 			"_scalar": {
-				"_type": "_type_integer",
+				"_type": "_type_number_integer",
 				"_decimals": 0,
 				"_valid-range": {
 					"_min-range-inclusive": 0
@@ -573,7 +573,7 @@
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
 			"_scalar": {
-				"_type": "_type_integer",
+				"_type": "_type_number_integer",
 				"_unit": "_unit_area_m",
 				"_decimals": 0,
 				"_valid-range": {

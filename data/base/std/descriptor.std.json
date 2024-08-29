@@ -587,7 +587,7 @@
         "_data": {
             "_class": "_class_time",
             "_scalar": {
-                "_type": "_type_integer",
+                "_type": "_type_number_integer",
                 "_valid-range": {
                     "_min-range-inclusive": 1,
                     "_max-range-inclusive": 12
