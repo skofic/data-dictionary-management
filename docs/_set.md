@@ -15,7 +15,7 @@
 ------
 This property defines the *shape* and *type* of a *set* of *items*. A *set* is a *list* of *values* of the *same type*, values must be *unique* and the *type definitions* refer to the *list elements*.
 
-The property *must* contain the [scalar](_set_scalar.md) container which defines the [data type](_set_type.md) of the set *elements*, which includes [booleans](_type_boolean.md), [integers](_type_integer.md), [floats](_type_number.md) and [strings](_type_string.md).
+The property *must* contain the [scalar](_set_scalar.md) container which defines the [data type](_set_type.md) of the set *elements*, which includes [booleans](_type_boolean.md), [integers](_type_number_integer.md), [floats](_type_number.md) and [strings](_type_string.md).
 
 
 
@@ -39,12 +39,12 @@ This example describes a *set* of [booleans](_type_boolean.md); such a *set* can
 	"_set": {
 		"_set_scalar": {
 			"_class": "_class_quantity",
-			"_set_type": "_type_integer"
+			"_set_type": "_type_number_integer"
 		}
 	}
 }
 ```
-This example describes a *set* of [discrete](_type_integer.md) [quantitative](_class_quantity.md) values.
+This example describes a *set* of [discrete](_type_number_integer.md) [quantitative](_class_quantity.md) values.
 
 
 

@@ -22,7 +22,7 @@ This property defines the *shape* and *type* of *scalar data values*. A *number*
 {
 	"_scalar": {
 		"_class": "_class_quantity",
-		"_type": "_type_integer",
+		"_type": "_type_number_integer",
 		"_valid-range": {
 			"_min-range-inclusive": 5,
 			"_max-range-inclusive": 10
@@ -30,7 +30,7 @@ This property defines the *shape* and *type* of *scalar data values*. A *number*
 	}
 }
 ```
-This example describes a [quantitative](__class_quantity.md) *scalar* discrete [integer](_type_integer.md) value in the *range* from `5` to `10` inclusive.
+This example describes a [quantitative](__class_quantity.md) *scalar* discrete [integer](_type_number_integer.md) value in the *range* from `5` to `10` inclusive.
 
 
 

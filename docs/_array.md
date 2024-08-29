@@ -32,7 +32,7 @@ The property may also be *empty*, in which case the array *elements* can be of a
 	"_array": {
 		"_scalar": {
 			"_class": "_class_quantity",
-			"_type": "_type_integer",
+			"_type": "_type_number_integer",
 			"_valid-range": {
 				"_min-range-inclusive": 5,
 				"_max-range-inclusive": 10
@@ -41,7 +41,7 @@ The property may also be *empty*, in which case the array *elements* can be of a
 	}
 }
 ```
-This example describes an *array* of [scalar](_scalar.md) [integer](_type_integer.md) values in the *range* from `5` to `10` inclusive, the *list element* values are [quantitatve](_class_quantity.md).
+This example describes an *array* of [scalar](_scalar.md) [integer](_type_number_integer.md) values in the *range* from `5` to `10` inclusive, the *list element* values are [quantitatve](_class_quantity.md).
 
 
 

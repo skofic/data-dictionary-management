@@ -16,7 +16,7 @@
 This property is used to define the *data type* of [set](_set.md) *elements*, these are the allowed values:
 
 - [Boolean](_type_boolean.md): *True* or *false* value.
-- [Integer](_type_integer.md): *Numeric discrete* value. The [data section](_set_scalar.md) can include the following properties: [unit](_unit.md), [unit name](_unit-name.md), [range](_range.md), [valid range](_valid-range.md) and [normal range](_normal-range.md).
+- [Integer](_type_number_integer.md): *Numeric discrete* value. The [data section](_set_scalar.md) can include the following properties: [unit](_unit.md), [unit name](_unit-name.md), [range](_range.md), [valid range](_valid-range.md) and [normal range](_normal-range.md).
 - [Numeric](_type_number.md): *Numeric discrete* or *continuous* value; will be considered a *floating point number*. The [data section](_set_scalar.md) can include the following properties: [unit](_unit.md), [unit name](_unit-name.md), [range](_range.md), [valid range](_valid-range.md) and [normal range](_normal-range.md).
 - [Time-stamp](_type_number_timestamp.md): A [numeric](_type_number.md) Unix Timestamp, it is used to indicate a *precise moment in time*. The [data section](_set_scalar.md) can include the following properties: [range](_range.md), [valid range](_valid-range.md) and [normal range](_normal-range.md).
 - [String](_type_string.md): A *character* or *text* encoded in UTF-8. The [data section](_set_scalar.md) can include the following properties: [format](_format.md), [unit](_unit.md), [unit name](_unit-name.md) and [regular expression](_regexp.md).

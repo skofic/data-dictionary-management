@@ -1,4 +1,4 @@
-### _type_integer
+### _type_number_integer
 
 
 

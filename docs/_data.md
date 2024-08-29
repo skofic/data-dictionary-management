@@ -30,7 +30,7 @@ You can set this property to an *empty object*, in that case it means that the *
 	"_data": {
 		"_scalar": {
 			"_class": "_class_quantity",
-			"_type": "_type_integer",
+			"_type": "_type_number_integer",
 			"_valid-range": {
 				"_min-range-inclusive": 5,
 				"_max-range-inclusive": 10
@@ -40,7 +40,7 @@ You can set this property to an *empty object*, in that case it means that the *
 }
 ```
 
-The above example describes a [scalar](_scalar.md) discrete [integer](_type_integer.md) [quantitative](_class_quantity.md) value in the range from `5` to `10` inclusive.
+The above example describes a [scalar](_scalar.md) discrete [integer](_type_number_integer.md) [quantitative](_class_quantity.md) value in the range from `5` to `10` inclusive.
 
 
 

@@ -13,7 +13,7 @@
 
 
 ------
-This property defines the [data type](_set_type.md) of the *elements* of a [set](_set.md). Since a set is a *list* of *unique elements*, these elements must be *comparable* in order to prevent duplicate items. Set elements can be [booleans](_type_boolean.md), [integers](_type_integer.md), [floats](_type_number.md) and [strings](_type_string.md).
+This property defines the [data type](_set_type.md) of the *elements* of a [set](_set.md). Since a set is a *list* of *unique elements*, these elements must be *comparable* in order to prevent duplicate items. Set elements can be [booleans](_type_boolean.md), [integers](_type_number_integer.md), [floats](_type_number.md) and [strings](_type_string.md).
 
 
 
@@ -34,11 +34,11 @@ The *elements* of the [set](_set.md) can either be, `true` or `false`.
 {
 	"_set_scalar": {
 		"_class": "_class_quantity",
-		"_set_type": "_type_integer"
+		"_set_type": "_type_number_integer"
 	}
 }
 ```
-The *elements* of the [set](_set.md) are [quantitative](_class_quantity.md) values of [type](_set_type.md) [integer](_type_integer.md).
+The *elements* of the [set](_set.md) are [quantitative](_class_quantity.md) values of [type](_set_type.md) [integer](_type_number_integer.md).
 
 
 
