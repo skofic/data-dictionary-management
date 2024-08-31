@@ -2114,7 +2114,7 @@ function CreateIso3166_1(item) {
 	// Add common name.
 	//
 	if(item.hasOwnProperty('common_name')) {
-		term._description = {iso_639_3_eng: item['common_name']}
+		term._info._description = {iso_639_3_eng: item['common_name']}
 	}
 
 	//
