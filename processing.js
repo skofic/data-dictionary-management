@@ -3231,6 +3231,14 @@ function ProcessEdge(edge) {
 
 				} // Loaded processed properties.
 
+				///
+				// Add path data.
+				///
+				newEdge['_path_data'] = {}
+				newEdge['_path'].forEach( (root) => {
+					newEdge['_path_data'][root] = {}
+				})
+
 				return newEdge															// ==>
 
 			} else {
