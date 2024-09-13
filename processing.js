@@ -3325,6 +3325,11 @@ function ProcessLink(edge) {
 
 			} // Loaded processed properties.
 
+			///
+			// Add path data.
+			///
+			newEdge['_path_data'] = {}
+
 			return newEdge															// ==>
 
 		} else {
