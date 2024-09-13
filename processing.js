@@ -1260,18 +1260,6 @@ async function LoadIso3166_1(db) {
 	)
 
 	//
-	// Add eufgis bridge to iso countries.
-	//
-	if(kPriv.user.flag.do_eufgis) {
-		kGlob.globals.res.edges.push({
-			_from: 'eufgis_countries',
-			_to: 'iso_3166_1',
-			_predicate: '_predicate_bridge-of',
-			_path: ['eufgis_countries']
-		})
-	}
-
-	//
 	// Write edges.
 	//
 	await ProcessItems(
@@ -3190,7 +3178,8 @@ function ProcessEdge(edge) {
 				//
 				// Create key string.
 				//
-				const index = srcRef
+				const index =
+					  srcRef
 					+ kGlob.globals.token.tok
 					+ edge._predicate
 					+ kGlob.globals.token.tok
