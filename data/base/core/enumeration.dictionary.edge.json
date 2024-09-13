@@ -2,6 +2,19 @@
 	{
 		"_code": {
 			"_nid": "_predicate",
+			"_lid": "functional",
+			"_gid": "_predicate_functional",
+			"_aid": ["functional"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Functional predicate"},
+			"_definition": {"iso_639_3_eng": "Edge predicate that defines the function of the edge relationship"},
+			"_description": {"iso_639_3_eng": "Edges have three types of predicates: *functional*, *container* and *bridge*.\n\n*Functional predicates* define the *main function* implemented by the *graph*. An [enumeration predicate](_predicate_enum-of.md), for instance, indicates that the graph contains a controlled vocabulary and that the functional elements in the graph, the nodes connected with the [enumeration predicate](_predicate_enum-of.md), are *valid choices* of the *controlled vocabulary*."}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_predicate",
 			"_lid": "enum-of",
 			"_gid": "_predicate_enum-of",
 			"_aid": ["enum-of"]
@@ -42,6 +55,19 @@
 	{
 		"_code": {
 			"_nid": "_predicate",
+			"_lid": "container",
+			"_gid": "_predicate_container",
+			"_aid": ["container"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Container predicate"},
+			"_definition": {"iso_639_3_eng": "Non functional edge predicate that acts as a container or category for a set of elements"},
+			"_description": {"iso_639_3_eng": "Edges have three types of predicates: *functional*, *container* and *bridge*.\n\n*Container predicates* do not define any function in the graph, they serve as *display sections* or *menu containers* for providing *organisation* to the *graph elements*. For instance a controlled vocabulary of countries could be difided into regions: these regions cannot be selected as elements of the controlled vocabulary, but they can be used as organisers when the numner of available choices is large."}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_predicate",
 			"_lid": "section-of",
 			"_gid": "_predicate_section-of",
 			"_aid": ["section-of"]
@@ -50,6 +76,20 @@
 			"_title": {"iso_639_3_eng": "Section of"},
 			"_definition": {"iso_639_3_eng": "The source node is a section of the destination node."},
 			"_description": {"iso_639_3_eng": "This predicate involves the concept of *section*, a section is a *category* or *heading* that *groups* a *set* of *choices*. For instance, while the [enumeration](_predicate_enum-of) or [property](_predicate_property-of) predicates indicate that the source node is either a valid *controlled vocabulary choice*, or a *descriptor* belonging to the *destination* node, this predicate would indicate that the source node is to be used as a *container* or *disclosure list*. This predicate is used to *group* controlled vocabulary elements or sets of schema descriptors into sections that will be presented as disclosute lists in the user interface when showing forms or lists."}
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "_predicate",
+			"_lid": "bridge",
+			"_gid": "_predicate_bridge",
+			"_aid": ["bridge"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Bridge predicate"},
+			"_definition": {"iso_639_3_eng": "Bridge predicates allow access to a graph by skipping a node"},
+			"_description": {"iso_639_3_eng": "Edges have three types of predicates: *functional*, *container* and *bridge*.\n\n*Bridge predicates* can be used to take advantage of an existing graph without needing to duplicate edges. An *existing edge root* can *point* to a *node* using a *bridge predicate*, doing so, the pointed node *becomes* the *root* of another *graph* that can take advantage of the existing graph edges by adding the bridged root to these edges path. This way, for instance, we can have an european countries graph that can take advantahe of the existing ISO 3166 world countries pointing only to the european countries and not needing to duplicate edges."}
 		}
 	},
 	{

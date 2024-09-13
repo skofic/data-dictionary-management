@@ -1,31 +1,70 @@
 [
 	{
-		"_from": "_predicate_enum-of",
+		"_from": "_predicate_functional",
 		"_to": "_predicate",
+		"_predicate": "_predicate_section-of",
+		"_path": ["_predicate"]
+	},
+	{
+		"_from": "_predicate_enum-of",
+		"_to": "_predicate_functional",
 		"_predicate": "_predicate_enum-of",
 		"_path": ["_predicate"]
 	},
 	{
 		"_from": "_predicate_property-of",
-		"_to": "_predicate",
+		"_to": "_predicate_functional",
 		"_predicate": "_predicate_enum-of",
 		"_path": ["_predicate"]
 	},
 	{
 		"_from": "_predicate_field-of",
-		"_to": "_predicate",
+		"_to": "_predicate_functional",
 		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate"]
+	},
+	
+	{
+		"_from": "_predicate_container",
+		"_to": "_predicate",
+		"_predicate": "_predicate_section-of",
 		"_path": ["_predicate"]
 	},
 	{
 		"_from": "_predicate_section-of",
-		"_to": "_predicate",
+		"_to": "_predicate_container",
 		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate"]
+	},
+	
+	{
+		"_from": "_predicate_bridge",
+		"_to": "_predicate",
+		"_predicate": "_predicate_section-of",
 		"_path": ["_predicate"]
 	},
 	{
 		"_from": "_predicate_bridge-of",
+		"_to": "_predicate_bridge",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate"]
+	},
+	
+	{
+		"_from": "_predicate_requires",
 		"_to": "_predicate",
+		"_predicate": "_predicate_section-of",
+		"_path": ["_predicate"]
+	},
+	{
+		"_from": "_predicate_requires_indicator",
+		"_to": "_predicate_requires",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate"]
+	},
+	{
+		"_from": "_predicate_requires_metadata",
+		"_to": "_predicate_requires",
 		"_predicate": "_predicate_enum-of",
 		"_path": ["_predicate"]
 	}

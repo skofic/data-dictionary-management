@@ -162,7 +162,8 @@
 					"_from",
 					"_to",
 					"_predicate",
-					"_path"
+					"_path",
+					"_path_data"
 				]
 			},
 			"_computed": [
