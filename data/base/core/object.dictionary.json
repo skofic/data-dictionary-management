@@ -170,5 +170,39 @@
 				"_key"
 			]
 		}
+	},
+	{
+		"_code": {
+			"_nid": "",
+			"_lid": "link",
+			"_gid": "_link",
+			"_aid": ["link"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Link"},
+			"_definition": {"iso_639_3_eng": "Link data structure"},
+			"_description": {"iso_639_3_eng": "*Links* are *edge objects* that define the *relationships* between nodes in a *directed graph*. These relationships are intended to have *one single depth level*, meaning that *only one path traverses the edge*. The link structure borrows all properties from [edges](_edge.md), except for the [path](_path.md) which is *not present here*."},
+			"_examples": {"iso_639_3_eng": "Link example:\n\n```json\n{\n\t\"_key\": \"20103dc79d7f368e2624a0f781c31e05\",\n\t\"_from\": \"terms/source_node\",\n\t\"_to\": \"terms/destination_node\",\n\t\"_predicate\": \"_predicate_requires_indicator\",\n\t\"_path_data\": {\"_name\": \"Custom data\"}\n}\n```\n\nThis example represents a *link* indicating that `source_node` requires the indicator referenced by `destination_node`. The relationship holds a data record featuring the `_name` property."}
+		},
+		"_data": {
+			"_scalar": {
+				"_type": "_type_object",
+				"_kind": ["_link"]
+			}
+		},
+		"_rule": {
+			"_required": {
+				"_selection-descriptors_all": [
+					"_key",
+					"_from",
+					"_to",
+					"_predicate",
+					"_path_data"
+				]
+			},
+			"_computed": [
+				"_key"
+			]
+		}
 	}
 ]
