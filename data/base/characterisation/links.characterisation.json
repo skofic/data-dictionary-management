@@ -12,7 +12,7 @@
 	
 	{
 		"_from": "std_dataset",
-		"_to": "project",
+		"_to": "std_project",
 		"_predicate": "_predicate_requires_indicator"
 	},
 	
