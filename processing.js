@@ -348,12 +348,14 @@ async function ValidateDocuments(db)
 } // ValidateDocuments()
 
 /**
- * Validate descriptors
- * This function will iterate all terms and edges and call the validation service.
+ * Validate terms
+ * This function will iterate all terms and call the validation service.
+ *
  * @param db: Database connection.
+ *
  * @return {Promise<Object>}: Number of warnings and errors.
  */
-async function ValidateDescriptors(db)
+async function ValidateTerms( db)
 {
 	//
 	// Init local storage.
@@ -394,7 +396,7 @@ async function ValidateDescriptors(db)
 	///
 	console.log(`==> Querying all descriptors and object types`)
 	current =
-		await ValidationQuery(
+		await TermsValidationQuery(
 			db, transport, cookie,
 			aql`
 				FOR term IN VIEW_TERM
@@ -412,7 +414,7 @@ async function ValidateDescriptors(db)
 	///
 	console.log(`==> Querying all descriptors`)
 	current =
-		await ValidationQuery(
+		await TermsValidationQuery(
 			db, transport, cookie,
 			aql`
 				FOR term IN VIEW_TERM
@@ -430,7 +432,7 @@ async function ValidateDescriptors(db)
 	///
 	console.log(`==> Querying all object types`)
 	current =
-		await ValidationQuery(
+		await TermsValidationQuery(
 			db, transport, cookie,
 			aql`
 				FOR term IN VIEW_TERM
@@ -448,7 +450,7 @@ async function ValidateDescriptors(db)
 	///
 	console.log(`==> Querying all terms`)
 	current =
-		await ValidationQuery(
+		await TermsValidationQuery(
 			db, transport, cookie,
 			aql`
 				FOR term IN VIEW_TERM
@@ -462,139 +464,197 @@ async function ValidateDescriptors(db)
 
 	return result														// ==>
 
-} // ValidateDescriptors()
-
-/**
- * Validate database term records.
- * @param db - Database connection.
- * @returns {Promise<Number>}
- */
-async function ValidateTerms(db) {
-
-	//
-	// Init local storage.
-	//
-	let processed = 0
-	let error_count = 0
-	let page_records = 0
-	const url = `${kPriv.user.db.host}/_db/metadata/dict/check/object`
-
-	//
-	// Get cursor.
-	//
-	console.log(`==> Querying all terms`)
-	const cursor = await db.query(aql`
-	  FOR term IN ${db.collection(kDb.collection_terms)}
-	  RETURN term
-	`)
-
-	//
-	// Resolve all records.
-	//
-	const terms = await cursor.all()
-
-	//
-	// Iterate all terms.
-	//
-	console.log(`==> Iterating all terms`)
-	for(const term of terms) {
-		// for await (const term of terms) {
-		processed += 1
-
-		//
-		// Create data payload.
-		//
-		const postData = {
-			value: term,
-			language: 'iso_639_eng'
-		}
-
-		//
-		// Validate.
-		//
-		const response = await axios.post(url, postData)
-		if(response.status !== 200) {
-			throw Error(`(${response.status}) - ${response.statusText}`)
-		}
-
-		//
-		// Init response.
-		//
-		let report = {
-			value: JSON.parse(JSON.stringify(response.data.value)),
-			result: {}
-		}
-
-		//
-		// Handle errors.
-		//
-		let errors = 0
-		for(const property in response.data.result) {
-			if(response.data.result[property].status.code !== 0) {
-				console.log(`[${term._key}] (${response.data.result[property].status.code}) ${response.data.result[property].status.message}`)
-				report.result[property] = JSON.parse(JSON.stringify(response.data.result[property]))
-				errors += 1
-			}
-		}
-
-		//
-		// Write errors.
-		//
-		if(errors > 0) {
-			error_count += 1
-			db.collection(kDb.collection_errors).save(report)
-
-		} else {
-			console.log(term._key)
-		}
-
-	} // Iterating terms.
-
-	console.log(`Processed ${processed} terms.`)
-
-	return error_count															// ==>
-
 } // ValidateTerms()
 
 /**
- * Validate database edge records.
- * Scan all edges and ensure that all references are valid.
- * The checks will validate the following:
- * - Predicate: ensure predicate exists.
- * - Path: ensure all elements exist.
- * If there are errors, the record will be displayed and the error will be printed,
- * then an exception will be thrown.
- * @param db - Database connection.
- * @returns {Promise<void>} */
-async function ValidateEdges(db) {
-
+ * Validate edges
+ * This function will iterate all edges and call the validation service.
+ *
+ * @param db: Database connection.
+ *
+ * @return {Promise<Object>}: Number of warnings and errors.
+ */
+async function ValidateEdges( db)
+{
 	//
 	// Init local storage.
 	//
-	let error_count = 0
+	// let processed = 0
+	// let page_records = 0
+	let result = {
+		processed: 0,
+		valid: 0,
+		warnings: 0,
+		errors: 0
+	}
 
-	return error_count																// ==>
+	// const host = kPriv.user.db.host
+	// const database = kPriv.user.db.name
+	// const url = `${host}/_db/${database}/dict/check/objects`
+	let current = {}
+
+	//
+	// Login.
+	//
+	const cookie =
+		await ServiceLogin(
+			db,
+			kPriv.user.db.services_user,
+			kPriv.user.db.services_pass
+		)
+
+	//
+	// Create transport.
+	//
+	const transport = axios.create({
+		withCredentials: true
+	})
+
+	///
+	// Get descriptors and objects.
+	///
+	console.log(`==> Querying all edges`)
+	current =
+		await DescriptorValidationQuery(
+			db, transport, cookie,
+			aql`
+				FOR item IN edges
+			`,
+			'_edge')
+	result.processed += current.processed
+	result.valid += current.valid
+	result.errors += current.errors
+	result.warnings += current.warnings
+
+	return result														// ==>
 
 } // ValidateEdges()
 
 /**
- * Validate database topo records.
- * Scan all edges and ensure that all references are valid.
- * The checks will validate the following:
- * - Predicate: ensure predicate exists.
- * - Path: ensure all elements exist.
- * If there are errors, the record will be displayed and the error will be printed,
- * then an exception will be thrown.
- * @param db - Database connection.
- * @returns {Promise<void>} */
-async function ValidateTopos(db) {
-
+ * Validate links
+ * This function will iterate all links and call the validation service.
+ *
+ * @param db: Database connection.
+ *
+ * @return {Promise<Object>}: Number of warnings and errors.
+ */
+async function ValidateLinks( db)
+{
 	//
 	// Init local storage.
 	//
-	let error_count = 0
+	// let processed = 0
+	// let page_records = 0
+	let result = {
+		processed: 0,
+		valid: 0,
+		warnings: 0,
+		errors: 0
+	}
 
-	return error_count																// ==>
+	// const host = kPriv.user.db.host
+	// const database = kPriv.user.db.name
+	// const url = `${host}/_db/${database}/dict/check/objects`
+	let current = {}
+
+	//
+	// Login.
+	//
+	const cookie =
+		await ServiceLogin(
+			db,
+			kPriv.user.db.services_user,
+			kPriv.user.db.services_pass
+		)
+
+	//
+	// Create transport.
+	//
+	const transport = axios.create({
+		withCredentials: true
+	})
+
+	///
+	// Get descriptors and objects.
+	///
+	console.log(`==> Querying all links`)
+	current =
+		await DescriptorValidationQuery(
+			db, transport, cookie,
+			aql`
+				FOR item IN links
+			`,
+			'_link')
+	result.processed += current.processed
+	result.valid += current.valid
+	result.errors += current.errors
+	result.warnings += current.warnings
+
+	return result														// ==>
+
+} // ValidateLinks()
+
+/**
+ * Validate links
+ * This function will iterate all topos and call the validation service.
+ *
+ * @param db: Database connection.
+ *
+ * @return {Promise<Object>}: Number of warnings and errors.
+ */
+async function ValidateTopos( db)
+{
+	//
+	// Init local storage.
+	//
+	// let processed = 0
+	// let page_records = 0
+	let result = {
+		processed: 0,
+		valid: 0,
+		warnings: 0,
+		errors: 0
+	}
+
+	// const host = kPriv.user.db.host
+	// const database = kPriv.user.db.name
+	// const url = `${host}/_db/${database}/dict/check/objects`
+	let current = {}
+
+	//
+	// Login.
+	//
+	const cookie =
+		await ServiceLogin(
+			db,
+			kPriv.user.db.services_user,
+			kPriv.user.db.services_pass
+		)
+
+	//
+	// Create transport.
+	//
+	const transport = axios.create({
+		withCredentials: true
+	})
+
+	///
+	// Get descriptors and objects.
+	///
+	console.log(`==> Querying all topos`)
+	current =
+		await DescriptorValidationQuery(
+			db, transport, cookie,
+			aql`
+				FOR item IN topos
+			`,
+			'_link')
+	result.processed += current.processed
+	result.valid += current.valid
+	result.errors += current.errors
+	result.warnings += current.warnings
+
+	return result														// ==>
 
 } // ValidateTopos()
 
@@ -616,7 +676,7 @@ async function ValidateTopos(db) {
  * @return {Promise<{valid: number, processed: number, warnings: number, errors: number}>}
  * @constructor
  */
-async function ValidationQuery(db, theTransport, theCookie, theQuery)
+async function TermsValidationQuery( db, theTransport, theCookie, theQuery)
 {
 	//
 	// Init local storage.
@@ -638,12 +698,12 @@ async function ValidationQuery(db, theTransport, theCookie, theQuery)
 	// Get cursor.
 	//
 	const cursor =
-			await db.query(
-				aql.join([
-					theQuery,
-					aql`LIMIT ${page_records}, ${kPriv.user.db.page_records} RETURN term`
-				])
-			)
+		await db.query(
+			aql.join([
+				theQuery,
+				aql`LIMIT ${page_records}, ${kPriv.user.db.page_records} RETURN term`
+			])
+		)
 	let records = await cursor.all()
 
 	//
@@ -726,7 +786,133 @@ async function ValidationQuery(db, theTransport, theCookie, theQuery)
 
 	return result																// ==>
 
-} // ValidationQuery()
+} // TermsValidationQuery()
+
+/**
+ * Perform validation queries
+ * This function will accept a query that retrieves a set of edges and will
+ * perform repeated paged queries validating all retrieved records.
+ * It is assumed that the queries return a set of edges.
+ *
+ * @param db: Database connection.
+ * @param theTransport: Axios transport.
+ * @param theCookie: Session cookie.
+ * @param theQuery: AQL start fragment.
+ * @param theDescriptor: Descriptor global identifier.
+ *
+ * @return {Promise<{valid: number, processed: number, warnings: number, errors: number}>}
+ * @constructor
+ */
+async function DescriptorValidationQuery( db, theTransport, theCookie, theQuery, theDescriptor)
+{
+	//
+	// Init local storage.
+	//
+	let processed = 0
+	let page_records = 0
+	let result = {
+		processed: 0,
+		valid: 0,
+		warnings: 0,
+		errors: 0
+	}
+
+	const host = kPriv.user.db.host
+	const database = kPriv.user.db.name
+	const url = `${host}/_db/${database}/dict/check/descriptor/values`
+
+	//
+	// Get cursor.
+	//
+	const cursor =
+		await db.query(
+			aql.join([
+				theQuery,
+				aql`LIMIT ${page_records}, ${kPriv.user.db.page_records} RETURN item`
+			])
+		)
+	let records = await cursor.all()
+
+	//
+	// Turn pages.
+	//
+	while(records.length > 0) {
+
+		//
+		// Validate.
+		//
+		const response =
+			await theTransport.post(
+				url,
+				records,
+				{
+					withCredentials: true,
+					params: {
+						descriptor: theDescriptor,
+						cache: true,
+						miss: true,
+						terms: true,
+						types: false,
+						resolve: false,
+						defns: true,
+						resfld: '_lid'
+					},
+					headers: {
+						'Content-Type': 'application/json; charset=utf-8',
+						Cookie: theCookie
+					}
+				}
+			)
+
+		if(response.status !== 200) {
+			throw Error(`(${response.status}) - ${response.statusText}`)
+		}
+
+		//
+		// Handle counters.
+		//
+		if(response.data.hasOwnProperty('valid')) {
+			result.valid += response.data.valid
+			result.processed += response.data.valid
+		}
+		if(response.data.hasOwnProperty('warnings')) {
+			result.warnings += response.data.warnings
+			result.processed += response.data.warnings
+		}
+		if(response.data.hasOwnProperty('errors')) {
+			result.errors += response.data.errors
+			result.processed += response.data.errors
+		}
+
+		///
+		// Log reports.
+		///
+		if(response.data.hasOwnProperty('reports')) {
+			response.data.reports.forEach( (report) => {
+				db.collection(kDb.collection_errors).save(report)
+			})
+		}
+
+		console.log(result)
+
+		//
+		// Get next page.
+		//
+		page_records += kPriv.user.db.page_records
+		const cursor =
+			await db.query(
+				aql.join([
+					theQuery,
+					aql`LIMIT ${page_records}, ${kPriv.user.db.page_records} RETURN item `
+				])
+			)
+		records = await cursor.all()
+
+	} // Page not empty.
+
+	return result																// ==>
+
+} // DescriptorValidationQuery()
 
 /**
  * Load ISO 639-1 standard.
@@ -4079,5 +4265,5 @@ async function ServiceInsertBridge(theCookie, theData)
 
 module.exports = {
 	ProcessDictionaryFiles, ProcessIsoStandards, ProcessTestData,
-	ValidateDocuments, ValidateDescriptors
+	ValidateTerms, ValidateEdges, ValidateLinks, ValidateTopos
 }
