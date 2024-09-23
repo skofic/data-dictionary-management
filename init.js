@@ -101,12 +101,12 @@ async function main()
 		console.log("==> TOTAL:")
 		console.log(result)
 
-		console.log("\n============================")
-		console.log("Validating topos.")
-		console.log("============================")
-		result = await process.ValidateTopos(db)
-		console.log("==> TOTAL:")
-		console.log(result)
+		// console.log("\n============================")
+		// console.log("Validating topos.")
+		// console.log("============================")
+		// result = await process.ValidateTopos(db)
+		// console.log("==> TOTAL:")
+		// console.log(result)
 
 	} // TRY BLOCK
 

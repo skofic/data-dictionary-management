@@ -1461,7 +1461,8 @@ async function LoadIso3166_1(db) {
 	//
 	await ProcessItems(
 		db,
-		kDb.collection_topos,
+		// kDb.collection_topos,
+		kDb.collection_links,
 		kGlob.globals.res.topos,
 		ProcessEdge,
 		'topo.iso.3166.1'
@@ -1568,7 +1569,8 @@ async function LoadIso3166_2(db) {
 	//
 	await ProcessItems(
 		db,
-		kDb.collection_topos,
+		// kDb.collection_topos,
+		kDb.collection_links,
 		kGlob.globals.res.topos,
 		ProcessEdge,
 		'topo.iso.3166.2'

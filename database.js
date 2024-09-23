@@ -70,10 +70,10 @@ async function InitDatabase(db)
 					await db.collection(kDb.collection_links).truncate()
 					break
 
-				// Topo.
-				case kDb.collection_topos:
-					await db.collection(kDb.collection_topos).truncate()
-					break
+				// // Topo.
+				// case kDb.collection_topos:
+				// 	await db.collection(kDb.collection_topos).truncate()
+				// 	break
 
 				// Characterisation.
 				case kDb.collection_char:
@@ -96,17 +96,12 @@ async function InitDatabase(db)
 	await InitTermCollection(db, kDb.collection_terms)
 	await InitEdgeCollection(db, kDb.collection_edges)
 	await InitLinksCollection(db, kDb.collection_links)
-	await InitTopoCollection(db, kDb.collection_topos)
+	// Topos are no longer there.
+	// await InitTopoCollection(db, kDb.collection_topos)
 	await InitErrorCollection(db, kDb.collection_errors)
 	if(kPriv.user.flag.drop_characterisation) {
 		await InitCharCollection(db, kDb.collection_char)
 	}
-
-	//
-	// Create graphs.
-	//
-	// await InitSchemaGraph(db)
-	// await InitTopoGraph(db)
 
 } // InitDatabase()
 
@@ -223,39 +218,6 @@ async function InitLinksCollection(db, name)
 } // InitLinksCollection()
 
 /**
- * Initialise topos collection.
- * It expects the collection to have been previously dropped.
- * @param {Database} db - Database connection.
- * @param {string} name - Collection name.
- * @returns {Promise<void>}
- */
-async function InitTopoCollection(db, name)
-{
-	//
-	// Create collection.
-	//
-	let collection = db.collection(name)
-	if(!await collection.exists()) {
-		collection = await db.createEdgeCollection(name)
-	}
-
-	//
-	// Add indexes.
-	//
-	await collection.ensureIndex({
-		type: 'persistent',
-		fields: ['_path[*]', '_predicate'],
-		deduplicate: true,
-		estimates: true,
-		name: "idx-topo-path-predicate",
-		unique: false
-	})
-
-	console.log(`Created topo collection ${name}`)
-
-} // InitTopoCollection()
-
-/**
  * Initialise error collection.
  * It expects the collection to have been previously dropped.
  * @param {Database} db - Database connection.
@@ -345,65 +307,6 @@ async function InitCharCollection(db, name)
 	console.log(`Created characterisation collection ${name}`)
 
 } // InitCharCollection()
-
-/**
- * Initialise schema graph.
- * @param {Database} db - Database connection.
- * @returns {Promise<void>}
- */
-async function InitSchemaGraph(db)
-{
-	//
-	// Instantiate graph.
-	//
-	const graph = db.graph('schema')
-
-	//
-	// Create graph.
-	//
-	const info = await graph.create([
-		{
-			collection: kDb.collection_edges,
-			from: [kDb.collection_terms],
-			to: [kDb.collection_terms],
-		},
-		{
-			collection: kDb.collection_links,
-			from: [kDb.collection_terms],
-			to: [kDb.collection_terms],
-		}
-	]);
-
-	console.log(`Created graph ${'schema'}`)
-
-} // InitSchemaGraph()
-
-/**
- * Initislise topo graph.
- * @param {Database} db - Database connection.
- * @returns {Promise<void>}
- */
-async function InitTopoGraph(db)
-{
-	//
-	// Instantiate graph.
-	//
-	const graph = db.graph('topo')
-
-	//
-	// Create graph.
-	//
-	const info = await graph.create([
-		{
-			collection: kDb.collection_topos,
-			from: [kDb.collection_terms],
-			to: [kDb.collection_terms],
-		}
-	]);
-
-	console.log(`Created graph ${'topo'}`)
-
-} // InitTopoaGraph()
 
 
 module.exports = { InitDatabase, DropErrorCollection }
