@@ -91,7 +91,7 @@
 	
 	{
 		"_from": "_predicate_feature",
-		"_to": "_predicate_link",
+		"_to": "_predicate_edge",
 		"_predicate": "_predicate_section-of",
 		"_path": ["_predicate"]
 	},
@@ -117,7 +117,7 @@
 	
 	{
 		"_from": "_predicate_administrative",
-		"_to": "_predicate_link",
+		"_to": "_predicate_feature",
 		"_predicate": "_predicate_section-of",
 		"_path": ["_predicate"]
 	},
