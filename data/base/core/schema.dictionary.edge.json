@@ -775,5 +775,738 @@
 		"_to": "_predicate_administrative",
 		"_predicate": "_predicate_enum-of",
 		"_path": ["_predicate"]
+	},
+	
+	{
+		"_from": "_predicate_many-to-one",
+		"_to": "_predicate_direction",
+		"_predicate": "_predicate_section-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "_predicate_one-to-many",
+		"_to": "_predicate_direction",
+		"_predicate": "_predicate_section-of",
+		"_path": ["_predicate_direction"]
+	},
+	
+	{
+		"_from": "_predicate_enum-of",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "_predicate_property-of",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "_predicate_field-of",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	
+	{
+		"_from": "_predicate_section-of",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	
+	{
+		"_from": "_predicate_bridge-of",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	
+	{
+		"_from": "_predicate_requires_indicator",
+		"_to": "_predicate_one-to-many",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "_predicate_requires_metadata",
+		"_to": "_predicate_one-to-many",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	
+	{
+		"_from": "std_country_borders",
+		"_to": "_predicate_one-to-many",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "std_country_currencies",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "std_country_languages",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	
+	{
+		"_from": "iso_3166_2_type_administration",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_administrative-atoll",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_administrative-precinct",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_administrative-region",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_administrative-territory",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_arctic-region",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_area",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_autonomous-city",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_autonomous-city-in-north-africa",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_autonomous-community",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_autonomous-district",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_autonomous-municipality",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_autonomous-province",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_autonomous-region",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_autonomous-republic",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_autonomous-sector",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_autonomous-territorial-unit",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_borough",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_canton",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_capital",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_capital-city",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_capital-district",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_capital-territory",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_chain-(of-islands)",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_city",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_city-corporation",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_city-municipality",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_city-with-county-rights",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_commune",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_council-area",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_country",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_county",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_decentralized-regional-entity",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_department",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_dependency",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_development-region",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_district",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_district-municipality",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_district-with-special-status",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_districts-under-republic-administration",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_division",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_economic-prefecture",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_emirate",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_entity",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_federal-capital-territory",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_federal-dependency",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_federal-district",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_federal-territory",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_free-municipal-consortium",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_geographical-entity",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_geographical-region",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_geographical-unit",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_governorate",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_group-of-islands-(20-inhabited-islands)",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_indigenous-region",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_island",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_island-council",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_islands",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_land",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_local-council",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_london-borough",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_metropolitan-administration",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_metropolitan-city",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_metropolitan-collectivity-with-special-status",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_metropolitan-department",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_metropolitan-district",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_metropolitan-region",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_municipality",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_oblast",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_outlying-area",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_overseas-collectivity",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_overseas-collectivity-with-special-status",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_overseas-department",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_overseas-region",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_overseas-territory",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_pakistan-administered-area",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_parish",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_popularate",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_prefecture",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_province",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_quarter",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_rayon",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_region",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_regional-state",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_republic",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_republican-city",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_rural-municipality",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_self-governed-part",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_special-administrative-city",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_special-administrative-region",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_special-city",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_special-island-authority",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_special-municipality",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_special-region",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_special-self-governing-city",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_special-self-governing-province",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_state",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_territorial-unit",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_territory",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_town",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_town-council",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_two-tier-county",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_union-territory",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_unitary-authority",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_urban-community",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_urban-municipality",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_voivodship",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_ward",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
+	},
+	{
+		"_from": "iso_3166_2_type_zone",
+		"_to": "_predicate_many-to-one",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_predicate_direction"]
 	}
 ]

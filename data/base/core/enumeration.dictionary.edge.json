@@ -198,5 +198,44 @@
 			"_definition": {"iso_639_3_eng": "A predicate that indicates an administrative category"},
 			"_description": {"iso_639_3_eng": "Predicates of this kind indicate that the source node is an *administrative category* of the destination node."}
 		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "_predicate",
+			"_lid": "direction",
+			"_gid": "_predicate_direction",
+			"_aid": ["direction"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Predicates by direction"},
+			"_definition": {"iso_639_3_eng": "This enumeration categorises predicates by their direction: one-to-many and many-to-one"}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_predicate",
+			"_lid": "many-to-one",
+			"_gid": "_predicate_many-to-one",
+			"_aid": ["many-to-one"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Many to one"},
+			"_definition": {"iso_639_3_eng": "Child nodes point to parent nodey"},
+			"_description": {"iso_639_3_eng": "Predicates of this kind are used to create *many-to-one* graphs in which the *child nodes point to the parent node*, the direction of the relationships goes *from leaf nodes towards the root node*."}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_predicate",
+			"_lid": "one-to-many",
+			"_gid": "_predicate_one-to-many",
+			"_aid": ["one-to-many"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "One to many"},
+			"_definition": {"iso_639_3_eng": "The parent node points to the child nodes"},
+			"_description": {"iso_639_3_eng": "Predicates of this kind are used to create *one-to-many* graphs in which the *parent node points to the child nodes*, the direction of the relationships goes *from the root node towards the leaf nodes*."}
+		}
 	}
 ]
