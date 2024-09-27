@@ -2,6 +2,74 @@
 	{
 		"_code": {
 			"_nid": "geo",
+			"_lid": "coordinates",
+			"_gid": "geo_coordinates",
+			"_aid": ["coordinates"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Geographic coordinates"},
+			"_definition": {"iso_639_3_eng": "Coordinate longitude and latitude"},
+			"_description": {"iso_639_3_eng": "A tuple of two elements: the decimal longitude and the decimal latitude of the geographic location."}
+		},
+		"_data": {
+			"_tuple": {
+				"_elements": {
+					"_min-items": 2,
+					"_max-items": 2
+				},
+				"_tuple_types": [
+					"geo_longitude-d",
+					"geo_latitude-d"
+				]
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "geo",
+			"_lid": "latitude-d",
+			"_gid": "geo_latitude-d",
+			"_aid": ["latitude-d"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Decimal latitude"},
+			"_description": {"iso_639_3_eng": "*Decimal latitude* represents the *latitude* of a *point* in *decimal degrees*. Latitude is defined as the *angle between the plane of the Equator* and *a line that passes through the point* and *the center of the Earth*. it ranges from:\n\n- **+90 degrees** at the North Pole\n- **0 degrees** at the Equator\n- **-90 degrees** at the South Pole\n\nLatitude in degrees, minutes, and seconds (DMS) can be converted to decimal format using the formula:\n\n`Decimal Degrees = Degrees + (Minutes / 60) + (Seconds / 3600)`"}
+		},
+		"_data": {
+			"_scalar": {
+				"_type": "_type_number",
+				"_valid-range": {
+					"_min-range-inclusive": -90.0,
+					"_max-range-inclusive": 90.0
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "geo",
+			"_lid": "longitude-d",
+			"_gid": "geo_longitude-d",
+			"_aid": ["longitude-d"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Decimal longitude"},
+			"_description": {"iso_639_3_eng": "*Decimal longitude* represents the *longitude* of a *point* in *decimal degrees*. Longitude is defined as the *angle* between the *Prime Meridian* (which passes through Greenwich, England) and a *line* that *passes through the point and the center of the Earth*. It ranges from:\n\n- **+180 degrees** east of the Prime Meridian\n- **0 degrees** at the Prime Meridian\n- **-180 degrees** west of the Prime Meridian\n\nLongitude in degrees, minutes, and seconds (DMS) can be converted to decimal format using the formula:\n\n`Decimal Degrees = Degrees + (Minutes / 60) + (Seconds / 3600)`"}
+		},
+		"_data": {
+			"_scalar": {
+				"_type": "_type_number",
+				"_valid-range": {
+					"_min-range-inclusive": -180.0,
+					"_max-range-inclusive": 180.0
+				}
+			}
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "geo",
 			"_lid": "datum",
 			"_gid": "geo_datum",
 			"_aid": ["datum"]
@@ -174,7 +242,7 @@
 				"_unit": "_unit_area_m"
 			}
 		}
-	},	
+	},
 	{
 		"_code": {
 			"_nid": "geo_shape",

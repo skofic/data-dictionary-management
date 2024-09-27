@@ -256,7 +256,11 @@
 		},
 		"_data": {
 			"_scalar": {
-				"_type": "_type_number"
+				"_type": "_type_number",
+				"_valid-range": {
+					"_min-range-inclusive": -90.0,
+					"_max-range-inclusive": 90.0
+				}
 			}
 		}
 	},
@@ -296,7 +300,11 @@
 		},
 		"_data": {
 			"_scalar": {
-				"_type": "_type_number"
+				"_type": "_type_number",
+				"_valid-range": {
+					"_min-range-inclusive": -180.0,
+					"_max-range-inclusive": 180.0
+				}
 			}
 		}
 	},

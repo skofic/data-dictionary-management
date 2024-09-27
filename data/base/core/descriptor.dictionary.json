@@ -104,6 +104,7 @@
 					"_scalar",
 					"_array",
 					"_set",
+					"_tuple",
 					"_dict"
 				]
 			},

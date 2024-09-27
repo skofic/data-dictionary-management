@@ -126,6 +126,40 @@
 	{
 		"_code": {
 			"_nid": "",
+			"_lid": "tuple",
+			"_gid": "_tuple",
+			"_aid": ["tuple"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Tuple"},
+			"_definition": {"iso_639_3_eng": "An array of independent types of values"},
+			"_description": {"iso_639_3_eng": "A *tuple* is an *array* in which *each value* can take a *different type* depending on its *position*. Tuples belong to the top level data types such as [scalar](_scalar.md), [array](_array.md), etc.\n\nThe tuple requires *two properties*: a [structure](_elements.md) indicating the [minimum](_min-items.md) and [maximum](_max-items.md) *number of elements* in the tuple and a [property](_tuple_types.md) consisting of an array of descriptor references. This descriptors list indicates the *data type* of *each element* of the tuple.\n\nThe [_min_items.md]() must *at least* have *one element*, the [maximum number of elements](_max-items.md) must be *smaller or equal* to the *number of descriptors* in the [tuple types](_tuple_types.md). The types can be of any shape and type."},
+			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_tuple\": {\n\t\t\"_elements\": {\n\t\t\t\"_min-items\": 2,\n\t\t\t\"_max-items\": 2\n\t\t},\n\t\t\"_tuple_types\": [\n\t\t\t\"gcu_loc_longitude-d\",\n\t\t\t\"gcu_loc_latitude-d\"\n\t\t]\n\t}\n}\n```\n\nThis example describes a *pair of coordinates* in which the first element is a decimal longitude and the second element is a decimal latitude. The value must have at least and at most both elements.\n\n```json\n{\n\t\"_tuple\": {\n\t\t\"_elements\": {\n\t\t\t\"_min-items\": 3,\n\t\t\t\"_max-items\": 4\n\t\t},\n\t\t\"_tuple_types\": [\n\t\t\t\"gcu_loc_latitude\",\n\t\t\t\"gcu_loc_longitude\",\n\t\t\t\"gcu_loc_geodetic-datum\",\n\t\t\t\"gcu_loc_area\"\n\t\t]\n\t}\n}\n```\n\nThis example describes a *tuple* made up of 4 values: the [DMS latitude](gcu_loc_latitude.md), the [DMS longitude](gcu_loc_longitude.md), the [geodetic datum](gcu_loc_geodetic-datum.md) of the coordinate and the total surface [area](gcu_loc_area.md) of the unit. The *coordinates* and the *datum* are *required*, while the *area* is *optional*."}
+		},
+		"_data": {
+			"_scalar": {
+				"_type": "_type_object",
+				"_kind": ["_tuple"]
+			}
+		},
+		"_rule": {
+			"_required": {
+				"_selection-descriptors_all": [
+					"_elements",
+					"_tuple_types"
+				]
+			},
+			"_banned": [
+				"_scalar",
+				"_array",
+				"_set",
+				"_dict"
+			]
+		}
+	},
+	{
+		"_code": {
+			"_nid": "",
 			"_lid": "dict",
 			"_gid": "_dict",
 			"_aid": ["dict"]
@@ -208,6 +242,28 @@
 				"_set",
 				"_dict"
 			]
+		}
+	},
+
+	{
+		"_code": {
+			"_nid": "_tuple",
+			"_lid": "types",
+			"_gid": "_tuple_types",
+			"_aid": ["types"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Tuple types"},
+			"_definition": {"iso_639_3_eng": "List of tuple element data types"},
+			"_description": {"iso_639_3_eng": "This property is an *array* that contains the *data type* for *each element* of the [tuple](_tuple.md). Each element must be the global identifier of a [descriptor](_term_descriptor.md).\n\nThe number of elements of this property determines the maximum number of elements of the [tuple](_tuple.md)."}
+		},
+		"_data": {
+			"_array": {
+				"_scalar": {
+					"_type": "_type_string_key",
+					"_kind": ["_any-descriptor"]
+				}
+			}
 		}
 	},
 
