@@ -13,10 +13,6 @@
 		},
 		"_data": {
 			"_tuple": {
-				"_elements": {
-					"_min-items": 2,
-					"_max-items": 2
-				},
 				"_tuple_types": [
 					"geo_longitude-d",
 					"geo_latitude-d"
