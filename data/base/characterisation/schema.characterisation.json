@@ -237,5 +237,37 @@
 		"_to": "chr_SoilMethod",
 		"_predicate": "_predicate_enum-of",
 		"_path": ["chr_SoilMethod"]
+	},
+	
+	{
+		"_from": "chr_CircBreastHeight_DBH-1",
+		"_to": "chr_CircBreastHeight_DBH",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr_CircBreastHeight_DBH"]
+	},
+	{
+		"_from": "chr_CircBreastHeight_DBH-2",
+		"_to": "chr_CircBreastHeight_DBH",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr_CircBreastHeight_DBH"]
+	},
+	
+	{
+		"_from": "chr_database_NFI",
+		"_to": "chr_database",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr_database"]
+	},
+	{
+		"_from": "chr_database_FF",
+		"_to": "chr_database",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr_database"]
+	},
+	{
+		"_from": "chr_database_BS",
+		"_to": "chr_database",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["chr_database"]
 	}
 ]

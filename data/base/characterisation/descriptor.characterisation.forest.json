@@ -232,6 +232,27 @@
 			}
 		}
 	},
+	{
+		"_code": {
+			"_nid": "chr_CircBreastHeight",
+			"_lid": "DBH",
+			"_gid": "chr_CircBreastHeight_DBH",
+			"_aid": ["DBH"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Diameter at breast height class"},
+			"_definition": {"iso_639_3_eng": "The class for the diameter at breast height (DBH) of the trunk, which is used to distinguish a new recruit of a given tree."}
+		},
+		"_data": {
+			"_class": "_class_category",
+			"_domain": ["chr_fore"],
+			"_subject": "chr_subject_stand",
+			"_scalar": {
+				"_type": "_type_string_enum",
+				"_kind": ["chr_CircBreastHeight_DBH"]
+			}
+		}
+	},
 	
 	{
 		"_code": {

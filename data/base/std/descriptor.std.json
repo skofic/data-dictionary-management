@@ -246,6 +246,25 @@
     {
         "_code": {
             "_nid": "std_country",
+            "_lid": "names",
+            "_gid": "std_country_names",
+            "_aid": ["names"]
+        },
+        "_info": {
+            "_title": {"iso_639_3_eng": "Country names"},
+            "_definition": {"iso_639_3_eng": "List of country names."}
+        },
+        "_data": {
+        	"_set": {
+        		"_set_scalar": {
+        			"_set_type": "_type_string"
+        		}
+        	}
+        }
+    },
+    {
+        "_code": {
+            "_nid": "std_country",
             "_lid": "province",
             "_gid": "std_country_province",
             "_aid": ["province"]

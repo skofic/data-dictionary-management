@@ -1,6 +1,46 @@
 [
 	{
 		"_code": {
+			"_nid": "chr",
+			"_lid": "database",
+			"_gid": "chr_database",
+			"_aid": ["database"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Database"},
+			"_definition": {"iso_639_3_eng": "Name of the database to which the occurrences are belonging to"},
+			"_description": {"iso_639_3_eng": "This descriptor is used to indicate in which public databases the data is published, a set of selected databases is used for the enumeration."}
+		},
+		"_data": {
+			"_class": "_class_identifier",
+			"_scalar": {
+				"_type": "_type_string_enum",
+				"_kind": ["chr_database"]
+			}
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "chr",
+			"_lid": "EOO",
+			"_gid": "chr_EOO",
+			"_aid": ["EOO"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Extent of Occurrence"},
+			"_definition": {"iso_639_3_eng": "The property is a flag that indicates whether the observation falls within the species geographical range, measured as the extent of occurrence (EOO)."}
+		},
+		"_data": {
+			"_class": "_class_category",
+			"_scalar": {
+				"_type": "_type_boolean"
+			}
+		}
+	},
+	
+	{
+		"_code": {
 			"_nid": "chr_tree",
 			"_lid": "code",
 			"_gid": "chr_tree_code",

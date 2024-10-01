@@ -175,6 +175,46 @@
 	
 	{
 		"_code": {
+			"_lid": "genus",
+			"_gid": "genus",
+			"_pid": ["Genus"],
+			"_aid": ["genus"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Genus"},
+			"_definition": {"iso_639_3_eng": "In biological classification, a genus is a rank in the hierarchical system of taxonomy that is above species and below family"},
+			"_description": {"iso_639_3_eng": "A genus groups together species that are structurally similar or phylogenetically related. The genus name is part of the binomial nomenclature (two-part scientific name) of an organism, where it is the first part and is always capitalized."}
+		},
+		"_data": {
+			"_class": "_class_category",
+			"_scalar": {
+				"_type": "_type_string"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_lid": "genera",
+			"_gid": "genera",
+			"_aid": ["genera"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Genera"},
+			"_definition": {"iso_639_3_eng": "In biological classification, a genus is a rank in the hierarchical system of taxonomy that is above species and below family: this is a list of genus elements"},
+			"_description": {"iso_639_3_eng": "A genus groups together species that are structurally similar or phylogenetically related. The genus name is part of the binomial nomenclature (two-part scientific name) of an organism, where it is the first part and is always capitalized: this is a list of genus items"}
+		},
+		"_data": {
+			"_class": "_class_category",
+			"_set": {
+				"_set_scalar": {
+					"_set_type": "_type_string"
+				}
+			}
+		}
+	},
+	
+	{
+		"_code": {
 			"_lid": "species",
 			"_gid": "species",
 			"_pid": ["Species"],
@@ -182,8 +222,8 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Species"},
-			"_definition": {"iso_639_3_eng": "Tree or population species."},
-			"_description": {"iso_639_3_eng": "Provide the *species* of the *individual tree* or *population* to which *data* is *referring* to."},
+			"_definition": {"iso_639_3_eng": "A species is the most specific rank in the biological classification system. It represents the basic unit of classification, which groups individuals that are capable of interbreeding and producing fertile offspring under natural conditions"},
+			"_description": {"iso_639_3_eng": "The species name is the second part of the binomial nomenclature and is written in lowercase."},
 			"_examples": {"iso_639_3_eng": "Pinus sylvestris, Abies alba, Delonix regia var. genuina"}
 		},
 		"_data": {
@@ -202,8 +242,8 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Species list"},
-			"_definition": {"iso_639_3_eng": "Trees or population list of species."},
-			"_description": {"iso_639_3_eng": "Provide the *list of species* of the *individual trees* or *population* to which *data* is *referring* to. See the [species](species.md) descriptor for more information and examples."}
+			"_definition": {"iso_639_3_eng": "A species is the most specific rank in the biological classification system. It represents the basic unit of classification, which groups individuals that are capable of interbreeding and producing fertile offspring under natural conditions, this descriptor represents a list of species"},
+			"_description": {"iso_639_3_eng": "The species name is the second part of the binomial nomenclature and is written in lowercase: this descriptor represents a list of species."}
 		},
 		"_data": {
 			"_class": "_class_category",

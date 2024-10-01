@@ -456,5 +456,67 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "Pit"}
 		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "chr_CircBreastHeight",
+			"_lid": "DBH-1",
+			"_gid": "chr_CircBreastHeight_DBH-1",
+			"_pid": ["DBH-1"],
+			"_aid": ["DBH-1"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Trunks with diameter smaller than 120 mm."}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_CircBreastHeight",
+			"_lid": "DBH-2",
+			"_gid": "chr_CircBreastHeight_DBH-2",
+			"_pid": ["DBH-2"],
+			"_aid": ["DBH-2"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Trunks with diameter larger than 120 mm."}
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "chr_database",
+			"_lid": "NFI",
+			"_gid": "chr_database_NFI",
+			"_pid": ["NFI"],
+			"_aid": ["NFI"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "National Forest Inventory dataset"}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_database",
+			"_lid": "FF",
+			"_gid": "chr_database_FF",
+			"_pid": ["FF"],
+			"_aid": ["FF"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Forest Focus"}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr_database",
+			"_lid": "BS",
+			"_gid": "chr_database_BS",
+			"_pid": ["BS"],
+			"_aid": ["BS"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Biosoil"}
+		}
 	}
 ]
