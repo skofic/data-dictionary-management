@@ -44,6 +44,28 @@
 	},
 	{
 		"_code": {
+			"_nid": "gcu_id_number",
+			"_lid": "list",
+			"_gid": "gcu_id_number_list",
+			"_aid": ["list"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Unit numbers list"},
+			"_definition": {"iso_639_3_eng": "List of unique unit identifiers."}
+		},
+		"_data": {
+			"_class": "_class_identifier",
+			"_subject": "chr_subject_stand",
+			"_array": {
+				"_scalar": {
+					"_type": "_type_string",
+					"_regexp": "^[A-Z]{3}[0-9]{4,5}$"
+				}
+			}
+		}
+	},
+	{
+		"_code": {
 			"_nid": "gcu_id",
 			"_lid": "unit-id",
 			"_gid": "gcu_id_unit-id",
