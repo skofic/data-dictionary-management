@@ -178,11 +178,31 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "Collection"},
 			"_definition": {"iso_639_3_eng": "Database collection name, acronym or code."},
-			"_description": {"iso_639_3_eng": "This value should identify a specific database collection, the value should not necessarily match the actual collection name, but it must match a specific collection."}
+			"_description": {"iso_639_3_eng": "This value should identify a specific database collection, the value should not necessarily match the actual collection name, but it must be unique among the database collection references."}
 		},
 		"_data": {
 			"_scalar": {
 				"_type": "_type_string"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "_collection",
+			"_lid": "list",
+			"_gid": "_collection_list",
+			"_aid": ["list"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Collections list"},
+			"_definition": {"iso_639_3_eng": "Database collection names, acronyms or codes."},
+			"_description": {"iso_639_3_eng": "This is a list of database collection identifiers, the value does not need to be the exact collection name, but it must be unique among all collections of the database."}
+		},
+		"_data": {
+			"_set": {
+				"_set_scalar": {
+					"_set_type": "_type_string"
+				}
 			}
 		}
 	},

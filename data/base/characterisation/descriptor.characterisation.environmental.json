@@ -951,92 +951,6 @@
 	{
 		"_code": {
 			"_nid": "chr",
-			"_lid": "CCI-AGB",
-			"_gid": "chr_CCI-AGB",
-			"_aid": ["CCI-AGB"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Above-ground biomass"},
-			"_definition": {"iso_639_3_eng": "Amount of living biomass (organic matter) stored in vegetation above the soil including stem, stump, branches, bark, seeds and foliage, expressed as dry weight"},
-			"_description": {"iso_639_3_eng": "Above-ground biomass is here referred to in terms of biomass density, i.e., the amount of living biomass per unit area. Accordingly, this quantity is here expressed in units of mass of dry matter per unit ground area, i.e., Mg ha-1 (Megagrams per hectare), which is equivalent to tons per hectare."}
-		},
-		"_data": {
-			"_class": "_class_quantity",
-			"_domain": ["chr_fore"],
-			"_subject": "chr_subject_stand",
-			"_usage": ["_usage_indicator"],
-			"_options": ["_options_level-2"],
-			"_scalar": {
-				"_type": "_type_number",
-				"_decimals": 2,
-				"_unit-name": "t/ha",
-				"_unit-symbol": "t/ha",
-				"_valid-range": {
-					"_min-range-inclusive": 0
-				}
-			}
-		}
-	},
-	{
-		"_code": {
-			"_nid": "chr_CCI-AGB",
-			"_lid": "avg",
-			"_gid": "chr_CCI-AGB_avg",
-			"_aid": ["avg"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Above-ground biomass average"},
-			"_definition": {"iso_639_3_eng": "Average amount of living biomass (organic matter) stored in vegetation above the soil including stem, stump, branches, bark, seeds and foliage, expressed as dry weight"},
-			"_description": {"iso_639_3_eng": "Above-ground biomass is here referred to in terms of biomass density, i.e., the amount of living biomass per unit area. Accordingly, this quantity is here expressed in units of mass of dry matter per unit ground area, i.e., Mg ha-1 (Megagrams per hectare), which is equivalent to tons per hectare. This value is the average for the conservation unit geographic shape."}
-		},
-		"_data": {
-			"_class": "_class_quantity_averaged",
-			"_domain": ["chr_fore"],
-			"_subject": "chr_subject_stand",
-			"_usage": ["_usage_indicator"],
-			"_options": ["_options_level-2"],
-			"_scalar": {
-				"_type": "_type_number",
-				"_decimals": 2,
-				"_unit-name": "t/ha",
-				"_unit-symbol": "t/ha",
-				"_valid-range": {
-					"_min-range-inclusive": 0
-				}
-			}
-		}
-	},
-	{
-		"_code": {
-			"_nid": "chr_CCI-AGB",
-			"_lid": "std",
-			"_gid": "chr_CCI-AGB_std",
-			"_aid": ["std"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Above-ground biomass standard deviation"},
-			"_definition": {"iso_639_3_eng": "Standard deviation of living biomass (organic matter) stored in vegetation above the soil including stem, stump, branches, bark, seeds and foliage, expressed as dry weight"},
-			"_description": {"iso_639_3_eng": "Above-ground biomass is here referred to in terms of biomass density, i.e., the amount of living biomass per unit area. Accordingly, this quantity is here expressed in units of mass of dry matter per unit ground area, i.e., Mg ha-1 (Megagrams per hectare), which is equivalent to tons per hectare. This value is the average for the conservation unit geographic shape."}
-		},
-		"_data": {
-			"_class": "_class_quantity_averaged",
-			"_domain": ["chr_fore"],
-			"_subject": "chr_subject_stand",
-			"_usage": ["_usage_indicator"],
-			"_options": ["_options_level-2"],
-			"_scalar": {
-				"_type": "_type_number",
-				"_unit-name": "t/ha",
-				"_unit-symbol": "t/ha",
-				"_valid-range": {
-					"_min-range-inclusive": 0
-				}
-			}
-		}
-	},
-	{
-		"_code": {
-			"_nid": "chr",
 			"_lid": "AvBiomass",
 			"_gid": "chr_AvBiomass",
 			"_pid": ["AvBiomass"],
@@ -1045,7 +959,7 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "Average GCU Biomass"},
 			"_definition": {"iso_639_3_eng": "Above-ground biomass af all species (tree, shrubs, annuals)"},
-			"_description": {"iso_639_3_eng": "Above ground biomass for the whole GCU, to describe the state of the vegetation. The above ground biomasse (in t/ha) includes all of the vegetation present and in forest and makes it possible to quantitatively consider the importance of wood in forests."},
+			"_description": {"iso_639_3_eng": "Above ground biomass for the whole GCU, or for the current shape, to describe the state of the vegetation. The above ground biomasse (in t/ha) includes all of the vegetation present and in forest and makes it possible to quantitatively consider the importance of wood in forests."},
 			"_provider": [
 				"JRC"
 			]
