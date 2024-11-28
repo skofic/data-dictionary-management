@@ -8,8 +8,8 @@
 			"_aid": ["AvElevation"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Average GCU elevation"},
-			"_definition": {"iso_639_3_eng": "Average height above sea level of the GCU."},
+			"_title": {"iso_639_3_eng": "Average elevation"},
+			"_definition": {"iso_639_3_eng": "Average height above sea level."},
 			"_description": {"iso_639_3_eng": "*Height above sea level* in *meters* extracted from the [Digital Elevation Model](https://www.eea.europa.eu/en/datahub/datahubitem-view/d08852bc-7b5f-4835-a776-08362e2fbf4b) (EU-DEM Copernicus Land Monitoring Service 25 meter resolution dataset). The *average* is calculated for the GCU area defined with the polygon of GCU boundaries.  Beware that for some GCU (i) there are no shapefile available so that the average elvevation over a 5km buffer around the GCU coordinate is taken (ii) it may happen that GCU visited by the wield team (WP2) does not fall in the shapefile available on EUFGIS, this mismatch is reported."},
 			"_provider": [
 				"Nicolas Martin <nicolas.martin@inrae.fr>"
@@ -32,15 +32,14 @@
 	{
 		"_code": {
 			"_nid": "chr",
-			"_lid": "StdElevation",
-			"_gid": "chr_StdElevation",
-			"_pid": ["StdElevation"],
-			"_aid": ["StdElevation"]
+			"_lid": "MinElevation",
+			"_gid": "chr_MinElevation",
+			"_aid": ["MinElevation"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "GCU elevation standard deviation"},
-			"_definition": {"iso_639_3_eng": "Standard deviation of average height above sea level of the GCU."},
-			"_description": {"iso_639_3_eng": "Standard deviation of height above sea level, extracted from the Digital Elevation Model (EU-DEM Copernicus Land Monitoring Service 25 meter resolution dataset), for the referenced GCU geometry."}
+			"_title": {"iso_639_3_eng": "Minimum elevation"},
+			"_definition": {"iso_639_3_eng": "Minimum height above sea level."},
+			"_description": {"iso_639_3_eng": "*Minimum height above sea level* in *meters* extracted from the [Digital Elevation Model](https://www.eea.europa.eu/en/datahub/datahubitem-view/d08852bc-7b5f-4835-a776-08362e2fbf4b) (EU-DEM Copernicus Land Monitoring Service 25 meter resolution dataset). The *average* is calculated for the GCU area defined with the polygon of GCU boundaries.  Beware that for some GCU (i) there are no shapefile available so that the average elvevation over a 5km buffer around the GCU coordinate is taken (ii) it may happen that GCU visited by the wield team (WP2) does not fall in the shapefile available on EUFGIS, this mismatch is reported."}
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
@@ -55,14 +54,60 @@
 	{
 		"_code": {
 			"_nid": "chr",
+			"_lid": "MaxElevation",
+			"_gid": "chr_MaxElevation",
+			"_aid": ["MaxElevation"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Maximum elevation"},
+			"_definition": {"iso_639_3_eng": "Maximum height above sea level."},
+			"_description": {"iso_639_3_eng": "*Maximum height above sea level* in *meters* extracted from the [Digital Elevation Model](https://www.eea.europa.eu/en/datahub/datahubitem-view/d08852bc-7b5f-4835-a776-08362e2fbf4b) (EU-DEM Copernicus Land Monitoring Service 25 meter resolution dataset). The *average* is calculated for the GCU area defined with the polygon of GCU boundaries.  Beware that for some GCU (i) there are no shapefile available so that the average elvevation over a 5km buffer around the GCU coordinate is taken (ii) it may happen that GCU visited by the wield team (WP2) does not fall in the shapefile available on EUFGIS, this mismatch is reported."}
+		},
+		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit": "_unit_length_m"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr",
+			"_lid": "StdElevation",
+			"_gid": "chr_StdElevation",
+			"_pid": ["StdElevation"],
+			"_aid": ["StdElevation"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Elevation standard deviation"},
+			"_definition": {"iso_639_3_eng": "Standard deviation of average height above sea level."},
+			"_description": {"iso_639_3_eng": "Standard deviation of height above sea level, extracted from the Digital Elevation Model (EU-DEM Copernicus Land Monitoring Service 25 meter resolution dataset), for the referenced GCU geometry."}
+		},
+		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit": "_unit_length_m"
+			}
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "chr",
 			"_lid": "AvSlope",
 			"_gid": "chr_AvSlope",
 			"_pid": ["AvSlope"],
 			"_aid": ["AvSlope"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Average GCU slope."},
-			"_definition": {"iso_639_3_eng": "Average slope of the GCU."},
+			"_title": {"iso_639_3_eng": "Average slope."},
+			"_definition": {"iso_639_3_eng": "Average slope."},
 			"_description": {"iso_639_3_eng": "*Slope* in *degrees* extracted from the [Digital Elevation Model](https://www.eea.europa.eu/en/datahub/datahubitem-view/d08852bc-7b5f-4835-a776-08362e2fbf4b) (EU-DEM Copernicus Land Monitoring Service 25 meter resolution dataset). The *average* is calculated for the GCU area defined with the polygon of GCU boundaries.  Beware that for some GCU (i) there are no shapefile available so that the average elvevation over a 5km buffer around the GCU coordinate is taken (ii) it may happen that GCU visited by the wield team (WP2) does not fall in the shapefile available on EUFGIS, this mismatch is reported."},
 			"_provider": [
 				"Nicolas Martin <nicolas.martin@inrae.fr>"
@@ -92,8 +137,8 @@
 			"_aid": ["AvAspect"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Average GCU aspect"},
-			"_definition": {"iso_639_3_eng": "Average aspect of the GCU."},
+			"_title": {"iso_639_3_eng": "Average aspect"},
+			"_definition": {"iso_639_3_eng": "Average aspect."},
 			"_description": {"iso_639_3_eng": "*Aspect* in *degrees* extracted from the [Digital Elevation Model](https://www.eea.europa.eu/en/datahub/datahubitem-view/d08852bc-7b5f-4835-a776-08362e2fbf4b) (EU-DEM Copernicus Land Monitoring Service 25 meter resolution dataset). The *average* is calculated for the GCU area defined with the polygon of GCU boundaries.  Beware that for some GCU (i) there are no shapefile available so that the average elvevation over a 5km buffer around the GCU coordinate is taken (ii) it may happen that GCU visited by the wield team (WP2) does not fall in the shapefile available on EUFGIS, this mismatch is reported."},
 			"_provider": [
 				"Nicolas Martin <nicolas.martin@inrae.fr>"
@@ -584,7 +629,8 @@
 				"_unit-name": "m^2 Leaf/m^2 soil",
 				"_unit-symbol": "m2 Leaf/m2 soil",
 				"_valid-range": {
-					"_min-range-inclusive": 0
+					"_min-range-inclusive": 0,
+					"_max-range-inclusive": 100
 				}
 			}
 		}
@@ -642,7 +688,11 @@
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit-name": "m^2 Leaf/m^2 soil",
-				"_unit-symbol": "m2 Leaf/m2 soil"
+				"_unit-symbol": "m2 Leaf/m2 soil",
+				"_valid-range": {
+					"_min-range-inclusive": 0,
+					"_max-range-inclusive": 100
+				}
 			}
 		}
 	},
@@ -708,7 +758,8 @@
 				"_unit-name": "kg of C/m2/day",
 				"_unit-symbol": "kg of C/m2/day",
 				"_valid-range": {
-					"_min-range-inclusive": 0
+					"_min-range-inclusive": 0,
+					"_max-range-inclusive": 3000
 				}
 			}
 		}
@@ -827,6 +878,35 @@
 				"_type": "_type_number",
 				"_unit-name": "kg/m2/year",
 				"_unit-symbol": "kg/m^2"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr",
+			"_lid": "StdGrossPrimProd",
+			"_gid": "chr_StdGrossPrimProd",
+			"_aid": ["StdGrossPrimProd"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": " GCU GPP standard deviation"},
+			"_definition": {"iso_639_3_eng": "Standard deviation of monthly average of the Gross Primary Productivity"},
+			"_description": {"iso_639_3_eng": "Standard deviation of monthly average gross primary productivity (GPP) for the whole GCU, to establish the seasonal variation in photosynthesis. The GPP (kg of C/m2/day) corresponds to the amount of carbon that enters the ecosystem per unit surface and time. This value is derived from the sattelite MODIS at 500 m. resolution that provides the fraction of light intercepted by the canopy and a model of photosynthesis that converts the intercepted light into carbon assimilation. This makes it possible to define the amount of energy available for the plant to function (respiration) and the amount available for growth (net primary productivity). Beware that this value is known to be incorrect during drought stress periods."},
+			"_provider": [
+				"JRC"
+			]
+		},
+		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_domain": ["chr_envi"],
+			"_subject": "chr_subject_stand",
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-1", "_options_graph_bar"],
+			"_scalar": {
+				"_type": "_type_number",
+				"_decimals": 2,
+				"_unit-name": "kg of C/m2/day",
+				"_unit-symbol": "kg of C/m2/day"
 			}
 		}
 	},
@@ -978,6 +1058,35 @@
 				"_valid-range": {
 					"_min-range-inclusive": 0
 				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr",
+			"_lid": "StdBiomass",
+			"_gid": "chr_StdBiomass",
+			"_aid": ["StdBiomass"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "GCU Biomass standard deviation"},
+			"_definition": {"iso_639_3_eng": "Standard deviation of above-ground biomass af all species (tree, shrubs, annuals)"},
+			"_description": {"iso_639_3_eng": "Standard deviation of above ground biomass for the whole GCU, or for the current shape, to describe the state of the vegetation. The above ground biomasse (in t/ha) includes all of the vegetation present and in forest and makes it possible to quantitatively consider the importance of wood in forests."},
+			"_provider": [
+				"JRC"
+			]
+		},
+		"_data": {
+			"_class": "_class_quantity_averaged",
+			"_domain": ["chr_fore"],
+			"_subject": "chr_subject_stand",
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-2"],
+			"_scalar": {
+				"_type": "_type_number",
+				"_decimals": 2,
+				"_unit-name": "t/ha",
+				"_unit-symbol": "t/ha"
 			}
 		}
 	},

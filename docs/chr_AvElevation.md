@@ -3,12 +3,12 @@
 
 
 ------
-#### Average GCU elevation
+#### Average elevation
 
 
 
 ------
-###### Average height above sea level of the GCU.
+###### Average height above sea level.
 
 
 

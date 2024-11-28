@@ -3,12 +3,12 @@
 
 
 ------
-#### Average GCU slope.
+#### Average slope.
 
 
 
 ------
-###### Average slope of the GCU.
+###### Average slope.
 
 
 

@@ -3,12 +3,12 @@
 
 
 ------
-#### Average GCU aspect
+#### Average aspect
 
 
 
 ------
-###### Average aspect of the GCU.
+###### Average aspect.
 
 
 

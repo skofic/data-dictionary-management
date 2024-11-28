@@ -3,12 +3,12 @@
 
 
 ------
-#### GCU elevation standard deviation
+#### Elevation standard deviation
 
 
 
 ------
-###### Standard deviation of average height above sea level of the GCU.
+###### Standard deviation of average height above sea level.
 
 
 
