@@ -8,7 +8,7 @@
 
 
 ------
-###### A shape or geometry asspciated with one or more geographic features.
+###### A shape or geometry associated with one or more geographic features.
 
 
 

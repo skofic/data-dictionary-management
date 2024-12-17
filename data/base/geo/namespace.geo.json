@@ -21,7 +21,7 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Geographic shape"},
-			"_definition": {"iso_639_3_eng": "A shape or geometry asspciated with one or more geographic features."},
+			"_definition": {"iso_639_3_eng": "A shape or geometry associated with one or more geographic features."},
 			"_description": {"iso_639_3_eng": "This *namespace* can be used to group terms defining geographic features associated with a geographic region, shape or geometry."}
 		}
 	},
@@ -37,6 +37,20 @@
 			"_title": {"iso_639_3_eng": "Geographic shape coverage rate"},
 			"_definition": {"iso_639_3_eng": "Coverage percentage or ratio of the geographic shape."},
 			"_description": {"iso_639_3_eng": "This *namespace* can be used to group terms defining *coverage percentages* of *geographic shapes*."}
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "geo",
+			"_lid": "box",
+			"_gid": "geo_box",
+			"_aid": ["box"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Bounds properties"},
+			"_definition": {"iso_639_3_eng": "A namespace for properties characterising a bounding box."},
+			"_description": {"iso_639_3_eng": "This *namespace* can be used to group terms defining geographic features or measures expressed in the local coordinate reference system."}
 		}
 	}
 ]

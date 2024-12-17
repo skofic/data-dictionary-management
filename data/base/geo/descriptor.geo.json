@@ -605,5 +605,86 @@
 				}
 			}
 		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "geo_box",
+			"_lid": "width",
+			"_gid": "geo_box_width",
+			"_aid": ["width"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Width"},
+			"_definition": {"iso_639_3_eng": "Width in degrees."},
+			"_description": {"iso_639_3_eng": "The width is expressed in the current coordinate reference system degrees."}
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit-name": "Degrees"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "geo_box",
+			"_lid": "height",
+			"_gid": "geo_box_height",
+			"_aid": ["height"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Height"},
+			"_definition": {"iso_639_3_eng": "Height in degrees."},
+			"_description": {"iso_639_3_eng": "The height is expressed in the current coordinate reference system degrees."}
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit-name": "Degrees"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "geo_box",
+			"_lid": "area",
+			"_gid": "geo_box_area",
+			"_aid": ["area"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Area"},
+			"_definition": {"iso_639_3_eng": "Area in degrees."},
+			"_description": {"iso_639_3_eng": "The area is expressed in the current coordinate reference system squre degrees."}
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit-name": "Degrees^2"
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "geo_box",
+			"_lid": "perimeter",
+			"_gid": "geo_box_perimeter",
+			"_aid": ["perimeter"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Perimeter"},
+			"_definition": {"iso_639_3_eng": "Perimeter in degrees."},
+			"_description": {"iso_639_3_eng": "The perimeter is expressed in the current coordinate reference system degrees."}
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit-name": "Degrees"
+			}
+		}
 	}
 ]
