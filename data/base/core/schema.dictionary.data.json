@@ -279,5 +279,13 @@
 		"_to": "_options",
 		"_predicate": "_predicate_enum-of",
 		"_path": ["_options"]
+	},
+
+
+	{
+		"_from": "_list_templates",
+		"_to": "_list",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_list"]
 	}
 ]

@@ -499,5 +499,18 @@
 			"_title": {"iso_639_3_eng": "Bar graph display"},
 			"_definition": {"iso_639_3_eng": "This category indicates that the descriptor term should be displayed preferably as a bar graph."}
 		}
+	},
+
+	{
+		"_code": {
+			"_nid": "_list",
+			"_lid": "templates",
+			"_gid": "_list_templates",
+			"_aid": ["templates"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Templates"},
+			"_definition": {"iso_639_3_eng": "This category indicates that the term belongs to the list of template variables."}
+		}
 	}
 ]
