@@ -260,6 +260,7 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_domain": ["chr_envi"],
+			"_list": ["_list_templates"],
 			"_subject": "chr_subject_GCU",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
@@ -292,6 +293,7 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_domain": ["chr_envi"],
+			"_list": ["_list_templates"],
 			"_subject": "chr_subject_GCU",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
@@ -325,6 +327,7 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_domain": ["chr_envi"],
+			"_list": ["_list_templates"],
 			"_subject": "chr_subject_GCU",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
@@ -359,6 +362,7 @@
 		"_data": {
 			"_class": "_class_category",
 			"_domain": ["chr_envi"],
+			"_list": ["_list_templates"],
 			"_subject": "chr_subject_GCU",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
@@ -470,6 +474,7 @@
 		"_data": {
 			"_class": "_class_quantity_averaged",
 			"_domain": ["chr_envi"],
+			"_list": ["_list_templates"],
 			"_subject": "chr_subject_stand",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
@@ -486,6 +491,38 @@
 		}
 	},
 	
+	{
+		"_code": {
+			"_nid": "chr_trend",
+			"_lid": "NormDiffVegIdx",
+			"_gid": "chr_trend_NormDiffVegIdx",
+			"_pid": ["TrendNDVI"],
+			"_aid": ["NormDiffVegIdx"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Trend (temporal dynamics) in GCU's NDVI"},
+			"_definition": {"iso_639_3_eng": "Temporal trends of the Normalized Difference Vegetation Index"},
+			"_description": {"iso_639_3_eng": "Temporal dynamics of the normalised difference vegetation index (NDVI) across the GCU,  to find out whether the health of the population is declining, remaining stable or increasing. The NDVI is a widely used metric based on remote sensing and is calculated as the normalised difference of spectrometric reflectance measurements in two specific bands: one in which the leaf absorbs light (red) and one in which the leaf absorbs little light (near infrared). The spectrometric data comes from MODIS satellites. The NDVI value varies between -1 (for water) and 1 for dense vegetation. A value close to 0 indicates rocks or poorly vegetated areas."},
+			"_provider": [
+				"Nicolas Martin <nicolas.martin@inrae.fr>"
+			]
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["chr_envi"],
+			"_list": ["_list_templates"],
+			"_subject": "chr_subject_stand",
+			"_options": ["_options_level-1", "_options_graph_line"],
+			"_scalar": {
+				"_type": "_type_number",
+				"_decimals": 2,
+				"_valid-range": {
+					"_min-range-inclusive": -1.0,
+					"_max-range-inclusive": 1.0
+				}
+			}
+		}
+	},
 	{
 		"_code": {
 			"_nid": "chr",
@@ -505,6 +542,7 @@
 		"_data": {
 			"_class": "_class_quantity_averaged",
 			"_domain": ["chr_envi"],
+			"_list": ["_list_templates"],
 			"_subject": "chr_subject_stand",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1", "_options_graph_line"],
@@ -562,6 +600,7 @@
 		"_data": {
 			"_class": "_class_quantity_averaged",
 			"_domain": ["chr_envi"],
+			"_list": ["_list_templates"],
 			"_subject": "chr_subject_stand",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1", "_options_graph_line"],
@@ -620,6 +659,7 @@
 		"_data": {
 			"_class": "_class_quantity_averaged",
 			"_domain": ["chr_envi"],
+			"_list": ["_list_templates"],
 			"_subject": "chr_subject_stand",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1"],
@@ -684,6 +724,7 @@
 		"_data": {
 			"_class": "_class_quantity_averaged",
 			"_domain": ["chr_envi"],
+			"_list": ["_list_templates"],
 			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
@@ -715,6 +756,7 @@
 		"_data": {
 			"_class": "_class_quantity_averaged",
 			"_domain": ["chr_envi"],
+			"_list": ["_list_templates"],
 			"_subject": "chr_subject_stand",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1"],
@@ -749,6 +791,7 @@
 		"_data": {
 			"_class": "_class_quantity_averaged",
 			"_domain": ["chr_envi"],
+			"_list": ["_list_templates"],
 			"_subject": "chr_subject_stand",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1", "_options_graph_bar"],
@@ -783,6 +826,7 @@
 		"_data": {
 			"_class": "_class_quantity_averaged",
 			"_domain": ["chr_envi"],
+			"_list": ["_list_templates"],
 			"_subject": "chr_subject_stand",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1", "_options_graph_bar"],
@@ -813,6 +857,7 @@
 		"_data": {
 			"_class": "_class_quantity_averaged",
 			"_domain": ["chr_envi"],
+			"_list": ["_list_templates"],
 			"_subject": "chr_subject_stand",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1", "_options_graph_bar"],
@@ -930,6 +975,7 @@
 		"_data": {
 			"_class": "_class_quantity_averaged",
 			"_domain": ["chr_envi"],
+			"_list": ["_list_templates"],
 			"_subject": "chr_subject_stand",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1", "_options_graph_line"],
@@ -962,6 +1008,7 @@
 		"_data": {
 			"_class": "_class_quantity_averaged",
 			"_domain": ["chr_envi"],
+			"_list": ["_list_templates"],
 			"_subject": "chr_subject_stand",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1", "_options_graph_line"],
@@ -1047,6 +1094,7 @@
 		"_data": {
 			"_class": "_class_quantity_averaged",
 			"_domain": ["chr_fore"],
+			"_list": ["_list_templates"],
 			"_subject": "chr_subject_stand",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
@@ -1109,6 +1157,7 @@
 		"_data": {
 			"_class": "_class_quantity_averaged",
 			"_domain": ["chr_envi"],
+			"_list": ["_list_templates"],
 			"_subject": "chr_subject_stand",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
@@ -1167,6 +1216,7 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_domain": ["chr_envi"],
+			"_list": ["_list_templates"],
 			"_subject": "chr_subject_GCU",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
@@ -1200,6 +1250,7 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_domain": ["chr_envi"],
+			"_list": ["_list_templates"],
 			"_subject": "chr_subject_GCU",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],

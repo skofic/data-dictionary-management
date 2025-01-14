@@ -41,6 +41,7 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_domain": ["chr_gent"],
+			"_list": ["_list_templates"],
 			"_scalar": {
 				"_type": "_type_number_integer",
 				"_valid-range": {
@@ -88,6 +89,7 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_domain": ["chr_gent"],
+			"_list": ["_list_templates"],
 			"_usage": ["_usage_metadata"],
 			"_scalar": {
 				"_type": "_type_number_integer",
@@ -113,6 +115,7 @@
 		"_data": {
 			"_class": "_class_identifier",
 			"_domain": ["chr_gent"],
+			"_list": ["_list_templates"],
 			"_scalar": {
 				"_type": "_type_string"
 			}
@@ -132,6 +135,7 @@
 		},
 		"_data": {
 			"_domain": ["chr_gent"],
+			"_list": ["_list_templates"],
 			"_usage": ["_usage_metadata"],
 			"_scalar": {
 				"_type": "_type_string"
@@ -158,6 +162,7 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_domain": ["chr_gent"],
+			"_list": ["_list_templates"],
 			"_tag": [
 				"chr_tag_diversity"
 			],
@@ -193,6 +198,7 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_domain": ["chr_gent"],
+			"_list": ["_list_templates"],
 			"_tag": [
 				"chr_tag_diversity"
 			],
@@ -259,6 +265,7 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_domain": ["chr_gent"],
+			"_list": ["_list_templates"],
 			"_tag": [
 				"chr_tag_diversity"
 			],
@@ -295,6 +302,7 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_domain": ["chr_gent"],
+			"_list": ["_list_templates"],
 			"_tag": [
 				"chr_tag_diversity"
 			],
@@ -330,6 +338,7 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_domain": ["chr_gent"],
+			"_list": ["_list_templates"],
 			"_tag": [
 				"chr_tag_diversity",
 				"chr_tag_distinct-pop"
@@ -367,6 +376,7 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_domain": ["chr_gent"],
+			"_list": ["_list_templates"],
 			"_subject": "chr_subject_target",
 			"_tag": [
 				"chr_tag_diversity",
@@ -403,6 +413,7 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_domain": ["chr_gent"],
+			"_list": ["_list_templates"],
 			"_subject": "chr_subject_target",
 			"_tag": ["chr_tag_distinct-pop"],
 			"_usage": ["_usage_indicator"],
@@ -436,6 +447,7 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_domain": ["chr_gent"],
+			"_list": ["_list_templates"],
 			"_subject": "chr_subject_target",
 			"_tag": ["chr_tag_distinct-pop"],
 			"_usage": ["_usage_indicator"],
@@ -500,6 +512,7 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_domain": ["chr_gent"],
+			"_list": ["_list_templates"],
 			"_tag": [
 				"chr_tag_diversity"
 			],
@@ -566,6 +579,7 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_domain": ["chr_gent"],
+			"_list": ["_list_templates"],
 			"_subject": "chr_subject_target",
 			"_tag": [
 				"chr_tag_diversity"
@@ -602,6 +616,7 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_domain": ["chr_gent"],
+			"_list": ["_list_templates"],
 			"_subject": "chr_subject_target",
 			"_tag": [
 				"chr_tag_diversity",
@@ -641,6 +656,7 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_domain": ["chr_gent"],
+			"_list": ["_list_templates"],
 			"_subject": "chr_subject_target",
 			"_tag": [
 				"chr_tag_diversity",
@@ -681,6 +697,7 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_domain": ["chr_gent"],
+			"_list": ["_list_templates"],
 			"_tag": [
 				"chr_tag_diversity",
 				"chr_tag_vulnerability"
@@ -748,6 +765,7 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_domain": ["chr_gent"],
+			"_list": ["_list_templates"],
 			"_tag": [
 				"chr_tag_diversity",
 				"chr_tag_distinct-pop",
@@ -815,6 +833,7 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_domain": ["chr_gent"],
+			"_list": ["_list_templates"],
 			"_tag": [
 				"chr_tag_distinct-pop",
 				"chr_tag_vulnerability"
@@ -882,6 +901,7 @@
 			"_subject": "chr_subject_target",
 			"_class": "_class_quantity",
 			"_domain": ["chr_gent"],
+			"_list": ["_list_templates"],
 			"_tag": [
 				"chr_tag_diversity",
 				"chr_tag_vulnerability"
