@@ -13,7 +13,7 @@
 
 
 ------
-This number is the unique identifier of the unit described. This number should not be duplicated or reassigned to another unit.
+This number is the unique identifier of the unit described.  This number should not be duplicated or reassigned to another unit.
 
 
 

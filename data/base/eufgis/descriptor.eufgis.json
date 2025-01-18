@@ -30,7 +30,7 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "Unit number"},
 			"_definition": {"iso_639_3_eng": "Unique identifier of the unit."},
-			"_description": {"iso_639_3_eng": "This number is the unique identifier of the unit described. This number should not be duplicated or reassigned to another unit."},
+			"_description": {"iso_639_3_eng": "This number is the unique identifier of the unit described.  This number should not be duplicated or reassigned to another unit."},
 			"_examples": {"iso_639_3_eng": "`FIN00001`: A finnish unit's number."}
 		},
 		"_data": {

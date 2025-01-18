@@ -9,8 +9,8 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Risk of frost damage"},
-			"_definition": {"iso_639_3_eng": "The simulated percentage of leaf buds killed by one or more frost events during the year."},
-			"_description": {"iso_639_3_eng": "The simulated percentage of leaf buds killed by one or more frost events during the year. The vulnerability of buds to late frosts depends on the stage of bud development. We use CASTANEA to model the process of breaking dormancy, during which this vulnerability increases. The damage is then calculated by crossing the vulnerability of the buds and the minimum temperatures."},
+			"_definition": {"iso_639_3_eng": "The simulated fraction of leaf buds killed by one or more frost events during the year"},
+			"_description": {"iso_639_3_eng": "The simulated fraction of leaf buds killed by one or more frost events during the year. The vulnerability of buds to late frosts depends on the stage of bud development. We use CASTANEA to model the process of breaking dormancy, during which this vulnerability increases. The damage is then calculated by crossing the vulnerability of the buds and the minimum temperatures."},
 			"_provider": [
 				"Nicolas Martin <nicolas.martin@inrae.fr>"
 			]
@@ -25,7 +25,11 @@
 			"_options": ["_options_level-1", "_options_graph"],
 			"_scalar": {
 				"_type": "_type_number",
-				"_decimals": 3
+				"_decimals": 3,
+				"_valid-range": {
+					"_min-range-exclusive": 0.0,
+					"_max-range-exclusive": 1.0
+				}
 			}
 		}
 	},
@@ -40,8 +44,8 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Risk of desiccation during drought"},
-			"_definition": {"iso_639_3_eng": "Simulated probability of death by dessication"},
-			"_description": {"iso_639_3_eng": "The risk of desiccation is related to the risk that trees lose their ability to transport water during drought. This phenomenon occurs during extreme drought due to sap vessel embolsim (obstruction) and can trigger the complete death of the tree. In this case, the risk is modelled using the SurEau model for the last 30 years and the value provided is a probability of death (between 0 and 1). The probability is taken as the frequency of years in which the percentage of embolisms exceeds 50%. To do this, the SurEau model integrates various trait, soil and climate data to estimate soil and plant water status at an hourly time step and derives the percentage of embolism resulting in a loss of hydraulic fluxes/conductance."},
+			"_definition": {"iso_639_3_eng": "Simulated loss of hydraulic conductance"},
+			"_description": {"iso_639_3_eng": "The risk of tree desiccation during drought is related to the hydraulic failure which refers to the trees losing their ability to transport water during extreme drought. This phenomenon occurs during extreme drought due to xylem embolism (obstruction by air due to cavitation) and can trigger the complete death of the tree. Here, this risk is taken as the yearly maximum percent loss of hydraulic conductance of the plant (between 0 and 100 %). The closer to 100 the higher the risk. In general we assume that conifers die at 50% loss of hydraulic conductance whereas angioperms die at 90% loss of hydraulic conductance."},
 			"_provider": [
 				"Nicolas Martin <nicolas.martin@inrae.fr>"
 			]
@@ -56,7 +60,12 @@
 			"_options": ["_options_level-1"],
 			"_scalar": {
 				"_type": "_type_number",
-				"_decimals": 3
+				"_unit-name": "% loss of hydraulic conductance",
+				"_decimals": 3,
+				"_valid-range": {
+					"_min-range-exclusive": 0.0,
+					"_max-range-exclusive": 1.0
+				}
 			}
 		}
 	},
@@ -71,8 +80,8 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Risk of carbon starvation"},
-			"_definition": {"iso_639_3_eng": "The simulated cumulative deficit in Non-Structural Carboydrates (NSC) during the year over the past 30 years computed with the Castanea model or the Medfate model."},
-			"_description": {"iso_639_3_eng": "The simulated cumulative deficit in Non-Structural Carboydrates (NSC) during the year over the past 30 years computed with the Castanea model or the Medfate model. The risk of carbon starvation refers to the risk that trees will experience a lack of carbon reserves due to the multiple abiotic stresses that the trees may be exposed (frost, high temperature, drought) and that are represented in the models used. The CASTANEA and MedFate models simulate photosynthesis, respiration and carbon allocation on a daily basis. The remaining carbon is allocated to reserves and remobilised in non-vegetative periods or during droughts."},
+			"_definition": {"iso_639_3_eng": "The simulated annual risk of mortality due to carbon starvation computed with the Castanea model"},
+			"_description": {"iso_639_3_eng": "The risk of mortality due to carbon starvation refers to the risk that trees will experience a lack of carbon reserves due to the multiple abiotic stresses that the trees may be exposed (frost, high temperature, drought)that progressively, year after year, alter the carbon balance of the trees. These processes are represented in the CASTANEA model which simulate photosynthesis, respiration and carbon allocation on a daily basis. The remaining carbon is allocated to reserves and remobilised in non-vegetative periods or during droughts. When the level of carbon storage decreases below a certain treshold a probability of mortality is estimated."},
 			"_provider": [
 				"Nicolas Martin <nicolas.martin@inrae.fr>"
 			]
@@ -86,7 +95,11 @@
 			"_options": ["_options_level-2"],
 			"_scalar": {
 				"_type": "_type_number",
-				"_decimals": 3
+				"_decimals": 3,
+				"_valid-range": {
+					"_min-range-exclusive": 0.0,
+					"_max-range-exclusive": 1.0
+				}
 			}
 		}
 	},
@@ -101,8 +114,8 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Vulnerability to wild fire"},
-			"_definition": {"iso_639_3_eng": "The simulated probability that the GCU's canopy water content reaches a treshold facilitating fire ignition and spread if there is an ignition source"},
-			"_description": {"iso_639_3_eng": "This risk refers to the probability that a GCU will dry out in such a way that the probability of fire increases, if there is ignition and the wind speed is significant. This risk is mainly related to the modelled desiccation of the GCU. The simulated minimum canopy water content during extreme drought is used as an indicator of wildfire susceptibility. The simulations of canopy water content over the past 30 years were used to derive the frequency of years in which canopy moisture content exceeds the risk threshold (50% moisture content on a dry matter basis). Simulations were carried out using the SurEau model. The SurEau model integrates various traits, soil and climate data to estimate soil and plant water status at an hourly time step and derives the percentage loss of hydraulic conductance."},
+			"_definition": {"iso_639_3_eng": "The simulated GCU's canopy fuel moisture content which is a key driver of fire ignition and spread if there is an ignition source"},
+			"_description": {"iso_639_3_eng": "This risk refers to the probability that a GCU will dry out in such a way that the probability of fire increases, if there is ignition and the wind speed is significant. This risk is approximated by the modelled moisture content (g of water /g of leaf dry matter) of the canopy leaves of the GCU using the SurEau model. When the canopy moisture content reaches values below 66% the risk of flammability drastically increases. Here we provide yearly values of fuel moisture content."},
 			"_provider": [
 				"Nicolas Martin <nicolas.martin@inrae.fr>"
 			]
@@ -117,7 +130,12 @@
 			"_options": ["_options_level-1"],
 			"_scalar": {
 				"_type": "_type_number",
-				"_decimals": 3
+				"_unit-symbol": "g_H2O/g_DryMass",
+				"_decimals": 3,
+				"_valid-range": {
+					"_min-range-exclusive": 0.0,
+					"_max-range-exclusive": 300.0
+				}
 			}
 		}
 	},
@@ -132,8 +150,8 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Average yearly drought index"},
-			"_definition": {"iso_639_3_eng": "The average of the number of days of the year with the soil relative water content below the treshold of 0.4"},
-			"_description": {"iso_639_3_eng": "The relative soil water content in the rooting zone is a key indicator of drought. In particular, when the standardised value falls below the threshold of 0.4, trees have been shown to respond by limiting fluxes and losing turgor. The SurEau and Medfate models were used to calculate the daily water content and extract the annual number of days when the Relative Extractable soil Water (i.e. water available for the trees) was below the threshold of 0.4, then the annual average of the metric was taken to indicate the water deficit."},
+			"_definition": {"iso_639_3_eng": "The number of days of the year with the soil relative water content below the treshold of 0.4"},
+			"_description": {"iso_639_3_eng": "The relative soil water content in the rooting zone is a key indicator of drought. In particular, when its value falls below the threshold of 0.4, trees have been shown to respond by limiting fluxes and losing turgor. The SurEau model was used to calculate the daily water content and extract the annual number of days when the Relative soil Water  was below the threshold of 0.4. This is used as a yearly metric of forest water deficit."},
 			"_provider": [
 				"Nicolas Martin <nicolas.martin@inrae.fr>"
 			]
@@ -146,8 +164,12 @@
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1", "_options_graph_line"],
 			"_scalar": {
-				"_type": "_type_number",
-				"_decimals": 3
+				"_type": "_type_number_integer",
+				"_unit-name": "Days per year",
+				"_valid-range": {
+					"_min-range-exclusive": 0,
+					"_max-range-exclusive": 365
+				}
 			}
 		}
 	}

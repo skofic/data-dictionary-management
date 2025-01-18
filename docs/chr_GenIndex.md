@@ -8,7 +8,7 @@
 
 
 ------
-###### Genetic index global identifier.
+###### Genetic index global identifier
 
 
 

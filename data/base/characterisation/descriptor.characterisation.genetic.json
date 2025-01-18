@@ -8,7 +8,7 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Genetic index"},
-			"_definition": {"iso_639_3_eng": "Genetic index global identifier."},
+			"_definition": {"iso_639_3_eng": "Genetic index global identifier"},
 			"_description": {"iso_639_3_eng": "Unique identifier of the genetic index descriptor. This field is used to indicate which descriptors represent genetic indexes."}
 		},
 		"_data": {
