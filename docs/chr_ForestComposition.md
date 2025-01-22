@@ -13,7 +13,8 @@
 
 
 ------
-*Composition of the forest* stand assessed (*by eye*) with an index ranging from 1 to 2:
+Composition of the forest stand assessed *by eye*:
 
-1. Single species.
-2. Mixed forest.
+- `chr_ForestComposition_1`: single species
+
+-  `chr_ForestComposition_1`: mixed forest

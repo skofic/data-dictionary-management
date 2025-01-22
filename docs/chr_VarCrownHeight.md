@@ -3,16 +3,14 @@
 
 
 ------
-#### Basal crown height variance
+#### Crown length variance
 
 
 
 ------
-###### The variance of the vertical distance from ground level to the lowermost point on the main stem where the tree crown starts across all measured trees.
+###### The variance of the crown lenght across all measured trees
 
 
 
 ------
-The variance of the values of height of the base of the tree crown across 10 individual adult dominant/co-dominant trees sampled either inside or in the vicinity of the circular plot with a radius of 15 m, which is representative of the GCU.
-
-The tree crown corresponds to the healthy and functional green crown envelope. Different criteria have to be taken into account: sanitary and continuity between the lower and upper branches. So that, the base of the tree crown could correspond to the first living branch or could start upper of the first living branch.
+The variance of the values of  the crown lenght across 10 measured adult dominant or co-dominant trees sampled either inside or in the vicinity of the representative circular plot with a radius of 15 m. The crown lenght is calculated from the [total height] value subtracted from the [Basal crown height] value. It corresponds to the healthy and functional green crown envelope lenght.

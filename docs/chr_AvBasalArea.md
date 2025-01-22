@@ -8,7 +8,7 @@
 
 
 ------
-###### The mean of the basal area per ha across all measured trees, whether living or dead.
+###### The mean of the basal area per ha across all measured trees, whether living or dead
 
 
 

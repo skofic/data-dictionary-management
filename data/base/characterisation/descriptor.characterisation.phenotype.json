@@ -82,7 +82,7 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["chr_fore"],
+			"_domain": ["chr_pheno"],
 			"_list": ["_list_templates"],
 			"_subject": "chr_subject_target",
 			"_tag": ["chr_tag_diversity"],
@@ -147,6 +147,7 @@
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit-name": "MPa",
+				"_unit-symbol": "MPa",
 				"_valid-range": {
 					"_min-range-exclusive": -5.0,
 					"_max-range-exclusive": 0.0
@@ -182,8 +183,9 @@
 				"_type": "_type_number",
 				"_decimals": 1,
 				"_unit-name": "MPa",
+				"_unit-symbol": "MPa",
 				"_valid-range": {
-					"_min-range-inclusive": 0
+					"_min-range-inclusive": 0.0
 				}
 			}
 		}
@@ -216,8 +218,9 @@
 				"_type": "_type_number",
 				"_decimals": 1,
 				"_unit-name": "MPa",
+				"_unit-symbol": "MPa",
 				"_valid-range": {
-					"_min-range-inclusive": 0
+					"_min-range-inclusive": 0.0
 				}
 			}
 		}
@@ -241,7 +244,8 @@
 			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_number",
-				"_unit-name": "MPa"
+				"_unit-name": "MPa",
+				"_unit-symbol": "MPa"
 			}
 		}
 	},
@@ -270,6 +274,7 @@
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit-name": "MPa",
+				"_unit-symbol": "MPa",
 				"_valid-range": {
 					"_min-range-exclusive": -15.0,
 					"_max-range-exclusive": 0.0
@@ -305,8 +310,9 @@
 				"_type": "_type_number",
 				"_decimals": 1,
 				"_unit-name": "MPa",
+				"_unit-symbol": "MPa",
 				"_valid-range": {
-					"_min-range-inclusive": 0
+					"_min-range-inclusive": 0.0
 				}
 			}
 		}
@@ -339,8 +345,9 @@
 				"_type": "_type_number",
 				"_decimals": 1,
 				"_unit-name": "MPa",
+				"_unit-symbol": "MPa",
 				"_valid-range": {
-					"_min-range-inclusive": 0
+					"_min-range-inclusive": 0.0
 				}
 			}
 		}
@@ -427,10 +434,11 @@
 			"_options": ["_options_level-1"],
 			"_scalar": {
 				"_type": "_type_number",
-				"_decimals": 1,
+				"_decimals": 2,
 				"_unit-name": "mmol m-2 s-1",
+				"_unit-symbol": "mmol m-2 s-1",
 				"_valid-range": {
-					"_min-range-inclusive": 0
+					"_min-range-inclusive": 0.00
 				}
 			}
 		}
@@ -461,10 +469,11 @@
 			"_options": ["_options_level-1"],
 			"_scalar": {
 				"_type": "_type_number",
-				"_decimals": 1,
+				"_decimals": 2,
 				"_unit-name": "mmol m-2 s-1",
+				"_unit-symbol": "mmol m-2 s-1",
 				"_valid-range": {
-					"_min-range-inclusive": 0
+					"_min-range-inclusive": 0.00
 				}
 			}
 		}
@@ -551,10 +560,11 @@
 			"_options": ["_options_level-1"],
 			"_scalar": {
 				"_type": "_type_number",
-				"_decimals": 1,
-				"_unit-name": "mmol m-2 s-1",
+				"_decimals": 2,
+				"_unit-name": "%RWC MPa-1",
+				"_unit-symbol": "%RWC MPa-1",
 				"_valid-range": {
-					"_min-range-inclusive": 0
+					"_min-range-inclusive": 0.00
 				}
 			}
 		}
@@ -585,10 +595,11 @@
 			"_options": ["_options_level-1"],
 			"_scalar": {
 				"_type": "_type_number",
-				"_decimals": 1,
-				"_unit-name": "mmol m-2 s-1",
+				"_decimals": 2,
+				"_unit-name": "%RWC MPa-1",
+				"_unit-symbol": "%RWC MPa-1",
 				"_valid-range": {
-					"_min-range-inclusive": 0
+					"_min-range-inclusive": 0.00
 				}
 			}
 		}
@@ -653,8 +664,9 @@
 				"_type": "_type_number",
 				"_decimals": 2,
 				"_unit-name": "cm2 cm-2",
+				"_unit-symbol": "cm2 cm-2",
 				"_valid-range": {
-					"_min-range-inclusive": 0
+					"_min-range-inclusive": 0.00
 				}
 			}
 		}
@@ -882,8 +894,9 @@
 				"_type": "_type_number",
 				"_decimals": 2,
 				"_unit-name": "cm2 g-1",
+				"_unit-symbol": "cm2 g-1",
 				"_valid-range": {
-					"_min-range-inclusive": 0
+					"_min-range-inclusive": 0.00
 				}
 			}
 		}
@@ -916,8 +929,9 @@
 				"_type": "_type_number",
 				"_decimals": 2,
 				"_unit-name": "cm2 g-1",
+				"_unit-symbol": "cm2 g-1",
 				"_valid-range": {
-					"_min-range-inclusive": 0
+					"_min-range-inclusive": 0.00
 				}
 			}
 		}
@@ -1005,8 +1019,9 @@
 				"_type": "_type_number",
 				"_decimals": 2,
 				"_unit-name": "g cm-3",
+				"_unit-symbol": "g cm-3",
 				"_valid-range": {
-					"_min-range-exclusive": 0
+					"_min-range-exclusive": 0.00
 				}
 			}
 		}
@@ -1039,8 +1054,9 @@
 				"_type": "_type_number",
 				"_decimals": 2,
 				"_unit-name": "g cm-3",
+				"_unit-symbol": "g cm-3",
 				"_valid-range": {
-					"_min-range-exclusive": 0
+					"_min-range-exclusive": 0.00
 				}
 			}
 		}
@@ -1107,7 +1123,7 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "Dieback mean"},
 			"_definition": {"iso_639_3_eng": "The mean of the dieback index across all measured trees"},
-			"_description": {"iso_639_3_eng": "The mean of the values of the dieback index across 10 measured adult dominant or co-dominant trees sampled either inside or in the vicinity of the representative circular plot with a radius of 15 m. The dieback index corresponds to the state of health of the trees determined by assessing foliage loss according to four classes:\n\n0 = 0 to 25% of defoliation\n1 = 25 to 50% of defoliation\n2 = 50 to 75 % of defoliation\n3 = 75% to 99% of defoliation\nThe value 100% corresponds to a dead tree."}
+			"_description": {"iso_639_3_eng": "The mean of the values of the dieback index across 10 measured adult dominant or co-dominant trees sampled either inside or in the vicinity of the representative circular plot with a radius of 15 m. The dieback index corresponds to the state of health of the trees determined by assessing foliage loss according to four classes:\n\n- `chr_Dieback_0`: 0% to 25% of defoliation\n- `chr_Dieback_1`: 25% to 50% of defoliation\n- `chr_Dieback_2`: 50% to 75 % of defoliation\n- `chr_Dieback_3`: 75% to 99% of defoliation\n\nThe value 100% corresponds to a dead tree."}
 		},
 		"_data": {
 			"_class": "_class_quantity",
@@ -1118,11 +1134,8 @@
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1"],
 			"_scalar": {
-				"_type": "_type_number",
-				"_decimals": 2,
-				"_valid-range": {
-					"_min-range-inclusive": 0
-				}
+				"_type": "_type_string_enum",
+				"_kind": ["chr_Dieback"]
 			}
 		}
 	},
@@ -1137,7 +1150,7 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "Dieback variance"},
 			"_definition": {"iso_639_3_eng": "The variance of the dieback index across all measured trees"},
-			"_description": {"iso_639_3_eng": "The variance of the values of the dieback index across 10 measured adult dominant or co-dominant trees sampled either inside or in the vicinity of the representative circular plot with a radius of 15 m. The dieback index corresponds to the state of health of the trees determined by assessing foliage loss according to four classes:\n\n0 = 0 to 25% of defoliation\n1 = 25 to 50% of defoliation\n2 = 50 to 75 % of defoliation\n3 = 75% to 99% of defoliation\nThe value 100% corresponds to a dead tree."}
+			"_description": {"iso_639_3_eng": "The variance of the values of the dieback index across 10 measured adult dominant or co-dominant trees sampled either inside or in the vicinity of the representative circular plot with a radius of 15 m. The dieback index corresponds to the state of health of the trees determined by assessing foliage loss according to four classes:\n\n- `chr_Dieback_0`: 0% to 25% of defoliation\n- `chr_Dieback_1`: 25% to 50% of defoliation\n- `chr_Dieback_2`: 50% to 75 % of defoliation\n- `chr_Dieback_3`: 75% to 99% of defoliation\n\nThe value 100% corresponds to a dead tree."}
 		},
 		"_data": {
 			"_class": "_class_quantity",
@@ -1148,11 +1161,8 @@
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1"],
 			"_scalar": {
-				"_type": "_type_number",
-				"_decimals": 2,
-				"_valid-range": {
-					"_min-range-inclusive": 0
-				}
+				"_type": "_type_string_enum",
+				"_kind": ["chr_Dieback"]
 			}
 		}
 	},
@@ -1215,7 +1225,7 @@
 				"_decimals": 1,
 				"_unit": "_unit_area_cm",
 				"_valid-range": {
-					"_min-range-inclusive": 0
+					"_min-range-inclusive": 0.0
 				}
 			}
 		}
@@ -1249,7 +1259,7 @@
 				"_decimals": 1,
 				"_unit": "_unit_area_cm",
 				"_valid-range": {
-					"_min-range-inclusive": 0
+					"_min-range-inclusive": 0.0
 				}
 			}
 
@@ -1283,9 +1293,10 @@
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
-				"_unit": "_unit_area_m",
+				"_unit-name": "m2/m2",
+				"_unit-name": "m^2/m^2",
 				"_valid-range": {
-					"_min-range-inclusive": 0
+					"_min-range-inclusive": 0.00
 				}
 			}
 		}

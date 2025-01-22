@@ -10,7 +10,7 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "GCU forest structure"},
 			"_definition": {"iso_639_3_eng": "Forest stand structure of the GCU assessed visually"},
-			"_description": {"iso_639_3_eng": "Forest stand structure assessed (*by eye*) at the GCU level with an index ranging from 1 to 3:\n\n1. Tree crowns inside horizontal stratum.\n2. Tree crowns contained inside multiple horizontal strata.\n3. Stand composed of scattered tree crowns."},
+			"_description": {"iso_639_3_eng": "Forest stand structure assessed *by eye* at the GCU level:\n\n-  `chr_ForestStructure_1`: tree crowns inside a single horizontal stratum\n\n-  `chr_ForestStructure_2`: tree crowns contained inside multiple horizontal strata\n\n-  `chr_ForestStructure_3`: stand composed of scattered tree crowns"},
 			"_provider": [
 				"Florence Jean <florence.jean@inrae.fr>"
 			]
@@ -40,7 +40,7 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "GCU forest composition"},
 			"_definition": {"iso_639_3_eng": "Tree composition of the GCU assessed visually"},
-			"_description": {"iso_639_3_eng": "*Composition of the forest* stand assessed (*by eye*) with an index ranging from 1 to 2:\n\n1. Single species.\n2. Mixed forest."},
+			"_description": {"iso_639_3_eng": "Composition of the forest stand assessed *by eye*:\n\n- `chr_ForestComposition_1`: single species\n\n-  `chr_ForestComposition_1`: mixed forest"},
 			"_provider": [
 				"Florence Jean <florence.jean@inrae.fr>"
 			]
@@ -171,8 +171,7 @@
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
 			"_scalar": {
-				"_type": "_type_number",
-				"_decimals": 1,
+				"_type": "_type_number_integer",
 				"_unit": "_unit_length_cm",
 				"_valid-range": {
 					"_min-range-inclusive": 0
@@ -185,7 +184,7 @@
 			"_nid": "chr",
 			"_lid": "VarCircBreastHeight",
 			"_gid": "chr_VarCircBreastHeight",
-			"_pid": ["VarCBH"],
+			"_pid": ["Var.cbh"],
 			"_aid": ["VarCircBreastHeight"]
 		},
 		"_info": {
@@ -197,15 +196,14 @@
 			]
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_fore"],
 			"_list": ["_list_templates"],
 			"_subject": "chr_subject_target",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
 			"_scalar": {
-				"_type": "_type_number",
-				"_decimals": 1,
+				"_type": "_type_number_integer",
 				"_unit": "_unit_length_cm",
 				"_valid-range": {
 					"_min-range-inclusive": 0
@@ -360,20 +358,20 @@
 			"_nid": "chr",
 			"_lid": "AvCrownHeight",
 			"_gid": "chr_AvCrownHeight",
-			"_pid": ["Mean.Hcrown"],
+			"_pid": ["Mean.Hcrown", "AvCrownLength"],
 			"_aid": ["AvCrownHeight"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Basal crown height mean"},
-			"_definition": {"iso_639_3_eng": "The mean of the vertical distance from ground level to the lowermost point on the main stem where the tree crown starts across all measured trees"},
-			"_description": {"iso_639_3_eng": "The mean of the values of height of the base of the tree crown across 10 individual adult dominant/co-dominant trees sampled either inside or in the vicinity of the circular plot with a radius of 15 m, which is representative of the GCU.\n\nThe tree crown corresponds to the healthy and functional green crown envelope. Different criteria have to be taken into account: sanitary and continuity between the lower and upper branches. So that, the base of the tree crown could correspond to the first living branch or could start upper of the first living branch."},
+			"_title": {"iso_639_3_eng": "Crown length mean"},
+			"_definition": {"iso_639_3_eng": "The mean of the crown lenght across all measured trees"},
+			"_description": {"iso_639_3_eng": "The mean of the values of  the crown lenght across 10 measured adult dominant or co-dominant trees sampled either inside or in the vicinity of the representative circular plot with a radius of 15 m. The crown lenght is calculated from the [total height] value subtracted from the [Basal crown height] value. It corresponds to the healthy and functional green crown envelope lenght."},
 			"_provider": [
 				"Maurizio Mencuccini <m.mencuccini@creaf.uab.cat>"
 			]
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["chr_fore"],
+			"_domain": ["chr_pheno"],
 			"_list": ["_list_templates"],
 			"_subject": "chr_subject_target",
 			"_usage": ["_usage_indicator"],
@@ -394,20 +392,20 @@
 			"_nid": "chr",
 			"_lid": "VarCrownHeight",
 			"_gid": "chr_VarCrownHeight",
-			"_pid": ["Var.Hcrown"],
+			"_pid": ["Var.Hcrown", "VarCrownLength"],
 			"_aid": ["VarCrownHeight"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Basal crown height variance"},
-			"_definition": {"iso_639_3_eng": "The variance of the vertical distance from ground level to the lowermost point on the main stem where the tree crown starts across all measured trees."},
-			"_description": {"iso_639_3_eng": "The variance of the values of height of the base of the tree crown across 10 individual adult dominant/co-dominant trees sampled either inside or in the vicinity of the circular plot with a radius of 15 m, which is representative of the GCU.\n\nThe tree crown corresponds to the healthy and functional green crown envelope. Different criteria have to be taken into account: sanitary and continuity between the lower and upper branches. So that, the base of the tree crown could correspond to the first living branch or could start upper of the first living branch."},
+			"_title": {"iso_639_3_eng": "Crown length variance"},
+			"_definition": {"iso_639_3_eng": "The variance of the crown lenght across all measured trees"},
+			"_description": {"iso_639_3_eng": "The variance of the values of  the crown lenght across 10 measured adult dominant or co-dominant trees sampled either inside or in the vicinity of the representative circular plot with a radius of 15 m. The crown lenght is calculated from the [total height] value subtracted from the [Basal crown height] value. It corresponds to the healthy and functional green crown envelope lenght."},
 			"_provider": [
 				"Maurizio Mencuccini <m.mencuccini@creaf.uab.cat>"
 			]
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["chr_fore"],
+			"_domain": ["chr_pheno"],
 			"_list": ["_list_templates"],
 			"_subject": "chr_subject_target",
 			"_tag": ["chr_tag_diversity"],
@@ -465,7 +463,7 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Basal area mean"},
-			"_definition": {"iso_639_3_eng": "The mean of the basal area per ha across all measured trees, whether living or dead."},
+			"_definition": {"iso_639_3_eng": "The mean of the basal area per ha across all measured trees, whether living or dead"},
 			"_description": {"iso_639_3_eng": "The mean of the trunk cross-sectional area per hectar (10000 m2) of all living and dead trees measured at breast height (1.3 m). All tree species in the GCU confunded."},
 			"_provider": [
 				"Florence Jeanflorence.jean@inrae.fr"
@@ -569,7 +567,7 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "Presence of dead trees"},
 			"_definition": {"iso_639_3_eng": "Presence of dead trees in the GCU"},
-			"_description": {"iso_639_3_eng": "Presence of dead trees inside and around the circular plot with a radius of 15 m, which is representative of the GCU, where 0 means that there are no dead trees and 1 that there are dead trees for the target species."},
+			"_description": {"iso_639_3_eng": "Presence of *dead trees* inside and around the circular plot with a *radius* of *15 m*., which is representative of the GCU, where `chr_DeadTrees_0` means that there are no dead trees and `chr_DeadTrees_1` that there are dead trees for the target species."},
 			"_provider": [
 				"Florence Jeanflorence.jean@inrae.fr"
 			]
@@ -599,8 +597,8 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Abundance of natural regeneration"},
-			"_definition": {"iso_639_3_eng": "Abundance of natural regeneration for the target species of the GCU assessed around all measured trees."},
-			"_description": {"iso_639_3_eng": "Abundance of natural regeneration assessed around 10 trees inside or around the circular plot with a radius of 15 m, which is representative of the GCU, where 0 means absence of natural regeneration, 1 means scattered regeneration, 2 regeneration in groups and 3 abundant regeneration."},
+			"_definition": {"iso_639_3_eng": "Abundance of natural regeneration for the target species of the GCU assessed around all measured trees"},
+			"_description": {"iso_639_3_eng": "Abundance of *natural regeneration* assessed around *10 trees* *inside* or *around* the *circular plot* with a *radius of 15 m.*, which is representative of the GCU, where `chr_NaturalRegeneration_0` means *absence of natural regeneration*, `chr_NaturalRegeneration_1` means *scattered regeneration*, `chr_NaturalRegeneration_2` *regeneration in groups* and `chr_NaturalRegeneration_3` *abundant regeneration*."},
 			"_provider": [
 				"Florence Jeanflorence.jean@inrae.fr"
 			]
@@ -648,8 +646,8 @@
 				"_type": "_type_number",
 				"_decimals": 2,
 				"_valid-range": {
-					"_min-range-inclusive": 0.0,
-					"_max-range-inclusive": 1.0
+					"_min-range-inclusive": 0.00,
+					"_max-range-inclusive": 1.00
 				}
 			}
 		}
@@ -678,6 +676,148 @@
 			"_scalar": {
 				"_type": "_type_string_enum",
 				"_kind": ["chr_TreeSocialStatus"]
+			}
+		}
+	},
+
+	{
+		"_code": {
+			"_nid": "chr",
+			"_lid": "FPAR",
+			"_gid": "chr_FPAR",
+			"_pid": ["FPAR"],
+			"_aid": ["FPAR"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Fraction of Photosynthetically Active Radiation"},
+			"_definition": {"iso_639_3_eng": "This biophysical variable is directly related to the primary productivity of forests and some models use it to estimate the assimilation of carbon dioxide in vegetation. FPAR can also be used as an indicator of the state and evolution of the vegetation cover"},
+			"_description": {"iso_639_3_eng": "The fraction of absorbed photosynthetically active radiation (FPAR, sometimes also noted fAPAR or fPAR ) is the fraction of the incoming solar radiation in the photosynthetically active radiation spectral region that is absorbed by a photosynthetic organism , typically describing the light absorption across an integrated plant canopy. This biophysical variable is directly related to the primary productivity of photosynthesis and some models use it to estimate the assimilation of carbon dioxide in vegetation in conjunction with the leaf area index . FPAR can also be used as an indicator of the state and evolution of the vegetation cover; with this function, it advantageously replaces the Normalized Difference Vegetation Index (NDVI), provided it is itself properly estimated."},
+			"_provider": [
+				"Jan-Peter George"
+			]
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["chr_fore"],
+			"_list": ["_list_templates"],
+			"_subject": "chr_subject_GCU",
+			"_tag": [
+				"chr_tag_vulnerability"
+			],
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-2"],
+			"_scalar": {
+				"_type": "_type_number",
+				"_decimals": 2,
+				"_unit-name": "Percentage",
+				"_unit-symbol": "%",
+				"_valid-range": {
+					"_min-range-inclusive": 0.0,
+					"_max-range-inclusive": 100.0
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr",
+			"_lid": "SMA",
+			"_gid": "chr_SMA",
+			"_pid": ["SMA"],
+			"_aid": ["SMA"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Soil moisture anomaly"},
+			"_definition": {"iso_639_3_eng": "The SMA indicator is used to detect and monitor agricultural drought, which is one of three main types of drought that are defined according to the variables of the hydrological cycle. SMA expresses the deviation of actual SMI from its long term mean . The baseline period for SMA is 1995 to the last available full year. SMA is negative when soil moisture is lower than the reference baseline. The following classification can be applied: SMA<-1.0: mild drought; SMA<-1.5: severe drought; SMA<-2: extreme drought"},
+			"_description": {"iso_639_3_eng": "LISFLOOD is a hydrological rainfall runoff model which has been developed by the JRC of the European Commission in order to reproduce the hydrology of large and trans national European river catchments (de Roo et al., 2000; van der Knijff et al., 2008), and which currently runs operationally within the Copernicus European Flood Awareness System (EFAS, http://www.efas.eu/). Input data for the LISFLOOD model include daily meteorological observations for the European continent, updated with a two day delay, which are obtained from the JRC’s MARS AGRI4CAST database1 , and which are extended for seven days using numerical 1 http://agri4cast.jrc.ec.europa.eu/DataPortal/ Copernicus European Drought Observatory (EDO): http://edo.jrc.ec.europa.eu/ © European Commission, 2019. 3 weather forecasts produced by the European Centre for Medium Range Weather Forecasts (ECMWF). The LISFLOOD model simulates soil moisture in two surface layers (skin layer and root zone) separately for forested and other layers. These four soil moisture layers are averaged daily to derive a single mean root zone soil moisture conditions to be successively standardized to 1."},
+			"_provider": [
+				"Jan-Peter George"
+			]
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_list": ["_list_templates"],
+			"_subject": "chr_subject_GCU",
+			"_tag": [
+				"chr_tag_vulnerability"
+			],
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-1", "_options_graph_bar"],
+			"_scalar": {
+				"_type": "_type_number",
+				"_decimals": 2,
+				"_valid-range": {
+					"_min-range-inclusive": -4.0,
+					"_max-range-inclusive": 4.0
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr",
+			"_lid": "SMI",
+			"_gid": "chr_SMI",
+			"_pid": ["SMI"],
+			"_aid": ["SMI"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Soil moisture index"},
+			"_definition": {"iso_639_3_eng": "SMI is an indicator of moisture conditions in the uppermost soil layers (skin layer and root zone). SMI is equal to 0 when the soil is severely dry (wilting point) and equal to 1 when the soil moisture is high (above field capacity)"},
+			"_description": {"iso_639_3_eng": "LISFLOOD is a hydrological rainfall runoff model which has been developed by the JRC of the European Commission in order to reproduce the hydrology of large and trans national European river catchments (de Roo et al., 2000; van der Knijff et al., 2008), and which currently runs operationally within the Copernicus European Flood Awareness System (EFAS, http://www.efas.eu/). Input data for the LISFLOOD model include daily meteorological observations for the European continent, updated with a two day delay, which are obtained from the JRC’s MARS AGRI4CAST database1 , and which are extended for seven days using numerical 1 http://agri4cast.jrc.ec.europa.eu/DataPortal/ Copernicus European Drought Observatory (EDO): http://edo.jrc.ec.europa.eu/ © European Commission, 2019. 3 weather forecasts produced by the European Centre for Medium Range Weather Forecasts (ECMWF). The LISFLOOD model simulates soil moisture in two surface layers (skin layer and root zone) separately for forested and other layers. These four soil moisture layers are averaged daily to derive a single mean root zone soil moisture conditions to be successively standardized to 1."},
+			"_provider": [
+				"Jan-Peter George"
+			]
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_list": ["_list_templates"],
+			"_subject": "chr_subject_GCU",
+			"_tag": [
+				"chr_tag_vulnerability"
+			],
+			"_usage": ["_usage_indicator"],
+			"_scalar": {
+				"_type": "_type_number",
+				"_decimals": 2,
+				"_valid-range": {
+					"_min-range-inclusive": 0.0,
+					"_max-range-inclusive": 1.0
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr",
+			"_lid": "CDI",
+			"_gid": "chr_CDI",
+			"_pid": ["CDI"],
+			"_aid": ["CDI"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Combined Drought Indicator"},
+			"_definition": {"iso_639_3_eng": "CDI is a combined drought indicator aiming to identify areas affected by agricultural droughts. It contains meteorological, hydrological and satellite-derived biophysical variables and distinguishes between five drought levels: 1) Watch, 2) Warning, 3) Alert, 4) partial recovery, 5) full recovery"},
+			"_description": {"iso_639_3_eng": "The Combined Drought Indicator (CDI) identifies areas with the potential to suffer agricultural drought, areas where the vegetation is already affected by drought conditions, and areas in the process of recovery to normal conditions after a drought episode. The CDI is based on the cause effect relationship for agricultural drought, whereby a shortage of precipitation leads to a soil moisture deficit, which in turn results in a reduction of vegetation productivity. The indicator is computed by combining anomalies of precipitation, soil moisture and satellite-measured plant growth - as measured by, respectively, the EDO drought indicators Standardized Precipitation Index, Soil Moisture Anomaly, and FAPAR Anomaly – using a classification scheme consisting of five drought levels (Watch, Warning, Alert, partial recovery, full recovery)."},
+			"_provider": [
+				"Jan-Peter George"
+			]
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_list": ["_list_templates"],
+			"_subject": "chr_subject_GCU",
+			"_tag": [
+				"chr_tag_vulnerability"
+			],
+			"_usage": ["_usage_indicator"],
+			"_scalar": {
+				"_type": "_type_number",
+				"_decimals": 2,
+				"_valid-range": {
+					"_min-range-inclusive": 1.0,
+					"_max-range-inclusive": 5.0
+				}
 			}
 		}
 	}

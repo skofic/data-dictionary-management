@@ -266,7 +266,6 @@
 			"_options": ["_options_level-2"],
 			"_scalar": {
 				"_type": "_type_number_integer",
-				"_decimals": 0,
 				"_unit": "_unit_length_m",
 				"_valid-range": {
 					"_min-range-exclusive": 0,
@@ -334,10 +333,11 @@
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
-				"_unit-name": "Grade",
+				"_unit-name": "Gradient",
+				"_unit-symbol": "%",
 				"_valid-range": {
-					"_min-range-exclusive": 0.0,
-					"_max-range-exclusive": 400.0
+					"_min-range-exclusive": 0.00,
+					"_max-range-exclusive": 400.00
 				}
 			}
 		}
@@ -354,7 +354,7 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "GCU topography"},
 			"_definition": {"iso_639_3_eng": "Micro-topography assessed in the representative circular plot within the GCU"},
-			"_description": {"iso_639_3_eng": "Micro-topography is assessed at the scale of the representative circular plot with a radius of 15 m according to an index ranging from 1 to 3:\n\n1 = convex\n2 = neutral\n3 = concave\n\nThe index allows to determine whether there is more in- or outflow of water which has an influence on the soil available water capacity. For example, there is more water inflow if the topography is concave but there is more outflow if the topography is convex."},
+			"_description": {"iso_639_3_eng": "Micro-topography is assessed at the *scale* of the *representative circular plot* with a *radius of 15 m*. with the following three categories:\n\n-  `chr_MicroTopography_1`: convex\n-  `chr_MicroTopography_2`: neutral\n-  `chr_MicroTopography_3`: concave\n\nThe index allows to determine whether there is more in- or outflow of water which has an influence on the soil available water capacity. For example, there is more water inflow if the topography is concave but there is more outflow if the topography is convex."},
 			"_provider": [
 				"Florence Jean <florence.jean@inrae.fr>"
 			]
@@ -465,7 +465,7 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Trend (temporal dynamics) in GCU Max Land surface temperature"},
-			"_definition": {"iso_639_3_eng": "Temporal changes of the maximum canopy surface temperature in degree and per month."},
+			"_definition": {"iso_639_3_eng": "Temporal changes of the maximum canopy surface temperature in degree and per month"},
 			"_description": {"iso_639_3_eng": "The changes in land surface temperature per month are given in degrees and indicate whether the canopy tends to warm up or cool down over time. If the value is positive, the canopy tends to warm up. If the sign is negative, the canopy tends to cool down. The surface temperature of the tree canopy is estimated by a sensor on the MODIS satellite, which measures the thermal infrared emissions of the vegetation. The maximum canopy surface temperature can serve as an indicator of drought and heat stress in a forest, as the canopy heats up when the water supply to the trees is insufficient to cool the leaves."},
 			"_provider": [
 				"Nicolas Martin <nicolas.martin@inrae.fr>"
@@ -481,12 +481,8 @@
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
-				"_unit-name": "Degrees Centigrades/year",
-				"_unit-symbol": "°C/year",
-				"_valid-range": {
-					"_min-range-inclusive": -1.0,
-					"_max-range-inclusive": 1.0
-				}
+				"_unit-name": "Degrees Centigrades/month",
+				"_unit-symbol": "°C/month"
 			}
 		}
 	},
@@ -508,14 +504,17 @@
 			]
 		},
 		"_data": {
-			"_class": "_class_quantity",
+			"_class": "_class_quantity_averaged",
 			"_domain": ["chr_envi"],
+			"_usage": ["_usage_indicator"],
 			"_list": ["_list_templates"],
 			"_subject": "chr_subject_stand",
 			"_options": ["_options_level-1", "_options_graph_line"],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
+				"_unit-name": "-/month",
+				"_unit-symbol": "-/month",
 				"_valid-range": {
 					"_min-range-inclusive": -1.0,
 					"_max-range-inclusive": 1.0
@@ -598,7 +597,7 @@
 			]
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_envi"],
 			"_list": ["_list_templates"],
 			"_subject": "chr_subject_stand",
@@ -666,8 +665,8 @@
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
-				"_unit-name": "m^2 Leaf/m^2 soil",
-				"_unit-symbol": "m2 Leaf/m2 soil",
+				"_unit-name": "m^2 Leaf/m^2 Soil",
+				"_unit-symbol": "m2 Leaf/m2 Soil",
 				"_valid-range": {
 					"_min-range-inclusive": 0,
 					"_max-range-inclusive": 100
@@ -700,8 +699,8 @@
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
-				"_unit-name": "m^2 Leaf/m^2 soil/month",
-				"_unit-symbol": "m2 Leaf/m2 soil/month"
+				"_unit-name": "-/month",
+				"_unit-symbol": "-/month"
 			}
 		}
 	},
@@ -722,17 +721,18 @@
 			]
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_envi"],
 			"_list": ["_list_templates"],
 			"_subject": "chr_subject_stand",
+			"_usage": ["_usage_indicator"],
 			"_scalar": {
 				"_type": "_type_number",
-				"_unit-name": "m^2 Leaf/m^2 soil",
-				"_unit-symbol": "m2 Leaf/m2 soil",
+				"_decimals": 2,
+				"_unit-name": "m^2 Leaf/m^2 Soil",
+				"_unit-symbol": "m2 Leaf/m2 Soil",
 				"_valid-range": {
-					"_min-range-inclusive": 0,
-					"_max-range-inclusive": 100
+					"_min-range-inclusive": 0
 				}
 			}
 		}
@@ -763,8 +763,8 @@
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
-				"_unit-name": "m^2 Leaf/m^2 soil",
-				"_unit-symbol": "m2 Leaf/m2 soil",
+				"_unit-name": "m^2 Leaf/m^2 Soil",
+				"_unit-symbol": "m2 Leaf/m2 Soil",
 				"_valid-range": {
 					"_min-range-inclusive": 0
 				}
@@ -783,7 +783,7 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "Average GCU GPP"},
 			"_definition": {"iso_639_3_eng": "Monthly average of the Gross Primary Productivity"},
-			"_description": {"iso_639_3_eng": "Monthly average gross primary productivity (GPP) for the whole GCU, to establish the seasonal variation in photosynthesis. The GPP (kg of C/m2/day) corresponds to the amount of carbon that enters the ecosystem per unit surface and time. This value is derived from the sattelite MODIS at 500 m. resolution that provides the fraction of light intercepted by the canopy and a model of photosynthesis that converts the intercepted light into carbon assimilation. This makes it possible to define the amount of energy available for the plant to function (respiration) and the amount available for growth (net primary productivity). Beware that this value is known to be incorrect during drought stress periods."},
+			"_description": {"iso_639_3_eng": "Monthly average gross primary productivity (GPP) for the whole GCU, to establish the seasonal variation in photosynthesis. The GPP (kg of C/m2/day) corresponds to the amount of carbon that enters the ecosystem per unit surface and time. This value is derived from the sattelite MODIS at 1 km resolution that provides the fraction of light intercepted by the canopy and a model of photosynthesis that converts the intercepted light into carbon assimilation. This makes it possible to define the amount of energy available for the plant to function (respiration) and the amount available for growth (net primary productivity). Beware that this value is known to be incorrect during drought stress periods."},
 			"_provider": [
 				"JRC"
 			]
@@ -801,8 +801,7 @@
 				"_unit-name": "kg of C/m2/day",
 				"_unit-symbol": "kg of C/m2/day",
 				"_valid-range": {
-					"_min-range-inclusive": 0,
-					"_max-range-inclusive": 3000
+					"_min-range-inclusive": 0.0
 				}
 			}
 		}
@@ -1014,6 +1013,8 @@
 			"_options": ["_options_level-1", "_options_graph_line"],
 			"_scalar": {
 				"_type": "_type_number",
+				"_unit-name": "-/month",
+				"_unit-symbol": "-/month",
 				"_decimals": 2,
 				"_valid-range": {
 					"_min-range-inclusive": -1.0,
@@ -1086,7 +1087,7 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "Average GCU Biomass"},
 			"_definition": {"iso_639_3_eng": "Above-ground biomass af all species (tree, shrubs, annuals)"},
-			"_description": {"iso_639_3_eng": "Above ground biomass for the whole GCU, or for the current shape, to describe the state of the vegetation. The above ground biomasse (in t/ha) includes all of the vegetation present and in forest and makes it possible to quantitatively consider the importance of wood in forests."},
+			"_description": {"iso_639_3_eng": "Above ground biomass for the whole GCU, to describe the state of the vegetation. The above ground biomasse (in t/ha) includes all of the vegetation present and in forest and makes it possible to quantitatively consider the importance of wood in forests."},
 			"_provider": [
 				"JRC"
 			]
@@ -1208,7 +1209,7 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "GCU soil depth"},
 			"_definition": {"iso_639_3_eng": "Vertical distance from soil surface to the bottom of the excavated pit or of the soil auger core"},
-			"_description": {"iso_639_3_eng": "The soil depth is determined either by excavating a pit or by extracting a soil core with a soil auger to the depth at which rocks are found or the extraction of further soil is impossible.\n\nIt can be used together with soil texture to calculate the amount of water stored in the soil that can be utilised by trees."},
+			"_description": {"iso_639_3_eng": "The soil depth is determined either by excavating a pit or by extracting a soil core with a soil auger to the depth at which rocks are found or the extraction of further soil is impossible.\nIt can be used together with soil texture to calculate the amount of water stored in the soil that can be utilised by trees."},
 			"_provider": [
 				"Maurizio Mencuccini <m.mencuccini@creaf.uab.cat>"
 			]
@@ -1222,7 +1223,6 @@
 			"_options": ["_options_level-2"],
 			"_scalar": {
 				"_type": "_type_number_integer",
-				"_decimals": 0,
 				"_unit": "_unit_length_cm",
 				"_valid-range": {
 					"_min-range-exclusive": 0,
@@ -1258,8 +1258,8 @@
 				"_type": "_type_number",
 				"_decimals": 2,
 				"_valid-range": {
-					"_min-range-exclusive": 0.0,
-					"_max-range-exclusive": 1.0
+					"_min-range-exclusive": 0.00,
+					"_max-range-exclusive": 1.00
 				}
 			}
 		}

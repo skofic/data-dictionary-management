@@ -13,8 +13,10 @@
 
 
 ------
-Forest stand structure assessed (*by eye*) at the GCU level with an index ranging from 1 to 3:
+Forest stand structure assessed *by eye* at the GCU level:
 
-1. Tree crowns inside horizontal stratum.
-2. Tree crowns contained inside multiple horizontal strata.
-3. Stand composed of scattered tree crowns.
+-  `chr_ForestStructure_1`: tree crowns inside a single horizontal stratum
+
+-  `chr_ForestStructure_2`: tree crowns contained inside multiple horizontal strata
+
+-  `chr_ForestStructure_3`: stand composed of scattered tree crowns

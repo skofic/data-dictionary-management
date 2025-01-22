@@ -8,7 +8,7 @@
 
 
 ------
-###### Temporal changes of the maximum canopy surface temperature in degree and per month.
+###### Temporal changes of the maximum canopy surface temperature in degree and per month
 
 
 
