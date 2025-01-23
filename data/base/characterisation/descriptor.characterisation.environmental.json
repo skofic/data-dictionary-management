@@ -777,7 +777,7 @@
 			"_nid": "chr",
 			"_lid": "AvGrossPrimProd",
 			"_gid": "chr_AvGrossPrimProd",
-			"_pid": ["AvGpp"],
+			"_pid": ["AvGPP"],
 			"_aid": ["AvGrossPrimProd"]
 		},
 		"_info": {

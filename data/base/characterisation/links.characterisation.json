@@ -146,45 +146,12 @@
 	},
 	
 	{
-		"_from": "chr_trend_MaxLandSurfTemp",
-		"_to": "gcu_id_number",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	{
-		"_from": "chr_trend_MaxLandSurfTemp",
-		"_to": "std_date",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	
-	{
-		"_from": "chr_AvNormDiffVegIdx",
-		"_to": "geometry_hash",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	{
-		"_from": "chr_AvNormDiffVegIdx",
-		"_to": "std_date",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	
-	{
 		"_from": "chr_trend_AvNormDiffVegIdx",
 		"_to": "gcu_id_number",
 		"_predicate": "_predicate_requires_indicator"
 	},
 	{
 		"_from": "chr_trend_AvNormDiffVegIdx",
-		"_to": "std_date",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	
-	{
-		"_from": "chr_MaxNormDiffVegIdx",
-		"_to": "geometry_hash",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	{
-		"_from": "chr_MaxNormDiffVegIdx",
 		"_to": "std_date",
 		"_predicate": "_predicate_requires_indicator"
 	},
@@ -201,78 +168,12 @@
 	},
 	
 	{
-		"_from": "chr_AvLeafAreaIdx",
-		"_to": "geometry_hash",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	{
-		"_from": "chr_AvLeafAreaIdx",
-		"_to": "std_date",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	
-	{
-		"_from": "chr_trend_AvLeafAreaIdx",
-		"_to": "gcu_id_number",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	{
-		"_from": "chr_trend_AvLeafAreaIdx",
-		"_to": "std_date",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	
-	{
-		"_from": "chr_MaxLeafAreaIdx",
-		"_to": "geometry_hash",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	{
-		"_from": "chr_MaxLeafAreaIdx",
-		"_to": "std_date",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	
-	{
 		"_from": "chr_trend_MaxLeafAreaIdx",
 		"_to": "gcu_id_number",
 		"_predicate": "_predicate_requires_indicator"
 	},
 	{
 		"_from": "chr_trend_MaxLeafAreaIdx",
-		"_to": "std_date",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	
-	{
-		"_from": "chr_AvGrossPrimProd",
-		"_to": "geometry_hash",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	{
-		"_from": "chr_AvGrossPrimProd",
-		"_to": "std_date",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	
-	{
-		"_from": "chr_trend_AvGrossPrimProd",
-		"_to": "gcu_id_number",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	{
-		"_from": "chr_trend_AvGrossPrimProd",
-		"_to": "std_date",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	
-	{
-		"_from": "chr_SumGrossPrimProd",
-		"_to": "geometry_hash",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	{
-		"_from": "chr_SumGrossPrimProd",
 		"_to": "std_date",
 		"_predicate": "_predicate_requires_indicator"
 	},
@@ -300,56 +201,12 @@
 	},
 	
 	{
-		"_from": "chr_AvNormDiffWaterIdx",
-		"_to": "geometry_hash",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	{
-		"_from": "chr_AvNormDiffWaterIdx",
-		"_to": "std_date",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	
-	{
-		"_from": "chr_trend_AvNormDiffWaterIdx",
-		"_to": "gcu_id_number",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	{
-		"_from": "chr_trend_AvNormDiffWaterIdx",
-		"_to": "std_date",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	
-	{
 		"_from": "chr_trend_MaxNormDiffWaterIdx",
 		"_to": "gcu_id_number",
 		"_predicate": "_predicate_requires_indicator"
 	},
 	{
 		"_from": "chr_trend_MaxNormDiffWaterIdx",
-		"_to": "std_date",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	
-	{
-		"_from": "chr_AvBiomass",
-		"_to": "geometry_hash",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	{
-		"_from": "chr_AvBiomass",
-		"_to": "std_date",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	
-	{
-		"_from": "chr_trend_AvBiomass",
-		"_to": "gcu_id_number",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	{
-		"_from": "chr_trend_AvBiomass",
 		"_to": "std_date",
 		"_predicate": "_predicate_requires_indicator"
 	},
@@ -1157,86 +1014,6 @@
 	},
 	
 	{
-		"_from": "chr_FrostDamage",
-		"_to": "gcu_id_number",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	{
-		"_from": "chr_FrostDamage",
-		"_to": "species",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	{
-		"_from": "chr_FrostDamage",
-		"_to": "std_date",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	
-	{
-		"_from": "chr_DessiccationTolerance",
-		"_to": "gcu_id_number",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	{
-		"_from": "chr_DessiccationTolerance",
-		"_to": "species",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	{
-		"_from": "chr_DessiccationTolerance",
-		"_to": "std_date",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	
-	{
-		"_from": "chr_CarbonStarvation",
-		"_to": "gcu_id_number",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	{
-		"_from": "chr_CarbonStarvation",
-		"_to": "species",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	{
-		"_from": "chr_CarbonStarvation",
-		"_to": "std_date",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	
-	{
-		"_from": "chr_VulWildFire",
-		"_to": "gcu_id_number",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	{
-		"_from": "chr_VulWildFire",
-		"_to": "species",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	{
-		"_from": "chr_VulWildFire",
-		"_to": "std_date",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	
-	{
-		"_from": "chr_AvYearDroughtIdx",
-		"_to": "gcu_id_number",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	{
-		"_from": "chr_AvYearDroughtIdx",
-		"_to": "species",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	{
-		"_from": "chr_AvYearDroughtIdx",
-		"_to": "std_date",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	
-	{
 		"_from": "chr_Htot",
 		"_to": "chr_tree_code",
 		"_predicate": "_predicate_requires_indicator"
@@ -1445,17 +1222,6 @@
 	{
 		"_from": "chr_VarGres",
 		"_to": "chr_SampleSize",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	
-	{
-		"_from": "chr_Cbranch",
-		"_to": "chr_tree_code",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	{
-		"_from": "chr_Cbranch",
-		"_to": "std_date",
 		"_predicate": "_predicate_requires_indicator"
 	},
 	

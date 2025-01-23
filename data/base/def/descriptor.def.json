@@ -228,6 +228,7 @@
 		},
 		"_data": {
 			"_class": "_class_category",
+			"_subject": "chr_subject_target",
 			"_scalar": {
 				"_type": "_type_string"
 			}

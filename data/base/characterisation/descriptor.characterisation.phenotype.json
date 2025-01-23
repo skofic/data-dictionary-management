@@ -505,38 +505,6 @@
 	{
 		"_code": {
 			"_nid": "chr",
-			"_lid": "Cbranch",
-			"_gid": "chr_Cbranch",
-			"_pid": ["Cbranch"],
-			"_aid": ["Cbranch"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Hydraulic capacitance"},
-			"_definition": {"iso_639_3_eng": "The change in branch relative water content RWC per unit change in water potential."},
-			"_description": {"iso_639_3_eng": "When no water is available in the soil, a tree can survive thanks to its stored water (in bark, stem and leaves) until the next rain comes. Using stored water slows down the rate of dehydration in other important organs, such as leaves and meristems. Hydraulic capacitance is an index of drought avoidance. High values indicate high capacity to avoid the severe effects of drought. It is measured by weight loss of an entire branch of standard length under standard conditions in the laboratory. It is measured in the apical branches of each tree."},
-			"_notes": {"iso_639_3_eng": "This tree level property can also be averaged across trees to provide an equivalent GCU-level estimate (with associated variance)."},
-			"_provider": [
-				"Maurizio Mencuccini <m.mencuccini@creaf.uab.cat>"
-			]
-		},
-		"_data": {
-			"_class": "_class_quantity",
-			"_domain": ["chr_pheno"],
-			"_subject": "chr_subject_tree",
-			"_tag": ["chr_tag_vulnerability"],
-			"_scalar": {
-				"_type": "_type_number",
-				"_unit-name": "%RWC MPa-1",
-				"_valid-range": {
-					"_min-range-exclusive": 0.0,
-					"_max-range-exclusive": 50.0
-				}
-			}
-		}
-	},
-	{
-		"_code": {
-			"_nid": "chr",
 			"_lid": "AvCbranch",
 			"_gid": "chr_AvCbranch",
 			"_pid": ["Mean.Cbranch"],
@@ -1123,7 +1091,7 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "Dieback mean"},
 			"_definition": {"iso_639_3_eng": "The mean of the dieback index across all measured trees"},
-			"_description": {"iso_639_3_eng": "The mean of the values of the dieback index across 10 measured adult dominant or co-dominant trees sampled either inside or in the vicinity of the representative circular plot with a radius of 15 m. The dieback index corresponds to the state of health of the trees determined by assessing foliage loss according to four classes:\n\n- `chr_Dieback_0`: 0% to 25% of defoliation\n- `chr_Dieback_1`: 25% to 50% of defoliation\n- `chr_Dieback_2`: 50% to 75 % of defoliation\n- `chr_Dieback_3`: 75% to 99% of defoliation\n\nThe value 100% corresponds to a dead tree."}
+			"_description": {"iso_639_3_eng": "The mean of the values of the dieback index across 10 measured adult dominant or co-dominant trees sampled either inside or in the vicinity of the representative circular plot with a radius of 15 m. The dieback index corresponds to the state of health of the trees determined by assessing foliage loss according to four classes:\n\n- `0`: 0% to 25% of defoliation\n- `1`: 25% to 50% of defoliation\n- `2`: 50% to 75 % of defoliation\n- `3`: 75% to 99% of defoliation\n\nThe value 100% corresponds to a dead tree."}
 		},
 		"_data": {
 			"_class": "_class_quantity",
@@ -1134,8 +1102,12 @@
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1"],
 			"_scalar": {
-				"_type": "_type_string_enum",
-				"_kind": ["chr_Dieback"]
+				"_type": "_type_number",
+				"_decimals": 2,
+				"_valid-range": {
+					"_min-range-inclusive": 0.0,
+					"_max-range-inclusive": 3.0
+				}
 			}
 		}
 	},
@@ -1150,7 +1122,7 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "Dieback variance"},
 			"_definition": {"iso_639_3_eng": "The variance of the dieback index across all measured trees"},
-			"_description": {"iso_639_3_eng": "The variance of the values of the dieback index across 10 measured adult dominant or co-dominant trees sampled either inside or in the vicinity of the representative circular plot with a radius of 15 m. The dieback index corresponds to the state of health of the trees determined by assessing foliage loss according to four classes:\n\n- `chr_Dieback_0`: 0% to 25% of defoliation\n- `chr_Dieback_1`: 25% to 50% of defoliation\n- `chr_Dieback_2`: 50% to 75 % of defoliation\n- `chr_Dieback_3`: 75% to 99% of defoliation\n\nThe value 100% corresponds to a dead tree."}
+			"_description": {"iso_639_3_eng": "The variance of the values of the dieback index across 10 measured adult dominant or co-dominant trees sampled either inside or in the vicinity of the representative circular plot with a radius of 15 m. The dieback index corresponds to the state of health of the trees determined by assessing foliage loss according to four classes:\n\n- `0`: 0% to 25% of defoliation\n- `1`: 25% to 50% of defoliation\n- `2`: 50% to 75 % of defoliation\n- `3`: 75% to 99% of defoliation\n\nThe value 100% corresponds to a dead tree."}
 		},
 		"_data": {
 			"_class": "_class_quantity",
@@ -1161,8 +1133,12 @@
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1"],
 			"_scalar": {
-				"_type": "_type_string_enum",
-				"_kind": ["chr_Dieback"]
+				"_type": "_type_number",
+				"_decimals": 2,
+				"_valid-range": {
+					"_min-range-inclusive": 0.0,
+					"_max-range-inclusive": 3.0
+				}
 			}
 		}
 	},
