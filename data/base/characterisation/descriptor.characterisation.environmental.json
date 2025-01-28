@@ -799,7 +799,7 @@
 				"_type": "_type_number",
 				"_decimals": 2,
 				"_unit-name": "kg of C/m2/day",
-				"_unit-symbol": "kg of C/m2/day",
+				"_unit-symbol": "kg of C/m^2/day",
 				"_valid-range": {
 					"_min-range-inclusive": 0.0
 				}
