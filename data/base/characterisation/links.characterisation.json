@@ -1,16 +1,5 @@
 [
 	{
-		"_from": "chr_tree_code",
-		"_to": "gcu_id_number",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	{
-		"_from": "chr_tree_code",
-		"_to": "species",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	
-	{
 		"_from": "std_dataset",
 		"_to": "std_project",
 		"_predicate": "_predicate_requires_indicator"
@@ -304,11 +293,6 @@
 		"_predicate": "_predicate_requires_indicator"
 	},
 	
-	{
-		"_from": "chr_CircBreastHeight",
-		"_to": "chr_tree_code",
-		"_predicate": "_predicate_requires_indicator"
-	},
 	{
 		"_from": "chr_CircBreastHeight",
 		"_to": "std_date",
@@ -1015,11 +999,6 @@
 	
 	{
 		"_from": "chr_Htot",
-		"_to": "chr_tree_code",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	{
-		"_from": "chr_Htot",
 		"_to": "std_date",
 		"_predicate": "_predicate_requires_indicator"
 	},
@@ -1066,11 +1045,6 @@
 		"_predicate": "_predicate_requires_indicator"
 	},
 	
-	{
-		"_from": "chr_TurgorLossPoint",
-		"_to": "chr_tree_code",
-		"_predicate": "_predicate_requires_indicator"
-	},
 	{
 		"_from": "chr_TurgorLossPoint",
 		"_to": "std_date",
@@ -1121,11 +1095,6 @@
 	
 	{
 		"_from": "chr_P50",
-		"_to": "chr_tree_code",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	{
-		"_from": "chr_P50",
 		"_to": "std_date",
 		"_predicate": "_predicate_requires_indicator"
 	},
@@ -1172,11 +1141,6 @@
 		"_predicate": "_predicate_requires_indicator"
 	},
 	
-	{
-		"_from": "chr_Gres",
-		"_to": "chr_tree_code",
-		"_predicate": "_predicate_requires_indicator"
-	},
 	{
 		"_from": "chr_Gres",
 		"_to": "std_date",
@@ -1269,11 +1233,6 @@
 	
 	{
 		"_from": "chr_HuberValue",
-		"_to": "chr_tree_code",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	{
-		"_from": "chr_HuberValue",
 		"_to": "std_date",
 		"_predicate": "_predicate_requires_indicator"
 	},
@@ -1322,31 +1281,16 @@
 	
 	{
 		"_from": "chr_CrownLength",
-		"_to": "chr_tree_code",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	{
-		"_from": "chr_CrownLength",
 		"_to": "std_date",
 		"_predicate": "_predicate_requires_indicator"
 	},
 	
 	{
 		"_from": "chr_BasalCrownHeight",
-		"_to": "chr_tree_code",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	{
-		"_from": "chr_BasalCrownHeight",
 		"_to": "std_date",
 		"_predicate": "_predicate_requires_indicator"
 	},
 	
-	{
-		"_from": "chr_SpecLeafArea",
-		"_to": "chr_tree_code",
-		"_predicate": "_predicate_requires_indicator"
-	},
 	{
 		"_from": "chr_SpecLeafArea",
 		"_to": "std_date",
@@ -1397,11 +1341,6 @@
 	
 	{
 		"_from": "chr_WoodDensity",
-		"_to": "chr_tree_code",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	{
-		"_from": "chr_WoodDensity",
 		"_to": "std_date",
 		"_predicate": "_predicate_requires_indicator"
 	},
@@ -1449,10 +1388,6 @@
 	},
 	
 	{
-		"_from": "chr_Dieback",
-		"_to": "chr_tree_code",
-		"_predicate": "_predicate_requires_indicator"
-	},
 	{
 		"_from": "chr_Dieback",
 		"_to": "std_date",
@@ -1501,11 +1436,6 @@
 		"_predicate": "_predicate_requires_indicator"
 	},
 	
-	{
-		"_from": "chr_SapWoodAreaTrunk",
-		"_to": "chr_tree_code",
-		"_predicate": "_predicate_requires_indicator"
-	},
 	{
 		"_from": "chr_SapWoodAreaTrunk",
 		"_to": "std_date",
@@ -1604,11 +1534,6 @@
 	
 	{
 		"_from": "chr_CrownHeight",
-		"_to": "chr_tree_code",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	{
-		"_from": "chr_CrownHeight",
 		"_to": "species",
 		"_predicate": "_predicate_requires_indicator"
 	},
@@ -1618,11 +1543,6 @@
 		"_predicate": "_predicate_requires_indicator"
 	},
 	
-	{
-		"_from": "chr_CrownArea",
-		"_to": "chr_tree_code",
-		"_predicate": "_predicate_requires_indicator"
-	},
 	{
 		"_from": "chr_CrownArea",
 		"_to": "species",
@@ -1639,11 +1559,6 @@
 		"_predicate": "_predicate_requires_indicator"
 	},
 	
-	{
-		"_from": "chr_CoreYear",
-		"_to": "chr_tree_code",
-		"_predicate": "_predicate_requires_indicator"
-	},
 	{
 		"_from": "chr_CoreYear",
 		"_to": "species",
