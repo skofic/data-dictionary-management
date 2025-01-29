@@ -1388,7 +1388,6 @@
 	},
 	
 	{
-	{
 		"_from": "chr_Dieback",
 		"_to": "std_date",
 		"_predicate": "_predicate_requires_indicator"
