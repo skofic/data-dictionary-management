@@ -567,13 +567,13 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "Presence of dead trees"},
 			"_definition": {"iso_639_3_eng": "Presence of dead trees in the GCU"},
-			"_description": {"iso_639_3_eng": "Presence of *dead trees* inside and around the circular plot with a *radius* of *15 m*., which is representative of the GCU, where `chr_DeadTrees_0` means that there are no dead trees and `chr_DeadTrees_1` that there are dead trees for the target species."},
+			"_description": {"iso_639_3_eng": "Presence of *dead trees* inside and around the circular plot with a *radius* of *15 m*., which is representative of the GCU, where `0` means that there are no dead trees and `1` that there are dead trees for the target species."},
 			"_provider": [
 				"Florence Jeanflorence.jean@inrae.fr"
 			]
 		},
 		"_data": {
-			"_class": "_class_category",
+			"_class": "_class_quantity",
 			"_domain": ["chr_fore"],
 			"_list": ["_list_templates"],
 			"_subject": "chr_subject_target",
@@ -581,8 +581,12 @@
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1"],
 			"_scalar": {
-				"_type": "_type_string_enum",
-				"_kind": ["chr_DeadTrees"]
+				"_type": "_type_number",
+				"_decimals": 2,
+				"_valid-range": {
+					"_min-range-inclusive": 0.0,
+					"_max-range-inclusive": 1.0
+				}
 			}
 		}
 	},
