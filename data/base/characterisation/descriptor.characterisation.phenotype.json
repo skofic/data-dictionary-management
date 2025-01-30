@@ -662,9 +662,9 @@
 			"_subject": "chr_subject_target",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
-			"_decimals": 2,
 			"_scalar": {
 				"_type": "_type_number",
+				"_decimals": 2,
 				"_unit-name": "cm2 cm-2",
 				"_valid-range": {
 					"_min-range-inclusive": 0
