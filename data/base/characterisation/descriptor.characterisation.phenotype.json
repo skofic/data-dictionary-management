@@ -596,10 +596,11 @@
 			"_tag": ["chr_tag_distinct-pop"],
 			"_scalar": {
 				"_type": "_type_number",
-				"_unit-name": "cm2 cm-2",
+				"_decimals": 2,
+				"_unit-name": "cm2/m2",
+				"_unit-symbol": "cm^2/m^2",
 				"_valid-range": {
-					"_min-range-exclusive": 0.000001,
-					"_max-range-exclusive": 0.01
+					"_min-range-inclusive": 0.00
 				}
 			}
 		}
@@ -631,8 +632,8 @@
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
-				"_unit-name": "cm2 cm-2",
-				"_unit-symbol": "cm2 cm-2",
+				"_unit-name": "cm2/m2",
+				"_unit-symbol": "cm^2/m^2",
 				"_valid-range": {
 					"_min-range-inclusive": 0.00
 				}
@@ -665,9 +666,10 @@
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
-				"_unit-name": "cm2 cm-2",
+				"_unit-name": "cm2/m2",
+				"_unit-symbol": "cm^2/m^2",
 				"_valid-range": {
-					"_min-range-inclusive": 0
+					"_min-range-inclusive": 0.00
 				}
 			}
 		}
@@ -826,10 +828,11 @@
 			"_tag": ["chr_tag_distinct-pop"],
 			"_scalar": {
 				"_type": "_type_number",
-				"_unit-name": "mm2 mg-1",
+				"_decimals": 2,
+				"_unit-name": "cm2/kg",
+				"_unit-symbol": "cm^2/kg",
 				"_valid-range": {
-					"_min-range-exclusive": 0.0,
-					"_max-range-exclusive": 50.0
+					"_min-range-inclusive": 0.00
 				}
 			}
 		}
@@ -861,8 +864,8 @@
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
-				"_unit-name": "cm2 g-1",
-				"_unit-symbol": "cm2 g-1",
+				"_unit-name": "cm2/kg",
+				"_unit-symbol": "cm^2/kg",
 				"_valid-range": {
 					"_min-range-inclusive": 0.00
 				}
@@ -896,8 +899,8 @@
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
-				"_unit-name": "cm2 g-1",
-				"_unit-symbol": "cm2 g-1",
+				"_unit-name": "cm2/kg",
+				"_unit-symbol": "cm^2/kg",
 				"_valid-range": {
 					"_min-range-inclusive": 0.00
 				}

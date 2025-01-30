@@ -278,33 +278,6 @@
 	
 	{
 		"_code": {
-			"_nid": "chr_DeadTrees",
-			"_lid": "0",
-			"_gid": "chr_DeadTrees_0",
-			"_aid": ["0"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "no"},
-			"_definition": {"iso_639_3_eng": "No dead trees"},
-			"_description": {"iso_639_3_eng": "See the WP2 protocol for more information."}
-		}
-	},
-	{
-		"_code": {
-			"_nid": "chr_DeadTrees",
-			"_lid": "1",
-			"_gid": "chr_DeadTrees_1",
-			"_aid": ["1"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "yes"},
-			"_definition": {"iso_639_3_eng": "Presence of dead trees"},
-			"_description": {"iso_639_3_eng": "See the WP2 protocol for more information."}
-		}
-	},
-	
-	{
-		"_code": {
 			"_nid": "chr_NaturalRegeneration",
 			"_lid": "0",
 			"_gid": "chr_NaturalRegeneration_0",

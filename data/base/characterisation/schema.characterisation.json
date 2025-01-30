@@ -145,19 +145,6 @@
 	},
 	
 	{
-		"_from": "chr_DeadTrees_0",
-		"_to": "chr_DeadTrees",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["chr_DeadTrees"]
-	},
-	{
-		"_from": "chr_DeadTrees_1",
-		"_to": "chr_DeadTrees",
-		"_predicate": "_predicate_enum-of",
-		"_path": ["chr_DeadTrees"]
-	},
-	
-	{
 		"_from": "chr_NaturalRegeneration_0",
 		"_to": "chr_NaturalRegeneration",
 		"_predicate": "_predicate_enum-of",
