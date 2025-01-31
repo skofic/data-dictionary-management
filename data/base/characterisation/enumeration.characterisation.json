@@ -278,55 +278,6 @@
 	
 	{
 		"_code": {
-			"_nid": "chr_NaturalRegeneration",
-			"_lid": "0",
-			"_gid": "chr_NaturalRegeneration_0",
-			"_aid": ["0"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Absence"},
-			"_description": {"iso_639_3_eng": "See the WP2 protocol for more information."}
-		}
-	},
-	{
-		"_code": {
-			"_nid": "chr_NaturalRegeneration",
-			"_lid": "1",
-			"_gid": "chr_NaturalRegeneration_1",
-			"_aid": ["1"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Scattered"},
-			"_description": {"iso_639_3_eng": "See the WP2 protocol for more information."}
-		}
-	},
-	{
-		"_code": {
-			"_nid": "chr_NaturalRegeneration",
-			"_lid": "2",
-			"_gid": "chr_NaturalRegeneration_2",
-			"_aid": ["2"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Groups"},
-			"_description": {"iso_639_3_eng": "See the WP2 protocol for more information."}
-		}
-	},
-	{
-		"_code": {
-			"_nid": "chr_NaturalRegeneration",
-			"_lid": "3",
-			"_gid": "chr_NaturalRegeneration_3",
-			"_aid": ["3"]
-		},
-		"_info": {
-			"_title": {"iso_639_3_eng": "Abundant"},
-			"_description": {"iso_639_3_eng": "See the WP2 protocol for more information."}
-		}
-	},
-	
-	{
-		"_code": {
 			"_nid": "chr_Dieback",
 			"_lid": "0",
 			"_gid": "chr_Dieback_0",
