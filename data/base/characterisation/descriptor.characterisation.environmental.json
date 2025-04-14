@@ -465,7 +465,7 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Trend (temporal dynamics) in GCU Max Land surface temperature"},
-			"_definition": {"iso_639_3_eng": "Temporal changes of the maximum canopy surface temperature in degree and per month"},
+			"_definition": {"iso_639_3_eng": "Temporal changes of the maximum canopy surface temperature in degree and per month."},
 			"_description": {"iso_639_3_eng": "The changes in land surface temperature per month are given in degrees and indicate whether the canopy tends to warm up or cool down over time. If the value is positive, the canopy tends to warm up. If the sign is negative, the canopy tends to cool down. The surface temperature of the tree canopy is estimated by a sensor on the MODIS satellite, which measures the thermal infrared emissions of the vegetation. The maximum canopy surface temperature can serve as an indicator of drought and heat stress in a forest, as the canopy heats up when the water supply to the trees is insufficient to cool the leaves."},
 			"_provider": [
 				"Nicolas Martin <nicolas.martin@inrae.fr>"
@@ -478,6 +478,7 @@
 			"_subject": "chr_subject_stand",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
+			"_class_quantity_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
@@ -498,7 +499,7 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "Trend (temporal dynamics) in GCU's NDVI"},
 			"_definition": {"iso_639_3_eng": "Temporal trends of the Normalized Difference Vegetation Index"},
-			"_description": {"iso_639_3_eng": "Temporal dynamics of the normalised difference vegetation index (NDVI) across the GCU,  to find out whether the health of the population is declining, remaining stable or increasing. The NDVI is a widely used metric based on remote sensing and is calculated as the normalised difference of spectrometric reflectance measurements in two specific bands: one in which the leaf absorbs light (red) and one in which the leaf absorbs little light (near infrared). The spectrometric data comes from MODIS satellites. The NDVI value varies between -1 (for water) and 1 for dense vegetation. A value close to 0 indicates rocks or poorly vegetated areas."},
+			"_description": {"iso_639_3_eng": "Linear trend in temporal dynamics of the normalised difference vegetation index (NDVI) across the GCU,  to find out whether the health of the population is declining, remaining stable or increasing. The NDVI is a widely used metric based on remote sensing and is calculated as the normalised difference of spectrometric reflectance measurements in two specific bands: one in which the leaf absorbs light (red) and one in which the leaf absorbs little light (near infrared). The spectrometric data comes from MODIS satellites. The NDVI value varies between -1 (for water) and 1 for dense vegetation. A value close to 0 indicates rocks or poorly vegetated areas."},
 			"_provider": [
 				"Nicolas Martin <nicolas.martin@inrae.fr>"
 			]
@@ -510,6 +511,7 @@
 			"_list": ["_list_templates"],
 			"_subject": "chr_subject_stand",
 			"_options": ["_options_level-1", "_options_graph_line"],
+			"_class_quantity_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
@@ -545,6 +547,7 @@
 			"_subject": "chr_subject_stand",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1", "_options_graph_line"],
+			"_class_quantity_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
@@ -589,7 +592,7 @@
 			"_aid": ["MaxNormDiffVegIdx"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Max GCU  NDVI"},
+			"_title": {"iso_639_3_eng": "Max GCU NDVI"},
 			"_definition": {"iso_639_3_eng": "Maximum of the Normalized Difference Vegetation Index"},
 			"_description": {"iso_639_3_eng": "Monthly maximum value for the whole GCU, to quantify the seasonal variation in the health and density of the vegetation. The normalised difference vegetation index (NDVI) is a widely used metric based on remote sensing and is calculated as the normalised difference of spectrometric reflectance measurements in two specific bands: one in which the leaf absorbs light (red) and one in which the leaf absorbs little light (near infrared). The spectrometric data comes from MODIS satellites. The NDVI value varies between -1 (for water) and 1 for dense vegetation. A value close to 0 indicates rocks or poorly vegetated areas."},
 			"_provider": [
@@ -603,6 +606,7 @@
 			"_subject": "chr_subject_stand",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1", "_options_graph_line"],
+			"_class_quantity_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
@@ -662,14 +666,14 @@
 			"_subject": "chr_subject_stand",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1"],
+			"_class_quantity_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
 				"_unit-name": "m^2 Leaf/m^2 Soil",
 				"_unit-symbol": "m2 Leaf/m2 Soil",
 				"_valid-range": {
-					"_min-range-inclusive": 0,
-					"_max-range-inclusive": 100
+					"_min-range-inclusive": 0
 				}
 			}
 		}
@@ -696,6 +700,7 @@
 			"_subject": "chr_subject_stand",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1"],
+			"_class_quantity_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
@@ -726,6 +731,8 @@
 			"_list": ["_list_templates"],
 			"_subject": "chr_subject_stand",
 			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-1"],
+			"_class_quantity_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
@@ -795,6 +802,7 @@
 			"_subject": "chr_subject_stand",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1", "_options_graph_bar"],
+			"_class_quantity_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
@@ -817,7 +825,7 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "Trend (temporal dynamics) in GCU's GPP"},
 			"_definition": {"iso_639_3_eng": "Temporal trends of the  Gross Primary Productivity"},
-			"_description": {"iso_639_3_eng": "Average variation of gross primary productivity (GPP)in time for the whole GCU, to establish the trend of the fixation of carbon trought the photosynthesis, which is a key indicator of whether or not the forest is growing and storing carbon. The Gross Primary Productivity (kg of C/m2/day) corresponds to the amount of carbon that enters the ecosystem per unit surface and time. This value is derived from the sattelite MODIS at 1 km resolution that provides the fraction of light intercepted by the canopy and a model of photosynthesis that converts the intercepted light in to a carbon assimilation. This makes it possible to define the amount of energy available for the plant to function (respiration) and the amount available for growth (net primary productivity)."},
+			"_description": {"iso_639_3_eng": "Linear temporal trend in gross primary productivity (GPP) for the whole GCU, which is a key indicator of whether or not the forest is growing and storing carbon. The Gross Primary Productivity (kg of C/m2/day) corresponds to the amount of carbon produced in the ecosystem per unit surface and time. This value is derived from the satellite MODIS at 1 km resolution that provides the fraction of light intercepted by the canopy and a model of photosynthesis that converts the intercepted light in to a carbon assimilation. This makes it possible to define the amount of energy available for the plant to function (respiration) and the amount available for growth (net primary productivity)."},
 			"_provider": [
 				"Nicolas Martin <nicolas.martin@inrae.fr>"
 			]
@@ -829,6 +837,7 @@
 			"_subject": "chr_subject_stand",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1", "_options_graph_bar"],
+			"_class_quantity_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
@@ -860,13 +869,14 @@
 			"_subject": "chr_subject_stand",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1", "_options_graph_bar"],
+			"_class_quantity_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
 				"_unit-name": "kg of C/m2/year",
 				"_unit-symbol": "kg of C/m2/year",
 				"_valid-range": {
-					"_min-range-inclusive": 0
+					"_min-range-inclusive": 0.0
 				}
 			}
 		}
@@ -965,7 +975,7 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Average GCU NDWI"},
-			"_definition": {"iso_639_3_eng": "Average Normalized Difference Water Index."},
+			"_definition": {"iso_639_3_eng": "Average Normalized Difference Water Index"},
 			"_description": {"iso_639_3_eng": "Monthly average of normalised difference water index (NDWI) for the whole GCU, to observe seasonal variations in water stress through plant water content. NDWI provides an effective measure of moisture content. This index is calculated on the basis of the GREEN-NIR combination (visible green and near infrared spectrum) and enables the detection of water pools as well as subtle changes in the water content of vegetation. These values (from MODIS at 1 km resolution) range from -1 (no water) to 1 (water surface), and their variation is a very good indicator of plant water stress."},
 			"_provider": [
 				"JRC"
@@ -978,6 +988,7 @@
 			"_subject": "chr_subject_stand",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1", "_options_graph_line"],
+			"_class_quantity_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
@@ -998,8 +1009,8 @@
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Trend (temporal dynamics) in GCU's NDWI"},
-			"_definition": {"iso_639_3_eng": "Temporal trends of the remotely sensed Normalized Difference Water Index."},
-			"_description": {"iso_639_3_eng": "Global variation in normalized difference water index (NDWI) for the whole GCU, to observe long-terme trends of vegetation water content. NDWI provides an effective measure of moisture content. This index is calculated on the basis of the GREEN-NIR combination (visible green and near infrared spectrum) and enables the detection of water pools as well as subtle changes in the water content of vegetation. These values (from MODIS at 1km resolution) range from -1 (no water) to 1 (water surface), and their variation is a very good indicator of plant water stress."},
+			"_definition": {"iso_639_3_eng": "Temporal trends of the remotely sensed Normalized Difference Water Index"},
+			"_description": {"iso_639_3_eng": "Linear temporal trend in normalized difference water index (NDWI) for the whole GCU, to observe long-term trends of vegetation water content. NDWI provides an effective measure of moisture content. This index is calculated on the basis of the GREEN-NIR combination (visible green and near infrared spectrum) and enables the detection of water bodies as well as subtle changes in the water content of vegetation. These values (from MODIS at 1km resolution) range from -1 (no water) to 1 (water surface), and the temporal trend is an indicator of long-term changes in canopy water status."},
 			"_provider": [
 				"Nicolas Martin <nicolas.martin@inrae.fr>"
 			]
@@ -1011,6 +1022,7 @@
 			"_subject": "chr_subject_stand",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1", "_options_graph_line"],
+			"_class_quantity_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit-name": "-/month",
@@ -1099,6 +1111,7 @@
 			"_subject": "chr_subject_stand",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
+			"_class_quantity_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
@@ -1157,11 +1170,12 @@
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["chr_envi"],
+			"_domain": ["chr_fore"],
 			"_list": ["_list_templates"],
 			"_subject": "chr_subject_stand",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
+			"_class_quantity_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,

@@ -202,6 +202,7 @@
 			"_subject": "chr_subject_target",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
+			"_class_quantity_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number_integer",
 				"_unit": "_unit_length_cm",
@@ -362,20 +363,21 @@
 			"_aid": ["AvCrownHeight"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Crown length mean"},
-			"_definition": {"iso_639_3_eng": "The mean of the crown lenght across all measured trees"},
-			"_description": {"iso_639_3_eng": "The mean of the values of  the crown lenght across 10 measured adult dominant or co-dominant trees sampled either inside or in the vicinity of the representative circular plot with a radius of 15 m. The crown lenght is calculated from the [total height] value subtracted from the [Basal crown height] value. It corresponds to the healthy and functional green crown envelope lenght."},
+			"_title": {"iso_639_3_eng": "Basal crown height mean"},
+			"_definition": {"iso_639_3_eng": "The mean of the vertical distance from ground level to the lowermost point on the main stem where the tree crown starts across all measured trees"},
+			"_description": {"iso_639_3_eng": "The mean of the values of height of the base of the tree crown across 10 individual adult dominant/co-dominant trees sampled either inside or in the vicinity of the circular plot with a radius of 15 m, which is representative of the GCU.\nThe tree crown corresponds to the healthy and functional green crown envelope. Different criteria have to be taken into account: sanitary and continuity between the lower and upper branches. So that, the base of the tree crown could correspond to the first living branch or could start upper of the first living branch. "},
 			"_provider": [
 				"Maurizio Mencuccini <m.mencuccini@creaf.uab.cat>"
 			]
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["chr_pheno"],
+			"_domain": ["chr_fore"],
 			"_list": ["_list_templates"],
 			"_subject": "chr_subject_target",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
+			"_class_quantity_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 1,
@@ -396,21 +398,21 @@
 			"_aid": ["VarCrownHeight"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Crown length variance"},
-			"_definition": {"iso_639_3_eng": "The variance of the crown lenght across all measured trees"},
-			"_description": {"iso_639_3_eng": "The variance of the values of  the crown lenght across 10 measured adult dominant or co-dominant trees sampled either inside or in the vicinity of the representative circular plot with a radius of 15 m. The crown lenght is calculated from the [total height] value subtracted from the [Basal crown height] value. It corresponds to the healthy and functional green crown envelope lenght."},
+			"_title": {"iso_639_3_eng": "Basal crown height variance"},
+			"_definition": {"iso_639_3_eng": "The variance of the vertical distance from ground level to the lowermost point on the main stem where the tree crown starts across all measured trees"},
+			"_description": {"iso_639_3_eng": "The variance of the values of height of the base of the tree crown across 10 individual adult dominant/co-dominant trees sampled either inside or in the vicinity of the circular plot with a radius of 15 m, which is representative of the GCU.\nThe tree crown corresponds to the healthy and functional green crown envelope. Different criteria have to be taken into account: sanitary and continuity between the lower and upper branches. So that, the base of the tree crown could correspond to the first living branch or could start upper of the first living branch. "},
 			"_provider": [
 				"Maurizio Mencuccini <m.mencuccini@creaf.uab.cat>"
 			]
 		},
 		"_data": {
 			"_class": "_class_quantity_averaged",
-			"_domain": ["chr_pheno"],
+			"_domain": ["chr_fore"],
 			"_list": ["_list_templates"],
 			"_subject": "chr_subject_target",
-			"_tag": ["chr_tag_diversity"],
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
+			"_class_quantity_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 1,
