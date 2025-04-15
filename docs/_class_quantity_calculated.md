@@ -15,7 +15,7 @@
 ------
 This term represents a *quantity*, a *discrete* or *continuous* value that has been *obtained* by *processing* a set of *other values*.
 
-This specific data type identifies a coefficient or index, not a [single](_class_quantity) data point, or an [average](_class_quantity_averaged) or mean of data points.
+This specific data type identifies a coefficient or index, not a [single](_class_quantity) data point, or an average or mean of data points.
 
 
 

@@ -264,6 +264,7 @@
 			"_subject": "chr_subject_GCU",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
+			"_class_quantity_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number_integer",
 				"_unit": "_unit_length_m",
@@ -296,11 +297,12 @@
 			"_subject": "chr_subject_GCU",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
+			"_class_quantity_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
-				"_unit-name": "degrees DMS",
-				"_unit-symbol": "DMS",
+				"_unit-name": "grades",
+				"_unit-symbol": "°",
 				"_valid-range": {
 					"_min-range-exclusive": 0.0,
 					"_max-range-exclusive": 90.0
@@ -330,14 +332,15 @@
 			"_subject": "chr_subject_GCU",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
+			"_class_quantity_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
 				"_unit-name": "Gradient",
 				"_unit-symbol": "%",
 				"_valid-range": {
-					"_min-range-exclusive": 0.00,
-					"_max-range-exclusive": 400.00
+					"_min-range-inclusive": 0.0,
+					"_max-range-inclusive": 400.0
 				}
 			}
 		}
@@ -1235,12 +1238,13 @@
 			"_subject": "chr_subject_GCU",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
+			"_class_quantity_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number_integer",
 				"_unit": "_unit_length_cm",
 				"_valid-range": {
-					"_min-range-exclusive": 0,
-					"_max-range-exclusive": 200
+					"_min-range-inclusive": 0,
+					"_max-range-inclusive": 200
 				}
 			}
 		}
@@ -1268,12 +1272,13 @@
 			"_subject": "chr_subject_GCU",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
+			"_class_quantity_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
 				"_valid-range": {
 					"_min-range-exclusive": 0.00,
-					"_max-range-exclusive": 1.00
+					"_max-range-exclusive": 100.00
 				}
 			}
 		}
@@ -1367,8 +1372,8 @@
 			"_nid": "chr",
 			"_lid": "SoilMethod",
 			"_gid": "chr_SoilMethod",
-			"_pid": ["coarse_element"],
-			"_aid": ["method"]
+			"_pid": ["method"],
+			"_aid": ["SoilMethod"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Method used for the soil description : pit or auger"},
@@ -1381,6 +1386,112 @@
 			"_scalar": {
 				"_type": "_type_string_enum",
 				"_kind": ["chr_SoilMethod"]
+			}
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "chr",
+			"_lid": "TruePAI",
+			"_gid": "chr_TruePAI",
+			"_pid": ["TruePAI"],
+			"_aid": ["TruePAI"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Overal True PAI index"},
+			"_definition": {"iso_639_3_eng": "The projected area of green leaves, needles and some branches or trunk per unit horizontal ground surface area"},
+			"_description": {"iso_639_3_eng": "The true plant area index value (PAI) is assessed at the position corresponding to and in between 10 measured adult dominant or co-dominant trees sampled either inside or in the vicinity of the representative circular plot with a radius of 15 m. Its is assessed using a digital camera (hemispherical pictures). It includes all tree species present in the plot. The effect of foliage agregation is removed."},
+			"_provider": [
+				"Florence Jeanflorence.jean@inrae.fr"
+			]
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["chr_envi"],
+			"_list": ["_list_templates"],
+			"_subject": "chr_subject_GCU",
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-2"],
+			"_class_quantity_thresholds": [],
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit-name": "m2 of plant/m2 soil",
+				"_unit-symbol": "m^2 of plant/m^2 soil",
+				"_decimals": 2,
+				"_valid-range": {
+					"_min-range-inclusive": 0.00,
+					"_max-range-inclusive": 20.00
+				}
+			}
+		}
+	},
+	
+	{
+		"_code": {
+			"_nid": "chr",
+			"_lid": "LatPlotMeasured",
+			"_gid": "chr_LatPlotMeasured",
+			"_pid": ["LatPlotMeasured"],
+			"_aid": ["LatPlotMeasured"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Measured latitude of the plot"},
+			"_definition": {"iso_639_3_eng": "Latitude measured in the field by projects (not NFPs)"},
+			"_description": {"iso_639_3_eng": "Latitude measured in the circular plot within the GCU"},
+			"_provider": [
+				"Florence Jeanflorence.jean@inrae.fr"
+			]
+		},
+		"_data": {
+			"_domain": ["chr_envi"],
+			"_list": ["_list_templates"],
+			"_subject": "chr_subject_GCU",
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-2"],
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit-name": "latitude",
+				"_unit-symbol": "decimal degrees",
+				"_decimals": 4,
+				"_valid-range": {
+					"_min-range-inclusive": -90.0,
+					"_max-range-inclusive": 90.0
+				}
+			}
+		}
+	},
+	{
+		"_code": {
+			"_nid": "chr",
+			"_lid": "LonPlotMeasured",
+			"_gid": "chr_LonPlotMeasured",
+			"_pid": ["LongPlotMeasured"],
+			"_aid": ["LongPlotMeasured"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Measured longitude of the plot"},
+			"_definition": {"iso_639_3_eng": "Longitude measured in the field by projects (not NFPs)"},
+			"_description": {"iso_639_3_eng": "Longitude measured in the circular plot within the GCU"},
+			"_provider": [
+				"Florence Jeanflorence.jean@inrae.fr"
+			]
+		},
+		"_data": {
+			"_domain": ["chr_envi"],
+			"_list": ["_list_templates"],
+			"_subject": "chr_subject_GCU",
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-2"],
+			"_scalar": {
+				"_type": "_type_number",
+				"_unit-name": "longitude",
+				"_unit-symbol": "decimal degrees",
+				"_decimals": 4,
+				"_valid-range": {
+					"_min-range-inclusive": -180.0,
+					"_max-range-inclusive": 180.0
+				}
 			}
 		}
 	}

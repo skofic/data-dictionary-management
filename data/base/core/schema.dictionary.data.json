@@ -274,6 +274,12 @@
 		"_predicate": "_predicate_enum-of",
 		"_path": ["_options"]
 	},
+	{
+		"_from": "_options_graph_pie",
+		"_to": "_options",
+		"_predicate": "_predicate_enum-of",
+		"_path": ["_options"]
+	},
 
 
 	{

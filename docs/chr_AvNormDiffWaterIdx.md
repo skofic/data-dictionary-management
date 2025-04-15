@@ -8,7 +8,7 @@
 
 
 ------
-###### Average Normalized Difference Water Index.
+###### Average Normalized Difference Water Index
 
 
 

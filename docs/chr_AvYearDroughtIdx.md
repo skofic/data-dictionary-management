@@ -3,12 +3,12 @@
 
 
 ------
-#### Average yearly drought index
+#### Drought index
 
 
 
 ------
-###### The average of the number of days of the year with the soil relative water content below the treshold of 0.4
+###### The number of days of the year with the soil relative water content below the treshold of 0.4. Indicator of moderate drought with no or low influence on survival
 
 
 

@@ -486,6 +486,18 @@
 			"_definition": {"iso_639_3_eng": "This category indicates that the descriptor term should be displayed preferably as a bar graph."}
 		}
 	},
+	{
+		"_code": {
+			"_nid": "_options_graph",
+			"_lid": "pie",
+			"_gid": "_options_graph_pie",
+			"_aid": ["pie"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Pie chart display"},
+			"_definition": {"iso_639_3_eng": "This category indicates that the descriptor term should be displayed preferably as a pie chart."}
+		}
+	},
 
 	{
 		"_code": {

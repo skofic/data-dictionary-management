@@ -342,43 +342,43 @@
 	},
 	
 	{
-		"_from": "chr_AvCrownHeight",
+		"_from": "chr_AvCrownLength",
 		"_to": "gcu_id_number",
 		"_predicate": "_predicate_requires_indicator"
 	},
 	{
-		"_from": "chr_AvCrownHeight",
+		"_from": "chr_AvCrownLength",
 		"_to": "species",
 		"_predicate": "_predicate_requires_indicator"
 	},
 	{
-		"_from": "chr_AvCrownHeight",
+		"_from": "chr_AvCrownLength",
 		"_to": "std_date",
 		"_predicate": "_predicate_requires_indicator"
 	},
 	{
-		"_from": "chr_AvCrownHeight",
+		"_from": "chr_AvCrownLength",
 		"_to": "chr_SampleSize",
 		"_predicate": "_predicate_requires_indicator"
 	},
 	
 	{
-		"_from": "chr_AvCrownLength",
+		"_from": "chr_AvCrownHeight",
 		"_to": "gcu_id_number",
 		"_predicate": "_predicate_requires_indicator"
 	},
 	{
-		"_from": "chr_AvCrownLength",
+		"_from": "chr_AvCrownHeight",
 		"_to": "species",
 		"_predicate": "_predicate_requires_indicator"
 	},
 	{
-		"_from": "chr_AvCrownLength",
+		"_from": "chr_AvCrownHeight",
 		"_to": "std_date",
 		"_predicate": "_predicate_requires_indicator"
 	},
 	{
-		"_from": "chr_AvCrownLength",
+		"_from": "chr_AvCrownHeight",
 		"_to": "chr_SampleSize",
 		"_predicate": "_predicate_requires_indicator"
 	},
@@ -1484,87 +1484,120 @@
 	},
 	
 	{
-		"_from": "chr_LeafAreaIndex",
+		"_from": "chr_PercentCoarseElement",
 		"_to": "gcu_id_number",
 		"_predicate": "_predicate_requires_indicator"
 	},
 	{
-		"_from": "chr_LeafAreaIndex",
+		"_from": "chr_PercentCoarseElement",
+		"_to": "species",
+		"_predicate": "_predicate_requires_indicator"
+	},
+	
+	{
+		"_from": "chr_SoilMethod",
+		"_to": "gcu_id_number",
+		"_predicate": "_predicate_requires_indicator"
+	},
+	{
+		"_from": "chr_SoilMethod",
 		"_to": "species",
 		"_predicate": "_predicate_requires_indicator"
 	},
 	{
-		"_from": "chr_LeafAreaIndex",
+		"_from": "chr_SoilMethod",
+		"_to": "std_date",
+		"_predicate": "_predicate_requires_indicator"
+	},
+	
+	{
+		"_from": "chr_CrownHeight",
+		"_to": "species",
+		"_predicate": "_predicate_requires_indicator"
+	},
+	{
+		"_from": "chr_CrownHeight",
+		"_to": "std_date",
+		"_predicate": "_predicate_requires_indicator"
+	},
+	
+	{
+		"_from": "chr_CrownArea",
+		"_to": "species",
+		"_predicate": "_predicate_requires_indicator"
+	},
+	{
+		"_from": "chr_CrownArea",
 		"_to": "std_date",
 		"_predicate": "_predicate_requires_indicator"
 	},
 	{
-		"_from": "chr_LeafAreaIndex",
+		"_from": "chr_CrownArea",
+		"_to": "gcu_id_number",
+		"_predicate": "_predicate_requires_indicator"
+	},
+	
+	{
+		"_from": "chr_CoreYear",
+		"_to": "species",
+		"_predicate": "_predicate_requires_indicator"
+	},
+	{
+		"_from": "chr_CoreYear",
+		"_to": "std_date",
+		"_predicate": "_predicate_requires_indicator"
+	},
+	
+	{
+		"_from": "chr_TruePAI",
+		"_to": "gcu_id_number",
+		"_predicate": "_predicate_requires_indicator"
+	},
+	{
+		"_from": "chr_TruePAI",
+		"_to": "species",
+		"_predicate": "_predicate_requires_indicator"
+	},
+	{
+		"_from": "chr_TruePAI",
+		"_to": "std_date",
+		"_predicate": "_predicate_requires_indicator"
+	},
+	{
+		"_from": "chr_TruePAI",
 		"_to": "chr_SampleSize",
 		"_predicate": "_predicate_requires_indicator"
 	},
 	
 	{
-		"_from": "chr_PercentCoarseElement",
+		"_from": "chr_LatPlotMeasured",
 		"_to": "gcu_id_number",
 		"_predicate": "_predicate_requires_indicator"
 	},
 	{
-		"_from": "chr_PercentCoarseElement",
-		"_to": "species",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	
-	{
-		"_from": "chr_SoilMethod",
-		"_to": "gcu_id_number",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	{
-		"_from": "chr_SoilMethod",
-		"_to": "species",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	{
-		"_from": "chr_SoilMethod",
+		"_from": "chr_LatPlotMeasured",
 		"_to": "std_date",
 		"_predicate": "_predicate_requires_indicator"
 	},
 	
 	{
-		"_from": "chr_CrownHeight",
-		"_to": "species",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	{
-		"_from": "chr_CrownHeight",
-		"_to": "std_date",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	
-	{
-		"_from": "chr_CrownArea",
-		"_to": "species",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	{
-		"_from": "chr_CrownArea",
-		"_to": "std_date",
-		"_predicate": "_predicate_requires_indicator"
-	},
-	{
-		"_from": "chr_CrownArea",
+		"_from": "chr_LonPlotMeasured",
 		"_to": "gcu_id_number",
 		"_predicate": "_predicate_requires_indicator"
 	},
+	{
+		"_from": "chr_LonPlotMeasured",
+		"_to": "std_date",
+		"_predicate": "_predicate_requires_indicator"
+	},
 	
 	{
-		"_from": "chr_CoreYear",
-		"_to": "species",
+		"_from": "chr_MeanTreeAge",
+		"_to": "gcu_id_number",
 		"_predicate": "_predicate_requires_indicator"
 	},
 	{
-		"_from": "chr_CoreYear",
+		"_from": "chr_MeanTreeAge",
 		"_to": "std_date",
 		"_predicate": "_predicate_requires_indicator"
 	}

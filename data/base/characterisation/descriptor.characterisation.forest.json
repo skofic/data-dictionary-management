@@ -359,7 +359,7 @@
 			"_nid": "chr",
 			"_lid": "AvCrownHeight",
 			"_gid": "chr_AvCrownHeight",
-			"_pid": ["Mean.Hcrown", "AvCrownLength"],
+			"_pid": ["AvCrownHeight"],
 			"_aid": ["AvCrownHeight"]
 		},
 		"_info": {
@@ -373,15 +373,14 @@
 		"_data": {
 			"_class": "_class_quantity",
 			"_domain": ["chr_fore"],
-			"_list": ["_list_templates"],
 			"_subject": "chr_subject_target",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
 			"_class_quantity_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
-				"_decimals": 1,
 				"_unit": "_unit_length_m",
+				"_decimals": 1,
 				"_valid-range": {
 					"_min-range-inclusive": 0.0,
 					"_max-range-inclusive": 100.0
@@ -651,12 +650,9 @@
 			"_domain": ["chr_gent"],
 			"_list": ["_list_templates"],
 			"_subject": "chr_subject_target",
-			"_tag": [
-				"chr_tag_diversity",
-				"chr_tag_vulnerability"
-			],
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1"],
+			"_class_quantity_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
@@ -713,22 +709,22 @@
 		},
 		"_data": {
 			"_class": "_class_quantity",
-			"_domain": ["chr_fore"],
+			"_domain": ["chr_envi"],
 			"_list": ["_list_templates"],
 			"_subject": "chr_subject_GCU",
 			"_tag": [
 				"chr_tag_vulnerability"
 			],
-			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
+			"_class_quantity_thresholds": [],
 			"_scalar": {
-				"_type": "_type_number",
+				"_type": "_type_number_integer",
 				"_decimals": 2,
 				"_unit-name": "Percentage",
 				"_unit-symbol": "%",
 				"_valid-range": {
 					"_min-range-inclusive": 0.0,
-					"_max-range-inclusive": 1.0
+					"_max-range-inclusive": 94.0
 				}
 			}
 		}
@@ -756,7 +752,7 @@
 			"_tag": [
 				"chr_tag_vulnerability"
 			],
-			"_usage": ["_usage_indicator"],
+			"_class_quantity_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
@@ -790,7 +786,7 @@
 			"_tag": [
 				"chr_tag_vulnerability"
 			],
-			"_usage": ["_usage_indicator"],
+			"_class_quantity_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
@@ -800,5 +796,40 @@
 				}
 			}
 		}
+	},
+
+	{
+		"_code": {
+			"_nid": "chr",
+			"_lid": "MeanTreeAge",
+			"_gid": "chr_MeanTreeAge",
+			"_pid": ["MeanTreeAge"],
+			"_aid": ["MeanTreeAge"]
+		},
+		"_info": {
+			"_title": {"iso_639_3_eng": "Mean tree age"},
+			"_definition": {"iso_639_3_eng": "Mean age of the trees belonging to the target species"},
+			"_provider": [
+				"Florence Jeanflorence.jean@inrae.fr"
+			]
+		},
+		"_data": {
+			"_class": "_class_quantity",
+			"_domain": ["chr_fore"],
+			"_list": ["_list_templates"],
+			"_subject": "chr_subject_target",
+			"_usage": ["_usage_indicator"],
+			"_options": ["_options_level-2"],
+			"_scalar": {
+				"_type": "_type_number_integer",
+				"_unit-name": "years",
+				"_unit-symbol": "years",
+				"_valid-range": {
+					"_min-range-inclusive": 0,
+					"_max-range-inclusive": 1000
+				}
+			}
+		}
 	}
+
 ]

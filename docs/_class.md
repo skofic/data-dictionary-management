@@ -20,7 +20,6 @@ The class can be selected from the following choices:
 - [Identifier](_class_identifier.md): The value is an *identifier*.
 - [Quantity](_class_quantity.md): The value represents an *observed quantity*.
 - [Calculated quantity](_class_quantity_calculated.md): The value represents a quantity *calculated* from a *set of observations*.
-- [Averaged quantity](_class_quantity_averaged.md): The value represents a quantity *averaging* a *range* of *observations*.
 - [Time](_class_time.md): The value represents a point in a time series.
 
 The property can be used to *group descriptors* according to the *function* of the *value*.

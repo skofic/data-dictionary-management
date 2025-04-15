@@ -3,7 +3,7 @@
 
 
 ------
-#### Max GCU  NDVI
+#### Max GCU NDVI
 
 
 

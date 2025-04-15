@@ -166,12 +166,10 @@
 			"_class": "_class_quantity",
 			"_domain": ["chr_gent"],
 			"_list": ["_list_templates"],
-			"_tag": [
-				"chr_tag_diversity"
-			],
 			"_subject": "chr_subject_target",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
+			"_class_quantity_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
@@ -209,6 +207,7 @@
 			"_subject": "chr_subject_target",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1"],
+			"_class_quantity_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 3,
@@ -270,12 +269,10 @@
 			"_class": "_class_quantity",
 			"_domain": ["chr_gent"],
 			"_list": ["_list_templates"],
-			"_tag": [
-				"chr_tag_diversity"
-			],
 			"_subject": "chr_subject_target",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
+			"_class_quantity_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 5,
@@ -298,7 +295,7 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "Population's contribution to molecular diversity within populations"},
 			"_definition": {"iso_639_3_eng": "Contribution of one population to the total diversity due to its own diversity"},
-			"_description": {"iso_639_3_eng": "A molecular diversity partition of total gene diversity into diversity per se and distinctivness using molecular markers. Then the contribution of each population to the total (global) diversity is computed by removing one population at a time. This index refers to the population diversity per se (variation within populations). The measure is relative to the dataset analysed simultaneously and changes when new GCUs are added to the dataset. The index was calculated with metapop2 (https://onlinelibrary.wiley.com/doi/abs/10.1111/1755-0998.13015). Reference: Petit et al. 1998 (https://doi.org/10.1111/j.1523-1739.1998.96489.x)."},
+			"_description": {"iso_639_3_eng": "A molecular diversity partition of total gene diversity into diversity per se and distinctivness using molecular markers. Then the contribution of each population to the total (global) diversity is computed by removing one population at a time. This index refers to the population diversity per se (variation within populations). The measure is relative to the dataset analysed simultaneously and changes when new GCUs are added to the dataset. The index was calculated with metapop2 (https://onlinelibrary.wiley.com/doi/abs/10.1111/1755-0998.13015). Reference: Petit et al. 1998 (https://doi.org/10.1111/j.1523-1739.1998.96489.x)"},
 			"_provider": [
 				"Santiago C. Gonzalez Martinez"
 			]
@@ -307,12 +304,10 @@
 			"_class": "_class_quantity",
 			"_domain": ["chr_gent"],
 			"_list": ["_list_templates"],
-			"_tag": [
-				"chr_tag_diversity"
-			],
 			"_subject": "chr_subject_target",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1"],
+			"_class_quantity_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 3,
@@ -334,7 +329,7 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "Population's contribution to molecular diversity between populations"},
 			"_definition": {"iso_639_3_eng": "Contribution of one population to the total diversity due to its divergence/distinctiveness"},
-			"_description": {"iso_639_3_eng": "A molecular diversity partition into diversity per se and distinctiness is defined by using molecular markers. Then the contribution of each population to the total (global) diversity is computed by removing one population at a time. This statistics refers to the population distinctiveness (variation between populations). The measure is relative to the dataset analysed simultaneously and changes when new GCUs are added to the dataset. The index was calculated with metapop2 (https://onlinelibrary.wiley.com/doi/abs/10.1111/1755-0998.13015). Reference: Petit et al. 1998 (https://doi.org/10.1111/j.1523-1739.1998.96489.x)."},
+			"_description": {"iso_639_3_eng": "A molecular diversity partition into diversity per se and distinctiness is defined by using molecular markers. Then the contribution of each population to the total (global) diversity is computed by removing one population at a time. This statistics refers to the population distinctiveness (variation between populations). The measure is relative to the dataset analysed simultaneously and changes when new GCUs are added to the dataset. The index was calculated with metapop2 (https://onlinelibrary.wiley.com/doi/abs/10.1111/1755-0998.13015). Reference: Petit et al. 1998 (https://doi.org/10.1111/j.1523-1739.1998.96489.x)"},
 			"_provider": [
 				"Santiago C. Gonzalez Martinez"
 			]
@@ -343,13 +338,10 @@
 			"_class": "_class_quantity",
 			"_domain": ["chr_gent"],
 			"_list": ["_list_templates"],
-			"_tag": [
-				"chr_tag_diversity",
-				"chr_tag_distinct-pop"
-			],
 			"_subject": "chr_subject_target",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1"],
+			"_class_quantity_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 3,
@@ -385,6 +377,7 @@
 			"_tag": ["chr_tag_distinct-pop"],
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1"],
+			"_class_quantity_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 3,
@@ -419,6 +412,7 @@
 			"_tag": ["chr_tag_distinct-pop"],
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
+			"_class_quantity_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 3,
@@ -486,6 +480,7 @@
 			"_subject": "chr_subject_target",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
+			"_class_quantity_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
@@ -548,11 +543,9 @@
 			"_domain": ["chr_gent"],
 			"_list": ["_list_templates"],
 			"_subject": "chr_subject_target",
-			"_tag": [
-				"chr_tag_diversity"
-			],
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
+			"_class_quantity_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number_integer",
 				"_unit": "_unit_area_m",
@@ -584,12 +577,8 @@
 			"_domain": ["chr_gent"],
 			"_list": ["_list_templates"],
 			"_subject": "chr_subject_target",
-			"_tag": [
-				"chr_tag_diversity",
-				"chr_tag_distinct-pop"
-			],
 			"_usage": ["_usage_indicator"],
-			"_options": ["_options_level-1"],
+			"_options": ["_options_level-2", "_options_graph_pie"],
 			"_array": {
 				"_array_prefix": "Q",
 				"_scalar": {
@@ -624,10 +613,7 @@
 			"_domain": ["chr_gent"],
 			"_list": ["_list_templates"],
 			"_subject": "chr_subject_target",
-			"_tag": [
-				"chr_tag_diversity",
-				"chr_tag_distinct-pop"
-			],
+			"_tag": ["chr_tag_distinct-pop"],
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
 			"_array": {
@@ -671,6 +657,7 @@
 			"_subject": "chr_subject_target",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
+			"_class_quantity_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 3,
@@ -723,7 +710,7 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "Recessive genetic load"},
 			"_definition": {"iso_639_3_eng": "The reduction of fitness in a population due to the accumulation of deleterious alleles"},
-			"_description": {"iso_639_3_eng": "Genetic load is a measure of the reduction of fitness caused by genetic erosion. It can be due to the increase in frequency of deleterious mutations due to random genetic drift and/or inbreeding. It is calculated by first identifying deleterious mutations via prediction of their effects, and then deriving deleterious scores that can be summarized to produce a load index, in this case the counts of derived deleterious mutations in homozygosis corrected by the number of synonymous ones.  Reference: Bertorelle, G., Raffini, F., Bosse, M. et al. Genetic load: genomic estimates and applications in non-model animals. Nat Rev Genet 23, 492–503 (2022). https://doi.org/10.1038/s41576-022-00448-x."},
+			"_description": {"iso_639_3_eng": "Genetic load is a measure of the reduction of fitness caused by genetic erosion. It can be due to the increase in frequency of deleterious mutations due to random genetic drift and/or inbreeding. It is calculated by first identifying deleterious mutations via prediction of their effects, and then deriving deleterious scores that can be summarized to produce a load index, in this case the counts of derived deleterious mutations in homozygosis corrected by the number of synonymous ones.  Reference: Bertorelle, G., Raffini, F., Bosse, M. et al. Genetic load: genomic estimates and applications in non-model animals. Nat Rev Genet 23, 492–503 (2022). https://doi.org/10.1038/s41576-022-00448-x"},
 			"_provider": [
 				"Santiago C. Gonzalez Martinez"
 			]
@@ -732,14 +719,10 @@
 			"_class": "_class_quantity",
 			"_domain": ["chr_gent"],
 			"_list": ["_list_templates"],
-			"_tag": [
-				"chr_tag_diversity",
-				"chr_tag_distinct-pop",
-				"chr_tag_vulnerability"
-			],
 			"_subject": "chr_subject_target",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
+			"_class_quantity_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 3,
@@ -801,12 +784,12 @@
 			"_domain": ["chr_gent"],
 			"_list": ["_list_templates"],
 			"_tag": [
-				"chr_tag_distinct-pop",
 				"chr_tag_vulnerability"
 			],
 			"_subject": "chr_subject_target",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1"],
+			"_class_quantity_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 3,
@@ -858,7 +841,7 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "Evolvability"},
 			"_definition": {"iso_639_3_eng": "The ability of a population to respond to directional selection"},
-			"_description": {"iso_639_3_eng": "Evolvability is the ability of a population to produce phenotypic variation that is both heritable and adaptive. References: Houle, 1992. Comparing evolvability and variability of quantitative traits. Genetics. 130(1):195-204. doi: 10.1093/genetics/130.1.195; Payne, J.L., Wagner, A. The causes of evolvability and their evolution. Nat Rev Genet 20, 24–38 (2019). https://doi.org/10.1038/s41576-018-0069-z."},
+			"_description": {"iso_639_3_eng": "Evolvability is the ability of a population to produce phenotypic variation that is both heritable and adaptive. References: Houle, 1992. Comparing evolvability and variability of quantitative traits. Genetics. 130(1):195-204. doi: 10.1093/genetics/130.1.195; Payne, J.L., Wagner, A. The causes of evolvability and their evolution. Nat Rev Genet 20, 24–38 (2019). https://doi.org/10.1038/s41576-018-0069-z"},
 			"_provider": [
 				"Santiago C. Gonzalez Martinez"
 			]
@@ -874,6 +857,7 @@
 			],
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1"],
+			"_class_quantity_thresholds": [],
 			"_array": {
 				"_scalar": {
 					"_type": "_type_number",

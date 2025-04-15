@@ -76,7 +76,7 @@
 					"_title": {"iso_639_3_eng": "51-90"}
 				},
 				{
-					"_min-range-inclusive": 91.0
+					"_min-range-inclusive": 91.0,
 					"_max-range-inclusive": 100.0,
 					"_title": {"iso_639_3_eng": "91-100"}
 				}
@@ -207,7 +207,7 @@
 					"_title": {"iso_639_3_eng": "60-80 moderate risk"}
 				},
 				{
-					"_min-range-exclusive": 80.0
+					"_min-range-exclusive": 80.0,
 					"_title": {"iso_639_3_eng": ">80 no risk"}
 				}
 			],
