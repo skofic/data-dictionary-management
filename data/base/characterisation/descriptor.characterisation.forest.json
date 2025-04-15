@@ -76,7 +76,7 @@
 			]
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_fore"],
 			"_subject": "chr_subject_stand",
 			"_scalar": {
@@ -103,7 +103,7 @@
 			]
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": [
 				"chr_envi",
 				"chr_fore"
@@ -164,7 +164,7 @@
 			]
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_fore"],
 			"_list": ["_list_templates"],
 			"_subject": "chr_subject_target",
@@ -226,7 +226,7 @@
 			"_description": {"iso_639_3_eng": "Difference between [circumference of the trunk at breash height](./chr_CBH.md) mean and the upper or lower bounds of the 95% confidence interval."}
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_fore"],
 			"_subject": "chr_subject_tree",
 			"_scalar": {
@@ -371,7 +371,7 @@
 			]
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_fore"],
 			"_list": ["_list_templates"],
 			"_subject": "chr_subject_target",
@@ -406,7 +406,7 @@
 			]
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_fore"],
 			"_list": ["_list_templates"],
 			"_subject": "chr_subject_target",
@@ -472,12 +472,13 @@
 			]
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_fore"],
 			"_list": ["_list_templates"],
 			"_subject": "chr_subject_GCU",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
+			"_class_quantity_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 1,
@@ -506,12 +507,13 @@
 			]
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_fore"],
 			"_list": ["_list_templates"],
 			"_subject": "chr_subject_GCU",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
+			"_class_quantity_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 1,
@@ -540,12 +542,13 @@
 			]
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_fore"],
 			"_list": ["_list_templates"],
 			"_subject": "chr_subject_GCU",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
+			"_class_quantity_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 1,
@@ -561,15 +564,15 @@
 	{
 		"_code": {
 			"_nid": "chr",
-			"_lid": "DeadTrees",
-			"_gid": "chr_DeadTrees",
-			"_pid": ["DeadTrees"],
-			"_aid": ["DeadTrees"]
+			"_lid": "MedDeadTrees",
+			"_gid": "chr_MedDeadTrees",
+			"_pid": ["MedDeadTrees"],
+			"_aid": ["MedDeadTrees"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Presence of dead trees"},
-			"_definition": {"iso_639_3_eng": "Presence of dead trees in the GCU"},
-			"_description": {"iso_639_3_eng": "Presence of *dead trees* inside and around the circular plot with a *radius* of *15 m*., which is representative of the GCU, where `0` means that there are no dead trees and `1` that there are dead trees for the target species."},
+			"_title": {"iso_639_3_eng": "Presence of dead trees median"},
+			"_definition": {"iso_639_3_eng": "Median of the presence of dead trees in the GCU"},
+			"_description": {"iso_639_3_eng": "Median of the presence of dead trees inside and around the circular plot with a radius of 15 m, which is representative of the GCU, where 0 means that there are no dead trees and 1 that there are dead trees for the target species."},
 			"_provider": [
 				"Florence Jeanflorence.jean@inrae.fr"
 			]
@@ -582,6 +585,7 @@
 			"_tag": ["chr_tag_vulnerability"],
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1"],
+			"_class_quantity_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
@@ -596,15 +600,15 @@
 	{
 		"_code": {
 			"_nid": "chr",
-			"_lid": "NaturalRegeneration",
-			"_gid": "chr_NaturalRegeneration",
-			"_pid": ["NaturalRegeneration"],
-			"_aid": ["NaturalRegeneration"]
+			"_lid": "MedNaturalRegeneration",
+			"_gid": "chr_MedNaturalRegeneration",
+			"_pid": ["MedNaturalRegeneration"],
+			"_aid": ["MedNaturalRegeneration"]
 		},
 		"_info": {
-			"_title": {"iso_639_3_eng": "Abundance of natural regeneration"},
-			"_definition": {"iso_639_3_eng": "Abundance of natural regeneration for the target species of the GCU assessed around all measured trees"},
-			"_description": {"iso_639_3_eng": "Abundance of *natural regeneration* assessed around *10 trees* *inside* or *around* the *circular plot* with a *radius of 15 m.*, which is representative of the GCU, where `0` means *absence of natural regeneration*, `1` means *scattered regeneration*, `2` *regeneration in groups* and `3` *abundant regeneration*."},
+			"_title": {"iso_639_3_eng": "Abundance of natural regeneration median"},
+			"_definition": {"iso_639_3_eng": "Median of the abundance of natural regeneration for the target species of the GCU assessed around all measured trees"},
+			"_description": {"iso_639_3_eng": "Median of the abundance of natural regeneration assessed around 10 trees inside or around the circular plot with a radius of 15 m, which is representative of the GCU, where 0 means absence of natural regeneration, 1 means scattered regeneration, 2 regeneration in groups and 3 abundant regeneration."},
 			"_provider": [
 				"Florence Jeanflorence.jean@inrae.fr"
 			]
@@ -617,6 +621,7 @@
 			"_tag": ["chr_tag_vulnerability"],
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1"],
+			"_class_quantity_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,

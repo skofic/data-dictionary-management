@@ -16,7 +16,7 @@
 			]
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_envi"],
 			"_subject": "chr_subject_stand",
 			"_scalar": {
@@ -42,7 +42,7 @@
 			"_description": {"iso_639_3_eng": "*Minimum height above sea level* in *meters* extracted from the [Digital Elevation Model](https://www.eea.europa.eu/en/datahub/datahubitem-view/d08852bc-7b5f-4835-a776-08362e2fbf4b) (EU-DEM Copernicus Land Monitoring Service 25 meter resolution dataset). The *average* is calculated for the GCU area defined with the polygon of GCU boundaries.  Beware that for some GCU (i) there are no shapefile available so that the average elvevation over a 5km buffer around the GCU coordinate is taken (ii) it may happen that GCU visited by the wield team (WP2) does not fall in the shapefile available on EUFGIS, this mismatch is reported."}
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_envi"],
 			"_subject": "chr_subject_stand",
 			"_scalar": {
@@ -64,7 +64,7 @@
 			"_description": {"iso_639_3_eng": "*Maximum height above sea level* in *meters* extracted from the [Digital Elevation Model](https://www.eea.europa.eu/en/datahub/datahubitem-view/d08852bc-7b5f-4835-a776-08362e2fbf4b) (EU-DEM Copernicus Land Monitoring Service 25 meter resolution dataset). The *average* is calculated for the GCU area defined with the polygon of GCU boundaries.  Beware that for some GCU (i) there are no shapefile available so that the average elvevation over a 5km buffer around the GCU coordinate is taken (ii) it may happen that GCU visited by the wield team (WP2) does not fall in the shapefile available on EUFGIS, this mismatch is reported."}
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_envi"],
 			"_subject": "chr_subject_stand",
 			"_scalar": {
@@ -87,7 +87,7 @@
 			"_description": {"iso_639_3_eng": "Standard deviation of height above sea level, extracted from the Digital Elevation Model (EU-DEM Copernicus Land Monitoring Service 25 meter resolution dataset), for the referenced GCU geometry."}
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_envi"],
 			"_subject": "chr_subject_stand",
 			"_scalar": {
@@ -114,7 +114,7 @@
 			]
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_envi"],
 			"_subject": "chr_subject_stand",
 			"_scalar": {
@@ -145,7 +145,7 @@
 			]
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_envi"],
 			"_subject": "chr_subject_stand",
 			"_scalar": {
@@ -390,7 +390,7 @@
 			]
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_envi"],
 			"_subject": "chr_subject_stand",
 			"_array": {
@@ -419,7 +419,7 @@
 			]
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_envi"],
 			"_subject": "chr_subject_stand",
 			"_scalar": {
@@ -446,7 +446,7 @@
 			]
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_envi"],
 			"_subject": "chr_subject_stand",
 			"_scalar": {
@@ -472,7 +472,7 @@
 			]
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_envi"],
 			"_list": ["_list_templates"],
 			"_subject": "chr_subject_stand",
@@ -505,7 +505,7 @@
 			]
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_envi"],
 			"_usage": ["_usage_indicator"],
 			"_list": ["_list_templates"],
@@ -541,7 +541,7 @@
 			]
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_envi"],
 			"_list": ["_list_templates"],
 			"_subject": "chr_subject_stand",
@@ -575,7 +575,7 @@
 			]
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_envi"],
 			"_subject": "chr_subject_stand",
 			"_scalar": {
@@ -634,7 +634,7 @@
 			]
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_envi"],
 			"_subject": "chr_subject_stand",
 			"_scalar": {
@@ -660,7 +660,7 @@
 			]
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_envi"],
 			"_list": ["_list_templates"],
 			"_subject": "chr_subject_stand",
@@ -695,7 +695,7 @@
 			]
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_envi"],
 			"_subject": "chr_subject_stand",
 			"_usage": ["_usage_indicator"],
@@ -761,7 +761,7 @@
 			]
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_envi"],
 			"_list": ["_list_templates"],
 			"_subject": "chr_subject_stand",
@@ -796,7 +796,7 @@
 			]
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_envi"],
 			"_list": ["_list_templates"],
 			"_subject": "chr_subject_stand",
@@ -831,7 +831,7 @@
 			]
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_envi"],
 			"_list": ["_list_templates"],
 			"_subject": "chr_subject_stand",
@@ -863,7 +863,7 @@
 			]
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_envi"],
 			"_list": ["_list_templates"],
 			"_subject": "chr_subject_stand",
@@ -898,7 +898,7 @@
 			]
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_envi"],
 			"_subject": "chr_subject_stand",
 			"_scalar": {
@@ -925,7 +925,7 @@
 			]
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_envi"],
 			"_subject": "chr_subject_stand",
 			"_scalar": {
@@ -951,7 +951,7 @@
 			]
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_envi"],
 			"_subject": "chr_subject_stand",
 			"_usage": ["_usage_indicator"],
@@ -982,7 +982,7 @@
 			]
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_envi"],
 			"_list": ["_list_templates"],
 			"_subject": "chr_subject_stand",
@@ -1016,7 +1016,7 @@
 			]
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_envi"],
 			"_list": ["_list_templates"],
 			"_subject": "chr_subject_stand",
@@ -1052,7 +1052,7 @@
 			]
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_envi"],
 			"_subject": "chr_subject_stand",
 			"_array": {
@@ -1079,7 +1079,7 @@
 			]
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_envi"],
 			"_subject": "chr_subject_stand",
 			"_scalar": {
@@ -1105,7 +1105,7 @@
 			]
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_fore"],
 			"_list": ["_list_templates"],
 			"_subject": "chr_subject_stand",
@@ -1139,7 +1139,7 @@
 			]
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_fore"],
 			"_subject": "chr_subject_stand",
 			"_usage": ["_usage_indicator"],
@@ -1169,7 +1169,7 @@
 			]
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_fore"],
 			"_list": ["_list_templates"],
 			"_subject": "chr_subject_stand",
@@ -1202,7 +1202,7 @@
 			]
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_envi"],
 			"_subject": "chr_subject_stand",
 			"_scalar": {
@@ -1319,7 +1319,7 @@
 			"_description": {"iso_639_3_eng": "Relative humidity is [calculated](https://en.wikipedia.org/wiki/Dew_point) using the temperature and the dewpoint temperature at 2 meters above surface."}
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_envi"],
 			"_subject": "chr_subject_stand",
 			"_scalar": {
@@ -1347,7 +1347,7 @@
 			"_definition": {"iso_639_3_eng": "Average of the percentage of coarse elements assessed in the soil pit inside the plot. Percentage in volume of soil."}
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_envi"],
 			"_subject": "chr_subject_stand",
 			"_scalar": {

@@ -349,7 +349,7 @@
 			"_definition": {"iso_639_3_eng": "Geoometry percentage of broadleaf forest."}
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_fore"],
 			"_subject": "chr_subject_stand",
 			"_scalar": {
@@ -376,7 +376,7 @@
 			"_definition": {"iso_639_3_eng": "Geoometry percentage of conifer forest."}
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_fore"],
 			"_subject": "chr_subject_stand",
 			"_scalar": {
@@ -403,7 +403,7 @@
 			"_definition": {"iso_639_3_eng": "Geoometry percentage of mixed forest."}
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_fore"],
 			"_subject": "chr_subject_stand",
 			"_scalar": {
@@ -430,7 +430,7 @@
 			"_definition": {"iso_639_3_eng": "Geoometry percentage of sclerophyllous vegetation."}
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_fore"],
 			"_subject": "chr_subject_stand",
 			"_scalar": {
@@ -457,7 +457,7 @@
 			"_definition": {"iso_639_3_eng": "Geoometry percentage of transitional woodland-shrubland vegetation."}
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_fore"],
 			"_subject": "chr_subject_stand",
 			"_scalar": {
@@ -484,7 +484,7 @@
 			"_definition": {"iso_639_3_eng": "Geoometry percentage of other natural areas."}
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_fore"],
 			"_subject": "chr_subject_stand",
 			"_scalar": {
@@ -511,7 +511,7 @@
 			"_definition": {"iso_639_3_eng": "Geoometry percentage of agricultural areas."}
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_fore"],
 			"_subject": "chr_subject_stand",
 			"_scalar": {
@@ -538,7 +538,7 @@
 			"_definition": {"iso_639_3_eng": "Geoometry percentage of artificial surfaces."}
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_fore"],
 			"_subject": "chr_subject_stand",
 			"_scalar": {
@@ -565,7 +565,7 @@
 			"_definition": {"iso_639_3_eng": "Geoometry percentage of other land cover."}
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_fore"],
 			"_subject": "chr_subject_stand",
 			"_scalar": {
@@ -592,7 +592,7 @@
 			"_definition": {"iso_639_3_eng": "Geoometry percentage of Natura 2K."}
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_domain": ["chr_fore"],
 			"_subject": "chr_subject_stand",
 			"_scalar": {

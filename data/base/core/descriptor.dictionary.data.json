@@ -338,7 +338,7 @@
 		"_info": {
 			"_title": {"iso_639_3_eng": "Data classification"},
 			"_definition": {"iso_639_3_eng": "This enumerated value indicates to which class or category the descriptor's value belongs."},
-			"_description": {"iso_639_3_eng": "The class can be selected from the following choices:\n\n- [Category](_class_category.md): The value is *categorical*.\n- [Reference](_class_reference.md): The value is a *reference* to another item.\n- [Identifier](_class_identifier.md): The value is an *identifier*.\n- [Quantity](_class_quantity.md): The value represents an *observed quantity*.\n- [Calculated quantity](_class_quantity_calculated.md): The value represents a quantity *calculated* from a *set of observations*.\n- [Averaged quantity](_class_quantity_averaged.md): The value represents a quantity *averaging* a *range* of *observations*.\n- [Time](_class_time.md): The value represents a point in a time series.\n\nThe property can be used to *group descriptors* according to the *function* of the *value*.\n\n*This classification applies to [scalar](_scalar.md) values*."}
+			"_description": {"iso_639_3_eng": "The class can be selected from the following choices:\n\n- [Category](_class_category.md): The value is *categorical*.\n- [Reference](_class_reference.md): The value is a *reference* to another item.\n- [Identifier](_class_identifier.md): The value is an *identifier*.\n- [Quantity](_class_quantity.md): The value represents an *observed quantity*.\n- [Calculated quantity](_class_quantity_calculated.md): The value represents a quantity *calculated* from a *set of observations*.\n- [Time](_class_time.md): The value represents a point in a time series.\n\nThe property can be used to *group descriptors* according to the *function* of the *value*.\n\n*This classification applies to [scalar](_scalar.md) values*."}
 		},
 		"_data": {
 			"_class": "_class_category",
@@ -744,7 +744,7 @@
 			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_range\": {\n\t\t\"_min-range-inclusive\": 0.0,\n\t\t\"_max-range-inclusive\": 100.0\n\t}\n}\n```\nThis represents a *percentage range*, values are *greater* than or *equal* to `0` and smaller or equal to `100`. Fractional values are allowed.\n\n\n\n```json\n{\n\t\"_range\": {\n\t\t\"_min-range-inclusive\": 0,\n\t\t\"_max-range-inclusive\": 100\n\t}\n}\n```\nSame as above, except that we use integers. Fractional values are allowed.\n\n\n\n```json\n{\n\t\"_range\": {\n\t\t\"_min-range-exclusive\": 0\n\t}\n}\n```\nValues are greater than `0`. Fractional values are allowed."}
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_scalar": {
 				"_type": "_type_object",
 				"_kind": ["_range"]
@@ -830,7 +830,7 @@
 			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_valid-range\": {\n\t\t\"_min-range-inclusive\": 0.0,\n\t\t\"_max-range-inclusive\": 100.0\n\t}\n}\n```\nThis *range* considers all values greater than `100.0` and smaller than `0.0` to be errors.\n\n\n\n```json\n{\n\t\"_valid-range\": {\n\t\t\"_min-range-inclusive\": 0,\n\t\t\"_max-range-inclusive\": 100\n\t}\n}\n```\nThis *range* is equivalent to the first one, except that in this case we don't add decimals to the bounds.\n\n\n\n```json\n{\n\t\"_valid-range\": {\n\t\t\"_min-range-exclusive\": 0\n\t}\n}\n```\nThis *range* considers all positive values greater than 0 to be correct."}
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_scalar": {
 				"_type": "_type_object",
 				"_kind": ["_range"]
@@ -892,7 +892,7 @@
 			"_examples": {"iso_639_3_eng": "```json\n{\n\t\"_normal-range\": {\n\t\t\"_min-range-inclusive\": 0.0,\n\t\t\"_max-range-inclusive\": 100.0\n\t}\n}\n```\nThis *range* considers all values greater than `100.0` or smaller than `0.0` to be outliers.\n\n\n\n```json\n{\n\t\"_normal-range\": {\n\t\t\"_min-range-inclusive\": 0,\n\t\t\"_max-range-inclusive\": 100\n\t}\n}\n```\nThis *range* is equivalent to the first one, except that in this case we don't add decimals to the bounds.\n\n\n\n```json\n{\n\t\"_normal-range\": {\n\t\t\"_min-range-exclusive\": 0\n\t}\n}\n```\nThis *range* considers all positive values greater than 0 to be normal, and all others to be outliers.\n\n"}
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_scalar": {
 				"_type": "_type_object",
 				"_kind": ["_range"]
@@ -995,7 +995,7 @@
 			"_description": {"iso_639_3_eng": "This field is relevant only for *numeric* [discrete](_type_number_integer) or [continuous](_type_number) data, it indicates the *minimum bound* of a [range](_range.md), *including* the *bound* value. Only numbers *greater or equal* to this field's value belong to the [range](_range.md)."}
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_scalar": {
 				"_type": "_type_number"
 			}
@@ -1051,7 +1051,7 @@
 			"_description": {"iso_639_3_eng": "This field is relevant only for *numeric* [discrete](_type_number_integer) or [continuous](_type_number) data, it indicates the *maximum bound* of a [range](_range.md), *including* the *bound* value. Only numbers *smaller or equal* to this field's value belong to the [range](_range.md)."}
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_scalar": {
 				"_type": "_type_number"
 			}
@@ -1107,7 +1107,7 @@
 			"_description": {"iso_639_3_eng": "This field is relevant only for *numeric* [discrete](_type_number_integer) or [continuous](_type_number) data, it indicates the *minimum bound* of a [range](_range.md), *excluding* the *bound* value. Only numbers *greater* than this field's value belong to the [range](_range.md)."}
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_scalar": {
 				"_type": "_type_number"
 			}
@@ -1163,7 +1163,7 @@
 			"_description": {"iso_639_3_eng": "This field is relevant only for *numeric* [discrete](_type_number_integer) or [continuous](_type_number) data, it indicates the *maximum bound* of a [range](_range.md), *excluding* the *bound* value. Only numbers *smaller* than this field's value belong to the [range](_range.md)."}
 		},
 		"_data": {
-			"_class": "_class_quantity_averaged",
+			"_class": "_class_quantity",
 			"_scalar": {
 				"_type": "_type_number"
 			}

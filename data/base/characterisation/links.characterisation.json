@@ -469,33 +469,33 @@
 	},
 	
 	{
-		"_from": "chr_DeadTrees",
+		"_from": "chr_MedDeadTrees",
 		"_to": "gcu_id_number",
 		"_predicate": "_predicate_requires_indicator"
 	},
 	{
-		"_from": "chr_DeadTrees",
+		"_from": "chr_MedDeadTrees",
 		"_to": "species",
 		"_predicate": "_predicate_requires_indicator"
 	},
 	{
-		"_from": "chr_DeadTrees",
+		"_from": "chr_MedDeadTrees",
 		"_to": "std_date",
 		"_predicate": "_predicate_requires_indicator"
 	},
 	
 	{
-		"_from": "chr_NaturalRegeneration",
+		"_from": "chr_MedNaturalRegeneration",
 		"_to": "gcu_id_number",
 		"_predicate": "_predicate_requires_indicator"
 	},
 	{
-		"_from": "chr_NaturalRegeneration",
+		"_from": "chr_MedNaturalRegeneration",
 		"_to": "species",
 		"_predicate": "_predicate_requires_indicator"
 	},
 	{
-		"_from": "chr_NaturalRegeneration",
+		"_from": "chr_MedNaturalRegeneration",
 		"_to": "std_date",
 		"_predicate": "_predicate_requires_indicator"
 	},
