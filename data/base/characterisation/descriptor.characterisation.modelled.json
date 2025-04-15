@@ -23,7 +23,7 @@
 			"_tag": ["chr_tag_vulnerability"],
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1", "_options_graph"],
-			"_class_quantity_thresholds": [],
+			"_range_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 3,
@@ -59,7 +59,7 @@
 			"_tag": ["chr_tag_vulnerability"],
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1"],
-			"_class_quantity_thresholds": [
+			"_range_thresholds": [
 				{
 					"_min-range-inclusive": 0.0,
 					"_max-range-inclusive": 10.0,
@@ -117,7 +117,7 @@
 			"_tag": ["chr_tag_diversity", "chr_tag_distinct-pop", "chr_tag_vulnerability"],
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1"],
-			"_class_quantity_thresholds": [],
+			"_range_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_unit-name": "Percentage loss of hydraulic conductance",
@@ -154,7 +154,7 @@
 			"_subject": "chr_subject_stand",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
-			"_class_quantity_thresholds": [],
+			"_range_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 3,
@@ -190,7 +190,7 @@
 			"_tag": ["chr_tag_vulnerability"],
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1"],
-			"_class_quantity_thresholds": [
+			"_range_thresholds": [
 				{
 					"_min-range-inclusive": 0.0,
 					"_max-range-exclusive": 40.0,
@@ -248,7 +248,7 @@
 			"_tag": ["chr_tag_vulnerability"],
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1", "_options_graph_line"],
-			"_class_quantity_thresholds": [],
+			"_range_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number_integer",
 				"_valid-range": {

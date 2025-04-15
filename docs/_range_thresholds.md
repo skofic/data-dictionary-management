@@ -1,4 +1,4 @@
-### _class_quantity_thresholds
+### _range_thresholds
 
 
 
@@ -24,7 +24,7 @@ If the array is empty it means that the threshold is automatic. If this variable
 {
 	...
 	"_data": {
-		"_class_quantity_thresholds": [
+		"_range_thresholds": [
       {
         "_min-range-inclusive": 10,
         "_title": {"iso_639_3_eng": ">=10 Lower threshold"}

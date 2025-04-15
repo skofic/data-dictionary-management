@@ -701,7 +701,7 @@ async function TermsValidationQuery( db, theTransport, theCookie, theQuery)
 		await db.query(
 			aql.join([
 				theQuery,
-				aql`LIMIT ${page_records}, ${kPriv.user.db.page_records} RETURN term`
+				aql`SORT term._key ASC LIMIT ${page_records}, ${kPriv.user.db.page_records} RETURN term`
 			])
 		)
 	let records = await cursor.all()
@@ -710,6 +710,13 @@ async function TermsValidationQuery( db, theTransport, theCookie, theQuery)
 	// Turn pages.
 	//
 	while(records.length > 0) {
+
+		///
+		// Debug.
+		///
+		// records.forEach(record => {
+		// 	console.log(record._key)
+		// })
 
 		//
 		// Validate.

@@ -169,7 +169,7 @@
 			"_subject": "chr_subject_target",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
-			"_class_quantity_thresholds": [],
+			"_range_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
@@ -207,7 +207,7 @@
 			"_subject": "chr_subject_target",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1"],
-			"_class_quantity_thresholds": [],
+			"_range_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 3,
@@ -272,7 +272,7 @@
 			"_subject": "chr_subject_target",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
-			"_class_quantity_thresholds": [],
+			"_range_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 5,
@@ -307,7 +307,7 @@
 			"_subject": "chr_subject_target",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1"],
-			"_class_quantity_thresholds": [],
+			"_range_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 3,
@@ -341,7 +341,7 @@
 			"_subject": "chr_subject_target",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1"],
-			"_class_quantity_thresholds": [],
+			"_range_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 3,
@@ -377,7 +377,7 @@
 			"_tag": ["chr_tag_distinct-pop"],
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1"],
-			"_class_quantity_thresholds": [],
+			"_range_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 3,
@@ -412,7 +412,7 @@
 			"_tag": ["chr_tag_distinct-pop"],
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
-			"_class_quantity_thresholds": [],
+			"_range_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 3,
@@ -480,7 +480,7 @@
 			"_subject": "chr_subject_target",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
-			"_class_quantity_thresholds": [],
+			"_range_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
@@ -545,7 +545,7 @@
 			"_subject": "chr_subject_target",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
-			"_class_quantity_thresholds": [],
+			"_range_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number_integer",
 				"_unit": "_unit_area_m",
@@ -657,7 +657,7 @@
 			"_subject": "chr_subject_target",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
-			"_class_quantity_thresholds": [],
+			"_range_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 3,
@@ -722,7 +722,7 @@
 			"_subject": "chr_subject_target",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-2"],
-			"_class_quantity_thresholds": [],
+			"_range_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 3,
@@ -789,7 +789,7 @@
 			"_subject": "chr_subject_target",
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1"],
-			"_class_quantity_thresholds": [],
+			"_range_thresholds": [],
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 3,
@@ -857,7 +857,7 @@
 			],
 			"_usage": ["_usage_indicator"],
 			"_options": ["_options_level-1"],
-			"_class_quantity_thresholds": [],
+			"_range_thresholds": [],
 			"_array": {
 				"_scalar": {
 					"_type": "_type_number",
