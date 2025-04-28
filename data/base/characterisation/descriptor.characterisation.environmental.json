@@ -269,8 +269,8 @@
 				"_type": "_type_number_integer",
 				"_unit": "_unit_length_m",
 				"_valid-range": {
-					"_min-range-exclusive": 0,
-					"_max-range-exclusive": 5000
+					"_min-range-inclusive": 0,
+					"_max-range-inclusive": 5000
 				}
 			}
 		}
@@ -554,6 +554,8 @@
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
+				"_unit-name": "-/month",
+				"_unit-symbol": "-/month",
 				"_valid-range": {
 					"_min-range-inclusive": -1.0,
 					"_max-range-inclusive": 1.0
@@ -613,6 +615,8 @@
 			"_scalar": {
 				"_type": "_type_number",
 				"_decimals": 2,
+				"_unit-name": "-/month",
+				"_unit-symbol": "-/month",
 				"_valid-range": {
 					"_min-range-inclusive": -1.0,
 					"_max-range-inclusive": 1.0
@@ -774,10 +778,7 @@
 				"_type": "_type_number",
 				"_decimals": 2,
 				"_unit-name": "m^2 Leaf/m^2 Soil",
-				"_unit-symbol": "m2 Leaf/m2 Soil",
-				"_valid-range": {
-					"_min-range-inclusive": 0
-				}
+				"_unit-symbol": "m2 Leaf/m2 Soil"
 			}
 		}
 	},
@@ -1277,8 +1278,8 @@
 				"_type": "_type_number",
 				"_decimals": 2,
 				"_valid-range": {
-					"_min-range-exclusive": 0.00,
-					"_max-range-exclusive": 100.00
+					"_min-range-inclusive": 0.00,
+					"_max-range-inclusive": 100.00
 				}
 			}
 		}
