@@ -1088,10 +1088,10 @@
 	{
 		"_code": {
 			"_nid": "chr",
-			"_lid": "AvDieback",
-			"_gid": "chr_AvDieback",
-			"_pid": ["AvDieback"],
-			"_aid": ["AvDieback"]
+			"_lid": "MedDieback",
+			"_gid": "chr_MedDieback",
+			"_pid": ["MedDieback"],
+			"_aid": ["MedDieback"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Dieback mean"},
@@ -1123,10 +1123,10 @@
 	{
 		"_code": {
 			"_nid": "chr",
-			"_lid": "VarDieback",
-			"_gid": "chr_VarDieback",
-			"_pid": ["VarDieback"],
-			"_aid": ["VarDieback"]
+			"_lid": "IqrDieback",
+			"_gid": "chr_IqrDieback",
+			"_pid": ["IqrDieback"],
+			"_aid": ["IqrDieback"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Dieback InterQuartile Range"},

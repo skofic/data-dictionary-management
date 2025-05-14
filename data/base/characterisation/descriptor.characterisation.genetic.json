@@ -184,10 +184,10 @@
 	{
 		"_code": {
 			"_nid": "chr",
-			"_lid": "ExpHet",
-			"_gid": "chr_ExpHet",
+			"_lid": "Hs",
+			"_gid": "chr_Hs",
 			"_pid": ["Hs"],
-			"_aid": ["ExpHet"]
+			"_aid": ["Hs"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Genetic diversity - Hs"},
@@ -220,9 +220,9 @@
 	},
 	{
 		"_code": {
-			"_nid": "chr_ExpHet",
+			"_nid": "chr_Hs",
 			"_lid": "marker",
-			"_gid": "chr_ExpHet_marker",
+			"_gid": "chr_Hs_marker",
 			"_aid": ["marker"]
 		},
 		"_info": {
@@ -234,13 +234,13 @@
 			"_subject": "chr_subject_stand",
 			"_scalar": {
 				"_type": "_type_object",
-				"_kind": ["chr_ExpHet_marker"]
+				"_kind": ["chr_Hs_marker"]
 			}
 		},
 		"_rule": {
 			"_required": {
 				"_selection-descriptors_all": [
-					"chr_ExpHet",
+					"chr_Hs",
 					"chr_MarkerType",
 					"chr_NumberOfLoci",
 					"chr_GenoTech"
@@ -393,7 +393,7 @@
 			"_nid": "chr_Divergence",
 			"_lid": "Pairwise",
 			"_gid": "chr_Divergence_Pairwise",
-			"_pid": ["Divergence", "Fst"],
+			"_pid": ["DivergencePairwise", "Fst"],
 			"_aid": ["Pairwise"]
 		},
 		"_info": {
@@ -559,10 +559,10 @@
 	{
 		"_code": {
 			"_nid": "chr",
-			"_lid": "AdmIndexMain",
-			"_gid": "chr_AdmIndexMain",
-			"_pid": ["AdmIndexMain", "QMain"],
-			"_aid": ["AdmIndexMain"]
+			"_lid": "AdmixIndex",
+			"_gid": "chr_AdmixIndex",
+			"_pid": ["AdmixIndex", "QMain"],
+			"_aid": ["AdmixIndex"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Admixture index - proportion of ancestry of detected gene pools"},
@@ -595,10 +595,10 @@
 	{
 		"_code": {
 			"_nid": "chr",
-			"_lid": "AdmIndexOther",
-			"_gid": "chr_AdmIndexOther",
-			"_pid": ["AdmIndexOther", "QOther"],
-			"_aid": ["AdmIndexOther"]
+			"_lid": "HybridIndex",
+			"_gid": "chr_HybridIndex",
+			"_pid": ["HybridIndex", "QOther"],
+			"_aid": ["HybridIndex"]
 		},
 		"_info": {
 			"_title": {"iso_639_3_eng": "Hybridisation index - proportion of ancestry of detected species"},

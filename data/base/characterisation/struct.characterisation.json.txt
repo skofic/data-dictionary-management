@@ -1,27 +1,27 @@
 [
 	{
-		"_from": "chr_ExpHet",
-		"_to": "chr_ExpHet_marker",
+		"_from": "chr_Hs",
+		"_to": "chr_Hs_marker",
 		"_predicate": "_predicate_property-of",
-		"_path": ["chr_ExpHet_marker"]
+		"_path": ["chr_Hs_marker"]
 	},
 	{
 		"_from": "chr_MarkerType",
-		"_to": "chr_ExpHet_marker",
+		"_to": "chr_Hs_marker",
 		"_predicate": "_predicate_property-of",
-		"_path": ["chr_ExpHet_marker"]
+		"_path": ["chr_Hs_marker"]
 	},
 	{
 		"_from": "chr_NumberOfLoci",
-		"_to": "chr_ExpHet_marker",
+		"_to": "chr_Hs_marker",
 		"_predicate": "_predicate_property-of",
-		"_path": ["chr_ExpHet_marker"]
+		"_path": ["chr_Hs_marker"]
 	},
 	{
 		"_from": "chr_GenoTech",
-		"_to": "chr_ExpHet_marker",
+		"_to": "chr_Hs_marker",
 		"_predicate": "_predicate_property-of",
-		"_path": ["chr_ExpHet_marker"]
+		"_path": ["chr_Hs_marker"]
 	},
 	
 	{

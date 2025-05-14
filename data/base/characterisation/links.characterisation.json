@@ -550,33 +550,33 @@
 	},
 	
 	{
-		"_from": "chr_ExpHet",
+		"_from": "chr_Hs",
 		"_to": "gcu_id_number",
 		"_predicate": "_predicate_requires_indicator"
 	},
 	{
-		"_from": "chr_ExpHet",
+		"_from": "chr_Hs",
 		"_to": "species",
 		"_predicate": "_predicate_requires_indicator"
 	},
 	{
-		"_from": "chr_ExpHet",
+		"_from": "chr_Hs",
 		"_to": "chr_MarkerType",
 		"_predicate": "_predicate_requires_indicator"
 	},
 	{
-		"_from": "chr_ExpHet",
+		"_from": "chr_Hs",
 		"_to": "chr_GenoTech",
 		"_predicate": "_predicate_requires_indicator"
 	},
 
 	{
-		"_from": "chr_ExpHet",
+		"_from": "chr_Hs",
 		"_to": "chr_SampleSize",
 		"_predicate": "_predicate_requires_metadata"
 	},
 	{
-		"_from": "chr_ExpHet",
+		"_from": "chr_Hs",
 		"_to": "chr_NumberOfLoci",
 		"_predicate": "_predicate_requires_metadata"
 	},
@@ -806,65 +806,65 @@
 	},
 	
 	{
-		"_from": "chr_AdmIndexMain",
+		"_from": "chr_AdmixIndex",
 		"_to": "gcu_id_number",
 		"_predicate": "_predicate_requires_indicator"
 	},
 	{
-		"_from": "chr_AdmIndexMain",
+		"_from": "chr_AdmixIndex",
 		"_to": "species",
 		"_predicate": "_predicate_requires_indicator"
 	},
 	{
-		"_from": "chr_AdmIndexMain",
+		"_from": "chr_AdmixIndex",
 		"_to": "chr_MarkerType",
 		"_predicate": "_predicate_requires_indicator"
 	},
 	{
-		"_from": "chr_AdmIndexMain",
+		"_from": "chr_AdmixIndex",
 		"_to": "chr_GenoTech",
 		"_predicate": "_predicate_requires_indicator"
 	},
 	
 	{
-		"_from": "chr_AdmIndexMain",
+		"_from": "chr_AdmixIndex",
 		"_to": "chr_SampleSize",
 		"_predicate": "_predicate_requires_metadata"
 	},
 	{
-		"_from": "chr_AdmIndexMain",
+		"_from": "chr_AdmixIndex",
 		"_to": "chr_NumberOfLoci",
 		"_predicate": "_predicate_requires_metadata"
 	},
 	
 	{
-		"_from": "chr_AdmIndexOther",
+		"_from": "chr_HybridIndex",
 		"_to": "gcu_id_number",
 		"_predicate": "_predicate_requires_indicator"
 	},
 	{
-		"_from": "chr_AdmIndexOther",
+		"_from": "chr_HybridIndex",
 		"_to": "species",
 		"_predicate": "_predicate_requires_indicator"
 	},
 	{
-		"_from": "chr_AdmIndexOther",
+		"_from": "chr_HybridIndex",
 		"_to": "chr_MarkerType",
 		"_predicate": "_predicate_requires_indicator"
 	},
 	{
-		"_from": "chr_AdmIndexOther",
+		"_from": "chr_HybridIndex",
 		"_to": "chr_GenoTech",
 		"_predicate": "_predicate_requires_indicator"
 	},
 	
 	{
-		"_from": "chr_AdmIndexOther",
+		"_from": "chr_HybridIndex",
 		"_to": "chr_SampleSize",
 		"_predicate": "_predicate_requires_metadata"
 	},
 	{
-		"_from": "chr_AdmIndexOther",
+		"_from": "chr_HybridIndex",
 		"_to": "chr_NumberOfLoci",
 		"_predicate": "_predicate_requires_metadata"
 	},
@@ -1394,43 +1394,43 @@
 	},
 	
 	{
-		"_from": "chr_AvDieback",
+		"_from": "chr_MedDieback",
 		"_to": "gcu_id_number",
 		"_predicate": "_predicate_requires_indicator"
 	},
 	{
-		"_from": "chr_AvDieback",
+		"_from": "chr_MedDieback",
 		"_to": "species",
 		"_predicate": "_predicate_requires_indicator"
 	},
 	{
-		"_from": "chr_AvDieback",
+		"_from": "chr_MedDieback",
 		"_to": "std_date",
 		"_predicate": "_predicate_requires_indicator"
 	},
 	{
-		"_from": "chr_AvDieback",
+		"_from": "chr_MedDieback",
 		"_to": "chr_SampleSize",
 		"_predicate": "_predicate_requires_indicator"
 	},
 	
 	{
-		"_from": "chr_VarDieback",
+		"_from": "chr_IqrDieback",
 		"_to": "gcu_id_number",
 		"_predicate": "_predicate_requires_indicator"
 	},
 	{
-		"_from": "chr_VarDieback",
+		"_from": "chr_IqrDieback",
 		"_to": "species",
 		"_predicate": "_predicate_requires_indicator"
 	},
 	{
-		"_from": "chr_VarDieback",
+		"_from": "chr_IqrDieback",
 		"_to": "std_date",
 		"_predicate": "_predicate_requires_indicator"
 	},
 	{
-		"_from": "chr_VarDieback",
+		"_from": "chr_IqrDieback",
 		"_to": "chr_SampleSize",
 		"_predicate": "_predicate_requires_indicator"
 	},

@@ -27,7 +27,7 @@ This value is only considered when generating table data, it has no other functi
 ```json
 {
 	"_code": {
-		"_gid": "chr_AdmIndexMain",
+		"_gid": "chr_AdmixIndex",
 		...
 	},
 	"_info": {
@@ -56,7 +56,7 @@ Above is the partial *definition* of the "Admixture index" indicator in the data
 {
 	"gcu_id_number": "ALB00001",
 	"species": "Abies alba",
-	"chr_AdmIndexMain": [ 0.8554, 0.1000, 0.0446 ],
+	"chr_AdmixIndex": [ 0.8554, 0.1000, 0.0446 ],
 	...
 },
   ...

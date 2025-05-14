@@ -1,4 +1,4 @@
-### chr_AdmIndexMain
+### chr_AdmixIndex
 
 
 
